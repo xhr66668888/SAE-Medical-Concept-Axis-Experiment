@@ -1,0 +1,15 @@
+# Install Intel XPU PyTorch first:
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/xpu
+#
+# Then install the rest:
+#   pip install -r requirements-intel.txt
+transformers>=4.50.0
+transformer-lens
+sae-lens
+numpy
+pandas
+scikit-learn
+networkx
+matplotlib
+accelerate
+huggingface_hub

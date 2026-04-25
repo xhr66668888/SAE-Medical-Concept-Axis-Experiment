@@ -1,0 +1,11 @@
+torch
+transformers>=4.50.0
+transformer-lens
+sae-lens
+numpy
+pandas
+scikit-learn
+networkx
+matplotlib
+accelerate
+huggingface_hub
