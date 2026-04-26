@@ -1,14 +1,13 @@
 #!/usr/bin/env bash
-# End-to-end pipeline for the medical SAE concept-axis experiment on Intel XPU.
+# Clean end-to-end pipeline for the diabetes concept-axis experiment.
 #
-# Each stage is a separate Python process so XPU memory is released between
+# Hardware target: Intel Lunar Lake XPU / ~15 GB unified memory.
+# Main model: google/gemma-3-1b-it
+# SAE: Gemma Scope 2 residual all-layer small SAE
+#
+# Every stage is a separate Python process so XPU memory is released between
 # model / SAE loads.
-#
-# Common overrides:
-#   DEVICE=cpu DTYPE=float32 PRESET=gemma3-270m-it-res bash scripts/run_xpu_experiment.sh
-#   LAYER_SWEEP=all FOLDS=5 PATCHING=1 RUN_270M=1 bash scripts/run_xpu_experiment.sh
-#   SKIP_STEERING=1 PATCHING=0 bash scripts/run_xpu_experiment.sh
-#
+
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -17,7 +16,7 @@ cd "$ROOT_DIR"
 PYTHON_BIN="${PYTHON_BIN:-$ROOT_DIR/.venv/bin/python}"
 if [[ ! -x "$PYTHON_BIN" ]]; then
   echo "Missing Python: $PYTHON_BIN"
-  echo "Please create/install the local venv first. See 使用说明.md."
+  echo "Create the local venv and install requirements first."
   exit 1
 fi
 
@@ -25,20 +24,15 @@ PRESET="${PRESET:-gemma3-1b-it-res}"
 DEVICE="${DEVICE:-xpu}"
 DTYPE="${DTYPE:-bfloat16}"
 
-NULL_TRIALS="${NULL_TRIALS:-2000}"
-FOLDS="${FOLDS:-1}"
-BOOTSTRAP_TRIALS="${BOOTSTRAP_TRIALS:-1000}"
 LAYER_SWEEP="${LAYER_SWEEP:-all}"
+FOLDS="${FOLDS:-1}"
+NULL_TRIALS="${NULL_TRIALS:-2000}"
+BOOTSTRAP_TRIALS="${BOOTSTRAP_TRIALS:-1000}"
 
-TARGET_COMP="${TARGET_COMP:-kidney}"
-BASELINE_COMP="${BASELINE_COMP:-neurological}"
-STEP4_LAYERS="${STEP4_LAYERS:-auto}"
-STEP4_ALL_PAIRS="${STEP4_ALL_PAIRS:-0}"
-STEP4_DRAW_GRAPH="${STEP4_DRAW_GRAPH:-0}"
-RUN_65K="${RUN_65K:-0}"
-SAE_65K_ID_FORMAT="${SAE_65K_ID_FORMAT:-layer_{layer}_width_65k_l0_small}"
+SAE_LAYERS="${SAE_LAYERS:-auto}"
+SAE_SPLIT="${SAE_SPLIT:-train}"
+SAE_COMPLICATIONS="${SAE_COMPLICATIONS:-all}"
 
-SKIP_STEERING="${SKIP_STEERING:-0}"
 STEERING_ALPHAS="${STEERING_ALPHAS:--3,-2,-1.5,-1,-0.5,-0.25,0,0.25,0.5,1,1.5,2,3}"
 STEERING_POSITIONS="${STEERING_POSITIONS:-all}"
 STEERING_KEYWORD="${STEERING_KEYWORD:-diabetes}"
@@ -47,15 +41,17 @@ MAX_STEERING_PROMPTS="${MAX_STEERING_PROMPTS:-24}"
 
 PATCHING="${PATCHING:-1}"
 PATCHING_LAYERS="${PATCHING_LAYERS:-auto}"
-PATCHING_COMPS="${PATCHING_COMPS:-$TARGET_COMP,$BASELINE_COMP}"
+PATCHING_COMPS="${PATCHING_COMPS:-kidney,neurological}"
 PATCHING_POSITIONS="${PATCHING_POSITIONS:--1,-2,-3,-4}"
 PATCHING_SPLIT="${PATCHING_SPLIT:-all}"
 
 RUN_270M="${RUN_270M:-0}"
 DEVICE_270M="${DEVICE_270M:-$DEVICE}"
 DTYPE_270M="${DTYPE_270M:-$DTYPE}"
-NULL_TRIALS_270M="${NULL_TRIALS_270M:-$NULL_TRIALS}"
 LAYER_SWEEP_270M="${LAYER_SWEEP_270M:-all}"
+NULL_TRIALS_270M="${NULL_TRIALS_270M:-$NULL_TRIALS}"
+
+CIRCUIT_DIAGRAM="${CIRCUIT_DIAGRAM:-1}"
 REPORT="${REPORT:-1}"
 
 export OMP_NUM_THREADS="${OMP_NUM_THREADS:-8}"
@@ -63,19 +59,20 @@ export MKL_NUM_THREADS="${MKL_NUM_THREADS:-8}"
 export TOKENIZERS_PARALLELISM="${TOKENIZERS_PARALLELISM:-false}"
 
 case "$PRESET" in
-  gemma3-270m-it-res) DEFAULT_SMOKE_PRESET="gemma3-270m-it-res9" ;;
-  gemma3-1b-it-res) DEFAULT_SMOKE_PRESET="gemma3-1b-it-res13" ;;
-  gemma3-4b-it-res) DEFAULT_SMOKE_PRESET="gemma3-4b-it-res17" ;;
-  gemma2-2b-res) DEFAULT_SMOKE_PRESET="gemma2-2b-res12" ;;
-  *) DEFAULT_SMOKE_PRESET="gemma3-1b-it-res13" ;;
+  gemma3-270m-it-res) SMOKE_PRESET="${SMOKE_PRESET:-gemma3-270m-it-res9}" ;;
+  gemma3-1b-it-res) SMOKE_PRESET="${SMOKE_PRESET:-gemma3-1b-it-res13}" ;;
+  *)
+    echo "Unsupported PRESET=$PRESET"
+    echo "Supported: gemma3-1b-it-res, gemma3-270m-it-res"
+    exit 1
+    ;;
 esac
-SMOKE_PRESET="${SMOKE_PRESET:-$DEFAULT_SMOKE_PRESET}"
 
 echo "== 0. Hardware check =="
 "$PYTHON_BIN" scripts/check_hardware.py
 
 if [[ "$DEVICE" == "xpu" ]]; then
-  if ! "$PYTHON_BIN" - <<'PY'
+  "$PYTHON_BIN" - <<'PY'
 import sys
 import torch
 
@@ -83,17 +80,9 @@ ok = hasattr(torch, "xpu") and torch.xpu.is_available()
 if ok:
     print(f"XPU ready: {torch.xpu.get_device_name(0)}")
     sys.exit(0)
-print("XPU is not available to PyTorch yet.")
-print("Set DEVICE=cpu DTYPE=float32 bash scripts/run_xpu_experiment.sh to fall back to CPU.")
+print("XPU is not available to PyTorch. Use DEVICE=cpu DTYPE=float32 for CPU smoke tests.")
 sys.exit(1)
 PY
-  then
-    echo
-    echo "Stopped before loading the model because PyTorch cannot see an XPU device."
-    echo "Suggested CPU smoke test:"
-    echo "  DEVICE=cpu DTYPE=float32 PRESET=gemma3-270m-it-res bash scripts/run_xpu_experiment.sh"
-    exit 1
-  fi
 fi
 
 echo
@@ -101,14 +90,14 @@ echo "== 1. Generate prompts =="
 "$PYTHON_BIN" scripts/step2_generate_prompts.py
 
 echo
-echo "== 2. Step 1 MVP smoke test =="
+echo "== 2. Model + SAE smoke test =="
 "$PYTHON_BIN" scripts/step1_mvp.py \
   --preset "$SMOKE_PRESET" \
   --device "$DEVICE" \
   --dtype "$DTYPE"
 
 echo
-echo "== 3. Step 3 all-layer axis sweep + DLA + logit lens =="
+echo "== 3. All-layer concept-axis sweep =="
 "$PYTHON_BIN" scripts/step3_concept_axis.py \
   --prompts data/diabetes_contrastive_prompts.csv \
   --preset "$PRESET" \
@@ -121,73 +110,46 @@ echo "== 3. Step 3 all-layer axis sweep + DLA + logit lens =="
   --output-dir outputs/axis
 
 echo
-echo "== 4. Step 4 SAE feature candidates =="
-STEP4_EXTRA=()
-if [[ "$STEP4_ALL_PAIRS" == "1" ]]; then
-  STEP4_EXTRA+=(--all-pairs)
+echo "== 4. Axis-aligned Gemma Scope SAE tracing =="
+SAE_EXTRA=()
+if [[ -n "${MAX_AXIS_SAE_PAIRS:-}" ]]; then
+  SAE_EXTRA+=(--max-pairs "$MAX_AXIS_SAE_PAIRS")
 fi
-if [[ "$STEP4_DRAW_GRAPH" == "1" ]]; then
-  STEP4_EXTRA+=(--draw-graph)
-fi
-"$PYTHON_BIN" scripts/step4_trace_circuit.py \
+"$PYTHON_BIN" scripts/step4_axis_sae.py \
   --prompts data/diabetes_contrastive_prompts.csv \
   --preset "$PRESET" \
   --device "$DEVICE" \
   --dtype "$DTYPE" \
-  --layers "$STEP4_LAYERS" \
+  --layers "$SAE_LAYERS" \
   --best-layers-json outputs/axis/best_layers.json \
-  --target-complication "$TARGET_COMP" \
-  --baseline-complication "$BASELINE_COMP" \
-  --use-split train \
-  --output-dir outputs/circuit \
-  "${STEP4_EXTRA[@]}"
+  --axes-path outputs/axis/concept_axes_all_layers.pt \
+  --axis-path outputs/axis/concept_axis.pt \
+  --use-split "$SAE_SPLIT" \
+  --complications "$SAE_COMPLICATIONS" \
+  --bootstrap-trials "$BOOTSTRAP_TRIALS" \
+  --output-dir outputs/circuit_axis \
+  "${SAE_EXTRA[@]}"
 
-if [[ "$RUN_65K" == "1" ]]; then
-  echo
-  echo "== 4b. Optional 65k-width SAE check at the best layer =="
-  BEST_LAYER="$("$PYTHON_BIN" - <<'PY'
-import json
-from pathlib import Path
-
-blob = json.loads(Path("outputs/axis/best_layers.json").read_text(encoding="utf-8"))
-print(blob["best_layer"])
-PY
-)"
-  "$PYTHON_BIN" scripts/step4_trace_circuit.py \
-    --prompts data/diabetes_contrastive_prompts.csv \
-    --preset "$PRESET" \
-    --device "$DEVICE" \
-    --dtype "$DTYPE" \
-    --layers "$BEST_LAYER" \
-    --sae-id-format "$SAE_65K_ID_FORMAT" \
-    --target-complication "$TARGET_COMP" \
-    --baseline-complication "$BASELINE_COMP" \
-    --use-split train \
-    --output-dir outputs/circuit_65k
-fi
-
-if [[ "$SKIP_STEERING" != "1" ]]; then
-  echo
-  echo "== 5. Step 5 causal steering with bootstrap CI =="
-  "$PYTHON_BIN" scripts/step5_steering.py \
-    --prompts data/diabetes_contrastive_prompts.csv \
-    --axis-path outputs/axis/concept_axis.pt \
-    --preset "$PRESET" \
-    --device "$DEVICE" \
-    --dtype "$DTYPE" \
-    --use-split test \
-    --filter-complication "$STEERING_COMP" \
-    --max-prompts "$MAX_STEERING_PROMPTS" \
-    --alphas="$STEERING_ALPHAS" \
-    --positions "$STEERING_POSITIONS" \
-    --keyword "$STEERING_KEYWORD" \
-    --bootstrap-trials "$BOOTSTRAP_TRIALS" \
-    --output-dir outputs/steering
-fi
+echo
+echo "== 5. Causal steering =="
+"$PYTHON_BIN" scripts/step5_steering.py \
+  --prompts data/diabetes_contrastive_prompts.csv \
+  --axis-path outputs/axis/concept_axis.pt \
+  --preset "$PRESET" \
+  --device "$DEVICE" \
+  --dtype "$DTYPE" \
+  --use-split test \
+  --filter-complication "$STEERING_COMP" \
+  --max-prompts "$MAX_STEERING_PROMPTS" \
+  --alphas="$STEERING_ALPHAS" \
+  --positions "$STEERING_POSITIONS" \
+  --keyword "$STEERING_KEYWORD" \
+  --bootstrap-trials "$BOOTSTRAP_TRIALS" \
+  --output-dir outputs/steering
 
 if [[ "$PATCHING" == "1" ]]; then
   echo
-  echo "== 6. Step 6 activation patching =="
+  echo "== 6. Activation patching =="
   PATCHING_EXTRA=()
   if [[ -n "${MAX_PATCHING_PAIRS:-}" ]]; then
     PATCHING_EXTRA+=(--max-pairs-per-complication "$MAX_PATCHING_PAIRS")
@@ -209,7 +171,7 @@ fi
 
 if [[ "$RUN_270M" == "1" ]]; then
   echo
-  echo "== 6b. Optional 270M replay: Step 3 axis sweep =="
+  echo "== 7. 270M replay: axis sweep =="
   "$PYTHON_BIN" scripts/step3_concept_axis.py \
     --prompts data/diabetes_contrastive_prompts.csv \
     --preset gemma3-270m-it-res \
@@ -221,29 +183,38 @@ if [[ "$RUN_270M" == "1" ]]; then
     --bootstrap-trials "$BOOTSTRAP_TRIALS" \
     --output-dir outputs/270m/axis
 
-  if [[ "$SKIP_STEERING" != "1" ]]; then
-    echo
-    echo "== 6c. Optional 270M replay: Step 5 steering =="
-    "$PYTHON_BIN" scripts/step5_steering.py \
-      --prompts data/diabetes_contrastive_prompts.csv \
-      --axis-path outputs/270m/axis/concept_axis.pt \
-      --preset gemma3-270m-it-res \
-      --device "$DEVICE_270M" \
-      --dtype "$DTYPE_270M" \
-      --use-split test \
-      --filter-complication "$STEERING_COMP" \
-      --max-prompts "$MAX_STEERING_PROMPTS" \
-      --alphas="$STEERING_ALPHAS" \
-      --positions "$STEERING_POSITIONS" \
-      --keyword "$STEERING_KEYWORD" \
-      --bootstrap-trials "$BOOTSTRAP_TRIALS" \
-      --output-dir outputs/270m/steering
-  fi
+  echo
+  echo "== 8. 270M replay: steering =="
+  "$PYTHON_BIN" scripts/step5_steering.py \
+    --prompts data/diabetes_contrastive_prompts.csv \
+    --axis-path outputs/270m/axis/concept_axis.pt \
+    --preset gemma3-270m-it-res \
+    --device "$DEVICE_270M" \
+    --dtype "$DTYPE_270M" \
+    --use-split test \
+    --filter-complication "$STEERING_COMP" \
+    --max-prompts "$MAX_STEERING_PROMPTS" \
+    --alphas="$STEERING_ALPHAS" \
+    --positions "$STEERING_POSITIONS" \
+    --keyword "$STEERING_KEYWORD" \
+    --bootstrap-trials "$BOOTSTRAP_TRIALS" \
+    --output-dir outputs/270m/steering
+fi
+
+if [[ "$CIRCUIT_DIAGRAM" == "1" ]]; then
+  echo
+  echo "== 9. Circuit diagram =="
+  "$PYTHON_BIN" scripts/step8_circuit_diagram.py \
+    --features-csv outputs/circuit_axis/axis_sae_features.csv \
+    --layer-summary-csv outputs/circuit_axis/axis_sae_layer_summary.csv \
+    --axis-summary outputs/axis/axis_summary.txt \
+    --patching-summary outputs/patching/patching_summary.txt \
+    --output-dir outputs/circuit_diagram
 fi
 
 if [[ "$REPORT" == "1" ]]; then
   echo
-  echo "== 7. Aggregate report =="
+  echo "== 10. Aggregate report =="
   "$PYTHON_BIN" scripts/step7_report.py \
     --output-root outputs \
     --report-md outputs/report.md \
@@ -252,31 +223,15 @@ fi
 
 echo
 echo "== Done =="
-echo "Axis outputs:      outputs/axis/"
-echo "Circuit outputs:   outputs/circuit/"
-if [[ "$SKIP_STEERING" != "1" ]]; then
-  echo "Steering outputs:  outputs/steering/"
-fi
+echo "Axis:             outputs/axis/axis_summary.txt"
+echo "Axis SAE:         outputs/circuit_axis/axis_sae_summary.txt"
+echo "Steering:         outputs/steering/steering_summary.txt"
 if [[ "$PATCHING" == "1" ]]; then
-  echo "Patching outputs:  outputs/patching/"
+  echo "Patching:         outputs/patching/patching_summary.txt"
 fi
-if [[ "$RUN_270M" == "1" ]]; then
-  echo "270M outputs:      outputs/270m/"
+if [[ "$CIRCUIT_DIAGRAM" == "1" ]]; then
+  echo "Circuit diagram:  outputs/circuit_diagram/medical_circuit_diagram.png"
 fi
 if [[ "$REPORT" == "1" ]]; then
-  echo "Report:            outputs/report.html"
-fi
-echo
-echo "Quick reads:"
-echo "  cat outputs/axis/axis_summary.txt"
-if [[ "$STEP4_ALL_PAIRS" == "1" ]]; then
-  echo "  ls outputs/circuit/circuit_route*.txt"
-else
-  echo "  cat outputs/circuit/circuit_route.txt"
-fi
-if [[ "$SKIP_STEERING" != "1" ]]; then
-  echo "  cat outputs/steering/steering_summary.txt"
-fi
-if [[ "$PATCHING" == "1" ]]; then
-  echo "  cat outputs/patching/patching_summary.txt"
+  echo "Report:           outputs/report.html"
 fi

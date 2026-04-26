@@ -21,8 +21,7 @@ class ModelPreset:
 
 
 PRESETS: dict[str, ModelPreset] = {
-    # Smallest Gemma Scope 2 route. Useful for CPU smoke tests or very tight
-    # memory environments.
+    # Lightweight replay model.
     "gemma3-270m-it-res": ModelPreset(
         model_name="google/gemma-3-270m-it",
         sae_release="gemma-scope-2-270m-it-res-all",
@@ -30,32 +29,13 @@ PRESETS: dict[str, ModelPreset] = {
         hook_name_format="blocks.{layer}.hook_resid_post",
         default_layers=(4, 9, 15),
     ),
-    # Recommended default for this repo on Intel Lunar Lake / 16 GB unified
-    # memory: real Gemma Scope 2, but small enough to run without CUDA.
+    # Main model for the experiment on Intel Lunar Lake / ~15 GB unified memory.
     "gemma3-1b-it-res": ModelPreset(
         model_name="google/gemma-3-1b-it",
         sae_release="gemma-scope-2-1b-it-res-all",
         sae_id_format="layer_{layer}_width_16k_l0_small",
         hook_name_format="blocks.{layer}.hook_resid_post",
         default_layers=(7, 13, 17),
-    ),
-    # Maximum practical local target for this machine. Run only after the 1B
-    # smoke test passes, and keep layers/prompts small.
-    "gemma3-4b-it-res": ModelPreset(
-        model_name="google/gemma-3-4b-it",
-        sae_release="gemma-scope-2-4b-it-res-all",
-        sae_id_format="layer_{layer}_width_16k_l0_small",
-        hook_name_format="blocks.{layer}.hook_resid_post",
-        default_layers=(9, 17, 29),
-    ),
-    # Gemma Scope for Gemma 2 2B. Kept as a fallback for the original prompt's
-    # 2B note, but it is not Gemma Scope 2.
-    "gemma2-2b-res": ModelPreset(
-        model_name="gemma-2-2b",
-        sae_release="gemma-scope-2b-pt-res-canonical",
-        sae_id_format="layer_{layer}/width_16k/canonical",
-        hook_name_format="blocks.{layer}.hook_resid_post",
-        default_layers=(5, 12, 20),
     ),
 }
 

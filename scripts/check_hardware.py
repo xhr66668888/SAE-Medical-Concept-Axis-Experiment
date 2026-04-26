@@ -125,9 +125,9 @@ def main() -> None:
     print()
 
     print("=== Recommendation ===")
-    print("best default: --preset gemma3-1b-it-res --device xpu --dtype bfloat16")
-    print("max local attempt: --preset gemma3-4b-it-res with 1 prompt/group and 1-3 layers")
-    print("avoid locally: Gemma 3 12B/27B with TransformerLens + SAEs on 15 GiB memory")
+    print("main run: PRESET=gemma3-1b-it-res DEVICE=xpu DTYPE=bfloat16")
+    print("lightweight replay: PRESET=gemma3-270m-it-res")
+    print("this pipeline intentionally stays on 1B/270M models for the local memory budget")
     if "render" not in groups or "video" not in groups:
         print("do first: add this user to render/video groups before trying --device xpu")
     elif any(line == "xpu available: False" for line in torch_status()):

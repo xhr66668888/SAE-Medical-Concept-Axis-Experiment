@@ -46,7 +46,24 @@ def count_csv_rows(path: Path) -> int | None:
         return sum(1 for _ in reader)
 
 
-def csv_preview_markdown(path: Path, columns: list[str] | None = None, max_rows: int = 8) -> str:
+def _float_or_none(value: str | None) -> float | None:
+    if value is None:
+        return None
+    try:
+        return float(value)
+    except ValueError:
+        return None
+
+
+def csv_preview_markdown(
+    path: Path,
+    columns: list[str] | None = None,
+    max_rows: int = 8,
+    *,
+    nonzero_column: str | None = None,
+    sort_numeric_column: str | None = None,
+    reverse: bool = False,
+) -> str:
     if not path.exists():
         return "_Missing._"
     with path.open(newline="", encoding="utf-8") as handle:
@@ -54,11 +71,12 @@ def csv_preview_markdown(path: Path, columns: list[str] | None = None, max_rows:
         fieldnames = reader.fieldnames or []
         chosen = columns or fieldnames[:8]
         chosen = [col for col in chosen if col in fieldnames]
-        rows = []
-        for idx, row in enumerate(reader):
-            if idx >= max_rows:
-                break
-            rows.append(row)
+        rows = list(reader)
+    if nonzero_column:
+        rows = [row for row in rows if abs(_float_or_none(row.get(nonzero_column)) or 0.0) > 1e-9]
+    if sort_numeric_column:
+        rows.sort(key=lambda row: _float_or_none(row.get(sort_numeric_column)) or 0.0, reverse=reverse)
+    rows = rows[:max_rows]
     if not chosen:
         return "_No columns found._"
     lines = [
@@ -73,7 +91,15 @@ def csv_preview_markdown(path: Path, columns: list[str] | None = None, max_rows:
     return "\n".join(lines)
 
 
-def csv_preview_html(path: Path, columns: list[str] | None = None, max_rows: int = 8) -> str:
+def csv_preview_html(
+    path: Path,
+    columns: list[str] | None = None,
+    max_rows: int = 8,
+    *,
+    nonzero_column: str | None = None,
+    sort_numeric_column: str | None = None,
+    reverse: bool = False,
+) -> str:
     if not path.exists():
         return "<p><em>Missing.</em></p>"
     with path.open(newline="", encoding="utf-8") as handle:
@@ -81,11 +107,12 @@ def csv_preview_html(path: Path, columns: list[str] | None = None, max_rows: int
         fieldnames = reader.fieldnames or []
         chosen = columns or fieldnames[:8]
         chosen = [col for col in chosen if col in fieldnames]
-        rows = []
-        for idx, row in enumerate(reader):
-            if idx >= max_rows:
-                break
-            rows.append(row)
+        rows = list(reader)
+    if nonzero_column:
+        rows = [row for row in rows if abs(_float_or_none(row.get(nonzero_column)) or 0.0) > 1e-9]
+    if sort_numeric_column:
+        rows.sort(key=lambda row: _float_or_none(row.get(sort_numeric_column)) or 0.0, reverse=reverse)
+    rows = rows[:max_rows]
     if not chosen:
         return "<p><em>No columns found.</em></p>"
     head = "".join(f"<th>{html.escape(col)}</th>" for col in chosen)
@@ -157,26 +184,28 @@ def main() -> None:
     report_html.parent.mkdir(parents=True, exist_ok=True)
 
     axis_dir = output_root / "axis"
-    circuit_dir = output_root / "circuit"
+    circuit_axis_dir = output_root / "circuit_axis"
+    circuit_diagram_dir = output_root / "circuit_diagram"
     steering_dir = output_root / "steering"
     patching_dir = output_root / "patching"
     replay_axis_dir = output_root / "270m" / "axis"
     replay_steering_dir = output_root / "270m" / "steering"
 
     axis_summary = read_text(axis_dir / "axis_summary.txt", args.max_text_chars)
+    axis_sae_summary = read_text(circuit_axis_dir / "axis_sae_summary.txt", args.max_text_chars)
     steering_summary = read_text(steering_dir / "steering_summary.txt", args.max_text_chars)
     patching_summary = read_text(patching_dir / "patching_summary.txt", args.max_text_chars)
     replay_axis_summary = read_text(replay_axis_dir / "axis_summary.txt", args.max_text_chars)
     replay_steering_summary = read_text(replay_steering_dir / "steering_summary.txt", args.max_text_chars)
     best_layers = read_json(axis_dir / "best_layers.json")
-    circuit_routes = sorted(circuit_dir.glob("circuit_route*.txt"))
-    circuit_route_text = first_existing_text(circuit_routes, args.max_text_chars)
+    circuit_diagram_summary = read_text(circuit_diagram_dir / "medical_circuit_diagram_summary.txt", args.max_text_chars)
 
     prompt_count = count_csv_rows(Path("data/diabetes_contrastive_prompts.csv"))
     axis_best = best_layers.get("best_layer", "missing")
     candidates = best_layers.get("candidate_layers", "missing")
     steering_direction = extract_value(steering_summary, r"monotonicity: ([^\n]+)")
     patching_peak = extract_value(patching_summary, r"best_mean_normalized_score: ([^\n]+)")
+    axis_sae_best = extract_value(axis_sae_summary, r"best_layer_by_top_feature_contribution: ([^\n]+)")
 
     md: list[str] = [
         f"# {args.title}",
@@ -186,6 +215,7 @@ def main() -> None:
         f"- Prompt rows: {prompt_count if prompt_count is not None else 'missing'}",
         f"- Best layer: {axis_best}",
         f"- Candidate layers: {candidates}",
+        f"- Axis-aligned SAE best layer: {axis_sae_best or 'missing'}",
         f"- Steering monotonicity: {steering_direction or 'missing'}",
         f"- Patching peak normalized score: {patching_peak or 'missing'}",
         "",
@@ -199,28 +229,38 @@ def main() -> None:
         "",
         md_image(axis_dir / "concept_axis_pca.png", output_root, "Concept axis PCA"),
         "",
-        "## SAE Feature Candidates",
+        "## Axis-Aligned SAE Feature Candidates",
+        "",
+        pre_md(axis_sae_summary),
+        "",
+        md_image(circuit_axis_dir / "axis_sae_contributions_by_layer.png", output_root, "Axis-aligned SAE contribution by layer"),
+        "",
+        md_image(circuit_axis_dir / "axis_sae_top_features.png", output_root, "Top axis-aligned SAE features"),
         "",
         csv_preview_markdown(
-            circuit_dir / "circuit_features.csv",
+            circuit_axis_dir / "axis_sae_features.csv",
             [
                 "layer",
-                "pair_target",
-                "pair_baseline",
                 "rank",
                 "feature_id",
-                "diff_activation",
-                "stability_score",
-                "stability_hits",
-                "stability_total",
+                "axis_projection_contribution",
+                "axis_projection_ci_low",
+                "axis_projection_ci_high",
+                "sign_consistency",
+                "complication_stability",
+                "template_stability",
+                "activation_side",
+                "decoder_side",
             ],
+            sort_numeric_column="axis_projection_contribution",
+            reverse=True,
         ),
         "",
-        pre_md(circuit_route_text),
+        "## Circuit Diagram",
         "",
-        md_image(circuit_dir / "circuit_graph.png", output_root, "SAE feature route graph")
-        if (circuit_dir / "circuit_graph.png").exists()
-        else "_Feature graph not requested; use `STEP4_DRAW_GRAPH=1` to generate it._",
+        pre_md(circuit_diagram_summary),
+        "",
+        md_image(circuit_diagram_dir / "medical_circuit_diagram.png", output_root, "Medical concept circuit diagram"),
         "",
         "## Steering",
         "",
@@ -287,6 +327,7 @@ def main() -> None:
         f"<div><strong>Prompt rows</strong><br>{prompt_count if prompt_count is not None else 'missing'}</div>",
         f"<div><strong>Best layer</strong><br>{html.escape(str(axis_best))}</div>",
         f"<div><strong>Candidate layers</strong><br>{html.escape(str(candidates))}</div>",
+        f"<div><strong>Axis SAE best layer</strong><br>{html.escape(axis_sae_best or 'missing')}</div>",
         f"<div><strong>Steering monotonicity</strong><br>{html.escape(steering_direction or 'missing')}</div>",
         f"<div><strong>Patching peak</strong><br>{html.escape(patching_peak or 'missing')}</div>",
         "</div>",
@@ -295,25 +336,31 @@ def main() -> None:
         html_image(axis_dir / "accuracy_by_layer.png", "Accuracy by layer"),
         html_image(axis_dir / "dla_and_logit_lens.png", "DLA and logit lens"),
         html_image(axis_dir / "concept_axis_pca.png", "Concept axis PCA"),
-        "<h2>SAE Feature Candidates</h2>",
+        "<h2>Axis-Aligned SAE Feature Candidates</h2>",
+        pre_html(axis_sae_summary),
+        html_image(circuit_axis_dir / "axis_sae_contributions_by_layer.png", "Axis-aligned SAE contribution by layer"),
+        html_image(circuit_axis_dir / "axis_sae_top_features.png", "Top axis-aligned SAE features"),
         csv_preview_html(
-            circuit_dir / "circuit_features.csv",
+            circuit_axis_dir / "axis_sae_features.csv",
             [
                 "layer",
-                "pair_target",
-                "pair_baseline",
                 "rank",
                 "feature_id",
-                "diff_activation",
-                "stability_score",
-                "stability_hits",
-                "stability_total",
+                "axis_projection_contribution",
+                "axis_projection_ci_low",
+                "axis_projection_ci_high",
+                "sign_consistency",
+                "complication_stability",
+                "template_stability",
+                "activation_side",
+                "decoder_side",
             ],
+            sort_numeric_column="axis_projection_contribution",
+            reverse=True,
         ),
-        pre_html(circuit_route_text),
-        html_image(circuit_dir / "circuit_graph.png", "SAE feature route graph")
-        if (circuit_dir / "circuit_graph.png").exists()
-        else "<p><em>Feature graph not requested; use <code>STEP4_DRAW_GRAPH=1</code> to generate it.</em></p>",
+        "<h2>Circuit Diagram</h2>",
+        pre_html(circuit_diagram_summary),
+        html_image(circuit_diagram_dir / "medical_circuit_diagram.png", "Medical concept circuit diagram"),
         "<h2>Steering</h2>",
         pre_html(steering_summary),
         html_image(steering_dir / "steering_curve.png", "Steering curve"),
