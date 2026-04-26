@@ -130,6 +130,10 @@ def main() -> None:
     print("avoid locally: Gemma 3 12B/27B with TransformerLens + SAEs on 15 GiB memory")
     if "render" not in groups or "video" not in groups:
         print("do first: add this user to render/video groups before trying --device xpu")
+    elif any(line == "xpu available: False" for line in torch_status()):
+        print("do first: install Intel GPU user-space runtime packages:")
+        print("  sudo apt update")
+        print("  sudo apt install -y libze1 libze-intel-gpu1 intel-opencl-icd clinfo intel-gpu-tools")
     if command_status["pip3"] == "missing" and command_status["conda"] == "missing" and command_status["uv"] == "missing":
         print("do first: install/use a Python 3.11 env with pip, e.g. conda/micromamba")
     print()

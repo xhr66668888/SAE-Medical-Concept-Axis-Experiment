@@ -25,8 +25,8 @@ PRESETS: dict[str, ModelPreset] = {
     # memory environments.
     "gemma3-270m-it-res": ModelPreset(
         model_name="google/gemma-3-270m-it",
-        sae_release="google/gemma-scope-2-270m-it",
-        sae_id_format="resid_post/layer_{layer}_width_16k_l0_medium",
+        sae_release="gemma-scope-2-270m-it-res-all",
+        sae_id_format="layer_{layer}_width_16k_l0_small",
         hook_name_format="blocks.{layer}.hook_resid_post",
         default_layers=(4, 9, 15),
     ),
@@ -34,8 +34,8 @@ PRESETS: dict[str, ModelPreset] = {
     # memory: real Gemma Scope 2, but small enough to run without CUDA.
     "gemma3-1b-it-res": ModelPreset(
         model_name="google/gemma-3-1b-it",
-        sae_release="gemma-scope-2-1b-it-res",
-        sae_id_format="layer_{layer}_width_16k_l0_medium",
+        sae_release="gemma-scope-2-1b-it-res-all",
+        sae_id_format="layer_{layer}_width_16k_l0_small",
         hook_name_format="blocks.{layer}.hook_resid_post",
         default_layers=(7, 13, 17),
     ),
@@ -43,8 +43,8 @@ PRESETS: dict[str, ModelPreset] = {
     # smoke test passes, and keep layers/prompts small.
     "gemma3-4b-it-res": ModelPreset(
         model_name="google/gemma-3-4b-it",
-        sae_release="gemma-scope-2-4b-it-res",
-        sae_id_format="layer_{layer}_width_16k_l0_medium",
+        sae_release="gemma-scope-2-4b-it-res-all",
+        sae_id_format="layer_{layer}_width_16k_l0_small",
         hook_name_format="blocks.{layer}.hook_resid_post",
         default_layers=(9, 17, 29),
     ),
@@ -128,7 +128,10 @@ def configure_torch(torch_module: Any) -> None:
 
 def load_model(HookedTransformer: Any, model_name: str, device: str, dtype: Any, prepend_bos: bool):
     print("Loading HookedTransformer model...")
-    model = HookedTransformer.from_pretrained(
+    loader = HookedTransformer.from_pretrained
+    if str(dtype) != "torch.float32" and hasattr(HookedTransformer, "from_pretrained_no_processing"):
+        loader = HookedTransformer.from_pretrained_no_processing
+    model = loader(
         model_name,
         device=device,
         dtype=dtype,
@@ -240,3 +243,127 @@ def capture_resid_activation(
         print(f"target token       : {pos_token!r} at index {pos_idx}")
         print(f"resid shape        : {tuple(resid.shape)}")
     return resid, pos_token, pos_idx
+
+
+def cache_all_layer_residuals(
+    *,
+    model: Any,
+    prompt: str,
+    device: str,
+    prepend_bos: bool,
+    position: str,
+    keyword: str | None,
+    layers: list[int] | None = None,
+    keep_full_sequence: bool = False,
+    return_logits: bool = False,
+):
+    """Capture residual-stream activations at every (or a chosen subset of)
+    `blocks.{layer}.hook_resid_post` hooks in a single forward pass.
+
+    Returns a dict ``{layer: tensor}``. By default each tensor is the residual
+    at the chosen target token position (shape ``[d_model]``), already moved to
+    CPU and cast to float for safe downstream stacking. If ``keep_full_sequence``
+    is True the tensors are full ``[seq_len, d_model]`` slices on CPU.
+
+    Always returns the chosen ``(token, token_idx)`` and the full token list to
+    let callers re-derive other positions cheaply. If ``return_logits`` is
+    True, appends the forward logits as a fifth return value.
+    """
+    tokens = model.to_tokens(prompt, prepend_bos=prepend_bos).to(device)
+    pos_idx, pos_token = token_position(model, tokens, position, keyword)
+    str_tokens = model.to_str_tokens(tokens[0])
+    layer_set = set(layers) if layers is not None else None
+
+    def filter_fn(name: str) -> bool:
+        if not name.startswith("blocks.") or not name.endswith(".hook_resid_post"):
+            return False
+        if layer_set is None:
+            return True
+        try:
+            layer_idx = int(name.split(".")[1])
+        except (IndexError, ValueError):
+            return False
+        return layer_idx in layer_set
+
+    logits, cache = model.run_with_cache(
+        tokens,
+        names_filter=filter_fn,
+        return_type="logits" if return_logits else None,
+    )
+    layer_to_tensor: dict[int, Any] = {}
+    for hook_name, activation in cache.items():
+        try:
+            layer_idx = int(hook_name.split(".")[1])
+        except (IndexError, ValueError):
+            continue
+        if keep_full_sequence:
+            layer_to_tensor[layer_idx] = activation[0].detach().float().cpu()
+        else:
+            layer_to_tensor[layer_idx] = activation[0, pos_idx, :].detach().float().cpu()
+    if layer_set is not None:
+        missing_layers = sorted(layer_set - set(layer_to_tensor))
+        if missing_layers:
+            available = sorted(layer_to_tensor)
+            raise RuntimeError(
+                f"Did not capture requested residual layers {missing_layers}. "
+                f"Captured layers: {available}"
+            )
+    if return_logits:
+        return layer_to_tensor, pos_token, pos_idx, str_tokens, logits.detach().float().cpu()
+    return layer_to_tensor, pos_token, pos_idx, str_tokens
+
+
+def resolve_token_id(tokenizer: Any, candidate: str) -> int:
+    """Return a single-token id for ``candidate``. Try the exact string first,
+    then a stripped fallback (Gemma-style tokenizers usually need the leading
+    space form to match a mid-sentence token)."""
+    candidates = [candidate]
+    stripped = candidate.lstrip()
+    if stripped != candidate:
+        candidates.append(stripped)
+    for cand in candidates:
+        ids = tokenizer.encode(cand, add_special_tokens=False)
+        if len(ids) == 1:
+            return ids[0]
+    raise SystemExit(
+        f"Could not resolve a single-token id for {candidate!r}. "
+        "Try a different surface form (with or without a leading space)."
+    )
+
+
+def direct_logit_attribution(model: Any, axis_unit: Any, token_a_id: int, token_b_id: int) -> float:
+    """Project a unit-norm direction onto W_U[:, a] - W_U[:, b].
+
+    Positive value = adding the axis increases the logit of token a relative to
+    token b at the model's output head. This is the cheapest answer to "does
+    the candidate axis directly write to the answer token?".
+    """
+    import torch  # local import keeps module importable without torch
+
+    w_u = model.W_U.detach().float().cpu()  # [d_model, d_vocab]
+    diff = w_u[:, token_a_id] - w_u[:, token_b_id]
+    axis_cpu = axis_unit.detach().float().cpu()
+    return float(torch.dot(axis_cpu, diff).item())
+
+
+def bootstrap_ci(values: list[float], n: int = 1000, alpha: float = 0.05, seed: int = 0) -> tuple[float, float, float]:
+    """Percentile bootstrap confidence interval for the mean of ``values``.
+
+    Returns ``(mean, lower, upper)`` where ``[lower, upper]`` is the
+    ``(1 - alpha)`` percentile interval. Pure NumPy — no XPU cost."""
+    import numpy as np
+
+    arr = np.asarray(values, dtype=float)
+    if arr.size == 0:
+        return float("nan"), float("nan"), float("nan")
+    if n <= 0:
+        mean = float(arr.mean())
+        return mean, mean, mean
+    rng = np.random.default_rng(seed)
+    means = np.empty(n, dtype=float)
+    for i in range(n):
+        sample = rng.choice(arr, size=arr.size, replace=True)
+        means[i] = sample.mean()
+    lower = float(np.quantile(means, alpha / 2))
+    upper = float(np.quantile(means, 1 - alpha / 2))
+    return float(arr.mean()), lower, upper

@@ -1,9 +1,19 @@
 #!/usr/bin/env python3
-"""Step 2: generate contrastive diabetes prompts from ICD and ATC CSV files."""
+"""Step 2: generate contrastive diabetes prompts from ICD and ATC CSV files.
+
+This version is a substantial expansion over the original draft so that
+downstream axis / SAE / steering experiments have enough data to:
+
+1. compute held-out classification accuracy (train / test split),
+2. control for token-level surface-form confounds (each complication has
+   multiple surface forms whose literal tokens differ), and
+3. evaluate rephrase robustness across many template variants.
+"""
 
 from __future__ import annotations
 
 import argparse
+import hashlib
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -17,23 +27,48 @@ from sae_med.data_utils import read_csv_dicts, write_csv_dicts
 
 COMPLICATIONS = {
     "none": {
-        "phrase": "no documented complications",
+        "phrases": (
+            "no documented complications",
+            "no diabetes-related complications",
+            "an otherwise uncomplicated course",
+            "no end-organ complications recorded",
+        ),
         "terms": ("without complications", "without complication"),
     },
     "kidney": {
-        "phrase": "kidney complications",
+        "phrases": (
+            "kidney complications",
+            "renal complications",
+            "diabetic nephropathy",
+            "diabetic chronic kidney disease",
+        ),
         "terms": ("kidney", "renal", "nephropathy", "chronic kidney"),
     },
     "neurological": {
-        "phrase": "neurological complications",
+        "phrases": (
+            "neurological complications",
+            "diabetic neuropathy",
+            "diabetic polyneuropathy",
+            "peripheral nerve involvement",
+        ),
         "terms": ("neurological", "neuropathy", "mononeuropathy", "polyneuropathy", "autonomic"),
     },
     "ophthalmic": {
-        "phrase": "ophthalmic complications",
+        "phrases": (
+            "ophthalmic complications",
+            "diabetic retinopathy",
+            "ocular involvement",
+            "retinal microvascular changes",
+        ),
         "terms": ("ophthalmic", "retinopathy", "cataract", "macular"),
     },
     "circulatory": {
-        "phrase": "peripheral circulatory complications",
+        "phrases": (
+            "peripheral circulatory complications",
+            "diabetic angiopathy",
+            "peripheral vascular disease",
+            "lower-limb circulatory disease",
+        ),
         "terms": ("circulatory", "angiopathy", "peripheral"),
     },
 }
@@ -43,6 +78,14 @@ TEMPLATE_VARIANTS = [
     "Clinical note: {disease_label} using ICD-10 code {icd_code}, with {complication_phrase}. A plausible ATC medication class is",
     "For a patient with {disease_label} ({icd_code}) and {complication_phrase}, the ATC drug category most relevant to diabetes treatment is",
     "Medical coding context: diagnosis {icd_code} means {icd_description}. The patient has {complication_phrase}. The recommended ATC drug is",
+    "Discharge summary: a {disease_label} patient (code {icd_code}) was admitted with {complication_phrase}. First-line ATC drug:",
+    "Endocrinology consultation: the patient carries the diagnosis {disease_label}, ICD {icd_code}, complicated by {complication_phrase}. The ATC class typically prescribed is",
+    "EHR snippet — DX: {icd_code} {disease_label}; complications: {complication_phrase}. Recommended ATC class:",
+    "Pharmacy review for {disease_label} ({icd_code}) with {complication_phrase}: the most appropriate ATC group is",
+    "Case vignette: a middle-aged patient with {disease_label} (ICD-10 {icd_code}) and {complication_phrase} requires therapy. The ATC drug class is",
+    "Outpatient note. Problem list: {disease_label} ({icd_code}); {complication_phrase}. Drug therapy (ATC) selected:",
+    "{disease_label} (code {icd_code}), complicated by {complication_phrase}. The standard ATC pharmacologic group is",
+    "Coding audit — patient labelled {icd_code} ({disease_label}); current state: {complication_phrase}. The ATC drug recommended is",
 ]
 
 FALLBACK_ICD = {
@@ -74,7 +117,25 @@ def parse_args() -> argparse.Namespace:
         default="none,kidney,neurological,ophthalmic,circulatory",
         help="Comma-separated complication keys.",
     )
-    parser.add_argument("--variants-per-combo", type=int, default=3)
+    parser.add_argument(
+        "--variants-per-combo",
+        type=int,
+        default=len(TEMPLATE_VARIANTS),
+        help="Templates per (type, complication, surface-form) combination.",
+    )
+    parser.add_argument(
+        "--surface-forms-per-complication",
+        type=int,
+        default=4,
+        help="Number of distinct surface forms per complication (token-level control).",
+    )
+    parser.add_argument(
+        "--test-fraction",
+        type=float,
+        default=0.3,
+        help="Fraction of prompts assigned to the held-out test split.",
+    )
+    parser.add_argument("--seed", type=int, default=20260425, help="Hash salt for the train/test split.")
     return parser.parse_args()
 
 
@@ -136,8 +197,13 @@ def select_icd_rows(icd_rows: list[dict[str, str]], complication_keys: list[str]
 
 
 def atc_lookup(atc_rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
-    lookup = {row.get("ATC_Code", ""): row for row in atc_rows}
-    return lookup
+    return {row.get("ATC_Code", ""): row for row in atc_rows}
+
+
+def assign_split(prompt_id: str, seed: int, test_fraction: float) -> str:
+    digest = hashlib.sha256(f"{seed}-{prompt_id}".encode("utf-8")).hexdigest()
+    bucket = int(digest[:8], 16) / 0xFFFFFFFF
+    return "test" if bucket < test_fraction else "train"
 
 
 def make_rows(
@@ -145,11 +211,17 @@ def make_rows(
     atc_by_code: dict[str, dict[str, str]],
     complication_keys: list[str],
     variants_per_combo: int,
+    surface_forms_per_complication: int,
+    test_fraction: float,
+    seed: int,
 ) -> list[dict[str, object]]:
     rows: list[dict[str, object]] = []
     prompt_index = 0
     for complication_key in complication_keys:
         complication = COMPLICATIONS[complication_key]
+        surface_forms = list(complication["phrases"])[:surface_forms_per_complication]
+        if not surface_forms:
+            continue
         for diabetes_type in ("type1", "type2"):
             icd = selected_icd[(diabetes_type, complication_key)]
             fallback = FALLBACK_ICD[diabetes_type]
@@ -158,29 +230,34 @@ def make_rows(
             disease_label = fallback["label"]
             icd_code = icd.get("ICD") or fallback["code"]
             icd_description = icd.get("ICDString") or fallback["description"]
-            for variant_idx, template in enumerate(TEMPLATE_VARIANTS[:variants_per_combo], start=1):
-                prompt_index += 1
-                rows.append(
-                    {
-                        "prompt_id": f"p{prompt_index:04d}",
-                        "diabetes_type": diabetes_type,
-                        "diabetes_label": disease_label,
-                        "icd_code": icd_code,
-                        "icd_description": icd_description,
-                        "complication": complication_key,
-                        "complication_phrase": complication["phrase"],
-                        "target_atc_code": atc_code,
-                        "target_atc_name": atc.get("ATC_Name", ""),
-                        "target_atc_l2": atc.get("ATC_L2_Name", ""),
-                        "template_variant": variant_idx,
-                        "prompt": template.format(
-                            disease_label=disease_label,
-                            icd_code=icd_code,
-                            icd_description=icd_description,
-                            complication_phrase=complication["phrase"],
-                        ),
-                    }
-                )
+            for surface_idx, surface_form in enumerate(surface_forms, start=1):
+                for variant_idx, template in enumerate(TEMPLATE_VARIANTS[:variants_per_combo], start=1):
+                    prompt_index += 1
+                    prompt_id = f"p{prompt_index:04d}"
+                    split = assign_split(prompt_id, seed, test_fraction)
+                    rows.append(
+                        {
+                            "prompt_id": prompt_id,
+                            "diabetes_type": diabetes_type,
+                            "diabetes_label": disease_label,
+                            "icd_code": icd_code,
+                            "icd_description": icd_description,
+                            "complication": complication_key,
+                            "complication_phrase": surface_form,
+                            "surface_form_index": surface_idx,
+                            "target_atc_code": atc_code,
+                            "target_atc_name": atc.get("ATC_Name", ""),
+                            "target_atc_l2": atc.get("ATC_L2_Name", ""),
+                            "template_variant": variant_idx,
+                            "split": split,
+                            "prompt": template.format(
+                                disease_label=disease_label,
+                                icd_code=icd_code,
+                                icd_description=icd_description,
+                                complication_phrase=surface_form,
+                            ),
+                        }
+                    )
     return rows
 
 
@@ -192,11 +269,21 @@ def main() -> None:
         raise SystemExit(f"Unknown complication key(s): {', '.join(unknown)}")
     if args.variants_per_combo < 1 or args.variants_per_combo > len(TEMPLATE_VARIANTS):
         raise SystemExit(f"--variants-per-combo must be between 1 and {len(TEMPLATE_VARIANTS)}")
+    if not 0.0 <= args.test_fraction < 1.0:
+        raise SystemExit("--test-fraction must be in [0, 1).")
 
     icd_rows = read_csv_dicts(args.icd_csv)
     atc_rows = read_csv_dicts(args.atc_csv)
     selected_icd = select_icd_rows(icd_rows, complication_keys)
-    rows = make_rows(selected_icd, atc_lookup(atc_rows), complication_keys, args.variants_per_combo)
+    rows = make_rows(
+        selected_icd,
+        atc_lookup(atc_rows),
+        complication_keys,
+        args.variants_per_combo,
+        args.surface_forms_per_complication,
+        args.test_fraction,
+        args.seed,
+    )
 
     fieldnames = [
         "prompt_id",
@@ -206,17 +293,27 @@ def main() -> None:
         "icd_description",
         "complication",
         "complication_phrase",
+        "surface_form_index",
         "target_atc_code",
         "target_atc_name",
         "target_atc_l2",
         "template_variant",
+        "split",
         "prompt",
     ]
     write_csv_dicts(args.output, rows, fieldnames)
-    print(f"Wrote {len(rows)} prompts to {args.output}")
+
+    train_count = sum(1 for row in rows if row["split"] == "train")
+    test_count = len(rows) - train_count
+    print(f"Wrote {len(rows)} prompts to {args.output} (train={train_count}, test={test_count})")
+    by_complication = defaultdict(int)
+    for row in rows:
+        by_complication[row["complication"]] += 1
+    for key, count in by_complication.items():
+        print(f"  {key:<13}: {count}")
     print("Example prompts:")
     for row in rows[:3]:
-        print(f"- {row['prompt_id']} [{row['diabetes_type']} / {row['complication']}]: {row['prompt']}")
+        print(f"- {row['prompt_id']} [{row['diabetes_type']} / {row['complication']} / {row['split']}]: {row['prompt']}")
 
 
 if __name__ == "__main__":

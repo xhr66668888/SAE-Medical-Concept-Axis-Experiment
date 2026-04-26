@@ -14,7 +14,7 @@ def write_csv_dicts(path: str | Path, rows: Iterable[dict[str, object]], fieldna
     output = Path(path)
     output.parent.mkdir(parents=True, exist_ok=True)
     with output.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
         for row in rows:
             writer.writerow(row)
@@ -37,4 +37,3 @@ def balanced_take(rows: list[dict[str, str]], label_column: str, labels: tuple[s
             group = group[:max_per_label]
         selected.extend(group)
     return selected
-

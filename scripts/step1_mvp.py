@@ -31,25 +31,28 @@ class Preset:
 PRESETS = {
     "gemma3-270m-it-res9": Preset(
         model_name="google/gemma-3-270m-it",
-        sae_release="google/gemma-scope-2-270m-it",
-        sae_id="resid_post/layer_9_width_16k_l0_medium",
+        sae_release="gemma-scope-2-270m-it-res-all",
+        sae_id="layer_9_width_16k_l0_small",
         hook_name="blocks.9.hook_resid_post",
     ),
     "gemma3-1b-it-res13": Preset(
         model_name="google/gemma-3-1b-it",
-        sae_release="gemma-scope-2-1b-it-res",
-        sae_id="layer_13_width_16k_l0_medium",
+        sae_release="gemma-scope-2-1b-it-res-all",
+        sae_id="layer_13_width_16k_l0_small",
+        hook_name="blocks.13.hook_resid_post",
     ),
     "gemma3-4b-it-res17": Preset(
         model_name="google/gemma-3-4b-it",
-        sae_release="gemma-scope-2-4b-it-res",
-        sae_id="layer_17_width_16k_l0_medium",
+        sae_release="gemma-scope-2-4b-it-res-all",
+        sae_id="layer_17_width_16k_l0_small",
+        hook_name="blocks.17.hook_resid_post",
     ),
     # Gemma 2 2B fallback. This is not Gemma Scope 2.
     "gemma2-2b-res12": Preset(
         model_name="gemma-2-2b",
         sae_release="gemma-scope-2b-pt-res-canonical",
         sae_id="layer_12/width_16k/canonical",
+        hook_name="blocks.12.hook_resid_post",
     ),
 }
 
@@ -213,7 +216,10 @@ def main() -> None:
     print_header(config, device, dtype)
 
     print("Loading HookedTransformer model...")
-    model = HookedTransformer.from_pretrained(
+    loader = HookedTransformer.from_pretrained
+    if str(dtype) != "torch.float32" and hasattr(HookedTransformer, "from_pretrained_no_processing"):
+        loader = HookedTransformer.from_pretrained_no_processing
+    model = loader(
         config.model_name,
         device=device,
         dtype=dtype,
