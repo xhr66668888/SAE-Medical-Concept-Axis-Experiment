@@ -1,0 +1,28 @@
+seed: 20260528
+models:
+  main: google/gemma-3-1b-it
+runtime:
+  device: cpu
+  dtype: float32
+  threads: 16
+data:
+  icd_csv: data/icd_diagnosis_ccs.csv
+  prompts_csv: outputs/concept_prompts.csv
+  max_pairs_per_axis: 40
+  heldout_template_ids: [8, 9, 10]
+axis:
+  layers: all
+  bootstrap_trials: 1000
+  null_trials: 1000
+steering:
+  alphas: [-2.0, -1.0, -0.5, 0.0, 0.5, 1.0, 2.0]
+  positions: all
+  max_prompts_per_axis: 24
+patching:
+  positions: [-1, -2]
+  max_pairs_per_axis: 12
+sae:
+  release_1b: gemma-scope-2-1b-it-res-all
+  release_270m: gemma-scope-2-270m-it-res-all
+  sae_id_format: layer_{layer}_width_16k_l0_small
+  top_k: 20

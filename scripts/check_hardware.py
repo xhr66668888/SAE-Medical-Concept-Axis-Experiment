@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-"""Print local hardware/software facts and a Gemma Scope 2 run recommendation."""
-
 from __future__ import annotations
 
 import os
@@ -19,19 +17,8 @@ def run(command: list[str]) -> str:
     return (completed.stdout or completed.stderr).strip()
 
 
-def first_line(text: str) -> str:
-    return text.splitlines()[0] if text else ""
-
-
-def read(path: str) -> str:
-    try:
-        return Path(path).read_text(encoding="utf-8").strip()
-    except OSError:
-        return ""
-
-
 def meminfo_gib() -> tuple[float, float]:
-    raw = read("/proc/meminfo")
+    raw = Path("/proc/meminfo").read_text(encoding="utf-8")
     values = {}
     for line in raw.splitlines():
         if ":" not in line:
@@ -43,101 +30,72 @@ def meminfo_gib() -> tuple[float, float]:
     return values.get("MemTotal", 0.0), values.get("MemAvailable", 0.0)
 
 
-def current_groups() -> set[str]:
-    output = run(["id", "-nG"])
-    return set(output.split()) if output else set()
-
-
-def torch_status() -> list[str]:
+def torch_report() -> list[str]:
     try:
         import torch
     except ModuleNotFoundError:
         return ["torch: not installed"]
-
     lines = [f"torch: {torch.__version__}"]
     lines.append(f"cuda available: {torch.cuda.is_available()}")
+    if torch.cuda.is_available():
+        lines.append(f"cuda device: {torch.cuda.get_device_name(0)}")
     xpu = getattr(torch, "xpu", None)
     if xpu is None:
         lines.append("xpu available: torch.xpu missing")
     else:
         try:
             available = xpu.is_available()
-        except Exception as exc:  # pragma: no cover - diagnostic only
-            lines.append(f"xpu available: error: {exc}")
-        else:
             lines.append(f"xpu available: {available}")
             if available:
-                lines.append(f"xpu device count: {xpu.device_count()}")
-                try:
-                    lines.append(f"xpu device name: {xpu.get_device_name(0)}")
-                except Exception as exc:  # pragma: no cover - diagnostic only
-                    lines.append(f"xpu device name: error: {exc}")
+                lines.append(f"xpu device: {xpu.get_device_name(0)}")
+        except Exception as exc:
+            lines.append(f"xpu available: error: {exc}")
     return lines
 
 
 def main() -> None:
-    total_gib, available_gib = meminfo_gib()
-    groups = current_groups()
-    gpu_lines = run(["lspci", "-nn"]).splitlines()
-    gpu_lines = [line for line in gpu_lines if any(term in line.lower() for term in ("vga", "3d", "display", "graphics"))]
-    dri = sorted(path.name for path in Path("/dev/dri").glob("*")) if Path("/dev/dri").exists() else []
-    commands = ["sycl-ls", "clinfo", "intel_gpu_top", "xpu-smi", "pip3", "conda", "uv"]
-    command_status = {command: shutil.which(command) or "missing" for command in commands}
-
+    total, available = meminfo_gib()
     print("=== System ===")
-    print(f"hostname: {platform.node()}")
-    print(f"kernel: {platform.release()}")
-    print(f"platform: {platform.platform()}")
+    print(f"host: {platform.node()}")
+    print(f"os: {platform.platform()}")
     print(f"python: {platform.python_version()} ({sys.executable})")
     print()
 
     print("=== CPU / Memory ===")
-    print(first_line(run(["lscpu"]) or "lscpu unavailable"))
-    model_name = ""
     for line in run(["lscpu"]).splitlines():
-        if line.startswith("Model name:"):
-            model_name = line.split(":", 1)[1].strip()
-            break
-    if model_name:
-        print(f"cpu: {model_name}")
-    print(f"memory total: {total_gib:.1f} GiB")
-    print(f"memory available: {available_gib:.1f} GiB")
+        if line.startswith(("Model name:", "CPU(s):", "Thread(s) per core:", "Core(s) per socket:")):
+            print(line)
+    print(f"memory total: {total:.1f} GiB")
+    print(f"memory available: {available:.1f} GiB")
     print()
 
-    print("=== Intel GPU Access ===")
-    for line in gpu_lines:
+    print("=== Accelerators ===")
+    gpu_lines = [
+        line
+        for line in run(["lspci", "-nn"]).splitlines()
+        if any(term in line.lower() for term in ("vga", "3d", "display", "graphics", "nvidia", "amd"))
+    ]
+    print("\n".join(gpu_lines) if gpu_lines else "no PCI GPU lines found")
+    print(f"/dev/dri: {', '.join(path.name for path in Path('/dev/dri').glob('*')) if Path('/dev/dri').exists() else 'missing'}")
+    print(f"user groups: {run(['id', '-nG'])}")
+    print()
+
+    print("=== Python ML Stack ===")
+    for line in torch_report():
         print(line)
-    print(f"/dev/dri: {', '.join(dri) if dri else 'not found'}")
-    print(f"user groups: {' '.join(sorted(groups))}")
-    if "render" not in groups or "video" not in groups:
-        print("warning: current user is not in render/video; Intel GPU access may fail.")
-        print("fix: sudo usermod -aG render,video $USER && reboot")
-    print()
-
-    print("=== Tools ===")
-    for command, status in command_status.items():
-        print(f"{command}: {status}")
-    print()
-
-    print("=== PyTorch ===")
-    for line in torch_status():
-        print(line)
+    for package in ("transformers", "sae_lens", "sklearn", "numpy", "matplotlib"):
+        try:
+            module = __import__(package)
+            print(f"{package}: {getattr(module, '__version__', 'installed')}")
+        except ModuleNotFoundError:
+            print(f"{package}: not installed")
     print()
 
     print("=== Recommendation ===")
-    print("main run: PRESET=gemma3-1b-it-res DEVICE=xpu DTYPE=bfloat16")
-    print("lightweight replay: PRESET=gemma3-270m-it-res")
-    print("this pipeline intentionally stays on 1B/270M models for the local memory budget")
-    if "render" not in groups or "video" not in groups:
-        print("do first: add this user to render/video groups before trying --device xpu")
-    elif any(line == "xpu available: False" for line in torch_status()):
-        print("do first: install Intel GPU user-space runtime packages:")
-        print("  sudo apt update")
-        print("  sudo apt install -y libze1 libze-intel-gpu1 intel-opencl-icd clinfo intel-gpu-tools")
-    if command_status["pip3"] == "missing" and command_status["conda"] == "missing" and command_status["uv"] == "missing":
-        print("do first: install/use a Python 3.11 env with pip, e.g. conda/micromamba")
-    print()
-
+    print("Use the CPU profile on this machine unless CUDA/XPU becomes available to PyTorch.")
+    print("Main local run: google/gemma-3-1b-it, dtype=float32, device=cpu, threads=16.")
+    if shutil.which("python3.11"):
+        print("Suggested environment: python3.11 -m venv .venv && .venv/bin/pip install -r requirements.txt")
     os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
 
 

@@ -1,11 +1,10 @@
-torch
 transformers>=4.50.0
-transformer-lens
+accelerate
 sae-lens
 numpy
 pandas
 scikit-learn
-networkx
 matplotlib
-accelerate
+pyyaml
+pytest
 huggingface_hub

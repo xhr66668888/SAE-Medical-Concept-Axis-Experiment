@@ -1,108 +1,73 @@
-# Medical Concept Axis / 医疗概念轴实验
+# Medical Concept Axis Experiment
 
-## 中文版
+This repository studies whether small open language models encode medical concepts as measurable residual-stream directions. The design is inspired by *The Assistant Axis* but replaces persona contrasts with controlled ICD/CCS medical concept contrasts.
 
-本项目做一个受 *The Assistant Axis* 方法启发的局部复现实验：
+The experiment no longer treats a specific drug token as the primary endpoint. It first asks whether medical concepts have residual structure, then tests whether those directions causally affect concept-label readouts and whether Gemma Scope 2 SAEs expose candidate features aligned with the directions.
 
-> 在 `google/gemma-3-1b-it` 中，是否存在一个可测量、可干预、可由 Gemma Scope SAE 候选特征解释的医疗概念轴：  
-> **Type 1 diabetes -> insulin** vs **Type 2 diabetes -> metformin**？
+## Concept Contrasts
 
+The default pipeline constructs five matched axes:
 
-主模型：
+- `diabetes_subtype`: Type 1 diabetes vs Type 2 diabetes
+- `complication_status`: diabetes with complications vs diabetes without complications
+- `neoplasm_behavior`: malignant neoplasm vs benign neoplasm
+- `infectious_etiology`: bacterial infection vs viral infection
+- `disease_course`: acute condition vs chronic condition
 
-- Model: `google/gemma-3-1b-it`
-- SAE: `gemma-scope-2-1b-it-res-all`
-- Prompt set: 480 条 Type 1 / Type 2 diabetes matched prompts
-- Type 1 readout token: `" insulin"` id `28933`
-- Type 2 readout token: `" metformin"` id `188881`
+Prompts are generated from ICD/CCS diagnosis text with held-out templates. Evaluation uses multi-token concept-label log-probability, not treatment-token prediction.
 
-Residual concept axis:
+## Hardware Target
 
-| Metric | Result |
-|---|---:|
-| Best layer | 21 |
-| Candidate layers | 5, 19, 20, 21, 22, 23 |
-| Held-out accuracy at layer 21 | 0.657 |
-| 95% bootstrap CI | [0.58, 0.74] |
-| Shuffled-label null mean | 0.528 |
-| Null p-value | 0.011 |
-| Direct logit attribution | +0.192 |
-| Logit lens difference | +80.719 |
+The local machine is CPU-first:
 
-Causal steering:
+- Intel Core i9-14900
+- 62 GiB system memory
+- no CUDA/XPU device currently available to PyTorch
 
-- Hook: `blocks.21.hook_resid_post`
-- Positions: all token positions
-- Evaluation prompts: 24 held-out `none`-complication prompts
-- Result: monotone increasing steering curve
-- Mean delta logit difference moves from `-4.277` at alpha `-3` to `+4.621` at alpha `+3`
+The main local model is `google/gemma-3-1b-it`.
 
-Activation patching:
+## Setup
 
-- Matched Type 1 / Type 2 pairs: 96
-- Complications: `kidney`, `neurological`
-- Layers: 5, 19, 20, 21, 22, 23
-- Positions: -1, -2, -3, -4
-- Best cell: layer 21, position -1
-- Normalized patching score: `0.9955`
-- 95% bootstrap CI: `[0.9751, 1.0148]`
-
-SAE candidate circuit:
-
-- Best SAE layer by top feature contribution: 21
-- Matched pairs used for SAE tracing: 122 train pairs across all complications
-- Strong axis-aligned features appear around layers 20-23, with layer 21 aligned with the residual-axis and patching peak
-- Top layer-21 robust candidates include features such as `F521` and `F3330`; exact IDs and scores are in `outputs/circuit_axis/axis_sae_summary.txt`
-
-270M replay:
-
-- Model: `google/gemma-3-270m-it`
-- Best layer: 12
-- Held-out accuracy: 0.707
-- Null mean: 0.545
-- Null p-value: 0.013
-- Steering is also monotone increasing, from `-2.005` at alpha `-3` to `+2.005` at alpha `+3`
-
-Interpretation:
-
-- The residual-stream concept-axis result is strong.
-- Steering and activation patching both support a causal role for the layer-21 axis in the 1B model.
-- The SAE tracing gives readable candidate features, but feature ablation would be needed before claiming a complete SAE-level mechanism.
-- This is enough for a single-concept medical-axis case study; it is not enough to claim that all medical concepts share one universal circuit.
-
-### Pipeline
-
-The runner keeps each model/SAE-heavy stage in a separate Python process so Intel XPU memory is released between stages.
-
-```text
-0. scripts/check_hardware.py
-   Check CPU, memory, Intel GPU, and PyTorch XPU availability.
-
-1. scripts/step2_generate_prompts.py
-   Generate 480 matched diabetes prompts.
-
-2. scripts/step1_mvp.py
-   Smoke-test Gemma + one Gemma Scope SAE.
-
-3. scripts/step3_concept_axis.py
-   Sweep residual layers, fit the Type1-vs-Type2 concept axis, and report
-   held-out accuracy, bootstrap CI, shuffled-label null, DLA, and logit lens.
-
-4. scripts/step4_axis_sae.py
-   Trace Gemma Scope SAE features aligned with the learned residual axis.
-
-5. scripts/step5_steering.py
-   Add alpha * axis during forward passes and measure
-   logit(insulin) - logit(metformin).
-
-6. scripts/step6_patching.py
-   Patch real Type2 residual activations into matched Type1 prompts.
-
-7. scripts/step8_circuit_diagram.py
-   Draw a pure black-and-white candidate circuit schematic.
-
-8. scripts/step7_report.py
-   Build `outputs/report.md` and `outputs/report.html`.
+```bash
+python3.11 -m venv .venv
+.venv/bin/pip install --upgrade pip
+.venv/bin/pip install -r requirements-torch-cpu.txt
+.venv/bin/pip install -r requirements.txt
 ```
 
+Gemma checkpoints may require an accepted Hugging Face license and `HF_TOKEN` in the environment.
+For fine-grained Hugging Face tokens, enable read access to public gated repositories.
 
+## Run
+
+```bash
+bash scripts/run_experiment.sh
+```
+
+Before the model-heavy stages, the runner checks whether the token can download `google/gemma-3-1b-it/config.json`.
+
+The full run writes:
+
+- `outputs/concept_prompts.csv`
+- `outputs/axis/axis_summary.csv`
+- `outputs/axis/layer_sweep.csv`
+- `outputs/steering/steering_results.csv`
+- `outputs/patching/patching_results.csv`
+- `outputs/sae/sae_features.csv`
+- `figures/*.png`
+- `report.md`
+
+## Pipeline
+
+1. Generate matched concept prompts from ICD/CCS descriptions.
+2. Capture hidden states and fit mean-difference residual axes for every concept and layer.
+3. Evaluate axes with held-out templates, bootstrap intervals, random-direction nulls, and label-permutation nulls.
+4. Steer activations along each fitted axis and measure concept-label log-probability shifts.
+5. Patch matched negative-side residuals into positive-side prompts.
+6. Trace Gemma Scope 2 SAE features aligned with the fitted axes.
+7. Draw the concept-structure and mechanistic-circuit figures.
+8. Build a Markdown report with figures.
+
+## Notes
+
+SAE feature IDs are candidate mechanistic evidence, not a complete circuit by themselves. A concept axis should be interpreted only when the held-out layer sweep, null tests, steering, patching, and SAE tracing agree.

@@ -6,4 +6,4 @@ __pycache__/
 .uv-python/
 .env
 outputs/
-figures/
+.antigravitycli/
