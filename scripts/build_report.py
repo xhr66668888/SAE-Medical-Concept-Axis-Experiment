@@ -15,13 +15,14 @@ from medical_axis.reporting import build_markdown_report
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Build the Markdown experiment report.")
     parser.add_argument("--output-dir", default="outputs")
+    parser.add_argument("--figure-dir", default="figures")
     parser.add_argument("--report", default="report.md")
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
-    build_markdown_report(Path(args.output_dir), Path(args.report))
+    build_markdown_report(Path(args.output_dir), Path(args.report), Path(args.figure_dir))
     print(f"Wrote {args.report}")
 
 

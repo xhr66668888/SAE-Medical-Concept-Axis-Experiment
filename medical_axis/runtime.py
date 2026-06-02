@@ -64,22 +64,53 @@ def load_causal_lm(
     tokenizer = AutoTokenizer.from_pretrained(model_name, cache_dir=cache_dir, token=token)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        torch_dtype=dtype,
-        low_cpu_mem_usage=True,
-        cache_dir=cache_dir,
-        token=token,
-    )
+    model_kwargs = {
+        "dtype": dtype,
+        "low_cpu_mem_usage": True,
+        "cache_dir": cache_dir,
+        "token": token,
+    }
+    try:
+        model = AutoModelForCausalLM.from_pretrained(model_name, **model_kwargs)
+    except TypeError:
+        model_kwargs["torch_dtype"] = model_kwargs.pop("dtype")
+        model = AutoModelForCausalLM.from_pretrained(model_name, **model_kwargs)
+    disable_forward_cache(model)
     model.eval()
     model.to(device)
     return model, tokenizer
 
 
+def disable_forward_cache(model: Any) -> None:
+    config_objects = [getattr(model, "config", None)]
+    config = config_objects[0]
+    for name in ("text_config", "language_config"):
+        nested = getattr(config, name, None) if config is not None else None
+        if nested is not None:
+            config_objects.append(nested)
+    for config_obj in config_objects:
+        if config_obj is not None and hasattr(config_obj, "use_cache"):
+            config_obj.use_cache = False
+
+
+def forward_no_cache(model: Any, *args, **kwargs):
+    kwargs.setdefault("use_cache", False)
+    try:
+        return model(*args, **kwargs)
+    except TypeError as exc:
+        if "use_cache" not in str(exc):
+            raise
+        kwargs.pop("use_cache", None)
+        return model(*args, **kwargs)
+
+
 def locate_decoder_layers(model: Any):
     candidates = (
         ("model", "layers"),
+        ("model", "language_model", "layers"),
+        ("model", "language_model", "model", "layers"),
         ("language_model", "model", "layers"),
+        ("language_model", "layers"),
         ("transformer", "h"),
         ("gpt_neox", "layers"),
     )
@@ -93,11 +124,19 @@ def locate_decoder_layers(model: Any):
                 break
         if ok:
             return obj
-    raise RuntimeError("Could not locate decoder layers for forward hooks.")
+    child_names = ", ".join(name for name, _ in list(model.named_children())[:12]) if hasattr(model, "named_children") else ""
+    raise RuntimeError(
+        f"Could not locate decoder layers for forward hooks. "
+        f"model_class={model.__class__.__name__}; top_level_children=[{child_names}]"
+    )
 
 
 def tokenized_length(tokenizer: Any, text: str) -> int:
     return len(tokenizer(text, add_special_tokens=False)["input_ids"])
+
+
+def prompt_token_length(tokenizer: Any, prompt: str) -> int:
+    return int(tokenizer(prompt, add_special_tokens=True, return_tensors="pt")["input_ids"][0].numel())
 
 
 def label_logprob(model: Any, tokenizer: Any, prompt: str, label: str, *, device: str) -> float:
@@ -105,8 +144,8 @@ def label_logprob(model: Any, tokenizer: Any, prompt: str, label: str, *, device
     prompt_ids = tokenizer(prompt, add_special_tokens=True, return_tensors="pt")["input_ids"][0]
     label_ids = tokenizer(" " + label.strip(), add_special_tokens=False, return_tensors="pt")["input_ids"][0]
     input_ids = torch.cat([prompt_ids, label_ids], dim=0).unsqueeze(0).to(device)
-    with torch.no_grad():
-        logits = model(input_ids).logits[0]
+    with torch.inference_mode():
+        logits = forward_no_cache(model, input_ids).logits[0]
     start = int(prompt_ids.numel()) - 1
     total = 0.0
     for offset, token_id in enumerate(label_ids.tolist()):
@@ -136,8 +175,8 @@ def capture_hidden_vector(
 ):
     torch, _, _ = require_torch_transformers()
     tokens = tokenizer(prompt, add_special_tokens=True, return_tensors="pt").to(device)
-    with torch.no_grad():
-        output = model(**tokens, output_hidden_states=True)
+    with torch.inference_mode():
+        output = forward_no_cache(model, **tokens, output_hidden_states=True)
     hidden_states = output.hidden_states
     if layer < 0 or layer + 1 >= len(hidden_states):
         raise ValueError(f"Layer {layer} is outside available hidden states 0..{len(hidden_states) - 2}.")
@@ -156,8 +195,8 @@ def capture_layer_matrix(
 ) -> dict[int, Any]:
     torch, _, _ = require_torch_transformers()
     tokens = tokenizer(prompt, add_special_tokens=True, return_tensors="pt").to(device)
-    with torch.no_grad():
-        output = model(**tokens, output_hidden_states=True)
+    with torch.inference_mode():
+        output = forward_no_cache(model, **tokens, output_hidden_states=True)
     hidden_states = output.hidden_states
     result = {}
     for layer in layers:
@@ -167,11 +206,48 @@ def capture_layer_matrix(
     return result
 
 
+def capture_layer_position_vectors(
+    model: Any,
+    tokenizer: Any,
+    prompt: str,
+    *,
+    layers: list[int],
+    positions: list[int],
+    device: str,
+) -> dict[tuple[int, int], Any]:
+    torch, _, _ = require_torch_transformers()
+    tokens = tokenizer(prompt, add_special_tokens=True, return_tensors="pt").to(device)
+    with torch.inference_mode():
+        output = forward_no_cache(model, **tokens, output_hidden_states=True)
+    hidden_states = output.hidden_states
+    result = {}
+    for layer in layers:
+        if layer < 0 or layer + 1 >= len(hidden_states):
+            raise ValueError(f"Layer {layer} is outside available hidden states 0..{len(hidden_states) - 2}.")
+        layer_hidden = hidden_states[layer + 1][0]
+        seq_len = layer_hidden.shape[0]
+        for position in positions:
+            index = position if position >= 0 else seq_len + position
+            if index < 0 or index >= seq_len:
+                raise IndexError(f"Capture index {index} is outside sequence length {seq_len}.")
+            result[(layer, position)] = layer_hidden[index, :].detach().float().cpu()
+    return result
+
+
 class ResidualSteeringHook:
-    def __init__(self, direction, alpha: float, *, positions: str = "all"):
+    def __init__(self, direction, alpha: float, *, positions: str = "prompt_all", prompt_length: int | None = None):
         self.direction = direction
         self.alpha = float(alpha)
         self.positions = positions
+        self.prompt_length = prompt_length
+
+    def _prompt_index(self, hidden) -> int:
+        if self.prompt_length is None:
+            raise ValueError("prompt_length is required for prompt-relative steering.")
+        index = self.prompt_length - 1
+        if index < 0 or index >= hidden.shape[1]:
+            raise IndexError(f"Prompt index {index} is outside sequence length {hidden.shape[1]}.")
+        return index
 
     def __call__(self, module, inputs, output):
         hidden = output[0] if isinstance(output, tuple) else output
@@ -181,6 +257,16 @@ class ResidualSteeringHook:
         elif self.positions == "last":
             patched_hidden = hidden.clone()
             patched_hidden[:, -1, :] = patched_hidden[:, -1, :] + delta
+        elif self.positions == "prompt_all":
+            if self.prompt_length is None:
+                raise ValueError("prompt_length is required for prompt_all steering.")
+            patched_hidden = hidden.clone()
+            end = min(self.prompt_length, hidden.shape[1])
+            patched_hidden[:, :end, :] = patched_hidden[:, :end, :] + delta
+        elif self.positions == "prompt_last":
+            patched_hidden = hidden.clone()
+            index = self._prompt_index(hidden)
+            patched_hidden[:, index, :] = patched_hidden[:, index, :] + delta
         else:
             raise ValueError(f"Unsupported steering position mode: {self.positions}")
         if isinstance(output, tuple):
@@ -189,15 +275,27 @@ class ResidualSteeringHook:
 
 
 class ResidualPatchHook:
-    def __init__(self, replacement, *, position: int = -1):
+    def __init__(self, replacement, *, position: int = -1, prompt_length: int | None = None):
         self.replacement = replacement
         self.position = position
+        self.prompt_length = prompt_length
+
+    def _patch_index(self, sequence_length: int) -> int:
+        if self.prompt_length is None:
+            index = self.position if self.position >= 0 else sequence_length + self.position
+        elif self.position < 0:
+            index = self.prompt_length + self.position
+        else:
+            index = self.position
+        if index < 0 or index >= sequence_length:
+            raise IndexError(f"Patch index {index} is outside sequence length {sequence_length}.")
+        return index
 
     def __call__(self, module, inputs, output):
         hidden = output[0] if isinstance(output, tuple) else output
         patched_hidden = hidden.clone()
         replacement = self.replacement.to(device=hidden.device, dtype=hidden.dtype)
-        patched_hidden[:, self.position, :] = replacement
+        patched_hidden[:, self._patch_index(hidden.shape[1]), :] = replacement
         if isinstance(output, tuple):
             return (patched_hidden, *output[1:])
         return patched_hidden

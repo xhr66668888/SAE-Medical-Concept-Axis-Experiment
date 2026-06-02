@@ -1,28 +1,36 @@
 seed: 20260528
-models:
-  main: google/gemma-3-1b-it
+model: google/gemma-3-4b-it
+run:
+  name: gemma3_4b_ccs_icd9_full
+  archive_interrupted_default_run: true
 runtime:
   device: cpu
   dtype: float32
   threads: 16
 data:
   icd_csv: data/icd_diagnosis_ccs.csv
+  ccs_appendix: AppendixASingleDX.txt
   prompts_csv: outputs/concept_prompts.csv
-  max_pairs_per_axis: 40
+  source: icd9_ccs_appendix_a
+  max_pairs_per_axis: 120
+  min_primary_pairs_per_side: 30
+  heldout_pair_fraction: 0.25
   heldout_template_ids: [8, 9, 10]
 axis:
   layers: all
-  bootstrap_trials: 1000
-  null_trials: 1000
+  fit_splits: train,test
+  activation_cache: cache/axis_activations
+  bootstrap_trials: 5000
+  null_trials: 5000
 steering:
-  alphas: [-2.0, -1.0, -0.5, 0.0, 0.5, 1.0, 2.0]
-  positions: all
-  max_prompts_per_axis: 24
+  alphas: [-6.0, -4.0, -2.0, -1.0, 0.0, 1.0, 2.0, 4.0, 6.0]
+  positions: prompt_all
+  max_prompts_per_axis: 120
 patching:
-  positions: [-1, -2]
-  max_pairs_per_axis: 12
+  positions: [-1, -2, -3, -4]
+  layers: window:2
+  max_pairs_per_axis: 60
 sae:
-  release_1b: gemma-scope-2-1b-it-res-all
-  release_270m: gemma-scope-2-270m-it-res-all
+  release: gemma-scope-2-4b-it-res-all
   sae_id_format: layer_{layer}_width_16k_l0_small
-  top_k: 20
+  top_k: 30

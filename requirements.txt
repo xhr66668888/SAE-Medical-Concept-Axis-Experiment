@@ -1,5 +1,6 @@
 transformers>=4.50.0
 accelerate
+torch
 sae-lens
 numpy
 pandas

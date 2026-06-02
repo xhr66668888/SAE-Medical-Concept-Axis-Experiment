@@ -71,6 +71,14 @@ def plot_steering(rows: list[dict[str, object]], output_path: str | Path) -> Non
             vals = [float(row["delta_logprob_diff"]) for row in group if float(row["alpha"]) == alpha]
             means.append(float(np.mean(vals)))
         ax.plot(alphas, means, marker="o", linewidth=1.4, label=axis_id)
+        if all("delta_ci_low" in row and "delta_ci_high" in row for row in group):
+            lows = []
+            highs = []
+            for alpha in alphas:
+                alpha_rows = [row for row in group if float(row["alpha"]) == alpha]
+                lows.append(float(np.mean([float(row["delta_ci_low"]) for row in alpha_rows])))
+                highs.append(float(np.mean([float(row["delta_ci_high"]) for row in alpha_rows])))
+            ax.fill_between(alphas, lows, highs, alpha=0.12)
     ax.axhline(0, color="0.7", linewidth=0.8)
     ax.axvline(0, color="0.7", linewidth=0.8)
     ax.set_xlabel("Steering coefficient")

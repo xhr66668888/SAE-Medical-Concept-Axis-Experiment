@@ -15,7 +15,7 @@ from medical_axis import DEFAULT_AXES
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Draw an evidence-rich medical concept-axis schematic.")
+    parser = argparse.ArgumentParser(description="Draw the medical concept-axis summary figure.")
     parser.add_argument("--axis-summary", default="outputs/axis/axis_summary.csv")
     parser.add_argument("--sae-features", default="outputs/sae/sae_features.csv")
     parser.add_argument("--output", default="figures/medical_concept_graph.png")
@@ -96,13 +96,13 @@ def main() -> None:
         0.10,
         0.42,
         0.10,
-        "Evidence chain: held-out template accuracy + null tests + steering + patching + SAE feature tracing",
+        "Reported quantities: held-out accuracy, null tests, steering, patching, SAE feature scores",
         size=9,
     )
     ax.text(
         0.05,
         0.04,
-        "Figure: medical concept-axis structure. Exact feature IDs and scores are shown when SAE tracing has been run.",
+        "Figure: ICD-9 CCS concept axes. Feature IDs and scores appear after SAE tracing.",
         fontsize=9,
     )
 

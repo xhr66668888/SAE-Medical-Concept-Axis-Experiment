@@ -40,6 +40,13 @@ def as_float(value: str | None, default: float = 0.0) -> float:
         return default
 
 
+def adjusted_p(row: dict[str, str]) -> float:
+    value = row.get("permutation_q_bh")
+    if value not in (None, ""):
+        return as_float(value, 1.0)
+    return as_float(row.get("permutation_p"), 1.0)
+
+
 def steering_amplitudes(rows: list[dict[str, str]]) -> dict[str, float]:
     amplitudes: dict[str, float] = defaultdict(float)
     for row in rows:
@@ -82,7 +89,7 @@ def main() -> None:
     validated = [
         row
         for row in axis_rows
-        if as_float(row.get("test_accuracy")) >= args.min_accuracy and as_float(row.get("permutation_p"), 1.0) <= args.max_p
+        if as_float(row.get("test_accuracy")) >= args.min_accuracy and adjusted_p(row) <= args.max_p
     ]
     weak = [row for row in axis_rows if row not in validated]
     validated.sort(key=lambda row: as_float(row.get("test_accuracy")), reverse=True)
@@ -108,7 +115,7 @@ def main() -> None:
         ax.annotate("", xy=(x1, y1), xytext=(x0, y0), arrowprops=dict(arrowstyle="->", lw=1.2))
 
     ax.text(0.04, 0.95, "MECHANISTIC CIRCUIT HYPOTHESIS", fontsize=12, fontweight="bold")
-    ax.text(0.04, 0.91, "Validated residual axes -> layer-local Gemma Scope 2 features -> concept-label readout", fontsize=9)
+    ax.text(0.04, 0.91, "Validated residual axes -> Gemma Scope 2 features -> concept-label readout", fontsize=9)
     ax.text(0.06, 0.84, "Validated concept axes", fontsize=10, fontweight="bold")
     ax.text(0.41, 0.84, "Residual stream site", fontsize=10, fontweight="bold")
     ax.text(0.67, 0.84, "Candidate SAE features", fontsize=10, fontweight="bold")
@@ -123,10 +130,10 @@ def main() -> None:
             axis_id = row.get("axis_id", "")
             layer = row.get("best_layer", "?")
             accuracy = as_float(row.get("test_accuracy"))
-            p_value = as_float(row.get("permutation_p"), 1.0)
+            p_value = adjusted_p(row)
             steer = amplitudes.get(axis_id, 0.0)
 
-            axis_text = f"{axis_id}\nacc={accuracy:.2f}, p={p_value:.3g}\nmax steering delta={steer:.3g}"
+            axis_text = f"{axis_id}\nacc={accuracy:.2f}, q={p_value:.3g}\nmax steering delta={steer:.3g}"
             site_text = f"residual stream\nlayer {layer}"
             features = feature_map.get(axis_id, [])
             if features:
@@ -146,7 +153,7 @@ def main() -> None:
 
     if weak:
         weak_text = "\n".join(
-            f"{row.get('axis_id')}: acc={as_float(row.get('test_accuracy')):.2f}, p={as_float(row.get('permutation_p'), 1.0):.3g}"
+            f"{row.get('axis_id')}: acc={as_float(row.get('test_accuracy')):.2f}, q={adjusted_p(row):.3g}"
             for row in weak
         )
         box(0.05, 0.07, 0.88, 0.10, "Diagnostic axes excluded from main circuit:\n" + weak_text, size=8.2)

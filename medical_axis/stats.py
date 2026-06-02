@@ -82,6 +82,27 @@ def bootstrap_ci(values: list[float] | np.ndarray, *, trials: int = 1000, seed: 
     return mean, float(np.quantile(means, 0.025)), float(np.quantile(means, 0.975))
 
 
+def benjamini_hochberg(p_values: list[float] | np.ndarray) -> np.ndarray:
+    arr = np.asarray(p_values, dtype=float)
+    q_values = np.full(arr.shape, np.nan, dtype=float)
+    finite_mask = np.isfinite(arr)
+    finite = arr[finite_mask]
+    if finite.size == 0:
+        return q_values
+
+    order = np.argsort(finite)
+    sorted_p = finite[order]
+    ranks = np.arange(1, finite.size + 1, dtype=float)
+    sorted_q = sorted_p * finite.size / ranks
+    sorted_q = np.minimum.accumulate(sorted_q[::-1])[::-1]
+    sorted_q = np.clip(sorted_q, 0.0, 1.0)
+
+    finite_q = np.empty_like(sorted_q)
+    finite_q[order] = sorted_q
+    q_values[finite_mask] = finite_q
+    return q_values
+
+
 def permutation_null_accuracy(
     activations: np.ndarray,
     labels: np.ndarray,

@@ -5,16 +5,20 @@ import argparse
 import os
 import sys
 
+FIXED_MODEL_NAME = "google/gemma-3-4b-it"
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Check Hugging Face access before model-heavy experiment stages.")
-    parser.add_argument("--model-name", default="google/gemma-3-1b-it")
+    parser.add_argument("--model-name", default=FIXED_MODEL_NAME)
     parser.add_argument("--filename", default="config.json")
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
+    if args.model_name != FIXED_MODEL_NAME:
+        raise SystemExit(f"This experiment is configured for {FIXED_MODEL_NAME}.")
     token = os.environ.get("HF_TOKEN")
     if not token:
         raise SystemExit(

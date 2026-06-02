@@ -6,4 +6,8 @@ __pycache__/
 .uv-python/
 .env
 outputs/
+runs/
+cache/
+figures/
+report.md
 .antigravitycli/
