@@ -1,0 +1,6 @@
+axis_id,split,rows,answered,coverage,accuracy,accuracy_with_abstain_wrong
+complication_status,test,6,6,1.0,1.0,1.0
+diabetes_subtype,test,144,144,1.0,1.0,1.0
+disease_course,test,180,165,0.9166666666666666,1.0,0.9166666666666666
+infectious_etiology,test,180,132,0.7333333333333333,1.0,0.7333333333333333
+neoplasm_behavior,test,180,171,0.95,1.0,0.95

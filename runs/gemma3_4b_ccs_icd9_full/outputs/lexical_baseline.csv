@@ -1,0 +1,11 @@
+axis_id,split,rows,answered,coverage,accuracy,accuracy_with_abstain_wrong
+congenital_cardiac_vs_other_congenital_ccs,test,96,96,1.0,1.0,1.0
+diabetes_complication_status_ccs,test,18,18,1.0,1.0,1.0
+drug_poisoning_vs_nondrug_poisoning_ccs,test,90,90,1.0,1.0,1.0
+eye_inflammation_vs_other_eye_ccs,test,180,180,1.0,1.0,1.0
+infectious_etiology_ccs,test,156,156,1.0,1.0,1.0
+intracranial_injury_vs_upper_limb_fracture_ccs,test,180,180,1.0,1.0,1.0
+joint_dislocation_vs_sprain_ccs,test,102,102,1.0,1.0,1.0
+musculoskeletal_infective_vs_nontraumatic_joint_ccs,test,180,180,1.0,1.0,1.0
+open_wounds_head_trunk_vs_extremity_ccs,test,114,114,1.0,1.0,1.0
+pregnancy_complications_vs_birth_puerperium_ccs,test,180,180,1.0,1.0,1.0

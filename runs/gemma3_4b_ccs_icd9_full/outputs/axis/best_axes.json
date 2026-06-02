@@ -1,0 +1,76 @@
+{
+  "axes": {
+    "congenital_cardiac_vs_other_congenital_ccs": {
+      "axis_key": "axis__congenital_cardiac_vs_other_congenital_ccs__layer_27",
+      "axis_unit_key": "axis_unit__congenital_cardiac_vs_other_congenital_ccs__layer_27",
+      "best_layer": 27,
+      "model_name": "google/gemma-3-4b-it",
+      "threshold": -1803.436279296875
+    },
+    "diabetes_complication_status_ccs": {
+      "axis_key": "axis__diabetes_complication_status_ccs__layer_21",
+      "axis_unit_key": "axis_unit__diabetes_complication_status_ccs__layer_21",
+      "best_layer": 21,
+      "model_name": "google/gemma-3-4b-it",
+      "threshold": 3679.755859375
+    },
+    "drug_poisoning_vs_nondrug_poisoning_ccs": {
+      "axis_key": "axis__drug_poisoning_vs_nondrug_poisoning_ccs__layer_27",
+      "axis_unit_key": "axis_unit__drug_poisoning_vs_nondrug_poisoning_ccs__layer_27",
+      "best_layer": 27,
+      "model_name": "google/gemma-3-4b-it",
+      "threshold": 14299.8623046875
+    },
+    "eye_inflammation_vs_other_eye_ccs": {
+      "axis_key": "axis__eye_inflammation_vs_other_eye_ccs__layer_27",
+      "axis_unit_key": "axis_unit__eye_inflammation_vs_other_eye_ccs__layer_27",
+      "best_layer": 27,
+      "model_name": "google/gemma-3-4b-it",
+      "threshold": -6884.0673828125
+    },
+    "infectious_etiology_ccs": {
+      "axis_key": "axis__infectious_etiology_ccs__layer_33",
+      "axis_unit_key": "axis_unit__infectious_etiology_ccs__layer_33",
+      "best_layer": 33,
+      "model_name": "google/gemma-3-4b-it",
+      "threshold": -0.4399452209472656
+    },
+    "intracranial_injury_vs_upper_limb_fracture_ccs": {
+      "axis_key": "axis__intracranial_injury_vs_upper_limb_fracture_ccs__layer_33",
+      "axis_unit_key": "axis_unit__intracranial_injury_vs_upper_limb_fracture_ccs__layer_33",
+      "best_layer": 33,
+      "model_name": "google/gemma-3-4b-it",
+      "threshold": -2.121790885925293
+    },
+    "joint_dislocation_vs_sprain_ccs": {
+      "axis_key": "axis__joint_dislocation_vs_sprain_ccs__layer_24",
+      "axis_unit_key": "axis_unit__joint_dislocation_vs_sprain_ccs__layer_24",
+      "best_layer": 24,
+      "model_name": "google/gemma-3-4b-it",
+      "threshold": 7303.474609375
+    },
+    "musculoskeletal_infective_vs_nontraumatic_joint_ccs": {
+      "axis_key": "axis__musculoskeletal_infective_vs_nontraumatic_joint_ccs__layer_26",
+      "axis_unit_key": "axis_unit__musculoskeletal_infective_vs_nontraumatic_joint_ccs__layer_26",
+      "best_layer": 26,
+      "model_name": "google/gemma-3-4b-it",
+      "threshold": -5275.5634765625
+    },
+    "open_wounds_head_trunk_vs_extremity_ccs": {
+      "axis_key": "axis__open_wounds_head_trunk_vs_extremity_ccs__layer_33",
+      "axis_unit_key": "axis_unit__open_wounds_head_trunk_vs_extremity_ccs__layer_33",
+      "best_layer": 33,
+      "model_name": "google/gemma-3-4b-it",
+      "threshold": 7.355887413024902
+    },
+    "pregnancy_complications_vs_birth_puerperium_ccs": {
+      "axis_key": "axis__pregnancy_complications_vs_birth_puerperium_ccs__layer_28",
+      "axis_unit_key": "axis_unit__pregnancy_complications_vs_birth_puerperium_ccs__layer_28",
+      "best_layer": 28,
+      "model_name": "google/gemma-3-4b-it",
+      "threshold": -10.128936767578125
+    }
+  },
+  "model_name": "google/gemma-3-4b-it",
+  "n_layers": 34
+}
