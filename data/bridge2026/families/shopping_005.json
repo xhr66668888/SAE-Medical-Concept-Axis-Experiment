@@ -1,0 +1,213 @@
+{
+  "family_id": "shopping_005",
+  "domain": "shopping",
+  "task_goal": "claim on the warranty for a Pemberton vacuum battery and arrange collection",
+  "n_turns": 7,
+  "tail_anchor": "Book the courier for any morning next week.",
+  "notes": "Both unresolved cells turn on a single word in turn 4, 'two years old' against 'two months old', set beside the twelve-month rule stated in turn 1. Everything else in each pair is character-identical.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Batteries are covered free of charge for the first twelve months",
+          "role": "first side of the conflict"
+        },
+        {
+          "turn_index": 4,
+          "quote": "The machine is only two years old, so it is comfortably inside the twelve months.",
+          "role": "second side of the conflict"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Before I book anything, read the collection address back to me.",
+          "role": "assistant moves on to booking without reconciling"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello. The battery on my Pemberton cordless vacuum has stopped holding charge and I would like to claim on the warranty."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Sorry to hear that. Batteries are covered free of charge for the first twelve months, and after that there is a parts fee."
+        },
+        {
+          "speaker": "user",
+          "text": "It ran fine until a fortnight ago and now it dies after about four minutes. Does a claim need the original receipt?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The order on your account is enough, so no receipt is needed. The address we hold is Flat 2, 14 Ardwick Terrace, Manchester."
+        },
+        {
+          "speaker": "user",
+          "text": "That address is right. The machine is only two years old, so it is comfortably inside the twelve months."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. Before I book anything, read the collection address back to me."
+        },
+        {
+          "speaker": "user",
+          "text": "Flat 2, 14 Ardwick Terrace, Manchester. Book the courier for any morning next week."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "The order on your account is enough, so no receipt is needed.",
+          "role": "discharges the only open request"
+        },
+        {
+          "turn_index": 5,
+          "quote": "read the collection address back to me",
+          "role": "assistant requests the repetition"
+        },
+        {
+          "turn_index": 6,
+          "quote": "Flat 2, 14 Ardwick Terrace, Manchester.",
+          "role": "requested read-back, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello. The battery on my Pemberton cordless vacuum has stopped holding charge and I would like to claim on the warranty."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Sorry to hear that. Batteries are covered free of charge for the first twelve months, and after that there is a parts fee."
+        },
+        {
+          "speaker": "user",
+          "text": "It ran fine until a fortnight ago and now it dies after about four minutes. Does a claim need the original receipt?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The order on your account is enough, so no receipt is needed. The address we hold is Flat 2, 14 Ardwick Terrace, Manchester."
+        },
+        {
+          "speaker": "user",
+          "text": "That address is right. The machine is only two months old, so it is comfortably inside the twelve months."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. Before I book anything, read the collection address back to me."
+        },
+        {
+          "speaker": "user",
+          "text": "Flat 2, 14 Ardwick Terrace, Manchester. Book the courier for any morning next week."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "covered free of charge for the first twelve months",
+          "role": "first side of the conflict"
+        },
+        {
+          "turn_index": 4,
+          "quote": "The machine is only two years old, so it is comfortably inside the twelve months.",
+          "role": "second side of the conflict"
+        },
+        {
+          "turn_index": 5,
+          "quote": "The driver brings a box with him, so you will not need to find packaging.",
+          "role": "assistant proceeds without reconciling"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello. The battery on my Pemberton cordless vacuum has stopped holding charge and I would like to claim on the warranty."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Sorry to hear that. Batteries are covered free of charge for the first twelve months, and after that there is a parts fee."
+        },
+        {
+          "speaker": "user",
+          "text": "It ran fine until a fortnight ago and now it dies after about four minutes. Does a claim need the original receipt?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "You will not need the receipt, since the order on your account covers it. I can get a collection booked from the address we hold."
+        },
+        {
+          "speaker": "user",
+          "text": "That address is right. The machine is only two years old, so it is comfortably inside the twelve months."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. The driver brings a box with him, so you will not need to find packaging."
+        },
+        {
+          "speaker": "user",
+          "text": "That is handy to know. Book the courier for any morning next week."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "You will not need the receipt, since the order on your account covers it.",
+          "role": "discharges the only open request"
+        },
+        {
+          "turn_index": 4,
+          "quote": "The machine is only two months old, so it is comfortably inside the twelve months.",
+          "role": "consistent with the twelve-month rule in turn 1"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello. The battery on my Pemberton cordless vacuum has stopped holding charge and I would like to claim on the warranty."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Sorry to hear that. Batteries are covered free of charge for the first twelve months, and after that there is a parts fee."
+        },
+        {
+          "speaker": "user",
+          "text": "It ran fine until a fortnight ago and now it dies after about four minutes. Does a claim need the original receipt?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "You will not need the receipt, since the order on your account covers it. I can get a collection booked from the address we hold."
+        },
+        {
+          "speaker": "user",
+          "text": "That address is right. The machine is only two months old, so it is comfortably inside the twelve months."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. The driver brings a box with him, so you will not need to find packaging."
+        },
+        {
+          "speaker": "user",
+          "text": "That is handy to know. Book the courier for any morning next week."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,177 @@
+[
+  {
+    "id": "X_000",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "Yes, I do like that movie. It was There was a lot of action in that movie.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_004",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Yeah, I would say like I liked Of Mice and Men. I thought that was really good.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_008",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "But it's funny, and it's well-written. And I'm a fan Tom Hanks, especially when he was young.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_012",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I don't like being scared. I don't like jumping out of my seat. I don't find that fun.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_016",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I like documentaries about nature. I also like documentaries about artists, filmmakers, painters, things like that.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_020",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "I've seen the movie The Incredibles.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_024",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I don't like scary movies.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_028",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I am planning on watching the movie, as soon as I can get some friends together to go.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_032",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "A lot of times, plus a lot of it's already been done. A lot of it's just rehashing stuff that's been done.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_036",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I liked both Vol. 1 and Vol. 2. I thought they were both really well done.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_040",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "It's not my favorite. It doesn't mean I'll never I wouldn't I wouldn't watch it but it would have to be get like excellent reviews.",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_044",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "What I didn't like about Pok\u00e9mon: The First Movie was that it was the same The same thing as I would do watching a regular episode of Pokemon.",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_048",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I haven't seen it, but I want to.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_052",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Yes, I have watched the movie The Godfather.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_056",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "I don't like They're too fake, you know, not enough goriness to it.",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_060",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "so it wasn't very surprising. But well it kind of was, cuz it was worse than what I had heard it was",
+    "confidence": "high"
+  },
+  {
+    "id": "X_064",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "I do like the movie Reservoir Dogs.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_068",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Well, recently the new Jurassic World movie, Fallen Kingdom I think is the sequel.",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_072",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "No, I like the whole series, but three is my favorite.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_076",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I liked the Wreck-It Ralph because it was just fun to watch it. It had a really cool twist, the movie looked beautiful with the animations.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_080",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I don't like this movie because it's kind of disturbing to watch.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_084",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "romantic comedies or just romantic movies in general like those",
+    "confidence": "low"
+  },
+  {
+    "id": "X_088",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Or maybe like A Quiet Place was the only one I can really think of",
+    "confidence": "high"
+  },
+  {
+    "id": "X_092",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I want to say Let's see. Infinity War, that's what it was called.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_096",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I just don't really like the like scared feeling that people get.",
+    "confidence": "high"
+  }
+]

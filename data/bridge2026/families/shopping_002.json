@@ -1,0 +1,218 @@
+{
+  "family_id": "shopping_002",
+  "domain": "shopping",
+  "task_goal": "move one of two Ashgrove furniture deliveries onto a Saturday",
+  "n_turns": 7,
+  "tail_anchor": "Send the confirmation over when it's booked.",
+  "notes": "Two deliveries stay live from turn 0 to the end, and turn 2 explains why only one of them has to move. Inside each repetition level the unresolved and resolved members differ by two words in turn 4 ('that one' vs 'the chair') and nothing else.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "the oak desk on order 7731 and the desk chair on order 7802",
+          "role": "two live candidates"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Put that one back to Saturday the 18th.",
+          "role": "referring expression that picks out neither order"
+        },
+        {
+          "turn_index": 5,
+          "quote": "I will send the amendment through to the depot now.",
+          "role": "assistant acts without establishing which order moves"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello. I've got two Ashgrove orders on the way: the oak desk on order 7731 and the desk chair on order 7802. I need to sort out the delivery days."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Of course. The oak desk is booked for Tuesday the 14th and the desk chair for Thursday the 16th. Does that fit with your week?"
+        },
+        {
+          "speaker": "user",
+          "text": "Not really. A neighbour can take one of them in, but for the other I have to be there, and it has to be a Saturday because I cannot take a weekday off."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. We run Saturday crews every week and there is no fee for changing a slot."
+        },
+        {
+          "speaker": "user",
+          "text": "As I say, it has to be a Saturday because I cannot take a weekday off. Put that one back to Saturday the 18th."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted, Saturday the 18th. I will send the amendment through to the depot now."
+        },
+        {
+          "speaker": "user",
+          "text": "Brilliant. Send the confirmation over when it's booked."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "it has to be a Saturday because I cannot take a weekday off",
+          "role": "preference stated"
+        },
+        {
+          "turn_index": 3,
+          "quote": "We run Saturday crews every week",
+          "role": "preference already accepted before it is restated"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Put the chair back to Saturday the 18th.",
+          "role": "referent fixed, so the repeat is emphasis only"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello. I've got two Ashgrove orders on the way: the oak desk on order 7731 and the desk chair on order 7802. I need to sort out the delivery days."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Of course. The oak desk is booked for Tuesday the 14th and the desk chair for Thursday the 16th. Does that fit with your week?"
+        },
+        {
+          "speaker": "user",
+          "text": "Not really. A neighbour can take one of them in, but for the other I have to be there, and it has to be a Saturday because I cannot take a weekday off."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. We run Saturday crews every week and there is no fee for changing a slot."
+        },
+        {
+          "speaker": "user",
+          "text": "As I say, it has to be a Saturday because I cannot take a weekday off. Put the chair back to Saturday the 18th."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted, Saturday the 18th. I will send the amendment through to the depot now."
+        },
+        {
+          "speaker": "user",
+          "text": "Brilliant. Send the confirmation over when it's booked."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "The oak desk is booked for Tuesday the 14th and the desk chair for Thursday the 16th.",
+          "role": "two live candidates"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Then put that one back to Saturday the 18th",
+          "role": "referring expression that picks out neither order"
+        },
+        {
+          "turn_index": 5,
+          "quote": "I will send the amendment through to the depot now.",
+          "role": "assistant acts without establishing which order moves"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello. I've got two Ashgrove orders on the way: the oak desk on order 7731 and the desk chair on order 7802. I need to sort out the delivery days."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Of course. The oak desk is booked for Tuesday the 14th and the desk chair for Thursday the 16th. Does that fit with your week?"
+        },
+        {
+          "speaker": "user",
+          "text": "Not really. A neighbour can take one of them in, but for the other I must be at home, so it needs to move to a weekend. I hope there is no fee for changing a slot."
+        },
+        {
+          "speaker": "assistant",
+          "text": "No fee at all. We can move any delivery by up to a fortnight."
+        },
+        {
+          "speaker": "user",
+          "text": "Then put that one back to Saturday the 18th, assuming your crews work weekends."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Saturday crews run every week, so that is fine. I will send the amendment through to the depot now."
+        },
+        {
+          "speaker": "user",
+          "text": "Brilliant. Send the confirmation over when it's booked."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "No fee at all.",
+          "role": "answers the query about a charge"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Then put the chair back to Saturday the 18th",
+          "role": "referent fixed for the next action"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Saturday crews run every week, so that is fine.",
+          "role": "answers the query about weekend crews"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello. I've got two Ashgrove orders on the way: the oak desk on order 7731 and the desk chair on order 7802. I need to sort out the delivery days."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Of course. The oak desk is booked for Tuesday the 14th and the desk chair for Thursday the 16th. Does that fit with your week?"
+        },
+        {
+          "speaker": "user",
+          "text": "Not really. A neighbour can take one of them in, but for the other I must be at home, so it needs to move to a weekend. I hope there is no fee for changing a slot."
+        },
+        {
+          "speaker": "assistant",
+          "text": "No fee at all. We can move any delivery by up to a fortnight."
+        },
+        {
+          "speaker": "user",
+          "text": "Then put the chair back to Saturday the 18th, assuming your crews work weekends."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Saturday crews run every week, so that is fine. I will send the amendment through to the depot now."
+        },
+        {
+          "speaker": "user",
+          "text": "Brilliant. Send the confirmation over when it's booked."
+        }
+      ]
+    }
+  }
+}

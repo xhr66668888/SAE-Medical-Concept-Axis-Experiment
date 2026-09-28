@@ -1,0 +1,86 @@
+{
+  "family_id": "household_010",
+  "domain": "household",
+  "task_goal": "book a gardener to cut the boundary hedge and arrange access through the neighbour's side gate",
+  "n_turns": 7,
+  "tail_anchor": "There is a tap round the back if you need water.",
+  "notes": "rep_unres and rep_res differ only in the last sentence of turn 2: either a cuttings question the gardener never comes back to, or a remark about the neighbour's side. norep_unres and norep_res differ by one word (nine/seven) against an arrival stated for half seven, with the side gate named as the only way in for the machinery.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "Do the cuttings go on your truck, or do we keep them?", "role": "request"},
+        {"turn_index": 3, "quote": "That gate will save me carrying machinery through a kitchen. I'll bring the long-reach trimmer and some boards for the flower beds.", "role": "assistant answers a different part"},
+        {"turn_index": 5, "quote": "Grand. I'll text you the evening before so nobody is caught in a dressing gown.", "role": "last assistant turn, still no answer"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Wes, we'd like the boundary hedge taken down to about five foot before the nesting season starts. Could you fit us in before the end of the month?"},
+        {"speaker": "assistant", "text": "Thursday of next week, first thing, if that suits. Five foot it is, it will thicken up nicely. Does it run the whole length between you and next door?"},
+        {"speaker": "user", "text": "It does, a good twenty metres. We'd like the boundary hedge taken down to about five foot before the nesting season starts, and Bridget at number nine will let you through her side gate. Do the cuttings go on your truck, or do we keep them?"},
+        {"speaker": "assistant", "text": "That gate will save me carrying machinery through a kitchen. I'll bring the long-reach trimmer and some boards for the flower beds."},
+        {"speaker": "user", "text": "The beds are bare at this time of year, so no harm done. I'll shift the water butt out of your way as well."},
+        {"speaker": "assistant", "text": "Grand. I'll text you the evening before so nobody is caught in a dressing gown."},
+        {"speaker": "user", "text": "Sensible. There is a tap round the back if you need water."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Thursday of next week, first thing, if that suits.", "role": "answers the only open request"},
+        {"turn_index": 1, "quote": "Five foot it is, it will thicken up nicely.", "role": "the stated height is accepted"},
+        {"turn_index": 2, "quote": "We'd like the boundary hedge taken down to about five foot before the nesting season starts", "role": "restatement for emphasis of a height already agreed"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Wes, we'd like the boundary hedge taken down to about five foot before the nesting season starts. Could you fit us in before the end of the month?"},
+        {"speaker": "assistant", "text": "Thursday of next week, first thing, if that suits. Five foot it is, it will thicken up nicely. Does it run the whole length between you and next door?"},
+        {"speaker": "user", "text": "It does, a good twenty metres. We'd like the boundary hedge taken down to about five foot before the nesting season starts, and Bridget at number nine will let you through her side gate. She has the same trouble with her side of it."},
+        {"speaker": "assistant", "text": "That gate will save me carrying machinery through a kitchen. I'll bring the long-reach trimmer and some boards for the flower beds."},
+        {"speaker": "user", "text": "The beds are bare at this time of year, so no harm done. I'll shift the water butt out of your way as well."},
+        {"speaker": "assistant", "text": "Grand. I'll text you the evening before so nobody is caught in a dressing gown."},
+        {"speaker": "user", "text": "Sensible. There is a tap round the back if you need water."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Thursday of next week suits me, first thing, say half seven.", "role": "the gardener arrives at half seven"},
+        {"turn_index": 2, "quote": "Bridget at number nine unlocks her side gate when she leaves for work at nine, and that is the only way in with the machinery", "role": "the only access is not open until nine, an hour and a half after he arrives"},
+        {"turn_index": 3, "quote": "Handy, I hate carrying a trimmer through somebody's kitchen.", "role": "assistant proceeds without reconciling the conflict"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Wes, the boundary hedge wants taking down to about five foot before the birds start nesting. Any chance of a slot before the month is out?"},
+        {"speaker": "assistant", "text": "Thursday of next week suits me, first thing, say half seven. Five foot will thicken it up nicely. Does the hedge run all the way between you and number nine?"},
+        {"speaker": "user", "text": "It does, a good twenty metres. Bridget at number nine unlocks her side gate when she leaves for work at nine, and that is the only way in with the machinery."},
+        {"speaker": "assistant", "text": "Handy, I hate carrying a trimmer through somebody's kitchen. I'll bring the long-reach one and some boards for the flower beds, they sink in when the ground is soft."},
+        {"speaker": "user", "text": "The beds are bare at this time of year, so no harm done. I'll shift the water butt out of your way as well."},
+        {"speaker": "assistant", "text": "Grand. Give me the day again and I'll put it in the diary, my phone is hopeless."},
+        {"speaker": "user", "text": "Thursday. There is a tap round the back if you need water."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "Bridget at number nine unlocks her side gate when she leaves for work at seven, and that is the only way in with the machinery", "role": "the gate is open before the half seven arrival, so the access holds"},
+        {"turn_index": 5, "quote": "Give me the day again and I'll put it in the diary", "role": "assistant asks for the repetition"},
+        {"turn_index": 6, "quote": "Thursday.", "role": "requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Wes, the boundary hedge wants taking down to about five foot before the birds start nesting. Any chance of a slot before the month is out?"},
+        {"speaker": "assistant", "text": "Thursday of next week suits me, first thing, say half seven. Five foot will thicken it up nicely. Does the hedge run all the way between you and number nine?"},
+        {"speaker": "user", "text": "It does, a good twenty metres. Bridget at number nine unlocks her side gate when she leaves for work at seven, and that is the only way in with the machinery."},
+        {"speaker": "assistant", "text": "Handy, I hate carrying a trimmer through somebody's kitchen. I'll bring the long-reach one and some boards for the flower beds, they sink in when the ground is soft."},
+        {"speaker": "user", "text": "The beds are bare at this time of year, so no harm done. I'll shift the water butt out of your way as well."},
+        {"speaker": "assistant", "text": "Grand. Give me the day again and I'll put it in the diary, my phone is hopeless."},
+        {"speaker": "user", "text": "Thursday. There is a tap round the back if you need water."}
+      ]
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "family_id": "shopping_018",
+  "domain": "shopping",
+  "task_goal": "order three made-to-measure roller blinds from Aldergate for the front bay and settle the sizes and the fitting charge",
+  "n_turns": 5,
+  "tail_anchor": "The fitter will need a step ladder for that bay.",
+  "notes": "The rep pair differs only in one clause of turn 1, 'there is no surcharge at all for a bay' against 'fitting is one charge for the visit', so only one of them answers what was asked. The norep pair differs by one number in turn 2, the freshly measured middle recess coming out at 61 or at 44 against the 44 held on file.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Is the fitting charge per blind, or one charge for the visit?",
+          "role": "request"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Blackout lining is standard on the Tessa range, and there is no surcharge at all for a bay.",
+          "role": "assistant answers the fabric and the bay surcharge, and says nothing about the fitting charge"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I will need the recess widths before I can price the job up properly.",
+          "role": "last assistant turn, the fitting charge is still not given"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hi. I'd like three made-to-measure roller blinds for the front bay at Aldergate, and they must be blackout lined throughout. Is the fitting charge per blind, or one charge for the visit?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "We can do that. Blackout lining is standard on the Tessa range, and there is no surcharge at all for a bay. Dove grey is £38 a metre."
+        },
+        {
+          "speaker": "user",
+          "text": "Dove grey will do nicely. They must be blackout lined throughout, that is the whole point of them."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted. I will need the recess widths before I can price the job up properly."
+        },
+        {
+          "speaker": "user",
+          "text": "They are 82, 44 and 82 centimetres. The fitter will need a step ladder for that bay."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Is the fitting charge per blind, or one charge for the visit?",
+          "role": "the only request in the dialogue"
+        },
+        {
+          "turn_index": 1,
+          "quote": "fitting is one charge for the visit",
+          "role": "discharges it"
+        },
+        {
+          "turn_index": 2,
+          "quote": "They must be blackout lined throughout, that is the whole point of them.",
+          "role": "restates a requirement already accepted at turn 1, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hi. I'd like three made-to-measure roller blinds for the front bay at Aldergate, and they must be blackout lined throughout. Is the fitting charge per blind, or one charge for the visit?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "We can do that. Blackout lining is standard on the Tessa range, and fitting is one charge for the visit. Dove grey is £38 a metre."
+        },
+        {
+          "speaker": "user",
+          "text": "Dove grey will do nicely. They must be blackout lined throughout, that is the whole point of them."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted. I will need the recess widths before I can price the job up properly."
+        },
+        {
+          "speaker": "user",
+          "text": "They are 82, 44 and 82 centimetres. The fitter will need a step ladder for that bay."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "widths of 82, 44 and 82 centimetres",
+          "role": "the sizes held on file for the middle and outer recesses"
+        },
+        {
+          "turn_index": 2,
+          "quote": "the middle recess came out at 61 centimetres",
+          "role": "the fresh measurement, seventeen centimetres off the middle size on file"
+        },
+        {
+          "turn_index": 2,
+          "quote": "cut them to the widths you already hold on file",
+          "role": "the instruction that makes the difference bite, since the file size is the one that goes to the workshop"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I will send those through to the workshop this afternoon.",
+          "role": "assistant sends the file sizes to be cut without raising the difference"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good morning. I want three made-to-measure roller blinds for the front bay, the same as the set you did for us before. Can you still get the Tessa fabric in dove grey?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "We can, dove grey is £38 a metre and still current. Your last order for that bay is on file with widths of 82, 44 and 82 centimetres."
+        },
+        {
+          "speaker": "user",
+          "text": "That is the one. I ran a tape over them again this morning and the middle recess came out at 61 centimetres, so cut them to the widths you already hold on file."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Right, I will send those through to the workshop this afternoon."
+        },
+        {
+          "speaker": "user",
+          "text": "Lovely, thank you. The fitter will need a step ladder for that bay."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "We can, dove grey is £38 a metre and still current.",
+          "role": "discharges the only request in the dialogue"
+        },
+        {
+          "turn_index": 2,
+          "quote": "the middle recess came out at 44 centimetres",
+          "role": "the fresh measurement agrees with the middle size on file"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I will send those through to the workshop this afternoon.",
+          "role": "proceeds on sizes that match"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good morning. I want three made-to-measure roller blinds for the front bay, the same as the set you did for us before. Can you still get the Tessa fabric in dove grey?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "We can, dove grey is £38 a metre and still current. Your last order for that bay is on file with widths of 82, 44 and 82 centimetres."
+        },
+        {
+          "speaker": "user",
+          "text": "That is the one. I ran a tape over them again this morning and the middle recess came out at 44 centimetres, so cut them to the widths you already hold on file."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Right, I will send those through to the workshop this afternoon."
+        },
+        {
+          "speaker": "user",
+          "text": "Lovely, thank you. The fitter will need a step ladder for that bay."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "family_id": "cooking_005",
+  "domain": "cooking",
+  "task_goal": "bake a dairy-free two-layer birthday sponge and get the tin and the timing settled",
+  "n_turns": 7,
+  "tail_anchor": "The candles and the cake board are already sorted.",
+  "notes": "Both rep cells contain the same requested read-back; rep_unres and rep_res differ only in 'the tin' against 'the 20cm' while both tins stay live. The norep pair differs only in the opening clause of turn 3, which either answers the bake-ahead question or replaces it with a mixing tip.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "I've got a 20cm round tin and a 23cm round tin",
+          "role": "two candidate tins are live"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll get the tin lined and greased tonight",
+          "role": "the referring expression picks out neither, and they hold different volumes"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Bring the eggs out of the fridge the night before as well",
+          "role": "assistant moves on without settling which tin"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm baking a two-layer chocolate sponge for my nephew's birthday on Sunday and it has to be completely dairy-free. I've got a 20cm round tin and a 23cm round tin. How much batter does each one hold?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Dairy-free is no trouble; use a hard block margarine, not a soft spread. The 20cm holds about 700ml and the 23cm about a litre, and don't fill either tin past two thirds of the way up. Can you say that back to me?"
+        },
+        {
+          "speaker": "user",
+          "text": "Don't fill either tin past two thirds of the way up. I'll do a double batch so I get two layers."
+        },
+        {
+          "speaker": "assistant",
+          "text": "A double batch gives you two even layers. Line the base with parchment and grease the sides with a little of the margarine."
+        },
+        {
+          "speaker": "user",
+          "text": "Will do. I'll get the tin lined and greased tonight so Sunday is only mixing and baking."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Then Sunday is only the fun part. Bring the eggs out of the fridge the night before as well, because cold eggs curdle the mix."
+        },
+        {
+          "speaker": "user",
+          "text": "Eggs out on Saturday night, then. The candles and the cake board are already sorted."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Can you say that back to me?",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Don't fill either tin past two thirds of the way up.",
+          "role": "the requested read-back"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll get the 20cm lined and greased tonight",
+          "role": "picks one of the two tins"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm baking a two-layer chocolate sponge for my nephew's birthday on Sunday and it has to be completely dairy-free. I've got a 20cm round tin and a 23cm round tin. How much batter does each one hold?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Dairy-free is no trouble; use a hard block margarine, not a soft spread. The 20cm holds about 700ml and the 23cm about a litre, and don't fill either tin past two thirds of the way up. Can you say that back to me?"
+        },
+        {
+          "speaker": "user",
+          "text": "Don't fill either tin past two thirds of the way up. I'll do a double batch so I get two layers."
+        },
+        {
+          "speaker": "assistant",
+          "text": "A double batch gives you two even layers. Line the base with parchment and grease the sides with a little of the margarine."
+        },
+        {
+          "speaker": "user",
+          "text": "Will do. I'll get the 20cm lined and greased tonight so Sunday is only mixing and baking."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Then Sunday is only the fun part. Bring the eggs out of the fridge the night before as well, because cold eggs curdle the mix."
+        },
+        {
+          "speaker": "user",
+          "text": "Eggs out on Saturday night, then. The candles and the cake board are already sorted."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "Can I bake the sponges on Friday and keep them until Sunday, or will they dry out?",
+          "role": "request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Sift the cocoa in with the flour or you will get lumps",
+          "role": "assistant answers with mixing advice instead"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Block margarine in the sponge, and a vegan buttercream between the layers and over the top.",
+          "role": "last assistant turn, still nothing about baking two days ahead"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm baking a two-layer chocolate sponge for my nephew's birthday on Sunday and it has to be completely dairy-free. I've got a 20cm round tin and a 23cm round tin. How much batter does each one hold?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Dairy-free is no trouble; use a hard block margarine, not a soft spread. The 20cm holds about 700ml and the 23cm about a litre."
+        },
+        {
+          "speaker": "user",
+          "text": "The 20cm suits me better, I think. Can I bake the sponges on Friday and keep them until Sunday, or will they dry out?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Sift the cocoa in with the flour or you will get lumps, and a double batch gives you two nice even layers."
+        },
+        {
+          "speaker": "user",
+          "text": "A double batch, then. And I do want to stress it, nothing with milk in, not even in the icing."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. Block margarine in the sponge, and a vegan buttercream between the layers and over the top."
+        },
+        {
+          "speaker": "user",
+          "text": "Block margarine, vegan buttercream, understood. The candles and the cake board are already sorted."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "it has to be completely dairy-free",
+          "role": "preference stated"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Dairy-free is no trouble",
+          "role": "preference already taken on board"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Wrapped well they keep two days, so Friday is fine",
+          "role": "answers the last open request"
+        },
+        {
+          "turn_index": 4,
+          "quote": "nothing with milk in, not even in the icing",
+          "role": "restated for emphasis, nothing new is opened"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm baking a two-layer chocolate sponge for my nephew's birthday on Sunday and it has to be completely dairy-free. I've got a 20cm round tin and a 23cm round tin. How much batter does each one hold?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Dairy-free is no trouble; use a hard block margarine, not a soft spread. The 20cm holds about 700ml and the 23cm about a litre."
+        },
+        {
+          "speaker": "user",
+          "text": "The 20cm suits me better, I think. Can I bake the sponges on Friday and keep them until Sunday, or will they dry out?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Wrapped well they keep two days, so Friday is fine, and a double batch gives you two nice even layers."
+        },
+        {
+          "speaker": "user",
+          "text": "A double batch, then. And I do want to stress it, nothing with milk in, not even in the icing."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. Block margarine in the sponge, and a vegan buttercream between the layers and over the top."
+        },
+        {
+          "speaker": "user",
+          "text": "Block margarine, vegan buttercream, understood. The candles and the cake board are already sorted."
+        }
+      ]
+    }
+  }
+}

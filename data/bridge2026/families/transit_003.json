@@ -1,0 +1,223 @@
+{
+  "family_id": "transit_003",
+  "domain": "transit",
+  "task_goal": "settle the bus leg from Ashfield station to the Greenbank centre with a large case",
+  "n_turns": 7,
+  "tail_anchor": "I'll text you when I set off.",
+  "notes": "rep_unres and rep_res differ by two words in the final read-back, 'The bus' against 'The 184', with two buses named and still live. norep_unres and norep_res differ only in whether turn 3 opens with the fare answer; the emphatic re-statement about the case sits in both.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "The 184 runs from Ashfield station to the Greenbank centre every twenty minutes",
+          "role": "first candidate service"
+        },
+        {
+          "turn_index": 1,
+          "quote": "the 187 does the same trip hourly but stops nearer the entrance",
+          "role": "second candidate service"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Could you just confirm the bus number and the starting point for me?",
+          "role": "assistant asks which service"
+        },
+        {
+          "turn_index": 6,
+          "quote": "The bus runs from Ashfield station to the Greenbank centre.",
+          "role": "referring expression picks neither, and the exchange ends"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm getting the train to Ashfield on Saturday and then on to the Greenbank centre. I'll have a large case with me."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Two buses will get you there. The 184 runs from Ashfield station to the Greenbank centre every twenty minutes, and the 187 does the same trip hourly but stops nearer the entrance."
+        },
+        {
+          "speaker": "user",
+          "text": "Before I commit, is there a lift down to the bus stands?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Yes, a lift runs from the concourse straight down to the stands, and both buses are low-floor."
+        },
+        {
+          "speaker": "user",
+          "text": "That settles it, then. I'll be travelling first thing on Saturday morning."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The first services go at six on Saturdays. Could you just confirm the bus number and the starting point for me?"
+        },
+        {
+          "speaker": "user",
+          "text": "The bus runs from Ashfield station to the Greenbank centre. I'll text you when I set off."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "Yes, a lift runs from the concourse straight down to the stands",
+          "role": "answers the only request"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Could you just confirm the bus number and the starting point for me?",
+          "role": "assistant requests the repetition"
+        },
+        {
+          "turn_index": 6,
+          "quote": "The 184 runs from Ashfield station to the Greenbank centre.",
+          "role": "requested read-back, service determined"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm getting the train to Ashfield on Saturday and then on to the Greenbank centre. I'll have a large case with me."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Two buses will get you there. The 184 runs from Ashfield station to the Greenbank centre every twenty minutes, and the 187 does the same trip hourly but stops nearer the entrance."
+        },
+        {
+          "speaker": "user",
+          "text": "Before I commit, is there a lift down to the bus stands?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Yes, a lift runs from the concourse straight down to the stands, and both buses are low-floor."
+        },
+        {
+          "speaker": "user",
+          "text": "That settles it, then. I'll be travelling first thing on Saturday morning."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The first services go at six on Saturdays. Could you just confirm the bus number and the starting point for me?"
+        },
+        {
+          "speaker": "user",
+          "text": "The 184 runs from Ashfield station to the Greenbank centre. I'll text you when I set off."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "Does the fare include the return, or do I pay twice?",
+          "role": "request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "The 187 leaves from stand C, just past the ticket machines on the lower concourse.",
+          "role": "assistant turn that fails to answer"
+        },
+        {
+          "turn_index": 5,
+          "quote": "It is about thirty metres from the lift to the stand.",
+          "role": "later assistant turn, still no answer"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm getting the train to Ashfield on Saturday and then on to the Greenbank centre. I'll have a large case with me."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Two buses will get you there. The 184 runs from Ashfield station to the Greenbank centre every twenty minutes, and the 187 does the same trip hourly but stops nearer the entrance."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll take the 187 for the shorter walk. Does the fare include the return, or do I pay twice?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The 187 leaves from stand C, just past the ticket machines on the lower concourse."
+        },
+        {
+          "speaker": "user",
+          "text": "Stand C it is. I would rather not be carrying the case far."
+        },
+        {
+          "speaker": "assistant",
+          "text": "It is about thirty metres from the lift to the stand. Shall I send you the platform layout?"
+        },
+        {
+          "speaker": "user",
+          "text": "Please do. I'll text you when I set off."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "I'll take the 187 for the shorter walk.",
+          "role": "preference stated"
+        },
+        {
+          "turn_index": 3,
+          "quote": "A day ticket covers the return, so you only pay once.",
+          "role": "discharges the open request"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I would rather not be carrying the case far.",
+          "role": "restatement for emphasis, nothing left open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm getting the train to Ashfield on Saturday and then on to the Greenbank centre. I'll have a large case with me."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Two buses will get you there. The 184 runs from Ashfield station to the Greenbank centre every twenty minutes, and the 187 does the same trip hourly but stops nearer the entrance."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll take the 187 for the shorter walk. Does the fare include the return, or do I pay twice?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "A day ticket covers the return, so you only pay once. The 187 leaves from stand C."
+        },
+        {
+          "speaker": "user",
+          "text": "Stand C it is. I would rather not be carrying the case far."
+        },
+        {
+          "speaker": "assistant",
+          "text": "It is about thirty metres from the lift to the stand. Shall I send you the platform layout?"
+        },
+        {
+          "speaker": "user",
+          "text": "Please do. I'll text you when I set off."
+        }
+      ]
+    }
+  }
+}

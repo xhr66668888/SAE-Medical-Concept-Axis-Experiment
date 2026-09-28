@@ -1,0 +1,186 @@
+{
+  "family_id": "cooking_004",
+  "domain": "cooking",
+  "task_goal": "cook a mushroom stroganoff for six with one dairy-free eater and buy the right amount",
+  "n_turns": 5,
+  "tail_anchor": "Everything else is already in the cupboard.",
+  "notes": "norep_unres and norep_res differ by one word, two punnets against four, measured against the 900g the assistant just quoted. rep_unres and rep_res differ in whether the opening heat question is ever answered.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "How high should the heat be when the cream goes in?",
+          "role": "request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "How high should the heat be when the cream goes in?",
+          "role": "re-request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Get them into a wide pan in two batches as well",
+          "role": "assistant answers about browning the mushrooms instead"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm cooking a mushroom stroganoff for six on Friday and one of the six doesn't eat dairy. How high should the heat be when the cream goes in?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Use an oat cream rather than soured cream so it stays dairy-free; it splits less than the soya kind. For six you want 900g of mushrooms, so three 300g punnets."
+        },
+        {
+          "speaker": "user",
+          "text": "Oat cream it is, and three punnets. How high should the heat be when the cream goes in?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Get them into a wide pan in two batches as well; crowded mushrooms steam instead of browning and you lose the flavour."
+        },
+        {
+          "speaker": "user",
+          "text": "Two batches in a wide pan. Everything else is already in the cupboard."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "one of the six doesn't eat dairy",
+          "role": "preference stated"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Keep it at a bare simmer once the cream goes in",
+          "role": "answers the opening request, and the oat cream takes the preference on board"
+        },
+        {
+          "turn_index": 2,
+          "quote": "one of the six doesn't eat dairy, so no butter in the pan",
+          "role": "restated for emphasis after it was already accepted"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm cooking a mushroom stroganoff for six on Friday and one of the six doesn't eat dairy. How high should the heat be when the cream goes in?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Keep it at a bare simmer once the cream goes in, and use an oat cream so it stays dairy-free. For six you want 900g of mushrooms, so three 300g punnets."
+        },
+        {
+          "speaker": "user",
+          "text": "Oat cream it is, and three punnets. Do bear in mind one of the six doesn't eat dairy, so no butter in the pan."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Then use olive oil for the mushrooms and check the stock cube. Does yours have milk powder in it?"
+        },
+        {
+          "speaker": "user",
+          "text": "It doesn't, I read the packet. Everything else is already in the cupboard."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "For six you want 900g of mushrooms, so three 300g punnets.",
+          "role": "stated quantity for six"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I've already got two 300g punnets in the fridge, so the mushrooms are sorted",
+          "role": "600g, which cannot cover the 900g just quoted"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Tagliatelle, and salt the water properly",
+          "role": "assistant moves on without raising the shortfall"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm cooking a mushroom stroganoff for six on Friday and one of the six doesn't eat dairy. How high should the heat be when the cream goes in?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Keep it at a bare simmer once the cream goes in, and use an oat cream so it stays dairy-free. For six you want 900g of mushrooms, so three 300g punnets."
+        },
+        {
+          "speaker": "user",
+          "text": "That all makes sense. I've already got two 300g punnets in the fridge, so the mushrooms are sorted. Is rice or tagliatelle better under it?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Tagliatelle, and salt the water properly; it is the only seasoning the pasta will get."
+        },
+        {
+          "speaker": "user",
+          "text": "Tagliatelle it is, then. Everything else is already in the cupboard."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Keep it at a bare simmer once the cream goes in",
+          "role": "answers the opening request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I've already got four 300g punnets in the fridge, so the mushrooms are sorted",
+          "role": "1200g, comfortably over the 900g just quoted"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Tagliatelle, and salt the water properly",
+          "role": "answers the last open request"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm cooking a mushroom stroganoff for six on Friday and one of the six doesn't eat dairy. How high should the heat be when the cream goes in?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Keep it at a bare simmer once the cream goes in, and use an oat cream so it stays dairy-free. For six you want 900g of mushrooms, so three 300g punnets."
+        },
+        {
+          "speaker": "user",
+          "text": "That all makes sense. I've already got four 300g punnets in the fridge, so the mushrooms are sorted. Is rice or tagliatelle better under it?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Tagliatelle, and salt the water properly; it is the only seasoning the pasta will get."
+        },
+        {
+          "speaker": "user",
+          "text": "Tagliatelle it is, then. Everything else is already in the cupboard."
+        }
+      ]
+    }
+  }
+}

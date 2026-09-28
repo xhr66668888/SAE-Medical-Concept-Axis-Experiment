@@ -1,0 +1,86 @@
+{
+  "family_id": "transit_023",
+  "domain": "transit",
+  "task_goal": "set up a standing Tuesday morning cab booking on a firm's account for the run out to the Bellhouse depot",
+  "n_turns": 7,
+  "tail_anchor": "The account name is Halvorsen Plant.",
+  "notes": "rep_unres and rep_res differ only in when the shift briefing starts (half six, before the car can arrive / half seven, after it). norep_unres and norep_res differ only in whether turn 1 answers the cost-code question.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "I can have a car with you at quarter past six every Tuesday, and the run out there takes about forty minutes at that hour.", "role": "the car cannot reach the depot before about five to seven"},
+        {"turn_index": 2, "quote": "I have to be in the yard before the shift briefing, and that starts at half six sharp.", "role": "conflicts with the arrival time"},
+        {"turn_index": 5, "quote": "I'll flag it for Danny then, he covers that side on a Tuesday.", "role": "assistant proceeds without reconciling the conflict"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. I'd like a standing booking on our account, a car every Tuesday from my place out to the Bellhouse depot. Can that be set up to run until I say otherwise?"},
+        {"speaker": "assistant", "text": "That's easy enough, and it stands until you cancel. I can have a car with you at quarter past six every Tuesday, and the run out there takes about forty minutes at that hour."},
+        {"speaker": "user", "text": "A car at quarter past six every Tuesday, and the run out there takes about forty minutes. I have to be in the yard before the shift briefing, and that starts at half six sharp."},
+        {"speaker": "assistant", "text": "Understood. Do you want the same driver each week, or whoever is free?"},
+        {"speaker": "user", "text": "The same driver if you can manage it, it saves explaining the gate code every week."},
+        {"speaker": "assistant", "text": "I'll flag it for Danny then, he covers that side on a Tuesday. The invoice goes out at the end of each month."},
+        {"speaker": "user", "text": "That all sounds fine. The account name is Halvorsen Plant."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "That's easy enough, and it stands until you cancel.", "role": "answers the first request"},
+        {"turn_index": 2, "quote": "I have to be in the yard before the shift briefing, and that starts at half seven sharp.", "role": "consistent with a quarter past six pickup and a forty minute run"},
+        {"turn_index": 5, "quote": "I'll flag it for Danny then, he covers that side on a Tuesday.", "role": "discharges the last open item"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. I'd like a standing booking on our account, a car every Tuesday from my place out to the Bellhouse depot. Can that be set up to run until I say otherwise?"},
+        {"speaker": "assistant", "text": "That's easy enough, and it stands until you cancel. I can have a car with you at quarter past six every Tuesday, and the run out there takes about forty minutes at that hour."},
+        {"speaker": "user", "text": "A car at quarter past six every Tuesday, and the run out there takes about forty minutes. I have to be in the yard before the shift briefing, and that starts at half seven sharp."},
+        {"speaker": "assistant", "text": "Understood. Do you want the same driver each week, or whoever is free?"},
+        {"speaker": "user", "text": "The same driver if you can manage it, it saves explaining the gate code every week."},
+        {"speaker": "assistant", "text": "I'll flag it for Danny then, he covers that side on a Tuesday. The invoice goes out at the end of each month."},
+        {"speaker": "user", "text": "That all sounds fine. The account name is Halvorsen Plant."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Can the monthly invoice be split by cost code?", "role": "request"},
+        {"turn_index": 1, "quote": "A standing booking is easy enough. I can have a car with you at quarter past six every Tuesday, and the run out there takes about forty minutes.", "role": "assistant turn that fails to answer"},
+        {"turn_index": 5, "quote": "The card on the account is charged at the end of each month.", "role": "later assistant turn that still does not answer"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. I'd like a standing booking on our account, a car every Tuesday from my place out to the Bellhouse depot. Can the monthly invoice be split by cost code?"},
+        {"speaker": "assistant", "text": "A standing booking is easy enough. I can have a car with you at quarter past six every Tuesday, and the run out there takes about forty minutes."},
+        {"speaker": "user", "text": "That time suits us. There's a gate code at my end, 4-2-9-1, and the driver will need it to get onto the drive."},
+        {"speaker": "assistant", "text": "I've put the code on the job. Do you want the same driver each week, or whoever is free?"},
+        {"speaker": "user", "text": "The same driver if you can manage it, it saves explaining the gate code every week."},
+        {"speaker": "assistant", "text": "I'll flag it for Danny then, he covers that side on a Tuesday. The card on the account is charged at the end of each month."},
+        {"speaker": "user", "text": "That all sounds fine. The account name is Halvorsen Plant."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "The monthly invoice can be split by cost code.", "role": "answers the only request"},
+        {"turn_index": 5, "quote": "Read the gate code back to me so I can check what I've typed in.", "role": "assistant asks for the repetition"},
+        {"turn_index": 6, "quote": "Four, two, nine, one.", "role": "requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. I'd like a standing booking on our account, a car every Tuesday from my place out to the Bellhouse depot. Can the monthly invoice be split by cost code?"},
+        {"speaker": "assistant", "text": "The monthly invoice can be split by cost code. I can have a car with you at quarter past six every Tuesday, and the run takes about forty minutes."},
+        {"speaker": "user", "text": "That time suits us. There's a gate code at my end, 4-2-9-1, and the driver will need it to get onto the drive."},
+        {"speaker": "assistant", "text": "I've put the code on the job. Do you want the same driver each week, or whoever is free?"},
+        {"speaker": "user", "text": "The same driver if you can manage it, it saves explaining the gate code every week."},
+        {"speaker": "assistant", "text": "I'll flag it for Danny then, he covers that side on a Tuesday. Read the gate code back to me so I can check what I've typed in."},
+        {"speaker": "user", "text": "Four, two, nine, one. The account name is Halvorsen Plant."}
+      ]
+    }
+  }
+}

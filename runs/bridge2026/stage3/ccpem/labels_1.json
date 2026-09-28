@@ -1,0 +1,177 @@
+[
+  {
+    "id": "X_001",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"Why?\" -> \"It's very high quality action. It is very a lot of fun, actually very inspiring.\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_005",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"What didnt you like about it?\" -> \"I felt like it tried to recreate the first Jurassic Park a little too much, and then it was kind of over the top.\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_009",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"what about john wick didn't u like?\" -> \"I felt that the story wasn't developed that well.\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_013",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "\"Have you already seen Inception?\" -> \"Yes, I have.\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_017",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"what is your favorite part of the movie?\" -> \"My favorite part of the movie is when Jason starts walking around the spaceship\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_021",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"can you name a movie that you liked?\" -> \"The Waterboy was fantastic. I always loved The Waterboy.\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_025",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"What are the 2 things that you like about this movie?\" -> \"But The Bourne Ultimatum is excellent on that end ... and then the cast is excellent.\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_029",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "\"Do you like the movie Finding Nemo ?\" -> \"I do like the movie Finding Nemo.\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_033",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"Why?\" -> \"I just don't think that reality And it makes me mad to look at people think that that's the real life.\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_037",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"What is it about these kinds of movies that you like or dislike?\" -> \"I really like the actors. I feel like they were doing their best to make the movie better.\"",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_041",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"Why did you like that kind of movie?\" -> \"Because it had a good cast and a good story line, with lots of action.\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_045",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"Can you give me a couple of reasons why you like this movie?\" -> \"Murder on the Orient Express is is a classic film. I like all the actors in it\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_049",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"so you don't like when vampires shine?\" -> \"No, and I don't like werewolves, either.\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_053",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "\"Which movie?\" -> \"Scary movies\" -> \"Yes, I don't love scary movies. I hate them.\"",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_057",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"any least favorite genres?\" -> \"My least favorite is probably horror, not a huge fun of scary movies.\"",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_061",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"Do you like the movie Reservoir Dogs?\" -> \"Yes.\" -> \"I like the action scenes, I like the actors, I like the director, and I like how it was shot.\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_065",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"what is it about?\" -> \"Eight Crazy Nights is about I believe Adam Sandler is like depressed\"",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_069",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"can you name a specific movie you didn't like?\" -> \"The newest Ghostbusters in 2016.\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_073",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"What did you like about this movie?\" -> \"The story's just really well told, and it's interesting\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_077",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"OK, well how about a movie you did not like?\" -> \"I didn't really care for Superbad.\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_081",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"What did you not like about it?\" -> \"I could not relate to the comedy. I felt a lot of it was very stereotypical and forced.\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_085",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"Do you know the name of it?\" -> \"Oh, oh, I know what it was. It was Waking Life.\"",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_089",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"Why did you like that movie?\" -> \"I liked The Matrix because of the special effects and the slow motion and the science fiction story line.\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_093",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"can you name a movie that you really liked?\" -> \"When it first came out, I loved the movie Inception.\"",
+    "confidence": "high"
+  },
+  {
+    "id": "X_097",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "\"Have you seen the movie Crazy Rich Asians?\" -> \"I haven't seen that yet but I really want to.\"",
+    "confidence": "high"
+  }
+]

@@ -1,0 +1,186 @@
+{
+  "family_id": "household_020",
+  "domain": "household",
+  "task_goal": "get a new washing machine in and the old one taken away using the neighbour's drive",
+  "n_turns": 5,
+  "tail_anchor": "The stopcock is under the sink.",
+  "notes": "rep_unres and rep_res differ by one phrase (Saturday morning / Thursday evening) against a Friday collection that only happens if the old machine is already unplumbed. norep_unres and norep_res differ by one phrase (it / the old one), with both machines standing in the hall and the old machine the most recent singular mention.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "the new washer comes on Friday between eight and twelve",
+          "role": "the old machine is collected on the Friday"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Gaz is coming on Saturday morning to disconnect it, so it will be ready for them to load",
+          "role": "the machine is not unplumbed until the day after the lorry has been"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Fair enough.",
+          "role": "assistant proceeds without reconciling the conflict"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Rhian, the new washer comes on Friday between eight and twelve. They will only take the old one away if it is unplumbed and standing in the hall. I need you here to let them in."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can work at home on the Friday. What was it they said about taking the old machine, exactly?"
+        },
+        {
+          "speaker": "user",
+          "text": "They will only take the old one away if it is unplumbed and standing in the hall. Gaz is coming on Saturday morning to disconnect it, so it will be ready for them to load."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Fair enough. Sadia says we can have her drive for the lorry, the lane is far too tight for it."
+        },
+        {
+          "speaker": "user",
+          "text": "That is good of her. The stopcock is under the sink."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "What was it they said about taking the old machine, exactly?",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 2,
+          "quote": "They will only take the old one away if it is unplumbed and standing in the hall.",
+          "role": "requested read-back, not a sign of trouble"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Gaz is coming on Thursday evening to disconnect it, so it will be ready for them to load",
+          "role": "the machine is unplumbed the night before the lorry comes"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Rhian, the new washer comes on Friday between eight and twelve. They will only take the old one away if it is unplumbed and standing in the hall. I need you here to let them in."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can work at home on the Friday. What was it they said about taking the old machine, exactly?"
+        },
+        {
+          "speaker": "user",
+          "text": "They will only take the old one away if it is unplumbed and standing in the hall. Gaz is coming on Thursday evening to disconnect it, so it will be ready for them to load."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Fair enough. Sadia says we can have her drive for the lorry, the lane is far too tight for it."
+        },
+        {
+          "speaker": "user",
+          "text": "That is good of her. The stopcock is under the sink."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "So the new one is stood in the hall all day Friday",
+          "role": "first live candidate, in the hall on the Friday"
+        },
+        {
+          "turn_index": 3,
+          "quote": "The old machine always dripped out of the back, so I will get towels under it before Gaz starts",
+          "role": "second live candidate, and the most recent singular mention"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Shove it over against the side wall for me, so we can still get out of the front door",
+          "role": "referring expression that picks out neither machine"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Rhian, the new washer lands on Friday in an eight till twelve slot, and the old one goes back with them on the lorry."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can be here all Friday morning. Is the lane wide enough for their wagon, or do we need to ask Sadia about her drive?"
+        },
+        {
+          "speaker": "user",
+          "text": "Sadia has already offered the drive, thank goodness. Gaz unplumbs the old one on Thursday night and drags it into the hall, then he fits the new one on Saturday."
+        },
+        {
+          "speaker": "assistant",
+          "text": "So the new one is stood in the hall all day Friday. The old machine always dripped out of the back, so I will get towels under it before Gaz starts."
+        },
+        {
+          "speaker": "user",
+          "text": "Shove it over against the side wall for me, so we can still get out of the front door. The stopcock is under the sink."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Is the lane wide enough for their wagon, or do we need to ask Sadia about her drive?",
+          "role": "the only open request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Sadia has already offered the drive, thank goodness.",
+          "role": "answers it"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Shove the old one over against the side wall for me",
+          "role": "the machine is named, so nothing is left open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Rhian, the new washer lands on Friday in an eight till twelve slot, and the old one goes back with them on the lorry."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can be here all Friday morning. Is the lane wide enough for their wagon, or do we need to ask Sadia about her drive?"
+        },
+        {
+          "speaker": "user",
+          "text": "Sadia has already offered the drive, thank goodness. Gaz unplumbs the old one on Thursday night and drags it into the hall, then he fits the new one on Saturday."
+        },
+        {
+          "speaker": "assistant",
+          "text": "So the new one is stood in the hall all day Friday. The old machine always dripped out of the back, so I will get towels under it before Gaz starts."
+        },
+        {
+          "speaker": "user",
+          "text": "Shove the old one over against the side wall for me, so we can still get out of the front door. The stopcock is under the sink."
+        }
+      ]
+    }
+  }
+}

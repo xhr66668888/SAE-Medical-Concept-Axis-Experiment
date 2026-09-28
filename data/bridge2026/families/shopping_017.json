@@ -1,0 +1,81 @@
+{
+  "family_id": "shopping_017",
+  "domain": "shopping",
+  "task_goal": "return a cracked floor lamp to the marketplace seller Dunlin Home and get the refund route settled",
+  "n_turns": 5,
+  "tail_anchor": "The box it came in is still in the porch.",
+  "notes": "The rep pair is identical apart from the weight the user gives in turn 2, fourteen kilos against the ten-kilo courier rule or eight kilos under it. The norep pair differs only in whether turn 2 names the label ('that one' vs 'the locker one').",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "anything over ten kilos has to go back by booked courier collection", "role": "the rule that fixes the return route"},
+        {"turn_index": 2, "quote": "It is fourteen kilos with the marble base in", "role": "the weight, which is over that limit"},
+        {"turn_index": 2, "quote": "I will drop it at the locker point on Kirkby Road on Thursday, which is the only trip I will get this week", "role": "the action that collides with the rule, and why there is no second chance"},
+        {"turn_index": 3, "quote": "I will log the return against it", "role": "assistant books the return without reconciling the weight and the route"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I bought a floor lamp on Ridgeway from a seller called Dunlin Home, order R-4419, and the shade turned up cracked. I would rather have my money back than another one sent out."},
+        {"speaker": "assistant", "text": "Sorry about that. A refund is no problem. Dunlin Home handle their own returns, and anything over ten kilos has to go back by booked courier collection; lighter parcels can be handed in at the locker point on Kirkby Road."},
+        {"speaker": "user", "text": "That is a nuisance. It is fourteen kilos with the marble base in, and I will drop it at the locker point on Kirkby Road on Thursday, which is the only trip I will get this week."},
+        {"speaker": "assistant", "text": "Understood. Read the order number back to me and I will log the return against it."},
+        {"speaker": "user", "text": "Order R-4419. The box it came in is still in the porch."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "A refund is no problem.", "role": "accepts the user's only request"},
+        {"turn_index": 2, "quote": "It is eight kilos all in, base and all", "role": "under the ten-kilo limit, so the locker route is the allowed one"},
+        {"turn_index": 3, "quote": "Read the order number back to me", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "Order R-4419.", "role": "the requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I bought a floor lamp on Ridgeway from a seller called Dunlin Home, order R-4419, and the shade turned up cracked. I would rather have my money back than another one sent out."},
+        {"speaker": "assistant", "text": "Sorry about that. A refund is no problem. Dunlin Home handle their own returns, and anything over ten kilos has to go back by booked courier collection; lighter parcels can be handed in at the locker point on Kirkby Road."},
+        {"speaker": "user", "text": "That is a nuisance. It is eight kilos all in, base and all, and I will drop it at the locker point on Kirkby Road on Thursday, which is the only trip I will get this week."},
+        {"speaker": "assistant", "text": "Understood. Read the order number back to me and I will log the return against it."},
+        {"speaker": "user", "text": "Order R-4419. The box it came in is still in the porch."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "a courier collection, which takes £6.99 off what you get back, or a free one for the locker point on Kirkby Road", "role": "two live candidates"},
+        {"turn_index": 1, "quote": "Either will carry a heavy parcel.", "role": "keeps both labels level, so neither is the topical winner"},
+        {"turn_index": 2, "quote": "Email me that one", "role": "referring expression that picks out neither label"},
+        {"turn_index": 3, "quote": "it should be in your inbox within the hour", "role": "assistant sends a label without establishing which one"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I bought a floor lamp on Ridgeway from a seller called Dunlin Home, order R-4419, and the shade turned up cracked. I would rather have my money back than another one sent out."},
+        {"speaker": "assistant", "text": "Sorry about that. A refund is no problem. Dunlin Home issue two labels for a return like this: a courier collection, which takes £6.99 off what you get back, or a free one for the locker point on Kirkby Road. Either will carry a heavy parcel."},
+        {"speaker": "user", "text": "I know which I want. Email me that one and I will print it off this evening."},
+        {"speaker": "assistant", "text": "Will do, it should be in your inbox within the hour. The money lands once Dunlin Home have the lamp with them."},
+        {"speaker": "user", "text": "Thanks, that suits me. It is the cash back I am after, not a swap. The box it came in is still in the porch."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "Email me the locker one", "role": "names the label, so the return route is fixed"},
+        {"turn_index": 3, "quote": "The money lands once Dunlin Home have the lamp with them.", "role": "discharges the refund request"},
+        {"turn_index": 4, "quote": "It is the cash back I am after, not a swap.", "role": "restates a preference already accepted, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I bought a floor lamp on Ridgeway from a seller called Dunlin Home, order R-4419, and the shade turned up cracked. I would rather have my money back than another one sent out."},
+        {"speaker": "assistant", "text": "Sorry about that. A refund is no problem. Dunlin Home issue two labels for a return like this: a courier collection, which takes £6.99 off what you get back, or a free one for the locker point on Kirkby Road. Either will carry a heavy parcel."},
+        {"speaker": "user", "text": "I know which I want. Email me the locker one and I will print it off this evening."},
+        {"speaker": "assistant", "text": "Will do, it should be in your inbox within the hour. The money lands once Dunlin Home have the lamp with them."},
+        {"speaker": "user", "text": "Thanks, that suits me. It is the cash back I am after, not a swap. The box it came in is still in the porch."}
+      ]
+    }
+  }
+}

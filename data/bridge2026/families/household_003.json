@@ -1,0 +1,181 @@
+{
+  "family_id": "household_003",
+  "domain": "household",
+  "task_goal": "get a plumber out to a dripping kitchen tap in a shared building",
+  "n_turns": 5,
+  "tail_anchor": "There's a bucket under it in the meantime.",
+  "notes": "rep_unres and rep_res differ by one word (twentieth/twelfth) against a job booked for the fifteenth that needs the upstairs stopcock; the read-back of the flat number is present in both, so the surface is otherwise identical. norep_unres and norep_res differ by one word (him/Tom).",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "He'll need the water off at the mains, and in your building the stopcock sits inside the upstairs flat",
+          "role": "access to the upstairs flat is required on the fifteenth"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Graham upstairs is away until the twentieth",
+          "role": "conflicts with a job booked for the fifteenth"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I'll put Ray down for nine o'clock",
+          "role": "assistant books it without reconciling the conflict"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "The mixer tap in our kitchen has started dripping properly overnight. When can you get someone out?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can send Ray on Thursday the fifteenth. He'll need the water off at the mains, and in your building the stopcock sits inside the upstairs flat. Can you confirm the flat number for me?"
+        },
+        {
+          "speaker": "user",
+          "text": "Flat 3B. So he'll need the water off at the mains, and Graham upstairs is away until the twentieth, with Tom letting Ray in downstairs."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Got it, 3B. I'll put Ray down for nine o'clock and email the job number over this afternoon."
+        },
+        {
+          "speaker": "user",
+          "text": "That's great, thanks. There's a bucket under it in the meantime."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Can you confirm the flat number for me?",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Flat 3B.",
+          "role": "requested read-back, not a sign of trouble"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Graham upstairs is away until the twelfth",
+          "role": "consistent with a job booked for the fifteenth"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "The mixer tap in our kitchen has started dripping properly overnight. When can you get someone out?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can send Ray on Thursday the fifteenth. He'll need the water off at the mains, and in your building the stopcock sits inside the upstairs flat. Can you confirm the flat number for me?"
+        },
+        {
+          "speaker": "user",
+          "text": "Flat 3B. So he'll need the water off at the mains, and Graham upstairs is away until the twelfth, with Tom letting Ray in downstairs."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Got it, 3B. I'll put Ray down for nine o'clock and email the job number over this afternoon."
+        },
+        {
+          "speaker": "user",
+          "text": "That's great, thanks. There's a bucket under it in the meantime."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "Graham is upstairs all Thursday, and my brother Tom will be in ours from eight",
+          "role": "two live candidate referents"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Ring him rather than me",
+          "role": "referring expression that picks out neither"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Which number should he use?",
+          "role": "the question the ambiguous answer leaves open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Our kitchen mixer tap has been dripping since Sunday and it is getting worse. Any chance of a plumber this week?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Ray has a gap on Thursday morning. The mains stopcock for your building sits in the upstairs flat, so he will need access there as well. Let me know who is around on the day."
+        },
+        {
+          "speaker": "user",
+          "text": "Graham is upstairs all Thursday, and my brother Tom will be in ours from eight."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Good, that covers both flats. Ray usually rings ahead twenty minutes before he arrives. Which number should he use?"
+        },
+        {
+          "speaker": "user",
+          "text": "Ring him rather than me, he will be up and about. There's a bucket under it in the meantime."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Ray has a gap on Thursday morning.",
+          "role": "answers the only user request"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Ring Tom rather than me",
+          "role": "determines the referent for the next action"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Our kitchen mixer tap has been dripping since Sunday and it is getting worse. Any chance of a plumber this week?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Ray has a gap on Thursday morning. The mains stopcock for your building sits in the upstairs flat, so he will need access there as well. Let me know who is around on the day."
+        },
+        {
+          "speaker": "user",
+          "text": "Graham is upstairs all Thursday, and my brother Tom will be in ours from eight."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Good, that covers both flats. Ray usually rings ahead twenty minutes before he arrives. Which number should he use?"
+        },
+        {
+          "speaker": "user",
+          "text": "Ring Tom rather than me, he will be up and about. There's a bucket under it in the meantime."
+        }
+      ]
+    }
+  }
+}

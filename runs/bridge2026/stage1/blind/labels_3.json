@@ -1,0 +1,212 @@
+[
+  {
+    "id": "A3_000",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "Put that one on hold until September.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_001",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Could you read the order number back to me before I raise the label?",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_002",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "And I do mean it about the texture, thick enough to stand a spoon in, please.",
+    "confidence": "medium"
+  },
+  {
+    "id": "A3_003",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "Then put that one back to Saturday the 18th, assuming your crews work weekends.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_004",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "Ten, in the blue box on the middle shelf. That is two a day for the week, so she will not run short.",
+    "confidence": "medium"
+  },
+  {
+    "id": "A3_005",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "You will not need the receipt, since the order on your account covers it.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_006",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "Have the driver wait at the terminal from a quarter to eight.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_007",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "Right, and it is definitely going on the hob, not in the oven.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_008",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "Do bear in mind one of the six doesn't eat dairy, so no butter in the pan.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_009",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "Could you tell me whether the meetings run to ten minutes or fifteen?",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_010",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Fifty minutes at 170C fan, and slide a skewer into the middle at forty-five to check.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_011",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "I need to know whether they will both arrive before the weekend.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_012",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "Do they carry it upstairs, or is it left in the hall?",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_013",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "That's ideal, I need the car back by two to fetch my son from football.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_014",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Say the day back to me and I'll put it in my phone.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_015",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "Book me into the long stay zone, registration KR19 TVO.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_016",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "If he doesn't mind, that would be grand. I'll leave the side gate unlocked either way.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_017",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "Ring him rather than me, he will be up and about.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_018",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "Can I bake the sponges on Friday and keep them until Sunday, or will they dry out?",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_019",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "So, does the late-change fee still apply if I give a week's notice?",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_020",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Easy enough, the pool is on my way.",
+    "confidence": "medium"
+  },
+  {
+    "id": "A3_021",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "so tell me back which one I should order.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_022",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Yes, a text reminder goes out the day before. I'll put you down for that one.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_023",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "read the date and time back to me",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_024",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "I'll do the joint first and get the potatoes going while it rests.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_025",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "A day ticket covers the return, so you only pay once.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_026",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "The hire place at eleven.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_027",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Could you read the date and time back to me?",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_028",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "I start from Bexley Park, which is in zone four, and I travel in five days a week.",
+    "confidence": "high"
+  },
+  {
+    "id": "A3_029",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Shortening the coat sleeves comes to twenty-four pounds in all.",
+    "confidence": "high"
+  }
+]

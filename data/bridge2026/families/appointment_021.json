@@ -1,0 +1,87 @@
+{
+  "family_id": "appointment_021",
+  "domain": "appointment",
+  "task_goal": "arrange the engineer visit to put a broadband line into a new flat on Wexley Street and settle how the cable is run",
+  "n_turns": 7,
+  "tail_anchor": "It's the ground floor, straight through from the porch.",
+  "notes": "norep_unres and norep_res differ only in when the floor fitters nail the boards down (nine that morning / four that afternoon), against an accepted requirement that the cable run under the floor and a van that never arrives before eleven. The rep cells differ in whether turn 1 answers the question about paying on the day.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Is there anything to pay the engineer on the day, or does it all go on the first bill?", "role": "request"},
+        {"turn_index": 4, "quote": "Is there anything to pay the engineer on the day, or does it all go on the first bill?", "role": "re-request"},
+        {"turn_index": 5, "quote": "He'll bring his own ladder and a dust sheet, so there's nothing for you to dig out.", "role": "assistant turn that answers a different worry and leaves the charge open"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. We've just moved into a flat on Wexley Street and we need an engineer out to put the broadband line in. Is there anything to pay the engineer on the day, or does it all go on the first bill?"},
+        {"speaker": "assistant", "text": "I can book that in. The morning window is eight until one, or the afternoon one until six."},
+        {"speaker": "user", "text": "The morning window, please, eight until one. That side of the week is easier for us."},
+        {"speaker": "assistant", "text": "Morning window on the notes, then. He'll want twenty minutes or so at the master socket, so keep that corner clear for him."},
+        {"speaker": "user", "text": "That's no trouble. Is there anything to pay the engineer on the day, or does it all go on the first bill?"},
+        {"speaker": "assistant", "text": "He'll bring his own ladder and a dust sheet, so there's nothing for you to dig out. I'll send the booking through by email this afternoon."},
+        {"speaker": "user", "text": "Thanks for that, much appreciated. It's the ground floor, straight through from the porch."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "There's nothing to pay the engineer on the day, it all goes on the first bill.", "role": "discharges the only open request"},
+        {"turn_index": 5, "quote": "could you read the window and the street back to me", "role": "assistant asks for the repetition"},
+        {"turn_index": 6, "quote": "Eight until one, Wexley Street.", "role": "the requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. We've just moved into a flat on Wexley Street and we need an engineer out to put the broadband line in. Is there anything to pay the engineer on the day, or does it all go on the first bill?"},
+        {"speaker": "assistant", "text": "There's nothing to pay the engineer on the day, it all goes on the first bill. The morning window is eight until one, or the afternoon one until six."},
+        {"speaker": "user", "text": "The morning window, please, eight until one. Good to know there's nothing to pay the engineer on the day."},
+        {"speaker": "assistant", "text": "Morning window on the notes, then. He'll want twenty minutes or so at the master socket, so keep that corner clear for him."},
+        {"speaker": "user", "text": "That's no trouble, I'll have the corner by the socket cleared before he comes."},
+        {"speaker": "assistant", "text": "Before I send this through, could you read the window and the street back to me?"},
+        {"speaker": "user", "text": "Eight until one, Wexley Street. It's the ground floor, straight through from the porch."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "the van never reaches you before eleven", "role": "the engineer cannot be there before eleven"},
+        {"turn_index": 3, "quote": "the cable under the floor rather than along the skirting", "role": "the requirement the provider has accepted"},
+        {"turn_index": 4, "quote": "nail our new boards down at nine that morning, and nothing can be run underneath them once they are down", "role": "the route under the floor is shut two hours before he arrives"},
+        {"turn_index": 5, "quote": "Right, I've put the fitters on the notes too.", "role": "assistant records it without reconciling the clash"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. We've just moved into a flat on Wexley Street and we need an engineer out to put the broadband line in."},
+        {"speaker": "assistant", "text": "I can book that in. The morning window is eight until one, the afternoon one until six. Wexley Street is last on the round, so the van never reaches you before eleven. Which suits?"},
+        {"speaker": "user", "text": "The morning window, please. Whatever happens, the cable has to run under the floor, not clipped along the skirting."},
+        {"speaker": "assistant", "text": "Morning window it is, the cable under the floor rather than along the skirting. That goes on the job notes."},
+        {"speaker": "user", "text": "Worth flagging: the floor fitters nail our new boards down at nine that morning, and nothing can be run underneath them once they are down."},
+        {"speaker": "assistant", "text": "Right, I've put the fitters on the notes too. Shall I have the engineer ring ahead when he sets off?"},
+        {"speaker": "user", "text": "Please do. And remind him the cable is to stay out of sight under the boards. It's the ground floor, straight through from the porch."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 4, "quote": "nail our new boards down at four that afternoon", "role": "the boards go down long after the morning window, so the route stays open"},
+        {"turn_index": 3, "quote": "the cable under the floor rather than along the skirting", "role": "the requirement is accepted and written down"},
+        {"turn_index": 6, "quote": "remind him the cable is to stay out of sight under the boards", "role": "restating an accepted requirement, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. We've just moved into a flat on Wexley Street and we need an engineer out to put the broadband line in."},
+        {"speaker": "assistant", "text": "I can book that in. The morning window is eight until one, the afternoon one until six. Wexley Street is last on the round, so the van never reaches you before eleven. Which suits?"},
+        {"speaker": "user", "text": "The morning window, please. Whatever happens, the cable has to run under the floor, not clipped along the skirting."},
+        {"speaker": "assistant", "text": "Morning window it is, the cable under the floor rather than along the skirting. That goes on the job notes."},
+        {"speaker": "user", "text": "Worth flagging: the floor fitters nail our new boards down at four that afternoon, and nothing can be run underneath them once they are down."},
+        {"speaker": "assistant", "text": "Right, I've put the fitters on the notes too. Shall I have the engineer ring ahead when he sets off?"},
+        {"speaker": "user", "text": "Please do. And remind him the cable is to stay out of sight under the boards. It's the ground floor, straight through from the porch."}
+      ]
+    }
+  }
+}

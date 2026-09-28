@@ -1,0 +1,189 @@
+{
+  "model": "google/gemma-3-4b-it",
+  "dtype": "float32",
+  "n_layers": 34,
+  "d_model": 2560,
+  "checks": {
+    "E0.1_hook_equals_hidden_states": {
+      "per_layer": {
+        "0": {
+          "max_abs_diff": 0.0,
+          "hook_norm": 858.807861328125,
+          "hs_norm": 858.807861328125
+        },
+        "1": {
+          "max_abs_diff": 0.0,
+          "hook_norm": 720.1482543945312,
+          "hs_norm": 720.1482543945312
+        },
+        "17": {
+          "max_abs_diff": 0.0,
+          "hook_norm": 33979.93359375,
+          "hs_norm": 33979.93359375
+        },
+        "32": {
+          "max_abs_diff": 0.0,
+          "hook_norm": 50383.0078125,
+          "hs_norm": 50383.0078125
+        }
+      },
+      "pass": true
+    },
+    "E0.2_final_layer_diverges": {
+      "max_abs_diff": 26839.6015625,
+      "hook_norm": 21038.96875,
+      "hs_norm": 368.63671875,
+      "norm_ratio_hs_over_hook": 0.01752161539524127,
+      "pass": true,
+      "note": "hidden_states[n_layers] has the final RMSNorm applied; the canonical site does not."
+    },
+    "E0.7_determinism": {
+      "max_abs_diff": 0.0,
+      "pass": true
+    },
+    "E0.3_zero_dose_noop": {
+      "layer": 22,
+      "max_abs_diff": 0.0,
+      "pass": true
+    },
+    "E0.4_self_patch_noop": {
+      "layer": 22,
+      "max_abs_diff": 0.0,
+      "pass": true
+    },
+    "E0.8_dose_linearity": {
+      "layer": 22,
+      "alpha": 1.0,
+      "sd_proj": 104.81623840332031,
+      "delta_norm_want": 104.81623840332031,
+      "delta_norm_got_mean": 104.81624603271484,
+      "max_abs_err": 3.0517578125e-05,
+      "pert_over_resid": 0.003177586942911148,
+      "rel_err": 2.911531513616432e-07,
+      "tol_rel": 0.001,
+      "pass": true,
+      "note": "achieved perturbation norm vs requested; the tolerance tracks the model dtype because the addition happens in the model's own precision"
+    },
+    "E0.5_sae_reconstruction": {
+      "per_layer": {
+        "9": {
+          "fvu": 0.2595197260379791,
+          "l0_mean": 47.114585876464844,
+          "cos_mean": 0.998833179473877,
+          "rel_err": 0.05087914317846298,
+          "n": 96,
+          "l0_cfg": 53,
+          "l0_ratio": 0.8889544504993366,
+          "sae_id": "google/gemma-scope-2-4b-it/resid_post/layer_9_width_16k_l0_medium",
+          "fvu_valid": true
+        },
+        "17": {
+          "fvu": 0.5353071689605713,
+          "l0_mean": 66.38542175292969,
+          "cos_mean": 0.9983630180358887,
+          "rel_err": 0.058168601244688034,
+          "n": 96,
+          "l0_cfg": 60,
+          "l0_ratio": 1.1064236958821614,
+          "sae_id": "google/gemma-scope-2-4b-it/resid_post/layer_17_width_16k_l0_medium",
+          "fvu_valid": true
+        },
+        "22": {
+          "fvu": 0.49835801124572754,
+          "l0_mean": 57.375,
+          "cos_mean": 0.9942941069602966,
+          "rel_err": 0.1078418493270874,
+          "n": 96,
+          "l0_cfg": 60,
+          "l0_ratio": 0.95625,
+          "sae_id": "google/gemma-scope-2-4b-it/resid_post/layer_22_width_16k_l0_medium",
+          "fvu_valid": true
+        },
+        "29": {
+          "fvu": 0.5657323598861694,
+          "l0_mean": 57.44791793823242,
+          "cos_mean": 0.9892144203186035,
+          "rel_err": 0.14792293310165405,
+          "n": 96,
+          "l0_cfg": 60,
+          "l0_ratio": 0.9574652989705403,
+          "sae_id": "google/gemma-scope-2-4b-it/resid_post/layer_29_width_16k_l0_medium",
+          "fvu_valid": true
+        }
+      },
+      "pass": true
+    },
+    "E0.6_sae_identity_path_noop": {
+      "per_layer": {
+        "9": {
+          "max_abs_diff": 0.0,
+          "pass": true
+        },
+        "17": {
+          "max_abs_diff": 0.0,
+          "pass": true
+        },
+        "22": {
+          "max_abs_diff": 0.0,
+          "pass": true
+        },
+        "29": {
+          "max_abs_diff": 0.0,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    "E0.9_left_padding_invariance": {
+      "per_layer": {
+        "0": {
+          "max_rel_norm_diff": 6.508098522317596e-07
+        },
+        "1": {
+          "max_rel_norm_diff": 1.206131173603353e-06
+        },
+        "17": {
+          "max_rel_norm_diff": 7.024110004749673e-07
+        },
+        "32": {
+          "max_rel_norm_diff": 1.8297012047696626e-06
+        },
+        "33": {
+          "max_rel_norm_diff": 1.0687163921829779e-05
+        }
+      },
+      "tol_rel": 0.0001,
+      "pass": true,
+      "note": "padded-batch vs unpadded-single capture; guards RoPE/attention-mask handling"
+    },
+    "E0.10_pure_equals_readout_at_read_pos": {
+      "per_layer": {
+        "0": {
+          "max_rel_norm_diff": 6.152416744953371e-07,
+          "resid_norm": 863.0614013671875
+        },
+        "1": {
+          "max_rel_norm_diff": 9.090053367799555e-07,
+          "resid_norm": 692.4344482421875
+        },
+        "17": {
+          "max_rel_norm_diff": 5.649435479426757e-07,
+          "resid_norm": 32832.234375
+        },
+        "32": {
+          "max_rel_norm_diff": 3.104833240286098e-06,
+          "resid_norm": 52295.6640625
+        },
+        "33": {
+          "max_rel_norm_diff": 1.1965399608016014e-05,
+          "resid_norm": 22421.3828125
+        }
+      },
+      "tol_rel": 0.0001,
+      "pass": true,
+      "note": "causal attention + shared token prefix means a direction fitted on the PURE rendering applies unchanged inside the READOUT rendering"
+    }
+  },
+  "n_items": 96,
+  "all_pass": true
+}

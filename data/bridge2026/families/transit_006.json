@@ -1,0 +1,186 @@
+{
+  "family_id": "transit_006",
+  "domain": "transit",
+  "task_goal": "reserve long-stay parking at Eastfield airport for a trip leaving on the ninth",
+  "n_turns": 5,
+  "tail_anchor": "I will be dropping off at six in the morning.",
+  "notes": "rep_unres and rep_res differ by three words, 'the long stay zone' against 'Long Stay Green', with two identically priced long stay car parks named. norep_unres and norep_res differ by one word, the return flight landing on the twentieth or the seventeenth against a booking that runs to the seventeenth.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Long Stay Blue, a ten-minute walk from departures",
+          "role": "first candidate car park"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Long Stay Green, with a shuttle every fifteen minutes",
+          "role": "second candidate car park"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Book me into the long stay zone",
+          "role": "referring expression picks neither, and the exchange ends"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I fly out of Eastfield early on the ninth and want a parking space for eight days."
+        },
+        {
+          "speaker": "assistant",
+          "text": "There is Long Stay Blue, a ten-minute walk from departures, and Long Stay Green, with a shuttle every fifteen minutes. Both come to forty dollars for the eight days."
+        },
+        {
+          "speaker": "user",
+          "text": "Forty dollars for the eight days is about what I expected. Is the booking refundable if the flight moves?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Yes, you can cancel up to twenty-four hours ahead and get it all back."
+        },
+        {
+          "speaker": "user",
+          "text": "Book me into the long stay zone, registration KR19 TVO. I will be dropping off at six in the morning."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "Yes, you can cancel up to twenty-four hours ahead and get it all back.",
+          "role": "answers the only request"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Book me into Long Stay Green",
+          "role": "car park determined, nothing left open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I fly out of Eastfield early on the ninth and want a parking space for eight days."
+        },
+        {
+          "speaker": "assistant",
+          "text": "There is Long Stay Blue, a ten-minute walk from departures, and Long Stay Green, with a shuttle every fifteen minutes. Both come to forty dollars for the eight days."
+        },
+        {
+          "speaker": "user",
+          "text": "Forty dollars for the eight days is about what I expected. Is the booking refundable if the flight moves?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Yes, you can cancel up to twenty-four hours ahead and get it all back."
+        },
+        {
+          "speaker": "user",
+          "text": "Book me into Long Stay Green, registration KR19 TVO. I will be dropping off at six in the morning."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "at forty dollars from the ninth to the seventeenth",
+          "role": "the period being booked"
+        },
+        {
+          "turn_index": 2,
+          "quote": "My return flight lands on the twentieth",
+          "role": "car would still be there after the booked period ends"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Noted. Can you give me the registration and the make of the car?",
+          "role": "assistant proceeds without reconciling the clash"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I fly out of Eastfield early on the ninth and want a parking space, ideally somewhere close to the shuttle stop."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Long Stay Green has a space in row B, right beside the shuttle stop, at forty dollars from the ninth to the seventeenth."
+        },
+        {
+          "speaker": "user",
+          "text": "That suits me. My return flight lands on the twentieth, late in the evening."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted. Can you give me the registration and the make of the car?"
+        },
+        {
+          "speaker": "user",
+          "text": "It is KR19 TVO, a grey estate, and please keep me as near the shuttle as you can. I will be dropping off at six in the morning."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "ideally somewhere close to the shuttle stop",
+          "role": "preference stated"
+        },
+        {
+          "turn_index": 1,
+          "quote": "right beside the shuttle stop",
+          "role": "preference accepted"
+        },
+        {
+          "turn_index": 2,
+          "quote": "My return flight lands on the seventeenth",
+          "role": "fits the booked period, nothing left open"
+        },
+        {
+          "turn_index": 4,
+          "quote": "please keep me as near the shuttle as you can",
+          "role": "restatement for emphasis, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I fly out of Eastfield early on the ninth and want a parking space, ideally somewhere close to the shuttle stop."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Long Stay Green has a space in row B, right beside the shuttle stop, at forty dollars from the ninth to the seventeenth."
+        },
+        {
+          "speaker": "user",
+          "text": "That suits me. My return flight lands on the seventeenth, late in the evening."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted. Can you give me the registration and the make of the car?"
+        },
+        {
+          "speaker": "user",
+          "text": "It is KR19 TVO, a grey estate, and please keep me as near the shuttle as you can. I will be dropping off at six in the morning."
+        }
+      ]
+    }
+  }
+}

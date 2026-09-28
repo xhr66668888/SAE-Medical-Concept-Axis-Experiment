@@ -1,0 +1,4 @@
+contrast,paired_a,paired_b,diff,lo,hi,p_two_sided,n_families
+zero_shot/full - zero_shot/swapped,0.6,0.4,0.19999999999999996,-0.06,0.45999999999999996,0.1528,25
+zero_shot/full - zero_shot/shuffled,0.6,0.52,0.07999999999999996,-0.08000000000000002,0.24000000000000005,0.4192,25
+zero_shot/full - zero_shot/last_only,0.6,0.47,0.13,-0.010000000000000009,0.27,0.0884,25

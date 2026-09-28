@@ -1,0 +1,181 @@
+{
+  "family_id": "transit_001",
+  "domain": "transit",
+  "task_goal": "book an advance rail single to Sheffield and settle the payment detail",
+  "n_turns": 5,
+  "tail_anchor": "Let's get it booked.",
+  "notes": "norep_unres and norep_res differ by one word, 'ten' vs 'twelve' in the deadline the traveller states, which either does or does not clash with the 11:40 arrival the assistant gave. The rep pair differs only in whether turn 1 answers the seat reservation question; the same near-verbatim echo appears in both.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Is a seat reservation included in the advance fare?",
+          "role": "request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Is a seat reservation included in the advance fare?",
+          "role": "re-request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Outward only, then. I have you down for Tuesday morning on the 09:12.",
+          "role": "assistant turn that fails to answer"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I want to book the 09:12 to Sheffield on Tuesday. Is a seat reservation included in the advance fare?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The advance single on the 09:12 is twenty-four fifty and it gets into Sheffield at 11:40. Do you want the return leg as well?"
+        },
+        {
+          "speaker": "user",
+          "text": "Just the outward leg, thanks. Is a seat reservation included in the advance fare?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Outward only, then. I have you down for Tuesday morning on the 09:12."
+        },
+        {
+          "speaker": "user",
+          "text": "That is right. Let's get it booked."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "a seat reservation is included in the advance fare",
+          "role": "discharges the only open request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Could you read the date and time back to me?",
+          "role": "assistant requests the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Tuesday, the 09:12.",
+          "role": "requested read-back, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I want to book the 09:12 to Sheffield on Tuesday. Is a seat reservation included in the advance fare?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Yes, a seat reservation is included in the advance fare. The single is twenty-four fifty. Do you want the return leg as well?"
+        },
+        {
+          "speaker": "user",
+          "text": "Just the outward leg, thanks. Good that a seat reservation is included in the advance fare."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Outward only, then. Could you read the date and time back to me?"
+        },
+        {
+          "speaker": "user",
+          "text": "Tuesday, the 09:12. Let's get it booked."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "the train gets into Sheffield at 11:40",
+          "role": "stated arrival time"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I am due at the depot on Savile Street by half past ten, so the timing suits me",
+          "role": "deadline that the stated arrival cannot meet"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Noted. And which card will you be using for it?",
+          "role": "assistant proceeds without reconciling the clash"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I want to book the 09:12 to Sheffield on Tuesday. What does the advance single come to?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "It is twenty-four fifty outward, and the train gets into Sheffield at 11:40. Do you want the return leg as well?"
+        },
+        {
+          "speaker": "user",
+          "text": "No, one way is plenty. I am due at the depot on Savile Street by half past ten, so the timing suits me."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted. And which card will you be using for it?"
+        },
+        {
+          "speaker": "user",
+          "text": "It is the Visa ending 3041. Let's get it booked."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "It is twenty-four fifty outward",
+          "role": "answers the only request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "by half past twelve, so the timing suits me",
+          "role": "consistent with the 11:40 arrival, nothing left open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I want to book the 09:12 to Sheffield on Tuesday. What does the advance single come to?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "It is twenty-four fifty outward, and the train gets into Sheffield at 11:40. Do you want the return leg as well?"
+        },
+        {
+          "speaker": "user",
+          "text": "No, one way is plenty. I am due at the depot on Savile Street by half past twelve, so the timing suits me."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted. And which card will you be using for it?"
+        },
+        {
+          "speaker": "user",
+          "text": "It is the Visa ending 3041. Let's get it booked."
+        }
+      ]
+    }
+  }
+}

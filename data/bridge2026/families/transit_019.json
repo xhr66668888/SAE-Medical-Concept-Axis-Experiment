@@ -1,0 +1,78 @@
+{
+  "family_id": "transit_019",
+  "domain": "transit",
+  "task_goal": "rebook the onward Bergen leg after a late inbound and settle what happens to the checked case",
+  "n_turns": 5,
+  "tail_anchor": "I'm at the transfer desk in terminal two.",
+  "notes": "rep_unres and rep_res differ only in whether turn 1 says the case is tagged through, so the same wording is either a re-ask or a requested read-back. norep_unres and norep_res differ only in when the lift from Bergen airport leaves (nine on the dot / half ten) against a 21:40 arrival.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Does my checked case get moved across automatically, or do I have to claim it here?", "role": "request"},
+        {"turn_index": 2, "quote": "Does my checked case get moved across automatically, or do I have to claim it here?", "role": "re-request"},
+        {"turn_index": 3, "quote": "You're on it. I've put you in 14C, an aisle seat, and there's nobody in the middle beside you.", "role": "assistant turn that fails to answer"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "My inbound from Manchester landed late and I've missed the Bergen leg. Does my checked case get moved across automatically, or do I have to claim it here?"},
+        {"speaker": "assistant", "text": "I can put you on the next one. There's a seat on the 19:05 to Bergen, flight LN 412, and the gate for it closes at 18:35."},
+        {"speaker": "user", "text": "That one's fine, put me down for it. Does my checked case get moved across automatically, or do I have to claim it here?"},
+        {"speaker": "assistant", "text": "You're on it. I've put you in 14C, an aisle seat, and there's nobody in the middle beside you."},
+        {"speaker": "user", "text": "That's kind of you. I'm at the transfer desk in terminal two."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Your case moves across automatically, it's tagged through.", "role": "discharges the only open request"},
+        {"turn_index": 1, "quote": "Read that back before I take the seat.", "role": "assistant asks for the repetition"},
+        {"turn_index": 2, "quote": "The 19:05 to Bergen, flight LN 412, gate closes at 18:35.", "role": "requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "My inbound from Manchester landed late and I've missed the Bergen leg. Does my checked case get moved across automatically, or do I have to claim it here?"},
+        {"speaker": "assistant", "text": "Your case moves across automatically, it's tagged through. There's a seat on the 19:05 to Bergen, flight LN 412, gate closes at 18:35. Read that back before I take the seat."},
+        {"speaker": "user", "text": "The 19:05 to Bergen, flight LN 412, gate closes at 18:35. Can you put me down for it?"},
+        {"speaker": "assistant", "text": "You're on it. I've put you in 14C, an aisle seat, and there's nobody in the middle beside you."},
+        {"speaker": "user", "text": "That's kind of you. I'm at the transfer desk in terminal two."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "The next departure is at 19:05 and it gets into Bergen at 21:40.", "role": "the flight lands at 21:40"},
+        {"turn_index": 2, "quote": "My lift from Bergen airport goes at nine on the dot, and it's the last one out to the island tonight, so I'll be going straight from the gate to meet it.", "role": "conflicts with a 21:40 arrival"},
+        {"turn_index": 3, "quote": "Done, you're in 26F.", "role": "assistant proceeds without reconciling the conflict"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "My inbound from Manchester landed late and I've missed the Bergen leg. What else can you get me on today?"},
+        {"speaker": "assistant", "text": "The next departure is at 19:05 and it gets into Bergen at 21:40. There are still seats in the back rows."},
+        {"speaker": "user", "text": "Book that one for me. My lift from Bergen airport goes at nine on the dot, and it's the last one out to the island tonight, so I'll be going straight from the gate to meet it. Will my case come off on the same belt?"},
+        {"speaker": "assistant", "text": "Done, you're in 26F. Your case is tagged through, so it will come off on the same belt as the rest."},
+        {"speaker": "user", "text": "That's kind of you. I'm at the transfer desk in terminal two."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "The next departure is at 19:05 and it gets into Bergen at 21:40.", "role": "answers the only request"},
+        {"turn_index": 2, "quote": "My lift from Bergen airport goes at half ten", "role": "consistent with a 21:40 arrival"},
+        {"turn_index": 3, "quote": "Your case is tagged through, so it will come off on the same belt as the rest.", "role": "discharges the last open item"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "My inbound from Manchester landed late and I've missed the Bergen leg. What else can you get me on today?"},
+        {"speaker": "assistant", "text": "The next departure is at 19:05 and it gets into Bergen at 21:40. There are still seats in the back rows."},
+        {"speaker": "user", "text": "Book that one for me. My lift from Bergen airport goes at half ten, and it's the last one out to the island tonight, so I'll be going straight from the gate to meet it. Will my case come off on the same belt?"},
+        {"speaker": "assistant", "text": "Done, you're in 26F. Your case is tagged through, so it will come off on the same belt as the rest."},
+        {"speaker": "user", "text": "That's kind of you. I'm at the transfer desk in terminal two."}
+      ]
+    }
+  }
+}

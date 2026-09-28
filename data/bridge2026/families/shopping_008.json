@@ -1,0 +1,86 @@
+{
+  "family_id": "shopping_008",
+  "domain": "shopping",
+  "task_goal": "get a rival's clearance price matched on a washing machine at Dunmore Electricals",
+  "n_turns": 7,
+  "tail_anchor": "Go ahead and put the order through on that basis.",
+  "notes": "Two machines stay live to the end and the assistant re-names both immediately before the referring expression, so 'that one' has no topical winner; rep_res replaces those two words with 'the 9kg' and changes nothing else. The norep pair turns on one clause: the rival's stock is a back order until November or is available next day, set against the stated match rule.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "the 8kg Voltek 220 at £379 and the 9kg Voltek 340 at £429", "role": "two live candidates"},
+        {"turn_index": 3, "quote": "The 220 is in stock in white, and the 340 is in stock in white and graphite.", "role": "both candidates re-activated immediately before the referring expression"},
+        {"turn_index": 4, "quote": "Match that one down to £349 and I will take it in white.", "role": "referring expression that picks out neither machine"},
+        {"turn_index": 5, "quote": "I will apply the £349 price and put it through in white.", "role": "assistant acts without establishing which machine"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I have been comparing two machines on your site, the 8kg Voltek 220 at £379 and the 9kg Voltek 340 at £429. Castlebrook is cheaper on one of them."},
+        {"speaker": "assistant", "text": "We do match Castlebrook where the model number is identical. Installation is included free on every Voltek in the range."},
+        {"speaker": "user", "text": "Good, because I am not paying for installation on top of the price. Their clearance page shows £349."},
+        {"speaker": "assistant", "text": "That figure is within what we are allowed to match. The 220 is in stock in white, and the 340 is in stock in white and graphite."},
+        {"speaker": "user", "text": "As I said, I am not paying for installation on top of the price. Match that one down to £349 and I will take it in white."},
+        {"speaker": "assistant", "text": "I will apply the £349 price and put it through in white."},
+        {"speaker": "user", "text": "That suits me. Go ahead and put the order through on that basis."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Installation is included free on every Voltek in the range.", "role": "the preference is granted before it is restated"},
+        {"turn_index": 4, "quote": "As I said, I am not paying for installation on top of the price.", "role": "restated for emphasis, nothing left open"},
+        {"turn_index": 4, "quote": "Match the 9kg down to £349 and I will take it in white.", "role": "referent fixed for the next action"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I have been comparing two machines on your site, the 8kg Voltek 220 at £379 and the 9kg Voltek 340 at £429. Castlebrook is cheaper on one of them."},
+        {"speaker": "assistant", "text": "We do match Castlebrook where the model number is identical. Installation is included free on every Voltek in the range."},
+        {"speaker": "user", "text": "Good, because I am not paying for installation on top of the price. Their clearance page shows £349."},
+        {"speaker": "assistant", "text": "That figure is within what we are allowed to match. The 220 is in stock in white, and the 340 is in stock in white and graphite."},
+        {"speaker": "user", "text": "As I said, I am not paying for installation on top of the price. Match the 9kg down to £349 and I will take it in white."},
+        {"speaker": "assistant", "text": "I will apply the £349 price and put it through in white."},
+        {"speaker": "user", "text": "That suits me. Go ahead and put the order through on that basis."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "only while the rival has the machine there to deliver, never against a back order", "role": "first side of the conflict"},
+        {"turn_index": 2, "quote": "their own site says it is on back order there until the 20th of November. That is the figure I want honoured on today's order.", "role": "second side of the conflict, with the action it is meant to drive"},
+        {"turn_index": 3, "quote": "Our own delivery into your area runs on Tuesdays and Fridays.", "role": "assistant proceeds without reconciling"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I have been comparing two machines on your site, the 8kg Voltek 220 at £379 and the 9kg Voltek 340 at £429. Castlebrook is cheaper on the 340."},
+        {"speaker": "assistant", "text": "We can match them, but only while the rival has the machine there to deliver, never against a back order."},
+        {"speaker": "user", "text": "Their clearance page has the 340 at £349, though their own site says it is on back order there until the 20th of November. That is the figure I want honoured on today's order."},
+        {"speaker": "assistant", "text": "Understood on the price. Our own delivery into your area runs on Tuesdays and Fridays."},
+        {"speaker": "user", "text": "A Friday would be ideal. Book the earliest one you have and send the paperwork by email rather than post."},
+        {"speaker": "assistant", "text": "Email it is, and the crew will bring it Friday week with the installation kit."},
+        {"speaker": "user", "text": "That suits me. Go ahead and put the order through on that basis."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "their own site says it is there for next-day delivery", "role": "satisfies the match rule stated in turn 1"},
+        {"turn_index": 5, "quote": "Email it is, and the crew will bring it Friday week with the installation kit.", "role": "discharges the last open item"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I have been comparing two machines on your site, the 8kg Voltek 220 at £379 and the 9kg Voltek 340 at £429. Castlebrook is cheaper on the 340."},
+        {"speaker": "assistant", "text": "We can match them, but only while the rival has the machine there to deliver, never against a back order."},
+        {"speaker": "user", "text": "Their clearance page has the 340 at £349, and their own site says it is there for next-day delivery. That is the figure I want honoured on today's order."},
+        {"speaker": "assistant", "text": "Understood on the price. Our own delivery into your area runs on Tuesdays and Fridays."},
+        {"speaker": "user", "text": "A Friday would be ideal. Book the earliest one you have and send the paperwork by email rather than post."},
+        {"speaker": "assistant", "text": "Email it is, and the crew will bring it Friday week with the installation kit."},
+        {"speaker": "user", "text": "That suits me. Go ahead and put the order through on that basis."}
+      ]
+    }
+  }
+}

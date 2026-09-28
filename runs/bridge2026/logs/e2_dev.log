@@ -1,0 +1,51 @@
+layers=34 d=2560 | fit n=280 (70 fam) | eval n=100 (25 fam)
+  L 0 meandiff AUROC=0.540 paired=0.600 | logreg AUROC=0.544 | cos(unres,rep)=-0.728
+  L 1 meandiff AUROC=0.545 paired=0.780 | logreg AUROC=0.567 | cos(unres,rep)=-0.490
+  L 2 meandiff AUROC=0.518 paired=0.580 | logreg AUROC=0.552 | cos(unres,rep)=-0.808
+  L 3 meandiff AUROC=0.504 paired=0.560 | logreg AUROC=0.543 | cos(unres,rep)=-0.170
+  L 4 meandiff AUROC=0.511 paired=0.560 | logreg AUROC=0.550 | cos(unres,rep)=-0.191
+  L 5 meandiff AUROC=0.528 paired=0.680 | logreg AUROC=0.558 | cos(unres,rep)=+0.309
+  L 6 meandiff AUROC=0.528 paired=0.640 | logreg AUROC=0.544 | cos(unres,rep)=+0.074
+  L 7 meandiff AUROC=0.536 paired=0.740 | logreg AUROC=0.551 | cos(unres,rep)=+0.616
+  L 8 meandiff AUROC=0.496 paired=0.400 | logreg AUROC=0.569 | cos(unres,rep)=-0.552
+  L 9 meandiff AUROC=0.509 paired=0.460 | logreg AUROC=0.568 | cos(unres,rep)=+0.606
+  L10 meandiff AUROC=0.536 paired=0.500 | logreg AUROC=0.554 | cos(unres,rep)=+0.023
+  L11 meandiff AUROC=0.485 paired=0.460 | logreg AUROC=0.559 | cos(unres,rep)=-0.359
+  L12 meandiff AUROC=0.517 paired=0.600 | logreg AUROC=0.569 | cos(unres,rep)=+0.364
+  L13 meandiff AUROC=0.516 paired=0.580 | logreg AUROC=0.546 | cos(unres,rep)=-0.150
+  L14 meandiff AUROC=0.530 paired=0.580 | logreg AUROC=0.580 | cos(unres,rep)=+0.146
+  L15 meandiff AUROC=0.499 paired=0.400 | logreg AUROC=0.584 | cos(unres,rep)=-0.537
+  L16 meandiff AUROC=0.503 paired=0.440 | logreg AUROC=0.574 | cos(unres,rep)=-0.410
+  L17 meandiff AUROC=0.507 paired=0.400 | logreg AUROC=0.561 | cos(unres,rep)=+0.020
+  L18 meandiff AUROC=0.510 paired=0.460 | logreg AUROC=0.571 | cos(unres,rep)=+0.066
+  L19 meandiff AUROC=0.503 paired=0.420 | logreg AUROC=0.590 | cos(unres,rep)=+0.234
+  L20 meandiff AUROC=0.522 paired=0.460 | logreg AUROC=0.586 | cos(unres,rep)=+0.130
+  L21 meandiff AUROC=0.520 paired=0.480 | logreg AUROC=0.578 | cos(unres,rep)=+0.127
+  L22 meandiff AUROC=0.526 paired=0.500 | logreg AUROC=0.602 | cos(unres,rep)=+0.146
+  L23 meandiff AUROC=0.541 paired=0.560 | logreg AUROC=0.609 | cos(unres,rep)=+0.097
+  L24 meandiff AUROC=0.546 paired=0.580 | logreg AUROC=0.601 | cos(unres,rep)=+0.102
+  L25 meandiff AUROC=0.574 paired=0.700 | logreg AUROC=0.621 | cos(unres,rep)=-0.083
+  L26 meandiff AUROC=0.554 paired=0.600 | logreg AUROC=0.621 | cos(unres,rep)=-0.144
+  L27 meandiff AUROC=0.568 paired=0.640 | logreg AUROC=0.612 | cos(unres,rep)=-0.121
+  L28 meandiff AUROC=0.582 paired=0.680 | logreg AUROC=0.612 | cos(unres,rep)=-0.101
+  L29 meandiff AUROC=0.578 paired=0.680 | logreg AUROC=0.616 | cos(unres,rep)=-0.135
+  L30 meandiff AUROC=0.508 paired=0.620 | logreg AUROC=0.625 | cos(unres,rep)=-0.201
+  L31 meandiff AUROC=0.549 paired=0.680 | logreg AUROC=0.636 | cos(unres,rep)=-0.137
+  L32 meandiff AUROC=0.531 paired=0.700 | logreg AUROC=0.657 | cos(unres,rep)=-0.092
+  L33 meandiff AUROC=0.544 paired=0.660 | logreg AUROC=0.643 | cos(unres,rep)=+0.488
+  SAE L9 k= 1 dev AUROC=0.538 paired=0.340
+  SAE L9 k= 4 dev AUROC=0.543 paired=0.440
+  SAE L9 k=16 dev AUROC=0.535 paired=0.580
+  SAE L17 k= 1 dev AUROC=0.510 paired=0.020
+  SAE L17 k= 4 dev AUROC=0.529 paired=0.240
+  SAE L17 k=16 dev AUROC=0.517 paired=0.440
+  SAE L22 k= 1 dev AUROC=0.521 paired=0.120
+  SAE L22 k= 4 dev AUROC=0.572 paired=0.620
+  SAE L22 k=16 dev AUROC=0.576 paired=0.680
+  SAE L29 k= 1 dev AUROC=0.522 paired=0.240
+  SAE L29 k= 4 dev AUROC=0.528 paired=0.480
+  SAE L29 k=16 dev AUROC=0.577 paired=0.680
+
+best mean_diff  : L28 AUROC=0.582[0.543,0.634] paired=0.680 perm_p=0.0305
+best logistic_l2: L32 AUROC=0.657[0.603,0.720] paired=0.820
+-> runs/bridge2026/stage2/e2_layer_sweep_dev.csv

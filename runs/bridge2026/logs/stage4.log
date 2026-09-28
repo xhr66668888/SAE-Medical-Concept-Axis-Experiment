@@ -1,0 +1,339 @@
+=============== 1/9  text + surface baselines (test) ===============
+=== E1 text/surface baselines on test (n=100 items, 25 families) ===
+  majority                     paired=        -         AUROC=   -    acc=0.500 FA=0.000
+  rep_rule(>=5-token echo)     paired=0.550[0.490,0.610] p=0.223 AUROC=0.520[0.494,0.548] acc=0.500 FA=0.500
+  length_rule(>138 words)      paired=0.340[0.260,0.420] p=0.002 AUROC=0.484[0.463,0.495] acc=0.490 FA=0.340
+  surface_lr(19 feats)         paired=0.720[0.600,0.830] p=0.000 AUROC=0.565[0.532,0.611] acc=0.560 FA=0.480
+  tfidf_word(1-2)              paired=0.740[0.600,0.860] p=0.000 AUROC=0.598[0.553,0.656] acc=0.590 FA=0.400
+  tfidf_char_wb(3-5)           paired=0.760[0.640,0.880] p=0.000 AUROC=0.556[0.516,0.606] acc=0.520 FA=0.280
+  tfidf_word+char              paired=0.720[0.560,0.860] p=0.004 AUROC=0.610[0.550,0.680] acc=0.610 FA=0.320
+
+=== shortcut audit (single-feature AUROC, within-family permutation) ===
+  n_user_qmarks          AUROC=0.532  p=0.0230  
+  ttr                    AUROC=0.532  p=0.1924  
+  rep_user               AUROC=0.529  p=0.2869  
+  rep_any                AUROC=0.514  p=0.6507  
+  n_asst_words           AUROC=0.486  p=0.2389  
+  user_asst_word_ratio   AUROC=0.514  p=0.4763  
+  n_polite               AUROC=0.487  p=0.5212  
+  n_chars                AUROC=0.489  p=0.1269  
+
+flagged features: 0/19  -> runs/bridge2026/stage4/e1_baselines_test_shortcut_audit.csv
+=============== 2/9  4B behavioural readout (test) ===============
+google/gemma-3-4b-it | split=test n=100 families=25
+Loading weights:   0%|          | 0/883 [00:00<?, ?it/s]Loading weights:   3%|▎         | 23/883 [00:00<00:03, 218.94it/s]Loading weights:   9%|▊         | 76/883 [00:00<00:02, 397.85it/s]Loading weights:  15%|█▍        | 130/883 [00:00<00:01, 460.40it/s]Loading weights:  20%|██        | 177/883 [00:00<00:01, 454.71it/s]Loading weights:  26%|██▌       | 229/883 [00:00<00:01, 477.76it/s]Loading weights:  32%|███▏      | 279/883 [00:00<00:01, 485.19it/s]Loading weights:  38%|███▊      | 335/883 [00:00<00:01, 503.73it/s]Loading weights:  44%|████▎     | 386/883 [00:00<00:00, 502.00it/s]Loading weights:  49%|████▉     | 437/883 [00:00<00:00, 500.62it/s]Loading weights:  81%|████████▏ | 719/883 [00:01<00:00, 1203.81it/s]Loading weights: 100%|██████████| 883/883 [00:01<00:00, 818.46it/s] 
+  zero_shot/full                       paired=0.600[0.460,0.720] p=0.2070 AUROC=0.524 raw_acc=0.520 FA=0.700
+  zero_shot/last_only                  paired=0.470[0.400,0.540] p=0.5630 AUROC=0.475 raw_acc=0.490 FA=0.840
+  zero_shot/shuffled                   paired=0.520[0.380,0.660] p=0.8580 AUROC=0.501 raw_acc=0.480 FA=0.900
+  zero_shot/swapped                    paired=0.400[0.260,0.540] p=0.2120 AUROC=0.468 raw_acc=0.460 FA=0.780
+  prompt_context_instruction/full      paired=0.520[0.400,0.640] p=0.8580 AUROC=0.508 raw_acc=0.500 FA=1.000
+  few_shot_k4/full                     paired=0.660[0.560,0.760] p=0.0290 AUROC=0.545 raw_acc=0.510 FA=0.640
+-> runs/bridge2026/stage4/e1_model_readout_test.csv
+-> runs/bridge2026/stage4/e1_model_readout_test_per_item.csv
+=============== 3/9  12B behavioural readout (test) ===============
+google/gemma-3-12b-it | split=test n=100 families=25
+Loading weights:   0%|          | 0/1065 [00:00<?, ?it/s]Loading weights:   0%|          | 1/1065 [00:00<02:27,  7.19it/s]Loading weights:   3%|▎         | 31/1065 [00:00<00:06, 149.82it/s]Loading weights:   5%|▌         | 57/1065 [00:00<00:05, 188.76it/s]Loading weights:   8%|▊         | 81/1065 [00:00<00:05, 176.62it/s]Loading weights:  10%|▉         | 102/1065 [00:00<00:05, 177.60it/s]Loading weights:  12%|█▏        | 133/1065 [00:00<00:04, 210.51it/s]Loading weights:  15%|█▍        | 159/1065 [00:00<00:04, 219.45it/s]Loading weights:  17%|█▋        | 185/1065 [00:00<00:04, 218.56it/s]Loading weights:  20%|█▉        | 212/1065 [00:01<00:03, 227.19it/s]Loading weights:  22%|██▏       | 239/1065 [00:01<00:03, 232.55it/s]Loading weights:  25%|██▍       | 264/1065 [00:01<00:03, 234.94it/s]Loading weights:  27%|██▋       | 289/1065 [00:01<00:03, 238.85it/s]Loading weights:  30%|██▉       | 316/1065 [00:01<00:03, 245.90it/s]Loading weights:  32%|███▏      | 342/1065 [00:01<00:02, 242.58it/s]Loading weights:  35%|███▍      | 368/1065 [00:01<00:02, 239.30it/s]Loading weights:  37%|███▋      | 394/1065 [00:01<00:02, 245.03it/s]Loading weights:  39%|███▉      | 420/1065 [00:01<00:02, 246.00it/s]Loading weights:  42%|████▏     | 446/1065 [00:02<00:02, 243.85it/s]Loading weights:  44%|████▍     | 472/1065 [00:02<00:02, 245.67it/s]Loading weights:  47%|████▋     | 498/1065 [00:02<00:02, 249.27it/s]Loading weights:  49%|████▉     | 523/1065 [00:02<00:02, 248.90it/s]Loading weights:  52%|█████▏    | 549/1065 [00:02<00:02, 247.99it/s]Loading weights:  54%|█████▍    | 575/1065 [00:02<00:01, 249.14it/s]Loading weights:  56%|█████▋    | 601/1065 [00:02<00:01, 242.40it/s]Loading weights:  63%|██████▎   | 673/1065 [00:02<00:01, 378.45it/s]Loading weights:  89%|████████▉ | 949/1065 [00:02<00:00, 1064.97it/s]Loading weights: 100%|██████████| 1065/1065 [00:02<00:00, 368.62it/s]
+  zero_shot/full                       paired=0.580[0.460,0.700] p=0.3300 AUROC=0.546 raw_acc=0.500 FA=0.920
+  zero_shot/last_only                  paired=0.490[0.420,0.560] p=1.0000 AUROC=0.497 raw_acc=0.500 FA=1.000
+  zero_shot/shuffled                   paired=0.600[0.480,0.720] p=0.2020 AUROC=0.595 raw_acc=0.520 FA=0.940
+  zero_shot/swapped                    paired=0.320[0.200,0.420] p=0.0100 AUROC=0.452 raw_acc=0.490 FA=0.940
+  prompt_context_instruction/full      paired=0.660[0.520,0.780] p=0.0350 AUROC=0.563 raw_acc=0.510 FA=0.960
+  few_shot_k4/full                     paired=0.620[0.500,0.740] p=0.1030 AUROC=0.586 raw_acc=0.500 FA=1.000
+-> runs/bridge2026/stage4/e1_model_readout_test_12b.csv
+-> runs/bridge2026/stage4/e1_model_readout_test_12b_per_item.csv
+=============== 4/9  4B representation (test) ===============
+layers=34 d=2560 | fit n=280 (70 fam) | eval n=100 (25 fam)
+  L 0 meandiff AUROC=0.512 paired=0.580 | logreg AUROC=0.541 | cos(unres,rep)=-0.728
+  L 1 meandiff AUROC=0.525 paired=0.700 | logreg AUROC=0.535 | cos(unres,rep)=-0.490
+  L 2 meandiff AUROC=0.498 paired=0.500 | logreg AUROC=0.538 | cos(unres,rep)=-0.808
+  L 3 meandiff AUROC=0.513 paired=0.660 | logreg AUROC=0.530 | cos(unres,rep)=-0.170
+  L 4 meandiff AUROC=0.516 paired=0.720 | logreg AUROC=0.553 | cos(unres,rep)=-0.191
+  L 5 meandiff AUROC=0.521 paired=0.600 | logreg AUROC=0.551 | cos(unres,rep)=+0.309
+  L 6 meandiff AUROC=0.527 paired=0.540 | logreg AUROC=0.547 | cos(unres,rep)=+0.074
+  L 7 meandiff AUROC=0.517 paired=0.500 | logreg AUROC=0.558 | cos(unres,rep)=+0.616
+  L 8 meandiff AUROC=0.504 paired=0.520 | logreg AUROC=0.528 | cos(unres,rep)=-0.552
+  L 9 meandiff AUROC=0.502 paired=0.560 | logreg AUROC=0.542 | cos(unres,rep)=+0.606
+  L10 meandiff AUROC=0.498 paired=0.620 | logreg AUROC=0.557 | cos(unres,rep)=+0.023
+  L11 meandiff AUROC=0.516 paired=0.500 | logreg AUROC=0.547 | cos(unres,rep)=-0.359
+  L12 meandiff AUROC=0.486 paired=0.420 | logreg AUROC=0.547 | cos(unres,rep)=+0.364
+  L13 meandiff AUROC=0.528 paired=0.580 | logreg AUROC=0.557 | cos(unres,rep)=-0.150
+  L14 meandiff AUROC=0.506 paired=0.540 | logreg AUROC=0.547 | cos(unres,rep)=+0.146
+  L15 meandiff AUROC=0.516 paired=0.520 | logreg AUROC=0.568 | cos(unres,rep)=-0.537
+  L16 meandiff AUROC=0.519 paired=0.560 | logreg AUROC=0.571 | cos(unres,rep)=-0.410
+  L17 meandiff AUROC=0.502 paired=0.500 | logreg AUROC=0.559 | cos(unres,rep)=+0.020
+  L18 meandiff AUROC=0.491 paired=0.460 | logreg AUROC=0.550 | cos(unres,rep)=+0.066
+  L19 meandiff AUROC=0.488 paired=0.380 | logreg AUROC=0.552 | cos(unres,rep)=+0.234
+  L20 meandiff AUROC=0.478 paired=0.420 | logreg AUROC=0.552 | cos(unres,rep)=+0.130
+  L21 meandiff AUROC=0.484 paired=0.420 | logreg AUROC=0.536 | cos(unres,rep)=+0.127
+  L22 meandiff AUROC=0.486 paired=0.440 | logreg AUROC=0.543 | cos(unres,rep)=+0.146
+  L23 meandiff AUROC=0.479 paired=0.440 | logreg AUROC=0.536 | cos(unres,rep)=+0.097
+  L24 meandiff AUROC=0.494 paired=0.420 | logreg AUROC=0.545 | cos(unres,rep)=+0.102
+  L25 meandiff AUROC=0.524 paired=0.620 | logreg AUROC=0.542 | cos(unres,rep)=-0.083
+  L26 meandiff AUROC=0.533 paired=0.620 | logreg AUROC=0.533 | cos(unres,rep)=-0.144
+  L27 meandiff AUROC=0.531 paired=0.580 | logreg AUROC=0.532 | cos(unres,rep)=-0.121
+  L28 meandiff AUROC=0.529 paired=0.580 | logreg AUROC=0.528 | cos(unres,rep)=-0.101
+  L29 meandiff AUROC=0.543 paired=0.640 | logreg AUROC=0.548 | cos(unres,rep)=-0.135
+  L30 meandiff AUROC=0.540 paired=0.600 | logreg AUROC=0.550 | cos(unres,rep)=-0.201
+  L31 meandiff AUROC=0.544 paired=0.580 | logreg AUROC=0.555 | cos(unres,rep)=-0.137
+  L32 meandiff AUROC=0.534 paired=0.580 | logreg AUROC=0.560 | cos(unres,rep)=-0.092
+  L33 meandiff AUROC=0.527 paired=0.520 | logreg AUROC=0.577 | cos(unres,rep)=+0.488
+  SAE L9 k= 1 dev AUROC=0.533 paired=0.500
+  SAE L9 k= 4 dev AUROC=0.532 paired=0.520
+  SAE L9 k=16 dev AUROC=0.511 paired=0.440
+  SAE L17 k= 1 dev AUROC=0.500 paired=0.490
+  SAE L17 k= 4 dev AUROC=0.489 paired=0.400
+  SAE L17 k=16 dev AUROC=0.493 paired=0.460
+  SAE L22 k= 1 dev AUROC=0.520 paired=0.520
+  SAE L22 k= 4 dev AUROC=0.531 paired=0.660
+  SAE L22 k=16 dev AUROC=0.521 paired=0.640
+  SAE L29 k= 1 dev AUROC=0.536 paired=0.560
+  SAE L29 k= 4 dev AUROC=0.551 paired=0.620
+  SAE L29 k=16 dev AUROC=0.551 paired=0.640
+
+best mean_diff  : L31 AUROC=0.544[0.510,0.596] paired=0.580 perm_p=0.1364
+best logistic_l2: L33 AUROC=0.577[0.526,0.633] paired=0.600
+-> runs/bridge2026/stage4/e2_layer_sweep_test.csv
+train n=280 (70 fam) | test n=100 (25 fam)
+surface-only: paired=0.720 [0.600,0.830]  AUROC=0.565
+surface-matched subset: 17/50 pairs with |surface margin| <= 0.016
+  L 0 surface=0.720 probe=0.700 joint=0.720 | increment=+0.000 [-0.120,+0.140] p=1.041 | matched: surf=0.588 probe=0.706
+  L 1 surface=0.720 probe=0.640 joint=0.660 | increment=-0.060 [-0.190,+0.080] p=0.453 | matched: surf=0.588 probe=0.588
+  L 2 surface=0.720 probe=0.680 joint=0.700 | increment=-0.020 [-0.140,+0.110] p=0.833 | matched: surf=0.588 probe=0.471
+  L 3 surface=0.720 probe=0.600 joint=0.660 | increment=-0.060 [-0.180,+0.070] p=0.391 | matched: surf=0.588 probe=0.529
+  L 4 surface=0.720 probe=0.700 joint=0.740 | increment=+0.020 [-0.100,+0.140] p=0.796 | matched: surf=0.588 probe=0.529
+  L 5 surface=0.720 probe=0.760 joint=0.740 | increment=+0.020 [-0.150,+0.190] p=0.847 | matched: surf=0.588 probe=0.824
+  L 6 surface=0.720 probe=0.700 joint=0.660 | increment=-0.060 [-0.200,+0.070] p=0.423 | matched: surf=0.588 probe=0.706
+  L 7 surface=0.720 probe=0.640 joint=0.660 | increment=-0.060 [-0.190,+0.060] p=0.402 | matched: surf=0.588 probe=0.471
+  L 8 surface=0.720 probe=0.680 joint=0.740 | increment=+0.020 [-0.130,+0.170] p=0.829 | matched: surf=0.588 probe=0.588
+  L 9 surface=0.720 probe=0.680 joint=0.740 | increment=+0.020 [-0.120,+0.160] p=0.849 | matched: surf=0.588 probe=0.471
+  L10 surface=0.720 probe=0.720 joint=0.680 | increment=-0.040 [-0.190,+0.110] p=0.643 | matched: surf=0.588 probe=0.588
+  L11 surface=0.720 probe=0.680 joint=0.700 | increment=-0.020 [-0.190,+0.130] p=0.858 | matched: surf=0.588 probe=0.588
+  L12 surface=0.720 probe=0.720 joint=0.720 | increment=+0.000 [-0.140,+0.140] p=1.045 | matched: surf=0.588 probe=0.647
+  L13 surface=0.720 probe=0.700 joint=0.660 | increment=-0.060 [-0.220,+0.080] p=0.479 | matched: surf=0.588 probe=0.471
+  L14 surface=0.720 probe=0.760 joint=0.780 | increment=+0.060 [-0.070,+0.200] p=0.444 | matched: surf=0.588 probe=0.647
+  L15 surface=0.720 probe=0.820 joint=0.820 | increment=+0.100 [-0.050,+0.240] p=0.194 | matched: surf=0.588 probe=0.706
+  L16 surface=0.720 probe=0.780 joint=0.760 | increment=+0.040 [-0.110,+0.190] p=0.656 | matched: surf=0.588 probe=0.647
+  L17 surface=0.720 probe=0.760 joint=0.760 | increment=+0.040 [-0.100,+0.180] p=0.623 | matched: surf=0.588 probe=0.647
+  L18 surface=0.720 probe=0.640 joint=0.640 | increment=-0.080 [-0.230,+0.070] p=0.340 | matched: surf=0.588 probe=0.588
+  L19 surface=0.720 probe=0.780 joint=0.740 | increment=+0.020 [-0.130,+0.160] p=0.823 | matched: surf=0.588 probe=0.824
+  L20 surface=0.720 probe=0.760 joint=0.740 | increment=+0.020 [-0.120,+0.160] p=0.845 | matched: surf=0.588 probe=0.824
+  L21 surface=0.720 probe=0.680 joint=0.660 | increment=-0.060 [-0.210,+0.080] p=0.465 | matched: surf=0.588 probe=0.706
+  L22 surface=0.720 probe=0.700 joint=0.720 | increment=+0.000 [-0.180,+0.170] p=1.033 | matched: surf=0.588 probe=0.647
+  L23 surface=0.720 probe=0.620 joint=0.620 | increment=-0.100 [-0.260,+0.060] p=0.250 | matched: surf=0.588 probe=0.471
+  L24 surface=0.720 probe=0.660 joint=0.700 | increment=-0.020 [-0.170,+0.130] p=0.863 | matched: surf=0.588 probe=0.588
+  L25 surface=0.720 probe=0.580 joint=0.660 | increment=-0.060 [-0.200,+0.070] p=0.475 | matched: surf=0.588 probe=0.471
+  L26 surface=0.720 probe=0.560 joint=0.580 | increment=-0.140 [-0.290,+0.010] p=0.066 | matched: surf=0.588 probe=0.471
+  L27 surface=0.720 probe=0.520 joint=0.560 | increment=-0.160 [-0.300,-0.020] p=0.025 | matched: surf=0.588 probe=0.353
+  L28 surface=0.720 probe=0.520 joint=0.560 | increment=-0.160 [-0.320,+0.000] p=0.065 | matched: surf=0.588 probe=0.353
+  L29 surface=0.720 probe=0.580 joint=0.560 | increment=-0.160 [-0.340,+0.010] p=0.079 | matched: surf=0.588 probe=0.471
+  L30 surface=0.720 probe=0.580 joint=0.580 | increment=-0.140 [-0.310,+0.030] p=0.116 | matched: surf=0.588 probe=0.471
+  L31 surface=0.720 probe=0.540 joint=0.560 | increment=-0.160 [-0.330,+0.020] p=0.087 | matched: surf=0.588 probe=0.471
+  L32 surface=0.720 probe=0.560 joint=0.580 | increment=-0.140 [-0.310,+0.030] p=0.137 | matched: surf=0.588 probe=0.412
+  L33 surface=0.720 probe=0.600 joint=0.600 | increment=-0.120 [-0.290,+0.050] p=0.195 | matched: surf=0.588 probe=0.471
+
+best increment over surface: L15 +0.100 [-0.050,+0.240] p=0.1940
+best probe-alone: L15 paired=0.820 [0.720,0.920]  (surface reference 0.720)
+-> runs/bridge2026/stage4/e2_incremental_test.csv
+=============== 5/9  12B representation (test) ===============
+layers=48 d=3840 | fit n=280 (70 fam) | eval n=100 (25 fam)
+  L 0 meandiff AUROC=0.490 paired=0.440 | logreg AUROC=0.525 | cos(unres,rep)=+0.800
+  L 1 meandiff AUROC=0.487 paired=0.380 | logreg AUROC=0.512 | cos(unres,rep)=+0.501
+  L 2 meandiff AUROC=0.504 paired=0.560 | logreg AUROC=0.514 | cos(unres,rep)=-0.274
+  L 3 meandiff AUROC=0.494 paired=0.440 | logreg AUROC=0.520 | cos(unres,rep)=-0.760
+  L 4 meandiff AUROC=0.519 paired=0.580 | logreg AUROC=0.538 | cos(unres,rep)=-0.161
+  L 5 meandiff AUROC=0.521 paired=0.840 | logreg AUROC=0.542 | cos(unres,rep)=-0.508
+  L 6 meandiff AUROC=0.521 paired=0.620 | logreg AUROC=0.538 | cos(unres,rep)=-0.485
+  L 7 meandiff AUROC=0.518 paired=0.520 | logreg AUROC=0.537 | cos(unres,rep)=-0.167
+  L 8 meandiff AUROC=0.528 paired=0.740 | logreg AUROC=0.529 | cos(unres,rep)=-0.028
+  L 9 meandiff AUROC=0.528 paired=0.620 | logreg AUROC=0.532 | cos(unres,rep)=+0.169
+  L10 meandiff AUROC=0.510 paired=0.560 | logreg AUROC=0.533 | cos(unres,rep)=+0.227
+  L11 meandiff AUROC=0.522 paired=0.520 | logreg AUROC=0.538 | cos(unres,rep)=+0.088
+  L12 meandiff AUROC=0.512 paired=0.540 | logreg AUROC=0.540 | cos(unres,rep)=+0.577
+  L13 meandiff AUROC=0.500 paired=0.520 | logreg AUROC=0.547 | cos(unres,rep)=-0.756
+  L14 meandiff AUROC=0.490 paired=0.480 | logreg AUROC=0.519 | cos(unres,rep)=+0.021
+  L15 meandiff AUROC=0.498 paired=0.480 | logreg AUROC=0.528 | cos(unres,rep)=-0.710
+  L16 meandiff AUROC=0.489 paired=0.420 | logreg AUROC=0.541 | cos(unres,rep)=+0.022
+  L17 meandiff AUROC=0.499 paired=0.480 | logreg AUROC=0.526 | cos(unres,rep)=-0.916
+  L18 meandiff AUROC=0.500 paired=0.500 | logreg AUROC=0.546 | cos(unres,rep)=-0.842
+  L19 meandiff AUROC=0.500 paired=0.520 | logreg AUROC=0.572 | cos(unres,rep)=-0.745
+  L20 meandiff AUROC=0.516 paired=0.520 | logreg AUROC=0.566 | cos(unres,rep)=-0.141
+  L21 meandiff AUROC=0.520 paired=0.520 | logreg AUROC=0.564 | cos(unres,rep)=-0.362
+  L22 meandiff AUROC=0.524 paired=0.480 | logreg AUROC=0.615 | cos(unres,rep)=-0.635
+  L23 meandiff AUROC=0.524 paired=0.560 | logreg AUROC=0.597 | cos(unres,rep)=-0.587
+  L24 meandiff AUROC=0.532 paired=0.600 | logreg AUROC=0.634 | cos(unres,rep)=-0.522
+  L25 meandiff AUROC=0.564 paired=0.760 | logreg AUROC=0.609 | cos(unres,rep)=+0.041
+  L26 meandiff AUROC=0.527 paired=0.580 | logreg AUROC=0.572 | cos(unres,rep)=-0.328
+  L27 meandiff AUROC=0.539 paired=0.620 | logreg AUROC=0.572 | cos(unres,rep)=-0.142
+  L28 meandiff AUROC=0.539 paired=0.660 | logreg AUROC=0.574 | cos(unres,rep)=+0.002
+  L29 meandiff AUROC=0.547 paired=0.700 | logreg AUROC=0.558 | cos(unres,rep)=+0.102
+  L30 meandiff AUROC=0.534 paired=0.700 | logreg AUROC=0.549 | cos(unres,rep)=+0.234
+  L31 meandiff AUROC=0.526 paired=0.620 | logreg AUROC=0.548 | cos(unres,rep)=+0.245
+  L32 meandiff AUROC=0.518 paired=0.640 | logreg AUROC=0.550 | cos(unres,rep)=+0.413
+  L33 meandiff AUROC=0.529 paired=0.720 | logreg AUROC=0.545 | cos(unres,rep)=+0.430
+  L34 meandiff AUROC=0.550 paired=0.720 | logreg AUROC=0.546 | cos(unres,rep)=+0.345
+  L35 meandiff AUROC=0.550 paired=0.700 | logreg AUROC=0.545 | cos(unres,rep)=+0.305
+  L36 meandiff AUROC=0.540 paired=0.740 | logreg AUROC=0.548 | cos(unres,rep)=+0.439
+  L37 meandiff AUROC=0.538 paired=0.720 | logreg AUROC=0.546 | cos(unres,rep)=+0.427
+  L38 meandiff AUROC=0.531 paired=0.740 | logreg AUROC=0.549 | cos(unres,rep)=+0.489
+  L39 meandiff AUROC=0.528 paired=0.700 | logreg AUROC=0.555 | cos(unres,rep)=+0.630
+  L40 meandiff AUROC=0.522 paired=0.680 | logreg AUROC=0.554 | cos(unres,rep)=+0.623
+  L41 meandiff AUROC=0.524 paired=0.700 | logreg AUROC=0.560 | cos(unres,rep)=+0.650
+  L42 meandiff AUROC=0.535 paired=0.720 | logreg AUROC=0.573 | cos(unres,rep)=+0.692
+  L43 meandiff AUROC=0.534 paired=0.720 | logreg AUROC=0.593 | cos(unres,rep)=+0.609
+  L44 meandiff AUROC=0.535 paired=0.680 | logreg AUROC=0.600 | cos(unres,rep)=+0.603
+  L45 meandiff AUROC=0.574 paired=0.740 | logreg AUROC=0.595 | cos(unres,rep)=+0.277
+  L46 meandiff AUROC=0.554 paired=0.700 | logreg AUROC=0.613 | cos(unres,rep)=+0.277
+  L47 meandiff AUROC=0.555 paired=0.700 | logreg AUROC=0.616 | cos(unres,rep)=-0.036
+  SAE L12 k= 1 dev AUROC=0.490 paired=0.480
+  SAE L12 k= 4 dev AUROC=0.506 paired=0.500
+  SAE L12 k=16 dev AUROC=0.526 paired=0.680
+  SAE L24 k= 1 dev AUROC=0.500 paired=0.500
+  SAE L24 k= 4 dev AUROC=0.513 paired=0.640
+  SAE L24 k=16 dev AUROC=0.516 paired=0.520
+  SAE L31 k= 1 dev AUROC=0.540 paired=0.550
+  SAE L31 k= 4 dev AUROC=0.552 paired=0.640
+  SAE L31 k=16 dev AUROC=0.558 paired=0.600
+  SAE L41 k= 1 dev AUROC=0.528 paired=0.590
+  SAE L41 k= 4 dev AUROC=0.525 paired=0.610
+  SAE L41 k=16 dev AUROC=0.536 paired=0.600
+
+best mean_diff  : L45 AUROC=0.574[0.541,0.615] paired=0.740 perm_p=0.0745
+best logistic_l2: L24 AUROC=0.634[0.583,0.706] paired=0.820
+-> runs/bridge2026/stage4/e2_12b/e2_layer_sweep_test.csv
+train n=280 (70 fam) | test n=100 (25 fam)
+surface-only: paired=0.720 [0.600,0.830]  AUROC=0.565
+surface-matched subset: 17/50 pairs with |surface margin| <= 0.016
+  L 0 surface=0.720 probe=0.580 joint=0.640 | increment=-0.080 [-0.250,+0.100] p=0.394 | matched: surf=0.588 probe=0.471
+  L 1 surface=0.720 probe=0.500 joint=0.580 | increment=-0.140 [-0.320,+0.060] p=0.165 | matched: surf=0.588 probe=0.412
+  L 2 surface=0.720 probe=0.540 joint=0.540 | increment=-0.180 [-0.320,-0.030] p=0.013 | matched: surf=0.588 probe=0.353
+  L 3 surface=0.720 probe=0.680 joint=0.680 | increment=-0.040 [-0.210,+0.120] p=0.653 | matched: surf=0.588 probe=0.471
+  L 4 surface=0.720 probe=0.760 joint=0.760 | increment=+0.040 [-0.110,+0.190] p=0.653 | matched: surf=0.588 probe=0.529
+  L 5 surface=0.720 probe=0.660 joint=0.700 | increment=-0.020 [-0.170,+0.130] p=0.870 | matched: surf=0.588 probe=0.529
+  L 6 surface=0.720 probe=0.680 joint=0.740 | increment=+0.020 [-0.120,+0.160] p=0.828 | matched: surf=0.588 probe=0.529
+  L 7 surface=0.720 probe=0.760 joint=0.760 | increment=+0.040 [-0.090,+0.180] p=0.607 | matched: surf=0.588 probe=0.706
+  L 8 surface=0.720 probe=0.680 joint=0.720 | increment=+0.000 [-0.090,+0.090] p=1.076 | matched: surf=0.588 probe=0.647
+  L 9 surface=0.720 probe=0.660 joint=0.640 | increment=-0.080 [-0.220,+0.050] p=0.277 | matched: surf=0.588 probe=0.588
+  L10 surface=0.720 probe=0.660 joint=0.640 | increment=-0.080 [-0.220,+0.060] p=0.303 | matched: surf=0.588 probe=0.588
+  L11 surface=0.720 probe=0.680 joint=0.640 | increment=-0.080 [-0.210,+0.060] p=0.293 | matched: surf=0.588 probe=0.529
+  L12 surface=0.720 probe=0.760 joint=0.680 | increment=-0.040 [-0.200,+0.120] p=0.671 | matched: surf=0.588 probe=0.765
+  L13 surface=0.720 probe=0.660 joint=0.680 | increment=-0.040 [-0.190,+0.120] p=0.638 | matched: surf=0.588 probe=0.647
+  L14 surface=0.720 probe=0.580 joint=0.580 | increment=-0.140 [-0.320,+0.050] p=0.170 | matched: surf=0.588 probe=0.529
+  L15 surface=0.720 probe=0.620 joint=0.640 | increment=-0.080 [-0.230,+0.080] p=0.353 | matched: surf=0.588 probe=0.471
+  L16 surface=0.720 probe=0.680 joint=0.680 | increment=-0.040 [-0.170,+0.090] p=0.629 | matched: surf=0.588 probe=0.353
+  L17 surface=0.720 probe=0.640 joint=0.640 | increment=-0.080 [-0.250,+0.100] p=0.424 | matched: surf=0.588 probe=0.588
+  L18 surface=0.720 probe=0.680 joint=0.740 | increment=+0.020 [-0.160,+0.200] p=0.879 | matched: surf=0.588 probe=0.706
+  L19 surface=0.720 probe=0.760 joint=0.780 | increment=+0.060 [-0.070,+0.200] p=0.437 | matched: surf=0.588 probe=0.706
+  L20 surface=0.720 probe=0.660 joint=0.660 | increment=-0.060 [-0.220,+0.110] p=0.512 | matched: surf=0.588 probe=0.647
+  L21 surface=0.720 probe=0.720 joint=0.760 | increment=+0.040 [-0.110,+0.200] p=0.696 | matched: surf=0.588 probe=0.647
+  L22 surface=0.720 probe=0.820 joint=0.820 | increment=+0.100 [-0.050,+0.260] p=0.243 | matched: surf=0.588 probe=0.706
+  L23 surface=0.720 probe=0.800 joint=0.800 | increment=+0.080 [-0.070,+0.240] p=0.366 | matched: surf=0.588 probe=0.588
+  L24 surface=0.720 probe=0.820 joint=0.800 | increment=+0.080 [-0.100,+0.250] p=0.420 | matched: surf=0.588 probe=0.588
+  L25 surface=0.720 probe=0.800 joint=0.820 | increment=+0.100 [-0.040,+0.250] p=0.187 | matched: surf=0.588 probe=0.588
+  L26 surface=0.720 probe=0.720 joint=0.720 | increment=+0.000 [-0.160,+0.170] p=1.016 | matched: surf=0.588 probe=0.529
+  L27 surface=0.720 probe=0.700 joint=0.700 | increment=-0.020 [-0.190,+0.170] p=0.893 | matched: surf=0.588 probe=0.529
+  L28 surface=0.720 probe=0.740 joint=0.720 | increment=+0.000 [-0.170,+0.160] p=1.002 | matched: surf=0.588 probe=0.588
+  L29 surface=0.720 probe=0.680 joint=0.660 | increment=-0.060 [-0.230,+0.110] p=0.566 | matched: surf=0.588 probe=0.529
+  L30 surface=0.720 probe=0.640 joint=0.640 | increment=-0.080 [-0.220,+0.070] p=0.325 | matched: surf=0.588 probe=0.412
+  L31 surface=0.720 probe=0.660 joint=0.660 | increment=-0.060 [-0.200,+0.080] p=0.467 | matched: surf=0.588 probe=0.529
+  L32 surface=0.720 probe=0.640 joint=0.640 | increment=-0.080 [-0.250,+0.090] p=0.389 | matched: surf=0.588 probe=0.471
+  L33 surface=0.720 probe=0.600 joint=0.580 | increment=-0.140 [-0.320,+0.040] p=0.145 | matched: surf=0.588 probe=0.412
+  L34 surface=0.720 probe=0.560 joint=0.600 | increment=-0.120 [-0.290,+0.060] p=0.201 | matched: surf=0.588 probe=0.353
+  L35 surface=0.720 probe=0.560 joint=0.600 | increment=-0.120 [-0.300,+0.060] p=0.237 | matched: surf=0.588 probe=0.412
+  L36 surface=0.720 probe=0.640 joint=0.620 | increment=-0.100 [-0.260,+0.060] p=0.251 | matched: surf=0.588 probe=0.471
+  L37 surface=0.720 probe=0.620 joint=0.620 | increment=-0.100 [-0.280,+0.080] p=0.280 | matched: surf=0.588 probe=0.471
+  L38 surface=0.720 probe=0.680 joint=0.700 | increment=-0.020 [-0.210,+0.170] p=0.877 | matched: surf=0.588 probe=0.471
+  L39 surface=0.720 probe=0.640 joint=0.660 | increment=-0.060 [-0.240,+0.120] p=0.555 | matched: surf=0.588 probe=0.471
+  L40 surface=0.720 probe=0.700 joint=0.700 | increment=-0.020 [-0.190,+0.160] p=0.893 | matched: surf=0.588 probe=0.529
+  L41 surface=0.720 probe=0.660 joint=0.660 | increment=-0.060 [-0.250,+0.130] p=0.581 | matched: surf=0.588 probe=0.529
+  L42 surface=0.720 probe=0.680 joint=0.680 | increment=-0.040 [-0.200,+0.130] p=0.717 | matched: surf=0.588 probe=0.529
+  L43 surface=0.720 probe=0.720 joint=0.700 | increment=-0.020 [-0.180,+0.150] p=0.879 | matched: surf=0.588 probe=0.471
+  L44 surface=0.720 probe=0.720 joint=0.740 | increment=+0.020 [-0.120,+0.180] p=0.873 | matched: surf=0.588 probe=0.529
+  L45 surface=0.720 probe=0.760 joint=0.760 | increment=+0.040 [-0.120,+0.210] p=0.659 | matched: surf=0.588 probe=0.647
+  L46 surface=0.720 probe=0.800 joint=0.800 | increment=+0.080 [-0.090,+0.250] p=0.373 | matched: surf=0.588 probe=0.765
+  L47 surface=0.720 probe=0.760 joint=0.740 | increment=+0.020 [-0.150,+0.200] p=0.857 | matched: surf=0.588 probe=0.647
+
+best increment over surface: L22 +0.100 [-0.050,+0.260] p=0.2427
+best probe-alone: L22 paired=0.820 [0.720,0.920]  (surface reference 0.720)
+-> runs/bridge2026/stage4/e2_incremental_test_12b.csv
+=============== 6/9  4B causal (test) ===============
+split=test items=100 families=25 layer=29 span=read_to_end
+Loading weights:   0%|          | 0/883 [00:00<?, ?it/s]Loading weights:   2%|▏         | 18/883 [00:00<00:04, 179.56it/s]Loading weights:   8%|▊         | 70/883 [00:00<00:02, 378.43it/s]Loading weights:  15%|█▍        | 131/883 [00:00<00:01, 478.39it/s]Loading weights:  21%|██        | 185/883 [00:00<00:01, 500.99it/s]Loading weights:  27%|██▋       | 238/883 [00:00<00:01, 501.60it/s]Loading weights:  33%|███▎      | 290/883 [00:00<00:01, 505.70it/s]Loading weights:  39%|███▊      | 342/883 [00:00<00:01, 507.73it/s]Loading weights:  45%|████▍     | 395/883 [00:00<00:00, 505.74it/s]Loading weights:  57%|█████▋    | 503/883 [00:00<00:00, 674.87it/s]Loading weights:  74%|███████▍  | 657/883 [00:01<00:00, 934.09it/s]Loading weights:  90%|████████▉ | 793/883 [00:01<00:00, 956.37it/s]Loading weights: 100%|██████████| 883/883 [00:01<00:00, 728.92it/s]
+donor coverage: 100% of renderings
+  clean: paired_acc=0.600 AUROC=0.524 FA=0.700
+  SAE arms on features [966, 860, 241, 794, 324, 441, 1030, 9393, 8159, 249, 495, 3664, 11749, 1685, 641, 206] (random-matched: [4255, 2667, 13344, 1145, 4758, 753, 1423, 785, 2394, 171, 5726, 14254, 1874, 2579, 1089, 1052])
+  dense_axis(a=-2)             d_target=+0.164 d_nontarget=+0.156 gap=+0.008 paired=0.600 FA=0.700
+  dense_axis(a=-1)             d_target=+0.066 d_nontarget=+0.062 gap=+0.004 paired=0.600 FA=0.700
+  dense_axis(a=-0.5)           d_target=+0.029 d_nontarget=+0.027 gap=+0.002 paired=0.600 FA=0.700
+  dense_axis(a=+0)             d_target=+0.000 d_nontarget=+0.000 gap=+0.000 paired=0.600 FA=0.700
+  dense_axis(a=+0.5)           d_target=-0.022 d_nontarget=-0.020 gap=-0.002 paired=0.600 FA=0.740
+  dense_axis(a=+1)             d_target=-0.037 d_nontarget=-0.032 gap=-0.004 paired=0.600 FA=0.740
+  dense_axis(a=+2)             d_target=-0.052 d_nontarget=-0.044 gap=-0.009 paired=0.600 FA=0.740
+  dense_axis(a=+2, read_pos only) d_target=+0.000 d_nontarget=+0.001 gap=-0.000 paired=0.600 FA=0.720
+  random_dir(a=-1)             d_target=+0.134 d_nontarget=+0.110 gap=+0.024 paired=0.600 FA=0.740
+  repetition_axis(a=-1)        d_target=-0.076 d_nontarget=-0.075 gap=-0.001 paired=0.600 FA=0.720
+  clarification_axis(a=-1)     d_target=+0.123 d_nontarget=+0.130 gap=-0.006 paired=0.600 FA=0.740
+  random_dir(a=+1)             d_target=-0.072 d_nontarget=-0.064 gap=-0.007 paired=0.600 FA=0.700
+  repetition_axis(a=+1)        d_target=+0.064 d_nontarget=+0.063 gap=+0.001 paired=0.600 FA=0.700
+  clarification_axis(a=+1)     d_target=-0.102 d_nontarget=-0.107 gap=+0.005 paired=0.600 FA=0.680
+  component_swap(donor)        d_target=+0.058 d_nontarget=+0.059 gap=-0.001 paired=0.600 FA=0.700
+  full_patch(donor)            d_target=-0.000 d_nontarget=+0.000 gap=-0.000 paired=0.600 FA=0.700
+  sae_recon                    d_target=-0.919 d_nontarget=-0.894 gap=-0.025 paired=0.580 FA=0.580
+  sae_ablate                   d_target=-0.102 d_nontarget=-0.110 gap=+0.008 paired=0.600 FA=0.720
+  sae_donor                    d_target=+0.260 d_nontarget=+0.285 gap=-0.025 paired=0.600 FA=0.720
+  sae_random_ablate            d_target=+0.013 d_nontarget=+0.005 gap=+0.008 paired=0.600 FA=0.700
+  sae_random_donor             d_target=-0.064 d_nontarget=-0.049 gap=-0.014 paired=0.600 FA=0.700
+
+-> runs/bridge2026/stage4/e3_causal_test.csv
+-> runs/bridge2026/stage4/e3_causal_test_per_item.csv
+=============== 7/9  12B causal (test) ===============
+split=test items=100 families=25 layer=31 span=prompt_all
+Loading weights:   0%|          | 0/1065 [00:00<?, ?it/s]Loading weights:   0%|          | 1/1065 [00:00<02:22,  7.45it/s]Loading weights:   3%|▎         | 30/1065 [00:00<00:06, 149.92it/s]Loading weights:   5%|▌         | 56/1065 [00:00<00:05, 189.36it/s]Loading weights:   8%|▊         | 82/1065 [00:00<00:04, 205.52it/s]Loading weights:  10%|█         | 108/1065 [00:00<00:04, 216.73it/s]Loading weights:  13%|█▎        | 134/1065 [00:00<00:04, 229.65it/s]Loading weights:  15%|█▌        | 161/1065 [00:00<00:03, 233.34it/s]Loading weights:  18%|█▊        | 187/1065 [00:00<00:03, 237.97it/s]Loading weights:  20%|██        | 213/1065 [00:00<00:03, 240.75it/s]Loading weights:  22%|██▏       | 238/1065 [00:01<00:03, 243.05it/s]Loading weights:  25%|██▍       | 265/1065 [00:01<00:03, 250.75it/s]Loading weights:  27%|██▋       | 291/1065 [00:01<00:03, 248.47it/s]Loading weights:  30%|██▉       | 319/1065 [00:01<00:02, 257.64it/s]Loading weights:  32%|███▏      | 345/1065 [00:01<00:02, 250.06it/s]Loading weights:  35%|███▍      | 371/1065 [00:01<00:02, 248.52it/s]Loading weights:  37%|███▋      | 396/1065 [00:01<00:02, 245.01it/s]Loading weights:  40%|███▉      | 421/1065 [00:01<00:02, 240.98it/s]Loading weights:  42%|████▏     | 447/1065 [00:01<00:02, 242.11it/s]Loading weights:  44%|████▍     | 473/1065 [00:02<00:02, 238.30it/s]Loading weights:  47%|████▋     | 499/1065 [00:02<00:02, 235.58it/s]Loading weights:  49%|████▉     | 525/1065 [00:02<00:02, 234.62it/s]Loading weights:  52%|█████▏    | 551/1065 [00:02<00:02, 233.32it/s]Loading weights:  54%|█████▍    | 577/1065 [00:02<00:02, 235.52it/s]Loading weights:  57%|█████▋    | 603/1065 [00:02<00:01, 239.41it/s]Loading weights:  66%|██████▋   | 707/1065 [00:02<00:00, 465.79it/s]Loading weights:  92%|█████████▏| 975/1065 [00:02<00:00, 1101.44it/s]Loading weights: 100%|██████████| 1065/1065 [00:02<00:00, 375.65it/s]
+donor coverage: 100% of renderings
+  clean: paired_acc=0.580 AUROC=0.546 FA=0.920
+  SAE arms on features [1422, 337, 402, 6647] (random-matched: [3519, 15897, 1177, 10613])
+  dense_axis(a=-2)             d_target=-0.348 d_nontarget=-0.341 gap=-0.007 paired=0.540 FA=0.920
+  dense_axis(a=-1)             d_target=+0.808 d_nontarget=+0.748 gap=+0.060 paired=0.560 FA=0.920
+  dense_axis(a=-0.5)           d_target=+0.397 d_nontarget=+0.372 gap=+0.025 paired=0.580 FA=0.920
+  dense_axis(a=+0)             d_target=+0.000 d_nontarget=+0.000 gap=+0.000 paired=0.580 FA=0.920
+  dense_axis(a=+0.5)           d_target=-0.410 d_nontarget=-0.391 gap=-0.020 paired=0.640 FA=0.920
+  dense_axis(a=+1)             d_target=-0.815 d_nontarget=-0.781 gap=-0.034 paired=0.640 FA=0.920
+  dense_axis(a=+2)             d_target=-1.377 d_nontarget=-1.334 gap=-0.043 paired=0.640 FA=0.920
+  dense_axis(a=+2, read_pos only) d_target=-0.002 d_nontarget=-0.001 gap=-0.000 paired=0.580 FA=0.920
+  random_dir(a=-1)             d_target=-0.917 d_nontarget=-0.805 gap=-0.111 paired=0.560 FA=0.920
+  repetition_axis(a=-1)        d_target=+0.194 d_nontarget=+0.166 gap=+0.028 paired=0.580 FA=0.920
+  random_dir(a=+1)             d_target=+0.234 d_nontarget=+0.164 gap=+0.070 paired=0.640 FA=0.920
+  repetition_axis(a=+1)        d_target=-0.004 d_nontarget=-0.019 gap=+0.015 paired=0.600 FA=0.920
+  component_swap(donor)        d_target=-0.137 d_nontarget=-0.288 gap=+0.151 paired=0.560 FA=0.920
+  full_patch(donor)            d_target=-0.000 d_nontarget=+0.000 gap=-0.000 paired=0.580 FA=0.920
+  sae_recon                    d_target=-2.464 d_nontarget=-2.336 gap=-0.128 paired=0.580 FA=0.920
+  sae_ablate                   d_target=-0.028 d_nontarget=-0.031 gap=+0.003 paired=0.580 FA=0.920
+  sae_donor                    d_target=+0.572 d_nontarget=+0.534 gap=+0.039 paired=0.600 FA=0.920
+  sae_random_ablate            d_target=-0.017 d_nontarget=-0.017 gap=-0.000 paired=0.580 FA=0.920
+  sae_random_donor             d_target=+0.184 d_nontarget=+0.175 gap=+0.009 paired=0.600 FA=0.920
+
+-> runs/bridge2026/stage4/e3_causal_test_12b.csv
+-> runs/bridge2026/stage4/e3_causal_test_12b_per_item.csv
+=============== 8/9  external test (CCPE-M, 4B + 12B) ===============
+CCPE-M: 100 annotated segments, labels {'resolved': 97, 'unresolved': 3}
+decidable: 100  rep>=5: 50
+Loading weights:   0%|          | 0/883 [00:00<?, ?it/s]Loading weights:   3%|▎         | 23/883 [00:00<00:03, 227.63it/s]Loading weights:   8%|▊         | 68/883 [00:00<00:02, 352.50it/s]Loading weights:  14%|█▎        | 121/883 [00:00<00:01, 427.41it/s]Loading weights:  19%|█▉        | 172/883 [00:00<00:01, 453.85it/s]Loading weights:  25%|██▌       | 224/883 [00:00<00:01, 448.13it/s]Loading weights:  31%|███▏      | 278/883 [00:00<00:01, 468.67it/s]Loading weights:  37%|███▋      | 329/883 [00:00<00:01, 474.82it/s]Loading weights:  43%|████▎     | 380/883 [00:00<00:01, 480.85it/s]Loading weights:  49%|████▉     | 432/883 [00:00<00:00, 487.97it/s]Loading weights:  74%|███████▎  | 651/883 [00:01<00:00, 996.54it/s]Loading weights: 100%|██████████| 883/883 [00:01<00:00, 784.56it/s]
+  original               FA=0.856 [0.784,0.919]  FA(rep)=0.816  FA(norep)=0.896  mean_score=+5.147
+  prompt_only            FA=0.948 [0.898,0.990]  FA(rep)=0.980  FA(norep)=0.917  mean_score=+6.946
+  dense_axis(a=+2)       FA=0.856 [0.784,0.919]  FA(rep)=0.816  FA(norep)=0.896  mean_score=+4.848
+-> runs/bridge2026/stage4/e4_external_4b.csv
+CCPE-M: 100 annotated segments, labels {'resolved': 97, 'unresolved': 3}
+decidable: 100  rep>=5: 50
+Loading weights:   0%|          | 0/1065 [00:00<?, ?it/s]Loading weights:   0%|          | 1/1065 [00:00<02:24,  7.35it/s]Loading weights:   3%|▎         | 31/1065 [00:00<00:06, 149.97it/s]Loading weights:   5%|▌         | 57/1065 [00:00<00:05, 191.42it/s]Loading weights:   8%|▊         | 83/1065 [00:00<00:04, 210.62it/s]Loading weights:  10%|█         | 109/1065 [00:00<00:04, 220.44it/s]Loading weights:  13%|█▎        | 135/1065 [00:00<00:04, 227.55it/s]Loading weights:  15%|█▌        | 161/1065 [00:00<00:03, 230.65it/s]Loading weights:  18%|█▊        | 187/1065 [00:00<00:03, 233.75it/s]Loading weights:  20%|██        | 213/1065 [00:01<00:03, 234.70it/s]Loading weights:  22%|██▏       | 239/1065 [00:01<00:03, 233.39it/s]Loading weights:  25%|██▍       | 265/1065 [00:01<00:03, 233.22it/s]Loading weights:  27%|██▋       | 291/1065 [00:01<00:03, 232.97it/s]Loading weights:  30%|██▉       | 316/1065 [00:01<00:03, 234.69it/s]Loading weights:  32%|███▏      | 342/1065 [00:01<00:03, 234.28it/s]Loading weights:  35%|███▍      | 368/1065 [00:01<00:02, 235.97it/s]Loading weights:  37%|███▋      | 394/1065 [00:01<00:02, 232.20it/s]Loading weights:  39%|███▉      | 419/1065 [00:01<00:02, 235.03it/s]Loading weights:  42%|████▏     | 445/1065 [00:01<00:02, 239.27it/s]Loading weights:  44%|████▍     | 469/1065 [00:02<00:02, 238.97it/s]Loading weights:  46%|████▋     | 493/1065 [00:02<00:02, 231.25it/s]Loading weights:  49%|████▊     | 517/1065 [00:02<00:02, 233.14it/s]Loading weights:  51%|█████     | 541/1065 [00:02<00:02, 230.46it/s]Loading weights:  53%|█████▎    | 565/1065 [00:02<00:02, 223.32it/s]Loading weights:  55%|█████▌    | 590/1065 [00:02<00:02, 223.83it/s]Loading weights:  58%|█████▊    | 616/1065 [00:02<00:01, 228.51it/s]Loading weights:  82%|████████▏ | 868/1065 [00:02<00:00, 874.39it/s]Loading weights: 100%|██████████| 1065/1065 [00:02<00:00, 365.45it/s]
+  original               FA=1.000 [1.000,1.000]  FA(rep)=1.000  FA(norep)=1.000  mean_score=+10.397
+  prompt_only            FA=1.000 [1.000,1.000]  FA(rep)=1.000  FA(norep)=1.000  mean_score=+10.147
+  dense_axis(a=+2)       FA=1.000 [1.000,1.000]  FA(rep)=1.000  FA(norep)=1.000  mean_score=+8.736
+-> runs/bridge2026/stage4/e4_external_12b.csv
+=============== 9/9  free-form responses (test) ===============
+free-form: 100 items / 25 families, layer 29
+Loading weights:   0%|          | 0/883 [00:00<?, ?it/s]Loading weights:   2%|▏         | 17/883 [00:00<00:05, 161.01it/s]Loading weights:   8%|▊         | 69/883 [00:00<00:02, 365.65it/s]Loading weights:  14%|█▎        | 120/883 [00:00<00:01, 424.15it/s]Loading weights:  18%|█▊        | 163/883 [00:00<00:01, 425.28it/s]Loading weights:  24%|██▍       | 212/883 [00:00<00:01, 443.96it/s]Loading weights:  30%|██▉       | 263/883 [00:00<00:01, 449.04it/s]Loading weights:  37%|███▋      | 323/883 [00:00<00:01, 494.53it/s]Loading weights:  42%|████▏     | 373/883 [00:00<00:01, 484.25it/s]Loading weights:  48%|████▊     | 427/883 [00:00<00:00, 492.95it/s]Loading weights:  73%|███████▎  | 647/883 [00:01<00:00, 998.87it/s]Loading weights: 100%|██████████| 883/883 [00:01<00:00, 785.02it/s]
+  original       n=100 mean_q=0.71 multiQ=0.08 cog_inf=0.000 words=51
+  prompt_only    n=100 mean_q=0.83 multiQ=0.05 cog_inf=0.000 words=40
+  dense_axis     n=100 mean_q=0.74 multiQ=0.09 cog_inf=0.000 words=51
+  sae_ablate     n=100 mean_q=0.72 multiQ=0.10 cog_inf=0.000 words=51
+-> runs/bridge2026/stage4/e4_freeform_test.csv
+=============== DONE ===============

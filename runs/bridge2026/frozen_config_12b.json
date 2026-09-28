@@ -1,0 +1,86 @@
+{
+  "frozen_at": "2026-09-27T02:33:07.367170+00:00",
+  "model": "google/gemma-3-12b-it",
+  "layer": 31,
+  "hook_site": "resid_post(L) = output of model.model.language_model.layers[L], pre final-norm",
+  "read_position": "last token of the final user turn's own text (shared prefix of PURE/GEN/READOUT)",
+  "sd_train": 2434.11328125,
+  "alphas": [
+    -2.0,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "control_alphas": [
+    -1.0,
+    1.0
+  ],
+  "component_swap": true,
+  "full_patch": true,
+  "selection_metric": "paired_acc",
+  "selected_on": "dev",
+  "dense_dev_at_selected_layer": {
+    "auroc": 0.5536,
+    "paired_acc": 0.6,
+    "perm_p": 0.1904047976011994,
+    "cos_unres_rep": 0.2451765090227127
+  },
+  "dense_best_layer_overall": {
+    "layer": 24,
+    "auroc": 0.5392,
+    "paired_acc": 0.64
+  },
+  "tie_break": "sae paired_acc -> sae auroc -> dense paired_acc -> dense auroc",
+  "sae": {
+    "width": "16k",
+    "l0": "medium",
+    "k": 4,
+    "features": [
+      1422,
+      337,
+      402,
+      6647
+    ],
+    "dev": {
+      "auroc": 0.5768,
+      "paired_acc": 0.7
+    },
+    "feature_notes": [
+      {
+        "feature": "1422",
+        "train_smd": "0.2395334094762802",
+        "train_auroc": "0.4564795918367347",
+        "train_act_rate": "0.20357142857142857"
+      },
+      {
+        "feature": "337",
+        "train_smd": "0.22579270601272583",
+        "train_auroc": "0.44456632653061223",
+        "train_act_rate": "0.2857142857142857"
+      },
+      {
+        "feature": "402",
+        "train_smd": "0.19875416159629822",
+        "train_auroc": "0.44834183673469385",
+        "train_act_rate": "0.9785714285714285"
+      },
+      {
+        "feature": "6647",
+        "train_smd": "0.17233966290950775",
+        "train_auroc": "0.4617857142857143",
+        "train_act_rate": "0.21785714285714286"
+      }
+    ],
+    "freeform_amplify": 0.0
+  },
+  "freeform_alpha": 2.0,
+  "evidence_hash": "57b7c060bbcabb30a567a0d265d23f87ddd9662002caef327e985a7dc362f992",
+  "position_mode": "prompt_all",
+  "position_mode_rationale": "E0.11 reachability for 12B: read_pos is inert at every candidate layer (|d(A-B)| 0.0002-0.0140). At the selected layer 31, read_to_end is marginal (0.0452, below the 0.05 threshold) while prompt_all is reachable (0.0743). prompt_all was chosen to give the intervention maximum power, which is the conservative choice when the expected outcome is a null. This differs from the 4B span (read_to_end) and is reported as such.",
+  "report_read_pos_arm": true,
+  "reachability_evidence": "runs/bridge2026/stage3/e0_reachability_12b.csv",
+  "e0_note": "E0.5 flagged at 12B: layer 12's SAE has L0 ratio 0.775, just below the pre-set 0.8 band (cos 0.9966). The SELECTED layer 31 is inside the band (ratio 1.015, cos 0.9920). Layer 12 is not used."
+}

@@ -1,0 +1,77 @@
+{
+  "family_id": "appointment_020",
+  "domain": "appointment",
+  "task_goal": "book a Saturday test drive at Brookmere Motors and settle which car is made ready and how the holding deposit is paid",
+  "n_turns": 5,
+  "tail_anchor": "I'll set off straight after breakfast.",
+  "notes": "The two rep cells share four turns and differ by one phrase in turn 4 ('that one' / 'the estate'), where the two cars sit at different sites so the choice fixes where the drive starts. The two norep cells differ only in whether the five hundred goes on the card or in notes, against a desk that takes no cash.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "The silver estate is here at Brookmere, the blue hatchback is at our Cawley Road yard", "role": "the two live candidates, sitting at two different sites"},
+        {"turn_index": 3, "quote": "which one you want decides where Ravi meets you", "role": "the referent has to be fixed before the next step"},
+        {"turn_index": 4, "quote": "Put that one down for the ten o'clock", "role": "referring expression that picks neither of the two out"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Afternoon. I saw a couple of cars on your forecourt at Brookmere Motors and I'd like to book a drive. I'm after a manual gearbox only, nothing automatic at all."},
+        {"speaker": "assistant", "text": "Manual only, nothing automatic at all, noted. Ravi takes people out on Saturdays, either at ten or at two."},
+        {"speaker": "user", "text": "Saturday at ten, please. And I'll say it plainly, I'm after a manual gearbox only, nothing automatic at all."},
+        {"speaker": "assistant", "text": "Noted twice over. Both cars you looked at are free on Saturday. The silver estate is here at Brookmere, the blue hatchback is at our Cawley Road yard, and which one you want decides where Ravi meets you."},
+        {"speaker": "user", "text": "Put that one down for the ten o'clock, then. I'll set off straight after breakfast."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Manual only, nothing automatic at all, noted.", "role": "the preference has already been taken and written down"},
+        {"turn_index": 2, "quote": "And I'll say it plainly, I'm after a manual gearbox only, nothing automatic at all.", "role": "restatement for emphasis, not a sign of trouble"},
+        {"turn_index": 4, "quote": "Put the estate down for the ten o'clock", "role": "names the car, which fixes the site as well"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Afternoon. I saw a couple of cars on your forecourt at Brookmere Motors and I'd like to book a drive. I'm after a manual gearbox only, nothing automatic at all."},
+        {"speaker": "assistant", "text": "Manual only, nothing automatic at all, noted. Ravi takes people out on Saturdays, either at ten or at two."},
+        {"speaker": "user", "text": "Saturday at ten, please. And I'll say it plainly, I'm after a manual gearbox only, nothing automatic at all."},
+        {"speaker": "assistant", "text": "Noted twice over. Both cars you looked at are free on Saturday. The silver estate is here at Brookmere, the blue hatchback is at our Cawley Road yard, and which one you want decides where Ravi meets you."},
+        {"speaker": "user", "text": "Put the estate down for the ten o'clock, then. I'll set off straight after breakfast."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "the five hundred deposit has to go on a card that day, we take no cash at the desk", "role": "the deposit can only be paid by card"},
+        {"turn_index": 2, "quote": "I'll bring the five hundred in notes and hand it over after the drive, because my card will not let me spend more than two hundred in a day", "role": "notes are the only thing on offer and the card cannot cover the amount"},
+        {"turn_index": 3, "quote": "Ten o'clock on Saturday for you, then.", "role": "assistant books it without reconciling how the deposit gets paid"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Afternoon. I saw the silver estate on your forecourt at Brookmere Motors and I'd like to book a drive in it."},
+        {"speaker": "assistant", "text": "Ravi takes people out on Saturdays, at ten or at two. If you want the estate held after the drive, the five hundred deposit has to go on a card that day, we take no cash at the desk."},
+        {"speaker": "user", "text": "Saturday at ten, please. I'll bring the five hundred in notes and hand it over after the drive, because my card will not let me spend more than two hundred in a day."},
+        {"speaker": "assistant", "text": "Ten o'clock on Saturday for you, then. Ravi will have the trade plates on and the keys ready when you arrive."},
+        {"speaker": "user", "text": "That's good of you, thanks. I'll set off straight after breakfast."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "I'll put the five hundred on the card straight after the drive, because my card will happily let me spend up to a thousand in a day", "role": "the deposit is paid the way the desk requires"},
+        {"turn_index": 3, "quote": "Ten o'clock on Saturday for you, then.", "role": "closes the only request in the dialogue"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Afternoon. I saw the silver estate on your forecourt at Brookmere Motors and I'd like to book a drive in it."},
+        {"speaker": "assistant", "text": "Ravi takes people out on Saturdays, at ten or at two. If you want the estate held after the drive, the five hundred deposit has to go on a card that day, we take no cash at the desk."},
+        {"speaker": "user", "text": "Saturday at ten, please. I'll put the five hundred on the card straight after the drive, because my card will happily let me spend up to a thousand in a day."},
+        {"speaker": "assistant", "text": "Ten o'clock on Saturday for you, then. Ravi will have the trade plates on and the keys ready when you arrive."},
+        {"speaker": "user", "text": "That's good of you, thanks. I'll set off straight after breakfast."}
+      ]
+    }
+  }
+}

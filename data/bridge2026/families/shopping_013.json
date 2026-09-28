@@ -1,0 +1,218 @@
+{
+  "family_id": "shopping_013",
+  "domain": "shopping",
+  "task_goal": "cancel a fridge-freezer order from Oakhurst Appliances and get the money back",
+  "n_turns": 7,
+  "tail_anchor": "My number is on the file if anything crops up.",
+  "notes": "The rep pair is identical apart from the last clause of turn 4: the user names the Oakhurst gift card or the debit card ending 7741 as the thing the whole order was paid with, against the card the account shows in turn 1, which is what decides where the money goes. The norep pair differs only in whether turn 3 answers how long the refund takes to show.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "A refund goes back by whatever method paid for the order, and this one shows as paid on the debit card ending 7741.",
+          "role": "first side of the conflict"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I paid the whole thing on the Oakhurst gift card, so that is where it needs to land.",
+          "role": "second side of the conflict, with the consequence it is meant to have"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Right, I will push the refund through tonight.",
+          "role": "assistant proceeds without reconciling the two accounts of how it was paid"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I want to cancel order OA-5513, the fridge-freezer, after the van failed to turn up twice. I do not want it rebooked, I want it cancelled outright."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That is cancelled on my side, with no rebooking. A refund goes back by whatever method paid for the order, and this one shows as paid on the debit card ending 7741."
+        },
+        {
+          "speaker": "user",
+          "text": "Two missed delivery days cost me a day of work each, so you can see why I have had enough."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I do understand. Once the refund is authorised the money leaves us the same evening."
+        },
+        {
+          "speaker": "user",
+          "text": "As I said, I do not want it rebooked, I want it cancelled outright. I paid the whole thing on the Oakhurst gift card, so that is where it needs to land."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Right, I will push the refund through tonight."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. My number is on the file if anything crops up."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "That is cancelled on my side, with no rebooking.",
+          "role": "the request is granted before it is restated"
+        },
+        {
+          "turn_index": 4,
+          "quote": "As I said, I do not want it rebooked, I want it cancelled outright.",
+          "role": "restated for emphasis, nothing left open"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I paid the whole thing on the debit card ending 7741",
+          "role": "agrees with what the account shows in turn 1"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I want to cancel order OA-5513, the fridge-freezer, after the van failed to turn up twice. I do not want it rebooked, I want it cancelled outright."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That is cancelled on my side, with no rebooking. A refund goes back by whatever method paid for the order, and this one shows as paid on the debit card ending 7741."
+        },
+        {
+          "speaker": "user",
+          "text": "Two missed delivery days cost me a day of work each, so you can see why I have had enough."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I do understand. Once the refund is authorised the money leaves us the same evening."
+        },
+        {
+          "speaker": "user",
+          "text": "As I said, I do not want it rebooked, I want it cancelled outright. I paid the whole thing on the debit card ending 7741, so that is where it needs to land."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Right, I will push the refund through tonight."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. My number is on the file if anything crops up."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "I would like to know how long it takes to show on the statement once you have sent it",
+          "role": "request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Noted. The old appliance collection that was booked for the same day has come off the order as well.",
+          "role": "assistant turn that answers something else instead"
+        },
+        {
+          "turn_index": 5,
+          "quote": "I have put a note on the account for the depot manager.",
+          "role": "later assistant turn that still does not answer"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I want to cancel order OA-5513, the fridge-freezer, after the van failed to turn up twice and nobody rang to say why."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Cancelled here and now, and I have logged the two failed attempts. Anything already charged goes back to the card ending 7741."
+        },
+        {
+          "speaker": "user",
+          "text": "Thank you. I would like to know how long it takes to show on the statement once you have sent it."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted. The old appliance collection that was booked for the same day has come off the order as well."
+        },
+        {
+          "speaker": "user",
+          "text": "That is just as well, since there is nothing here to collect. The two missed days cost me a day of work each."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I am sorry about that. I have put a note on the account for the depot manager."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. My number is on the file if anything crops up."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "It shows on the statement three to five working days after we send it.",
+          "role": "discharges the only open request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Read the order number back to me so I can close the file.",
+          "role": "assistant requests the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "OA-5513, that is right.",
+          "role": "requested read-back, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I want to cancel order OA-5513, the fridge-freezer, after the van failed to turn up twice and nobody rang to say why."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Cancelled here and now, and I have logged the two failed attempts. Anything already charged goes back to the card ending 7741."
+        },
+        {
+          "speaker": "user",
+          "text": "Thank you. I would like to know how long it takes to show on the statement once you have sent it."
+        },
+        {
+          "speaker": "assistant",
+          "text": "It shows on the statement three to five working days after we send it. Read the order number back to me so I can close the file."
+        },
+        {
+          "speaker": "user",
+          "text": "OA-5513, that is right. The two missed days cost me a day of work each."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I am sorry about that. I have put a note on the account for the depot manager."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. My number is on the file if anything crops up."
+        }
+      ]
+    }
+  }
+}

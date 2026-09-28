@@ -1,0 +1,181 @@
+{
+  "family_id": "appointment_015",
+  "domain": "appointment",
+  "task_goal": "book a laptop in for a new screen at Fenwick Computers and settle the turnaround",
+  "n_turns": 5,
+  "tail_anchor": "I'm around most of the week anyway.",
+  "notes": "rep_unres and rep_res differ by two words in turn 2 ('that week' versus 'the week after'), which is what puts the presentation before or after the machine comes back. Both rep cells carry the same six-token read-back the counter asked for. norep_unres and norep_res differ only in the first sentence of turn 3, which either repeats the booking or answers the warranty request.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "a screen is a three-working-day job, so it would be back with you on the Monday",
+          "role": "the machine is away until the Monday"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I am presenting off that laptop on the Friday of that week, and it is the only machine I have",
+          "role": "the conflicting fact and why it blocks the job"
+        },
+        {
+          "turn_index": 3,
+          "quote": "The ticket is raised under Ola.",
+          "role": "assistant raises the ticket without reconciling the clash"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I would like to book the laptop in at Fenwick Computers for a new screen."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Ola can take it in on Wednesday the third, and a screen is a three-working-day job, so it would be back with you on the Monday. Can you read the day and the turnaround back to me before I raise the ticket?"
+        },
+        {
+          "speaker": "user",
+          "text": "In on Wednesday the third, and a three-working-day job, so back on the Monday. I am presenting off that laptop on the Friday of that week, and it is the only machine I have."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The ticket is raised under Ola. We will ring the 0 7 9 number on the account as soon as it is boxed up and ready."
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, that number is still the one. I'm around most of the week anyway."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Can you read the day and the turnaround back to me before I raise the ticket?",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 2,
+          "quote": "In on Wednesday the third, and a three-working-day job, so back on the Monday.",
+          "role": "the requested read-back"
+        },
+        {
+          "turn_index": 2,
+          "quote": "on the Friday of the week after",
+          "role": "falls after the machine comes back, so nothing is in conflict"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I would like to book the laptop in at Fenwick Computers for a new screen."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Ola can take it in on Wednesday the third, and a screen is a three-working-day job, so it would be back with you on the Monday. Can you read the day and the turnaround back to me before I raise the ticket?"
+        },
+        {
+          "speaker": "user",
+          "text": "In on Wednesday the third, and a three-working-day job, so back on the Monday. I am presenting off that laptop on the Friday of the week after, and it is the only machine I have."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The ticket is raised under Ola. We will ring the 0 7 9 number on the account as soon as it is boxed up and ready."
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, that number is still the one. I'm around most of the week anyway."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "I need to know whether a new screen leaves the warranty intact",
+          "role": "request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Wednesday the third is on the board for Ola.",
+          "role": "assistant turn that restates the booking instead of answering"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I would like to book the laptop in at Fenwick Computers for a new screen, and nothing on the drive is to be touched."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Ola will not go near the drive for a screen job. Does Wednesday the third suit, with collection on the Monday after?"
+        },
+        {
+          "speaker": "user",
+          "text": "Put it down for the third. I need to know whether a new screen leaves the warranty intact."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Wednesday the third is on the board for Ola. Bring the charger in with it, because he tests on a full battery."
+        },
+        {
+          "speaker": "user",
+          "text": "The charger will be in the bag, and I will say it again, leave the drive alone. I'm around most of the week anyway."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Ola will not go near the drive for a screen job.",
+          "role": "the drive instruction is accepted"
+        },
+        {
+          "turn_index": 3,
+          "quote": "A new screen leaves the warranty intact.",
+          "role": "discharges the request in turn 2"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I will say it again, leave the drive alone",
+          "role": "restatement for emphasis of an instruction already accepted"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I would like to book the laptop in at Fenwick Computers for a new screen, and nothing on the drive is to be touched."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Ola will not go near the drive for a screen job. Does Wednesday the third suit, with collection on the Monday after?"
+        },
+        {
+          "speaker": "user",
+          "text": "Put it down for the third. I need to know whether a new screen leaves the warranty intact."
+        },
+        {
+          "speaker": "assistant",
+          "text": "A new screen leaves the warranty intact. Bring the charger in with it, because he tests on a full battery."
+        },
+        {
+          "speaker": "user",
+          "text": "The charger will be in the bag, and I will say it again, leave the drive alone. I'm around most of the week anyway."
+        }
+      ]
+    }
+  }
+}

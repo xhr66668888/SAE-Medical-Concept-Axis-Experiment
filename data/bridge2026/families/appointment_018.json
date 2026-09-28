@@ -1,0 +1,76 @@
+{
+  "family_id": "appointment_018",
+  "domain": "appointment",
+  "task_goal": "book Marek from Carraway Locks to change the locks on a newly bought flat on completion day",
+  "n_turns": 5,
+  "tail_anchor": "The buzzer for number nine is the top one.",
+  "notes": "The two rep cells differ by one clause in turn 2, where the estate agent either never releases the keys before four or always releases them before nine, against a locksmith who cannot start until the keys are in hand at eleven. The two norep cells differ only in whether turn 3 answers the single-key question before moving on to the hall.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "He can't take the old cylinder out until the keys are in your hand", "role": "the locksmith cannot start without the keys"},
+        {"turn_index": 2, "quote": "The agent never releases the keys before four on completion day", "role": "the keys cannot be in hand at the booked eleven o'clock"},
+        {"turn_index": 3, "quote": "Eleven o'clock for Marek, then.", "role": "assistant books the morning slot without reconciling the two facts"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, I need a locksmith to change the locks on a flat I'm buying. Completion is on Friday the third."},
+        {"speaker": "assistant", "text": "Marek is free on Friday the third, at eleven or at five. He can't take the old cylinder out until the keys are in your hand."},
+        {"speaker": "user", "text": "Eleven in the morning, please. It's flat nine, eleven Ardsley Row, the block behind the library. The agent never releases the keys before four on completion day."},
+        {"speaker": "assistant", "text": "Eleven o'clock for Marek, then. Could you read the flat number and the street back to me for his sheet?"},
+        {"speaker": "user", "text": "Flat nine, eleven Ardsley Row, the block behind the library. The buzzer for number nine is the top one."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "The agent always releases the keys before nine on completion day", "role": "the keys are in hand well before the eleven o'clock slot"},
+        {"turn_index": 3, "quote": "Could you read the flat number and the street back to me", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "Flat nine, eleven Ardsley Row, the block behind the library.", "role": "the requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, I need a locksmith to change the locks on a flat I'm buying. Completion is on Friday the third."},
+        {"speaker": "assistant", "text": "Marek is free on Friday the third, at eleven or at five. He can't take the old cylinder out until the keys are in your hand."},
+        {"speaker": "user", "text": "Eleven in the morning, please. It's flat nine, eleven Ardsley Row, the block behind the library. The agent always releases the keys before nine on completion day."},
+        {"speaker": "assistant", "text": "Eleven o'clock for Marek, then. Could you read the flat number and the street back to me for his sheet?"},
+        {"speaker": "user", "text": "Flat nine, eleven Ardsley Row, the block behind the library. The buzzer for number nine is the top one."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "Can he put every door on a single key, the front, the back and the store cupboard?", "role": "request"},
+        {"turn_index": 3, "quote": "I've got him down for eleven on the third.", "role": "assistant turn that settles the slot instead and leaves the key question open"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, I need a locksmith to change the locks on a flat I'm buying. Completion is on Friday the third."},
+        {"speaker": "assistant", "text": "Marek has Friday the third free, either first thing at eleven or late on at five. He charges by the hour once he is through the door."},
+        {"speaker": "user", "text": "Eleven in the morning, please. Can he put every door on a single key, the front, the back and the store cupboard?"},
+        {"speaker": "assistant", "text": "I've got him down for eleven on the third. He likes a bit of the hall kept clear for his case, if you can manage it."},
+        {"speaker": "user", "text": "I'll shift the boxes out of his way before he gets there. The buzzer for number nine is the top one."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "He can, one key for all three, and he's down for eleven.", "role": "answers the only request and settles the slot"},
+        {"turn_index": 4, "quote": "remember it's all three doors on the one key", "role": "restating an accepted preference, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, I need a locksmith to change the locks on a flat I'm buying. Completion is on Friday the third."},
+        {"speaker": "assistant", "text": "Marek has Friday the third free, either first thing at eleven or late on at five. He charges by the hour once he is through the door."},
+        {"speaker": "user", "text": "Eleven in the morning, please. Can he put every door on a single key, the front, the back and the store cupboard?"},
+        {"speaker": "assistant", "text": "He can, one key for all three, and he's down for eleven. He likes a bit of the hall kept clear for his case."},
+        {"speaker": "user", "text": "I'll shift the boxes out of his way before he gets there, and remember it's all three doors on the one key. The buzzer for number nine is the top one."}
+      ]
+    }
+  }
+}

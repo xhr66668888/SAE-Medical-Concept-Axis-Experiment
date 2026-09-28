@@ -1,0 +1,185 @@
+{
+  "family_id": "transit_008",
+  "domain": "transit",
+  "task_goal": "hire an automatic car from the Thornbury depot for a long weekend and settle the collection detail",
+  "n_turns": 5,
+  "tail_anchor": "We'll pick it up at the Thornbury desk.",
+  "notes": "rep_unres and rep_res differ by one word, 'five' against 'four', set against the four seats the clerk has just quoted; the emphatic re-statement of the automatic requirement is present in both. norep_unres and norep_res differ only in 'the automatic' against 'the Focus', with two automatics live and the clerk asking which.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "source": "claude-opus-5-authored",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "it seats four, with room for two cabin cases in the boot",
+          "role": "the car on offer holds four people"
+        },
+        {
+          "turn_index": 2,
+          "quote": "there will be five of us going down in it",
+          "role": "five people are travelling in that same car"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Automatic it is, and I will hold the Astra for Friday at nine.",
+          "role": "assistant holds the car without reconciling the clash"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I need a car from your Thornbury depot on Friday morning until Monday. It would have to be an automatic, none of us drive a manual."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can do that. The Astra is sixty-two pounds for the three days, it is an automatic, and it seats four, with room for two cabin cases in the boot."
+        },
+        {
+          "speaker": "user",
+          "text": "The Astra sounds about right. Just to be clear, it must be an automatic, none of us drive a manual, and there will be five of us going down in it."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Automatic it is, and I will hold the Astra for Friday at nine. Bring your licence and a card for the deposit."
+        },
+        {
+          "speaker": "user",
+          "text": "Both of those are in my bag. We'll pick it up at the Thornbury desk."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "source": "claude-opus-5-authored",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "it is an automatic",
+          "role": "the requirement was already accepted here"
+        },
+        {
+          "turn_index": 2,
+          "quote": "it must be an automatic, none of us drive a manual",
+          "role": "the traveller restates an accepted requirement for emphasis"
+        },
+        {
+          "turn_index": 2,
+          "quote": "there will be four of us going down in it",
+          "role": "consistent with the four seats quoted"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I need a car from your Thornbury depot on Friday morning until Monday. It would have to be an automatic, none of us drive a manual."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can do that. The Astra is sixty-two pounds for the three days, it is an automatic, and it seats four, with room for two cabin cases in the boot."
+        },
+        {
+          "speaker": "user",
+          "text": "The Astra sounds about right. Just to be clear, it must be an automatic, none of us drive a manual, and there will be four of us going down in it."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Automatic it is, and I will hold the Astra for Friday at nine. Bring your licence and a card for the deposit."
+        },
+        {
+          "speaker": "user",
+          "text": "Both of those are in my bag. We'll pick it up at the Thornbury desk."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "source": "claude-opus-5-authored",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "the Focus at sixty-two pounds for the three days, and the Zafira at seventy-eight",
+          "role": "two automatics are on the table"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Tell me which one you want and what time you will collect.",
+          "role": "assistant asks which of the two"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Put the automatic down for Friday at nine",
+          "role": "the instruction still fits either car"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I need a car from your Thornbury depot on Friday morning until Monday, and it has to be an automatic."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Two automatics are free that weekend: the Focus at sixty-two pounds for the three days, and the Zafira at seventy-eight."
+        },
+        {
+          "speaker": "user",
+          "text": "Either of those would suit us. I will want to know what the deposit comes to as well."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Two hundred pounds, held on a card and released once the Zafira or the Focus is back with us. Tell me which one you want and what time you will collect."
+        },
+        {
+          "speaker": "user",
+          "text": "The deposit is no trouble. Put the automatic down for Friday at nine and I will bring my licence. We'll pick it up at the Thornbury desk."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "source": "claude-opus-5-authored",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "Tell me which one you want and what time you will collect.",
+          "role": "assistant asks for the confirmation"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Put the Focus down for Friday at nine",
+          "role": "names the car and the time, closing the only open item"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I need a car from your Thornbury depot on Friday morning until Monday, and it has to be an automatic."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Two automatics are free that weekend: the Focus at sixty-two pounds for the three days, and the Zafira at seventy-eight."
+        },
+        {
+          "speaker": "user",
+          "text": "Either of those would suit us. I will want to know what the deposit comes to as well."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Two hundred pounds, held on a card and released once the Zafira or the Focus is back with us. Tell me which one you want and what time you will collect."
+        },
+        {
+          "speaker": "user",
+          "text": "The deposit is no trouble. Put the Focus down for Friday at nine and I will bring my licence. We'll pick it up at the Thornbury desk."
+        }
+      ]
+    }
+  }
+}

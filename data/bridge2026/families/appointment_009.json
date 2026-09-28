@@ -1,0 +1,186 @@
+{
+  "family_id": "appointment_009",
+  "domain": "appointment",
+  "task_goal": "book a block of six physiotherapy sessions at the Kingsgate clinic and settle the evening times and payment",
+  "n_turns": 5,
+  "tail_anchor": "I'll come in my kit, to save time.",
+  "notes": "rep_unres and rep_res have character-identical user turns; they differ only in the middle clause of assistant turn 3, which either moves the three clashing Mondays or does not. norep_unres and norep_res differ by two words in turn 2 ('that one' versus 'the Thursday one'), with both a Monday block session and a standing Thursday session at six live in the previous turn.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "it runs the five Mondays after that",
+          "role": "the booked dates"
+        },
+        {
+          "turn_index": 2,
+          "quote": "We are in Spain from the eighth of December to the new year, so I would be away for the last three of those Mondays",
+          "role": "the conflicting fact and its consequence for the booking"
+        },
+        {
+          "turn_index": 3,
+          "quote": "That is all on the file now.",
+          "role": "assistant files the block without reconciling the clash"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Afternoon. I want to book the block of six sessions at Kingsgate, starting the week after next."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can start the block on Monday the twentieth at six, and it runs the five Mondays after that. Can you read the day and the start time back to me for the file?"
+        },
+        {
+          "speaker": "user",
+          "text": "Monday the twentieth at six, and the five Mondays after that. We are in Spain from the eighth of December to the new year, so I would be away for the last three of those Mondays."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That is all on the file now. The card we hold for you gets charged for the whole block at the first session."
+        },
+        {
+          "speaker": "user",
+          "text": "Take it off that card, then. I'll come in my kit, to save time."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Can you read the day and the start time back to me for the file?",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Monday the twentieth at six, and the five Mondays after that.",
+          "role": "the requested read-back"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I have pushed the last three into January so the trip is clear",
+          "role": "discharges the last open item"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Afternoon. I want to book the block of six sessions at Kingsgate, starting the week after next."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can start the block on Monday the twentieth at six, and it runs the five Mondays after that. Can you read the day and the start time back to me for the file?"
+        },
+        {
+          "speaker": "user",
+          "text": "Monday the twentieth at six, and the five Mondays after that. We are in Spain from the eighth of December to the new year, so I would be away for the last three of those Mondays."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That is all on the file now, and I have pushed the last three into January so the trip is clear. The card we hold gets charged at the first session."
+        },
+        {
+          "speaker": "user",
+          "text": "Take it off that card, then. I'll come in my kit, to save time."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "I can start the block on Monday the twentieth at six. You also have your standing Thursday session with Ronan at six",
+          "role": "two live six o'clock bookings"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Could you push that one back to half six",
+          "role": "referring expression that fits either booking"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Half six is clear on both of those evenings",
+          "role": "assistant leaves both live and moves neither in particular"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Afternoon. I want to book the block of six sessions at Kingsgate, starting the week after next."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can start the block on Monday the twentieth at six. You also have your standing Thursday session with Ronan at six, which carries on as normal."
+        },
+        {
+          "speaker": "user",
+          "text": "That suits. Could you push that one back to half six, though, since I cannot get across town by six."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Half six is clear on both of those evenings, so there is room to shift it. Shall I put the block through on the card we hold for you?"
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, use the card on file. Half past is the earliest I can manage on a weeknight. I'll come in my kit, to save time."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "Could you push the Thursday one back to half six",
+          "role": "the booking to be moved is named"
+        },
+        {
+          "turn_index": 3,
+          "quote": "so there is room to shift it",
+          "role": "the clinic accepts the change"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Half past is the earliest I can manage on a weeknight",
+          "role": "restatement for emphasis of a preference already accepted"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Afternoon. I want to book the block of six sessions at Kingsgate, starting the week after next."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can start the block on Monday the twentieth at six. You also have your standing Thursday session with Ronan at six, which carries on as normal."
+        },
+        {
+          "speaker": "user",
+          "text": "That suits. Could you push the Thursday one back to half six, though, since I cannot get across town by six."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Half six is clear on both of those evenings, so there is room to shift it. Shall I put the block through on the card we hold for you?"
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, use the card on file. Half past is the earliest I can manage on a weeknight. I'll come in my kit, to save time."
+        }
+      ]
+    }
+  }
+}

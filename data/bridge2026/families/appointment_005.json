@@ -1,0 +1,218 @@
+{
+  "family_id": "appointment_005",
+  "domain": "appointment",
+  "task_goal": "book a one-week passport renewal appointment at a counter office and settle what to bring",
+  "n_turns": 7,
+  "tail_anchor": "I'll bring the whole folder with me on the day.",
+  "notes": "rep_unres and rep_res are identical except for the second clause of turn 4: the user either says the passport has already gone in the post, which clashes with the instruction to bring it, or says it is in the drawer, which does not. Both carry the same requested read-back. norep_unres and norep_res differ only in one clause of turn 3, which either answers the fee request or answers something else.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "Bring your current passport",
+          "role": "the office requires the passport at the counter"
+        },
+        {
+          "turn_index": 4,
+          "quote": "My current passport went in the post to you last Tuesday",
+          "role": "conflicts with what has to be brought"
+        },
+        {
+          "turn_index": 5,
+          "quote": "That matches the slot I am holding, so I have it saved on the system now.",
+          "role": "assistant proceeds without reconciling the two"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good morning. I need to book the one-week renewal appointment at the Lancaster Road office."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can do that. The earliest is Monday the 13th at 9.15, and there is a later one on Wednesday the 15th at 2.30."
+        },
+        {
+          "speaker": "user",
+          "text": "Monday the 13th at 9.15 suits me a good deal better than the Wednesday."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Booked. Bring your current passport, the completed form and one signed photo, and read the date and time back to me."
+        },
+        {
+          "speaker": "user",
+          "text": "Monday the 13th at 9.15. My current passport went in the post to you last Tuesday."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That matches the slot I am holding, so I have it saved on the system now."
+        },
+        {
+          "speaker": "user",
+          "text": "Understood, I will aim to be early. I'll bring the whole folder with me on the day."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "read the date and time back to me",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Monday the 13th at 9.15.",
+          "role": "the requested read-back, not a sign of trouble"
+        },
+        {
+          "turn_index": 5,
+          "quote": "That matches the slot I am holding, so I have it saved on the system now.",
+          "role": "discharges the last open item"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good morning. I need to book the one-week renewal appointment at the Lancaster Road office."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can do that. The earliest is Monday the 13th at 9.15, and there is a later one on Wednesday the 15th at 2.30."
+        },
+        {
+          "speaker": "user",
+          "text": "Monday the 13th at 9.15 suits me a good deal better than the Wednesday."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Booked. Bring your current passport, the completed form and one signed photo, and read the date and time back to me."
+        },
+        {
+          "speaker": "user",
+          "text": "Monday the 13th at 9.15. My current passport is here in the drawer with the form."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That matches the slot I am holding, so I have it saved on the system now."
+        },
+        {
+          "speaker": "user",
+          "text": "Understood, I will aim to be early. I'll bring the whole folder with me on the day."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "Tell me what the fee covers, because I am not sure about the return postage",
+          "role": "request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "The counter opens at nine",
+          "role": "assistant answers a different point instead"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Allow twenty minutes at the counter, since there is usually a short queue",
+          "role": "second assistant turn that still does not answer"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good morning. I need to book the one-week renewal appointment at the Lancaster Road office."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can do that. The earliest is Monday the 13th at 9.15, and there is a later one on Wednesday the 15th at 2.30."
+        },
+        {
+          "speaker": "user",
+          "text": "I will take the early one. Tell me what the fee covers, because I am not sure about the return postage."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That slot is held for you. The counter opens at nine, and you will need your passport, the completed form and one photo."
+        },
+        {
+          "speaker": "user",
+          "text": "All three are in the folder already, and I do want the 9.15 rather than the afternoon."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Good. Allow twenty minutes at the counter, since there is usually a short queue."
+        },
+        {
+          "speaker": "user",
+          "text": "Understood, I will aim to be early. I'll bring the whole folder with me on the day."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "The fee covers tracked return postage",
+          "role": "answers the only request the user made"
+        },
+        {
+          "turn_index": 3,
+          "quote": "That slot is held for you",
+          "role": "the slot preference is accepted before it is restated"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I do want the 9.15 rather than the afternoon",
+          "role": "restatement for emphasis, not a new problem"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good morning. I need to book the one-week renewal appointment at the Lancaster Road office."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can do that. The earliest is Monday the 13th at 9.15, and there is a later one on Wednesday the 15th at 2.30."
+        },
+        {
+          "speaker": "user",
+          "text": "I will take the early one. Tell me what the fee covers, because I am not sure about the return postage."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That slot is held for you. The fee covers tracked return postage, and you will need your passport, the completed form and one photo."
+        },
+        {
+          "speaker": "user",
+          "text": "All three are in the folder already, and I do want the 9.15 rather than the afternoon."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Good. Allow twenty minutes at the counter, since there is usually a short queue."
+        },
+        {
+          "speaker": "user",
+          "text": "Understood, I will aim to be early. I'll bring the whole folder with me on the day."
+        }
+      ]
+    }
+  }
+}

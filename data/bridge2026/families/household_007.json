@@ -1,0 +1,78 @@
+{
+  "family_id": "household_007",
+  "domain": "household",
+  "task_goal": "redo the cleaning rota in a shared house before the letting agent's visit",
+  "n_turns": 5,
+  "tail_anchor": "I'll pin the new one up by the microwave.",
+  "notes": "rep_unres and rep_res differ only in the second clause of turn 1 and in turn 2: either the oven question is dropped and re-asked, or it is answered and the already-accepted split is restated for emphasis. norep_unres and norep_res differ by one word (Wednesday/Monday) against a visit stated for Tuesday morning, with the cleaning action and its claimed consequence both explicit.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Do we have to do the oven before the inspection, or is that on the landlord?", "role": "request"},
+        {"turn_index": 2, "quote": "Do we have to do the oven before the inspection, or is that on the landlord?", "role": "re-request"},
+        {"turn_index": 3, "quote": "I'll dig the mop bucket out from behind the hoover", "role": "assistant turn that fails to answer"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Marcus, the rota on the fridge has gone to pot again. I'll take the bathroom this month if you and Lena split the kitchen. Do we have to do the oven before the inspection, or is that on the landlord?"},
+        {"speaker": "assistant", "text": "Fair enough, that rota is ancient, and splitting the kitchen with Lena suits me. She is on nights this week, so she would rather have the weekend slots."},
+        {"speaker": "user", "text": "The weekend is no trouble for her. Do we have to do the oven before the inspection, or is that on the landlord?"},
+        {"speaker": "assistant", "text": "I'll dig the mop bucket out from behind the hoover, it has been in there since Easter."},
+        {"speaker": "user", "text": "Good luck with that. I'll pin the new one up by the microwave."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "The oven is on the landlord, it says so in the tenancy pack.", "role": "answers the only open request"},
+        {"turn_index": 1, "quote": "splitting the kitchen with Lena suits me", "role": "the proposed split is accepted"},
+        {"turn_index": 2, "quote": "I'll take the bathroom this month if you and Lena split the kitchen", "role": "restatement for emphasis of a split already agreed"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Marcus, the rota on the fridge has gone to pot again. I'll take the bathroom this month if you and Lena split the kitchen. Do we have to do the oven before the inspection, or is that on the landlord?"},
+        {"speaker": "assistant", "text": "Fair enough, that rota is ancient, and splitting the kitchen with Lena suits me. The oven is on the landlord, it says so in the tenancy pack."},
+        {"speaker": "user", "text": "That is one job off the list. I'll take the bathroom this month if you and Lena split the kitchen, since the hob is mostly your doing."},
+        {"speaker": "assistant", "text": "I'll dig the mop bucket out from behind the hoover, it has been in there since Easter."},
+        {"speaker": "user", "text": "Good luck with that. I'll pin the new one up by the microwave."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "He is coming on the Tuesday morning at ten", "role": "the visit is on Tuesday morning"},
+        {"turn_index": 2, "quote": "I am doing the bathroom on the Wednesday evening after work, so it will be spotless when he walks in", "role": "a Wednesday evening clean cannot make the room spotless for a Tuesday morning visit"},
+        {"turn_index": 3, "quote": "Grand. I'll get the hob done and shift the bottles out of the porch.", "role": "assistant proceeds without reconciling the conflict"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Marcus, the rota needs redoing before Ravi comes round to look the place over, and the landing is the worst of it. Could you and Lena take the kitchen if I do the bathroom?"},
+        {"speaker": "assistant", "text": "That seems a fair split to me, though Lena is on nights this week. He is coming on the Tuesday morning at ten, he put a card through the door."},
+        {"speaker": "user", "text": "Right. I am doing the bathroom on the Wednesday evening after work, so it will be spotless when he walks in."},
+        {"speaker": "assistant", "text": "Grand. I'll get the hob done and shift the bottles out of the porch. What day did you say he is coming?"},
+        {"speaker": "user", "text": "Tuesday morning. I'll pin the new one up by the microwave."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "I am doing the bathroom on the Monday evening after work, so it will be spotless when he walks in", "role": "a Monday evening clean is in time for a Tuesday morning visit"},
+        {"turn_index": 3, "quote": "What day did you say he is coming?", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "Tuesday morning.", "role": "requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Marcus, the rota needs redoing before Ravi comes round to look the place over, and the landing is the worst of it. Could you and Lena take the kitchen if I do the bathroom?"},
+        {"speaker": "assistant", "text": "That seems a fair split to me, though Lena is on nights this week. He is coming on the Tuesday morning at ten, he put a card through the door."},
+        {"speaker": "user", "text": "Right. I am doing the bathroom on the Monday evening after work, so it will be spotless when he walks in."},
+        {"speaker": "assistant", "text": "Grand. I'll get the hob done and shift the bottles out of the porch. What day did you say he is coming?"},
+        {"speaker": "user", "text": "Tuesday morning. I'll pin the new one up by the microwave."}
+      ]
+    }
+  }
+}

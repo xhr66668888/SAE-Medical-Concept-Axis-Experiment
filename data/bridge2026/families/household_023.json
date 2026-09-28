@@ -1,0 +1,186 @@
+{
+  "family_id": "household_023",
+  "domain": "household",
+  "task_goal": "share a skip with the next-door neighbours for a joint clear-out",
+  "n_turns": 5,
+  "tail_anchor": "I'll text you when they drop it off.",
+  "notes": "rep_unres and rep_res differ by one word (above/below) against a stated rule that nothing may sit above the rim, with the stacking of the doors spelled out. norep_unres and norep_res differ by one word (it/the fridge), with the mattress named immediately before as the most recent singular mention.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "they will not lift it if anything is sitting above the top edge",
+          "role": "the stated rule for collection"
+        },
+        {
+          "turn_index": 2,
+          "quote": "We will stack the old doors on top of the rubble, a good foot above the rim, so nothing is wasted",
+          "role": "the loading plan puts the doors above the rim"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Right you are.",
+          "role": "assistant proceeds without reconciling the conflict"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Nita, Cudworth's are dropping a skip on Thursday and taking it away Monday. If we go halves, you can put the garage stuff in. I would rather it went on the road than on the drive."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Halves suits us, our garage has not been touched in years. The road is fine by me, though they will not lift it if anything is sitting above the top edge."
+        },
+        {
+          "speaker": "user",
+          "text": "I would rather it went on the road than on the drive, because the drive is the only place Sal can leave his van. We will stack the old doors on top of the rubble, a good foot above the rim, so nothing is wasted."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Right you are. Sal can bring the van round on the Saturday and give you a hand with the heavy things."
+        },
+        {
+          "speaker": "user",
+          "text": "That would be a help, thank him for me. I'll text you when they drop it off."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "The road is fine by me",
+          "role": "the stated preference is accepted"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I would rather it went on the road than on the drive",
+          "role": "restatement for emphasis of an accepted preference"
+        },
+        {
+          "turn_index": 2,
+          "quote": "a good foot below the rim",
+          "role": "the loading plan keeps to the stated rule"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Nita, Cudworth's are dropping a skip on Thursday and taking it away Monday. If we go halves, you can put the garage stuff in. I would rather it went on the road than on the drive."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Halves suits us, our garage has not been touched in years. The road is fine by me, though they will not lift it if anything is sitting above the top edge."
+        },
+        {
+          "speaker": "user",
+          "text": "I would rather it went on the road than on the drive, because the drive is the only place Sal can leave his van. We will stack the old doors on top of the rubble, a good foot below the rim, so nothing is wasted."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Right you are. Sal can bring the van round on the Saturday and give you a hand with the heavy things."
+        },
+        {
+          "speaker": "user",
+          "text": "That would be a help, thank him for me. I'll text you when they drop it off."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "That old fridge of ours will not be allowed in it",
+          "role": "first live candidate for the council collection"
+        },
+        {
+          "turn_index": 3,
+          "quote": "there is the mattress in our porch as well",
+          "role": "second live candidate, and the most recent singular mention"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Leave it by the side gate and I will ring the council about it",
+          "role": "referring expression that picks out neither"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Nita, Cudworth's can drop a skip off on Thursday and take it away again Monday. If we split the cost, your garage stuff can go in with ours."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That would be a godsend, our garage has not been touched in years. Sal can bring his van round and help with the loading."
+        },
+        {
+          "speaker": "user",
+          "text": "The permit only covers the bit of road outside ours, so it will have to stand on our side."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Fine by us. Which day did you say it goes back? That old fridge of ours will not be allowed in it, and there is the mattress in our porch as well."
+        },
+        {
+          "speaker": "user",
+          "text": "Monday, first thing. Leave it by the side gate and I will ring the council about it. I'll text you when they drop it off."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "Which day did you say it goes back?",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Monday, first thing.",
+          "role": "requested read-back, not a sign of trouble"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Leave the fridge by the side gate and I will ring the council about it",
+          "role": "the item is named, so nothing is left open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Nita, Cudworth's can drop a skip off on Thursday and take it away again Monday. If we split the cost, your garage stuff can go in with ours."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That would be a godsend, our garage has not been touched in years. Sal can bring his van round and help with the loading."
+        },
+        {
+          "speaker": "user",
+          "text": "The permit only covers the bit of road outside ours, so it will have to stand on our side."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Fine by us. Which day did you say it goes back? That old fridge of ours will not be allowed in it, and there is the mattress in our porch as well."
+        },
+        {
+          "speaker": "user",
+          "text": "Monday, first thing. Leave the fridge by the side gate and I will ring the council about it. I'll text you when they drop it off."
+        }
+      ]
+    }
+  }
+}

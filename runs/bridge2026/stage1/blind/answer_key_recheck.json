@@ -1,0 +1,182 @@
+{
+  "R_000": {
+    "item_id": "household_006__rep_unres",
+    "family_id": "household_006",
+    "condition": "rep_unres",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "domain": "household",
+    "is_changed": true
+  },
+  "R_001": {
+    "item_id": "cooking_003__norep_unres",
+    "family_id": "cooking_003",
+    "condition": "norep_unres",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "domain": "cooking",
+    "is_changed": false
+  },
+  "R_002": {
+    "item_id": "shopping_005__norep_unres",
+    "family_id": "shopping_005",
+    "condition": "norep_unres",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "domain": "shopping",
+    "is_changed": false
+  },
+  "R_003": {
+    "item_id": "transit_002__norep_unres",
+    "family_id": "transit_002",
+    "condition": "norep_unres",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "domain": "transit",
+    "is_changed": false
+  },
+  "R_004": {
+    "item_id": "transit_004__norep_res",
+    "family_id": "transit_004",
+    "condition": "norep_res",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "domain": "transit",
+    "is_changed": false
+  },
+  "R_005": {
+    "item_id": "transit_003__norep_unres",
+    "family_id": "transit_003",
+    "condition": "norep_unres",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "domain": "transit",
+    "is_changed": false
+  },
+  "R_006": {
+    "item_id": "household_001__norep_res",
+    "family_id": "household_001",
+    "condition": "norep_res",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "domain": "household",
+    "is_changed": true
+  },
+  "R_007": {
+    "item_id": "appointment_002__rep_unres",
+    "family_id": "appointment_002",
+    "condition": "rep_unres",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "domain": "appointment",
+    "is_changed": false
+  },
+  "R_008": {
+    "item_id": "household_001__norep_unres",
+    "family_id": "household_001",
+    "condition": "norep_unres",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "domain": "household",
+    "is_changed": true
+  },
+  "R_009": {
+    "item_id": "cooking_006__rep_res",
+    "family_id": "cooking_006",
+    "condition": "rep_res",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "domain": "cooking",
+    "is_changed": false
+  },
+  "R_010": {
+    "item_id": "household_004__norep_unres",
+    "family_id": "household_004",
+    "condition": "norep_unres",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "domain": "household",
+    "is_changed": true
+  },
+  "R_011": {
+    "item_id": "household_005__rep_res",
+    "family_id": "household_005",
+    "condition": "rep_res",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "domain": "household",
+    "is_changed": false
+  },
+  "R_012": {
+    "item_id": "appointment_004__rep_res",
+    "family_id": "appointment_004",
+    "condition": "rep_res",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "domain": "appointment",
+    "is_changed": false
+  },
+  "R_013": {
+    "item_id": "household_003__rep_unres",
+    "family_id": "household_003",
+    "condition": "rep_unres",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "domain": "household",
+    "is_changed": false
+  },
+  "R_014": {
+    "item_id": "cooking_001__rep_unres",
+    "family_id": "cooking_001",
+    "condition": "rep_unres",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "domain": "cooking",
+    "is_changed": false
+  },
+  "R_015": {
+    "item_id": "transit_001__norep_unres",
+    "family_id": "transit_001",
+    "condition": "norep_unres",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "domain": "transit",
+    "is_changed": false
+  },
+  "R_016": {
+    "item_id": "household_004__norep_res",
+    "family_id": "household_004",
+    "condition": "norep_res",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "domain": "household",
+    "is_changed": true
+  },
+  "R_017": {
+    "item_id": "household_006__rep_res",
+    "family_id": "household_006",
+    "condition": "rep_res",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "domain": "household",
+    "is_changed": true
+  },
+  "R_018": {
+    "item_id": "appointment_003__norep_unres",
+    "family_id": "appointment_003",
+    "condition": "norep_unres",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "domain": "appointment",
+    "is_changed": false
+  },
+  "R_019": {
+    "item_id": "shopping_004__norep_unres",
+    "family_id": "shopping_004",
+    "condition": "norep_unres",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "domain": "shopping",
+    "is_changed": false
+  }
+}

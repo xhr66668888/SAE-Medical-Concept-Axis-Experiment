@@ -1,0 +1,223 @@
+{
+  "family_id": "transit_005",
+  "domain": "transit",
+  "task_goal": "plan a Saturday ferry crossing to Alderwick with two hired bikes",
+  "n_turns": 7,
+  "tail_anchor": "We will be at the pier for nine, then.",
+  "notes": "rep_unres and rep_res differ by one word, 'seven' against 'five', in the hour the party says it will be back at the harbour, set against the half past five last sailing they have just recited. norep_unres and norep_res differ only in 'The hire place' against 'Coast Bikes' in the requested read-back.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "the last one back leaves the Alderwick harbour at half past five",
+          "role": "last sailing home"
+        },
+        {
+          "turn_index": 4,
+          "quote": "We plan to be back at the harbour at seven.",
+          "role": "return time the last sailing cannot accommodate"
+        },
+        {
+          "turn_index": 5,
+          "quote": "I will email the tickets tonight with the voucher.",
+          "role": "assistant proceeds without reconciling the clash"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "We are taking the ferry over to Alderwick on Saturday and want bikes for the afternoon."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Coast Bikes on the island can hold two for you. The boat leaves Pier Three at nine twenty and the last one back leaves the Alderwick harbour at half past five."
+        },
+        {
+          "speaker": "user",
+          "text": "Put the bikes down for eleven until four."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Eleven until four is booked. Anything else you need on the island?"
+        },
+        {
+          "speaker": "user",
+          "text": "No, that is everything. The boat leaves Pier Three at nine twenty and the last one back leaves the Alderwick harbour at half past five. We plan to be back at the harbour at seven."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I will email the tickets tonight with the voucher."
+        },
+        {
+          "speaker": "user",
+          "text": "Perfect. We will be at the pier for nine, then."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "Eleven until four is booked.",
+          "role": "closes the hire request"
+        },
+        {
+          "turn_index": 4,
+          "quote": "We plan to be back at the harbour at five.",
+          "role": "fits the half past five sailing, nothing left open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "We are taking the ferry over to Alderwick on Saturday and want bikes for the afternoon."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Coast Bikes on the island can hold two for you. The boat leaves Pier Three at nine twenty and the last one back leaves the Alderwick harbour at half past five."
+        },
+        {
+          "speaker": "user",
+          "text": "Put the bikes down for eleven until four."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Eleven until four is booked. Anything else you need on the island?"
+        },
+        {
+          "speaker": "user",
+          "text": "No, that is everything. The boat leaves Pier Three at nine twenty and the last one back leaves the Alderwick harbour at half past five. We plan to be back at the harbour at five."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I will email the tickets tonight with the voucher."
+        },
+        {
+          "speaker": "user",
+          "text": "Perfect. We will be at the pier for nine, then."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Harbour Cycles down by the slipway",
+          "role": "first candidate hire place"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Coast Bikes five minutes up the hill",
+          "role": "second candidate hire place"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Either would do us.",
+          "role": "both candidates stay live"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Read the hire place and the pickup time back to me so I have it right.",
+          "role": "assistant asks which one"
+        },
+        {
+          "turn_index": 6,
+          "quote": "The hire place at eleven.",
+          "role": "referring expression picks neither, and the exchange ends"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "We are taking the ferry over to Alderwick on Saturday and want bikes for the afternoon."
+        },
+        {
+          "speaker": "assistant",
+          "text": "There are two hire places on the island: Harbour Cycles down by the slipway, and Coast Bikes five minutes up the hill."
+        },
+        {
+          "speaker": "user",
+          "text": "Either would do us. What time does the first boat leave the mainland?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "It goes from Pier Three at nine twenty, and the crossing over takes about fifty minutes."
+        },
+        {
+          "speaker": "user",
+          "text": "We will be on that one. Two bikes, please, from eleven until four."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can hold two bikes. Read the hire place and the pickup time back to me so I have it right."
+        },
+        {
+          "speaker": "user",
+          "text": "The hire place at eleven. We will be at the pier for nine, then."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "It goes from Pier Three at nine twenty",
+          "role": "answers the only request"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Read the hire place and the pickup time back to me so I have it right.",
+          "role": "assistant requests the repetition"
+        },
+        {
+          "turn_index": 6,
+          "quote": "Coast Bikes at eleven.",
+          "role": "requested read-back, hire place determined"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "We are taking the ferry over to Alderwick on Saturday and want bikes for the afternoon."
+        },
+        {
+          "speaker": "assistant",
+          "text": "There are two hire places on the island: Harbour Cycles down by the slipway, and Coast Bikes five minutes up the hill."
+        },
+        {
+          "speaker": "user",
+          "text": "Either would do us. What time does the first boat leave the mainland?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "It goes from Pier Three at nine twenty, and the crossing over takes about fifty minutes."
+        },
+        {
+          "speaker": "user",
+          "text": "We will be on that one. Two bikes, please, from eleven until four."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can hold two bikes. Read the hire place and the pickup time back to me so I have it right."
+        },
+        {
+          "speaker": "user",
+          "text": "Coast Bikes at eleven. We will be at the pier for nine, then."
+        }
+      ]
+    }
+  }
+}

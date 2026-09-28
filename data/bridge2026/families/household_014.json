@@ -1,0 +1,186 @@
+{
+  "family_id": "household_014",
+  "domain": "household",
+  "task_goal": "clear the hall for the decorator and keep two tradesmen off the front room carpet",
+  "n_turns": 5,
+  "tail_anchor": "The paint is stacked under the stairs.",
+  "notes": "rep_unres and rep_res differ by one word (Wednesday/Saturday) against a Monday start with the hall needed empty, and the charity collection is stated as the way the hall gets cleared. norep_unres and norep_res differ by one word (him/Kenny), with Ray named immediately before as the most recent singular mention.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "He starts at eight and he wants the hall completely empty before he sets up",
+          "role": "the hall must be empty by Monday morning"
+        },
+        {
+          "turn_index": 4,
+          "quote": "The charity shop is taking the bookcase and the shoe rack on Wednesday, and that is how the hall gets cleared",
+          "role": "the hall is not cleared until after he starts"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Give me his bit about the hall again, so I can put it on the board for the others.",
+          "role": "assistant proceeds without reconciling the conflict"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Fran, Kenny is doing the hall and the stairwell next week. Could you be in to let him in on the Monday? I am up in Leeds until Tuesday night."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can work at home on Monday. He starts at eight and he wants the hall completely empty before he sets up, he told me on the phone."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. I will leave the dust sheets and the masking tape by the meter cupboard for him."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Thanks. Give me his bit about the hall again, so I can put it on the board for the others."
+        },
+        {
+          "speaker": "user",
+          "text": "He starts at eight and he wants the hall completely empty. The charity shop is taking the bookcase and the shoe rack on Wednesday, and that is how the hall gets cleared. The paint is stacked under the stairs."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "Give me his bit about the hall again, so I can put it on the board for the others.",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "He starts at eight and he wants the hall completely empty.",
+          "role": "requested read-back, not a sign of trouble"
+        },
+        {
+          "turn_index": 4,
+          "quote": "The charity shop is taking the bookcase and the shoe rack on Saturday, and that is how the hall gets cleared",
+          "role": "the hall is clear two days before he starts"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Fran, Kenny is doing the hall and the stairwell next week. Could you be in to let him in on the Monday? I am up in Leeds until Tuesday night."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can work at home on Monday. He starts at eight and he wants the hall completely empty before he sets up, he told me on the phone."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. I will leave the dust sheets and the masking tape by the meter cupboard for him."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Thanks. Give me his bit about the hall again, so I can put it on the board for the others."
+        },
+        {
+          "speaker": "user",
+          "text": "He starts at eight and he wants the hall completely empty. The charity shop is taking the bookcase and the shoe rack on Saturday, and that is how the hall gets cleared. The paint is stacked under the stairs."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "Kenny has been in and out of next door's all month",
+          "role": "first live candidate, the man being let in on the Monday"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Ray always turns up a good hour early",
+          "role": "second live candidate, and the most recent singular mention"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Tell him to come round to the side door",
+          "role": "referring expression that picks out neither man"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Fran, the hall and stairwell are being done the week after next. Kenny can start on the Monday, and I do not want anyone crossing the front room carpet in work boots."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Nobody is going near the front room, I will stand a chair across the doorway. I am at the kitchen table all Monday, so shall I open up for him?"
+        },
+        {
+          "speaker": "user",
+          "text": "Please do. Ray is coming to measure for the stair carpet on the Thursday, once the gloss has hardened off."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I will be here for the pair of them. Kenny has been in and out of next door's all month, and Ray always turns up a good hour early."
+        },
+        {
+          "speaker": "user",
+          "text": "Tell him to come round to the side door, and keep him off the good carpet. The paint is stacked under the stairs."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Nobody is going near the front room, I will stand a chair across the doorway",
+          "role": "the stated preference is accepted"
+        },
+        {
+          "turn_index": 4,
+          "quote": "keep him off the good carpet",
+          "role": "restatement for emphasis of an accepted preference"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Tell Kenny to come round to the side door",
+          "role": "the man is named, so nothing is left open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Fran, the hall and stairwell are being done the week after next. Kenny can start on the Monday, and I do not want anyone crossing the front room carpet in work boots."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Nobody is going near the front room, I will stand a chair across the doorway. I am at the kitchen table all Monday, so shall I open up for him?"
+        },
+        {
+          "speaker": "user",
+          "text": "Please do. Ray is coming to measure for the stair carpet on the Thursday, once the gloss has hardened off."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I will be here for the pair of them. Kenny has been in and out of next door's all month, and Ray always turns up a good hour early."
+        },
+        {
+          "speaker": "user",
+          "text": "Tell Kenny to come round to the side door, and keep him off the good carpet. The paint is stacked under the stairs."
+        }
+      ]
+    }
+  }
+}

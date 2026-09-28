@@ -1,0 +1,15 @@
+Loading weights:   0%|          | 0/1065 [00:00<?, ?it/s]Loading weights:   0%|          | 1/1065 [00:00<03:04,  5.77it/s]Loading weights:   3%|▎         | 30/1065 [00:00<00:07, 134.14it/s]Loading weights:   5%|▌         | 57/1065 [00:00<00:05, 179.55it/s]Loading weights:   8%|▊         | 83/1065 [00:00<00:04, 203.01it/s]Loading weights:  10%|█         | 109/1065 [00:00<00:04, 215.64it/s]Loading weights:  13%|█▎        | 143/1065 [00:00<00:03, 247.82it/s]Loading weights:  16%|█▌        | 169/1065 [00:00<00:03, 247.36it/s]Loading weights:  18%|█▊        | 195/1065 [00:00<00:03, 250.14it/s]Loading weights:  21%|██        | 221/1065 [00:01<00:03, 247.43it/s]Loading weights:  23%|██▎       | 247/1065 [00:01<00:03, 245.39it/s]Loading weights:  26%|██▌       | 274/1065 [00:01<00:03, 247.99it/s]Loading weights:  28%|██▊       | 300/1065 [00:01<00:03, 248.29it/s]Loading weights:  31%|███       | 325/1065 [00:01<00:03, 240.90it/s]Loading weights:  33%|███▎      | 352/1065 [00:01<00:02, 247.90it/s]Loading weights:  35%|███▌      | 377/1065 [00:01<00:02, 244.74it/s]Loading weights:  38%|███▊      | 406/1065 [00:01<00:02, 244.23it/s]Loading weights:  41%|████      | 432/1065 [00:01<00:02, 242.86it/s]Loading weights:  43%|████▎     | 459/1065 [00:02<00:02, 241.72it/s]Loading weights:  46%|████▌     | 486/1065 [00:02<00:02, 240.81it/s]Loading weights:  48%|████▊     | 511/1065 [00:02<00:02, 242.71it/s]Loading weights:  51%|█████     | 538/1065 [00:02<00:02, 248.72it/s]Loading weights:  53%|█████▎    | 564/1065 [00:02<00:02, 247.96it/s]Loading weights:  55%|█████▌    | 590/1065 [00:02<00:01, 246.57it/s]Loading weights:  58%|█████▊    | 616/1065 [00:02<00:01, 246.85it/s]Loading weights:  83%|████████▎ | 879/1065 [00:02<00:00, 933.09it/s]Loading weights: 100%|██████████| 1065/1065 [00:02<00:00, 379.96it/s]
+model=google/gemma-3-12b-it n_layers=48 d_model=3840
+acceptance set: 120 families / 480 items
+E0.1 True E0.2 True (norm ratio 0.0100)
+  PASS  E0.1_hook_equals_hidden_states
+  PASS  E0.2_final_layer_diverges
+  PASS  E0.7_determinism
+  PASS  E0.3_zero_dose_noop
+  PASS  E0.4_self_patch_noop
+  PASS  E0.8_dose_linearity
+  FAIL  E0.5_sae_reconstruction
+  PASS  E0.6_sae_identity_path_noop
+  PASS  E0.9_left_padding_invariance
+  PASS  E0.10_pure_equals_readout_at_read_pos
+ALL_PASS=False  ->  runs/bridge2026/stage3/e0_acceptance_12b.json

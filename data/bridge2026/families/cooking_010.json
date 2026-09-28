@@ -1,0 +1,79 @@
+{
+  "family_id": "cooking_010",
+  "domain": "cooking",
+  "task_goal": "bake a first overnight no-knead loaf in a cast-iron casserole and time the prove around the morning",
+  "n_turns": 5,
+  "tail_anchor": "I picked the flour up at the mill on Saturday.",
+  "notes": "norep_unres and norep_res differ by one word, mixing at nine tonight against at five tonight, measured against the twelve hours on the counter the assistant has just stipulated; rep_unres and rep_res differ in whether the lid question is ever answered.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Does the lid stay on for the whole bake?", "role": "request"},
+        {"turn_index": 2, "quote": "Does the lid stay on for the whole bake?", "role": "re-request"},
+        {"turn_index": 3, "quote": "Tip the dough in seam side up and do not bother scoring it", "role": "assistant answers about shaping instead"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I'm having a go at an overnight no-knead loaf tomorrow, baked in the cast-iron casserole. Plain crust please, no seeds on top. Does the lid stay on for the whole bake?"},
+        {"speaker": "assistant", "text": "Plain crust, understood. The dough needs twelve hours on the counter before it goes anywhere near the oven, and the casserole itself goes in empty to preheat at 230C."},
+        {"speaker": "user", "text": "Twelve hours and a screaming hot casserole, right. Does the lid stay on for the whole bake?"},
+        {"speaker": "assistant", "text": "Tip the dough in seam side up and do not bother scoring it; a no-knead loaf tears itself open wherever it likes and looks all the better for it."},
+        {"speaker": "user", "text": "Seam side up and no scoring, then. I picked the flour up at the mill on Saturday."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Plain crust please, no seeds on top.", "role": "preference stated"},
+        {"turn_index": 1, "quote": "Plain crust, understood, so nothing on top at all", "role": "preference already accepted"},
+        {"turn_index": 2, "quote": "do bear in mind, plain crust please, no seeds on top", "role": "restated for emphasis, nothing new is opened"},
+        {"turn_index": 1, "quote": "The lid stays on for the first thirty minutes to trap the steam, then comes off for fifteen", "role": "answers the opening request"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I'm having a go at an overnight no-knead loaf tomorrow, baked in the cast-iron casserole. Plain crust please, no seeds on top. Does the lid stay on for the whole bake?"},
+        {"speaker": "assistant", "text": "The lid stays on for the first thirty minutes to trap the steam, then comes off for fifteen to colour the crust. Plain crust, understood, so nothing on top at all."},
+        {"speaker": "user", "text": "Thirty on and fifteen off. And do bear in mind, plain crust please, no seeds on top. Will a cold kitchen slow the prove down?"},
+        {"speaker": "assistant", "text": "It will, so give it two hours longer if the room is under eighteen degrees. Tip the dough in seam side up and do not bother scoring it."},
+        {"speaker": "user", "text": "Seam side up and no scoring, then. I picked the flour up at the mill on Saturday."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "The dough needs twelve hours on the counter before it goes anywhere near the oven", "role": "stated minimum prove"},
+        {"turn_index": 2, "quote": "I'll mix it at nine tonight and it goes in the oven at six in the morning", "role": "nine hours, three short of the stated twelve"},
+        {"turn_index": 3, "quote": "Straight from the tap is fine", "role": "assistant answers the water question and leaves the clash alone"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I'm having a go at an overnight no-knead loaf tomorrow, baked in the cast-iron casserole. Plain crust please, no seeds on top. Does the lid stay on for the whole bake?"},
+        {"speaker": "assistant", "text": "It stays on for the first thirty minutes to trap the steam, then comes off for fifteen. The dough needs twelve hours on the counter before it goes anywhere near the oven."},
+        {"speaker": "user", "text": "Understood, plain crust and a covered start. I'll mix it at nine tonight and it goes in the oven at six in the morning. Should the water be warm or straight from the tap?"},
+        {"speaker": "assistant", "text": "Straight from the tap is fine; warm water only rushes the yeast along and you lose most of the flavour you were waiting up for."},
+        {"speaker": "user", "text": "Cold tap water, then. I picked the flour up at the mill on Saturday."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "It stays on for the first thirty minutes to trap the steam, then comes off for fifteen.", "role": "answers the opening request"},
+        {"turn_index": 2, "quote": "I'll mix it at five tonight and it goes in the oven at six in the morning", "role": "thirteen hours, which clears the stated twelve"},
+        {"turn_index": 3, "quote": "Straight from the tap is fine", "role": "answers the last open request"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I'm having a go at an overnight no-knead loaf tomorrow, baked in the cast-iron casserole. Plain crust please, no seeds on top. Does the lid stay on for the whole bake?"},
+        {"speaker": "assistant", "text": "It stays on for the first thirty minutes to trap the steam, then comes off for fifteen. The dough needs twelve hours on the counter before it goes anywhere near the oven."},
+        {"speaker": "user", "text": "Understood, plain crust and a covered start. I'll mix it at five tonight and it goes in the oven at six in the morning. Should the water be warm or straight from the tap?"},
+        {"speaker": "assistant", "text": "Straight from the tap is fine; warm water only rushes the yeast along and you lose most of the flavour you were waiting up for."},
+        {"speaker": "user", "text": "Cold tap water, then. I picked the flour up at the mill on Saturday."}
+      ]
+    }
+  }
+}

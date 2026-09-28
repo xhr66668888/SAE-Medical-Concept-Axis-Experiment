@@ -1,0 +1,222 @@
+{
+  "family_id": "transit_010",
+  "domain": "transit",
+  "task_goal": "book a coach from Penrose to Hartley with a change at the Birch Hill interchange and a coachcard fare",
+  "n_turns": 7,
+  "tail_anchor": "I'll be at the Penrose stand for eight.",
+  "notes": "rep_unres and rep_res differ only in whether turn 1 answers the question about the case at the change; a twelve-word echo sits in both cells. norep_unres and norep_res differ by two words, 'the Birch Hill connection' against 'the 11:40 connection', with two onward coaches live and re-named in the turn before.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "source": "claude-opus-5-authored",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Does my case go straight through, or do I have to take it off at the change?",
+          "role": "request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Does my case go straight through, or do I have to take it off at the change?",
+          "role": "re-request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "With a coachcard it comes to nineteen pounds eighty rather than twenty-six.",
+          "role": "assistant answers on the fare instead"
+        },
+        {
+          "turn_index": 5,
+          "quote": "I can hold the seat for twenty minutes while you decide",
+          "role": "last assistant turn, still nothing about the case"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I want to get from Penrose to Hartley on the Tuesday, and I gather there is a change at Birch Hill. Does my case go straight through, or do I have to take it off at the change?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "It is one booking for the whole run. The 08:15 out of Penrose, then the 11:40 on to Hartley, in at half past two."
+        },
+        {
+          "speaker": "user",
+          "text": "That will do me. Does my case go straight through, or do I have to take it off at the change?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "With a coachcard it comes to nineteen pounds eighty rather than twenty-six."
+        },
+        {
+          "speaker": "user",
+          "text": "Nineteen eighty is worth having. The card is in the name on the booking, R. Okonjo."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That matches what I have here. I can hold the seat for twenty minutes while you decide, and nothing is taken from the card until you confirm."
+        },
+        {
+          "speaker": "user",
+          "text": "No need, I am decided. I'll be at the Penrose stand for eight."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "source": "claude-opus-5-authored",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "You take it off at Birch Hill and put it on the second coach yourself.",
+          "role": "discharges the only open request"
+        },
+        {
+          "turn_index": 5,
+          "quote": "can you give me the change point and the second departure time?",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 6,
+          "quote": "Birch Hill, and the 11:40.",
+          "role": "requested read-back, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I want to get from Penrose to Hartley on the Tuesday, and I gather there is a change at Birch Hill. Does my case go straight through, or do I have to take it off at the change?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "You take it off at Birch Hill and put it on the second coach yourself. The 08:15 out of Penrose, then the 11:40 on to Hartley, in at half past two."
+        },
+        {
+          "speaker": "user",
+          "text": "Right, I take it off at Birch Hill and put it on the second coach myself. That is no bother for one change."
+        },
+        {
+          "speaker": "assistant",
+          "text": "With a coachcard it comes to nineteen pounds eighty rather than twenty-six."
+        },
+        {
+          "speaker": "user",
+          "text": "Nineteen eighty is worth having. The card is in the name on the booking, R. Okonjo."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That matches what I have here. Before I take the payment, can you give me the change point and the second departure time?"
+        },
+        {
+          "speaker": "user",
+          "text": "Birch Hill, and the 11:40. I'll be at the Penrose stand for eight."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "source": "claude-opus-5-authored",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "the 11:40, which is direct and in at half past two, and the 12:05, which loops through Weston",
+          "role": "two onward coaches from Birch Hill"
+        },
+        {
+          "turn_index": 5,
+          "quote": "The 11:40 and the 12:05 both have seats at the moment.",
+          "role": "both candidates re-activated immediately before the referring expression"
+        },
+        {
+          "turn_index": 6,
+          "quote": "put me on the Birch Hill connection",
+          "role": "the instruction still fits either coach"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm travelling Penrose to Hartley on the Tuesday and I gather there is a change at Birch Hill. What are my options for the onward leg?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Two coaches run on from Birch Hill: the 11:40, which is direct and in at half past two, and the 12:05, which loops through Weston and gets there at twenty to four."
+        },
+        {
+          "speaker": "user",
+          "text": "I would leave Penrose on the 08:15 either way. Does a coachcard bring the fare down?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "It takes it to nineteen pounds eighty rather than twenty-six, and the card has to be in the name on the booking."
+        },
+        {
+          "speaker": "user",
+          "text": "It is, R. Okonjo on both. My case will be going in the hold."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The hold takes a case that size without any trouble. The 11:40 and the 12:05 both have seats at the moment."
+        },
+        {
+          "speaker": "user",
+          "text": "Then put me on the Birch Hill connection and take the nineteen eighty from the card. I'll be at the Penrose stand for eight."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "source": "claude-opus-5-authored",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "It takes it to nineteen pounds eighty rather than twenty-six",
+          "role": "answers the coachcard request"
+        },
+        {
+          "turn_index": 6,
+          "quote": "put me on the 11:40 connection",
+          "role": "names the onward coach, closing the only open item"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm travelling Penrose to Hartley on the Tuesday and I gather there is a change at Birch Hill. What are my options for the onward leg?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Two coaches run on from Birch Hill: the 11:40, which is direct and in at half past two, and the 12:05, which loops through Weston and gets there at twenty to four."
+        },
+        {
+          "speaker": "user",
+          "text": "I would leave Penrose on the 08:15 either way. Does a coachcard bring the fare down?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "It takes it to nineteen pounds eighty rather than twenty-six, and the card has to be in the name on the booking."
+        },
+        {
+          "speaker": "user",
+          "text": "It is, R. Okonjo on both. My case will be going in the hold."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The hold takes a case that size without any trouble. The 11:40 and the 12:05 both have seats at the moment."
+        },
+        {
+          "speaker": "user",
+          "text": "Then put me on the 11:40 connection and take the nineteen eighty from the card. I'll be at the Penrose stand for eight."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "family_id": "transit_021",
+  "domain": "transit",
+  "task_goal": "collect pre-booked rail tickets from the machine at Latham Road when two bookings are held on the account",
+  "n_turns": 7,
+  "tail_anchor": "I'll be going past there on my way in.",
+  "notes": "rep_unres and rep_res differ only in 'that booking' versus 'the Doncaster one'. norep_unres and norep_res differ only in whether turn 1 answers the collection cut-off question.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 4,
+          "quote": "the single up to Doncaster and the return to Chester",
+          "role": "two live candidate bookings"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll collect that booking at the machine when I'm next passing, and leave the other one for now",
+          "role": "only one is being collected and the referring expression picks out neither"
+        },
+        {
+          "turn_index": 5,
+          "quote": "The machines at Latham Road are on the left as you come in, just past the barriers",
+          "role": "assistant does not disambiguate"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I've got tickets on my account to pick up from the machine at Latham Road. Can you tell me what I need to take with me?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "You'll need the booking reference and the card you paid with. There are two bookings sitting on the account at the moment."
+        },
+        {
+          "speaker": "user",
+          "text": "That'll be the single up to Doncaster and the return to Chester, both for next week."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can see them both. Either one can be printed at any machine on the network, not only at Latham Road."
+        },
+        {
+          "speaker": "user",
+          "text": "Right, the single up to Doncaster and the return to Chester. I'll collect that booking at the machine when I'm next passing, and leave the other one for now."
+        },
+        {
+          "speaker": "assistant",
+          "text": "No problem. The machines at Latham Road are on the left as you come in, just past the barriers, next to the coffee stand."
+        },
+        {
+          "speaker": "user",
+          "text": "That's useful, thank you. I'll be going past there on my way in."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "You'll need the booking reference and the card you paid with.",
+          "role": "answers the only request"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll collect the Doncaster one at the machine when I'm next passing",
+          "role": "the booking to collect is determined"
+        },
+        {
+          "turn_index": 5,
+          "quote": "read it back to me before you set off",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 6,
+          "quote": "Q as in Quebec, 4 7 2 9 3 1.",
+          "role": "requested read-back, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I've got tickets on my account to pick up from the machine at Latham Road. Can you tell me what I need to take with me?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "You'll need the booking reference and the card you paid with. There are two bookings sitting on the account at the moment."
+        },
+        {
+          "speaker": "user",
+          "text": "That'll be the single up to Doncaster and the return to Chester, both for next week."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can see them both. Either one can be printed at any machine on the network, not only at Latham Road."
+        },
+        {
+          "speaker": "user",
+          "text": "Right, the single up to Doncaster and the return to Chester. I'll collect the Doncaster one at the machine when I'm next passing, and leave the other one for now."
+        },
+        {
+          "speaker": "assistant",
+          "text": "No problem. The reference on that one is Q as in Quebec, 4 7 2 9 3 1 — read it back to me before you set off."
+        },
+        {
+          "speaker": "user",
+          "text": "Q as in Quebec, 4 7 2 9 3 1. I'll be going past there on my way in."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Is there a cut-off for collecting, or can I take them out right up to the day I travel?",
+          "role": "request"
+        },
+        {
+          "turn_index": 1,
+          "quote": "There's rarely a queue at that machine, so it's quick. You'll need the booking reference and the card you paid with.",
+          "role": "assistant turn that fails to answer"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Good enough. The machines there are on the left as you come in, just past the barriers.",
+          "role": "later assistant turn that still does not answer"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I've got tickets on my account to pick up from the machine at Latham Road. Is there a cut-off for collecting, or can I take them out right up to the day I travel?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "There's rarely a queue at that machine, so it's quick. You'll need the booking reference and the card you paid with."
+        },
+        {
+          "speaker": "user",
+          "text": "One is a single up to Doncaster, the other a return to Chester, both for next week. I'd sooner take them out separately than print the pair in one go."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That's fine, they don't have to come out together. Either one can be printed at any machine on the network, not only at Latham Road."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. I'll pick up the Doncaster single when I'm next passing and leave the Chester one until later."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Good enough. The machines there are on the left as you come in, just past the barriers."
+        },
+        {
+          "speaker": "user",
+          "text": "One booking at a time, not both together. I'll be going past there on my way in."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "You can collect right up to the day you travel.",
+          "role": "answers the only question"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I'd sooner take them out separately than print the pair in one go.",
+          "role": "the preference is stated"
+        },
+        {
+          "turn_index": 3,
+          "quote": "That's fine, they don't have to come out together.",
+          "role": "the preference is accepted here"
+        },
+        {
+          "turn_index": 6,
+          "quote": "One booking at a time, not both together.",
+          "role": "restated for emphasis after it was already accepted"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I've got tickets on my account to pick up from the machine at Latham Road. Is there a cut-off for collecting, or can I take them out right up to the day I travel?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "You can collect right up to the day you travel. You'll need the booking reference and the card you paid with."
+        },
+        {
+          "speaker": "user",
+          "text": "One is a single up to Doncaster, the other a return to Chester, both for next week. I'd sooner take them out separately than print the pair in one go."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That's fine, they don't have to come out together. Either one can be printed at any machine on the network, not only at Latham Road."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. I'll pick up the Doncaster single when I'm next passing and leave the Chester one until later."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Good enough. The machines there are on the left as you come in, just past the barriers."
+        },
+        {
+          "speaker": "user",
+          "text": "One booking at a time, not both together. I'll be going past there on my way in."
+        }
+      ]
+    }
+  }
+}

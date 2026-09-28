@@ -1,0 +1,86 @@
+{
+  "family_id": "cooking_015",
+  "domain": "cooking",
+  "task_goal": "set a lamb tagine going in the slow cooker before work so it is ready for the evening",
+  "n_turns": 7,
+  "tail_anchor": "The shopping is coming on Wednesday night.",
+  "notes": "rep_unres and rep_res differ by one word, high vs low, against a stated nine-hour unattended run; norep_unres and norep_res differ only by 'it' vs 'the 3.5 litre one' with two cookers live.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "Eight to nine hours on low, four to five on high.", "role": "stated cooking time for the high setting"},
+        {"turn_index": 4, "quote": "I'll set it to high when I leave at half seven, and nobody is in to switch it off until half four, so it runs the full nine hours.", "role": "the action puts it on high for nine hours"},
+        {"turn_index": 5, "quote": "Apricots are fine, they soften right down but they stay whole.", "role": "assistant moves on without reconciling the two"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I want to do a lamb tagine in the slow cooker on Thursday so it's ready when we get in. It's 1.2kg of diced shoulder with apricots and chickpeas. One thing: no coriander in it at all, my son won't go near the stuff."},
+        {"speaker": "assistant", "text": "Noted, no coriander. Brown the lamb in a frying pan first, then everything in with about 300ml of stock. Slow cookers lose hardly any liquid, so use less than the recipe asks for."},
+        {"speaker": "user", "text": "That's useful, I'd have drowned it. What does it want time-wise?"},
+        {"speaker": "assistant", "text": "Eight to nine hours on low, four to five on high. Tinned chickpeas go in for the last hour so they don't turn to mush."},
+        {"speaker": "user", "text": "I'll set it to high when I leave at half seven, and nobody is in to switch it off until half four, so it runs the full nine hours. Do the apricots hold up over that?"},
+        {"speaker": "assistant", "text": "Apricots are fine, they soften right down but they stay whole. Do the couscous at the last minute rather than in advance."},
+        {"speaker": "user", "text": "I'll leave the couscous until we're back in. No coriander in it at all, he won't go near the stuff. The shopping is coming on Wednesday night."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Noted, no coriander.", "role": "the preference was already accepted"},
+        {"turn_index": 5, "quote": "Apricots are fine, they soften right down but they stay whole.", "role": "discharges the last open request"},
+        {"turn_index": 6, "quote": "No coriander in it at all, he won't go near the stuff.", "role": "restating an accepted preference for emphasis"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I want to do a lamb tagine in the slow cooker on Thursday so it's ready when we get in. It's 1.2kg of diced shoulder with apricots and chickpeas. One thing: no coriander in it at all, my son won't go near the stuff."},
+        {"speaker": "assistant", "text": "Noted, no coriander. Brown the lamb in a frying pan first, then everything in with about 300ml of stock. Slow cookers lose hardly any liquid, so use less than the recipe asks for."},
+        {"speaker": "user", "text": "That's useful, I'd have drowned it. What does it want time-wise?"},
+        {"speaker": "assistant", "text": "Eight to nine hours on low, four to five on high. Tinned chickpeas go in for the last hour so they don't turn to mush."},
+        {"speaker": "user", "text": "I'll set it to low when I leave at half seven, and nobody is in to switch it off until half four, so it runs the full nine hours. Do the apricots hold up over that?"},
+        {"speaker": "assistant", "text": "Apricots are fine, they soften right down but they stay whole. Do the couscous at the last minute rather than in advance."},
+        {"speaker": "user", "text": "I'll leave the couscous until we're back in. No coriander in it at all, he won't go near the stuff. The shopping is coming on Wednesday night."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "There's the little 3.5 litre one we've had for years, and my sister left her 6.5 litre with us back in August.", "role": "two live candidate cookers"},
+        {"turn_index": 5, "quote": "The 6.5 litre runs a shade hotter than the 3.5 litre, so whichever you end up using", "role": "both candidates re-activated immediately before the reference"},
+        {"turn_index": 6, "quote": "I'll get it down off the shelf and give it a good wash tonight", "role": "the referent needed for the next action is not picked out"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I want to do a lamb tagine in the slow cooker on Thursday so it's ready when we get in. It's 1.2kg of diced shoulder with apricots and chickpeas."},
+        {"speaker": "assistant", "text": "Brown the lamb in a frying pan first, then everything in with stock. What size cooker have you got? They work best between half and three-quarters full."},
+        {"speaker": "user", "text": "We've got two. There's the little 3.5 litre one we've had for years, and my sister left her 6.5 litre with us back in August."},
+        {"speaker": "assistant", "text": "The 6.5 litre would sit under half full with that quantity; the 3.5 litre would be about three-quarters. Either is workable: in the big one cut the stock to 200ml, in the small one keep it at 300ml."},
+        {"speaker": "user", "text": "Fine. What does it want time-wise?"},
+        {"speaker": "assistant", "text": "Eight to nine hours on low, four to five on high. The 6.5 litre runs a shade hotter than the 3.5 litre, so whichever you end up using, look at it around the eight-hour mark."},
+        {"speaker": "user", "text": "I'll get it down off the shelf and give it a good wash tonight, then set it going on low before work. The shopping is coming on Wednesday night."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "in the big one cut the stock to 200ml, in the small one keep it at 300ml", "role": "both options fully specified"},
+        {"turn_index": 5, "quote": "Eight to nine hours on low, four to five on high.", "role": "discharges the last open request"},
+        {"turn_index": 6, "quote": "I'll get the 3.5 litre one down off the shelf", "role": "the referent for the next action is named"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I want to do a lamb tagine in the slow cooker on Thursday so it's ready when we get in. It's 1.2kg of diced shoulder with apricots and chickpeas."},
+        {"speaker": "assistant", "text": "Brown the lamb in a frying pan first, then everything in with stock. What size cooker have you got? They work best between half and three-quarters full."},
+        {"speaker": "user", "text": "We've got two. There's the little 3.5 litre one we've had for years, and my sister left her 6.5 litre with us back in August."},
+        {"speaker": "assistant", "text": "The 6.5 litre would sit under half full with that quantity; the 3.5 litre would be about three-quarters. Either is workable: in the big one cut the stock to 200ml, in the small one keep it at 300ml."},
+        {"speaker": "user", "text": "Fine. What does it want time-wise?"},
+        {"speaker": "assistant", "text": "Eight to nine hours on low, four to five on high. The 6.5 litre runs a shade hotter than the 3.5 litre, so whichever you end up using, look at it around the eight-hour mark."},
+        {"speaker": "user", "text": "I'll get the 3.5 litre one down off the shelf and give it a good wash tonight, then set it going on low before work. The shopping is coming on Wednesday night."}
+      ]
+    }
+  }
+}

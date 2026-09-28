@@ -1,0 +1,186 @@
+{
+  "family_id": "shopping_010",
+  "domain": "shopping",
+  "task_goal": "pre-order the signed edition of a novel from Quillon Books in time for a birthday",
+  "n_turns": 5,
+  "tail_anchor": "Take it off the same card as last time.",
+  "notes": "Signed copies leave the shop on the 3rd of October and arrive the following morning; the rep pair differs only in whether the party the book is needed for is on the 1st or the 8th. The norep pair differs only in whether turn 1 answers when the money is taken.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Those copies leave us on publication day, the 3rd of October, and reach most addresses the following morning.",
+          "role": "first side of the conflict"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I am giving it to my sister at her party on the 1st of October and it needs to be in my hands by then",
+          "role": "second side of the conflict, with the use it is needed for"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I will take the delivery address whenever you are ready.",
+          "role": "assistant proceeds without reconciling the dates"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Morning. I would like to pre-order the new Larkspur novel, and it has to be the signed edition rather than the plain hardback."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Happy to add you to the signed list. Those copies leave us on publication day, the 3rd of October, and reach most addresses the following morning."
+        },
+        {
+          "speaker": "user",
+          "text": "It has to be the signed edition rather than the plain hardback, since I am giving it to my sister at her party on the 1st of October and it needs to be in my hands by then."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted, signed only. I will take the delivery address whenever you are ready."
+        },
+        {
+          "speaker": "user",
+          "text": "It is 6 Marchbank Close, Ilkley. Take it off the same card as last time."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Happy to add you to the signed list.",
+          "role": "the preference is granted before it is restated"
+        },
+        {
+          "turn_index": 2,
+          "quote": "It has to be the signed edition rather than the plain hardback",
+          "role": "restated for emphasis, nothing left open"
+        },
+        {
+          "turn_index": 2,
+          "quote": "her party on the 8th of October",
+          "role": "consistent with a copy that leaves on the 3rd"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Morning. I would like to pre-order the new Larkspur novel, and it has to be the signed edition rather than the plain hardback."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Happy to add you to the signed list. Those copies leave us on publication day, the 3rd of October, and reach most addresses the following morning."
+        },
+        {
+          "speaker": "user",
+          "text": "It has to be the signed edition rather than the plain hardback, since I am giving it to my sister at her party on the 8th of October and it needs to be in my hands by then."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted, signed only. I will take the delivery address whenever you are ready."
+        },
+        {
+          "speaker": "user",
+          "text": "It is 6 Marchbank Close, Ilkley. Take it off the same card as last time."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "I would like to know whether the money is taken now or when it ships",
+          "role": "request"
+        },
+        {
+          "turn_index": 1,
+          "quote": "I can add you to the signed list today. Each copy comes with a bookplate signed at the Harrogate event in September.",
+          "role": "assistant turn that answers something else instead"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I have marked it for the first print run and the shop will email you when it leaves us.",
+          "role": "later assistant turn that still does not answer"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good morning. I would like to pre-order the new Larkspur novel in the signed edition, and I would like to know whether the money is taken now or when it ships."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can add you to the signed list today. Each copy comes with a bookplate signed at the Harrogate event in September."
+        },
+        {
+          "speaker": "user",
+          "text": "She will like that very much. The name to put on the order is Frances Ellery, and it goes to the Ilkley address you already hold."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I have marked it for the first print run and the shop will email you when it leaves us."
+        },
+        {
+          "speaker": "user",
+          "text": "That is grand. Take it off the same card as last time."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Nothing is taken until it ships.",
+          "role": "discharges the only open request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Read the name back to me so the label matches.",
+          "role": "assistant requests the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Frances Ellery.",
+          "role": "requested read-back, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good morning. I would like to pre-order the new Larkspur novel in the signed edition, and I would like to know whether the money is taken now or when it ships."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Nothing is taken until it ships. I can add you to the signed list today, and each copy comes with a bookplate signed at the Harrogate event in September."
+        },
+        {
+          "speaker": "user",
+          "text": "She will like that very much. The name to put on the order is Frances Ellery, and it goes to the Ilkley address you already hold."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I have marked it for the first print run. Read the name back to me so the label matches."
+        },
+        {
+          "speaker": "user",
+          "text": "Frances Ellery. Take it off the same card as last time."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "family_id": "appointment_024",
+  "domain": "appointment",
+  "task_goal": "book the induction session at Fairlop Leisure Centre and get the membership put on the right plan",
+  "n_turns": 5,
+  "tail_anchor": "It's a five-minute walk from my front door.",
+  "notes": "The two rep cells differ only in whether turn 1 opens by saying what the session covers; the restatement of the evenings-only preference in turn 2 is identical in both. The two norep cells share the assistant-requested read-back of the start date and differ only in the referring expression in turn 4, 'that one' against 'the off-peak', with two plans on the form and the direct debit waiting on a tick.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "I'd like to know what the session actually covers", "role": "request"},
+        {"turn_index": 1, "quote": "The inductions run on Tuesdays at seven, there's one free this week and another the Tuesday after.", "role": "assistant turn that gives times instead of answering"},
+        {"turn_index": 3, "quote": "Bring a towel and a pair of indoor trainers with you.", "role": "later assistant turn that still leaves the request open"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I've joined at Fairlop Leisure Centre and I need to book the induction session. I want an evening one, nothing at the weekend at all, and I'd like to know what the session actually covers."},
+        {"speaker": "assistant", "text": "Evenings only, no weekends, that's noted. The inductions run on Tuesdays at seven, there's one free this week and another the Tuesday after."},
+        {"speaker": "user", "text": "Tuesday at seven, please. And I'll say it plainly, I want an evening one, nothing at the weekend at all."},
+        {"speaker": "assistant", "text": "Tuesday at seven is yours, and the weekend is ruled out on your record. Bring a towel and a pair of indoor trainers with you."},
+        {"speaker": "user", "text": "I'll have both of those with me. It's a five-minute walk from my front door."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "It's a walk round the machines with an instructor, half an hour or so.", "role": "answers the only request"},
+        {"turn_index": 1, "quote": "Evenings only, no weekends, that's noted.", "role": "the preference has already been accepted"},
+        {"turn_index": 2, "quote": "And I'll say it plainly, I want an evening one, nothing at the weekend at all.", "role": "restatement for emphasis, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I've joined at Fairlop Leisure Centre and I need to book the induction session. I want an evening one, nothing at the weekend at all, and I'd like to know what the session actually covers."},
+        {"speaker": "assistant", "text": "It's a walk round the machines with an instructor, half an hour or so. Evenings only, no weekends, that's noted. The inductions run on Tuesdays at seven, there's one free this week."},
+        {"speaker": "user", "text": "Tuesday at seven, please. And I'll say it plainly, I want an evening one, nothing at the weekend at all."},
+        {"speaker": "assistant", "text": "Tuesday at seven is yours, and the weekend is ruled out on your record. Bring a towel and a pair of indoor trainers with you."},
+        {"speaker": "user", "text": "I'll have both of those with me. It's a five-minute walk from my front door."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "There are two plans on your form, the off-peak and the full", "role": "the two live candidates"},
+        {"turn_index": 3, "quote": "I can't set the direct debit up until one of them is ticked", "role": "one of the two has to be picked out before anything can proceed"},
+        {"turn_index": 4, "quote": "Put me on that one", "role": "referring expression that picks neither of the two out"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I've joined at Fairlop Leisure Centre and I need to book the induction session before I can use the place."},
+        {"speaker": "assistant", "text": "Congratulations. The inductions run on Tuesday evenings at seven and Saturday mornings at nine, and your membership starts on Monday the twenty-second either way."},
+        {"speaker": "user", "text": "Tuesday evening at seven, please. I'll be coming straight from work."},
+        {"speaker": "assistant", "text": "That's booked. There are two plans on your form, the off-peak and the full, and I can't set the direct debit up until one of them is ticked. Before I close this, say the start date back to me so I know it has gone in right."},
+        {"speaker": "user", "text": "Put me on that one, then, and the twenty-second is right. It's a five-minute walk from my front door."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "say the start date back to me so I know it has gone in right", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "the twenty-second is right", "role": "the requested read-back, not a sign of trouble"},
+        {"turn_index": 4, "quote": "Put me on the off-peak", "role": "names the plan, so the direct debit can be set up"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I've joined at Fairlop Leisure Centre and I need to book the induction session before I can use the place."},
+        {"speaker": "assistant", "text": "Congratulations. The inductions run on Tuesday evenings at seven and Saturday mornings at nine, and your membership starts on Monday the twenty-second either way."},
+        {"speaker": "user", "text": "Tuesday evening at seven, please. I'll be coming straight from work."},
+        {"speaker": "assistant", "text": "That's booked. There are two plans on your form, the off-peak and the full, and I can't set the direct debit up until one of them is ticked. Before I close this, say the start date back to me so I know it has gone in right."},
+        {"speaker": "user", "text": "Put me on the off-peak, then, and the twenty-second is right. It's a five-minute walk from my front door."}
+      ]
+    }
+  }
+}

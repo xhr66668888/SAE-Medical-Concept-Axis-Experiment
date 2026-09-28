@@ -1,0 +1,85 @@
+{
+  "family_id": "appointment_023",
+  "domain": "appointment",
+  "task_goal": "book the two signing appointments at Dowsett and Blake so a flat transfer can be witnessed",
+  "n_turns": 7,
+  "tail_anchor": "They will both be glad to get it over with.",
+  "notes": "The two rep cells share six turns, including an assistant-requested read-back of the two dates, and differ only in the opening clause of turn 6, where a name is needed against each slot and the user either supplies both or says 'she' and 'the other' with both sisters named in the turn before. The two norep cells differ only in whether turn 3 answers the witnessing-fee question before moving on to the dates.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "My two daughters, Nadia and Yusra", "role": "the two live candidates"},
+        {"turn_index": 5, "quote": "Nadia and Yusra will each want a passport or a driving licence with them.", "role": "both candidates named in the turn immediately before the referring expression"},
+        {"turn_index": 5, "quote": "I need a name against each slot before the appointment letters go out", "role": "a name has to be fixed against each slot for the next step"},
+        {"turn_index": 6, "quote": "She'll take the Thursday, then, and the other can have the Friday.", "role": "referring expressions that pick neither sister out"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Good morning. My two daughters, Nadia and Yusra, are buying a flat together and Dowsett and Blake need them in to sign the transfer. I'd like to get that booked."},
+        {"speaker": "assistant", "text": "Mr Blake witnesses signatures on Thursdays and Fridays. There's one slot left on Thursday the twelfth at half two, and Friday the thirteenth at ten is free."},
+        {"speaker": "user", "text": "Both of them work shifts, so take the Thursday at half two and the Friday at ten."},
+        {"speaker": "assistant", "text": "Each signing takes twenty minutes and they cannot be done together, the room only holds one signatory at a time. Could you read the two dates and times back to me?"},
+        {"speaker": "user", "text": "Thursday the twelfth at half two, and Friday the thirteenth at ten."},
+        {"speaker": "assistant", "text": "Nadia and Yusra will each want a passport or a driving licence with them. I need a name against each slot before the appointment letters go out."},
+        {"speaker": "user", "text": "She'll take the Thursday, then, and the other can have the Friday. They will both be glad to get it over with."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "Could you read the two dates and times back to me?", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "Thursday the twelfth at half two, and Friday the thirteenth at ten.", "role": "the requested read-back, not a sign of trouble"},
+        {"turn_index": 6, "quote": "Yusra will take the Thursday, then, and Nadia can have the Friday.", "role": "a name against each slot, so the letters can go out"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Good morning. My two daughters, Nadia and Yusra, are buying a flat together and Dowsett and Blake need them in to sign the transfer. I'd like to get that booked."},
+        {"speaker": "assistant", "text": "Mr Blake witnesses signatures on Thursdays and Fridays. There's one slot left on Thursday the twelfth at half two, and Friday the thirteenth at ten is free."},
+        {"speaker": "user", "text": "Both of them work shifts, so take the Thursday at half two and the Friday at ten."},
+        {"speaker": "assistant", "text": "Each signing takes twenty minutes and they cannot be done together, the room only holds one signatory at a time. Could you read the two dates and times back to me?"},
+        {"speaker": "user", "text": "Thursday the twelfth at half two, and Friday the thirteenth at ten."},
+        {"speaker": "assistant", "text": "Nadia and Yusra will each want a passport or a driving licence with them. I need a name against each slot before the appointment letters go out."},
+        {"speaker": "user", "text": "Yusra will take the Thursday, then, and Nadia can have the Friday. They will both be glad to get it over with."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "Is there a fee for the witnessing itself, or does it sit inside the conveyancing quote?", "role": "request"},
+        {"turn_index": 3, "quote": "I'll hold the twelfth and the thirteenth for you, and I'll drop a note on the file.", "role": "assistant turn that settles the dates instead and leaves the fee open"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Good morning. My two daughters are buying a flat together and Dowsett and Blake need them in to sign the transfer. I'd like to get that booked."},
+        {"speaker": "assistant", "text": "Mr Blake witnesses signatures on Thursdays and Fridays. I could put them in on the twelfth and the thirteenth, twenty minutes each."},
+        {"speaker": "user", "text": "That would suit us. Is there a fee for the witnessing itself, or does it sit inside the conveyancing quote?"},
+        {"speaker": "assistant", "text": "I'll hold the twelfth and the thirteenth for you, and I'll drop a note on the file. The room only takes one signatory at a time, so they will be coming in separately."},
+        {"speaker": "user", "text": "They can manage that between them, they only live round the corner from each other."},
+        {"speaker": "assistant", "text": "Good. Each of them should bring a passport or a driving licence, and I'll post the appointment letters out this afternoon."},
+        {"speaker": "user", "text": "That all sounds straightforward, thank you. They will both be glad to get it over with."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "There's no charge for the witnessing, it sits inside the quote.", "role": "answers the only request"},
+        {"turn_index": 5, "quote": "I'll post the appointment letters out this afternoon.", "role": "the task moves on with nothing left open"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Good morning. My two daughters are buying a flat together and Dowsett and Blake need them in to sign the transfer. I'd like to get that booked."},
+        {"speaker": "assistant", "text": "Mr Blake witnesses signatures on Thursdays and Fridays. I could put them in on the twelfth and the thirteenth, twenty minutes each."},
+        {"speaker": "user", "text": "That would suit us. Is there a fee for the witnessing itself, or does it sit inside the conveyancing quote?"},
+        {"speaker": "assistant", "text": "There's no charge for the witnessing, it sits inside the quote. I'll hold both dates for you. The room only takes one signatory at a time, so they will be coming in separately."},
+        {"speaker": "user", "text": "They can manage that between them, they only live round the corner from each other."},
+        {"speaker": "assistant", "text": "Good. Each of them should bring a passport or a driving licence, and I'll post the appointment letters out this afternoon."},
+        {"speaker": "user", "text": "That all sounds straightforward, thank you. They will both be glad to get it over with."}
+      ]
+    }
+  }
+}

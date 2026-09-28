@@ -1,0 +1,79 @@
+{
+  "family_id": "transit_020",
+  "domain": "transit",
+  "task_goal": "book a match-day park and ride place with the return shuttle on the same ticket",
+  "n_turns": 5,
+  "tail_anchor": "There'll be three of us in the car.",
+  "notes": "rep_unres and rep_res differ only in the kick off and finish times (four and half six, after the last shuttle / one and half three, before it). norep_unres and norep_res differ only in 'that site' versus 'Farthing Lane'.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "The last shuttle back from the ground leaves at six.", "role": "the shuttle stops running at six"},
+        {"turn_index": 2, "quote": "the match finishes at half six, and we'll walk out with everyone else and get the shuttle straight after the final whistle", "role": "conflicts with the last shuttle at six"},
+        {"turn_index": 3, "quote": "That's all on the one booking now.", "role": "assistant proceeds without reconciling the conflict"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, we're driving in for the Saturday match and want to use the park and ride. Can you book the parking and the return shuttle on one ticket, paid in advance?"},
+        {"speaker": "assistant", "text": "Yes, one ticket covers the car and the seats both ways. The last shuttle back from the ground leaves at six."},
+        {"speaker": "user", "text": "Good, book the parking and the return shuttle on one ticket, paid in advance. Kick off is at four and the match finishes at half six, and we'll walk out with everyone else and get the shuttle straight after the final whistle."},
+        {"speaker": "assistant", "text": "That's all on the one booking now. The barrier reads your plate on the way in, so there's nothing to print."},
+        {"speaker": "user", "text": "That's handy. There'll be three of us in the car."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Yes, one ticket covers the car and the seats both ways.", "role": "the request is accepted here"},
+        {"turn_index": 2, "quote": "book the parking and the return shuttle on one ticket, paid in advance", "role": "restated for emphasis after it was already accepted"},
+        {"turn_index": 2, "quote": "the match finishes at half three", "role": "consistent with the last shuttle at six"},
+        {"turn_index": 3, "quote": "That's all on the one booking now. The barrier reads your plate on the way in, so there's nothing to print.", "role": "discharges the last open item"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, we're driving in for the Saturday match and want to use the park and ride. Can you book the parking and the return shuttle on one ticket, paid in advance?"},
+        {"speaker": "assistant", "text": "Yes, one ticket covers the car and the seats both ways. The last shuttle back from the ground leaves at six."},
+        {"speaker": "user", "text": "Good, book the parking and the return shuttle on one ticket, paid in advance. Kick off is at one and the match finishes at half three, and we'll walk out with everyone else and get the shuttle straight after the final whistle."},
+        {"speaker": "assistant", "text": "That's all on the one booking now. The barrier reads your plate on the way in, so there's nothing to print."},
+        {"speaker": "user", "text": "That's handy. There'll be three of us in the car."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Orchard Park off the ring road, and Farthing Lane on the south side", "role": "two live candidate sites"},
+        {"turn_index": 2, "quote": "We'll leave the car at that site from about midday", "role": "referring expression picks out neither"},
+        {"turn_index": 3, "quote": "Fine. The barrier reads your plate on the way in, so there's nothing to print, and the shuttle runs every ten minutes.", "role": "assistant does not disambiguate"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, we're driving in for the Saturday match and want to use the park and ride. Which sites are open on a match day, and what does a car cost?"},
+        {"speaker": "assistant", "text": "Two of them run a shuttle on match days: Orchard Park off the ring road, and Farthing Lane on the south side. A car is six pounds either way."},
+        {"speaker": "user", "text": "That's useful. We'll leave the car at that site from about midday, take the bus in, and pick it up again in the early evening once the crowd has gone."},
+        {"speaker": "assistant", "text": "Fine. The barrier reads your plate on the way in, so there's nothing to print, and the shuttle runs every ten minutes."},
+        {"speaker": "user", "text": "That's handy. There'll be three of us in the car."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Two of them run a shuttle on match days: Orchard Park off the ring road, and Farthing Lane on the south side. A car is six pounds either way.", "role": "answers the only request"},
+        {"turn_index": 2, "quote": "We'll leave the car at Farthing Lane from about midday", "role": "the site is determined"},
+        {"turn_index": 3, "quote": "the shuttle runs every ten minutes", "role": "task proceeds with nothing left open"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, we're driving in for the Saturday match and want to use the park and ride. Which sites are open on a match day, and what does a car cost?"},
+        {"speaker": "assistant", "text": "Two of them run a shuttle on match days: Orchard Park off the ring road, and Farthing Lane on the south side. A car is six pounds either way."},
+        {"speaker": "user", "text": "That's useful. We'll leave the car at Farthing Lane from about midday, take the bus in, and pick it up again in the early evening once the crowd has gone."},
+        {"speaker": "assistant", "text": "Fine. The barrier reads your plate on the way in, so there's nothing to print, and the shuttle runs every ten minutes."},
+        {"speaker": "user", "text": "That's handy. There'll be three of us in the car."}
+      ]
+    }
+  }
+}

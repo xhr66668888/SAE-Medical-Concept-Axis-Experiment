@@ -1,0 +1,86 @@
+{
+  "family_id": "shopping_019",
+  "domain": "shopping",
+  "task_goal": "buy a Brantham stand mixer at Hensley's as a wedding present, part-paid from a gift card and sent straight to the couple",
+  "n_turns": 7,
+  "tail_anchor": "Leave the price off whatever goes in the box.",
+  "notes": "The rep pair differs by two words in turn 4, 'that one' against 'the Christmas one', with both gift cards named and levelled in turn 3. The norep pair differs by one clause in turn 1, which either answers the exchange question or answers only the delivery point.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "the one from March with £80 on it and the Christmas one with £150", "role": "two live candidates, named immediately before the referring expression"},
+        {"turn_index": 3, "quote": "either can be set against a single order", "role": "keeps both cards level, so neither is the topical winner"},
+        {"turn_index": 4, "quote": "Take what you can off that one", "role": "referring expression that picks out neither card"},
+        {"turn_index": 5, "quote": "I will apply that balance and take the difference from the debit card ending 2270", "role": "assistant charges the difference without establishing which card it came off"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I want to buy the Brantham stand mixer as a wedding present and have it sent straight to the couple in Wetherby."},
+        {"speaker": "assistant", "text": "Of course. The Brantham is £229 and there is no charge for a second address. Cream or sage?"},
+        {"speaker": "user", "text": "Cream, please. The address is 14 Sandbeck Lane, Wetherby, LS22 6PQ."},
+        {"speaker": "assistant", "text": "Got that. You have two Hensley's gift cards in the account, the one from March with £80 on it and the Christmas one with £150, and either can be set against a single order."},
+        {"speaker": "user", "text": "Right. Take what you can off that one and put the rest on my debit card."},
+        {"speaker": "assistant", "text": "Will do, I will apply that balance and take the difference from the debit card ending 2270. Read the delivery address back to me and I will lock the order down."},
+        {"speaker": "user", "text": "14 Sandbeck Lane, Wetherby, LS22 6PQ. Leave the price off whatever goes in the box."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 4, "quote": "Take what you can off the Christmas one", "role": "names the card, so the payment split is fixed"},
+        {"turn_index": 5, "quote": "Read the delivery address back to me", "role": "assistant asks for the repetition"},
+        {"turn_index": 6, "quote": "14 Sandbeck Lane, Wetherby, LS22 6PQ.", "role": "the requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I want to buy the Brantham stand mixer as a wedding present and have it sent straight to the couple in Wetherby."},
+        {"speaker": "assistant", "text": "Of course. The Brantham is £229 and there is no charge for a second address. Cream or sage?"},
+        {"speaker": "user", "text": "Cream, please. The address is 14 Sandbeck Lane, Wetherby, LS22 6PQ."},
+        {"speaker": "assistant", "text": "Got that. You have two Hensley's gift cards in the account, the one from March with £80 on it and the Christmas one with £150, and either can be set against a single order."},
+        {"speaker": "user", "text": "Right. Take what you can off the Christmas one and put the rest on my debit card."},
+        {"speaker": "assistant", "text": "Will do, I will apply that balance and take the difference from the debit card ending 2270. Read the delivery address back to me and I will lock the order down."},
+        {"speaker": "user", "text": "14 Sandbeck Lane, Wetherby, LS22 6PQ. Leave the price off whatever goes in the box."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "If it turns out not to suit them, can they change it without a receipt?", "role": "request"},
+        {"turn_index": 1, "quote": "Of course we can send it direct, and there is no charge for a second address.", "role": "assistant answers the delivery point only"},
+        {"turn_index": 5, "quote": "I will get the order confirmed", "role": "last assistant turn, still nothing said about changing it"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I want the Brantham stand mixer as a wedding present, sent straight to the couple in Wetherby. If it turns out not to suit them, can they change it without a receipt?"},
+        {"speaker": "assistant", "text": "Of course we can send it direct, and there is no charge for a second address. The Brantham is £229 in cream or sage."},
+        {"speaker": "user", "text": "Cream, then. The address is 14 Sandbeck Lane, Wetherby, LS22 6PQ."},
+        {"speaker": "assistant", "text": "Got that. I will put the order down for Wetherby and the tracking comes to your email."},
+        {"speaker": "user", "text": "Good. There is a Hensley's gift card in the account with £150 on it, so take what you can off that and put the rest on my debit card."},
+        {"speaker": "assistant", "text": "Done, that is £150 off the card and £79 from the debit card ending 2270. I will get the order confirmed."},
+        {"speaker": "user", "text": "Thank you. Leave the price off whatever goes in the box."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "a gift receipt lets them change it", "role": "discharges the only request in the dialogue"},
+        {"turn_index": 5, "quote": "that is £150 off the card and £79 from the debit card ending 2270", "role": "settles the last open item, the payment split"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I want the Brantham stand mixer as a wedding present, sent straight to the couple in Wetherby. If it turns out not to suit them, can they change it without a receipt?"},
+        {"speaker": "assistant", "text": "Of course we can send it direct, and a gift receipt lets them change it. The Brantham is £229 in cream or sage."},
+        {"speaker": "user", "text": "Cream, then. The address is 14 Sandbeck Lane, Wetherby, LS22 6PQ."},
+        {"speaker": "assistant", "text": "Got that. I will put the order down for Wetherby and the tracking comes to your email."},
+        {"speaker": "user", "text": "Good. There is a Hensley's gift card in the account with £150 on it, so take what you can off that and put the rest on my debit card."},
+        {"speaker": "assistant", "text": "Done, that is £150 off the card and £79 from the debit card ending 2270. I will get the order confirmed."},
+        {"speaker": "user", "text": "Thank you. Leave the price off whatever goes in the box."}
+      ]
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "family_id": "household_009",
+  "domain": "household",
+  "task_goal": "move the electricity account into two flatmates' names and settle how the winter bill is paid",
+  "n_turns": 5,
+  "tail_anchor": "The bill itself is in the folder under the telly.",
+  "notes": "rep_unres and rep_res differ by one word (thirtieth/twentieth) against a direct debit stated to leave on the twenty-eighth of the month, with the paying-in action and its claimed consequence both on the page. norep_unres and norep_res differ by one word (that one / Ruben's); turn 3 names both readings side by side and says either would do, so the demonstrative has no winner.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "The direct debit leaves the account on the twenty-eighth of the month.", "role": "the money is taken on the twenty-eighth"},
+        {"turn_index": 2, "quote": "I'll move my share in on the thirtieth of the month, so it will be sitting there when they take it", "role": "paying in on the thirtieth is after the twenty-eighth collection"},
+        {"turn_index": 3, "quote": "Sensible. I'll dig out the tenancy dates and send them a photo of the meter.", "role": "assistant proceeds without reconciling the conflict"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Ines, the electricity account is still in Ruben's name and the winter bill has landed. I'd like us to go halves from the day he moved out, not from the meter reading. Can we get it switched over?"},
+        {"speaker": "assistant", "text": "I rang them this morning and they will put both our names on from next month. Halving it from the day he moved out is only fair. The direct debit leaves the account on the twenty-eighth of the month."},
+        {"speaker": "user", "text": "Good. I'd like us to go halves from the day he moved out, not from the meter reading. I'll move my share in on the thirtieth of the month, so it will be sitting there when they take it."},
+        {"speaker": "assistant", "text": "Sensible. I'll dig out the tenancy dates and send them a photo of the meter."},
+        {"speaker": "user", "text": "That would help. The bill itself is in the folder under the telly."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "they will put both our names on from next month", "role": "answers the only open request"},
+        {"turn_index": 1, "quote": "Halving it from the day he moved out is only fair.", "role": "the stated preference is accepted"},
+        {"turn_index": 2, "quote": "I'll move my share in on the twentieth of the month, so it will be sitting there when they take it", "role": "the twentieth is before the twenty-eighth collection, so the plan holds"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Ines, the electricity account is still in Ruben's name and the winter bill has landed. I'd like us to go halves from the day he moved out, not from the meter reading. Can we get it switched over?"},
+        {"speaker": "assistant", "text": "I rang them this morning and they will put both our names on from next month. Halving it from the day he moved out is only fair. The direct debit leaves the account on the twenty-eighth of the month."},
+        {"speaker": "user", "text": "Good. I'd like us to go halves from the day he moved out, not from the meter reading. I'll move my share in on the twentieth of the month, so it will be sitting there when they take it."},
+        {"speaker": "assistant", "text": "Sensible. I'll dig out the tenancy dates and send them a photo of the meter."},
+        {"speaker": "user", "text": "That would help. The bill itself is in the folder under the telly."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Ruben left one written on the back of the envelope with his forwarding address", "role": "first live candidate reading"},
+        {"turn_index": 2, "quote": "I took one myself on Sunday night when the boiler was playing up", "role": "second live candidate reading"},
+        {"turn_index": 3, "quote": "Ruben's envelope figure is in my hand right now, and yours is stuck on the fridge door. They will take either, they only want one number.", "role": "both candidates named together and neither is preferred"},
+        {"turn_index": 4, "quote": "Then send them that one and they can work the rest out", "role": "referring expression that picks out neither reading"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Ines, the winter electricity bill has come and it is still in Ruben's name. Could we get the account put into ours?"},
+        {"speaker": "assistant", "text": "I rang them this morning and they will do it from next month. They want an opening reading, and Ruben left one written on the back of the envelope with his forwarding address."},
+        {"speaker": "user", "text": "I took one myself on Sunday night when the boiler was playing up, so there are two floating about, and neither of them is written down properly."},
+        {"speaker": "assistant", "text": "There are indeed. Ruben's envelope figure is in my hand right now, and yours is stuck on the fridge door. They will take either, they only want one number."},
+        {"speaker": "user", "text": "Then send them that one and they can work the rest out. The bill itself is in the folder under the telly."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "they will do it from next month", "role": "answers the only open request"},
+        {"turn_index": 4, "quote": "Then send them Ruben's and they can work the rest out", "role": "names the reading, so the next action is determined"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Ines, the winter electricity bill has come and it is still in Ruben's name. Could we get the account put into ours?"},
+        {"speaker": "assistant", "text": "I rang them this morning and they will do it from next month. They want an opening reading, and Ruben left one written on the back of the envelope with his forwarding address."},
+        {"speaker": "user", "text": "I took one myself on Sunday night when the boiler was playing up, so there are two floating about, and neither of them is written down properly."},
+        {"speaker": "assistant", "text": "There are indeed. Ruben's envelope figure is in my hand right now, and yours is stuck on the fridge door. They will take either, they only want one number."},
+        {"speaker": "user", "text": "Then send them Ruben's and they can work the rest out. The bill itself is in the folder under the telly."}
+      ]
+    }
+  }
+}

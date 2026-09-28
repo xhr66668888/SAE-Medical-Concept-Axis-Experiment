@@ -1,0 +1,186 @@
+{
+  "family_id": "cooking_017",
+  "domain": "cooking",
+  "task_goal": "bake a banana loaf with stand-ins for the buttermilk and the caster sugar the recipe asks for",
+  "n_turns": 5,
+  "tail_anchor": "The bananas have been on the side since Tuesday.",
+  "notes": "rep_unres and rep_res differ only in whether the assistant's first turn gives the fan-oven temperature; norep_unres and norep_res differ only by 'it' vs 'the muscovado' with two sugars live.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "so what temperature do I actually set it to?",
+          "role": "request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "so what temperature do I actually set it to?",
+          "role": "re-request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "A loaf of that size wants about fifty minutes, and a skewer in the middle should come out clean.",
+          "role": "assistant gives a time instead and leaves the temperature open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm making a banana loaf in a 2lb tin this afternoon and the recipe wants 150ml of buttermilk, which I don't have. The oven is a fan one and the recipe is written for a conventional oven, so what temperature do I actually set it to? No walnuts in it, half the family picks them out."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted, no walnuts. For the buttermilk, stir a tablespoon of lemon juice into 150ml of ordinary milk and leave it ten minutes; it curdles and behaves the same in the batter."
+        },
+        {
+          "speaker": "user",
+          "text": "Easy enough. The oven is a fan one and the recipe is written for a conventional oven, so what temperature do I actually set it to?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "A loaf of that size wants about fifty minutes, and a skewer in the middle should come out clean. Cover the top with foil if it colours early."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll keep some foil to hand. No walnuts in it, half the family picks them out. The bananas have been on the side since Tuesday."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "No walnuts in it, half the family picks them out.",
+          "role": "preference stated"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Noted, no walnuts. Knock 20 degrees off for a fan oven, so 160C instead of 180C.",
+          "role": "preference accepted and the temperature request answered"
+        },
+        {
+          "turn_index": 4,
+          "quote": "No walnuts in it, half the family picks them out.",
+          "role": "restating an accepted preference for emphasis"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm making a banana loaf in a 2lb tin this afternoon and the recipe wants 150ml of buttermilk, which I don't have. The oven is a fan one and the recipe is written for a conventional oven, so what temperature do I actually set it to? No walnuts in it, half the family picks them out."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted, no walnuts. Knock 20 degrees off for a fan oven, so 160C instead of 180C. For the buttermilk, stir a tablespoon of lemon juice into 150ml of ordinary milk and leave it ten minutes."
+        },
+        {
+          "speaker": "user",
+          "text": "160C it is, and there's a lemon in the bowl. How long should the loaf take at that temperature?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "A loaf of that size wants about fifty minutes, and a skewer in the middle should come out clean. Cover the top with foil if it colours early."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll keep some foil to hand. No walnuts in it, half the family picks them out. The bananas have been on the side since Tuesday."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "I've got a bag of light muscovado in the cupboard and a bag of demerara sitting next to it, both about half full.",
+          "role": "two live candidate sugars"
+        },
+        {
+          "turn_index": 3,
+          "quote": "The muscovado gives a softer, darker crumb; the demerara stays a bit gritty and leaves you a crunchy top.",
+          "role": "both candidates re-activated and neither picked"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll weigh it out now and cream it with the butter",
+          "role": "the sugar needed for the next action is under-determined"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm making a banana loaf in a 2lb tin this afternoon and the recipe wants 150ml of buttermilk, which I haven't got in the house. Is there something ordinary I can put in instead?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Stir a tablespoon of lemon juice into 150ml of ordinary milk and leave it ten minutes; it curdles slightly and behaves just the same in the batter. What sugar does the recipe ask for?"
+        },
+        {
+          "speaker": "user",
+          "text": "Caster, and there's none of that either. I've got a bag of light muscovado in the cupboard and a bag of demerara sitting next to it, both about half full."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Either will do, weight for weight. The muscovado gives a softer, darker crumb; the demerara stays a bit gritty and leaves you a crunchy top."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll weigh it out now and cream it with the butter before anything else goes in. The bananas have been on the side since Tuesday."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Stir a tablespoon of lemon juice into 150ml of ordinary milk and leave it ten minutes",
+          "role": "answers the opening request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Either will do, weight for weight.",
+          "role": "discharges the last open item"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll weigh the muscovado out now and cream it with the butter",
+          "role": "the sugar for the next action is named"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm making a banana loaf in a 2lb tin this afternoon and the recipe wants 150ml of buttermilk, which I haven't got in the house. Is there something ordinary I can put in instead?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Stir a tablespoon of lemon juice into 150ml of ordinary milk and leave it ten minutes; it curdles slightly and behaves just the same in the batter. What sugar does the recipe ask for?"
+        },
+        {
+          "speaker": "user",
+          "text": "Caster, and there's none of that either. I've got a bag of light muscovado in the cupboard and a bag of demerara sitting next to it, both about half full."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Either will do, weight for weight. The muscovado gives a softer, darker crumb; the demerara stays a bit gritty and leaves you a crunchy top."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll weigh the muscovado out now and cream it with the butter before anything else goes in. The bananas have been on the side since Tuesday."
+        }
+      ]
+    }
+  }
+}

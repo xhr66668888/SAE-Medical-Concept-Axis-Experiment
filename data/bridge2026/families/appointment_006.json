@@ -1,0 +1,181 @@
+{
+  "family_id": "appointment_006",
+  "domain": "appointment",
+  "task_goal": "arrange a fitting at an alterations shop for garments already left there",
+  "n_turns": 5,
+  "tail_anchor": "I'll come straight from the office.",
+  "notes": "rep_unres and rep_res are identical except for one word in turn 2: 'the sleeves', which fits either of the two garments on the rail, versus 'the jacket sleeves', which fits one. Both contain the same nine-token read-back that the shop explicitly asked for. norep_unres and norep_res differ only in whether turn 3 prices the job or talks about pressing instead.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "I left a navy suit jacket and a wool coat with you last week",
+          "role": "two live candidate garments"
+        },
+        {
+          "turn_index": 1,
+          "quote": "both are on the rail",
+          "role": "both candidates are still in play"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Could she take the sleeves up a touch while I am there?",
+          "role": "the referring expression picks neither garment"
+        },
+        {
+          "turn_index": 3,
+          "quote": "She can do that on the day.",
+          "role": "assistant agrees without establishing which garment"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello. I left a navy suit jacket and a wool coat with you last week, and I need to come in for a fitting."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Of course, both are on the rail. Elif has Friday at half four, or Saturday at eleven if the weekend is easier."
+        },
+        {
+          "speaker": "user",
+          "text": "Friday is better for me. Could she take the sleeves up a touch while I am there?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "She can do that on the day. Read back the Friday slot at half past four with Elif so I can log it."
+        },
+        {
+          "speaker": "user",
+          "text": "The Friday slot at half past four with Elif. I'll come straight from the office."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "She can do that on the day.",
+          "role": "discharges the only open request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Read back the Friday slot at half past four with Elif",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "The Friday slot at half past four with Elif.",
+          "role": "the requested read-back, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello. I left a navy suit jacket and a wool coat with you last week, and I need to come in for a fitting."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Of course, both are on the rail. Elif has Friday at half four, or Saturday at eleven if the weekend is easier."
+        },
+        {
+          "speaker": "user",
+          "text": "Friday is better for me. Could she take the jacket sleeves up a touch while I am there?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "She can do that on the day. Read back the Friday slot at half past four with Elif so I can log it."
+        },
+        {
+          "speaker": "user",
+          "text": "The Friday slot at half past four with Elif. I'll come straight from the office."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "What would you charge to shorten the coat sleeves?",
+          "role": "request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Elif will have both pieces pressed and hanging ready for you.",
+          "role": "assistant answers a different point instead"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello. I left a navy suit jacket and a wool coat with you last week, and I need to come in for a fitting."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Of course, both are on the rail. Elif has Friday at half four, or Saturday at eleven if the weekend is easier."
+        },
+        {
+          "speaker": "user",
+          "text": "Saturday would be easier, actually. What would you charge to shorten the coat sleeves?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Saturday at eleven, then. Elif will have both pieces pressed and hanging ready for you."
+        },
+        {
+          "speaker": "user",
+          "text": "That works nicely for me. I'll come straight from the office."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "What would you charge to shorten the coat sleeves?",
+          "role": "the only open request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Shortening the coat sleeves comes to twenty-four pounds in all.",
+          "role": "answers it and leaves nothing open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello. I left a navy suit jacket and a wool coat with you last week, and I need to come in for a fitting."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Of course, both are on the rail. Elif has Friday at half four, or Saturday at eleven if the weekend is easier."
+        },
+        {
+          "speaker": "user",
+          "text": "Saturday would be easier, actually. What would you charge to shorten the coat sleeves?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Saturday at eleven, then. Shortening the coat sleeves comes to twenty-four pounds in all."
+        },
+        {
+          "speaker": "user",
+          "text": "That works nicely for me. I'll come straight from the office."
+        }
+      ]
+    }
+  }
+}

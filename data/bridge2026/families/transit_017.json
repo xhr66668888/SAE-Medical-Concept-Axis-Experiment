@@ -1,0 +1,78 @@
+{
+  "family_id": "transit_017",
+  "domain": "transit",
+  "task_goal": "book a car for a quarter to six run to the Calder conference centre with a second pickup on the way",
+  "n_turns": 5,
+  "tail_anchor": "It's the flat above the bakery on Cross Street.",
+  "notes": "rep_unres and rep_res differ only in whether the barrier is locked until seven or unlocked from five, which decides whether the quarter to six pickup at the door can happen at all. norep_unres and norep_res differ only in whether turn 1 answers the waiting-time question.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Quarter to six from your place", "role": "the pickup is booked for quarter to six"},
+        {"turn_index": 2, "quote": "The barrier at the top of our road is locked until seven, and the driver has to come right up to the door for the boards.", "role": "conflicts with a quarter to six pickup at the door"},
+        {"turn_index": 3, "quote": "Understood. The fare is fixed in advance, so the extra stop doesn't change it.", "role": "assistant proceeds without reconciling the conflict"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. I need a car booked for Thursday, quarter to six from my place to the Calder conference centre, picking up a colleague on the way. Can you send an estate for the display boards?"},
+        {"speaker": "assistant", "text": "An estate is no trouble. Quarter to six from your place, then Priya at the corner of Halstead Road, and on to the conference centre."},
+        {"speaker": "user", "text": "Yes: quarter to six from my place, then Priya at the corner of Halstead Road, and on to the conference centre. The barrier at the top of our road is locked until seven, and the driver has to come right up to the door for the boards."},
+        {"speaker": "assistant", "text": "Understood. The fare is fixed in advance, so the extra stop doesn't change it."},
+        {"speaker": "user", "text": "That's good to know. It's the flat above the bakery on Cross Street."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "An estate is no trouble.", "role": "answers the only request"},
+        {"turn_index": 2, "quote": "The barrier at the top of our road is unlocked from five, and the driver can come right up to the door for the boards.", "role": "consistent with a quarter to six pickup at the door"},
+        {"turn_index": 3, "quote": "The fare is fixed in advance, so the extra stop doesn't change it.", "role": "discharges the last open item"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. I need a car booked for Thursday, quarter to six from my place to the Calder conference centre, picking up a colleague on the way. Can you send an estate for the display boards?"},
+        {"speaker": "assistant", "text": "An estate is no trouble. Quarter to six from your place, then Priya at the corner of Halstead Road, and on to the conference centre."},
+        {"speaker": "user", "text": "Yes: quarter to six from my place, then Priya at the corner of Halstead Road, and on to the conference centre. The barrier at the top of our road is unlocked from five, and the driver can come right up to the door for the boards."},
+        {"speaker": "assistant", "text": "Understood. The fare is fixed in advance, so the extra stop doesn't change it."},
+        {"speaker": "user", "text": "That's good to know. It's the flat above the bakery on Cross Street."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Is waiting time at the second stop charged on top?", "role": "request"},
+        {"turn_index": 1, "quote": "I can get that booked. Let me have the second address and I'll add it to the job, along with the drop at the conference centre.", "role": "assistant turn that fails to answer"},
+        {"turn_index": 3, "quote": "The card on your account is charged when the ride finishes, and a receipt goes to your email.", "role": "later assistant turn that still does not answer"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. I need a car booked for Thursday, quarter to six from my place to the Calder conference centre, picking up a colleague on the way. Is waiting time at the second stop charged on top?"},
+        {"speaker": "assistant", "text": "I can get that booked. Let me have the second address and I'll add it to the job, along with the drop at the conference centre."},
+        {"speaker": "user", "text": "It's Priya, on the corner of Halstead Road by the postbox, just past the pub. She'll be standing outside with two crates."},
+        {"speaker": "assistant", "text": "Added, with the drop at the centre after it. The card on your account is charged when the ride finishes, and a receipt goes to your email."},
+        {"speaker": "user", "text": "That's good to know, thanks. It's the flat above the bakery on Cross Street."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Waiting time is included for the first five minutes at each stop.", "role": "answers the only request"},
+        {"turn_index": 3, "quote": "Read the pickup time back to me and I'll send the job over to the driver.", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "Quarter to six on Thursday.", "role": "requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. I need a car booked for Thursday, quarter to six from my place to the Calder conference centre, picking up a colleague on the way. Is waiting time at the second stop charged on top?"},
+        {"speaker": "assistant", "text": "Waiting time is included for the first five minutes at each stop. Let me have the second address and I'll add it to the job."},
+        {"speaker": "user", "text": "It's Priya, on the corner of Halstead Road by the postbox, just past the pub. She'll be standing outside with two crates."},
+        {"speaker": "assistant", "text": "Added, with the drop at the centre after it. Read the pickup time back to me and I'll send the job over to the driver."},
+        {"speaker": "user", "text": "Quarter to six on Thursday. It's the flat above the bakery on Cross Street."}
+      ]
+    }
+  }
+}

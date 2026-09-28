@@ -1,0 +1,227 @@
+{
+  "family_id": "transit_007",
+  "domain": "transit",
+  "task_goal": "work out a Sunday journey from Millbrook to Carlton while the line is closed and a coach replaces the train",
+  "n_turns": 7,
+  "tail_anchor": "I'll print the ticket out tonight.",
+  "notes": "norep_unres and norep_res differ by one word, 'seven' against 'five', in the hour the traveller's session ends, set against the 18:40 last coach they say they are coming home on. The rep pair differs only in whether turn 1 answers the connection question; a near-verbatim echo of six or more words sits in both cells.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "source": "claude-opus-5-authored",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Will the coach wait if the train out of Millbrook runs late?",
+          "role": "request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Will the coach wait if the train out of Millbrook runs late?",
+          "role": "re-request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Your advance ticket stays valid on the coach, so there is nothing to re-book.",
+          "role": "assistant turn that answers a different point and leaves the request open"
+        },
+        {
+          "turn_index": 5,
+          "quote": "The coach is timetabled into Carlton at 10:55, which leaves you a fair margin.",
+          "role": "last assistant turn, still no answer on whether the coach waits"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I'm going from Millbrook to Carlton this Sunday and the line is shut past Deighton. Will the coach wait if the train out of Millbrook runs late?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Buses replace trains between Deighton and Carlton all day Sunday. The 09:04 out of Millbrook is the one to aim for, with the coach away at 09:50."
+        },
+        {
+          "speaker": "user",
+          "text": "The 09:50 suits me. Will the coach wait if the train out of Millbrook runs late?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Your advance ticket stays valid on the coach, so there is nothing to re-book."
+        },
+        {
+          "speaker": "user",
+          "text": "Good, that is one job less. I have to be at the conference centre on Mill Lane by half past eleven."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The coach is timetabled into Carlton at 10:55, which leaves you a fair margin."
+        },
+        {
+          "speaker": "user",
+          "text": "That should be plenty. I'll print the ticket out tonight."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "source": "claude-opus-5-authored",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "The coach waits for the connecting train, so a late run is covered.",
+          "role": "discharges the only open request"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Could you read the two departure times back for me?",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 6,
+          "quote": "The 09:04 and then the 09:50.",
+          "role": "requested read-back, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I'm going from Millbrook to Carlton this Sunday and the line is shut past Deighton. Will the coach wait if the train out of Millbrook runs late?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The coach waits for the connecting train, so a late run is covered. The 09:04 out of Millbrook is the one to aim for, with the coach away at 09:50."
+        },
+        {
+          "speaker": "user",
+          "text": "The 09:50 suits me, and it helps that the coach waits for the connecting train."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Your advance ticket stays valid on the coach, so there is nothing to re-book."
+        },
+        {
+          "speaker": "user",
+          "text": "Good, that is one job less. I have to be at the conference centre on Mill Lane by half past eleven."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The coach is timetabled into Carlton at 10:55. Could you read the two departure times back for me?"
+        },
+        {
+          "speaker": "user",
+          "text": "The 09:04 and then the 09:50. I'll print the ticket out tonight."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "source": "claude-opus-5-authored",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "The last coach back out of Carlton goes at 18:40",
+          "role": "the only coach home leaves at 18:40"
+        },
+        {
+          "turn_index": 4,
+          "quote": "until seven in the evening, and that last coach is how I get home",
+          "role": "the traveller is still in the session when that coach goes, and names it as their only way home"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Understood. I have put a note on the booking with your mobile number.",
+          "role": "assistant proceeds without reconciling the clash"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm heading to Carlton from Millbrook this Sunday and the line is shut past Deighton. How does that work for the morning?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Buses replace trains between Deighton and Carlton all day. The 09:04 out of Millbrook meets a coach that gets in at 10:55."
+        },
+        {
+          "speaker": "user",
+          "text": "That puts me on Mill Lane in good time. What about the way home?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The last coach back out of Carlton goes at 18:40, and it meets the 19:25 train at Deighton."
+        },
+        {
+          "speaker": "user",
+          "text": "Right. I am in the session at the conference centre until seven in the evening, and that last coach is how I get home."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. I have put a note on the booking with your mobile number."
+        },
+        {
+          "speaker": "user",
+          "text": "That is fine by me. I'll print the ticket out tonight."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "source": "claude-opus-5-authored",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "The 09:04 out of Millbrook meets a coach that gets in at 10:55.",
+          "role": "answers the outward request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "The last coach back out of Carlton goes at 18:40",
+          "role": "answers the request about the way home"
+        },
+        {
+          "turn_index": 4,
+          "quote": "until five in the evening, and that last coach is how I get home",
+          "role": "consistent with the 18:40 coach"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm heading to Carlton from Millbrook this Sunday and the line is shut past Deighton. How does that work for the morning?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Buses replace trains between Deighton and Carlton all day. The 09:04 out of Millbrook meets a coach that gets in at 10:55."
+        },
+        {
+          "speaker": "user",
+          "text": "That puts me on Mill Lane in good time. What about the way home?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The last coach back out of Carlton goes at 18:40, and it meets the 19:25 train at Deighton."
+        },
+        {
+          "speaker": "user",
+          "text": "Right. I am in the session at the conference centre until five in the evening, and that last coach is how I get home."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. I have put a note on the booking with your mobile number."
+        },
+        {
+          "speaker": "user",
+          "text": "That is fine by me. I'll print the ticket out tonight."
+        }
+      ]
+    }
+  }
+}

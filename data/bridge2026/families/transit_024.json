@@ -1,0 +1,78 @@
+{
+  "family_id": "transit_024",
+  "domain": "transit",
+  "task_goal": "book a car club vehicle from a street bay for a Saturday run out to Bakewell and back",
+  "n_turns": 5,
+  "tail_anchor": "I'm booking it under Ruth Ellery.",
+  "notes": "rep_unres and rep_res differ only in 'that bay' versus 'the Lister Street bay'. norep_unres and norep_res differ only in when the car gets back over the bridge (much before seven / by about five) against a six o'clock return deadline.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "the Lister Street bay and the Corn Exchange bay", "role": "two live candidate bays"},
+        {"turn_index": 2, "quote": "I'll pick it up from that bay on my way past", "role": "referring expression picks out neither"},
+        {"turn_index": 3, "quote": "That's ten hours, which puts you on the day rate rather than the hourly one.", "role": "assistant does not disambiguate"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, I want a car club booking for Saturday, out to Bakewell and back, from eight in the morning until six in the evening."},
+        {"speaker": "assistant", "text": "Two bays have a car free for the whole of that day: the Lister Street bay and the Corn Exchange bay, and both are a few minutes' walk from you. Shall I hold one of them?"},
+        {"speaker": "user", "text": "Please do — from eight in the morning until six in the evening, and I'll pick it up from that bay on my way past."},
+        {"speaker": "assistant", "text": "That's ten hours, which puts you on the day rate rather than the hourly one. The fuel card lives in the glovebox and the mileage logs itself."},
+        {"speaker": "user", "text": "That's good to know. I'm booking it under Ruth Ellery."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Two bays have a car free for the whole of that day", "role": "answers the only request"},
+        {"turn_index": 2, "quote": "I'll pick it up from the Lister Street bay on my way past", "role": "the bay is determined"},
+        {"turn_index": 3, "quote": "The fuel card lives in the glovebox and the mileage logs itself.", "role": "discharges the last open item"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, I want a car club booking for Saturday, out to Bakewell and back, from eight in the morning until six in the evening."},
+        {"speaker": "assistant", "text": "Two bays have a car free for the whole of that day: the Lister Street bay and the Corn Exchange bay, and both are a few minutes' walk from you. Shall I hold one of them?"},
+        {"speaker": "user", "text": "Please do — from eight in the morning until six in the evening, and I'll pick it up from the Lister Street bay on my way past."},
+        {"speaker": "assistant", "text": "That's ten hours, which puts you on the day rate rather than the hourly one. The fuel card lives in the glovebox and the mileage logs itself."},
+        {"speaker": "user", "text": "That's good to know. I'm booking it under Ruth Ellery."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "it must be back in its own bay by six on the dot, because another member takes it at quarter past", "role": "the car has to be returned by six"},
+        {"turn_index": 2, "quote": "We won't get back over the bridge much before seven, so I'll drop it into the bay when we do and walk home.", "role": "conflicts with the six o'clock return"},
+        {"turn_index": 3, "quote": "Right you are. The fuel card lives in the glovebox and the mileage logs itself.", "role": "assistant proceeds without reconciling the conflict"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, I want a car club booking for Saturday, out to Bakewell and back, from eight in the morning until six in the evening. Put it on the account card rather than charging it separately."},
+        {"speaker": "assistant", "text": "That's all on the account card, nothing separate. There's a car free all day, but it must be back in its own bay by six on the dot, because another member takes it at quarter past. Shall I hold it?"},
+        {"speaker": "user", "text": "Please do. We won't get back over the bridge much before seven, so I'll drop it into the bay when we do and walk home."},
+        {"speaker": "assistant", "text": "Right you are. The fuel card lives in the glovebox and the mileage logs itself."},
+        {"speaker": "user", "text": "Straight onto the account, nothing charged separately. I'm booking it under Ruth Ellery."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "That's all on the account card, nothing separate.", "role": "the preference is accepted here"},
+        {"turn_index": 2, "quote": "We should be back over the bridge by about five, so I'll drop it into the bay when we do and walk home.", "role": "consistent with the six o'clock return"},
+        {"turn_index": 4, "quote": "Straight onto the account, nothing charged separately.", "role": "restated for emphasis after it was already accepted"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, I want a car club booking for Saturday, out to Bakewell and back, from eight in the morning until six in the evening. Put it on the account card rather than charging it separately."},
+        {"speaker": "assistant", "text": "That's all on the account card, nothing separate. There's a car free all day, but it must be back in its own bay by six on the dot, because another member takes it at quarter past. Shall I hold it?"},
+        {"speaker": "user", "text": "Please do. We should be back over the bridge by about five, so I'll drop it into the bay when we do and walk home."},
+        {"speaker": "assistant", "text": "Right you are. The fuel card lives in the glovebox and the mileage logs itself."},
+        {"speaker": "user", "text": "Straight onto the account, nothing charged separately. I'm booking it under Ruth Ellery."}
+      ]
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "family_id": "shopping_015",
+  "domain": "shopping",
+  "task_goal": "trade an old tablet in against a new Kilnbrook Slate 11 and settle how the trade-in credit is applied",
+  "n_turns": 5,
+  "tail_anchor": "Drop me an email rather than a text, if you would.",
+  "notes": "norep_unres and norep_res differ by one token (12th/30th): the online trade-in quote either dies before or outlives the 18th collection date on which the user says the old tablet is handed over.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Does the trade-in credit come off at the till, or does it get paid back afterwards?", "role": "request"},
+        {"turn_index": 2, "quote": "Does the trade-in credit come off at the till, or does it get paid back afterwards?", "role": "re-request"},
+        {"turn_index": 3, "quote": "The Slate 11 comes in slate grey or sand", "role": "assistant turn that answers a different point and never says how the credit is applied"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. I'd like to trade my old tablet in against a new Kilnbrook Slate 11. Does the trade-in credit come off at the till, or does it get paid back afterwards?"},
+        {"speaker": "assistant", "text": "Happy to sort that out for you. Your old model is worth about £120 on this month's list, and the Slate 11 is £399."},
+        {"speaker": "user", "text": "That seems fair enough. Does the trade-in credit come off at the till, or does it get paid back afterwards?"},
+        {"speaker": "assistant", "text": "Noted. The Slate 11 comes in slate grey or sand, and I have both of those here in the back."},
+        {"speaker": "user", "text": "Slate grey for me, then. Drop me an email rather than a text, if you would."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "The credit comes off at the till, so you only pay the difference", "role": "discharges the only open request"},
+        {"turn_index": 3, "quote": "Could you read the model and the colour back to me", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "Slate 11 in slate grey.", "role": "the requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. I'd like to trade my old tablet in against a new Kilnbrook Slate 11. Does the trade-in credit come off at the till, or does it get paid back afterwards?"},
+        {"speaker": "assistant", "text": "Happy to sort that out for you. The credit comes off at the till, so you only pay the difference — £120 against the £399 for the Slate 11."},
+        {"speaker": "user", "text": "That seems fair enough, and it helps to know the credit comes off at the till. I'll take the slate grey one."},
+        {"speaker": "assistant", "text": "Noted. Could you read the model and the colour back to me before I write the order up?"},
+        {"speaker": "user", "text": "Slate 11 in slate grey. Drop me an email rather than a text, if you would."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "the next batch reaches us on the 18th", "role": "the only date the new tablet can be collected"},
+        {"turn_index": 2, "quote": "I'll collect it on the 18th and hand the old tablet across the counter at the same time", "role": "ties the trade-in itself to the 18th"},
+        {"turn_index": 2, "quote": "The online quote for mine runs out on the 12th, and that's the figure I'm banking on", "role": "conflicts: the quoted credit is dead six days before the handover"},
+        {"turn_index": 3, "quote": "I'll hold one back from that batch under your name", "role": "assistant proceeds without reconciling the two dates"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. I'd like to put my old tablet towards a new Kilnbrook Slate 11. What sort of figure would I get for the old one?"},
+        {"speaker": "assistant", "text": "About £120 on this month's list, and the Slate 11 itself is £399. There isn't one on the shelf today, though — the next batch reaches us on the 18th."},
+        {"speaker": "user", "text": "Fine. I'll collect it on the 18th and hand the old tablet across the counter at the same time. The online quote for mine runs out on the 12th, and that's the figure I'm banking on."},
+        {"speaker": "assistant", "text": "Right, I'll hold one back from that batch under your name. Slate grey or sand?"},
+        {"speaker": "user", "text": "Slate grey, thank you. Drop me an email rather than a text, if you would."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "About £120 on this month's list", "role": "answers the user's only request"},
+        {"turn_index": 2, "quote": "The online quote for mine runs out on the 30th", "role": "still live on the 18th, so the quoted credit holds"},
+        {"turn_index": 4, "quote": "Slate grey, thank you.", "role": "discharges the last open item, the colour"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. I'd like to put my old tablet towards a new Kilnbrook Slate 11. What sort of figure would I get for the old one?"},
+        {"speaker": "assistant", "text": "About £120 on this month's list, and the Slate 11 itself is £399. There isn't one on the shelf today, though — the next batch reaches us on the 18th."},
+        {"speaker": "user", "text": "Fine. I'll collect it on the 18th and hand the old tablet across the counter at the same time. The online quote for mine runs out on the 30th, and that's the figure I'm banking on."},
+        {"speaker": "assistant", "text": "Right, I'll hold one back from that batch under your name. Slate grey or sand?"},
+        {"speaker": "user", "text": "Slate grey, thank you. Drop me an email rather than a text, if you would."}
+      ]
+    }
+  }
+}

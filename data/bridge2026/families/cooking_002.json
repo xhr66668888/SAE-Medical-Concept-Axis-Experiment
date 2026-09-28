@@ -1,0 +1,218 @@
+{
+  "family_id": "cooking_002",
+  "domain": "cooking",
+  "task_goal": "plan a Sunday batch cook of two freezer soups and a shopping list for one of them",
+  "n_turns": 7,
+  "tail_anchor": "The veg shop is my first stop on Saturday.",
+  "notes": "Both rep cells carry the same emphasis repetition, so the repetition is decorrelated from the state: rep_unres and rep_res differ only in 'the soup' against 'the parsnip' while both soups stay live. The norep pair differs only in the first clause of turn 3, which either answers the glass-jar question or does not.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "a carrot and coriander and a spiced parsnip",
+          "role": "two candidate soups are live"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll make the soup this weekend and leave the other until November",
+          "role": "neither expression picks one of the two"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Three kilos of veg, two onions, a head of garlic",
+          "role": "assistant builds the list without establishing which soup"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Sunday I'm batch cooking two soups for the freezer, a carrot and coriander and a spiced parsnip. They both need to be thick enough to stand a spoon in. How many tubs will six litres fill?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Thick enough to stand a spoon in, noted. At 400ml a tub, six litres fills fifteen of them."
+        },
+        {
+          "speaker": "user",
+          "text": "Fifteen tubs is plenty. And I do mean it about the texture, thick enough to stand a spoon in, please."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. Shall I put a shopping list together for you?"
+        },
+        {
+          "speaker": "user",
+          "text": "Please do, but just for one batch. I'll make the soup this weekend and leave the other until November."
+        },
+        {
+          "speaker": "assistant",
+          "text": "One batch it is, then. Three kilos of veg, two onions, a head of garlic and a litre and a half of stock."
+        },
+        {
+          "speaker": "user",
+          "text": "Three kilos of veg, two onions, a head of garlic. The veg shop is my first stop on Saturday."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "They both need to be thick enough to stand a spoon in",
+          "role": "preference stated"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Thick enough to stand a spoon in, noted",
+          "role": "preference already taken on board"
+        },
+        {
+          "turn_index": 2,
+          "quote": "thick enough to stand a spoon in, please",
+          "role": "restated for emphasis, nothing new is opened"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll make the parsnip this weekend",
+          "role": "picks one of the two soups"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Sunday I'm batch cooking two soups for the freezer, a carrot and coriander and a spiced parsnip. They both need to be thick enough to stand a spoon in. How many tubs will six litres fill?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Thick enough to stand a spoon in, noted. At 400ml a tub, six litres fills fifteen of them."
+        },
+        {
+          "speaker": "user",
+          "text": "Fifteen tubs is plenty. And I do mean it about the texture, thick enough to stand a spoon in, please."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. Shall I put a shopping list together for you?"
+        },
+        {
+          "speaker": "user",
+          "text": "Please do, but just for one batch. I'll make the parsnip this weekend and leave the other until November."
+        },
+        {
+          "speaker": "assistant",
+          "text": "One batch it is, then. Three kilos of veg, two onions, a head of garlic and a litre and a half of stock."
+        },
+        {
+          "speaker": "user",
+          "text": "Three kilos of veg, two onions, a head of garlic. The veg shop is my first stop on Saturday."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "Are glass jars safe to freeze soup in, or am I better off with plastic?",
+          "role": "request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Cool them right down before they go anywhere near the freezer",
+          "role": "assistant answers about cooling and stacking and moves on"
+        },
+        {
+          "turn_index": 5,
+          "quote": "For a single batch you want three kilos of veg",
+          "role": "last assistant turn, still nothing on glass against plastic"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Sunday I'm batch cooking two soups for the freezer, a carrot and coriander and a spiced parsnip. They both need to be thick enough to stand a spoon in. How many tubs will six litres fill?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Nice and thick, understood. At 400ml a tub, six litres fills fifteen of them."
+        },
+        {
+          "speaker": "user",
+          "text": "Fifteen will do us nicely. Are glass jars safe to freeze soup in, or am I better off with plastic?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Cool them right down before they go anywhere near the freezer, and they will stack much better once they are solid."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll make the carrot one this weekend and leave the parsnip until the end of November."
+        },
+        {
+          "speaker": "assistant",
+          "text": "For a single batch you want three kilos of veg, two onions, a head of garlic and a litre and a half of stock."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll add the garlic to the list tonight. The veg shop is my first stop on Saturday."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "Glass is safe if you leave headroom, so either will do",
+          "role": "answers the last open request"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll make the carrot one this weekend and leave the parsnip until the end of November.",
+          "role": "both soups are placed, so the list has a referent"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Sunday I'm batch cooking two soups for the freezer, a carrot and coriander and a spiced parsnip. They both need to be thick enough to stand a spoon in. How many tubs will six litres fill?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Nice and thick, understood. At 400ml a tub, six litres fills fifteen of them."
+        },
+        {
+          "speaker": "user",
+          "text": "Fifteen will do us nicely. Are glass jars safe to freeze soup in, or am I better off with plastic?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Glass is safe if you leave headroom, so either will do, and they will stack much better once they are solid."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll make the carrot one this weekend and leave the parsnip until the end of November."
+        },
+        {
+          "speaker": "assistant",
+          "text": "For a single batch you want three kilos of veg, two onions, a head of garlic and a litre and a half of stock."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll add the garlic to the list tonight. The veg shop is my first stop on Saturday."
+        }
+      ]
+    }
+  }
+}

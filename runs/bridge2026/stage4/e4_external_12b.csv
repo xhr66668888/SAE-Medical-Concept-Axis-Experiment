@@ -1,0 +1,4 @@
+arm,n,n_resolved,n_unresolved,false_alarm,false_alarm_lo,false_alarm_hi,false_alarm_rep,n_rep_resolved,false_alarm_norep,n_norep_resolved,hit_rate_on_3_unresolved,mean_score
+original,100,97,3,1.0,1.0,1.0,1.0,49,1.0,48,1.0,10.39655200438487
+prompt_only,100,97,3,1.0,1.0,1.0,1.0,49,1.0,48,1.0,10.147005115341019
+dense_axis(a=+2),100,97,3,1.0,1.0,1.0,1.0,49,1.0,48,1.0,8.73571237011467

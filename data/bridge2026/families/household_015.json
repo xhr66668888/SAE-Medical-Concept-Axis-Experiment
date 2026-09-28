@@ -1,0 +1,186 @@
+{
+  "family_id": "household_015",
+  "domain": "household",
+  "task_goal": "share a holiday cottage with another family and settle beds, deposit and parking",
+  "n_turns": 5,
+  "tail_anchor": "I'll forward the booking email tonight.",
+  "notes": "norep_unres and norep_res differ by one word (eight/nine) in the stated capacity, with the head count and the decision that everyone sleeps in the cottage both spelled out.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Is the deposit one payment per household or is it split by heads?",
+          "role": "request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Is the deposit one payment per household or is it split by heads?",
+          "role": "re-request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I will get Marek to ring the owner about the parking; he says there is only room for two cars in the yard.",
+          "role": "assistant turn that fails to answer"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Dawn, I have put a hold on the cottage at Alnmouth for the last weekend in May. I would like the bunk room for our two, if that suits. Is the deposit one payment per household or is it split by heads?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The bunk room is all yours, ours will not sleep in one. There are five of us now, Marek's brother is coming up from Durham on the Friday."
+        },
+        {
+          "speaker": "user",
+          "text": "Five is no trouble at all. Is the deposit one payment per household or is it split by heads?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I will get Marek to ring the owner about the parking; he says there is only room for two cars in the yard."
+        },
+        {
+          "speaker": "user",
+          "text": "Two cars will do us between the lot of us. I'll forward the booking email tonight."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "It is one payment per household whatever the number, so we each put down ninety",
+          "role": "answers the only open request"
+        },
+        {
+          "turn_index": 1,
+          "quote": "The bunk room is all yours",
+          "role": "the stated preference is accepted"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I would like the bunk room for our two",
+          "role": "restatement for emphasis of an accepted preference"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Dawn, I have put a hold on the cottage at Alnmouth for the last weekend in May. I would like the bunk room for our two, if that suits. Is the deposit one payment per household or is it split by heads?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The bunk room is all yours, ours will not sleep in one. It is one payment per household whatever the number, so we each put down ninety."
+        },
+        {
+          "speaker": "user",
+          "text": "That is easier all round. I would like the bunk room for our two, because the small one still rolls out of a big bed."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I will get Marek to ring the owner about the parking; he says there is only room for two cars in the yard."
+        },
+        {
+          "speaker": "user",
+          "text": "Two cars will do us between the lot of us. I'll forward the booking email tonight."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "The owner says it sleeps eight",
+          "role": "stated capacity of the cottage"
+        },
+        {
+          "turn_index": 2,
+          "quote": "And four of us, so that is nine staying in the cottage, and nobody has to take a room at the pub",
+          "role": "nine people are to sleep in a cottage that sleeps eight"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Grand.",
+          "role": "assistant proceeds without reconciling the conflict"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Dawn, I have taken the cottage at Alnmouth for the last weekend in May. The owner says it sleeps eight, and the key is left behind the bar at the pub on the corner."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Perfect. There are five of us, counting Marek's brother, who is coming up from Durham on the Friday."
+        },
+        {
+          "speaker": "user",
+          "text": "And four of us, so that is nine staying in the cottage, and nobody has to take a room at the pub."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Grand. Marek says there is only space for two cars in the yard, can the rest of you manage with that?"
+        },
+        {
+          "speaker": "user",
+          "text": "Two cars will do us between the lot of us. I'll forward the booking email tonight."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "The owner says it sleeps nine",
+          "role": "stated capacity of the cottage"
+        },
+        {
+          "turn_index": 2,
+          "quote": "And four of us, so that is nine staying in the cottage, and nobody has to take a room at the pub",
+          "role": "the head count matches the capacity"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Two cars will do us between the lot of us.",
+          "role": "answers the last open request"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Dawn, I have taken the cottage at Alnmouth for the last weekend in May. The owner says it sleeps nine, and the key is left behind the bar at the pub on the corner."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Perfect. There are five of us, counting Marek's brother, who is coming up from Durham on the Friday."
+        },
+        {
+          "speaker": "user",
+          "text": "And four of us, so that is nine staying in the cottage, and nobody has to take a room at the pub."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Grand. Marek says there is only space for two cars in the yard, can the rest of you manage with that?"
+        },
+        {
+          "speaker": "user",
+          "text": "Two cars will do us between the lot of us. I'll forward the booking email tonight."
+        }
+      ]
+    }
+  }
+}

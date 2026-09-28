@@ -1,0 +1,78 @@
+{
+  "family_id": "cooking_020",
+  "domain": "cooking",
+  "task_goal": "steam a treacle sponge in a basin for Sunday lunch and settle the covering, the water and the timing",
+  "n_turns": 5,
+  "tail_anchor": "The basin came down from the loft this morning.",
+  "notes": "norep_unres and norep_res differ by one word, twelve vs eleven, against a stated two and a half hours and a pudding served at half past one; rep_unres and rep_res differ only in whether the assistant's first turn gives the water level.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "How high should the water come up the pan?", "role": "request"},
+        {"turn_index": 2, "quote": "How high should the water come up the pan?", "role": "re-request"},
+        {"turn_index": 3, "quote": "Keep the pan at a steady simmer rather than a hard boil, and stand the basin on an upturned saucer", "role": "assistant answers something else and leaves the request open"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I'm steaming a treacle sponge in a basin for Sunday lunch, the first one I've ever attempted. It's a 1.2 litre basin and the mixture nearly fills it. How high should the water come up the pan?"},
+        {"speaker": "assistant", "text": "Butter the basin well and put a disc of parchment in the bottom so it turns out cleanly. Cover the top with a pleated layer of parchment and foil, and tie it under the rim with string so no steam gets in."},
+        {"speaker": "user", "text": "There's string in the kitchen drawer somewhere. How high should the water come up the pan?"},
+        {"speaker": "assistant", "text": "Keep the pan at a steady simmer rather than a hard boil, and stand the basin on an upturned saucer so it isn't sitting straight on the metal."},
+        {"speaker": "user", "text": "I'll find a saucer it can sit on. The basin came down from the loft this morning."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Water two-thirds of the way up the outside of the basin, no higher.", "role": "answers the opening request"},
+        {"turn_index": 3, "quote": "Read the covering back to me so I know we're agreed.", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "A pleated layer of parchment and foil, tied under the rim with string.", "role": "requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I'm steaming a treacle sponge in a basin for Sunday lunch, the first one I've ever attempted. It's a 1.2 litre basin and the mixture nearly fills it. How high should the water come up the pan?"},
+        {"speaker": "assistant", "text": "Water two-thirds of the way up the outside of the basin, no higher. Butter the basin well and cover the top with a pleated layer of parchment and foil, tied under the rim with string so no steam gets in."},
+        {"speaker": "user", "text": "There's string in the kitchen drawer somewhere. Does it need topping up while it cooks?"},
+        {"speaker": "assistant", "text": "Yes, always from the kettle, never cold water, or the sponge stops rising. Read the covering back to me so I know we're agreed."},
+        {"speaker": "user", "text": "A pleated layer of parchment and foil, tied under the rim with string. The basin came down from the loft this morning."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Two and a half hours of steady steaming for a basin that size, and the pan mustn't go off the boil at any point.", "role": "stated steaming time"},
+        {"turn_index": 2, "quote": "It goes on at twelve and we're eating pudding at half past one, and the hob is wanted for the vegetables straight after, so it comes off then.", "role": "the action gives it an hour and a half on the hob"},
+        {"turn_index": 3, "quote": "Butter it thoroughly and put a disc of parchment in the base", "role": "assistant moves on without reconciling the two"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I'm steaming a treacle sponge in a basin for Sunday lunch, the first one I've ever attempted. It's a 1.2 litre basin and the mixture nearly fills it. How long does the thing want on the hob?"},
+        {"speaker": "assistant", "text": "Two and a half hours of steady steaming for a basin that size, and the pan mustn't go off the boil at any point. Cover the top with pleated parchment and foil, tied under the rim."},
+        {"speaker": "user", "text": "It goes on at twelve and we're eating pudding at half past one, and the hob is wanted for the vegetables straight after, so it comes off then. Should I grease the basin or line it?"},
+        {"speaker": "assistant", "text": "Butter it thoroughly and put a disc of parchment in the base, and it will turn out cleanly. An upturned saucer underneath stops it catching on the hot metal."},
+        {"speaker": "user", "text": "I'll find a saucer it can sit on. The basin came down from the loft this morning."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Two and a half hours of steady steaming for a basin that size", "role": "answers the opening request"},
+        {"turn_index": 2, "quote": "It goes on at eleven and we're eating pudding at half past one", "role": "the timing matches the stated two and a half hours"},
+        {"turn_index": 3, "quote": "Butter it thoroughly and put a disc of parchment in the base", "role": "discharges the last open request"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I'm steaming a treacle sponge in a basin for Sunday lunch, the first one I've ever attempted. It's a 1.2 litre basin and the mixture nearly fills it. How long does the thing want on the hob?"},
+        {"speaker": "assistant", "text": "Two and a half hours of steady steaming for a basin that size, and the pan mustn't go off the boil at any point. Cover the top with pleated parchment and foil, tied under the rim."},
+        {"speaker": "user", "text": "It goes on at eleven and we're eating pudding at half past one, and the hob is wanted for the vegetables straight after, so it comes off then. Should I grease the basin or line it?"},
+        {"speaker": "assistant", "text": "Butter it thoroughly and put a disc of parchment in the base, and it will turn out cleanly. An upturned saucer underneath stops it catching on the hot metal."},
+        {"speaker": "user", "text": "I'll find a saucer it can sit on. The basin came down from the loft this morning."}
+      ]
+    }
+  }
+}

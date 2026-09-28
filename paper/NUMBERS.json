@@ -1,0 +1,1225 @@
+{
+  "dataset": {
+    "families": 120,
+    "main_items": 480,
+    "ambiguity_items": 48,
+    "splits": {
+      "dev": 100,
+      "test": 100,
+      "train": 280,
+      "ambiguity": 48
+    },
+    "content_hash": "c8bbd8021b606473",
+    "per_domain": {
+      "appointment": {
+        "n_families": 24,
+        "train": 14,
+        "dev": 5,
+        "test": 5
+      },
+      "cooking": {
+        "n_families": 24,
+        "train": 14,
+        "dev": 5,
+        "test": 5
+      },
+      "household": {
+        "n_families": 24,
+        "train": 14,
+        "dev": 5,
+        "test": 5
+      },
+      "shopping": {
+        "n_families": 24,
+        "train": 14,
+        "dev": 5,
+        "test": 5
+      },
+      "transit": {
+        "n_families": 24,
+        "train": 14,
+        "dev": 5,
+        "test": 5
+      }
+    }
+  },
+  "balance": {
+    "unresolved": {
+      "n": 240,
+      "chars": 727.2,
+      "words": 139.9,
+      "qmarks": 1.35,
+      "turns": 5.72
+    },
+    "resolved": {
+      "n": 240,
+      "chars": 731.9,
+      "words": 140.8,
+      "qmarks": 1.32,
+      "turns": 5.72
+    }
+  },
+  "blind_annotation": {
+    "n": 120,
+    "kappa": 0.95,
+    "kappa_decidable": 0.966,
+    "raw_agreement": 0.975,
+    "n_disputes": 3
+  },
+  "e0_4b": {
+    "all_pass": true,
+    "final_layer_norm_ratio": 0.0175
+  },
+  "e0_12b_norm_ratio": 0.01003,
+  "reachability_4b": {
+    "L9_read_pos": 0.0055,
+    "L9_read_to_end": 0.1568,
+    "L9_prompt_all": 0.4965,
+    "L17_read_pos": 0.0003,
+    "L17_read_to_end": 0.0851,
+    "L17_prompt_all": 0.0575,
+    "L22_read_pos": 0.0005,
+    "L22_read_to_end": 0.0839,
+    "L22_prompt_all": 0.1531,
+    "L29_read_pos": 0.0007,
+    "L29_read_to_end": 0.0613,
+    "L29_prompt_all": 0.0801
+  },
+  "baselines_test": {
+    "majority": {
+      "paired": [
+        null,
+        null,
+        null
+      ],
+      "p": null,
+      "auroc": [
+        null,
+        null,
+        null
+      ],
+      "fa": 0.0
+    },
+    "rep_rule(>=5-token echo)": {
+      "paired": [
+        0.55,
+        0.49,
+        0.61
+      ],
+      "p": 0.223,
+      "auroc": [
+        0.52,
+        0.494,
+        0.548
+      ],
+      "fa": 0.5
+    },
+    "length_rule(>138 words)": {
+      "paired": [
+        0.34,
+        0.26,
+        0.42
+      ],
+      "p": 0.002,
+      "auroc": [
+        0.484,
+        0.463,
+        0.495
+      ],
+      "fa": 0.34
+    },
+    "surface_lr(19 feats)": {
+      "paired": [
+        0.72,
+        0.6,
+        0.83
+      ],
+      "p": 0.0,
+      "auroc": [
+        0.565,
+        0.532,
+        0.611
+      ],
+      "fa": 0.48
+    },
+    "tfidf_word(1-2)": {
+      "paired": [
+        0.74,
+        0.6,
+        0.86
+      ],
+      "p": 0.0,
+      "auroc": [
+        0.598,
+        0.553,
+        0.656
+      ],
+      "fa": 0.4
+    },
+    "tfidf_char_wb(3-5)": {
+      "paired": [
+        0.76,
+        0.64,
+        0.88
+      ],
+      "p": 0.0,
+      "auroc": [
+        0.556,
+        0.516,
+        0.606
+      ],
+      "fa": 0.28
+    },
+    "tfidf_word+char": {
+      "paired": [
+        0.72,
+        0.56,
+        0.86
+      ],
+      "p": 0.004,
+      "auroc": [
+        0.61,
+        0.55,
+        0.68
+      ],
+      "fa": 0.32
+    }
+  },
+  "readout_test_4b": {
+    "zero_shot/full": {
+      "paired": [
+        0.6,
+        0.46,
+        0.72
+      ],
+      "p": 0.207,
+      "auroc": [
+        0.524,
+        0.483,
+        0.568
+      ],
+      "fa": 0.7
+    },
+    "zero_shot/last_only": {
+      "paired": [
+        0.47,
+        0.4,
+        0.54
+      ],
+      "p": 0.563,
+      "auroc": [
+        0.475,
+        0.444,
+        0.502
+      ],
+      "fa": 0.84
+    },
+    "zero_shot/shuffled": {
+      "paired": [
+        0.52,
+        0.38,
+        0.66
+      ],
+      "p": 0.858,
+      "auroc": [
+        0.501,
+        0.441,
+        0.565
+      ],
+      "fa": 0.9
+    },
+    "zero_shot/swapped": {
+      "paired": [
+        0.4,
+        0.26,
+        0.54
+      ],
+      "p": 0.212,
+      "auroc": [
+        0.468,
+        0.433,
+        0.496
+      ],
+      "fa": 0.78
+    },
+    "prompt_context_instruction/full": {
+      "paired": [
+        0.52,
+        0.4,
+        0.64
+      ],
+      "p": 0.858,
+      "auroc": [
+        0.508,
+        0.468,
+        0.55
+      ],
+      "fa": 1.0
+    },
+    "few_shot_k4/full": {
+      "paired": [
+        0.66,
+        0.56,
+        0.76
+      ],
+      "p": 0.029,
+      "auroc": [
+        0.545,
+        0.509,
+        0.588
+      ],
+      "fa": 0.64
+    }
+  },
+  "readout_test_12b": {
+    "zero_shot/full": {
+      "paired": [
+        0.58,
+        0.46,
+        0.7
+      ],
+      "p": 0.33,
+      "auroc": [
+        0.546,
+        0.51,
+        0.59
+      ],
+      "fa": 0.92
+    },
+    "zero_shot/last_only": {
+      "paired": [
+        0.49,
+        0.42,
+        0.56
+      ],
+      "p": 1.0,
+      "auroc": [
+        0.497,
+        0.479,
+        0.512
+      ],
+      "fa": 1.0
+    },
+    "zero_shot/shuffled": {
+      "paired": [
+        0.6,
+        0.48,
+        0.72
+      ],
+      "p": 0.202,
+      "auroc": [
+        0.595,
+        0.537,
+        0.655
+      ],
+      "fa": 0.94
+    },
+    "zero_shot/swapped": {
+      "paired": [
+        0.32,
+        0.2,
+        0.42
+      ],
+      "p": 0.01,
+      "auroc": [
+        0.452,
+        0.408,
+        0.488
+      ],
+      "fa": 0.94
+    },
+    "prompt_context_instruction/full": {
+      "paired": [
+        0.66,
+        0.52,
+        0.78
+      ],
+      "p": 0.035,
+      "auroc": [
+        0.563,
+        0.523,
+        0.609
+      ],
+      "fa": 0.96
+    },
+    "few_shot_k4/full": {
+      "paired": [
+        0.62,
+        0.5,
+        0.74
+      ],
+      "p": 0.103,
+      "auroc": [
+        0.586,
+        0.54,
+        0.639
+      ],
+      "fa": 1.0
+    }
+  },
+  "readout_test_qwen": {
+    "zero_shot/full": {
+      "paired": [
+        0.54,
+        0.45,
+        0.63
+      ],
+      "p": 0.676,
+      "auroc": [
+        0.47,
+        0.434,
+        0.502
+      ],
+      "fa": 0.78
+    },
+    "zero_shot/last_only": {
+      "paired": [
+        0.47,
+        0.41,
+        0.53
+      ],
+      "p": 0.5,
+      "auroc": [
+        0.47,
+        0.432,
+        0.496
+      ],
+      "fa": 0.58
+    },
+    "zero_shot/shuffled": {
+      "paired": [
+        0.48,
+        0.34,
+        0.63
+      ],
+      "p": 0.88,
+      "auroc": [
+        0.473,
+        0.411,
+        0.531
+      ],
+      "fa": 0.8
+    },
+    "zero_shot/swapped": {
+      "paired": [
+        0.34,
+        0.23,
+        0.45
+      ],
+      "p": 0.026,
+      "auroc": [
+        0.469,
+        0.43,
+        0.497
+      ],
+      "fa": 0.76
+    },
+    "prompt_context_instruction/full": {
+      "paired": [
+        0.52,
+        0.4,
+        0.64
+      ],
+      "p": 0.884,
+      "auroc": [
+        0.494,
+        0.459,
+        0.526
+      ],
+      "fa": 0.7
+    },
+    "few_shot_k4/full": {
+      "paired": [
+        0.48,
+        0.34,
+        0.62
+      ],
+      "p": 0.884,
+      "auroc": [
+        0.505,
+        0.463,
+        0.541
+      ],
+      "fa": 0.68
+    }
+  },
+  "incremental_test_4b": {
+    "frozen_layer": 29,
+    "frozen": {
+      "probe": 0.58,
+      "surface": 0.72,
+      "increment": [
+        -0.16,
+        -0.34,
+        0.01
+      ],
+      "p": 0.079
+    },
+    "best_on_test": {
+      "layer": 15,
+      "probe": 0.82,
+      "increment": [
+        0.1,
+        -0.05,
+        0.24
+      ],
+      "p": 0.194
+    }
+  },
+  "incremental_test_12b": {
+    "frozen_layer": 31,
+    "frozen": {
+      "probe": 0.66,
+      "surface": 0.72,
+      "increment": [
+        -0.06,
+        -0.2,
+        0.08
+      ],
+      "p": 0.467
+    },
+    "best_on_test": {
+      "layer": 22,
+      "probe": 0.82,
+      "increment": [
+        0.1,
+        -0.05,
+        0.26
+      ],
+      "p": 0.243
+    }
+  },
+  "causal_test_4b": {
+    "n_arms": 22,
+    "max_abs_gap": 0.025,
+    "arms": {
+      "clean": {
+        "d_target": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "d_nontarget": 0.0,
+        "gap": 0.0,
+        "paired": 0.6,
+        "fa": 0.7
+      },
+      "dense_axis(a=-2)": {
+        "d_target": [
+          0.164,
+          0.034,
+          0.288
+        ],
+        "d_nontarget": 0.156,
+        "gap": 0.008,
+        "paired": 0.6,
+        "fa": 0.7
+      },
+      "dense_axis(a=-1)": {
+        "d_target": [
+          0.066,
+          0.008,
+          0.123
+        ],
+        "d_nontarget": 0.062,
+        "gap": 0.004,
+        "paired": 0.6,
+        "fa": 0.7
+      },
+      "dense_axis(a=-0.5)": {
+        "d_target": [
+          0.029,
+          0.001,
+          0.056
+        ],
+        "d_nontarget": 0.027,
+        "gap": 0.002,
+        "paired": 0.6,
+        "fa": 0.7
+      },
+      "dense_axis(a=+0)": {
+        "d_target": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "d_nontarget": 0.0,
+        "gap": 0.0,
+        "paired": 0.6,
+        "fa": 0.7
+      },
+      "dense_axis(a=+0.5)": {
+        "d_target": [
+          -0.022,
+          -0.046,
+          0.004
+        ],
+        "d_nontarget": -0.02,
+        "gap": -0.002,
+        "paired": 0.6,
+        "fa": 0.74
+      },
+      "dense_axis(a=+1)": {
+        "d_target": [
+          -0.037,
+          -0.084,
+          0.014
+        ],
+        "d_nontarget": -0.032,
+        "gap": -0.004,
+        "paired": 0.6,
+        "fa": 0.74
+      },
+      "dense_axis(a=+2)": {
+        "d_target": [
+          -0.052,
+          -0.142,
+          0.045
+        ],
+        "d_nontarget": -0.044,
+        "gap": -0.009,
+        "paired": 0.6,
+        "fa": 0.74
+      },
+      "dense_axis(a=+2, read_pos only)": {
+        "d_target": [
+          0.0,
+          0.0,
+          0.001
+        ],
+        "d_nontarget": 0.001,
+        "gap": -0.0,
+        "paired": 0.6,
+        "fa": 0.72
+      },
+      "random_dir(a=-1)": {
+        "d_target": [
+          0.134,
+          0.085,
+          0.183
+        ],
+        "d_nontarget": 0.11,
+        "gap": 0.024,
+        "paired": 0.6,
+        "fa": 0.74
+      },
+      "repetition_axis(a=-1)": {
+        "d_target": [
+          -0.076,
+          -0.112,
+          -0.039
+        ],
+        "d_nontarget": -0.075,
+        "gap": -0.001,
+        "paired": 0.6,
+        "fa": 0.72
+      },
+      "clarification_axis(a=-1)": {
+        "d_target": [
+          0.123,
+          0.059,
+          0.18
+        ],
+        "d_nontarget": 0.13,
+        "gap": -0.006,
+        "paired": 0.6,
+        "fa": 0.74
+      },
+      "random_dir(a=+1)": {
+        "d_target": [
+          -0.072,
+          -0.125,
+          -0.015
+        ],
+        "d_nontarget": -0.064,
+        "gap": -0.007,
+        "paired": 0.6,
+        "fa": 0.7
+      },
+      "repetition_axis(a=+1)": {
+        "d_target": [
+          0.064,
+          0.03,
+          0.098
+        ],
+        "d_nontarget": 0.063,
+        "gap": 0.001,
+        "paired": 0.6,
+        "fa": 0.7
+      },
+      "clarification_axis(a=+1)": {
+        "d_target": [
+          -0.102,
+          -0.155,
+          -0.042
+        ],
+        "d_nontarget": -0.107,
+        "gap": 0.005,
+        "paired": 0.6,
+        "fa": 0.68
+      },
+      "component_swap(donor)": {
+        "d_target": [
+          0.058,
+          -0.023,
+          0.138
+        ],
+        "d_nontarget": 0.059,
+        "gap": -0.001,
+        "paired": 0.6,
+        "fa": 0.7
+      },
+      "full_patch(donor)": {
+        "d_target": [
+          -0.0,
+          -0.001,
+          0.0
+        ],
+        "d_nontarget": 0.0,
+        "gap": -0.0,
+        "paired": 0.6,
+        "fa": 0.7
+      },
+      "sae_recon": {
+        "d_target": [
+          -0.919,
+          -1.205,
+          -0.615
+        ],
+        "d_nontarget": -0.894,
+        "gap": -0.025,
+        "paired": 0.58,
+        "fa": 0.58
+      },
+      "sae_ablate": {
+        "d_target": [
+          -0.102,
+          -0.169,
+          -0.031
+        ],
+        "d_nontarget": -0.11,
+        "gap": 0.008,
+        "paired": 0.6,
+        "fa": 0.72
+      },
+      "sae_donor": {
+        "d_target": [
+          0.26,
+          0.107,
+          0.411
+        ],
+        "d_nontarget": 0.285,
+        "gap": -0.025,
+        "paired": 0.6,
+        "fa": 0.72
+      },
+      "sae_random_ablate": {
+        "d_target": [
+          0.013,
+          0.004,
+          0.021
+        ],
+        "d_nontarget": 0.005,
+        "gap": 0.008,
+        "paired": 0.6,
+        "fa": 0.7
+      },
+      "sae_random_donor": {
+        "d_target": [
+          -0.064,
+          -0.137,
+          0.013
+        ],
+        "d_nontarget": -0.049,
+        "gap": -0.014,
+        "paired": 0.6,
+        "fa": 0.7
+      }
+    }
+  },
+  "causal_test_12b": {
+    "n_arms": 20,
+    "max_abs_gap": 0.151,
+    "arms": {
+      "clean": {
+        "d_target": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "d_nontarget": 0.0,
+        "gap": 0.0,
+        "paired": 0.58,
+        "fa": 0.92
+      },
+      "dense_axis(a=-2)": {
+        "d_target": [
+          -0.348,
+          -0.542,
+          -0.145
+        ],
+        "d_nontarget": -0.341,
+        "gap": -0.007,
+        "paired": 0.54,
+        "fa": 0.92
+      },
+      "dense_axis(a=-1)": {
+        "d_target": [
+          0.808,
+          0.599,
+          0.991
+        ],
+        "d_nontarget": 0.748,
+        "gap": 0.06,
+        "paired": 0.56,
+        "fa": 0.92
+      },
+      "dense_axis(a=-0.5)": {
+        "d_target": [
+          0.397,
+          0.295,
+          0.486
+        ],
+        "d_nontarget": 0.372,
+        "gap": 0.025,
+        "paired": 0.58,
+        "fa": 0.92
+      },
+      "dense_axis(a=+0)": {
+        "d_target": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "d_nontarget": 0.0,
+        "gap": 0.0,
+        "paired": 0.58,
+        "fa": 0.92
+      },
+      "dense_axis(a=+0.5)": {
+        "d_target": [
+          -0.41,
+          -0.495,
+          -0.312
+        ],
+        "d_nontarget": -0.391,
+        "gap": -0.02,
+        "paired": 0.64,
+        "fa": 0.92
+      },
+      "dense_axis(a=+1)": {
+        "d_target": [
+          -0.815,
+          -0.976,
+          -0.63
+        ],
+        "d_nontarget": -0.781,
+        "gap": -0.034,
+        "paired": 0.64,
+        "fa": 0.92
+      },
+      "dense_axis(a=+2)": {
+        "d_target": [
+          -1.377,
+          -1.643,
+          -1.074
+        ],
+        "d_nontarget": -1.334,
+        "gap": -0.043,
+        "paired": 0.64,
+        "fa": 0.92
+      },
+      "dense_axis(a=+2, read_pos only)": {
+        "d_target": [
+          -0.002,
+          -0.003,
+          -0.001
+        ],
+        "d_nontarget": -0.001,
+        "gap": -0.0,
+        "paired": 0.58,
+        "fa": 0.92
+      },
+      "random_dir(a=-1)": {
+        "d_target": [
+          -0.917,
+          -1.092,
+          -0.733
+        ],
+        "d_nontarget": -0.805,
+        "gap": -0.111,
+        "paired": 0.56,
+        "fa": 0.92
+      },
+      "repetition_axis(a=-1)": {
+        "d_target": [
+          0.194,
+          0.114,
+          0.269
+        ],
+        "d_nontarget": 0.166,
+        "gap": 0.028,
+        "paired": 0.58,
+        "fa": 0.92
+      },
+      "random_dir(a=+1)": {
+        "d_target": [
+          0.234,
+          0.111,
+          0.355
+        ],
+        "d_nontarget": 0.164,
+        "gap": 0.07,
+        "paired": 0.64,
+        "fa": 0.92
+      },
+      "repetition_axis(a=+1)": {
+        "d_target": [
+          -0.004,
+          -0.077,
+          0.07
+        ],
+        "d_nontarget": -0.019,
+        "gap": 0.015,
+        "paired": 0.6,
+        "fa": 0.92
+      },
+      "component_swap(donor)": {
+        "d_target": [
+          -0.137,
+          -0.501,
+          0.275
+        ],
+        "d_nontarget": -0.288,
+        "gap": 0.151,
+        "paired": 0.56,
+        "fa": 0.92
+      },
+      "full_patch(donor)": {
+        "d_target": [
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        "d_nontarget": 0.0,
+        "gap": -0.0,
+        "paired": 0.58,
+        "fa": 0.92
+      },
+      "sae_recon": {
+        "d_target": [
+          -2.464,
+          -2.913,
+          -1.962
+        ],
+        "d_nontarget": -2.336,
+        "gap": -0.128,
+        "paired": 0.58,
+        "fa": 0.92
+      },
+      "sae_ablate": {
+        "d_target": [
+          -0.028,
+          -0.039,
+          -0.016
+        ],
+        "d_nontarget": -0.031,
+        "gap": 0.003,
+        "paired": 0.58,
+        "fa": 0.92
+      },
+      "sae_donor": {
+        "d_target": [
+          0.572,
+          0.4,
+          0.733
+        ],
+        "d_nontarget": 0.534,
+        "gap": 0.039,
+        "paired": 0.6,
+        "fa": 0.92
+      },
+      "sae_random_ablate": {
+        "d_target": [
+          -0.017,
+          -0.023,
+          -0.011
+        ],
+        "d_nontarget": -0.017,
+        "gap": -0.0,
+        "paired": 0.58,
+        "fa": 0.92
+      },
+      "sae_random_donor": {
+        "d_target": [
+          0.184,
+          0.113,
+          0.261
+        ],
+        "d_nontarget": 0.175,
+        "gap": 0.009,
+        "paired": 0.6,
+        "fa": 0.92
+      }
+    }
+  },
+  "external_4b": {
+    "original": {
+      "fa": [
+        0.856,
+        0.784,
+        0.919
+      ],
+      "fa_rep": 0.816,
+      "fa_norep": 0.896,
+      "n_resolved": "97"
+    },
+    "prompt_only": {
+      "fa": [
+        0.948,
+        0.898,
+        0.99
+      ],
+      "fa_rep": 0.98,
+      "fa_norep": 0.917,
+      "n_resolved": "97"
+    },
+    "dense_axis(a=+2)": {
+      "fa": [
+        0.856,
+        0.784,
+        0.919
+      ],
+      "fa_rep": 0.816,
+      "fa_norep": 0.896,
+      "n_resolved": "97"
+    }
+  },
+  "external_12b": {
+    "original": {
+      "fa": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fa_rep": 1.0,
+      "fa_norep": 1.0,
+      "n_resolved": "97"
+    },
+    "prompt_only": {
+      "fa": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fa_rep": 1.0,
+      "fa_norep": 1.0,
+      "n_resolved": "97"
+    },
+    "dense_axis(a=+2)": {
+      "fa": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fa_rep": 1.0,
+      "fa_norep": 1.0,
+      "n_resolved": "97"
+    }
+  },
+  "external_qwen": {
+    "original": {
+      "fa": [
+        0.835,
+        0.76,
+        0.908
+      ],
+      "fa_rep": 0.837,
+      "fa_norep": 0.833,
+      "n_resolved": "97"
+    },
+    "prompt_only": {
+      "fa": [
+        0.897,
+        0.835,
+        0.949
+      ],
+      "fa_rep": 0.918,
+      "fa_norep": 0.875,
+      "n_resolved": "97"
+    }
+  },
+  "context_contrast_test_4b": {
+    "zero_shot/full - zero_shot/swapped": {
+      "full": 0.6,
+      "ablated": 0.4,
+      "diff": 0.2,
+      "lo": -0.06,
+      "hi": 0.46,
+      "p": 0.153
+    },
+    "zero_shot/full - zero_shot/shuffled": {
+      "full": 0.6,
+      "ablated": 0.52,
+      "diff": 0.08,
+      "lo": -0.08,
+      "hi": 0.24,
+      "p": 0.419
+    },
+    "zero_shot/full - zero_shot/last_only": {
+      "full": 0.6,
+      "ablated": 0.47,
+      "diff": 0.13,
+      "lo": -0.01,
+      "hi": 0.27,
+      "p": 0.088
+    }
+  },
+  "context_contrast_test_12b": {
+    "zero_shot/full - zero_shot/swapped": {
+      "full": 0.58,
+      "ablated": 0.32,
+      "diff": 0.26,
+      "lo": 0.08,
+      "hi": 0.46,
+      "p": 0.006
+    },
+    "zero_shot/full - zero_shot/shuffled": {
+      "full": 0.58,
+      "ablated": 0.6,
+      "diff": -0.02,
+      "lo": -0.16,
+      "hi": 0.14,
+      "p": 0.91
+    },
+    "zero_shot/full - zero_shot/last_only": {
+      "full": 0.58,
+      "ablated": 0.49,
+      "diff": 0.09,
+      "lo": -0.02,
+      "hi": 0.22,
+      "p": 0.159
+    }
+  },
+  "context_contrast_test_qwen": {
+    "zero_shot/full - zero_shot/swapped": {
+      "full": 0.54,
+      "ablated": 0.34,
+      "diff": 0.2,
+      "lo": 0.04,
+      "hi": 0.36,
+      "p": 0.021
+    },
+    "zero_shot/full - zero_shot/shuffled": {
+      "full": 0.54,
+      "ablated": 0.48,
+      "diff": 0.06,
+      "lo": -0.09,
+      "hi": 0.22,
+      "p": 0.51
+    },
+    "zero_shot/full - zero_shot/last_only": {
+      "full": 0.54,
+      "ablated": 0.47,
+      "diff": 0.07,
+      "lo": -0.03,
+      "hi": 0.17,
+      "p": 0.226
+    }
+  },
+  "rubric": {
+    "dense_axis": {
+      "addresses_open": 0.149,
+      "false_trigger": [
+        0.18,
+        0.08,
+        0.3
+      ],
+      "facts": 0.72,
+      "cog_inf": 0.0,
+      "appropriate": 0.41
+    },
+    "original": {
+      "addresses_open": 0.149,
+      "false_trigger": [
+        0.18,
+        0.08,
+        0.3
+      ],
+      "facts": 0.71,
+      "cog_inf": 0.0,
+      "appropriate": 0.39
+    },
+    "prompt_only": {
+      "addresses_open": 0.255,
+      "false_trigger": [
+        0.34,
+        0.22,
+        0.48
+      ],
+      "facts": 0.73,
+      "cog_inf": 0.0,
+      "appropriate": 0.38
+    },
+    "sae_ablate": {
+      "addresses_open": 0.149,
+      "false_trigger": [
+        0.16,
+        0.06,
+        0.261
+      ],
+      "facts": 0.71,
+      "cog_inf": 0.0,
+      "appropriate": 0.4
+    }
+  },
+  "freeform_identity": {
+    "dense_axis": "79/100",
+    "prompt_only": "0/100",
+    "sae_ablate": "87/100"
+  },
+  "ambiguity": {
+    "ambiguity": {
+      "n": "48",
+      "mean_abs": 5.395,
+      "near_indiff": 0.042
+    },
+    "main_test": {
+      "n": "100",
+      "mean_abs": 4.276,
+      "near_indiff": 0.18
+    }
+  },
+  "error_by_subtype_4b": {
+    "ambiguous_reference": {
+      "n": "17",
+      "acc": "0.882",
+      "mean_score": "+3.317"
+    },
+    "clean_progress": {
+      "n": "16",
+      "acc": "0.250",
+      "mean_score": "+2.017"
+    },
+    "contradiction": {
+      "n": "21",
+      "acc": "0.714",
+      "mean_score": "+1.722"
+    },
+    "emphasis_repeat": {
+      "n": "20",
+      "acc": "0.450",
+      "mean_score": "+0.715"
+    },
+    "readback_confirmation": {
+      "n": "14",
+      "acc": "0.143",
+      "mean_score": "+4.399"
+    },
+    "unanswered_question": {
+      "n": "12",
+      "acc": "0.583",
+      "mean_score": "+1.775"
+    }
+  }
+}

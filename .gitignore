@@ -1,17 +1,30 @@
+# --- secrets: never commit ---
+.hf_env
+.env
+*.token
+**/hf_token*
+
+# --- python ---
+venv/
+.venv/
 __pycache__/
 *.py[cod]
-.venv/
+*.egg-info/
+
+# --- captured activations: 463 MB, regenerate with scripts/capture_acts.py ---
+runs/bridge2026/cache/
+*.npz
+!pilot_icd/**/*.npz
+!runs/bridge2026/stage2/e2_directions.npz
+!runs/bridge2026/stage2/competing_directions.npz
+!runs/bridge2026/stage3/e2_12b/e2_directions.npz
+
+# --- large external corpus: re-download via scripts/build_ccpem.py ---
+data/external/ccpe_data.json
+
+# --- tooling ---
 .tools/
 .uv-cache/
 .uv-python/
-.env
-outputs/
-cache/
-figures/
-report.md
-!runs/**/outputs/
-!runs/**/outputs/**
-!runs/**/figures/
-!runs/**/figures/**
-!runs/**/report.md
 .antigravitycli/
+.DS_Store

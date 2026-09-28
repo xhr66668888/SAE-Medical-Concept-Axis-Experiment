@@ -1,0 +1,218 @@
+{
+  "family_id": "appointment_008",
+  "domain": "appointment",
+  "task_goal": "book an eye test at Merrow and Sons opticians and collect a pair of glasses that is already in",
+  "n_turns": 7,
+  "tail_anchor": "You have my mobile on the system already.",
+  "notes": "norep_unres and norep_res differ by one word in turn 1 ('half four' versus 'half six'), which is what turns the four o'clock booking plus a forty-minute test into a clash or leaves it comfortable. rep_unres and rep_res carry the same nine-token echo between turns 2 and 6; in rep_unres it is a request for the cost that is never met, in rep_res it is a preference the shop has already written on the booking.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "I would like to know what the test costs if I am using a voucher towards it",
+          "role": "request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I have put your name against it",
+          "role": "assistant turn that takes up the booking instead of the cost"
+        },
+        {
+          "turn_index": 6,
+          "quote": "I still need to know what the test costs if I am using a voucher towards it",
+          "role": "re-request, still open at the close"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I would like to book an eye test at Merrow and Sons, and I think there is a pair waiting for me to collect as well."
+        },
+        {
+          "speaker": "assistant",
+          "text": "There is, it came in on Friday. Mr Dalby has Thursday at half two, or the Monday after at nine."
+        },
+        {
+          "speaker": "user",
+          "text": "Thursday at half two suits me. I would like to know what the test costs if I am using a voucher towards it."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Thursday at half two is yours, and I have put your name against it. Allow forty minutes, since the frame fitting adds a bit on top."
+        },
+        {
+          "speaker": "user",
+          "text": "Forty minutes is no trouble, I can take a long lunch that day."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Good. The pair that came in is paid for, so it can go straight in a case for you. Would you like the hard case or the fold-flat one?"
+        },
+        {
+          "speaker": "user",
+          "text": "The hard case, please. I still need to know what the test costs if I am using a voucher towards it. You have my mobile on the system already."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "I will be using a voucher towards the cost of the test itself",
+          "role": "preference stated"
+        },
+        {
+          "turn_index": 3,
+          "quote": "the voucher is noted on the booking",
+          "role": "the shop accepts it, so nothing is left open"
+        },
+        {
+          "turn_index": 6,
+          "quote": "do remember I am using a voucher towards the cost of the test itself",
+          "role": "restatement for emphasis after acceptance"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I would like to book an eye test at Merrow and Sons, and I think there is a pair waiting for me to collect as well."
+        },
+        {
+          "speaker": "assistant",
+          "text": "There is, it came in on Friday. Mr Dalby has Thursday at half two, or the Monday after at nine."
+        },
+        {
+          "speaker": "user",
+          "text": "Thursday at half two suits me. I will be using a voucher towards the cost of the test itself."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Thursday at half two is yours, and the voucher is noted on the booking. Allow forty minutes, since the frame fitting adds a bit on top."
+        },
+        {
+          "speaker": "user",
+          "text": "Forty minutes is no trouble, I can take a long lunch that day."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Good. The pair that came in is paid for, so it can go straight in a case for you. Would you like the hard case or the fold-flat one?"
+        },
+        {
+          "speaker": "user",
+          "text": "The hard case, please. And do remember I am using a voucher towards the cost of the test itself. You have my mobile on the system already."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "we lock the door at half four that day",
+          "role": "closing time"
+        },
+        {
+          "turn_index": 3,
+          "quote": "The test itself runs to a full forty minutes once you are in the chair",
+          "role": "length of the booked test"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Put me down for four o'clock",
+          "role": "the booking that ties the two together"
+        },
+        {
+          "turn_index": 6,
+          "quote": "I need the whole test done in that one sitting, because I cannot come back another day",
+          "role": "why the clash blocks the task, and it is never raised"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I would like to book an eye test at Merrow and Sons, and I think there is a pair waiting for me to collect as well."
+        },
+        {
+          "speaker": "assistant",
+          "text": "There is, it came in on Friday. Mr Dalby is free on the Thursday, and we lock the door at half four that day."
+        },
+        {
+          "speaker": "user",
+          "text": "Thursday is the only day I can manage. Put me down for four o'clock and I will pick the pair up at the same visit."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Four o'clock on the Thursday, then. The test itself runs to a full forty minutes once you are in the chair."
+        },
+        {
+          "speaker": "user",
+          "text": "Good to know. There is no chance of me getting across town any earlier than four."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Good. The pair that came in is paid for, so it can go straight in a case for you. Would you like the hard case or the fold-flat one?"
+        },
+        {
+          "speaker": "user",
+          "text": "The hard case, please. I need the whole test done in that one sitting, because I cannot come back another day. You have my mobile on the system already."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "we lock the door at half six that day",
+          "role": "closing time leaves room for a four o'clock forty-minute test"
+        },
+        {
+          "turn_index": 5,
+          "quote": "The pair that came in is paid for",
+          "role": "discharges the collection the user raised in turn 0"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I would like to book an eye test at Merrow and Sons, and I think there is a pair waiting for me to collect as well."
+        },
+        {
+          "speaker": "assistant",
+          "text": "There is, it came in on Friday. Mr Dalby is free on the Thursday, and we lock the door at half six that day."
+        },
+        {
+          "speaker": "user",
+          "text": "Thursday is the only day I can manage. Put me down for four o'clock and I will pick the pair up at the same visit."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Four o'clock on the Thursday, then. The test itself runs to a full forty minutes once you are in the chair."
+        },
+        {
+          "speaker": "user",
+          "text": "Good to know. There is no chance of me getting across town any earlier than four."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Good. The pair that came in is paid for, so it can go straight in a case for you. Would you like the hard case or the fold-flat one?"
+        },
+        {
+          "speaker": "user",
+          "text": "The hard case, please. I need the whole test done in that one sitting, because I cannot come back another day. You have my mobile on the system already."
+        }
+      ]
+    }
+  }
+}

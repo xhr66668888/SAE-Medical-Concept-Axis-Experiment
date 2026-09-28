@@ -1,0 +1,86 @@
+{
+  "family_id": "shopping_016",
+  "domain": "shopping",
+  "task_goal": "convert one of two Penhale bulk quotes for stacking chairs into a firm order for the Marley Road hall committee",
+  "n_turns": 7,
+  "tail_anchor": "A full-size lorry can get up the lane to the hall.",
+  "notes": "Both quotes stay live to the end and turn 3 keeps them level with 'either way', so the rep pair differs only in two words in turn 4 ('that one' vs 'PQ-407'). The norep pair differs only in whether turn 1 says the linking clips are included.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "PQ-318 is forty Kestrels at £19 each; PQ-407 is sixty at £17.50", "role": "two live candidates"},
+        {"turn_index": 3, "quote": "Either way the chairs leave our warehouse within five working days", "role": "keeps both quotes level, so neither is the topical winner"},
+        {"turn_index": 4, "quote": "Raise the order against that one", "role": "referring expression that picks out neither quote"},
+        {"turn_index": 5, "quote": "I'll convert it and email the order form across within the hour", "role": "assistant acts without establishing which quote"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. This is the Marley Road hall committee, and we're ready to order the stacking chairs. You sent us two quotes: PQ-318 for forty chairs and PQ-407 for sixty."},
+        {"speaker": "assistant", "text": "I have both of them here. PQ-318 is forty Kestrels at £19 each; PQ-407 is sixty at £17.50. Both prices are held until the end of the month."},
+        {"speaker": "user", "text": "Good. The committee voted on it last night and they were unanimous, so we can go straight to an order. The hall reopens on the 29th."},
+        {"speaker": "assistant", "text": "Understood. Either way the chairs leave our warehouse within five working days, so the 29th is comfortable. Which of the two shall I raise?"},
+        {"speaker": "user", "text": "As I say, the committee voted on it last night and they were unanimous. Raise the order against that one and I'll sign it today."},
+        {"speaker": "assistant", "text": "I'll convert it and email the order form across within the hour."},
+        {"speaker": "user", "text": "Perfect. A full-size lorry can get up the lane to the hall."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "Which of the two shall I raise?", "role": "the last open item"},
+        {"turn_index": 4, "quote": "Raise the order against PQ-407", "role": "discharges it by naming the quote"},
+        {"turn_index": 4, "quote": "the committee voted on it last night and they were unanimous", "role": "restatement of a point already accepted at turn 3, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. This is the Marley Road hall committee, and we're ready to order the stacking chairs. You sent us two quotes: PQ-318 for forty chairs and PQ-407 for sixty."},
+        {"speaker": "assistant", "text": "I have both of them here. PQ-318 is forty Kestrels at £19 each; PQ-407 is sixty at £17.50. Both prices are held until the end of the month."},
+        {"speaker": "user", "text": "Good. The committee voted on it last night and they were unanimous, so we can go straight to an order. The hall reopens on the 29th."},
+        {"speaker": "assistant", "text": "Understood. Either way the chairs leave our warehouse within five working days, so the 29th is comfortable. Which of the two shall I raise?"},
+        {"speaker": "user", "text": "As I say, the committee voted on it last night and they were unanimous. Raise the order against PQ-407 and I'll sign it today."},
+        {"speaker": "assistant", "text": "I'll convert it and email the order form across within the hour."},
+        {"speaker": "user", "text": "Perfect. A full-size lorry can get up the lane to the hall."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Do the linking clips come with them, or are those charged separately?", "role": "request"},
+        {"turn_index": 1, "quote": "PQ-407 is sixty Kestrels at £17.50 each", "role": "assistant gives the price but says nothing about the clips"},
+        {"turn_index": 5, "quote": "Wednesday the 24th it is. I'll book the crew and send the paperwork over.", "role": "last assistant turn, the clips are still not accounted for"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, this is the Marley Road hall committee. We'd like to go ahead with quote PQ-407, the sixty stacking chairs. Do the linking clips come with them, or are those charged separately?"},
+        {"speaker": "assistant", "text": "Good to hear. PQ-407 is sixty Kestrels at £17.50 each, and that price is held until the end of the month."},
+        {"speaker": "user", "text": "That is the one the committee backed last night. The hall reopens on the 29th, so we want them in well before then."},
+        {"speaker": "assistant", "text": "Five working days from order, so the 29th is comfortable. Let me know which day of the week suits you for the drop."},
+        {"speaker": "user", "text": "Wednesday is easiest. There is usually somebody about from mid-morning onwards."},
+        {"speaker": "assistant", "text": "Wednesday the 24th it is. I'll book the crew and send the paperwork over."},
+        {"speaker": "user", "text": "Lovely, thank you. A full-size lorry can get up the lane to the hall."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "The linking clips are included in that price.", "role": "discharges the only request in the dialogue"},
+        {"turn_index": 4, "quote": "Wednesday is easiest.", "role": "settles the last open item, the delivery day"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, this is the Marley Road hall committee. We'd like to go ahead with quote PQ-407, the sixty stacking chairs. Do the linking clips come with them, or are those charged separately?"},
+        {"speaker": "assistant", "text": "Good to hear. The linking clips are included in that price. PQ-407 is sixty Kestrels at £17.50 each, held until the end of the month."},
+        {"speaker": "user", "text": "That is the one the committee backed last night. The hall reopens on the 29th, so we want them in well before then."},
+        {"speaker": "assistant", "text": "Five working days from order, so the 29th is comfortable. Let me know which day of the week suits you for the drop."},
+        {"speaker": "user", "text": "Wednesday is easiest. There is usually somebody about from mid-morning onwards."},
+        {"speaker": "assistant", "text": "Wednesday the 24th it is. I'll book the crew and send the paperwork over."},
+        {"speaker": "user", "text": "Lovely, thank you. A full-size lorry can get up the lane to the hall."}
+      ]
+    }
+  }
+}

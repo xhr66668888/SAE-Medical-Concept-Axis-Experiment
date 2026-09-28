@@ -1,0 +1,35 @@
+===== Qwen dev readout =====
+Qwen/Qwen2.5-7B-Instruct | split=dev n=100 families=25
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<01:56,  2.91it/s]Loading weights:   5%|▌         | 17/339 [00:00<00:06, 49.01it/s]Loading weights:  12%|█▏        | 40/339 [00:00<00:02, 101.54it/s]Loading weights:  19%|█▉        | 64/339 [00:00<00:02, 134.70it/s]Loading weights:  24%|██▍       | 82/339 [00:00<00:02, 97.43it/s] Loading weights:  30%|███       | 102/339 [00:01<00:02, 118.34it/s]Loading weights:  37%|███▋      | 124/339 [00:01<00:01, 140.07it/s]Loading weights:  44%|████▎     | 148/339 [00:01<00:01, 164.00it/s]Loading weights:  51%|█████▏    | 174/339 [00:01<00:00, 182.98it/s]Loading weights:  58%|█████▊    | 196/339 [00:01<00:00, 187.45it/s]Loading weights:  65%|██████▌   | 221/339 [00:01<00:00, 203.22it/s]Loading weights:  72%|███████▏  | 245/339 [00:01<00:00, 212.25it/s]Loading weights:  79%|███████▉  | 268/339 [00:01<00:00, 210.27it/s]Loading weights:  86%|████████▋ | 293/339 [00:01<00:00, 217.46it/s]Loading weights:  93%|█████████▎| 316/339 [00:02<00:00, 214.79it/s]Loading weights: 100%|██████████| 339/339 [00:02<00:00, 162.60it/s]
+  zero_shot/full                       paired=0.570[0.480,0.660] p=0.3980 AUROC=0.518 raw_acc=0.490 FA=0.680
+  zero_shot/last_only                  paired=0.390[0.320,0.460] p=0.0160 AUROC=0.433 raw_acc=0.460 FA=0.520
+  zero_shot/shuffled                   paired=0.500[0.360,0.630] p=1.0000 AUROC=0.422 raw_acc=0.410 FA=0.840
+  zero_shot/swapped                    paired=0.350[0.240,0.470] p=0.0290 AUROC=0.398 raw_acc=0.440 FA=0.760
+  prompt_context_instruction/full      paired=0.590[0.460,0.710] p=0.2030 AUROC=0.559 raw_acc=0.550 FA=0.660
+  few_shot_k4/full                     paired=0.610[0.480,0.740] p=0.1140 AUROC=0.556 raw_acc=0.510 FA=0.700
+-> runs/bridge2026/stage5_generality/e1_model_readout_dev_qwen.csv
+-> runs/bridge2026/stage5_generality/e1_model_readout_dev_qwen_per_item.csv
+===== Qwen test readout =====
+Qwen/Qwen2.5-7B-Instruct | split=test n=100 families=25
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   1%|          | 2/339 [00:00<00:30, 11.18it/s]Loading weights:   8%|▊         | 28/339 [00:00<00:02, 116.92it/s]Loading weights:  16%|█▌        | 53/339 [00:00<00:01, 160.22it/s]Loading weights:  23%|██▎       | 78/339 [00:00<00:01, 182.68it/s]Loading weights:  30%|██▉       | 101/339 [00:00<00:01, 186.09it/s]Loading weights:  37%|███▋      | 125/339 [00:00<00:01, 197.06it/s]Loading weights:  44%|████▍     | 149/339 [00:00<00:00, 197.43it/s]Loading weights:  51%|█████     | 173/339 [00:00<00:00, 209.30it/s]Loading weights:  58%|█████▊    | 198/339 [00:01<00:00, 212.59it/s]Loading weights:  65%|██████▍   | 220/339 [00:01<00:00, 207.17it/s]Loading weights:  73%|███████▎  | 246/339 [00:01<00:00, 217.78it/s]Loading weights:  79%|███████▉  | 269/339 [00:01<00:00, 219.96it/s]Loading weights:  87%|████████▋ | 294/339 [00:01<00:00, 228.51it/s]Loading weights:  94%|█████████▍| 318/339 [00:01<00:00, 227.14it/s]Loading weights: 100%|██████████| 339/339 [00:01<00:00, 202.97it/s]
+  zero_shot/full                       paired=0.540[0.450,0.630] p=0.6760 AUROC=0.470 raw_acc=0.450 FA=0.780
+  zero_shot/last_only                  paired=0.470[0.410,0.530] p=0.5000 AUROC=0.470 raw_acc=0.470 FA=0.580
+  zero_shot/shuffled                   paired=0.480[0.340,0.630] p=0.8800 AUROC=0.473 raw_acc=0.490 FA=0.800
+  zero_shot/swapped                    paired=0.340[0.230,0.450] p=0.0260 AUROC=0.469 raw_acc=0.490 FA=0.760
+  prompt_context_instruction/full      paired=0.520[0.400,0.640] p=0.8840 AUROC=0.494 raw_acc=0.490 FA=0.700
+  few_shot_k4/full                     paired=0.480[0.340,0.620] p=0.8840 AUROC=0.505 raw_acc=0.520 FA=0.680
+-> runs/bridge2026/stage5_generality/e1_model_readout_test_qwen.csv
+-> runs/bridge2026/stage5_generality/e1_model_readout_test_qwen_per_item.csv
+===== Qwen external (CCPE-M) =====
+CCPE-M: 100 annotated segments, labels {'resolved': 97, 'unresolved': 3}
+decidable: 100  rep>=5: 50
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<01:08,  4.92it/s]Loading weights:   8%|▊         | 28/339 [00:00<00:02, 112.42it/s]Loading weights:  16%|█▌        | 53/339 [00:00<00:01, 155.94it/s]Loading weights:  23%|██▎       | 77/339 [00:00<00:01, 183.70it/s]Loading weights:  30%|██▉       | 101/339 [00:00<00:01, 199.30it/s]Loading weights:  37%|███▋      | 125/339 [00:00<00:01, 210.42it/s]Loading weights:  44%|████▎     | 148/339 [00:00<00:01, 146.28it/s]Loading weights:  51%|█████     | 172/339 [00:01<00:01, 163.48it/s]Loading weights:  58%|█████▊    | 196/339 [00:01<00:00, 180.92it/s]Loading weights:  65%|██████▍   | 220/339 [00:01<00:00, 180.14it/s]Loading weights:  72%|███████▏  | 244/339 [00:01<00:00, 193.19it/s]Loading weights:  79%|███████▉  | 268/339 [00:01<00:00, 204.54it/s]Loading weights:  86%|████████▌ | 292/339 [00:01<00:00, 212.21it/s]Loading weights:  93%|█████████▎| 316/339 [00:01<00:00, 198.78it/s]Loading weights: 100%|██████████| 339/339 [00:01<00:00, 184.63it/s]
+  original               FA=0.835 [0.760,0.908]  FA(rep)=0.837  FA(norep)=0.833  mean_score=+4.492
+  prompt_only            FA=0.897 [0.835,0.949]  FA(rep)=0.918  FA(norep)=0.875  mean_score=+6.731
+-> runs/bridge2026/stage5_generality/e4_external_qwen.csv
+===== Qwen context contrast =====
+  zero_shot/full - zero_shot/swapped     0.540 - 0.340 = +0.200 [+0.040,+0.360] p=0.0212
+  zero_shot/full - zero_shot/shuffled    0.540 - 0.480 = +0.060 [-0.090,+0.220] p=0.5096
+  zero_shot/full - zero_shot/last_only   0.540 - 0.470 = +0.070 [-0.030,+0.170] p=0.2256
+-> runs/bridge2026/stage5_generality/context_contrast_test_qwen.csv
+===== DONE =====

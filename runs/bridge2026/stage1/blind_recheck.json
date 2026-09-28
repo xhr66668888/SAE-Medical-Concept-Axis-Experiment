@@ -1,0 +1,11 @@
+{
+  "n": 20,
+  "raw_agreement": 1.0,
+  "kappa": 1.0,
+  "changed_agree": "6/6",
+  "filler_agree": "14/14",
+  "subtype_agreement": 1.0,
+  "n_indeterminate": 0,
+  "blinding_caveat": "Both members of each repaired minimal pair were placed in the same packet, so the annotator could see the manipulated variable and used it. This re-check is therefore WEAKER evidence than the primary blind pass, where each annotator saw exactly one condition per family. Reported as a repair check, not as an independent agreement estimate.",
+  "disputes": []
+}

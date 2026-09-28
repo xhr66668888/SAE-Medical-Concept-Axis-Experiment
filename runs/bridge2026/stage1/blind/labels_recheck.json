@@ -1,0 +1,142 @@
+[
+  {
+    "id": "R_000",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "Theo is sleeping in there from Friday night and we are building it on the Saturday morning, so the room will be ready for him.",
+    "confidence": "high"
+  },
+  {
+    "id": "R_001",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "I'll do the joint first and get the potatoes going while it rests.",
+    "confidence": "high"
+  },
+  {
+    "id": "R_002",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "The machine is only two years old, so it is comfortably inside the twelve months.",
+    "confidence": "high"
+  },
+  {
+    "id": "R_003",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "Have the driver wait at the terminal from a quarter to eight.",
+    "confidence": "high"
+  },
+  {
+    "id": "R_004",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Can you confirm the start date and your home station?",
+    "confidence": "high"
+  },
+  {
+    "id": "R_005",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "Does the fare include the return, or do I pay twice?",
+    "confidence": "high"
+  },
+  {
+    "id": "R_006",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I'll put the first week's bin out myself as we leave, we're off at five that morning.",
+    "confidence": "high"
+  },
+  {
+    "id": "R_007",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "So, does the late-change fee still apply if I give a week's notice?",
+    "confidence": "high"
+  },
+  {
+    "id": "R_008",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "I'll put the first week's bin out myself as we leave, we're off at nine that morning.",
+    "confidence": "high"
+  },
+  {
+    "id": "R_009",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "Right, and it is definitely going on the hob, not in the oven.",
+    "confidence": "high"
+  },
+  {
+    "id": "R_010",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "Then she will need her kit handed to her at the gate, not left in the car.",
+    "confidence": "high"
+  },
+  {
+    "id": "R_011",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Read the evening amount back to me and I'll put it on our calendar.",
+    "confidence": "high"
+  },
+  {
+    "id": "R_012",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "Just so it is on record, both of us will be coming.",
+    "confidence": "high"
+  },
+  {
+    "id": "R_013",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "Graham upstairs is away until the twentieth",
+    "confidence": "high"
+  },
+  {
+    "id": "R_014",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "Can I use golden caster sugar instead of white for the drizzle?",
+    "confidence": "high"
+  },
+  {
+    "id": "R_015",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "I am due at the depot on Savile Street by half past ten, so the timing suits me.",
+    "confidence": "high"
+  },
+  {
+    "id": "R_016",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Then Noor will need her kit handed to her at the gate, not left in the car.",
+    "confidence": "high"
+  },
+  {
+    "id": "R_017",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "I'd rather it went straight into the spare room than the hall.",
+    "confidence": "high"
+  },
+  {
+    "id": "R_018",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "That's ideal, I need the car back by two to fetch my son from football.",
+    "confidence": "high"
+  },
+  {
+    "id": "R_019",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "Put a handwritten note in that one saying 'With love from all of us'.",
+    "confidence": "high"
+  }
+]

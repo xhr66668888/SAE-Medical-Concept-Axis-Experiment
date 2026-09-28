@@ -1,0 +1,85 @@
+{
+  "family_id": "appointment_019",
+  "domain": "appointment",
+  "task_goal": "arrange a viewing appointment at Culvert Hall for a fortieth birthday party and hold a provisional date for the night itself",
+  "n_turns": 7,
+  "tail_anchor": "We'll find our own way down the drive.",
+  "notes": "norep_unres and norep_res differ by one inserted word in turn 6 ('that Saturday' / 'the July Saturday') where two Saturdays have just been offered and the coordinator has asked which to pencil in. The rep cells differ in whether turn 1 answers the corkage question, the repetition being a re-ask in one case and an assistant-requested read-back in the other.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Do you let people bring their own wine in, or is there a corkage charge?", "role": "request"},
+        {"turn_index": 4, "quote": "Do you let people bring their own wine in, or is there a corkage charge?", "role": "re-request"},
+        {"turn_index": 5, "quote": "The Long Barn is the one most people take for a party that size.", "role": "assistant turn that talks about the room instead of answering"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. We're looking at Culvert Hall for my wife's fortieth in the summer, and I'd like to come and see the rooms. Do you let people bring their own wine in, or is there a corkage charge?"},
+        {"speaker": "assistant", "text": "Fiona shows people round on weekday mornings. She has Tuesday the third at ten or Thursday the fifth at eleven."},
+        {"speaker": "user", "text": "Thursday the fifth at eleven, please. There will be sixty of us on the night, with a sit-down meal."},
+        {"speaker": "assistant", "text": "Sixty seated is comfortable in both of our function rooms. Fiona will walk you through the Orangery and the Long Barn."},
+        {"speaker": "user", "text": "Good. Do you let people bring their own wine in, or is there a corkage charge?"},
+        {"speaker": "assistant", "text": "The Long Barn is the one most people take for a party that size. Fiona will have the floor plans out on the table for you."},
+        {"speaker": "user", "text": "That will be a help. We'll find our own way down the drive."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "You're welcome to bring your own wine, and the corkage is five pounds a bottle.", "role": "discharges the only open request"},
+        {"turn_index": 5, "quote": "could you read the day and the time of the viewing back to me", "role": "assistant asks for the repetition"},
+        {"turn_index": 6, "quote": "Thursday the fifth at eleven.", "role": "the requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. We're looking at Culvert Hall for my wife's fortieth in the summer, and I'd like to come and see the rooms. Do you let people bring their own wine in, or is there a corkage charge?"},
+        {"speaker": "assistant", "text": "You're welcome to bring your own wine, and the corkage is five pounds a bottle. Fiona has Tuesday the third at ten or Thursday the fifth at eleven."},
+        {"speaker": "user", "text": "Thursday the fifth at eleven, please. There will be sixty of us on the night, with a sit-down meal."},
+        {"speaker": "assistant", "text": "Sixty seated is comfortable in both of our function rooms. Fiona will walk you through the Orangery and the Long Barn."},
+        {"speaker": "user", "text": "Good, the corkage is five pounds a bottle then, that's fair enough."},
+        {"speaker": "assistant", "text": "That's right. Before you go, could you read the day and the time of the viewing back to me?"},
+        {"speaker": "user", "text": "Thursday the fifth at eleven. We'll find our own way down the drive."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 5, "quote": "the fourteenth of June and the fifth of July", "role": "the two live candidates"},
+        {"turn_index": 5, "quote": "Tell me which to pencil in.", "role": "exactly one of the two has to be named"},
+        {"turn_index": 6, "quote": "Hold that Saturday for us provisionally", "role": "referring expression that picks neither of the two out"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. We're looking at Culvert Hall for my wife's fortieth in the summer, and I'd like to come and see the rooms."},
+        {"speaker": "assistant", "text": "Very good. Fiona shows people round on weekday mornings. Would Tuesday the third at ten suit, or Thursday the fifth at eleven?"},
+        {"speaker": "user", "text": "The Thursday at eleven, please. There will be sixty of us on the night, with a sit-down meal."},
+        {"speaker": "assistant", "text": "Sixty seated is comfortable in both of our function rooms. Fiona will walk you through the Orangery and the Long Barn."},
+        {"speaker": "user", "text": "Good. Is there a charge for the viewing itself?"},
+        {"speaker": "assistant", "text": "No charge for the viewing at all. I can also hold a provisional date for the party itself, and only two Saturdays are left this summer, the fourteenth of June and the fifth of July. Tell me which to pencil in."},
+        {"speaker": "user", "text": "Hold that Saturday for us provisionally, then. We'll find our own way down the drive."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 5, "quote": "No charge for the viewing at all.", "role": "answers the last request"},
+        {"turn_index": 6, "quote": "Hold the July Saturday for us provisionally", "role": "names one of the two Saturdays, so nothing is left open"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. We're looking at Culvert Hall for my wife's fortieth in the summer, and I'd like to come and see the rooms."},
+        {"speaker": "assistant", "text": "Very good. Fiona shows people round on weekday mornings. Would Tuesday the third at ten suit, or Thursday the fifth at eleven?"},
+        {"speaker": "user", "text": "The Thursday at eleven, please. There will be sixty of us on the night, with a sit-down meal."},
+        {"speaker": "assistant", "text": "Sixty seated is comfortable in both of our function rooms. Fiona will walk you through the Orangery and the Long Barn."},
+        {"speaker": "user", "text": "Good. Is there a charge for the viewing itself?"},
+        {"speaker": "assistant", "text": "No charge for the viewing at all. I can also hold a provisional date for the party itself, and only two Saturdays are left this summer, the fourteenth of June and the fifth of July. Tell me which to pencil in."},
+        {"speaker": "user", "text": "Hold the July Saturday for us provisionally, then. We'll find our own way down the drive."}
+      ]
+    }
+  }
+}

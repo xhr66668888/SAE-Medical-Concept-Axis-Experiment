@@ -1,0 +1,86 @@
+{
+  "family_id": "cooking_021",
+  "domain": "cooking",
+  "task_goal": "make pizza dough ahead and feed nine people on Saturday after the match",
+  "n_turns": 7,
+  "tail_anchor": "Everyone is arriving straight from the match.",
+  "notes": "rep_unres and rep_res differ only in the day the dough is mixed, Saturday vs Thursday, against a stated minimum of 24 hours cold; norep_unres and norep_res differ only by 'it' vs 'the strong white' with two flours live.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "it needs at least 24 hours cold and it stays good up to 72", "role": "stated minimum cold prove"},
+        {"turn_index": 4, "quote": "I'll mix the dough on Saturday morning before I go out, and they're eating at seven that evening, so it's in the fridge all day in between.", "role": "the action gives the dough about nine hours"},
+        {"turn_index": 5, "quote": "Take the balls out an hour before you cook so they come up to room temperature.", "role": "assistant moves on without reconciling the two"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We're doing a pizza night on Saturday for nine of us after the match. I made dough once before and it came out like a biscuit. And no mushrooms on any of them, two of the lads won't touch them."},
+        {"speaker": "assistant", "text": "Noted, no mushrooms. For nine you want about 1.6kg of strong white flour, which gives twelve dough balls of 250g each. Keep the water at 65 per cent of the flour weight."},
+        {"speaker": "user", "text": "So just over a litre of water. Does it prove on the side or in the fridge?"},
+        {"speaker": "assistant", "text": "In the fridge, and that is what fixes the biscuit problem. Mix it, then get it straight into the cold: it needs at least 24 hours cold and it stays good up to 72."},
+        {"speaker": "user", "text": "Right. I'll mix the dough on Saturday morning before I go out, and they're eating at seven that evening, so it's in the fridge all day in between."},
+        {"speaker": "assistant", "text": "Take the balls out an hour before you cook so they come up to room temperature. Oven as hot as it will go, with the stone in from cold."},
+        {"speaker": "user", "text": "The stone is in the bottom of the oven already. No mushrooms on any of them, two of the lads won't touch them. Everyone is arriving straight from the match."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Noted, no mushrooms.", "role": "the preference was already accepted"},
+        {"turn_index": 4, "quote": "I'll mix the dough on Thursday morning before I go out, and they're eating at seven on Saturday evening", "role": "the timing clears the stated minimum cold prove"},
+        {"turn_index": 6, "quote": "No mushrooms on any of them, two of the lads won't touch them.", "role": "restating an accepted preference for emphasis"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We're doing a pizza night on Saturday for nine of us after the match. I made dough once before and it came out like a biscuit. And no mushrooms on any of them, two of the lads won't touch them."},
+        {"speaker": "assistant", "text": "Noted, no mushrooms. For nine you want about 1.6kg of strong white flour, which gives twelve dough balls of 250g each. Keep the water at 65 per cent of the flour weight."},
+        {"speaker": "user", "text": "So just over a litre of water. Does it prove on the side or in the fridge?"},
+        {"speaker": "assistant", "text": "In the fridge, and that is what fixes the biscuit problem. Mix it, then get it straight into the cold: it needs at least 24 hours cold and it stays good up to 72."},
+        {"speaker": "user", "text": "Right. I'll mix the dough on Thursday morning before I go out, and they're eating at seven on Saturday evening, so it's in the fridge the whole time in between."},
+        {"speaker": "assistant", "text": "Take the balls out an hour before you cook so they come up to room temperature. Oven as hot as it will go, with the stone in from cold."},
+        {"speaker": "user", "text": "The stone is in the bottom of the oven already. No mushrooms on any of them, two of the lads won't touch them. Everyone is arriving straight from the match."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "two kilos of 00 pasta flour and two kilos of strong white bread flour", "role": "two live candidate flours"},
+        {"turn_index": 5, "quote": "With the 00 you would want the oven flat out; with the strong white anything over 230 is fine.", "role": "both candidates re-activated and neither picked"},
+        {"turn_index": 6, "quote": "I'll weigh it out tonight and get it mixed on Thursday.", "role": "the flour needed for the next action is under-determined"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We're doing a pizza night on Saturday for nine of us after the match. Last time I made dough it came out like a biscuit, so I want to get it right this time."},
+        {"speaker": "assistant", "text": "Usually that is too little water and too short a prove. For nine, work on 1.6kg of flour and twelve balls of 250g, with the water at 65 per cent of the flour weight."},
+        {"speaker": "user", "text": "There are two unopened bags in the cupboard, two kilos of 00 pasta flour and two kilos of strong white bread flour. Would either of those do?"},
+        {"speaker": "assistant", "text": "Both make very good pizza. The 00 gives a softer Neapolitan base; the strong white gives more chew. They take the same weight of water and the same handling."},
+        {"speaker": "user", "text": "Good, and there's no rush on the mixing, I have until Saturday."},
+        {"speaker": "assistant", "text": "Then mix on Thursday and leave it in the fridge: it needs at least 24 hours cold and stays good up to 72. Take the balls out an hour before you cook. With the 00 you would want the oven flat out; with the strong white anything over 230 is fine."},
+        {"speaker": "user", "text": "I'll weigh it out tonight and get it mixed on Thursday. Everyone is arriving straight from the match."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "Both make very good pizza.", "role": "answers the only open request"},
+        {"turn_index": 5, "quote": "it needs at least 24 hours cold and stays good up to 72", "role": "the Thursday mix clears the stated minimum"},
+        {"turn_index": 6, "quote": "I'll weigh the strong white out tonight and get it mixed on Thursday.", "role": "the flour for the next action is named"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We're doing a pizza night on Saturday for nine of us after the match. Last time I made dough it came out like a biscuit, so I want to get it right this time."},
+        {"speaker": "assistant", "text": "Usually that is too little water and too short a prove. For nine, work on 1.6kg of flour and twelve balls of 250g, with the water at 65 per cent of the flour weight."},
+        {"speaker": "user", "text": "There are two unopened bags in the cupboard, two kilos of 00 pasta flour and two kilos of strong white bread flour. Would either of those do?"},
+        {"speaker": "assistant", "text": "Both make very good pizza. The 00 gives a softer Neapolitan base; the strong white gives more chew. They take the same weight of water and the same handling."},
+        {"speaker": "user", "text": "Good, and there's no rush on the mixing, I have until Saturday."},
+        {"speaker": "assistant", "text": "Then mix on Thursday and leave it in the fridge: it needs at least 24 hours cold and stays good up to 72. Take the balls out an hour before you cook. With the 00 you would want the oven flat out; with the strong white anything over 230 is fine."},
+        {"speaker": "user", "text": "I'll weigh the strong white out tonight and get it mixed on Thursday. Everyone is arriving straight from the match."}
+      ]
+    }
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "family_id": "household_024",
+  "domain": "household",
+  "task_goal": "switch the flat's broadband to a cheaper provider and sort the account name and the old router",
+  "n_turns": 7,
+  "tail_anchor": "The old router box is under my desk.",
+  "notes": "norep_unres and norep_res differ by one date (sixteenth / ninth as well) against a housemate who cannot be without a connection, with the claim that there is no gap stated outright.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Do they bill us for the last month of the old contract if we switch mid-month, or does it stop on the switch day?",
+          "role": "request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Do they bill us for the last month of the old contract if we switch mid-month, or does it stop on the switch day?",
+          "role": "re-request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I will tell her tonight, she will be glad of it. What was that switch date again, so I can put it on the board?",
+          "role": "assistant turn that fails to answer"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Halim, I have signed us up with Lightwell, twelve pounds a month cheaper, and the switch goes through on the sixteenth. Do they bill us for the last month of the old contract if we switch mid-month, or does it stop on the switch day?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Anything is cheaper than Brackenline. Ines is working at home now, so she will want to know we are not cut off."
+        },
+        {
+          "speaker": "user",
+          "text": "No gap at all, the dates meet. Do they bill us for the last month of the old contract if we switch mid-month, or does it stop on the switch day?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I will tell her tonight, she will be glad of it. What was that switch date again, so I can put it on the board?"
+        },
+        {
+          "speaker": "user",
+          "text": "The switch goes through on the sixteenth. The direct debit comes out of the joint account as before."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Brackenline want their router back in the post within a fortnight, or they bill us for that as well."
+        },
+        {
+          "speaker": "user",
+          "text": "I will get it in the post on my way to work. The old router box is under my desk."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "It stops dead on the switch day, they cannot bill you past it",
+          "role": "answers the only open request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "What was that switch date again, so I can put it on the board?",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "The switch goes through on the sixteenth.",
+          "role": "requested read-back, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Halim, I have signed us up with Lightwell, twelve pounds a month cheaper, and the switch goes through on the sixteenth. Do they bill us for the last month of the old contract if we switch mid-month, or does it stop on the switch day?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Anything is cheaper than Brackenline. It stops dead on the switch day, they cannot bill you past it, that is the new rule."
+        },
+        {
+          "speaker": "user",
+          "text": "That is a relief. Ines is working at home now, so she will be glad there is no gap at all."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I will tell her tonight, she will be glad of it. What was that switch date again, so I can put it on the board?"
+        },
+        {
+          "speaker": "user",
+          "text": "The switch goes through on the sixteenth. The direct debit comes out of the joint account as before."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Brackenline want their router back in the post within a fortnight, or they bill us for that as well."
+        },
+        {
+          "speaker": "user",
+          "text": "I will get it in the post on my way to work. The old router box is under my desk."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Ines is working at home now, so we cannot be without it for a week",
+          "role": "the task-critical requirement"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Brackenline stops on the ninth and Lightwell goes live on the sixteenth, so there is no gap and Ines can work straight through",
+          "role": "the two dates leave a week with nothing, against the claim of no gap"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Good.",
+          "role": "assistant proceeds without reconciling the conflict"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Halim, I have got us a deal with Lightwell for the flat, twelve pounds a month cheaper than we are paying Brackenline now, and no rise for two years."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Anything is cheaper than Brackenline. Ines is working at home now, so we cannot be without it for a week."
+        },
+        {
+          "speaker": "user",
+          "text": "Brackenline stops on the ninth and Lightwell goes live on the sixteenth, so there is no gap and Ines can work straight through."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Good. Whose name is going on the new account, yours or mine?"
+        },
+        {
+          "speaker": "user",
+          "text": "Mine this time, since yours was on the last one, and the money still comes out of the joint account."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Brackenline want their router back within a fortnight or they charge us for it. Can you drop it at the post office?"
+        },
+        {
+          "speaker": "user",
+          "text": "I will take it down to the post office on my way to work in the morning. The old router box is under my desk."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Ines is working at home now, so we cannot be without it for a week",
+          "role": "the task-critical requirement"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Brackenline stops on the ninth and Lightwell goes live on the ninth as well, so there is no gap and Ines can work straight through",
+          "role": "the dates meet, so the requirement is met"
+        },
+        {
+          "turn_index": 6,
+          "quote": "I will take it down to the post office on my way to work in the morning.",
+          "role": "answers the last open request"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Halim, I have got us a deal with Lightwell for the flat, twelve pounds a month cheaper than we are paying Brackenline now, and no rise for two years."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Anything is cheaper than Brackenline. Ines is working at home now, so we cannot be without it for a week."
+        },
+        {
+          "speaker": "user",
+          "text": "Brackenline stops on the ninth and Lightwell goes live on the ninth as well, so there is no gap and Ines can work straight through."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Good. Whose name is going on the new account, yours or mine?"
+        },
+        {
+          "speaker": "user",
+          "text": "Mine this time, since yours was on the last one, and the money still comes out of the joint account."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Brackenline want their router back within a fortnight or they charge us for it. Can you drop it at the post office?"
+        },
+        {
+          "speaker": "user",
+          "text": "I will take it down to the post office on my way to work in the morning. The old router box is under my desk."
+        }
+      ]
+    }
+  }
+}

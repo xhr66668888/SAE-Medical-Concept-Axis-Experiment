@@ -1,0 +1,176 @@
+{
+  "family_id": "appointment_007",
+  "domain": "appointment",
+  "task_goal": "book the yearly booster for the household's two pets at the Bramble Lane veterinary surgery",
+  "n_turns": 5,
+  "tail_anchor": "I'll ring if anything changes.",
+  "notes": "rep_unres and rep_res differ by one word in the final user turn ('his claws' versus \"Pip's claws\"); both carry the same six-token read-back of the name and address that the surgery asked for, so the surface repetition is identical. norep_unres and norep_res differ only in the second clause of turn 3, which either pencils in the half hour or answers the plan-versus-charge question.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "Pip the collie and Marmalade the cat",
+          "role": "the two live candidates"
+        },
+        {
+          "turn_index": 3,
+          "quote": "if either of the boys needs it",
+          "role": "assistant keeps both candidates live and picks neither"
+        },
+        {
+          "turn_index": 4,
+          "quote": "do trim his claws while he is in",
+          "role": "referring expression that does not pick one of the two out"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good morning. This is Halloran at 14 Bramble Lane Cottages, and both our animals are due their yearly booster."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can get them in this week. Could you read the name and address back to me so I know I have the right file open?"
+        },
+        {
+          "speaker": "user",
+          "text": "Halloran at 14 Bramble Lane Cottages. Pip the collie and Marmalade the cat, both on the same card."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That is the file, thank you. Kerry has ten past nine on Tuesday, and she can do claws at the same visit if either of the boys needs it."
+        },
+        {
+          "speaker": "user",
+          "text": "Ten past nine on Tuesday is grand, and do trim his claws while he is in. I'll ring if anything changes."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Could you read the name and address back to me",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Halloran at 14 Bramble Lane Cottages.",
+          "role": "the requested read-back, not a sign of trouble"
+        },
+        {
+          "turn_index": 4,
+          "quote": "do trim Pip's claws while he is in",
+          "role": "referent fixed, nothing left open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good morning. This is Halloran at 14 Bramble Lane Cottages, and both our animals are due their yearly booster."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can get them in this week. Could you read the name and address back to me so I know I have the right file open?"
+        },
+        {
+          "speaker": "user",
+          "text": "Halloran at 14 Bramble Lane Cottages. Pip the collie and Marmalade the cat, both on the same card."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That is the file, thank you. Kerry has ten past nine on Tuesday, and she can do claws at the same visit if either of the boys needs it."
+        },
+        {
+          "speaker": "user",
+          "text": "Ten past nine on Tuesday is grand, and do trim Pip's claws while he is in. I'll ring if anything changes."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "Does the monthly pet plan cover the boosters, or is there a charge on the day?",
+          "role": "request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I have pencilled in the full half hour",
+          "role": "assistant turn that takes up a different point and leaves the request open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good morning. This is Halloran at 14 Bramble Lane Cottages, and both our animals are due their yearly booster."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can get them both in. Kerry has a double slot at ten past nine on Tuesday, which would cover the collie and the cat."
+        },
+        {
+          "speaker": "user",
+          "text": "Take that one. Does the monthly pet plan cover the boosters, or is there a charge on the day?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The double slot is down under your name, and I have pencilled in the full half hour. Do bring the vaccination cards, because Kerry writes them up while you are there."
+        },
+        {
+          "speaker": "user",
+          "text": "They are in the hall drawer, so that is easy. I'll ring if anything changes."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "the plan covers both boosters in full",
+          "role": "discharges the only open request"
+        },
+        {
+          "turn_index": 4,
+          "quote": "They are in the hall drawer",
+          "role": "the remaining item is settled by the user"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good morning. This is Halloran at 14 Bramble Lane Cottages, and both our animals are due their yearly booster."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can get them both in. Kerry has a double slot at ten past nine on Tuesday, which would cover the collie and the cat."
+        },
+        {
+          "speaker": "user",
+          "text": "Take that one. Does the monthly pet plan cover the boosters, or is there a charge on the day?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The double slot is down under your name, and the plan covers both boosters in full. Do bring the vaccination cards, because Kerry writes them up while you are there."
+        },
+        {
+          "speaker": "user",
+          "text": "They are in the hall drawer, so that is easy. I'll ring if anything changes."
+        }
+      ]
+    }
+  }
+}

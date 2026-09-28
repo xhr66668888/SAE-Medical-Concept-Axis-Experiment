@@ -1,0 +1,77 @@
+{
+  "family_id": "appointment_022",
+  "domain": "appointment",
+  "task_goal": "book a pair of front tyres to be fitted at Selby Tyres and settle which car comes in and how it is paid for",
+  "n_turns": 5,
+  "tail_anchor": "We're only ten minutes up the road from you.",
+  "notes": "The two rep cells differ only in the payment clause of turn 2 (settling up the Monday after with nothing in the account / on the card before the car moves) against a shop that is paid before the car leaves the bay. The two norep cells differ only in the referring expression in turn 4, 'the car on the drive' against 'my wife's car', where two cars are on the drive and they take different sizes.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "anything we fit is paid for before the car leaves the bay", "role": "the shop is paid before the car goes"},
+        {"turn_index": 2, "quote": "I'll drive it away the moment you're done and settle up the Monday after, when my wages land, because there's nothing in the account before then", "role": "the car leaves the bay and cannot be paid for until the Monday"},
+        {"turn_index": 3, "quote": "Right you are, Saturday first thing.", "role": "assistant books it without reconciling the two"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. I want a pair of front tyres put on at Selby Tyres this week. They have to be the same make as the two on the back, no mixing."},
+        {"speaker": "assistant", "text": "Same make as the rears, no mixing, understood. Thursday afternoon or Saturday first thing, and anything we fit is paid for before the car leaves the bay."},
+        {"speaker": "user", "text": "Saturday first thing, please. I'll drive it away the moment you're done and settle up the Monday after, when my wages land, because there's nothing in the account before then."},
+        {"speaker": "assistant", "text": "Right you are, Saturday first thing. Shall I have one of the lads wave you into the bay when you arrive?"},
+        {"speaker": "user", "text": "Please do. And I'll say it again, they have to be the same make as the two on the back, no mixing. We're only ten minutes up the road from you."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Same make as the rears, no mixing, understood.", "role": "the preference has already been taken"},
+        {"turn_index": 2, "quote": "settle up on the card before I move it, because there's plenty in the account to cover it", "role": "payment fits the shop's rule, nothing is left open"},
+        {"turn_index": 4, "quote": "And I'll say it again, they have to be the same make as the two on the back, no mixing.", "role": "restatement for emphasis, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. I want a pair of front tyres put on at Selby Tyres this week. They have to be the same make as the two on the back, no mixing."},
+        {"speaker": "assistant", "text": "Same make as the rears, no mixing, understood. Thursday afternoon or Saturday first thing, and anything we fit is paid for before the car leaves the bay."},
+        {"speaker": "user", "text": "Saturday first thing, please. I'll drive it away the moment you're done and settle up on the card before I move it, because there's plenty in the account to cover it."},
+        {"speaker": "assistant", "text": "Right you are, Saturday first thing. Shall I have one of the lads wave you into the bay when you arrive?"},
+        {"speaker": "user", "text": "Please do. And I'll say it again, they have to be the same make as the two on the back, no mixing. We're only ten minutes up the road from you."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "There are two cars sitting on the drive, mine and my wife's", "role": "the two live candidates"},
+        {"turn_index": 3, "quote": "yours takes 215s and hers takes 205s, so I'd need the correct pair here before Friday", "role": "the referent has to be fixed before anything can be ordered"},
+        {"turn_index": 4, "quote": "Order the right pair in for the car on the drive", "role": "referring expression that fits both cars and picks neither"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. I want a pair of front tyres put on at Selby Tyres some time this week, if you have a slot."},
+        {"speaker": "assistant", "text": "We can do that. Thursday afternoon or Saturday first thing, whichever suits you better. What are we fitting them to?"},
+        {"speaker": "user", "text": "Saturday first thing, please. There are two cars sitting on the drive, mine and my wife's, and both of them are down to the wear bars on the front."},
+        {"speaker": "assistant", "text": "A pair of fronts on Saturday, then, for one of them. They won't be the same size, mind: yours takes 215s and hers takes 205s, so I'd need the correct pair here before Friday."},
+        {"speaker": "user", "text": "Order the right pair in for the car on the drive, then, and I'll be there for nine. We're only ten minutes up the road from you."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "There are two cars sitting on the drive, mine and my wife's", "role": "the two candidates the naming picks between"},
+        {"turn_index": 4, "quote": "Order the right pair in for my wife's car", "role": "names one of the two cars, so the order can be placed"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. I want a pair of front tyres put on at Selby Tyres some time this week, if you have a slot."},
+        {"speaker": "assistant", "text": "We can do that. Thursday afternoon or Saturday first thing, whichever suits you better. What are we fitting them to?"},
+        {"speaker": "user", "text": "Saturday first thing, please. There are two cars sitting on the drive, mine and my wife's, and both of them are down to the wear bars on the front."},
+        {"speaker": "assistant", "text": "A pair of fronts on Saturday, then, for one of them. They won't be the same size, mind: yours takes 215s and hers takes 205s, so I'd need the correct pair here before Friday."},
+        {"speaker": "user", "text": "Order the right pair in for my wife's car, then, and I'll be there for nine. We're only ten minutes up the road from you."}
+      ]
+    }
+  }
+}

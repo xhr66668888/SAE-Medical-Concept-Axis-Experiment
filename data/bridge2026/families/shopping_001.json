@@ -1,0 +1,181 @@
+{
+  "family_id": "shopping_001",
+  "domain": "shopping",
+  "task_goal": "send a rain jacket back to Marlow Outfitters and settle who pays for the return",
+  "n_turns": 5,
+  "tail_anchor": "I'll drop the parcel off tomorrow morning.",
+  "notes": "norep_unres and norep_res differ in one clause only (the jacket was worn on a wet walk vs it never left the house), which is what does or does not clash with the stated unworn-with-tags rule; rep_unres and rep_res differ only in whether turn 1 answers the postage question, so the turn-2 echo looks the same in both.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Does the return postage come out of my refund?",
+          "role": "request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Does the return postage come out of my refund?",
+          "role": "re-request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "The warehouse will be expecting it, and I have logged the reason as a sizing issue.",
+          "role": "assistant turn that fails to answer"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hi, I need to send back the rain jacket from order 4482. Does the return postage come out of my refund?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can start that for you. Was it the wrong size, or is there a fault with it?"
+        },
+        {
+          "speaker": "user",
+          "text": "Wrong size, it's too tight across the shoulders. Does the return postage come out of my refund?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. The warehouse will be expecting it, and I have logged the reason as a sizing issue."
+        },
+        {
+          "speaker": "user",
+          "text": "That's fine by me. I'll drop the parcel off tomorrow morning."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "We cover the return postage on size issues.",
+          "role": "discharges the only open request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Could you read the order number back to me",
+          "role": "assistant requests the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Order 4482.",
+          "role": "requested read-back, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hi, I need to send back the rain jacket from order 4482. Does the return postage come out of my refund?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "We cover the return postage on size issues. Was it the wrong size, or is there a fault with it?"
+        },
+        {
+          "speaker": "user",
+          "text": "Wrong size, it's too tight across the shoulders. Good, so you cover the return postage on size issues."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. Could you read the order number back to me before I raise the label?"
+        },
+        {
+          "speaker": "user",
+          "text": "Order 4482. I'll drop the parcel off tomorrow morning."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "We take items back unworn with the tags still attached",
+          "role": "the stated eligibility rule"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I wore it once on a wet walk and it leaked",
+          "role": "conflicts with the rule the user has just confirmed she meets"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Refunds land on the original card within five working days",
+          "role": "assistant proceeds without reconciling the conflict"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hi, I need to send back the rain jacket from order 4482. What do I need to do at my end?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Happy to help. We take items back unworn with the tags still attached, so is that the case here?"
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, the tags are still on it. I wore it once on a wet walk and it leaked, so it's going back. How long does the refund take?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Refunds land on the original card within five working days of the parcel reaching us."
+        },
+        {
+          "speaker": "user",
+          "text": "That's fine by me. I'll drop the parcel off tomorrow morning."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "It never left the house after it arrived",
+          "role": "consistent with the unworn rule, so nothing conflicts"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Refunds land on the original card within five working days of the parcel reaching us.",
+          "role": "answers the only open request"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hi, I need to send back the rain jacket from order 4482. What do I need to do at my end?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Happy to help. We take items back unworn with the tags still attached, so is that the case here?"
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, the tags are still on it. It never left the house after it arrived, so it's exactly as it came. How long does the refund take?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Refunds land on the original card within five working days of the parcel reaching us."
+        },
+        {
+          "speaker": "user",
+          "text": "That's fine by me. I'll drop the parcel off tomorrow morning."
+        }
+      ]
+    }
+  }
+}

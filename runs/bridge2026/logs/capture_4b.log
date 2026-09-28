@@ -1,0 +1,9 @@
+items: 480
+Loading weights:   0%|          | 0/883 [00:00<?, ?it/s]Loading weights:   2%|▏         | 16/883 [00:00<00:05, 158.81it/s]Loading weights:   8%|▊         | 68/883 [00:00<00:02, 358.15it/s]Loading weights:  14%|█▍        | 122/883 [00:00<00:01, 429.92it/s]Loading weights:  20%|█▉        | 174/883 [00:00<00:01, 463.75it/s]Loading weights:  25%|██▌       | 225/883 [00:00<00:01, 474.66it/s]Loading weights:  31%|███       | 273/883 [00:00<00:01, 458.76it/s]Loading weights:  36%|███▌      | 319/883 [00:00<00:01, 454.77it/s]Loading weights:  42%|████▏     | 367/883 [00:00<00:01, 460.89it/s]Loading weights:  47%|████▋     | 419/883 [00:00<00:00, 478.22it/s]Loading weights:  68%|██████▊   | 599/883 [00:01<00:00, 868.48it/s]Loading weights: 100%|██████████| 883/883 [00:01<00:00, 778.52it/s]
+  8/480
+  88/480
+  168/480
+  248/480
+  328/480
+  408/480
+saved (34, 480, 2560) -> runs/bridge2026/cache/acts_4b.npz  (155.7 MB)

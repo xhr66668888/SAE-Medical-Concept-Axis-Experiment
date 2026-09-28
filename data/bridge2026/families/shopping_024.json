@@ -1,0 +1,81 @@
+{
+  "family_id": "shopping_024",
+  "domain": "shopping",
+  "task_goal": "claim the price difference back on a Hobday cordless drill under Carrick's 28-day price promise",
+  "n_turns": 5,
+  "tail_anchor": "The drill itself is fine, by the way.",
+  "notes": "The rep pair differs in whether turn 1 says where the money goes, so the same restatement in turn 2 is either a re-request or plain emphasis. The norep pair differs by three words in turn 2, the £99 drill being the ex-display piece or a boxed one, against a promise that excludes ex-display stock.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Does the difference come back on my card, or only as a credit note?", "role": "request"},
+        {"turn_index": 1, "quote": "so you are well inside it and the £40 is certainly yours to claim", "role": "assistant confirms the claim and says nothing about how the money comes back"},
+        {"turn_index": 2, "quote": "Does the difference come back on my card, or only as a credit note?", "role": "re-request"},
+        {"turn_index": 3, "quote": "I will need the receipt number off the till slip before I can put the claim through.", "role": "assistant asks for something else and still does not answer"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Afternoon. I bought the Hobday 18-volt drill from you three weeks back at £139, and it is down to £99 now. Does the difference come back on my card, or only as a credit note?"},
+        {"speaker": "assistant", "text": "The price promise runs for 28 days, so you are well inside it and the £40 is certainly yours to claim."},
+        {"speaker": "user", "text": "That is good news, thank you. Does the difference come back on my card, or only as a credit note?"},
+        {"speaker": "assistant", "text": "Understood. I will need the receipt number off the till slip before I can put the claim through."},
+        {"speaker": "user", "text": "It is 60814. The drill itself is fine, by the way."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "the £40 goes straight back on the card you paid with", "role": "discharges the only request"},
+        {"turn_index": 2, "quote": "I bought it three weeks back at £139 and it is down to £99 now, so it is the £40 I am after.", "role": "restates figures already accepted at turn 1, not a sign of trouble"},
+        {"turn_index": 4, "quote": "It is 60814.", "role": "answers the assistant's last question"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Afternoon. I bought the Hobday 18-volt drill from you three weeks back at £139, and it is down to £99 now. Does the difference come back on my card, or only as a credit note?"},
+        {"speaker": "assistant", "text": "The price promise runs for 28 days, so you are well inside it, and the £40 goes straight back on the card you paid with."},
+        {"speaker": "user", "text": "That is a relief. I bought it three weeks back at £139 and it is down to £99 now, so it is the £40 I am after."},
+        {"speaker": "assistant", "text": "Understood. Could you give me the receipt number so I can put the claim through?"},
+        {"speaker": "user", "text": "It is 60814. The drill itself is fine, by the way."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "It covers a drop on the same item in normal stock, but not on ex-display pieces.", "role": "the exclusion built into the promise"},
+        {"turn_index": 2, "quote": "The £99 one is the ex-display piece on the end of the counter", "role": "the £99 price sits on an item the promise excludes"},
+        {"turn_index": 2, "quote": "that is the price I am claiming against", "role": "the action that makes the exclusion bite"},
+        {"turn_index": 3, "quote": "Right, £40 back then.", "role": "assistant agrees the refund without raising the exclusion"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Afternoon. I bought the Hobday 18-volt drill here three weeks ago at £139, receipt 60814, and it is on at £99 now. Can I claim the difference?"},
+        {"speaker": "assistant", "text": "You can, the price promise runs for 28 days. It covers a drop on the same item in normal stock, but not on ex-display pieces."},
+        {"speaker": "user", "text": "The £99 one is the ex-display piece on the end of the counter, and that is the price I am claiming against. I paid by card on the 3rd."},
+        {"speaker": "assistant", "text": "Right, £40 back then. Could you read the receipt number back to me before I start it?"},
+        {"speaker": "user", "text": "Receipt 60814. The drill itself is fine, by the way."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "You can, the price promise runs for 28 days.", "role": "answers the user's only request"},
+        {"turn_index": 2, "quote": "The £99 one is a boxed one on the end of the counter", "role": "normal stock, so the promise covers the drop"},
+        {"turn_index": 3, "quote": "Could you read the receipt number back to me before I start it?", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "Receipt 60814.", "role": "the requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Afternoon. I bought the Hobday 18-volt drill here three weeks ago at £139, receipt 60814, and it is on at £99 now. Can I claim the difference?"},
+        {"speaker": "assistant", "text": "You can, the price promise runs for 28 days. It covers a drop on the same item in normal stock, but not on ex-display pieces."},
+        {"speaker": "user", "text": "The £99 one is a boxed one on the end of the counter, and that is the price I am claiming against. I paid by card on the 3rd."},
+        {"speaker": "assistant", "text": "Right, £40 back then. Could you read the receipt number back to me before I start it?"},
+        {"speaker": "user", "text": "Receipt 60814. The drill itself is fine, by the way."}
+      ]
+    }
+  }
+}

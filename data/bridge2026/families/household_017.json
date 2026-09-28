@@ -1,0 +1,181 @@
+{
+  "family_id": "household_017",
+  "domain": "household",
+  "task_goal": "hand a dog over to the neighbours for four days and settle the walks and the way in",
+  "n_turns": 5,
+  "tail_anchor": "The food is in the blue tub in the porch.",
+  "notes": "rep_unres and rep_res differ by one clause (never had a key / still got the key), with the seized padlock making the back door the only way in. norep_unres and norep_res differ by one word (her/Nell), with Pip named immediately before as the most recent singular mention.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "We have never had a key for yours, mind, only the code for the side gate padlock",
+          "role": "the neighbours hold no key"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Just let yourself in at the back door with the key I gave you in the spring; that padlock seized up in the frost",
+          "role": "the plan depends on a key they say they do not have, and the gate is not an option"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Callum can do the morning walk before school, then, and I will take the evening one.",
+          "role": "assistant proceeds without reconciling the conflict"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Bev, I am away with work from Thursday to Sunday. Could you have Nell for me? I would rather she was not let off the lead in the park."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Of course we will have her, and she can stay on the lead, that is no trouble. We have never had a key for yours, mind, only the code for the side gate padlock."
+        },
+        {
+          "speaker": "user",
+          "text": "I would rather she was not let off the lead in the park, she goes after the ducks. Just let yourself in at the back door with the key I gave you in the spring; that padlock seized up in the frost."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Callum can do the morning walk before school, then, and I will take the evening one."
+        },
+        {
+          "speaker": "user",
+          "text": "That is very good of him. The food is in the blue tub in the porch."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "she can stay on the lead, that is no trouble",
+          "role": "the stated preference is accepted"
+        },
+        {
+          "turn_index": 1,
+          "quote": "We have still got the key for yours from the spring, and the code for the side gate padlock",
+          "role": "the way in is settled and consistent"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I would rather she was not let off the lead in the park",
+          "role": "restatement for emphasis of an accepted preference"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Bev, I am away with work from Thursday to Sunday. Could you have Nell for me? I would rather she was not let off the lead in the park."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Of course we will have her, and she can stay on the lead, that is no trouble. We have still got the key for yours from the spring, and the code for the side gate padlock."
+        },
+        {
+          "speaker": "user",
+          "text": "I would rather she was not let off the lead in the park, she goes after the ducks. Just let yourself in at the back door with the key I gave you in the spring; that padlock seized up in the frost."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Callum can do the morning walk before school, then, and I will take the evening one."
+        },
+        {
+          "speaker": "user",
+          "text": "That is very good of him. The food is in the blue tub in the porch."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "she gets on well enough with Pip",
+          "role": "both dogs are in play from the start"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Pip kicks up such a fuss at the ducks that I have kept to the field path all week",
+          "role": "second live candidate, and the most recent singular mention"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Then keep her on the lead down that path",
+          "role": "referring expression that picks out neither dog"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Bev, I am off to Aberdeen on the Thursday and back late on Sunday. Any chance you could take Nell for the four days?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "We can, she gets on well enough with Pip. Callum is home by four all week, so the walking is covered between us."
+        },
+        {
+          "speaker": "user",
+          "text": "That is a relief. There is a tub of her dinners out in the porch, enough for four days and a bit over."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Grand. Pip kicks up such a fuss at the ducks that I have kept to the field path all week."
+        },
+        {
+          "speaker": "user",
+          "text": "Then keep her on the lead down that path, the ducks are the one thing she will not leave alone. The food is in the blue tub in the porch."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Callum is home by four all week, so the walking is covered between us",
+          "role": "answers the only open request"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Then keep Nell on the lead down that path",
+          "role": "the dog is named, so nothing is left open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Bev, I am off to Aberdeen on the Thursday and back late on Sunday. Any chance you could take Nell for the four days?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "We can, she gets on well enough with Pip. Callum is home by four all week, so the walking is covered between us."
+        },
+        {
+          "speaker": "user",
+          "text": "That is a relief. There is a tub of her dinners out in the porch, enough for four days and a bit over."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Grand. Pip kicks up such a fuss at the ducks that I have kept to the field path all week."
+        },
+        {
+          "speaker": "user",
+          "text": "Then keep Nell on the lead down that path, the ducks are the one thing she will not leave alone. The food is in the blue tub in the porch."
+        }
+      ]
+    }
+  }
+}

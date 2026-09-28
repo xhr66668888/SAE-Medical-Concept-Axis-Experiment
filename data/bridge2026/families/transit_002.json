@@ -1,0 +1,191 @@
+{
+  "family_id": "transit_002",
+  "domain": "transit",
+  "task_goal": "arrange one airport pickup to the Kingsway Hotel for a party with heavy luggage",
+  "n_turns": 5,
+  "tail_anchor": "Send the confirmation to my phone.",
+  "notes": "rep_unres and rep_res are identical apart from the stated ground-transport cap, thirty against sixty dollars, set beside a forty-six dollar fare; the emphatic re-statement of the vehicle choice is present in both. norep_unres and norep_res differ only in 'the terminal' against 'Terminal 5', with two terminals live.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "That comes to around forty-six dollars all in",
+          "role": "the quoted fare"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Our travel budget caps ground transport at thirty dollars",
+          "role": "budget the accepted fare exceeds"
+        },
+        {
+          "turn_index": 3,
+          "quote": "XL it is.",
+          "role": "assistant proceeds without reconciling the clash"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "We land at Terminal 2 at 7:15 on Thursday evening and need a car to the Kingsway Hotel. Four of us, three large cases, so we need the boot space."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Then I would book the XL vehicle rather than the standard saloon. That comes to around forty-six dollars all in."
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, book the XL vehicle rather than the standard saloon. Our travel budget caps ground transport at thirty dollars."
+        },
+        {
+          "speaker": "assistant",
+          "text": "XL it is. The driver will meet you in the arrivals hall at Terminal 2."
+        },
+        {
+          "speaker": "user",
+          "text": "That suits us. Send the confirmation to my phone."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "we need the boot space",
+          "role": "preference stated"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Then I would book the XL vehicle rather than the standard saloon.",
+          "role": "preference accepted"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Our travel budget caps ground transport at sixty dollars",
+          "role": "consistent with the quoted fare, nothing left open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "We land at Terminal 2 at 7:15 on Thursday evening and need a car to the Kingsway Hotel. Four of us, three large cases, so we need the boot space."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Then I would book the XL vehicle rather than the standard saloon. That comes to around forty-six dollars all in."
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, book the XL vehicle rather than the standard saloon. Our travel budget caps ground transport at sixty dollars."
+        },
+        {
+          "speaker": "assistant",
+          "text": "XL it is. The driver will meet you in the arrivals hall at Terminal 2."
+        },
+        {
+          "speaker": "user",
+          "text": "That suits us. Send the confirmation to my phone."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "I get into Terminal 2 at 7:15",
+          "role": "first candidate pickup point"
+        },
+        {
+          "turn_index": 0,
+          "quote": "my colleague Dan lands at Terminal 5",
+          "role": "second candidate pickup point"
+        },
+        {
+          "turn_index": 1,
+          "quote": "provided you meet at one terminal or the other",
+          "role": "both candidates stay live"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Have the driver wait at the terminal",
+          "role": "referring expression picks neither"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Booked from 7:45",
+          "role": "assistant proceeds without disambiguating"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I need a car booked for Thursday evening. I get into Terminal 2 at 7:15 and my colleague Dan lands at Terminal 5 at about the same time."
+        },
+        {
+          "speaker": "assistant",
+          "text": "One vehicle can take you both, provided you meet at one terminal or the other. With three large cases I would suggest the XL, at around forty-six dollars."
+        },
+        {
+          "speaker": "user",
+          "text": "The XL sounds right to me. Have the driver wait at the terminal from a quarter to eight."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Booked from 7:45, and I have added a note about the cases."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. Send the confirmation to my phone."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "Have the driver wait at Terminal 5",
+          "role": "pickup point determined"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Booked from 7:45, and I have added a note about the cases.",
+          "role": "closes the last open item"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I need a car booked for Thursday evening. I get into Terminal 2 at 7:15 and my colleague Dan lands at Terminal 5 at about the same time."
+        },
+        {
+          "speaker": "assistant",
+          "text": "One vehicle can take you both, provided you meet at one terminal or the other. With three large cases I would suggest the XL, at around forty-six dollars."
+        },
+        {
+          "speaker": "user",
+          "text": "The XL sounds right to me. Have the driver wait at Terminal 5 from a quarter to eight."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Booked from 7:45, and I have added a note about the cases."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. Send the confirmation to my phone."
+        }
+      ]
+    }
+  }
+}

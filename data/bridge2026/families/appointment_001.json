@@ -1,0 +1,77 @@
+{
+  "family_id": "appointment_001",
+  "domain": "appointment",
+  "task_goal": "book a dental cleaning at Riverside dental clinic and settle the practical detail attached to it",
+  "n_turns": 5,
+  "tail_anchor": "Can we go ahead and lock that in?",
+  "notes": "norep_unres and norep_res differ by a single word (afternoons/mornings): minimal counterfactual on the contradiction.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "do you know whether they validate parking for patients", "role": "request"},
+        {"turn_index": 2, "quote": "Do you know whether they validate parking for patients?", "role": "re-request"},
+        {"turn_index": 3, "quote": "Thursday at 2pm it is. I'll just need the phone number on your file.", "role": "assistant turn that fails to answer"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hi, I'd like to book a cleaning at the Riverside dental clinic. Also, do you know whether they validate parking for patients?"},
+        {"speaker": "assistant", "text": "I can set that up for you. I have Thursday at 2pm or Friday at 10am available this week."},
+        {"speaker": "user", "text": "Thursday at 2pm is better for me. Do you know whether they validate parking for patients?"},
+        {"speaker": "assistant", "text": "Thursday at 2pm it is. I'll just need the phone number on your file."},
+        {"speaker": "user", "text": "It's 555-0142. Can we go ahead and lock that in?"}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Yes, they validate parking for patients", "role": "discharges the only open request"},
+        {"turn_index": 3, "quote": "Could you read back the day and time so I can confirm?", "role": "assistant requests the repetition"},
+        {"turn_index": 4, "quote": "Thursday at 2pm.", "role": "requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hi, I'd like to book a cleaning at the Riverside dental clinic. Also, do you know whether they validate parking for patients?"},
+        {"speaker": "assistant", "text": "Yes, they validate parking for patients. I have Thursday at 2pm or Friday at 10am available."},
+        {"speaker": "user", "text": "Thursday at 2pm is better for me, and it's good that they validate parking for patients."},
+        {"speaker": "assistant", "text": "Thursday at 2pm. Could you read back the day and time so I can confirm?"},
+        {"speaker": "user", "text": "Thursday at 2pm. Can we go ahead and lock that in?"}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "I have Thursday at 2pm or Friday at 10am available", "role": "the offered slot is an afternoon"},
+        {"turn_index": 2, "quote": "My afternoons are completely booked this week, so that works well", "role": "conflicts with taking the 2pm slot"},
+        {"turn_index": 3, "quote": "I'll put you down for that one.", "role": "assistant proceeds without reconciling the conflict"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hi, I'd like to book a cleaning at the Riverside dental clinic. Could you tell me what slots are open this week?"},
+        {"speaker": "assistant", "text": "Sure. I have Thursday at 2pm or Friday at 10am available."},
+        {"speaker": "user", "text": "Let's take the Thursday one. My afternoons are completely booked this week, so that works well. Will I get a reminder?"},
+        {"speaker": "assistant", "text": "Yes, a text reminder goes out the day before. I'll put you down for that one."},
+        {"speaker": "user", "text": "Perfect, thanks. Can we go ahead and lock that in?"}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "My mornings are completely booked this week, so that works well", "role": "consistent with taking the 2pm slot"},
+        {"turn_index": 3, "quote": "Yes, a text reminder goes out the day before.", "role": "answers the only open request"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hi, I'd like to book a cleaning at the Riverside dental clinic. Could you tell me what slots are open this week?"},
+        {"speaker": "assistant", "text": "Sure. I have Thursday at 2pm or Friday at 10am available."},
+        {"speaker": "user", "text": "Let's take the Thursday one. My mornings are completely booked this week, so that works well. Will I get a reminder?"},
+        {"speaker": "assistant", "text": "Yes, a text reminder goes out the day before. I'll put you down for that one."},
+        {"speaker": "user", "text": "Perfect, thanks. Can we go ahead and lock that in?"}
+      ]
+    }
+  }
+}

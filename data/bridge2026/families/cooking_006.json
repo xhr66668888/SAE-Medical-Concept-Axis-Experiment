@@ -1,0 +1,186 @@
+{
+  "family_id": "cooking_006",
+  "domain": "cooking",
+  "task_goal": "cook a paella for eight on the hob and get the rice and the stock ready",
+  "n_turns": 5,
+  "tail_anchor": "I've got the whole afternoon free for this.",
+  "notes": "Both rep cells carry the same emphasis repetition about the hob, so the repetition is benign in both; rep_unres and rep_res differ by one digit, a 500g bag against a 700g bag, measured against the 640g just quoted. The norep pair differs only in 'the tub' against 'the fish one' with two tubs live.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Eighty grams a head, so 640g for eight",
+          "role": "stated quantity for eight"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I've got a 500g bag in the cupboard, so the rice is covered",
+          "role": "500g cannot cover the 640g just quoted"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Heat the stock in a separate pan before it goes in",
+          "role": "assistant moves on without raising the shortfall"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Saturday I'm doing a paella for eight and I want it on the hob, not in the oven. How much rice should I buy?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Eighty grams a head, so 640g for eight, and about three times that in stock. On the hob is fine as long as the pan is wide."
+        },
+        {
+          "speaker": "user",
+          "text": "Right, and it is definitely going on the hob, not in the oven. I've got a 500g bag in the cupboard, so the rice is covered."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Heat the stock in a separate pan before it goes in; cold stock stalls the rice and you get a chalky middle."
+        },
+        {
+          "speaker": "user",
+          "text": "Hot stock, never cold. I've got the whole afternoon free for this."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "I want it on the hob, not in the oven",
+          "role": "preference stated"
+        },
+        {
+          "turn_index": 1,
+          "quote": "On the hob is fine as long as the pan is wide",
+          "role": "preference already accepted"
+        },
+        {
+          "turn_index": 2,
+          "quote": "it is definitely going on the hob, not in the oven",
+          "role": "restated for emphasis, nothing new is opened"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I've got a 700g bag in the cupboard, so the rice is covered",
+          "role": "700g covers the 640g just quoted"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Saturday I'm doing a paella for eight and I want it on the hob, not in the oven. How much rice should I buy?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Eighty grams a head, so 640g for eight, and about three times that in stock. On the hob is fine as long as the pan is wide."
+        },
+        {
+          "speaker": "user",
+          "text": "Right, and it is definitely going on the hob, not in the oven. I've got a 700g bag in the cupboard, so the rice is covered."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Heat the stock in a separate pan before it goes in; cold stock stalls the rice and you get a chalky middle."
+        },
+        {
+          "speaker": "user",
+          "text": "Hot stock, never cold. I've got the whole afternoon free for this."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "There is a tub of chicken stock and a tub of fish stock in the freezer",
+          "role": "two candidate tubs are live"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I will take the tub out tonight to thaw",
+          "role": "the referring expression picks out neither"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Leave it in the fridge to come round rather than on the counter",
+          "role": "assistant moves on without settling which tub"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Saturday I'm doing a paella for eight and I want it on the hob, not in the oven. How much rice should I buy?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Eighty grams a head, so 640g for eight, and about three times that in liquid. A wide pan matters more than the heat source."
+        },
+        {
+          "speaker": "user",
+          "text": "That is fine, I have a 900g bag. There is a tub of chicken stock and a tub of fish stock in the freezer, and I will take the tub out tonight to thaw."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Leave it in the fridge to come round rather than on the counter, and warm it through before it meets the rice."
+        },
+        {
+          "speaker": "user",
+          "text": "Overnight in the fridge, then. I've got the whole afternoon free for this."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Eighty grams a head, so 640g for eight",
+          "role": "answers the opening request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I will take the fish one out tonight to thaw",
+          "role": "picks one of the two tubs"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Saturday I'm doing a paella for eight and I want it on the hob, not in the oven. How much rice should I buy?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Eighty grams a head, so 640g for eight, and about three times that in liquid. A wide pan matters more than the heat source."
+        },
+        {
+          "speaker": "user",
+          "text": "That is fine, I have a 900g bag. There is a tub of chicken stock and a tub of fish stock in the freezer, and I will take the fish one out tonight to thaw."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Leave it in the fridge to come round rather than on the counter, and warm it through before it meets the rice."
+        },
+        {
+          "speaker": "user",
+          "text": "Overnight in the fridge, then. I've got the whole afternoon free for this."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "family_id": "household_022",
+  "domain": "household",
+  "task_goal": "get spare keys cut for a new lodger and the cleaner and settle which key is which",
+  "n_turns": 5,
+  "tail_anchor": "The spare is in the tin on the shelf.",
+  "notes": "rep_unres and rep_res differ by one phrase (that one / the back door one). Both keys are raised in the turn immediately before and the back door key is the most recent singular mention, so the demonstrative has no winner.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "The man on the market wants the original for the Yale",
+          "role": "first live candidate, the key Jonah needs"
+        },
+        {
+          "turn_index": 3,
+          "quote": "he says the back door one takes a blank he has to order in",
+          "role": "second live candidate, and the most recent singular mention"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Get two more of that one cut while you are down there",
+          "role": "referring expression that picks out neither key"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Dev, Jonah moves into the box room on the first and Marta is still coming on Fridays, so we need more keys cut. I would rather Marta came round to the back and not the front, whoever else is in."
+        },
+        {
+          "speaker": "assistant",
+          "text": "She only ever uses the back door anyway, so that is no trouble. Jonah will need a front door Yale of his own. Shall I take the originals down to the market on Saturday?"
+        },
+        {
+          "speaker": "user",
+          "text": "Please do. I would rather Marta came round to the back and not the front, because the front step is a mess with the builders next door."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Fair enough. The man on the market wants the original for the Yale, and he says the back door one takes a blank he has to order in."
+        },
+        {
+          "speaker": "user",
+          "text": "Get two more of that one cut while you are down there, then. The spare is in the tin on the shelf."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "She only ever uses the back door anyway, so that is no trouble",
+          "role": "the stated preference is accepted"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I would rather Marta came round to the back and not the front",
+          "role": "restatement for emphasis of an accepted preference"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Get two more of the back door one cut while you are down there",
+          "role": "the key is named, so nothing is left open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Dev, Jonah moves into the box room on the first and Marta is still coming on Fridays, so we need more keys cut. I would rather Marta came round to the back and not the front, whoever else is in."
+        },
+        {
+          "speaker": "assistant",
+          "text": "She only ever uses the back door anyway, so that is no trouble. Jonah will need a front door Yale of his own. Shall I take the originals down to the market on Saturday?"
+        },
+        {
+          "speaker": "user",
+          "text": "Please do. I would rather Marta came round to the back and not the front, because the front step is a mess with the builders next door."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Fair enough. The man on the market wants the original for the Yale, and he says the back door one takes a blank he has to order in."
+        },
+        {
+          "speaker": "user",
+          "text": "Get two more of the back door one cut while you are down there, then. The spare is in the tin on the shelf."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Does the agent need telling that somebody is in the box room, or is that only for a proper tenancy?",
+          "role": "request"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Marta only ever uses the back door, so she can hang on to the key she has.",
+          "role": "assistant answers a different part"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I will be in on the Sunday to give him a hand with it. Which key did you say he needs, so I get the right one cut?",
+          "role": "assistant turn that fails to answer"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Dev, Jonah takes the box room from the first, and Marta is still with us on Fridays. Does the agent need telling that somebody is in the box room, or is that only for a proper tenancy?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Marta only ever uses the back door, so she can hang on to the key she has. It is Jonah who needs one cutting."
+        },
+        {
+          "speaker": "user",
+          "text": "Two of the front door Yale, I would say, so there is a spare left in the house. He is carrying a desk up the stairs on the Sunday as well."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I will be in on the Sunday to give him a hand with it. Which key did you say he needs, so I get the right one cut?"
+        },
+        {
+          "speaker": "user",
+          "text": "The one for the front door, not the back. The spare is in the tin on the shelf."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "The agent only counts a proper tenancy, I checked.",
+          "role": "answers the only open request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Which key does he need cut?",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "The one for the front door, not the back.",
+          "role": "requested read-back, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Dev, Jonah takes the box room from the first, and Marta is still with us on Fridays. Does the agent need telling that somebody is in the box room, or is that only for a proper tenancy?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Marta only ever uses the back door, so she can hang on to the key she has. It is Jonah who needs one cutting."
+        },
+        {
+          "speaker": "user",
+          "text": "Two of the front door Yale, I would say, so there is a spare left in the house. He is carrying a desk up the stairs on the Sunday as well."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I will be in on the Sunday to give him a hand with it. The agent only counts a proper tenancy, I checked. Which key does he need cut?"
+        },
+        {
+          "speaker": "user",
+          "text": "The one for the front door, not the back. The spare is in the tin on the shelf."
+        }
+      ]
+    }
+  }
+}

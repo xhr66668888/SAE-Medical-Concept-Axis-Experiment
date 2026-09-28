@@ -1,0 +1,186 @@
+{
+  "family_id": "cooking_009",
+  "domain": "cooking",
+  "task_goal": "sterilise jars and boil up a first batch of damson jam from the tree",
+  "n_turns": 5,
+  "tail_anchor": "The waxed discs and labels are already out.",
+  "notes": "Both rep cells contain the same requested read-back of the sterilising temperature, so the repetition is benign in both; rep_unres and rep_res differ only in 'the tray' against 'the squat tray' while both trays of jars stay live and only one is needed. The norep pair differs only in the opening clause of turn 3, which either answers the setting-point question or does not.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "twelve squat 340g jars on one tray and eighteen tall 227g ones on another",
+          "role": "two candidate trays are live"
+        },
+        {
+          "turn_index": 1,
+          "quote": "eleven of the squat jars or sixteen of the tall ones, so you only need one of the two trays",
+          "role": "both trays re-activated, and exactly one must be chosen"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I'll put the tray in as soon as the fruit is on",
+          "role": "the referring expression picks out neither"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Stone the fruit before it goes in the pan",
+          "role": "assistant moves on without settling which tray"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "First go at jam this year, four kilos of damsons off the tree. There are twelve squat 340g jars on one tray and eighteen tall 227g ones on another. Can you talk me through sterilising them?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Wash them, then thirty minutes at 120C, one tray at a time, as the oven will only take one. Four kilos fills about eleven of the squat jars or sixteen of the tall ones, so you only need one of the two trays. Can you read the temperature and the time back to me?"
+        },
+        {
+          "speaker": "user",
+          "text": "Thirty minutes at 120C, one tray at a time. I'll put the tray in as soon as the fruit is on."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Stone the fruit before it goes in the pan, because fishing stones out of boiling jam is a thankless job."
+        },
+        {
+          "speaker": "user",
+          "text": "Stones out first, then. The waxed discs and labels are already out."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Can you read the temperature and the time back to me?",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Thirty minutes at 120C, one tray at a time.",
+          "role": "the requested read-back, not a sign of trouble"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I'll put the squat tray in as soon as the fruit is on",
+          "role": "picks one of the two trays"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "First go at jam this year, four kilos of damsons off the tree. There are twelve squat 340g jars on one tray and eighteen tall 227g ones on another. Can you talk me through sterilising them?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Wash them, then thirty minutes at 120C, one tray at a time, as the oven will only take one. Four kilos fills about eleven of the squat jars or sixteen of the tall ones, so you only need one of the two trays. Can you read the temperature and the time back to me?"
+        },
+        {
+          "speaker": "user",
+          "text": "Thirty minutes at 120C, one tray at a time. I'll put the squat tray in as soon as the fruit is on."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Stone the fruit before it goes in the pan, because fishing stones out of boiling jam is a thankless job."
+        },
+        {
+          "speaker": "user",
+          "text": "Stones out first, then. The waxed discs and labels are already out."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "How will I know it has hit setting point without a sugar thermometer?",
+          "role": "request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Have the jars warm in the oven when you pot up",
+          "role": "assistant answers about potting up instead"
+        },
+        {
+          "turn_index": 3,
+          "quote": "A jam funnel saves a lot of mess at that stage.",
+          "role": "last assistant turn, still nothing on setting point"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "First go at jam this year, four kilos of damsons off the tree. There are twelve squat 340g jars on one tray and eighteen tall 227g ones on another. Can you talk me through sterilising them?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Wash them, then half an hour at 120C, one tray at a time, as the oven will only take one. Four kilos fills about eleven of the squat jars or sixteen of the tall ones, so you only need one of the two trays."
+        },
+        {
+          "speaker": "user",
+          "text": "The squat ones, then. How will I know it has hit setting point without a sugar thermometer?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Have the jars warm in the oven when you pot up, or cold glass will crack under hot jam. A jam funnel saves a lot of mess at that stage."
+        },
+        {
+          "speaker": "user",
+          "text": "Warm jars, noted. The waxed discs and labels are already out."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "The squat ones, then.",
+          "role": "picks one of the two trays"
+        },
+        {
+          "turn_index": 3,
+          "quote": "A spoonful on a cold saucer wrinkles when it is ready",
+          "role": "answers the last open request"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "First go at jam this year, four kilos of damsons off the tree. There are twelve squat 340g jars on one tray and eighteen tall 227g ones on another. Can you talk me through sterilising them?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Wash them, then half an hour at 120C, one tray at a time, as the oven will only take one. Four kilos fills about eleven of the squat jars or sixteen of the tall ones, so you only need one of the two trays."
+        },
+        {
+          "speaker": "user",
+          "text": "The squat ones, then. How will I know it has hit setting point without a sugar thermometer?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "A spoonful on a cold saucer wrinkles when it is ready. Have the jars warm in the oven when you pot up, or cold glass will crack under hot jam."
+        },
+        {
+          "speaker": "user",
+          "text": "Warm jars, noted. The waxed discs and labels are already out."
+        }
+      ]
+    }
+  }
+}

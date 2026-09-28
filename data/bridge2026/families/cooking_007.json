@@ -1,0 +1,78 @@
+{
+  "family_id": "cooking_007",
+  "domain": "cooking",
+  "task_goal": "make up a whole school week of packed lunches on Sunday night for a nut-free school",
+  "n_turns": 5,
+  "tail_anchor": "The lunch bags are in the drawer by the sink.",
+  "notes": "norep_unres and norep_res differ by one word, fridge against freezer, against the storage lives the assistant has just given; rep_unres and rep_res differ in whether the cereal bar question is ever answered.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Do the cereal bars that say 'may contain traces' break that rule?", "role": "request"},
+        {"turn_index": 2, "quote": "Do the cereal bars that say 'may contain traces' break that rule?", "role": "re-request"},
+        {"turn_index": 3, "quote": "Slip a frozen carton of juice into each bag as well", "role": "assistant offers a packing tip instead of answering"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Sunday night I'm making up Ivy's packed lunches for the whole school week, and her school is strictly nut-free. Do the cereal bars that say 'may contain traces' break that rule?"},
+        {"speaker": "assistant", "text": "Sandwiches built on Sunday keep in the fridge until Wednesday, and a month in the freezer, where they thaw by lunchtime on their own."},
+        {"speaker": "user", "text": "Fridge for the front half of the week, then. Do the cereal bars that say 'may contain traces' break that rule?"},
+        {"speaker": "assistant", "text": "Slip a frozen carton of juice into each bag as well; it works as an ice block in the morning and she can drink it by twelve."},
+        {"speaker": "user", "text": "A frozen carton in every bag, that is clever. The lunch bags are in the drawer by the sink."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Traces are fine at almost every nut-free school, so those bars are allowed", "role": "answers the only open request"},
+        {"turn_index": 3, "quote": "Can you read that back to me?", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "Monday to Wednesday come out of the fridge, Thursday and Friday out of the freezer.", "role": "the requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Sunday night I'm making up Ivy's packed lunches for the whole school week, and her school is strictly nut-free. Do the cereal bars that say 'may contain traces' break that rule?"},
+        {"speaker": "assistant", "text": "Traces are fine at almost every nut-free school, so those bars are allowed. Sandwiches built on Sunday keep in the fridge until Wednesday, and a month in the freezer."},
+        {"speaker": "user", "text": "That is a relief, she lives on those bars. I'll build all five wraps in one sitting."},
+        {"speaker": "assistant", "text": "Sensible. Monday to Wednesday come out of the fridge, Thursday and Friday out of the freezer. Can you read that back to me?"},
+        {"speaker": "user", "text": "Monday to Wednesday come out of the fridge, Thursday and Friday out of the freezer. The lunch bags are in the drawer by the sink."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "keep in the fridge until Wednesday", "role": "stated fridge life of a sandwich built on Sunday"},
+        {"turn_index": 2, "quote": "I'll build all five wraps on Sunday night, and Friday's is the one she takes straight out of the fridge that morning", "role": "a Friday wrap out of the fridge is two days past the stated life"},
+        {"turn_index": 3, "quote": "Send it dry with a little pot of dressing on the side", "role": "assistant answers the salad question and leaves the clash alone"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Sunday night I'm making up Ivy's packed lunches for the whole school week, and her school is strictly nut-free. Do the cereal bars that say 'may contain traces' break that rule?"},
+        {"speaker": "assistant", "text": "Traces are fine at almost every nut-free school, so those bars are allowed. Sandwiches built on Sunday keep in the fridge until Wednesday, and a month in the freezer."},
+        {"speaker": "user", "text": "Good, that saves me a trip. I'll build all five wraps on Sunday night, and Friday's is the one she takes straight out of the fridge that morning. Should I dress the salad or send it dry?"},
+        {"speaker": "assistant", "text": "Send it dry with a little pot of dressing on the side, or the wrap will be soggy long before break."},
+        {"speaker": "user", "text": "A pot on the side, then. The lunch bags are in the drawer by the sink."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Traces are fine at almost every nut-free school, so those bars are allowed", "role": "answers the opening request"},
+        {"turn_index": 2, "quote": "Friday's is the one she takes straight out of the freezer that morning", "role": "a month in the freezer covers Friday"},
+        {"turn_index": 3, "quote": "Send it dry with a little pot of dressing on the side", "role": "answers the last open request"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Sunday night I'm making up Ivy's packed lunches for the whole school week, and her school is strictly nut-free. Do the cereal bars that say 'may contain traces' break that rule?"},
+        {"speaker": "assistant", "text": "Traces are fine at almost every nut-free school, so those bars are allowed. Sandwiches built on Sunday keep in the fridge until Wednesday, and a month in the freezer."},
+        {"speaker": "user", "text": "Good, that saves me a trip. I'll build all five wraps on Sunday night, and Friday's is the one she takes straight out of the freezer that morning. Should I dress the salad or send it dry?"},
+        {"speaker": "assistant", "text": "Send it dry with a little pot of dressing on the side, or the wrap will be soggy long before break."},
+        {"speaker": "user", "text": "A pot on the side, then. The lunch bags are in the drawer by the sink."}
+      ]
+    }
+  }
+}

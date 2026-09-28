@@ -1,0 +1,89 @@
+{
+  "family_id": "transit_016",
+  "domain": "transit",
+  "task_goal": "leave two bags at the Kingsford station left luggage desk for the day before an evening train",
+  "n_turns": 7,
+  "tail_anchor": "I'm on the seven o'clock train tonight.",
+  "notes": "rep_unres and rep_res differ only in whether turn 1 gives the desk's closing time, so the same repetition is either a re-ask or a plain restatement of an accepted preference. norep_unres and norep_res differ only in 'that one' versus 'the grey rucksack'.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "How late does the desk stay open in the evening?", "role": "request"},
+        {"turn_index": 2, "quote": "How late does the desk stay open in the evening?", "role": "re-request"},
+        {"turn_index": 3, "quote": "I'll write it up that way. Neither should be over twenty kilos.", "role": "assistant turn that fails to answer"},
+        {"turn_index": 5, "quote": "I'll print the one ticket covering the pair.", "role": "later assistant turn that still does not answer"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, I have two bags to leave at the left luggage desk for the day. I'd like them both booked in under one ticket, not separately. How late does the desk stay open in the evening?"},
+        {"speaker": "assistant", "text": "One ticket for the pair is fine. It's eight pounds a bag for up to twenty-four hours, paid when you drop them off."},
+        {"speaker": "user", "text": "Good. How late does the desk stay open in the evening?"},
+        {"speaker": "assistant", "text": "I'll write it up that way. Neither should be over twenty kilos."},
+        {"speaker": "user", "text": "The grey rucksack is light and the hard suitcase is about fifteen. I'd sooner hang on to the paper ticket than take a photo of it."},
+        {"speaker": "assistant", "text": "Keep the paper one by all means, the scanner reads the code off it. I'll print the one ticket covering the pair."},
+        {"speaker": "user", "text": "Thanks very much. I'm on the seven o'clock train tonight."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "the desk is open until half past nine", "role": "answers the only question asked"},
+        {"turn_index": 1, "quote": "One ticket for the pair is fine", "role": "the preference is accepted here"},
+        {"turn_index": 2, "quote": "I'd like them both booked in under one ticket, not separately.", "role": "restated for emphasis after it was already accepted"},
+        {"turn_index": 5, "quote": "Keep the paper one, please, the scanner reads the code off it.", "role": "discharges the last open item"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, I have two bags to leave at the left luggage desk for the day. I'd like them both booked in under one ticket, not separately. How late does the desk stay open in the evening?"},
+        {"speaker": "assistant", "text": "One ticket for the pair is fine, and the desk is open until half past nine. It's eight pounds a bag for twenty-four hours."},
+        {"speaker": "user", "text": "Good. I'd like them both booked in under one ticket, not separately."},
+        {"speaker": "assistant", "text": "I'll write it up that way. Neither should be over twenty kilos."},
+        {"speaker": "user", "text": "The grey rucksack is light and the hard suitcase is about fifteen. Do I need to keep the paper ticket, or is a photo of it enough?"},
+        {"speaker": "assistant", "text": "Keep the paper one, please, the scanner reads the code off it. I'll print the one ticket covering the pair."},
+        {"speaker": "user", "text": "Thanks very much. I'm on the seven o'clock train tonight."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "I've weighed the hard suitcase and tagged the grey rucksack", "role": "two live candidate bags"},
+        {"turn_index": 4, "quote": "I'll need that one back at lunchtime", "role": "referring expression picks out neither"},
+        {"turn_index": 5, "quote": "That's no trouble, someone is on the desk all day. Bring your ticket over whenever you want it.", "role": "assistant does not disambiguate"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, I have two bags to leave at the left luggage desk for the day. What does it cost for the pair, and is there a size limit?"},
+        {"speaker": "assistant", "text": "Eight pounds a bag for up to twenty-four hours, so sixteen for the two, and nothing bigger than a large case. Are they both going in now?"},
+        {"speaker": "user", "text": "Yes, the grey rucksack and the hard suitcase are both here with me now, and neither is oversized."},
+        {"speaker": "assistant", "text": "Right, I've weighed the hard suitcase and tagged the grey rucksack, and they're both on the shelf behind me."},
+        {"speaker": "user", "text": "Thanks. I'll need that one back at lunchtime, there's a folder inside it I want for a meeting."},
+        {"speaker": "assistant", "text": "That's no trouble, someone is on the desk all day. Bring your ticket over whenever you want it."},
+        {"speaker": "user", "text": "Thanks very much. I'm on the seven o'clock train tonight."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Eight pounds a bag for up to twenty-four hours, so sixteen for the two, and nothing bigger than a large case.", "role": "answers the only request"},
+        {"turn_index": 4, "quote": "I'll need the grey rucksack back at lunchtime", "role": "the bag to be dug out is determined"},
+        {"turn_index": 5, "quote": "Read the number on your ticket back to me.", "role": "assistant asks for the repetition"},
+        {"turn_index": 6, "quote": "K four seven two one.", "role": "requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, I have two bags to leave at the left luggage desk for the day. What does it cost for the pair, and is there a size limit?"},
+        {"speaker": "assistant", "text": "Eight pounds a bag for up to twenty-four hours, so sixteen for the two, and nothing bigger than a large case. Are they both going in now?"},
+        {"speaker": "user", "text": "Yes, the grey rucksack and the hard suitcase are both here with me now, and neither is oversized."},
+        {"speaker": "assistant", "text": "Right, I've weighed the hard suitcase and tagged the grey rucksack, and they're both on the shelf behind me."},
+        {"speaker": "user", "text": "Thanks. I'll need the grey rucksack back at lunchtime, there's a folder inside it I want for a meeting."},
+        {"speaker": "assistant", "text": "That's no trouble, someone is on the desk all day. Read the number on your ticket back to me."},
+        {"speaker": "user", "text": "K four seven two one. I'm on the seven o'clock train tonight."}
+      ]
+    }
+  }
+}

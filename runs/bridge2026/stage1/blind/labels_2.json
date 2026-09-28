@@ -1,0 +1,212 @@
+[
+  {
+    "id": "A2_000",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Easy enough, the pool is on my way.",
+    "confidence": "medium"
+  },
+  {
+    "id": "A2_001",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Can you say that back to me? / Don't fill either tin past two thirds of the way up.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_002",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Yes, you can cancel up to twenty-four hours ahead and get it all back.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_003",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "How high should the heat be when the cream goes in?",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_004",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Read the evening amount back to me and I'll put it on our calendar. / A pouch each in the evening.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_005",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "It does need to start on Monday the sixth rather than today.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_006",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Then put the chair back to Saturday the 18th, assuming your crews work weekends.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_007",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Refunds land on the original card within five working days of the parcel reaching us.",
+    "confidence": "low"
+  },
+  {
+    "id": "A2_008",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "Tell me what the fee covers, because I am not sure about the return postage.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_009",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Read the hire place and the pickup time back to me so I have it right. / Coast Bikes at eleven.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_010",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "There is a tub of chicken stock and a tub of fish stock in the freezer, and I will take the tub out tonight to thaw.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_011",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "a cut and colour on Saturday the 4th, and a colour top-up on the 25th / Move the colour one over to Thursday the 16th at eleven, if there is room.",
+    "confidence": "medium"
+  },
+  {
+    "id": "A2_012",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "Please do, but just for one batch. I'll make the soup this weekend and leave the other until November.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_013",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "The machine is only two years old, so it is comfortably inside the twelve months.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_014",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Can you read that back so I know the line is clear? / The eight o'clock slot on the 22nd, yes.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_015",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Give me the weekly one again for our calendar. / The food caddy.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_016",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "Yes, book the XL vehicle rather than the standard saloon.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_017",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "the sticker underneath says model 400 / Mine is the 600.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_018",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I will pass that wording straight to the packing team and add the ribbon wrap to both parcels.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_019",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "Is a seat reservation included in the advance fare?",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_020",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "I'd rather it went straight into the spare room than the hall.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_021",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "300g flour, 300g sugar, 300g butter and six eggs / I've got 200g of butter in the fridge, which is plenty, so I won't need to shop.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_022",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "Do they want the old router handed back on the day?",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_023",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "Ninety minutes at 160C fan, then fifteen minutes under foil. I'll put the lamb in at five and take it out at six.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_024",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "What would you charge to shorten the coat sleeves?",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_025",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Can you confirm the flat number for me? / Flat 3B.",
+    "confidence": "medium"
+  },
+  {
+    "id": "A2_026",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "I do not want any more bags stacking up in the cupboard.",
+    "confidence": "medium"
+  },
+  {
+    "id": "A2_027",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Could you read back the day and time so I can confirm? / Thursday at 2pm.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_028",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "She is seeing parents from four until six on Thursday the 9th, and there are gaps left at 4.40 and at 5.20.",
+    "confidence": "high"
+  },
+  {
+    "id": "A2_029",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "Could you just confirm the bus number and the starting point for me? / The bus runs from Ashfield station to the Greenbank centre.",
+    "confidence": "high"
+  }
+]

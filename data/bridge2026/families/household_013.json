@@ -1,0 +1,213 @@
+{
+  "family_id": "household_013",
+  "domain": "household",
+  "task_goal": "line up a van, two helpers and a parking space for moving day",
+  "n_turns": 7,
+  "tail_anchor": "The kettle is going in the last box.",
+  "notes": "rep_unres and rep_res differ by one phrase (it / the Luton) in the final turn; two vans are live and the transit is the most recent singular mention, so the bare pronoun has no winner.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 4,
+          "quote": "The Luton has to be back by six or they charge for another day",
+          "role": "first live candidate, the topic of the loading plan"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Greg's transit is a short wheelbase",
+          "role": "second live candidate, and the most recent singular mention"
+        },
+        {
+          "turn_index": 6,
+          "quote": "Best to have it on Pauline's drive before we start",
+          "role": "referring expression that picks out neither van"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Yusuf, moving day is the Saturday after next. I have a Luton booked from the hire place on Fenton Road from eight. Could you and Greg take the heavy end of the wardrobe?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Course we can. Greg has offered his transit as well, so the pots and the garden stuff can travel separately."
+        },
+        {
+          "speaker": "user",
+          "text": "That would help. Pauline says we can have her drive for the whole of Saturday, and it is the only flat bit of the street."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Handy. Which road did you say you are collecting from? I'll cycle over and follow you back."
+        },
+        {
+          "speaker": "user",
+          "text": "The hire place on Fenton Road. The Luton has to be back by six or they charge for another day, so I want it loaded early."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. Greg's transit is a short wheelbase, mind, so he will be making two runs at the pots."
+        },
+        {
+          "speaker": "user",
+          "text": "Best to have it on Pauline's drive before we start, then, so we are not blocking the road. The kettle is going in the last box."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "Which road did you say you are collecting from?",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "The hire place on Fenton Road.",
+          "role": "requested read-back, not a sign of trouble"
+        },
+        {
+          "turn_index": 6,
+          "quote": "Best to have the Luton on Pauline's drive before we start",
+          "role": "the vehicle is named, so nothing is left open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Yusuf, moving day is the Saturday after next. I have a Luton booked from the hire place on Fenton Road from eight. Could you and Greg take the heavy end of the wardrobe?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Course we can. Greg has offered his transit as well, so the pots and the garden stuff can travel separately."
+        },
+        {
+          "speaker": "user",
+          "text": "That would help. Pauline says we can have her drive for the whole of Saturday, and it is the only flat bit of the street."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Handy. Which road did you say you are collecting from? I'll cycle over and follow you back."
+        },
+        {
+          "speaker": "user",
+          "text": "The hire place on Fenton Road. The Luton has to be back by six or they charge for another day, so I want it loaded early."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. Greg's transit is a short wheelbase, mind, so he will be making two runs at the pots."
+        },
+        {
+          "speaker": "user",
+          "text": "Best to have the Luton on Pauline's drive before we start, then, so we are not blocking the road. The kettle is going in the last box."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Do I have to book the service lift with the porter, or is it first come first served at weekends?",
+          "role": "request"
+        },
+        {
+          "turn_index": 1,
+          "quote": "I can be there from seven with Greg.",
+          "role": "assistant answers a different part"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Greg can make a start on the shed while we are out.",
+          "role": "assistant turn that fails to answer"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Yusuf, we complete on the Friday and the flat has to be cleared by Saturday teatime. Do I have to book the service lift with the porter, or is it first come first served at weekends?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can be there from seven with Greg. He has a transit now, so the plant pots and the garden bits can go in that."
+        },
+        {
+          "speaker": "user",
+          "text": "Brilliant. Pauline will let us have her drive for the day, and it is the only flat bit of the whole street."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That saves my shoulder. Where are we picking the big van up from?"
+        },
+        {
+          "speaker": "user",
+          "text": "Fenton Road, just past the chip shop, from eight in the morning."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Fine, I will cycle down and follow you back up. Greg can make a start on the shed while we are out."
+        },
+        {
+          "speaker": "user",
+          "text": "Good, that is one less thing to think about. The kettle is going in the last box."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Do I have to book the service lift with the porter, or is it first come first served at weekends?",
+          "role": "request"
+        },
+        {
+          "turn_index": 5,
+          "quote": "The porter books the lift in for you, so give him a ring on Monday.",
+          "role": "answers the only open request"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Yusuf, we complete on the Friday and the flat has to be cleared by Saturday teatime. Do I have to book the service lift with the porter, or is it first come first served at weekends?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can be there from seven with Greg. He has a transit now, so the plant pots and the garden bits can go in that."
+        },
+        {
+          "speaker": "user",
+          "text": "Brilliant. Pauline will let us have her drive for the day, and it is the only flat bit of the whole street."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That saves my shoulder. Where are we picking the big van up from?"
+        },
+        {
+          "speaker": "user",
+          "text": "Fenton Road, just past the chip shop, from eight in the morning."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Fine, I will cycle down and follow you back up. The porter books the lift in for you, so give him a ring on Monday."
+        },
+        {
+          "speaker": "user",
+          "text": "Good, that is one less thing to think about. The kettle is going in the last box."
+        }
+      ]
+    }
+  }
+}

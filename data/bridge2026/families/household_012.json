@@ -1,0 +1,186 @@
+{
+  "family_id": "household_012",
+  "domain": "household",
+  "task_goal": "settle who drives the shared car to its MOT and what happens if it fails",
+  "n_turns": 5,
+  "tail_anchor": "The logbook lives in the glovebox.",
+  "notes": "norep_unres and norep_res differ by one word (Wednesday/Sunday): Liv is away until that night, and the user then has her drive the car down on the Tuesday morning, so the availability conflict is fully on the page.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "do they lend you a car while it's in, or are we all on the bus?",
+          "role": "request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "do they lend you a car while it's in, or are we all on the bus?",
+          "role": "re-request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I'll post the keys through the garage letterbox on Monday night, so it is near the front of the queue.",
+          "role": "assistant turn that fails to answer"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Marcus, the car is booked in at Barrow Street for its MOT on Tuesday. I'd rather we took the first slot of the day. If it fails on something big, do they lend you a car while it's in, or are we all on the bus?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "First slot suits me, I can walk to the depot from there. Liv wants the car on Thursday for her airport run, so Tuesday is the only clear day anyway."
+        },
+        {
+          "speaker": "user",
+          "text": "Tuesday it is, then. If it fails on something big, do they lend you a car while it's in, or are we all on the bus?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I'll post the keys through the garage letterbox on Monday night, so it is near the front of the queue."
+        },
+        {
+          "speaker": "user",
+          "text": "Good thinking, that saves one of us a trip down. The logbook lives in the glovebox."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "They keep two loan cars and one is nearly always free, so nobody is on the bus",
+          "role": "answers the only open request"
+        },
+        {
+          "turn_index": 1,
+          "quote": "First slot suits me",
+          "role": "the stated preference is accepted"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I'd rather we took the first slot of the day",
+          "role": "restatement for emphasis of an accepted preference"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Marcus, the car is booked in at Barrow Street for its MOT on Tuesday. I'd rather we took the first slot of the day. If it fails on something big, do they lend you a car while it's in, or are we all on the bus?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "First slot suits me, I can walk to the depot from there. They keep two loan cars and one is nearly always free, so nobody is on the bus."
+        },
+        {
+          "speaker": "user",
+          "text": "That is a weight off. I'd rather we took the first slot of the day, because Liv wants the car on Thursday for her airport run."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Fair enough. I'll post the keys through the garage letterbox on Monday night, so it is near the front of the queue."
+        },
+        {
+          "speaker": "user",
+          "text": "Good thinking, that saves one of us a trip down. The logbook lives in the glovebox."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Liv is down in Bristol with her sister until Wednesday night",
+          "role": "Liv is not here on the Tuesday"
+        },
+        {
+          "turn_index": 2,
+          "quote": "let's have Liv run it down to Barrow Street first thing on Tuesday",
+          "role": "the plan needs Liv to drive on a day she is away"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Fine by me.",
+          "role": "assistant proceeds without reconciling the conflict"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Marcus, I have put the car in at Barrow Street for its MOT on Tuesday. Could you work out between you who takes it down? I am on the early train to Derby."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Not me, I am at the depot from seven all Tuesday. Liv is down in Bristol with her sister until Wednesday night."
+        },
+        {
+          "speaker": "user",
+          "text": "Then let's have Liv run it down to Barrow Street first thing on Tuesday, and she can walk back up the hill afterwards."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Fine by me. I will leave a note about the handbrake for the chap at the desk while I think of it."
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, he ought to know about that. The logbook lives in the glovebox."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Liv is down in Bristol with her sister until Sunday night",
+          "role": "Liv is back well before the Tuesday"
+        },
+        {
+          "turn_index": 2,
+          "quote": "let's have Liv run it down to Barrow Street first thing on Tuesday",
+          "role": "a plan Liv can actually carry out"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Fine by me.",
+          "role": "the open question of who takes the car is settled"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Marcus, I have put the car in at Barrow Street for its MOT on Tuesday. Could you work out between you who takes it down? I am on the early train to Derby."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Not me, I am at the depot from seven all Tuesday. Liv is down in Bristol with her sister until Sunday night."
+        },
+        {
+          "speaker": "user",
+          "text": "Then let's have Liv run it down to Barrow Street first thing on Tuesday, and she can walk back up the hill afterwards."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Fine by me. I will leave a note about the handbrake for the chap at the desk while I think of it."
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, he ought to know about that. The logbook lives in the glovebox."
+        }
+      ]
+    }
+  }
+}

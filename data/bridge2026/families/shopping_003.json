@@ -1,0 +1,171 @@
+{
+  "family_id": "shopping_003",
+  "domain": "shopping",
+  "task_goal": "order the correct replacement carafe for a Bellweather filter machine",
+  "n_turns": 5,
+  "tail_anchor": "Let's get it ordered today if we can.",
+  "notes": "rep_unres and rep_res are word-for-word identical apart from the model the user names back ('the 600 ... twelve-cup ... Mine is the 600' vs 'the 400 ... eight-cup ... Mine is the 400'); only the first clashes with the sticker read off the machine in turn 0. The norep pair differs only by the opening clause of turn 3.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "the sticker underneath says model 400",
+          "role": "first side of the conflict"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Mine is the 600.",
+          "role": "second side of the conflict"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Added to your basket.",
+          "role": "assistant orders a part without reconciling the two model numbers"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Afternoon. The glass carafe on my Bellweather filter machine cracked last night, and the sticker underneath says model 400."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can sort that out. The 400 takes the eight-cup carafe and the 600 takes the twelve-cup carafe, so tell me back which one I should order."
+        },
+        {
+          "speaker": "user",
+          "text": "The 600 takes the twelve-cup carafe, and that is the one I need. Mine is the 600."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Added to your basket. Delivery runs two to three working days to the address we hold for you."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. Let's get it ordered today if we can."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "tell me back which one I should order",
+          "role": "assistant requests the repetition"
+        },
+        {
+          "turn_index": 2,
+          "quote": "The 400 takes the eight-cup carafe",
+          "role": "requested read-back"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Mine is the 400.",
+          "role": "matches the sticker in turn 0, so nothing is left open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Afternoon. The glass carafe on my Bellweather filter machine cracked last night, and the sticker underneath says model 400."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can sort that out. The 400 takes the eight-cup carafe and the 600 takes the twelve-cup carafe, so tell me back which one I should order."
+        },
+        {
+          "speaker": "user",
+          "text": "The 400 takes the eight-cup carafe, and that is the one I need. Mine is the 400."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Added to your basket. Delivery runs two to three working days to the address we hold for you."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. Let's get it ordered today if we can."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "I would also like to know whether the plastic lid comes with it or has to be bought on its own",
+          "role": "request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "It is in your basket now, and stock in the Leeds depot means it should reach you by Friday.",
+          "role": "assistant turn that answers something else instead"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Afternoon. The glass carafe on my Bellweather filter machine cracked last night, and the sticker underneath says model 400."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can sort that out. A replacement carafe for the 400 is £18.50 and we have them in stock."
+        },
+        {
+          "speaker": "user",
+          "text": "Order one, then. I would also like to know whether the plastic lid comes with it or has to be bought on its own."
+        },
+        {
+          "speaker": "assistant",
+          "text": "It is in your basket now, and stock in the Leeds depot means it should reach you by Friday."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. Let's get it ordered today if we can."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "The lid comes with it.",
+          "role": "discharges the only open request"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Afternoon. The glass carafe on my Bellweather filter machine cracked last night, and the sticker underneath says model 400."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can sort that out. A replacement carafe for the 400 is £18.50 and we have them in stock."
+        },
+        {
+          "speaker": "user",
+          "text": "Order one, then. I would also like to know whether the plastic lid comes with it or has to be bought on its own."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The lid comes with it. It is in your basket now, and Leeds stock should get it to you by Friday."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. Let's get it ordered today if we can."
+        }
+      ]
+    }
+  }
+}

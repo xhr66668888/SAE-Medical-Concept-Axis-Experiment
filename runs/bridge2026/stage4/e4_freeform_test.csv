@@ -1,0 +1,1264 @@
+arm,item_id,family_id,domain,condition,label,subtype,split,response,resp_chars,resp_words,n_questions,multi_question,echo_of_user,cognitive_inference,cognitive_span
+original,appointment_004__rep_unres,appointment_004,appointment,rep_unres,unresolved,unanswered_question,test,You’re very welcome! We’re happy to help. Have a good evening!,62,13,0,0,1,0,
+original,appointment_004__rep_res,appointment_004,appointment,rep_res,resolved,emphasis_repeat,test,"You’re very welcome! It’s no problem at all. Rosa’s name has been added to the list for Thursday the 9th at 5.20. You’ll find the sign-in sheet at the reception desk when you arrive. 
+
+Do you need any further assistance with anything else today?",245,50,1,0,3,0,
+original,appointment_004__norep_unres,appointment_004,appointment,norep_unres,unresolved,contradiction,test,You’re very welcome! It’s no problem at all. We look forward to seeing Rosa and speaking with you then. Have a good afternoon!,126,25,0,0,2,0,
+original,appointment_004__norep_res,appointment_004,appointment,norep_res,resolved,clean_progress,test,You’re very welcome! It’s no problem at all. We look forward to seeing Rosa and speaking with you then. Have a good afternoon!,126,25,0,0,2,0,
+original,appointment_012__rep_unres,appointment_012,appointment,rep_unres,unresolved,contradiction,test,"Okay, fantastic. I’ve moved your practical test booking to the sixth of next month, first thing, in Marcus’s car. I’ve also noted your request for a quiet road – I’ll pass that on to the examiner. 
+
+You should receive a confirmation email shortly with all the details. 
+
+Fingers crossed for you too! Let me know if you need anything else.",338,63,0,0,4,0,
+original,appointment_012__rep_res,appointment_012,appointment,rep_res,resolved,emphasis_repeat,test,"Okay, fantastic. I’ve booked your practical test for the sixth of next month, first thing, in Marcus’s car. I’ve also requested a quiet road for the test. 
+
+You’ll receive an email confirmation shortly with all the details. 
+
+Fingers crossed for you too! Let me know if you need anything else.",293,54,0,0,3,0,
+original,appointment_012__norep_unres,appointment_012,appointment,norep_unres,unresolved,ambiguous_reference,test,"Okay, fantastic. Let’s go ahead and move the Calder Street practical test booking to the twenty past eight on [Date - I’ll need to confirm the exact date, please give me a moment to check the system]. 
+
+Just to confirm, that’s the twenty past eight on [Confirmed Date]. 
+
+I’ve made the change. You’ll receive an email confirmation shortly with the updated details. 
+
+Is there anything else I can help you with today?",416,76,1,0,3,0,
+original,appointment_012__norep_res,appointment_012,appointment,norep_res,resolved,readback_confirmation,test,"Okay, fantastic. Let’s go ahead and move the Calder Street practical test booking to the twenty past eight on the 17th of July. Just to confirm, that’s the 17th of July, twenty past eight at Calder Street. 
+
+I’ve made the change. You’ll receive an email confirmation shortly with the updated details. 
+
+Is there anything else I can help you with today?",352,65,1,0,3,0,
+original,appointment_017__rep_unres,appointment_017,appointment,rep_unres,unresolved,ambiguous_reference,test,"Right, so Saturday the seventh at 9:30am for a full morning’s measure with Priya, and solid oak throughout. I’ve noted that very clearly. Do you want me to send her a quick email confirming the appointment and reiterating the oak requirement, just to be absolutely sure?",270,49,1,0,3,0,
+original,appointment_017__rep_res,appointment_017,appointment,rep_res,resolved,emphasis_repeat,test,"Right, Utility it is for the initial measure on Saturday the seventh at half nine. We’ll be there all morning. Priya will be in touch to confirm the address and any prep work you need to do. 
+
+Is there anything else you’d like to discuss before we wrap up today?",262,52,1,0,3,0,
+original,appointment_017__norep_unres,appointment_017,appointment,norep_unres,unresolved,contradiction,test,Excellent. I’ve marked it down as a morning appointment. We’ll send you a confirmation email with all the details shortly. Is there anything else I can help you with today?,172,32,1,0,1,0,
+original,appointment_017__norep_res,appointment_017,appointment,norep_res,resolved,clean_progress,test,Excellent. I’ve marked it down as a morning appointment for you both. I’ll send you a confirmation email with all the details shortly. Is there anything else I can help you with today?,184,35,1,0,1,0,
+original,appointment_022__rep_unres,appointment_022,appointment,rep_unres,unresolved,contradiction,test,"Absolutely. Noted – same make as the rears, no mixing. And thanks for confirming the location, it helps us get everything organised smoothly. I’ll make sure one of the team is ready to wave you in as soon as you arrive on Saturday. 
+
+Do you want me to take down your name and number just in case we need to reach you with an update?",332,65,1,0,4,0,
+original,appointment_022__rep_res,appointment_022,appointment,rep_res,resolved,emphasis_repeat,test,"Absolutely. Noted – same make as the rears, no mixing. And thanks for confirming the location, it helps us get everything organised smoothly. We’ll have a chap on the lookout for you as soon as 8am rolls around. Just to double-check, could you tell me what make and model of car you’re driving?",294,55,1,0,4,0,
+original,appointment_022__norep_unres,appointment_022,appointment,norep_unres,unresolved,ambiguous_reference,test,"Right you are. 205s for your wife’s car. I’ve just ordered them in. We’ll have them ready for you at 9:00 am sharp on Saturday. 
+
+Just to confirm, that’s for the car currently sitting on the drive, correct? 
+
+Is there anything else you need to let me know before then?",268,55,2,1,4,0,
+original,appointment_022__norep_res,appointment_022,appointment,norep_res,resolved,clean_progress,test,"Excellent! Nine am it is then. Just to confirm, that’s for a pair of 205/55R16 tyres for your wife’s car. We’ll get those ordered in now. 
+
+Could I get your name and contact number, please, so we can confirm the appointment and give you a quick call if anything changes?",270,54,1,0,3,0,
+original,appointment_024__rep_unres,appointment_024,appointment,rep_unres,unresolved,unanswered_question,test,"Great! That’s really convenient. The induction session will cover a few key things to get you comfortable and safe at Fairlop Leisure Centre. Here’s a breakdown of what you can expect:
+
+*   **Centre Tour:** We’ll give you a guided tour of the facilities, including the pool areas, gym, studios, changing rooms, and reception.
+*   **Health & Safety:** This is a crucial part – we’ll cover emergency procedures, fire evacuation routes, first aid locations, and how to report any hazards.
+*   **Pool Rules & Regulations:** Specific rules for using the swimming pool, including lane etiquette, diving restrictions, and hygiene guidelines.
+*",636,97,0,0,4,0,
+original,appointment_024__rep_res,appointment_024,appointment,rep_res,resolved,emphasis_repeat,test,"Great! That’s really helpful to know. Just to confirm, you’re booked onto the induction session for Tuesday at 7:00 PM at Fairlop Leisure Centre. It’s a five-minute walk from your home. 
+
+Do you have any other questions for me before you head over?",248,48,1,0,5,0,
+original,appointment_024__norep_unres,appointment_024,appointment,norep_unres,unresolved,ambiguous_reference,test,"Okay, fantastic! You’re booked onto the Tuesday evening induction at 7:00 PM on the 22nd. That’s confirmed. 
+
+Now, let’s get that direct debit set up. Could you please confirm the following details for me:
+
+*   **Your Full Name:**
+*   **Your Address:** (Please include postcode)
+*   **Your Bank Name:**
+*   **Your Account Number:**
+*   **Your Sort Code:**
+
+Once I have this information, I’ll finalize your membership and send you confirmation details.",451,70,0,0,2,0,
+original,appointment_024__norep_res,appointment_024,appointment,norep_res,resolved,readback_confirmation,test,"Okay, fantastic! You’re booked onto the induction session for Tuesday evening at 7:00 PM, on the off-peak plan, starting on Monday the 22nd. And you’re right, it’s a five-minute walk from your front door – that’s great!
+
+Now, to finalize everything, I need a little more information. Could you please provide me with:
+
+*   **Your Full Name:**
+*   **Your Date of Birth:**
+*   **Your Email Address:**
+
+Once I have that, I can send you a confirmation email with all the details and instructions for your induction.",511,89,0,0,5,0,
+original,cooking_006__rep_unres,cooking_006,cooking,rep_unres,unresolved,contradiction,test,"Fantastic! That’s great – paella deserves that kind of attention. Since you’re doing it on the hob, you’ll want a really wide, shallow pan – ideally 35-40cm (14-16 inches) in diameter. That’ll give you enough surface area for the rice to cook evenly and develop that lovely socarrat (the crispy bottom layer). 
+
+Do you have a good recipe in mind, or would you like me to suggest one?",383,72,1,0,4,0,
+original,cooking_006__rep_res,cooking_006,cooking,rep_res,resolved,emphasis_repeat,test,"Fantastic! That’s great – paella deserves that kind of attention. Since you’re doing it on the hob and have a 700g bag, you’re perfectly covered. 
+
+To help you plan your afternoon, roughly how much stock do you think you’ll need? A good rule of thumb is about 3-4 times the amount of rice. So, around 2100-2800ml (that’s about 2.1-2.8 liters) would be a good starting point. 
+
+Do you have a good idea of what kind of ingredients you’re planning to use – seafood, chicken, chorizo,",480,94,1,0,4,0,
+original,cooking_006__norep_unres,cooking_006,cooking,norep_unres,unresolved,ambiguous_reference,test,"Fantastic! That’s a great plan. With a 900g bag of rice, you’ve got plenty. Enjoy the process – making paella is a really rewarding experience. 
+
+Do you want to chat about anything specific you’re planning for the paella – like what kind of seafood you’re using, or any specific flavors you’re aiming for?",305,56,1,0,3,0,
+original,cooking_006__norep_res,cooking_006,cooking,norep_res,resolved,clean_progress,test,"Fantastic! That’s a great plan. A whole afternoon gives you plenty of time to really nail a beautiful paella. 
+
+Do you want to chat about anything specific you’re planning – like the type of seafood you’re using, or any particular techniques you’re aiming for? Or would you just like to brainstorm some ideas for sides and a nice wine to go with it?",349,66,2,1,2,0,
+original,cooking_009__rep_unres,cooking_009,cooking,rep_unres,unresolved,ambiguous_reference,test,"Right, good. Now, let’s talk about sterilising. You’ve got the right idea with the oven – that’s crucial for a good seal and preventing spoilage. Here’s a breakdown of how to do it properly, step-by-step:
+
+**1. The Oven Method – Your Best Bet**
+
+You’re already on the right track with the 120°C for 30 minutes. This is a really good temperature for sterilising jars. Here’s a more detailed breakdown:
+
+*   **Preheat:** Make sure your oven is fully preheated to 120°C (250°F). This",480,90,0,0,1,0,
+original,cooking_009__rep_res,cooking_009,cooking,rep_res,resolved,readback_confirmation,test,"Right, good. Now, let’s talk about sterilising. You’ve got the right idea with the oven – that’s crucial for a good seal and preventing spoilage. Here’s a breakdown of how to do it properly, step-by-step:
+
+**1. The Oven Method – Your Best Bet**
+
+You’re already on the right track with 30 minutes at 120°C (250°F) – that’s a good starting point. However, let’s refine it a little for optimal sterilisation:
+
+*   **Preheat:** Make sure your oven is fully preheated to 120°",470,88,0,0,2,0,
+original,cooking_009__norep_unres,cooking_009,cooking,norep_unres,unresolved,unanswered_question,test,"Great! Okay, let’s talk about testing for setting point without a thermometer. It’s all about observing the jam and using a few key techniques. Here’s a breakdown:
+
+**1. The Cold Plate Test (Most Reliable):**
+
+* **Preparation:** Have a chilled plate (or a metal baking tray) in the freezer for about 15-20 minutes before you start.
+* **Testing:** Spoon a small amount of hot jam (about a teaspoon) onto the cold plate.
+* **The Wait:** Let it sit undisturbed for 30-60 seconds.  This is crucial!
+* **The Lift:** Gently lift the jam with",535,93,0,0,4,0,
+original,cooking_009__norep_res,cooking_009,cooking,norep_res,resolved,clean_progress,test,"Excellent! Okay, let’s talk about sterilising those squat jars. Here’s a breakdown of how to do it effectively without a thermometer:
+
+**The Goal:** We’re aiming to kill any bacteria that could spoil the jam.
+
+**The Method (Oven Sterilisation - as you’re doing):**
+
+1. **Wash Thoroughly:** Wash all the jars, lids, and rings in hot, soapy water. Rinse *extremely* well – any soap residue will affect the jam’s colour and flavour.
+
+2. **Preheat the Oven:** Preheat your oven to 120°C (250°F). This is crucial – too",513,89,0,0,2,0,
+original,cooking_010__rep_unres,cooking_010,cooking,rep_unres,unresolved,unanswered_question,test,"That’s fantastic! Flour from a local mill is a *huge* upgrade – you’ll really notice the difference in flavor and texture. It’s a great choice. 
+
+Okay, so to answer your question directly: **Yes, the lid absolutely stays on for the entire bake.** That’s key to creating a nice, steamy environment that helps the loaf rise beautifully and develop a nice, even crust. 
+
+It’ll stay on for the first 30 minutes, then you’ll carefully remove it to let the crust brown.
+
+Are you using a Dutch oven or a similar casserole dish?",520,96,1,0,4,0,
+original,cooking_010__rep_res,cooking_010,cooking,rep_res,resolved,emphasis_repeat,test,"That’s fantastic! Using flour from a local mill is a great choice – it often makes a noticeable difference in the flavor and texture of the bread. 
+
+Okay, so seam side up, no scoring, and you’re aiming for a longer proofing time if your kitchen is cold. 
+
+To help me give you even more tailored advice, could you tell me:
+
+*   **What kind of flour did you get?** (e.g., unbleached all-purpose, bread flour, whole wheat, etc.)
+*   **What’s the approximate temperature of your kitchen right now?** (Just a rough estimate is fine – under 18°",538,96,2,1,3,0,
+original,cooking_010__norep_unres,cooking_010,cooking,norep_unres,unresolved,contradiction,test,"That’s fantastic! Flour from a mill is a *huge* upgrade – you’re doing great. It’ll definitely contribute to a better flavor and texture in your loaf. 
+
+Cold tap water is perfect. Let me know how it goes tomorrow! Would you like me to remind you of the key steps again before you start mixing tonight?",301,57,1,0,3,0,
+original,cooking_010__norep_res,cooking_010,cooking,norep_res,resolved,clean_progress,test,"That’s fantastic! Flour from a mill is a *huge* upgrade – you’re doing great. It’ll definitely contribute to a better flavor and texture in your loaf. 
+
+Cold tap water is perfect. Let me know how it goes tomorrow! Would you like me to remind you of the key steps again before you start mixing tonight?",301,57,1,0,3,0,
+original,cooking_013__rep_unres,cooking_013,cooking,rep_unres,unresolved,unanswered_question,test,"Okay, good! Let’s see… according to your manual, the timer starts **after** the pressure cooker reaches full pressure. It will begin counting down once it’s locked and pressurized. 
+
+So, you’ll need to set the timer for 35 minutes *after* it’s reached pressure. 
+
+Does that make sense?",285,50,1,0,2,0,
+original,cooking_013__rep_res,cooking_013,cooking,rep_res,resolved,readback_confirmation,test,"Good thinking! And yes, definitely give the pot a minute to heat up on the saute setting before adding the oil – that’s important for a good sear. Enjoy your stew!",163,31,0,0,4,0,
+original,cooking_013__norep_unres,cooking_013,cooking,norep_unres,unresolved,contradiction,test,"Okay, fantastic! Let’s get that browned nicely. And remember, don’t overcrowd the pot – that’s key to getting a good colour. Once it’s browned, add your onions and garlic and saute for a minute or two until fragrant. Then, add the rest of your stew ingredients – carrots, potatoes, beef stock, Worcestershire sauce, etc. – and then it’s ready to go into the pressure cooker.",374,67,0,0,2,0,
+original,cooking_013__norep_res,cooking_013,cooking,norep_res,resolved,emphasis_repeat,test,"Okay, fantastic! Let’s get that browned nicely. And remember, don’t overcrowd the pot – that’s key to getting a good colour. Once it’s browned, add your vegetables and liquid – three and a half litres, right? Then, set it for 35 minutes at high pressure, and *immediately* do a quick release when it beeps.
+
+Is there anything else I can help you with before you get started? Like, do you want me to suggest a good stock to use, or perhaps a seasoning tip?",455,86,3,1,5,0,
+original,cooking_022__rep_unres,cooking_022,cooking,rep_unres,unresolved,ambiguous_reference,test,"Excellent! That’s a really smart strategy. Getting those frozen blocks going now will make a huge difference in keeping everything else cool. 
+
+Just to double-check – are you planning on using the sausages and mince to actually cook them while camping, or just to help keep the cooler cold?",290,50,1,0,3,0,
+original,cooking_022__rep_res,cooking_022,cooking,rep_res,resolved,readback_confirmation,test,"Excellent! That’s a really smart plan. Using the frozen sausages and mince as ice blocks is a fantastic way to maximize the cool box’s capacity and keep everything colder for longer. 
+
+Have a fantastic camping trip! Let me know if you need any more food ideas or tips as you’re planning.",287,54,0,0,3,0,
+original,cooking_022__norep_unres,cooking_022,cooking,norep_unres,unresolved,unanswered_question,test,"That’s fantastic! Being so thorough is a really smart move – it’ll give you a lot of peace of mind. Knowing you’re taking extra care about the peanut allergy is brilliant. 
+
+Is there anything else I can help you with as you finalize the food list, or perhaps some ideas for activities to keep everyone entertained while camping?",328,60,1,0,2,0,
+original,cooking_022__norep_res,cooking_022,cooking,norep_res,resolved,emphasis_repeat,test,"Fantastic! That’s really reassuring. Being so careful about allergies is a great idea. Knowing you’re taking that extra step will make the whole trip much smoother and safer for everyone. 
+
+Let’s keep the food planning going – what about breakfast options for Saturday and Sunday? Do you want to lean towards easy, quick things, or are you happy to do a bit more cooking?",371,66,2,1,2,0,
+original,household_001__rep_unres,household_001,household,rep_unres,unresolved,unanswered_question,test,"Perfect, thanks so much for that! It makes things really easy. Enjoy your fortnight away!",89,15,0,0,1,0,
+original,household_001__rep_res,household_001,household,rep_res,resolved,readback_confirmation,test,"Okay, fantastic! Thanks so much for letting me know about the side gate – that’s really helpful. Just to confirm, the food caddy goes out every week, and the recycling is on alternate weeks. Let me know if anything changes!",223,40,0,0,7,0,
+original,household_001__norep_unres,household_001,household,norep_unres,unresolved,contradiction,test,Perfect. Let me just tell Ewan then. You just relax and enjoy your trip!,72,14,0,0,1,0,
+original,household_001__norep_res,household_001,household,norep_res,resolved,clean_progress,test,"Perfect. Thanks so much, Colin. You’re a lifesaver!",51,9,0,0,1,0,
+original,household_006__rep_unres,household_006,household,rep_unres,unresolved,contradiction,test,"Noted! Kitchen drawer, Allen keys. Thanks for the heads-up.",59,10,0,0,2,0,
+original,household_006__rep_res,household_006,household,rep_res,resolved,emphasis_repeat,test,"Okay, noted – Allen keys in the kitchen drawer. Thanks for the heads-up!",72,13,0,0,4,0,
+original,household_006__norep_unres,household_006,household,norep_unres,unresolved,unanswered_question,test,"Right, noted. Allen keys in the kitchen drawer. Let’s get this wardrobe sorted!",79,14,0,0,4,0,
+original,household_006__norep_res,household_006,household,norep_res,resolved,clean_progress,test,"Right, good to know about the Allen keys. Let’s keep that in mind.",66,14,0,0,3,0,
+original,household_018__rep_unres,household_018,household,rep_unres,unresolved,unanswered_question,test,Good thinking. It’s always best to be organised. Let me know if you need anything else.,87,17,0,0,1,0,
+original,household_018__rep_res,household_018,household,rep_res,resolved,readback_confirmation,test,Right you are. Let’s hope they’re careful with it. Wouldn’t want any damage to the neighbours’ hedges.,102,20,0,0,1,0,
+original,household_018__norep_unres,household_018,household,norep_unres,unresolved,contradiction,test,Perfect. Let me know if you need anything else sorted.,54,10,0,0,1,0,
+original,household_018__norep_res,household_018,household,norep_res,resolved,emphasis_repeat,test,Perfect. Let me know if you need anything else sorted.,54,10,0,0,1,0,
+original,household_020__rep_unres,household_020,household,rep_unres,unresolved,contradiction,test,"Okay, great. Thanks for the details – under the sink and Gaz is handling the disconnection on Saturday. Just to confirm, I’m here on Friday to let them in, and Sadia’s driving the lorry. Anything else I need to know before they arrive?",235,44,1,0,4,0,
+original,household_020__rep_res,household_020,household,rep_res,resolved,readback_confirmation,test,"Okay, great. Thanks for the details – under the sink and Sadia’s driving. Just to confirm, I need to be here on Friday to let them in when the washer arrives between 8 and 12, and they’ll only take the old one if it’s unplumbed and in the hall. Is that all correct?",265,55,1,0,5,0,
+original,household_020__norep_unres,household_020,household,norep_unres,unresolved,ambiguous_reference,test,"Right you are. Shoving it over – careful, it’s heavy! Okay, it’s wedged against the wall. And I’ve found the stopcock – turned it off just in case. Let’s keep an eye on it while Gaz works.",188,39,0,0,2,0,
+original,household_020__norep_res,household_020,household,norep_res,resolved,clean_progress,test,"Right you are. *Shoves the old washer with a grunt* There you go. Plenty of room now. And I’ve found the stopcock – it’s a bit stiff, but it’s definitely under the sink. Let me know if you need a hand with it.",209,45,0,0,3,0,
+original,household_023__rep_unres,household_023,household,rep_unres,unresolved,contradiction,test,Sounds good! Let me know when they’re on their way.,51,11,0,0,2,0,
+original,household_023__rep_res,household_023,household,rep_res,resolved,emphasis_repeat,test,Sounds good! Let me know when they’re on their way.,51,11,0,0,2,0,
+original,household_023__norep_unres,household_023,household,norep_unres,unresolved,ambiguous_reference,test,"Perfect, thanks so much Nita. Let me know when they’re on their way. Appreciate the help!",89,17,0,0,2,0,
+original,household_023__norep_res,household_023,household,norep_res,resolved,readback_confirmation,test,"Perfect. Thanks so much, Nita. Really appreciate it. Let me know when you hear anything.",88,15,0,0,1,0,
+original,shopping_002__rep_unres,shopping_002,shopping,rep_unres,unresolved,ambiguous_reference,test,"Okay, you’ve been updated! The desk chair (order 7802) is now scheduled for delivery on Saturday the 18th. You’ll receive a confirmation email shortly with all the details. Is there anything else I can help you with today?",222,40,1,0,3,0,
+original,shopping_002__rep_res,shopping_002,shopping,rep_res,resolved,emphasis_repeat,test,"Okay, the desk chair has been rescheduled to Saturday the 18th. You’ll receive a confirmation email within the next hour with the updated delivery details. Is there anything else I can help you with today?",205,36,1,0,4,0,
+original,shopping_002__norep_unres,shopping_002,shopping,norep_unres,unresolved,ambiguous_reference,test,"Okay, you’ve been updated! Order 7802 (the desk chair) is now scheduled for delivery on Saturday, the 18th. You’ll receive a confirmation email within the next hour with all the details. 
+
+Is there anything else I can help you with today?",238,43,1,0,3,0,
+original,shopping_002__norep_res,shopping_002,shopping,norep_res,resolved,clean_progress,test,"Okay, just a moment…
+
+You’re confirmed! Order 7802 (Desk Chair) is now scheduled for delivery on **Saturday, the 18th**. 
+
+You’ll receive a confirmation email shortly with all the details. Is there anything else I can help you with today?",238,41,1,0,3,0,
+original,shopping_011__rep_unres,shopping_011,shopping,rep_unres,unresolved,ambiguous_reference,test,"Absolutely. Just let us know the date and time of the collection and replacement, and we’ll make a note of that for the delivery team. They’ll be sure to let anyone in the house know beforehand. 
+
+To confirm, you’re looking at a three-week turnaround for the replacement slate armchair?",286,53,1,0,2,0,
+original,shopping_011__rep_res,shopping_011,shopping,rep_res,resolved,emphasis_repeat,test,"Absolutely. We’ll make a note of that in the delivery details. Just to confirm, we’ll collect the damaged slate armchair and deliver the new one on the same day. Is there anything else you’d like to add to the notes for the delivery team?",238,47,1,0,3,0,
+original,shopping_011__norep_unres,shopping_011,shopping,norep_unres,unresolved,contradiction,test,"Okay, let’s get a convenient time for the delivery and collection. Could you tell me what days and times work best for you? Please give me a few options so we can find something that suits everyone.",198,38,1,0,2,0,
+original,shopping_011__norep_res,shopping_011,shopping,norep_res,resolved,clean_progress,test,"Okay, let’s get a convenient time for the delivery and collection. Could you tell me what days and times work best for you? Please give me a few options so we can find something that suits everyone.",198,38,1,0,2,0,
+original,shopping_017__rep_unres,shopping_017,shopping,rep_unres,unresolved,contradiction,test,"Okay, thank you for letting me know. I’ve logged the return for order R-4419 with the 14kg weight and the drop-off at the Kirkby Road locker point on Thursday. 
+
+Just to confirm, you’ll be bringing the original packaging with the lamp and shade to the locker point?
+
+Is there anything else I can help you with today?",316,61,2,1,3,0,
+original,shopping_017__rep_res,shopping_017,shopping,rep_res,resolved,readback_confirmation,test,"Okay, thank you for letting me know. I’ve logged the return for order R-4419 with the cracked lamp shade and noted that the original packaging is still on your porch. 
+
+You can drop it off at the locker point on Kirkby Road on Thursday – that’s perfect. 
+
+You’ll receive an email confirmation once the return is processed and the refund is issued. It usually takes 5-7 business days after the return is received. 
+
+Is there anything else I can help you with today?",464,87,1,0,9,0,
+original,shopping_017__norep_unres,shopping_017,shopping,norep_unres,unresolved,ambiguous_reference,test,"Absolutely, you’ve got every right to want a refund – a cracked shade is completely unacceptable. 
+
+Okay, I’ve just emailed you the free locker point return label for Kirkby Road. It should be in your inbox shortly. 
+
+And thank you for letting me know about the box still being on your porch – that’s really helpful information for Dunlin Home. 
+
+Just to confirm, you’ll pack the lamp securely in the original box (or similar) and drop it off at the locker point when it’s convenient for you?",492,90,1,0,2,0,
+original,shopping_017__norep_res,shopping_017,shopping,norep_res,resolved,emphasis_repeat,test,"Absolutely, you’re entirely correct – cash back is the priority. Thank you for letting me know about the box still being on your porch. That’s really helpful. 
+
+I’ve just forwarded your message about the box to Dunlin Home, so they’re aware. They’ll need to confirm they’ve received the lamp and the packaging before processing your refund. 
+
+You can expect an update from them within 3-5 business days. I’ll keep an eye on things and let you know if I hear anything further.
+
+Again, apologies for the initial inconvenience with the damaged shade.",547,99,0,0,2,0,
+original,shopping_021__rep_unres,shopping_021,shopping,rep_unres,unresolved,unanswered_question,test,"Okay, fantastic! Just to confirm:
+
+*   You’re switching to the Small Box size.
+*   Your next delivery will be the Small Box.
+*   Your billing date will now be the 12th of each month going forward.
+*   You’d like to opt out of receiving a paper invoice.
+
+Is that all correct?",274,49,1,0,4,0,
+original,shopping_021__rep_res,shopping_021,shopping,rep_res,resolved,readback_confirmation,test,"Okay, perfect! Just to confirm:
+
+We’ve switched your Brindle and Co subscription to the Small Box (£24 per delivery). Your next delivery will be billed on the 12th of the month going forward, and you’ve opted out of paper invoices.
+
+Is that all correct?",253,46,1,0,6,0,
+original,shopping_021__norep_unres,shopping_021,shopping,norep_unres,unresolved,contradiction,test,"Okay, fantastic! Just to confirm:
+
+*   **Size:** Small Box
+*   **Billing Date:** 12th of the month
+*   **Delivery Day:** Tuesday
+
+I’ve made those changes to your account. You’ll receive an email confirmation shortly with all the details. 
+
+Is there anything else I can help you with today?",289,46,1,0,2,0,
+original,shopping_021__norep_res,shopping_021,shopping,norep_res,resolved,clean_progress,test,"Okay, fantastic! Just to confirm:
+
+*   **Size:** Small Box
+*   **Billing Date:** 12th of the month
+*   **Delivery Day:** Tuesday
+
+I’ve made those changes to your account. You’ll receive an email confirmation shortly with all the details. 
+
+Is there anything else I can help you with today?",289,46,1,0,2,0,
+original,shopping_023__rep_unres,shopping_023,shopping,rep_unres,unresolved,contradiction,test,"Excellent! Just to be absolutely clear, you’re confident you’re comfortable fitting it yourself, and you’re sure it’s the correct part for your Meadowline 45 with serial 28410? 
+
+It’s always best to double-check before starting any maintenance. 
+
+If you have *any* questions at all once you’ve received the belt, don’t hesitate to give us a call – our number is 01737 836777. 
+
+Happy mowing!",391,70,1,0,2,0,
+original,shopping_023__rep_res,shopping_023,shopping,rep_res,resolved,readback_confirmation,test,"Excellent! Just to be absolutely clear, you’re confident you’re comfortable replacing the belt yourself, and you’re sure it’s a straightforward job for you? 
+
+It’s always good to double-check, especially with machinery. If you run into any trouble at all, don’t hesitate to give us a call – our helpline is 01737 831 313. 
+
+Enjoy your Meadowline when it’s back up and running!",376,69,1,0,1,0,
+original,shopping_023__norep_unres,shopping_023,shopping,norep_unres,unresolved,ambiguous_reference,test,"Absolutely! You’re a sensible man, sticking with the genuine parts – they’ll last longer and give you a better cut. Let me know if you need anything else, or if you have any questions about the fitment once it arrives. Happy mowing!",232,43,0,0,2,0,
+original,shopping_023__norep_res,shopping_023,shopping,norep_res,resolved,emphasis_repeat,test,"Absolutely! It’s a wise choice, you’ll be glad you did. Quality parts are worth the investment in the long run. Is there anything else I can help you with today, or would you like me to check on the estimated delivery date for the belt?",236,47,1,0,2,0,
+original,transit_002__rep_unres,transit_002,transit,rep_unres,unresolved,contradiction,test,"Okay, just one moment while I finalize the booking and send the confirmation to your phone number – [Your Phone Number]. 
+
+You should receive a text message within the next minute with all the details: driver name, vehicle type (XL), pickup location (Terminal 2 Arrivals Hall), pickup time (7:15 PM Thursday), and the total cost of $46. 
+
+Do you need anything else before we confirm?",383,65,1,0,4,0,
+original,transit_002__rep_res,transit_002,transit,rep_res,resolved,emphasis_repeat,test,"Okay, just one moment while I finalize the booking and send the confirmation to your phone number – [Your Phone Number]. 
+
+You should receive a text message within the next minute with all the details: driver name, vehicle type (XL), pickup location (Terminal 2 Arrivals Hall), pickup time (7:15 PM Thursday), and the total cost of $46. 
+
+Do you need anything else before we confirm?",383,65,1,0,4,0,
+original,transit_002__norep_unres,transit_002,transit,norep_unres,unresolved,ambiguous_reference,test,"Okay, a confirmation has been sent to your phone number associated with this booking. It includes:
+
+*   **Vehicle:** XL
+*   **Pickup Location:** Terminal 2 (7:45 PM)
+*   **Drop-off Location:** Terminal 5 (Dan’s arrival)
+*   **Confirmation Number:** [Insert Confirmation Number Here - I can’t generate a real one]
+
+Do you need anything else?",340,51,1,0,2,0,
+original,transit_002__norep_res,transit_002,transit,norep_res,resolved,clean_progress,test,"Okay, a confirmation has been sent to your phone number associated with this booking. It includes:
+
+*   **Vehicle:** XL
+*   **Pickup Location:** Terminal 5
+*   **Pickup Time:** 7:45 PM
+*   **Notes:** Large luggage (3 cases)
+
+Do you need anything else?",251,37,1,0,2,0,
+original,transit_004__rep_unres,transit_004,transit,rep_unres,unresolved,unanswered_question,test,"Okay, I’ve activated the 31-day pass on the card you currently have. It’s now active from Monday the 6th and will run until the 5th of next month. 
+
+**Important:** Yes, the 31-day pass *does* cover the Greenwich Riverboat. You can use it to board and alight at any point along its route.
+
+Is there anything else I can help you with today?",338,66,1,0,3,0,
+original,transit_004__rep_res,transit_004,transit,rep_res,resolved,emphasis_repeat,test,"Okay, perfect! I’ve switched your travel card to a monthly pass starting Monday, the sixth. It’s now linked to your existing card. Is there anything else I can help you with today?",180,34,1,0,4,0,
+original,transit_004__norep_unres,transit_004,transit,norep_unres,unresolved,contradiction,test,"Okay, let’s get that sorted for you! I’ve activated a 31-day monthly pass for travel in zones one and two, starting Monday, June 6th, from Bexley Park. It’s been added to the card you already have. 
+
+Just to double-check, is there anything else you’d like me to do, like:
+
+*   **Confirm the cost?** (It will be £96)
+*   **Check your travel routes?** (I can help you plan your journeys if you’d like)",399,77,2,1,3,0,
+original,transit_004__norep_res,transit_004,transit,norep_res,resolved,readback_confirmation,test,"Okay, fantastic! I’ve activated a 31-day monthly pass for you, starting Monday, June 6th, from Bexley Park, using the card you already have. 
+
+Just to double-check, you’ll be travelling within zones one and two, correct? 
+
+Is there anything else I can help you with today, like checking if you’ll be eligible for any discounts or looking at how the pass works with contactless payment?",385,69,2,1,3,0,
+original,transit_019__rep_unres,transit_019,transit,rep_unres,unresolved,unanswered_question,test,"Okay, great! Let’s get your case sorted.
+
+**Regarding your checked bag:** Because you missed your connecting flight, **your bag *should* be automatically transferred to the Bergen flight (LN 412).** However, it’s absolutely crucial to confirm this with the agent at the transfer desk.
+
+Here’s what you need to do:
+
+1.  **Speak to an Agent:** Explain your situation – that your Manchester to Bergen flight was missed.
+2.  **Confirm Transfer:** Ask the agent *specifically* if your bag has been moved to flight LN 412. They will likely check the system.
+3.  **If Not",564,94,0,0,4,0,
+original,transit_019__rep_res,transit_019,transit,rep_res,resolved,readback_confirmation,test,"Okay, great! Let’s see… (typing sounds)
+
+Alright, it looks like your checked baggage is already being routed to Bergen. You don’t need to do anything further at the transfer desk. Just head to gate 183, that’s where flight LN 412 to Bergen is departing from. 
+
+Do you have any other questions or need anything else before you head to your gate?",344,64,1,0,4,0,
+original,transit_019__norep_unres,transit_019,transit,norep_unres,unresolved,contradiction,test,"Okay, great! Let me just confirm – you’re at the SAS transfer desk in Terminal 2. I’ll keep an eye on things and let you know if there are any updates. Is there anything else I can help you with at the moment?",209,44,1,0,4,0,
+original,transit_019__norep_res,transit_019,transit,norep_res,resolved,clean_progress,test,"Okay, great! Let me just confirm – you’re at the SAS transfer desk in Terminal 2. Just wanted to make sure. 
+
+Is there anything else I can help you with at the moment, or would you like me to keep an eye out for any updates regarding your flight?",246,49,1,0,4,0,
+original,transit_020__rep_unres,transit_020,transit,rep_unres,unresolved,contradiction,test,"Okay, great! I’ve added three spaces to your booking for the parking and the return shuttle. Just to confirm, that’s for a car with three passengers, departing for the match at 3:30pm on Saturday, and returning via the shuttle at 6:30pm. 
+
+Is that correct?",256,48,1,0,6,0,
+original,transit_020__rep_res,transit_020,transit,rep_res,resolved,emphasis_repeat,test,"Okay, great! I’ve added three tickets to your booking – one for the parking space and two for the return shuttle. They’re all linked together. You’ll receive an email confirmation shortly with all the details, including the booking reference number. 
+
+Just to confirm, that’s for a Saturday match, kick-off at 1:00 PM, finishing around 3:30 PM, and you’ll be catching the shuttle immediately after the final whistle with the rest of the crowd. 
+
+Is there anything else I can help you with today?",495,90,1,0,4,0,
+original,transit_020__norep_unres,transit_020,transit,norep_unres,unresolved,ambiguous_reference,test,"Okay, great! Just to confirm, that’s three people travelling together. Just letting you know, the shuttle is free for those travelling with the car.",148,25,0,0,2,0,
+original,transit_020__norep_res,transit_020,transit,norep_res,resolved,clean_progress,test,"Okay, great! Just to confirm, that’s three people travelling in one car. The six-pound charge is per car, so it’ll still be six pounds for your trip. Enjoy the match!",166,33,0,0,1,0,
+original,transit_024__rep_unres,transit_024,transit,rep_unres,unresolved,ambiguous_reference,test,"Okay, fantastic. Just to confirm:
+
+*   **Booking:** Car Club Bay
+*   **Date:** Saturday
+*   **Time:** 8:00 AM – 6:00 PM
+*   **Driver:** Ruth Ellery
+*   **Bay:** Corn Exchange Bay
+
+Is that all correct?",200,29,1,0,2,0,
+original,transit_024__rep_res,transit_024,transit,rep_res,resolved,clean_progress,test,"Okay, fantastic. Just to confirm:
+
+*   **Booking:** Car Club Booking
+*   **Date:** Saturday
+*   **Location:** Lister Street Bay
+*   **Time:** 8:00 AM – 6:00 PM
+*   **Driver:** Ruth Ellery
+
+Is that all correct?",209,29,1,0,3,0,
+original,transit_024__norep_unres,transit_024,transit,norep_unres,unresolved,contradiction,test,"Okay, confirmed. A car booked for Ruth Ellery, Saturday, out to Bakewell and back, 8:00 AM to 6:00 PM, charged directly to the account. It’s held until you return. Is there anything else I can help you with today?",213,42,1,0,6,0,
+original,transit_024__norep_res,transit_024,transit,norep_res,resolved,emphasis_repeat,test,"Okay, confirmed. A car booking for Saturday, out to Bakewell and back, 8:00 AM to 6:00 PM, under Ruth Ellery, and charged directly to the account – no separate charges. It’s held until you return over the bridge around 5:00 PM. 
+
+Is there anything else I can help you with today?",279,54,1,0,8,0,
+prompt_only,appointment_004__rep_unres,appointment_004,appointment,rep_unres,unresolved,unanswered_question,test,You’re very welcome! Is there anything else I can help you with today?,70,14,1,0,1,0,
+prompt_only,appointment_004__rep_res,appointment_004,appointment,rep_res,resolved,emphasis_repeat,test,You’re very welcome! I’ve added both your names to the list for Rosa’s meeting on Thursday the 9th at 5.20. You’ll receive an email confirmation shortly with all the details. Is there anything else I can help you with today?,224,45,1,0,3,0,
+prompt_only,appointment_004__norep_unres,appointment_004,appointment,norep_unres,unresolved,contradiction,test,You’re very welcome! I’ve booked you in for Rosa’s Year 4 parents’ evening with Mrs. Adeyemi at 5.20 on Thursday the 9th. You’ll receive a confirmation email shortly. Is there anything else I can help you with today?,216,43,1,0,2,0,
+prompt_only,appointment_004__norep_res,appointment_004,appointment,norep_res,resolved,clean_progress,test,You’re very welcome! I’ve booked you in for Rosa’s Year 4 parents’ evening with Mrs. Adeyemi at 5.20 on Thursday the 9th. You’ll receive a confirmation email shortly. Is there anything else I can help you with today?,216,43,1,0,2,0,
+prompt_only,appointment_012__rep_unres,appointment_012,appointment,rep_unres,unresolved,contradiction,test,"Right, Marcus’s car it is, and a first-thing slot on the sixth. I’ve confirmed that. I’ve also flagged it to ensure it’s scheduled for an early slot – aiming for 8:30am if possible. I’ll do my best to get it on a quieter road, though I can’t guarantee it. Is there anything else I can help you with today?",305,66,1,0,4,0,
+prompt_only,appointment_012__rep_res,appointment_012,appointment,rep_res,resolved,emphasis_repeat,test,"Right, Marcus’s car, first thing on the sixth. I’ve booked it for you. And I’ve requested a quiet road – I’ve flagged it with the examiner. Fingers crossed for you too! Do you need anything else?",195,39,1,0,3,0,
+prompt_only,appointment_012__norep_unres,appointment_012,appointment,norep_unres,unresolved,ambiguous_reference,test,"Okay, so that’s the twenty-third at Calder Street, pushed back two weeks. Let me just confirm – you’re happy to keep the 8:20 start time, and you’re hoping for a quiet road? Just to be absolutely sure.",201,41,1,0,4,0,
+prompt_only,appointment_012__norep_res,appointment_012,appointment,norep_res,resolved,readback_confirmation,test,"Okay, so that’s the twenty past eight slot at Calder Street, pushed back a fortnight. Let me just confirm – that’s now the 20th of November at 8:20. Is that correct?",165,33,1,0,3,0,
+prompt_only,appointment_017__rep_unres,appointment_017,appointment,rep_unres,unresolved,ambiguous_reference,test,"Okay, noted. So, Saturday the seventh, half nine, focusing on the kitchen for the initial measurement, and solid oak throughout. Just to confirm, is there anything else you’d like to discuss or add to the brief for Priya before the appointment?",244,42,1,0,5,0,
+prompt_only,appointment_017__rep_res,appointment_017,appointment,rep_res,resolved,emphasis_repeat,test,"Okay, utility it is for the initial measure on Saturday the seventh at half nine. I’ve added a note to Priya’s sheet about the solid oak requirement – absolutely no laminate. Is there anything else you’d like to confirm or discuss before the appointment?",254,46,1,0,3,0,
+prompt_only,appointment_017__norep_unres,appointment_017,appointment,norep_unres,unresolved,contradiction,test,"Excellent. I’ve marked the appointment for Saturday, March 7th, 10:00 AM, and confirmed the beech worktop and single sink. Is there anything else you’d like to discuss or arrange before then?",191,34,1,0,2,0,
+prompt_only,appointment_017__norep_res,appointment_017,appointment,norep_res,resolved,clean_progress,test,"Excellent. I’ve booked Priya in for an appointment with you both on Saturday, March 7th, from 9:00 am to 12:00 pm. She’ll bring the beech samples and discuss the single sink option. Is there anything else you’d like to discuss or arrange before then?",250,49,1,0,2,0,
+prompt_only,appointment_022__rep_unres,appointment_022,appointment,rep_unres,unresolved,contradiction,test,"Absolutely. Noted – same make as the rears, no mixing. And I’ve flagged it for the team to look out for you when you arrive on Saturday. Just to confirm, you’re saying you’ll be arriving around [roughly what time - please provide a time]?",238,45,1,0,4,0,
+prompt_only,appointment_022__rep_res,appointment_022,appointment,rep_res,resolved,emphasis_repeat,test,"Absolutely. Noted – same make as the rears, no mixing. And I’ve flagged it for the team. We’ll be ready and waiting for you when you arrive on Saturday.",152,30,0,0,4,0,
+prompt_only,appointment_022__norep_unres,appointment_022,appointment,norep_unres,unresolved,ambiguous_reference,test,"Right, 205s for the car on the drive, booked in for you at 9:00am on Saturday. Just to confirm, that’s for your wife’s car?",123,27,1,0,6,0,
+prompt_only,appointment_022__norep_res,appointment_022,appointment,norep_res,resolved,clean_progress,test,"Right, 205s for your wife’s car, booked in for Saturday at 9:00 am. Just to confirm, that’s for one car – one pair of tyres – correct? And you’re ten minutes up the road from Selby Tyres?",187,39,2,1,6,0,
+prompt_only,appointment_024__rep_unres,appointment_024,appointment,rep_unres,unresolved,unanswered_question,test,"Okay, great! Just to confirm, you’re booked onto the induction session for Tuesday at 7pm at Fairlop Leisure Centre. It’s a five-minute walk from your home. 
+
+The induction covers:
+
+*   **Centre Safety:** Emergency procedures, fire exits, and general safety guidelines.
+*   **Facilities Overview:** A tour of the Leisure Centre, including the pool, gym, fitness studios, and other facilities.
+*   **Equipment Usage:** Basic instructions on how to use the most common gym equipment.
+*   **Membership Information:** Details about your membership, including how to access facilities and book classes.
+
+Do you have any specific questions about the",643,94,0,0,5,0,
+prompt_only,appointment_024__rep_res,appointment_024,appointment,rep_res,resolved,emphasis_repeat,test,"Okay, great! Just to confirm, that’s the Tuesday evening induction at 7pm at Fairlop Leisure Centre. It’s a five-minute walk from your front door. Do you want me to send you a confirmation email with the details, or is that alright?",232,44,1,0,5,0,
+prompt_only,appointment_024__norep_unres,appointment_024,appointment,norep_unres,unresolved,ambiguous_reference,test,"Okay, fantastic. I’ve booked you onto the Tuesday evening induction at 7pm, starting on the 22nd. I’ve also ticked the off-peak plan on your form. 
+
+Now, to set up that direct debit – could you please confirm the following details:
+
+*   **Your full name:**
+*   **Your bank name:**
+*   **Your account number:**
+*   **Your sort code:**",333,54,0,0,2,0,
+prompt_only,appointment_024__norep_res,appointment_024,appointment,norep_res,resolved,readback_confirmation,test,"Okay, fantastic. So, that’s the Tuesday evening induction at 7pm, booked on the off-peak plan, starting on Monday the 22nd. And you’re right, it’s a five-minute walk from your front door – good to know! 
+
+Just to confirm, can I get your full name and date of birth please?",272,53,1,0,5,0,
+prompt_only,cooking_006__rep_unres,cooking_006,cooking,rep_unres,unresolved,contradiction,test,"Okay, great! Knowing you’ve got plenty of time allows me to suggest a slightly more detailed approach. Considering you’re doing it on the hob for eight people, and aiming for a good, even cook, I’d recommend about 1.5kg – 2kg of hot stock. That gives you a little buffer and helps ensure everything cooks through properly. 
+
+Does that sound reasonable, or would you like me to suggest a different amount based on a particular type of stock you’re using (e.g., seafood, chicken, vegetable)?",489,88,1,0,4,0,
+prompt_only,cooking_006__rep_res,cooking_006,cooking,rep_res,resolved,emphasis_repeat,test,"Fantastic! Given you’re doing it on the hob and aiming for eight people, and you’ve got 700g of rice, I’d still recommend around 2.2 - 2.5 litres of stock. That’s a bit more than you’d need for a quick paella, allowing for evaporation and ensuring everything’s properly hydrated. Are you using chicken, seafood, or vegetable stock?",331,63,1,0,4,0,
+prompt_only,cooking_006__norep_unres,cooking_006,cooking,norep_unres,unresolved,ambiguous_reference,test,"Excellent! That gives you plenty of time to prep. Do you want to talk about what else you’re planning for the paella – like vegetables, seafood, or anything else you’re considering?",181,32,1,0,1,0,
+prompt_only,cooking_006__norep_res,cooking_006,cooking,norep_res,resolved,clean_progress,test,"Great! Knowing you have the afternoon gives you plenty of time to prep – chopping vegetables, getting everything measured out. Do you want me to suggest a rough timeline for the cooking process itself, or just focus on prep?",224,38,1,0,1,0,
+prompt_only,cooking_009__rep_unres,cooking_009,cooking,rep_unres,unresolved,ambiguous_reference,test,"Right, good. And you’ve got a kettle on for the water, haven’t you? You’ll need about a litre for the jars – enough to cover the rims by about an inch. Let’s talk about the sterilising water – what’s your preferred method? Are you going to boil them, or using a gentle simmer?",276,56,3,1,1,0,
+prompt_only,cooking_009__rep_res,cooking_009,cooking,rep_res,resolved,readback_confirmation,test,"Right, good. And you’ve got a kettle of water boiling for the final rinse, haven’t you? It’s crucial to get that final rinse *really* well – that’s what takes the last bit of dirt and bacteria off. Let me know when you’re ready to put the first tray in.",253,53,1,0,2,0,
+prompt_only,cooking_009__norep_unres,cooking_009,cooking,norep_unres,unresolved,unanswered_question,test,"Right, good. Okay, so you’ve got your warm jars, waxed discs and labels ready. Now, let’s talk about testing for setting point without a thermometer. It’s about finding the ‘jiggly’ stage. 
+
+Here’s how to do it with the squat jars:
+
+1.  **Remove the Warm Lid:** Take one of the jars and carefully remove the warm lid.
+2.  **Shake Gently:** Hold the jar firmly and give it a gentle shake – just a little! You’re looking for the jam to ‘jiggle’ when you move the jar.
+3.  **Lift a Small Amount:** Now, using a",507,97,0,0,4,0,
+prompt_only,cooking_009__norep_res,cooking_009,cooking,norep_res,resolved,clean_progress,test,"Right, good. Let’s talk about the simmering process then. You’ll need to simmer the jam for about 10-15 minutes after it’s reached a good setting point, stirring frequently to prevent sticking. Does that sound familiar, or would you like me to elaborate on anything about that stage?",283,51,1,0,2,0,
+prompt_only,cooking_010__rep_unres,cooking_010,cooking,rep_unres,unresolved,unanswered_question,test,"That’s fantastic – using flour from a local mill is a great choice! It really does make a difference. Okay, so seam side up, no scoring. Regarding the lid – **yes, the lid stays on for the *entire* bake.** It creates a steamy environment which is crucial for a good rise and a soft crumb. You’ll want to leave it on until about 45-60 minutes in, then remove it for the last 15-20 minutes to allow the crust to brown and crisp up. Does that make sense?",451,89,1,0,3,0,
+prompt_only,cooking_010__rep_res,cooking_010,cooking,rep_res,resolved,emphasis_repeat,test,"That’s fantastic – using mill-fresh flour will definitely make a difference! It’s great you’ve got that quality ingredient. Just to confirm, seam side up and no scoring – got it. Do you want me to remind you of the overall timings again, just to be absolutely sure we’re on the same page?",288,55,1,0,6,0,
+prompt_only,cooking_010__norep_unres,cooking_010,cooking,norep_unres,unresolved,contradiction,test,That’s excellent – a good mill flour will make a *huge* difference! Knowing you got it on Saturday helps me keep in mind that it’s likely well-hydrated and ready to go.,168,33,0,0,2,0,
+prompt_only,cooking_010__norep_res,cooking_010,cooking,norep_res,resolved,clean_progress,test,That’s excellent – a good mill flour will make a *huge* difference! Knowing you got it on Saturday helps me keep in mind that it’s likely well-hydrated and ready to go.,168,33,0,0,2,0,
+prompt_only,cooking_013__rep_unres,cooking_013,cooking,rep_unres,unresolved,unanswered_question,test,"Okay, good! Let’s check the manual. You’re right to be thorough. Okay, according to the manual, the timer *starts after* the pressure cooker reaches full pressure. It says to set the timer for 35 minutes *after* the pressure is established. Does that confirm what you needed to know?",283,50,1,0,2,0,
+prompt_only,cooking_013__rep_res,cooking_013,cooking,rep_res,resolved,readback_confirmation,test,"Okay, good thinking. Just to confirm, you’re going to brown the beef in two batches on the sauté setting, then add the liquid and seasonings, seal the lid, and set the timer for 35 minutes at high pressure?",206,39,1,0,4,0,
+prompt_only,cooking_013__norep_unres,cooking_013,cooking,norep_unres,unresolved,contradiction,test,"Right, good. Let’s just double-check – the manual says to add the liquid *after* browning the meat, not before. It’s important to get the liquid level right for pressure cooking.",178,32,0,0,2,0,
+prompt_only,cooking_013__norep_res,cooking_013,cooking,norep_res,resolved,emphasis_repeat,test,"Right, good. Let’s just double-check – the manual says to add the liquid *after* browning the meat, not before. It’s important to get the liquid level right for pressure cooking.",178,32,0,0,2,0,
+prompt_only,cooking_022__rep_unres,cooking_022,cooking,rep_unres,unresolved,ambiguous_reference,test,"Okay, fantastic! Knowing you’re getting the frozen blocks prepped tonight is really helpful. Just to confirm – you’re planning to freeze the sausages and mince solid and use them as ice packs *starting* on Friday night before you load the car?",243,42,1,0,3,0,
+prompt_only,cooking_022__rep_res,cooking_022,cooking,rep_res,resolved,readback_confirmation,test,"Okay, fantastic! That’s a really smart plan – using the frozen meat as ice blocks is a great way to keep everything cold. Just to confirm, you’re going to freeze the sausages and mince solid tonight and then pack them into the hard-sided cooler on Friday night before loading the car?",284,53,1,0,3,0,
+prompt_only,cooking_022__norep_unres,cooking_022,cooking,norep_unres,unresolved,unanswered_question,test,"Good thinking – that’s a really sensible approach. Okay, so we’ve got the chilli sorted for Saturday, the peanut issue addressed, and you’re being diligent about checking labels. 
+
+Let’s talk cool box strategy. Considering you’re camping and it’s going to be warm, how long do you realistically think you’ll be able to keep the milk in the cool box for, *without* constantly replenishing ice?",392,70,1,0,2,0,
+prompt_only,cooking_022__norep_res,cooking_022,cooking,norep_res,resolved,emphasis_repeat,test,"Right, good to hear! Loading the car on Friday night – that’s a smart move to get organised. Just a quick thought – are you planning on bringing any drinks that need to be kept *really* cold, like fizzy drinks or beer? Because keeping those frozen blocks in the cool box might make it a bit cramped.",299,56,1,0,6,0,
+prompt_only,household_001__rep_unres,household_001,household,rep_unres,unresolved,unanswered_question,test,"Okay, great! Thanks for letting me know about the gate – that’s really helpful.",79,14,0,0,1,0,
+prompt_only,household_001__rep_res,household_001,household,rep_res,resolved,readback_confirmation,test,"Okay, thanks for letting me know about the side gate. Just to confirm, you’re leaving it unlocked for access to the bins, correct?",130,24,1,0,3,0,
+prompt_only,household_001__norep_unres,household_001,household,norep_unres,unresolved,contradiction,test,"Okay, fantastic. Ewan’s happy to do the second week’s bin. And the side gate unlocked – perfect. Enjoy your fortnight away!",123,22,0,0,4,0,
+prompt_only,household_001__norep_res,household_001,household,norep_res,resolved,clean_progress,test,"Okay, fantastic. Ewan’s happy to do the second week’s bin. And the side gate unlocked – perfect. Enjoy your fortnight away!",123,22,0,0,4,0,
+prompt_only,household_006__rep_unres,household_006,household,rep_unres,unresolved,contradiction,test,"Okay, noted – Allen keys in the kitchen drawer. Is there anything else you’d like me to be aware of before Thursday?",116,22,1,0,4,0,
+prompt_only,household_006__rep_res,household_006,household,rep_res,resolved,emphasis_repeat,test,"Okay, noted – Allen keys in the kitchen drawer. Is there anything else you’d like me to be aware of before Thursday?",116,22,1,0,4,0,
+prompt_only,household_006__norep_unres,household_006,household,norep_unres,unresolved,unanswered_question,test,"Right, noted – Allen keys in the kitchen drawer. Just confirming, you’re still thinking the wardrobe will be left in the hall until Saturday morning?",149,25,1,0,4,0,
+prompt_only,household_006__norep_res,household_006,household,norep_res,resolved,clean_progress,test,"Okay, noted – Allen keys in the kitchen drawer. Just confirming, you’re still planning to knock on Dan’s door Wednesday evening to arrange a time to pick up the drill, right?",174,32,1,0,4,0,
+prompt_only,household_018__rep_unres,household_018,household,rep_unres,unresolved,unanswered_question,test,"Good thinking. Just want to double-check – you’re still keen on the low branch of the sycamore, yes? And you’re asking about whether they take the wood away or leave it?",169,33,2,1,5,0,
+prompt_only,household_018__rep_res,household_018,household,rep_res,resolved,readback_confirmation,test,"Right, the tenth it is. And you’ve sorted the note – good. Just to confirm, that’s the 10th of next week, correct?",114,23,1,0,2,0,
+prompt_only,household_018__norep_unres,household_018,household,norep_unres,unresolved,contradiction,test,Excellent. Let’s get this sorted then.,38,7,0,0,0,0,
+prompt_only,household_018__norep_res,household_018,household,norep_res,resolved,emphasis_repeat,test,Excellent. Let’s get this sorted then.,38,7,0,0,0,0,
+prompt_only,household_020__rep_unres,household_020,household,rep_unres,unresolved,contradiction,test,"Okay, great. So, to confirm: the washer arrives Friday 8-12, they’ll only take the old one if it’s unplumbed and in the hall, Gaz disconnects it Saturday morning, and Sadia’s driving the lorry. Just to be absolutely clear, I need to be here on Friday to let them in, right?",273,54,1,0,5,0,
+prompt_only,household_020__rep_res,household_020,household,rep_res,resolved,readback_confirmation,test,"Okay, great. So, to confirm: Gaz disconnects it Thursday evening, it needs to be unplumbed and in the hall for the removal team on Friday between 8-12, and Sadia is driving the lorry. Is there anything else I need to know or do before Friday?",242,46,1,0,3,0,
+prompt_only,household_020__norep_unres,household_020,household,norep_unres,unresolved,ambiguous_reference,test,"Right, done. Stopcock noted. Just to confirm, is there any particular way Gaz wants me to handle the old washer once he’s finished with it – should I just leave it in the hall, or do we need to move it somewhere else?",217,43,1,0,2,0,
+prompt_only,household_020__norep_res,household_020,household,norep_res,resolved,clean_progress,test,"Right, done. Towels are in place. Stopcock noted. Just confirming – is there anything else I need to do with the old washer while Gaz is working on it on Thursday night?",169,31,1,0,3,0,
+prompt_only,household_023__rep_unres,household_023,household,rep_unres,unresolved,contradiction,test,Sounds good. Let me know when they’re dropping it off – I’ll keep an eye out.,77,17,0,0,2,0,
+prompt_only,household_023__rep_res,household_023,household,rep_res,resolved,emphasis_repeat,test,Sounds good. Let me know when they’re dropping it off – I’ll keep an eye out.,77,17,0,0,2,0,
+prompt_only,household_023__norep_unres,household_023,household,norep_unres,unresolved,ambiguous_reference,test,"Okay, perfect. And thanks for sorting the permit – that’s a huge weight off our shoulders. Let me know when they’re on their way!",129,25,0,0,2,0,
+prompt_only,household_023__norep_res,household_023,household,norep_res,resolved,readback_confirmation,test,"Okay, Monday first thing. And good thinking about the council – let’s get that sorted. Text me when they arrive, thanks.",120,21,0,0,3,0,
+prompt_only,shopping_002__rep_unres,shopping_002,shopping,rep_unres,unresolved,ambiguous_reference,test,"Okay, the desk chair (order 7802) is now confirmed for delivery on Saturday the 18th. You’ll receive a separate email with the full delivery details shortly.",157,27,0,0,3,0,
+prompt_only,shopping_002__rep_res,shopping_002,shopping,rep_res,resolved,emphasis_repeat,test,"Okay, the desk chair has been rescheduled to Saturday the 18th. You’ll receive a confirmation email within the hour with the updated delivery details.",150,25,0,0,4,0,
+prompt_only,shopping_002__norep_unres,shopping_002,shopping,norep_unres,unresolved,ambiguous_reference,test,"Okay, the desk chair (order 7802) has been rescheduled to Saturday the 18th. You’ll receive a confirmation email within the next hour with all the details.",155,27,0,0,4,0,
+prompt_only,shopping_002__norep_res,shopping_002,shopping,norep_res,resolved,clean_progress,test,"Okay, the amended delivery schedule is confirmed! 
+
+*   **Oak Desk (Order 7731):** Tuesday, the 14th
+*   **Desk Chair (Order 7802):** Saturday, the 18th
+
+You’ll receive a confirmation email shortly with all the details. Is there anything else I can help you with today?",269,42,1,0,3,0,
+prompt_only,shopping_011__rep_unres,shopping_011,shopping,rep_unres,unresolved,ambiguous_reference,test,"Okay, I’ve noted that you’d like to be present for the collection and delivery. Just to confirm, is there a specific date that works best for you?",146,29,1,0,2,0,
+prompt_only,shopping_011__rep_res,shopping_011,shopping,rep_res,resolved,emphasis_repeat,test,"Okay, I’ve noted that you’d like to be present for the collection and delivery. I’ll add a note to the delivery team to let them know. Just to confirm, is there a specific date that works best for you?",201,42,1,0,2,0,
+prompt_only,shopping_011__norep_unres,shopping_011,shopping,norep_unres,unresolved,contradiction,test,"Okay, let’s get a few dates that work for you. Would you prefer a morning or afternoon slot for the delivery and collection? And could you give me a couple of dates that work best?",180,36,2,1,1,0,
+prompt_only,shopping_011__norep_res,shopping_011,shopping,norep_res,resolved,clean_progress,test,"Okay, let’s get a few dates that work for you. Would you prefer a morning or afternoon slot for the delivery and collection? And could you give me a couple of dates that work best?",180,36,2,1,1,0,
+prompt_only,shopping_017__rep_unres,shopping_017,shopping,rep_unres,unresolved,contradiction,test,"Okay, thanks for letting me know about the box still being on the porch. I’ve logged that as part of the return for R-4419. You can drop it off at the Kirkby Road locker point on Thursday as you said. 
+
+Just to confirm, is there anything else I can help you with regarding this return?",285,57,1,0,3,0,
+prompt_only,shopping_017__rep_res,shopping_017,shopping,rep_res,resolved,readback_confirmation,test,"Okay, thanks for letting me know about the box still being on the porch. I’ve logged that as part of the return for R-4419. You can drop it off at the Kirkby Road locker point on Thursday as you said. 
+
+Just to confirm, is there anything else I can help you with regarding this return?",285,57,1,0,3,0,
+prompt_only,shopping_017__norep_unres,shopping_017,shopping,norep_unres,unresolved,ambiguous_reference,test,"You are absolutely right to clarify – my apologies for the misunderstanding! I’ve updated the request to ensure you receive a full refund. 
+
+Regarding the box, please leave it on the porch as is. We’ll let Dunlin Home know it’s there.",234,43,0,0,2,0,
+prompt_only,shopping_017__norep_res,shopping_017,shopping,norep_res,resolved,emphasis_repeat,test,"You are absolutely right to clarify – my apologies for the misunderstanding! I’ve corrected my previous response. 
+
+Okay, regarding the box still on your porch, please could you take a photo of it and send it over? This will help us process the return smoothly.",261,45,1,0,2,0,
+prompt_only,shopping_021__rep_unres,shopping_021,shopping,rep_unres,unresolved,unanswered_question,test,"Okay, just to confirm: You’d like the small box size, with billing on the 12th of the month, and you’d like to opt out of receiving a paper invoice. Is that correct?",165,34,1,0,7,0,
+prompt_only,shopping_021__rep_res,shopping_021,shopping,rep_res,resolved,readback_confirmation,test,"Okay, just to confirm: I’m switching you to the small box size of Brindle & Co dog food and setting your billing date to the 12th of the month, with no paper invoice. Is that correct?",183,36,1,0,5,0,
+prompt_only,shopping_021__norep_unres,shopping_021,shopping,norep_unres,unresolved,contradiction,test,"Okay, fantastic! So to confirm:
+
+*   **Size:** Small Box
+*   **Billing Date:** 12th of the month
+*   **Delivery Day:** Tuesday
+
+Is there anything else I can help you with today?",177,27,1,0,2,0,
+prompt_only,shopping_021__norep_res,shopping_021,shopping,norep_res,resolved,clean_progress,test,"Okay, fantastic! So to confirm:
+
+*   **Size:** Small Box
+*   **Billing Date:** 12th of the month
+*   **Delivery Day:** Tuesday
+
+Is there anything else I can help you with today?",177,27,1,0,2,0,
+prompt_only,shopping_023__rep_unres,shopping_023,shopping,rep_unres,unresolved,contradiction,test,"Excellent! Just to confirm, you’re confident in your ability to replace the belt yourself, and you’re planning to do it this Saturday?",134,24,1,0,1,0,
+prompt_only,shopping_023__rep_res,shopping_023,shopping,rep_res,resolved,readback_confirmation,test,"Excellent! Just to confirm, you’re confident in your ability to replace the belt yourself, and you’re planning to do it this Saturday?",134,24,1,0,1,0,
+prompt_only,shopping_023__norep_unres,shopping_023,shopping,norep_unres,unresolved,ambiguous_reference,test,"Absolutely – we completely understand. Quality is key. Just to confirm, that’s part 4620 for the rotary Meadowline, correct?",124,19,1,0,1,0,
+prompt_only,shopping_023__norep_res,shopping_023,shopping,norep_res,resolved,emphasis_repeat,test,"Absolutely – we completely understand. Quality is key. Just to confirm, that’s Forrester Meadowline ride-on, part number 5110, ordered and on the account?",154,24,1,0,3,0,
+prompt_only,transit_002__rep_unres,transit_002,transit,rep_unres,unresolved,contradiction,test,"Okay, I’ve sent the confirmation for the XL vehicle to the phone number associated with your booking. It includes the driver’s name, contact number, and the pickup time – 7:15 PM at Terminal 2. 
+
+Is there anything else I can help you with regarding your transportation to the Kingsway Hotel?",291,52,1,0,4,0,
+prompt_only,transit_002__rep_res,transit_002,transit,rep_res,resolved,emphasis_repeat,test,"Okay, I’ve sent the confirmation for the XL vehicle to the phone number associated with your booking. It includes the driver’s name, contact number, and the pickup time – 7:15 PM at Terminal 2. 
+
+Is there anything else I can help you with regarding your transportation to the Kingsway Hotel?",291,52,1,0,4,0,
+prompt_only,transit_002__norep_unres,transit_002,transit,norep_unres,unresolved,ambiguous_reference,test,"Okay, the confirmation for the XL vehicle, departing at 7:45 from either Terminal 2 or Terminal 5 (pending your preference – let me know if you’d like me to prioritize one), has been sent to your phone. Is there anything else I can assist you with today?",254,48,1,0,2,0,
+prompt_only,transit_002__norep_res,transit_002,transit,norep_res,resolved,clean_progress,test,"Okay, the confirmation for the XL vehicle, departing from Terminal 5 at 7:45 PM, with notes about three large cases, has been sent to your phone. Is there anything else I can assist you with today?",197,37,1,0,3,0,
+prompt_only,transit_004__rep_unres,transit_004,transit,rep_unres,unresolved,unanswered_question,test,"Okay, I’ve switched you to the monthly pass on the card you already have, starting Monday the 6th and running until the 5th of next month. The pass covers zones one and two, and unfortunately, it **does not** cover the Greenwich Riverboat. It’s a separate service.",264,48,0,0,3,0,
+prompt_only,transit_004__rep_res,transit_004,transit,rep_res,resolved,emphasis_repeat,test,"Okay, perfect. So, a monthly pass starting on Monday, the sixth, added to the existing card. Just to confirm, that’s for zones one and two, correct?",148,27,1,0,4,0,
+prompt_only,transit_004__norep_unres,transit_004,transit,norep_unres,unresolved,contradiction,test,"Okay, let’s get that sorted out for you. I’ve activated a 31-day monthly pass starting Monday, June 6th, from Bexley Park, onto the card you already have. That’ll be £96. 
+
+Just to confirm, is there anything else you’d like to add to this pass, like any zones you’d regularly travel into?",288,57,1,0,3,0,
+prompt_only,transit_004__norep_res,transit_004,transit,norep_res,resolved,readback_confirmation,test,"Okay, I’ve activated a 31-day monthly pass starting Monday, June 6th, from Bexley Park, onto the card you already have. That’ll cost £96. Is there anything else I can help you with today?",187,36,1,0,3,0,
+prompt_only,transit_019__rep_unres,transit_019,transit,rep_unres,unresolved,unanswered_question,test,"Okay, good. Regarding your checked bag – **you absolutely need to claim it here.** Because of the missed flight, your bag won’t automatically be transferred. The agent will need to re-tag it for the Bergen flight. They’ll handle everything to get it on the correct flight for you.",280,50,0,0,4,0,
+prompt_only,transit_019__rep_res,transit_019,transit,rep_res,resolved,readback_confirmation,test,"Okay, great. Let’s see… You’re at the transfer desk in Terminal 2, right. Just to confirm, you’re here to rebook on flight LN 412 to Bergen, departing at 19:05?",160,33,1,0,6,0,
+prompt_only,transit_019__norep_unres,transit_019,transit,norep_unres,unresolved,contradiction,test,"Okay, good to know you’re at the transfer desk in Terminal 2. Just to confirm, you’re heading to the 19:05 flight to Bergen, correct?",133,27,1,0,6,0,
+prompt_only,transit_019__norep_res,transit_019,transit,norep_res,resolved,clean_progress,test,"Okay, good to know you’re at the transfer desk in Terminal 2. Just to confirm, you’re heading to the 19:05 flight to Bergen, correct?",133,27,1,0,6,0,
+prompt_only,transit_020__rep_unres,transit_020,transit,rep_unres,unresolved,contradiction,test,"Okay, I’ve adjusted the booking to accommodate three people. You’ll receive a confirmation email shortly with all the details, including your ticket reference number. Is there anything else I can help you with today?",216,36,1,0,1,0,
+prompt_only,transit_020__rep_res,transit_020,transit,rep_res,resolved,emphasis_repeat,test,"Okay, I’ve adjusted the booking to accommodate three people. You’ll receive a confirmation email shortly with all the details, including your ticket reference number. Is there anything else I can help you with today?",216,36,1,0,1,0,
+prompt_only,transit_020__norep_unres,transit_020,transit,norep_unres,unresolved,ambiguous_reference,test,"Okay, good to know. Just to confirm, that’s three people travelling in one car – so the parking fee will still be £6 for both Orchard Park or Farthing Lane. Is there anything else I can help you with regarding the park and ride?",228,44,1,0,4,0,
+prompt_only,transit_020__norep_res,transit_020,transit,norep_res,resolved,clean_progress,test,"Okay, good to know. Just to confirm, that’s three people travelling in one car – so the car charge will still be £6 each way, totaling £12 for the journey. Is there anything else I can help you with regarding the park and ride?",227,44,1,0,4,0,
+prompt_only,transit_024__rep_unres,transit_024,transit,rep_unres,unresolved,ambiguous_reference,test,"Okay, confirmed. A bay is held for Ruth Ellery, Saturday, 8:00 AM to 6:00 PM, picked up from either Lister Street or Corn Exchange Bay. Is there anything else I can help you with today?",185,37,1,0,2,0,
+prompt_only,transit_024__rep_res,transit_024,transit,rep_res,resolved,clean_progress,test,"Okay, confirmed. A bay at the Lister Street bay is booked for you, under Ruth Ellery, for Saturday from 8:00 AM to 6:00 PM. Do you need anything else, or are you all set?",170,36,1,0,4,0,
+prompt_only,transit_024__norep_unres,transit_024,transit,norep_unres,unresolved,contradiction,test,"Okay, Ruth Ellery – car club booking for Saturday, Bakewell trip, 8am to 6pm, charged directly to the account, and held until you return. Confirmed. Is there anything else I can help you with today?",198,34,1,0,5,0,
+prompt_only,transit_024__norep_res,transit_024,transit,norep_res,resolved,emphasis_repeat,test,"Okay, confirmed. A car club booking for Saturday, out to Bakewell and back, from 8:00 am to 6:00 pm, under Ruth Ellery, and charged directly to the account – no separate charges. It’s held for you until you return over the bridge around 5:00 pm. Is there anything else I can help you with today?",295,58,1,0,12,0,
+dense_axis,appointment_004__rep_unres,appointment_004,appointment,rep_unres,unresolved,unanswered_question,test,You’re very welcome! We’re happy to help. Have a good evening!,62,13,0,0,1,0,
+dense_axis,appointment_004__rep_res,appointment_004,appointment,rep_res,resolved,emphasis_repeat,test,You’re very welcome! It’s no problem at all. Rosa’s name has been added to the list for Thursday the 9th at 5.20. Do you need any further assistance with anything else today?,174,36,1,0,3,0,
+dense_axis,appointment_004__norep_unres,appointment_004,appointment,norep_unres,unresolved,contradiction,test,You’re very welcome! It’s no problem at all. We look forward to seeing Rosa and speaking with you then. Have a good afternoon!,126,25,0,0,2,0,
+dense_axis,appointment_004__norep_res,appointment_004,appointment,norep_res,resolved,clean_progress,test,You’re very welcome! It’s no problem at all. We look forward to seeing Rosa and speaking with you then. Have a good afternoon!,126,25,0,0,2,0,
+dense_axis,appointment_012__rep_unres,appointment_012,appointment,rep_unres,unresolved,contradiction,test,"Okay, fantastic. I’ve moved your practical test booking to the sixth of next month, first thing, in Marcus’s car. I’ve also noted your request for a quiet road – I’ll pass that on to the examiner. 
+
+You should receive a confirmation email shortly with all the details. 
+
+Fingers crossed for you too! Let me know if you need anything else.",338,63,0,0,4,0,
+dense_axis,appointment_012__rep_res,appointment_012,appointment,rep_res,resolved,emphasis_repeat,test,"Okay, fantastic. I’ve booked your practical test for the sixth of next month, first thing, in Marcus’s car. I’ve also requested a quiet road for the assessment. 
+
+You’ll receive a confirmation email shortly with all the details. 
+
+Fingers crossed for you too! Let me know if you have any other questions.",304,55,0,0,3,0,
+dense_axis,appointment_012__norep_unres,appointment_012,appointment,norep_unres,unresolved,ambiguous_reference,test,"Okay, fantastic. Let’s go ahead and move the Calder Street practical test booking to the twenty past eight on [Date - I’ll need to confirm the exact date, please give me a moment to check the system]. 
+
+Just to confirm, that’s the twenty past eight on [Confirmed Date]. 
+
+I’ve made the change. You’ll receive an email confirmation shortly with the updated details. 
+
+Is there anything else I can help you with today?",416,76,1,0,3,0,
+dense_axis,appointment_012__norep_res,appointment_012,appointment,norep_res,resolved,readback_confirmation,test,"Okay, fantastic. Let’s go ahead and move the Calder Street practical test booking to the twenty past eight on the 17th of July. Just to confirm, that’s the 17th of July, twenty past eight at Calder Street. 
+
+I’ve made the change. You’ll receive an email confirmation shortly with the updated details. 
+
+Is there anything else I can help you with today?",352,65,1,0,3,0,
+dense_axis,appointment_017__rep_unres,appointment_017,appointment,rep_unres,unresolved,ambiguous_reference,test,"Okay, fantastic. So, Saturday the seventh at 9:30am for a full morning’s measure with Priya, and solid oak throughout – absolutely confirmed. I’ve added a note to her file. 
+
+Do you want me to send her a quick email confirming the appointment and reiterating the oak requirement, just to be absolutely sure?",307,54,1,0,3,0,
+dense_axis,appointment_017__rep_res,appointment_017,appointment,rep_res,resolved,emphasis_repeat,test,"Okay, fantastic. So that’s the utility room for the initial measure on Saturday the seventh at half nine. Priya will be in touch to confirm the address and any further details. Is there anything else you’d like to discuss before we finalize that?",246,45,1,0,3,0,
+dense_axis,appointment_017__norep_unres,appointment_017,appointment,norep_unres,unresolved,contradiction,test,Excellent. I’ve marked it down as a morning appointment. We’ll send you a confirmation email with all the details shortly. Is there anything else I can help you with today?,172,32,1,0,1,0,
+dense_axis,appointment_017__norep_res,appointment_017,appointment,norep_res,resolved,clean_progress,test,Excellent. I’ve marked it down as a morning appointment for you both. I’ll send you a confirmation email with all the details shortly. Is there anything else I can help you with today?,184,35,1,0,1,0,
+dense_axis,appointment_022__rep_unres,appointment_022,appointment,rep_unres,unresolved,contradiction,test,"Absolutely. Noted – same make as the rears, no mixing. And thanks for confirming the location, it helps us get everything organised smoothly. I’ll make sure one of the team is ready to wave you in as soon as you arrive on Saturday. 
+
+Do you want me to take down your name and number just in case we need to reach you with an update?",332,65,1,0,4,0,
+dense_axis,appointment_022__rep_res,appointment_022,appointment,rep_res,resolved,emphasis_repeat,test,"Absolutely. Noted – same make as the rears, no mixing. And thanks for confirming the location, it helps us get everything ready for you. We’ll have a chap on the lookout for you as soon as 8:30 hits. See you Saturday!",217,42,0,0,4,0,
+dense_axis,appointment_022__norep_unres,appointment_022,appointment,norep_unres,unresolved,ambiguous_reference,test,"Right you are. 205s for your wife’s car. I’ve just ordered them in. We’ll have them ready for you at 9:00 am sharp on Saturday. 
+
+Just to confirm, that’s for the car currently sitting on the drive, correct? 
+
+Is there anything else you need to let me know before then?",268,55,2,1,4,0,
+dense_axis,appointment_022__norep_res,appointment_022,appointment,norep_res,resolved,clean_progress,test,"Excellent! Nine am it is then. Just to confirm, that’s for a pair of 205/55R16 tyres for your wife’s car. We’ll get those ordered in now. 
+
+Could I get your name and contact number, please, so we can confirm the appointment and give you a quick call if anything changes?",270,54,1,0,3,0,
+dense_axis,appointment_024__rep_unres,appointment_024,appointment,rep_unres,unresolved,unanswered_question,test,"Great! That’s really convenient. The induction session will cover a few key things to get you comfortable and safe at Fairlop Leisure Centre. Here’s a breakdown of what you can expect:
+
+*   **Centre Tour:** We’ll give you a guided tour of the facilities, including the pool areas, gym, studios, changing rooms, and reception.
+*   **Health & Safety:** This is a crucial part – we’ll cover emergency procedures, fire evacuation routes, first aid locations, and how to report any hazards.
+*   **Pool Rules & Regulations:** Specific rules for using the swimming pool, including lane etiquette, diving restrictions, and hygiene guidelines.
+*",636,97,0,0,4,0,
+dense_axis,appointment_024__rep_res,appointment_024,appointment,rep_res,resolved,emphasis_repeat,test,"Great! That’s really helpful to know. Just to confirm, you’re booked onto the induction session for Tuesday at 7:00 PM at Fairlop Leisure Centre. It’s a five-minute walk from your home. 
+
+Do you have any other questions for me before you head over?",248,48,1,0,5,0,
+dense_axis,appointment_024__norep_unres,appointment_024,appointment,norep_unres,unresolved,ambiguous_reference,test,"Okay, fantastic! You’re booked onto the Tuesday evening induction at 7:00 PM on the 22nd. That’s confirmed. 
+
+Now, let’s get that direct debit set up. Could you please confirm the following details for me:
+
+*   **Your Full Name:**
+*   **Your Address:** (Please include postcode)
+*   **Your Bank Name:**
+*   **Your Account Number:**
+*   **Your Sort Code:**
+
+Once I have this information, I’ll finalize your membership and send you confirmation details.",451,70,0,0,2,0,
+dense_axis,appointment_024__norep_res,appointment_024,appointment,norep_res,resolved,readback_confirmation,test,"Okay, fantastic! You’re booked onto the induction session for Tuesday evening at 7:00 PM, on the off-peak plan, starting on Monday the 22nd. And you’re right, it’s a five-minute walk from your front door – that’s great!
+
+Now, to finalize everything, I need a little more information. Could you please provide me with:
+
+*   **Your Full Name:**
+*   **Your Date of Birth:**
+*   **Your Email Address:**
+
+Once I have that, I can send you a confirmation email with all the details and instructions for your induction.",511,89,0,0,5,0,
+dense_axis,cooking_006__rep_unres,cooking_006,cooking,rep_unres,unresolved,contradiction,test,"Fantastic! That’s great – paella deserves that kind of attention. Since you’re doing it on the hob, you’ll want a really wide, shallow pan – ideally 35-40cm (14-16 inches) in diameter. That’ll give you enough surface area for the rice to cook evenly and develop that lovely socarrat (the crispy bottom layer). 
+
+Do you have a good recipe in mind, or would you like me to suggest one?",383,72,1,0,4,0,
+dense_axis,cooking_006__rep_res,cooking_006,cooking,rep_res,resolved,emphasis_repeat,test,"Fantastic! That’s great – paella deserves that kind of attention. Since you’re doing it on the hob and have a 700g bag, you’re perfectly covered. 
+
+To help you plan your afternoon, roughly how much stock do you think you’ll need? A good rule of thumb is about 3-4 times the amount of rice. So, around 2100-2800ml (that’s about 2.1-2.8 liters) would be a good starting point. 
+
+Do you have a good idea of what kind of ingredients you’re planning to use – seafood, chicken, chorizo,",480,94,1,0,4,0,
+dense_axis,cooking_006__norep_unres,cooking_006,cooking,norep_unres,unresolved,ambiguous_reference,test,"Fantastic! That’s a great plan. With a 900g bag of rice, you’ve got plenty. Enjoy the process – making paella is a really rewarding experience. 
+
+Do you want to chat about anything specific you’re planning for the paella – like what kind of seafood you’re using, or any specific flavors you’re aiming for?",305,56,1,0,3,0,
+dense_axis,cooking_006__norep_res,cooking_006,cooking,norep_res,resolved,clean_progress,test,"Fantastic! That’s a great plan. A whole afternoon gives you plenty of time to really nail a beautiful paella. 
+
+Do you want to chat about anything specific you’re planning – like the type of seafood you’re using, or any particular techniques you’re aiming for? Or would you just like to brainstorm some ideas for sides and a nice wine to go with it?",349,66,2,1,2,0,
+dense_axis,cooking_009__rep_unres,cooking_009,cooking,rep_unres,unresolved,ambiguous_reference,test,"Right, good. Now, let’s talk about sterilising. You’ve got the right idea with the oven – that’s crucial for a good seal and preventing spoilage. Here’s a breakdown of how to do it properly, step-by-step:
+
+**1. The Oven Method – Your Best Bet**
+
+You’re already on the right track with the 120°C for 30 minutes. This is a really good temperature for sterilising jars. Here’s a more detailed breakdown:
+
+*   **Preheat:** Make sure your oven is fully preheated to 120°C (250°F). This",480,90,0,0,1,0,
+dense_axis,cooking_009__rep_res,cooking_009,cooking,rep_res,resolved,readback_confirmation,test,"Right, good. Now, let’s talk about sterilising. You’ve got the right idea with the oven – that’s crucial for a good seal and preventing spoilage. Here’s a breakdown of how to do it properly, step-by-step:
+
+**1. The Oven Method – Your Best Bet**
+
+You’re already on the right track with 30 minutes at 120°C (250°F) – that’s a good starting point. However, let’s refine it a little for optimal sterilisation:
+
+*   **Preheat:** Make sure your oven is fully preheated to 120°",470,88,0,0,2,0,
+dense_axis,cooking_009__norep_unres,cooking_009,cooking,norep_unres,unresolved,unanswered_question,test,"Okay, great! Let’s talk about testing for setting point without a thermometer. It’s definitely achievable, it just takes a little observation and a gentle test. Here’s how to do it with your squat jars:
+
+**1. The Cold Plate Test (Most Reliable):**
+
+*   **Prepare:** Take a small plate and put it in the freezer for about 15-20 minutes before you start. You want it *really* cold.
+*   **Scoop a Dollop:** Using a spoon, take a small spoonful of hot jam (straight from the pot) and place it on the cold plate.
+*   **Wait:** Leave it undisturbed",542,96,0,0,4,0,
+dense_axis,cooking_009__norep_res,cooking_009,cooking,norep_res,resolved,clean_progress,test,"Excellent! Okay, let’s talk about sterilising those squat jars. Here’s a breakdown of how to do it effectively without a thermometer:
+
+**The Goal:** We’re aiming to kill any bacteria that could spoil the jam.
+
+**The Method (Oven Sterilisation - as you’re doing):**
+
+1. **Wash Thoroughly:** Wash all the jars, lids, and rings in hot, soapy water. Rinse *extremely* well – any soap residue will affect the jam’s colour and flavour.
+
+2. **Preheat the Oven:** Preheat your oven to 120°C (250°F). This is crucial – too",513,89,0,0,2,0,
+dense_axis,cooking_010__rep_unres,cooking_010,cooking,rep_unres,unresolved,unanswered_question,test,"That’s fantastic! Flour from a local mill is a *huge* upgrade – you’ll really notice the difference in flavor and texture. It’s a great choice. 
+
+Okay, so to answer your question directly: **Yes, the lid absolutely stays on for the entire bake.** That’s key to creating a nice, steamy environment that helps the loaf rise beautifully and develop a nice, even crust. 
+
+It’ll stay on for the first 30 minutes, then you’ll carefully remove it to let the crust brown.
+
+Are you using a Dutch oven or a similar casserole dish?",520,96,1,0,4,0,
+dense_axis,cooking_010__rep_res,cooking_010,cooking,rep_res,resolved,emphasis_repeat,test,"That’s fantastic! Using flour from a local mill is a great choice – it often makes a noticeable difference in the flavor and texture of the bread. 
+
+Okay, so seam side up, no scoring, and you’re aiming for a longer proofing time if your kitchen is cold. 
+
+To help me give you even more tailored advice, could you tell me:
+
+*   **What kind of flour did you get?** (e.g., unbleached all-purpose, bread flour, whole wheat, etc.)
+*   **What’s the approximate temperature of your kitchen right now?** (Just a rough estimate is fine – under 18°",538,96,2,1,3,0,
+dense_axis,cooking_010__norep_unres,cooking_010,cooking,norep_unres,unresolved,contradiction,test,"That’s fantastic! Flour from a mill is a *huge* upgrade – you’re doing great. It’ll definitely contribute to a better flavor and texture in your loaf. 
+
+Cold tap water is perfect. Let me know how it goes tomorrow! Would you like me to remind you of the key steps again before you start mixing tonight?",301,57,1,0,3,0,
+dense_axis,cooking_010__norep_res,cooking_010,cooking,norep_res,resolved,clean_progress,test,"That’s fantastic! Flour from a mill is a *huge* upgrade – you’re doing great. It’ll definitely contribute to a better flavor and texture in your loaf. 
+
+Cold tap water is perfect. Let me know how it goes tomorrow! Would you like me to remind you of the key steps again before you start mixing tonight?",301,57,1,0,3,0,
+dense_axis,cooking_013__rep_unres,cooking_013,cooking,rep_unres,unresolved,unanswered_question,test,"Okay, good! Let’s see… according to your manual, the timer starts **after** the pressure cooker reaches full pressure. It will begin counting down once it’s locked and pressurized. 
+
+So, you’ll need to set the timer for 35 minutes *after* it’s reached pressure. 
+
+Does that make sense?",285,50,1,0,2,0,
+dense_axis,cooking_013__rep_res,cooking_013,cooking,rep_res,resolved,readback_confirmation,test,"Okay, good thinking! And yes, definitely prop it up – it’s a lifesaver. Let me know when you’ve browned the beef and added the liquid – I’m ready for the next step.",164,33,0,0,2,0,
+dense_axis,cooking_013__norep_unres,cooking_013,cooking,norep_unres,unresolved,contradiction,test,"Okay, good! Let’s double-check – you’re browning the beef in two batches on the ‘Sauté’ setting before adding it to the pressure cooker with the rest of the ingredients, correct? And you’re keeping the liquid level at or below the ‘2’ mark on the pot – that’s roughly four litres for your six-litre pot.
+
+Once the beef is browned and the liquid is added, you’ll set it for 35 minutes at High Pressure, then a 15-minute Natural Pressure Release (NPR) before Quick Release.
+
+Does that all sound right so far?",506,96,2,1,3,0,
+dense_axis,cooking_013__norep_res,cooking_013,cooking,norep_res,resolved,emphasis_repeat,test,"Okay, fantastic! Let’s get that browned nicely. And remember, don’t overcrowd the pot – that’s key to getting a good colour. Once it’s browned, add your vegetables and liquid – three and a half litres, right? Then, set it for 35 minutes at high pressure, and *immediately* do a quick release when it beeps.
+
+Is there anything else I can help you with before you get started? Like, do you want me to suggest a good stock to use, or perhaps a seasoning tip?",455,86,3,1,5,0,
+dense_axis,cooking_022__rep_unres,cooking_022,cooking,rep_unres,unresolved,ambiguous_reference,test,"Fantastic! That’s a really smart plan – using the frozen meat as ice blocks is a brilliant way to keep everything else cold. 
+
+Just to double-check, are you planning to wrap the meat in something like foil or cling film before putting it in the cool box? That will help insulate them a bit more. 
+
+Have a fantastic camping trip!",328,61,1,0,3,0,
+dense_axis,cooking_022__rep_res,cooking_022,cooking,rep_res,resolved,readback_confirmation,test,"Excellent! That’s a really smart plan. Using the frozen sausages and mince as ice blocks is a fantastic way to maximize the cool box’s capacity and keep everything colder for longer. 
+
+Have a fantastic camping trip! Let me know if you need any more food ideas or tips as you’re planning.",287,54,0,0,3,0,
+dense_axis,cooking_022__norep_unres,cooking_022,cooking,norep_unres,unresolved,unanswered_question,test,"That’s fantastic! Being so thorough is a really smart move – it’ll give you a lot of peace of mind. Knowing you’re taking extra care about the peanut allergy is brilliant. 
+
+Is there anything else I can help you with as you finalize the food list, or perhaps some ideas for activities to keep everyone entertained while camping?",328,60,1,0,2,0,
+dense_axis,cooking_022__norep_res,cooking_022,cooking,norep_res,resolved,emphasis_repeat,test,"Fantastic! That’s really reassuring. Being so careful about allergies is a great idea. Knowing you’re taking that extra step will make the whole trip much smoother and safer for everyone. 
+
+Let’s keep the food planning going – what about breakfast options for Saturday and Sunday? Do you want to lean towards easy, quick things, or are you happy to do a bit more cooking?",371,66,2,1,2,0,
+dense_axis,household_001__rep_unres,household_001,household,rep_unres,unresolved,unanswered_question,test,"Fantastic, thank you so much for that – it makes things so much easier! Let us know if you need anything else while you’re away. Have a wonderful fortnight!",156,29,0,0,2,0,
+dense_axis,household_001__rep_res,household_001,household,rep_res,resolved,readback_confirmation,test,"Okay, fantastic! Thanks so much for letting me know about the side gate – that’s really helpful. Just to confirm, the food caddy goes out every week, and the recycling is on alternate weeks. Let me know if anything changes!",223,40,0,0,7,0,
+dense_axis,household_001__norep_unres,household_001,household,norep_unres,unresolved,contradiction,test,Perfect. Let me just tell Ewan then. You just relax and enjoy your trip!,72,14,0,0,1,0,
+dense_axis,household_001__norep_res,household_001,household,norep_res,resolved,clean_progress,test,Perfect. Let me just tell Ewan then. You just relax and enjoy your trip!,72,14,0,0,1,0,
+dense_axis,household_006__rep_unres,household_006,household,rep_unres,unresolved,contradiction,test,"Okay, noted – Allen keys in the kitchen drawer. Thanks for the heads-up!",72,13,0,0,4,0,
+dense_axis,household_006__rep_res,household_006,household,rep_res,resolved,emphasis_repeat,test,"Okay, noted – Allen keys in the kitchen drawer. Thanks for the heads-up!",72,13,0,0,4,0,
+dense_axis,household_006__norep_unres,household_006,household,norep_unres,unresolved,unanswered_question,test,"Right, noted. Allen keys in the kitchen drawer. Let’s get this wardrobe sorted!",79,14,0,0,4,0,
+dense_axis,household_006__norep_res,household_006,household,norep_res,resolved,clean_progress,test,"Okay, good to know about the Allen keys. Let’s keep that in mind.",65,14,0,0,3,0,
+dense_axis,household_018__rep_unres,household_018,household,rep_unres,unresolved,unanswered_question,test,Good thinking. It’s always best to be organised. Let me know if you need anything else.,87,17,0,0,1,0,
+dense_axis,household_018__rep_res,household_018,household,rep_res,resolved,readback_confirmation,test,Right you are. Let’s hope they’re careful with it. Wouldn’t want any damage to the neighbours’ hedges.,102,20,0,0,1,0,
+dense_axis,household_018__norep_unres,household_018,household,norep_unres,unresolved,contradiction,test,Excellent. Let’s get it sorted then.,36,7,0,0,1,0,
+dense_axis,household_018__norep_res,household_018,household,norep_res,resolved,emphasis_repeat,test,Excellent. Let’s get it sorted then.,36,7,0,0,1,0,
+dense_axis,household_020__rep_unres,household_020,household,rep_unres,unresolved,contradiction,test,"Okay, great. Thanks for the details – under the sink and Gaz is handling the disconnection on Saturday. Just to confirm, I’m here on Friday to let them in, and Sadia’s driving the lorry. Anything else I need to know before they arrive?",235,44,1,0,4,0,
+dense_axis,household_020__rep_res,household_020,household,rep_res,resolved,readback_confirmation,test,"Okay, great. Thanks for the details – under the sink and Sadia’s driving. Just to confirm, I need to be here on Friday to let them in when the washer arrives between 8 and 12, and they’ll only take the old one if it’s unplumbed and in the hall. Is that all correct?",265,55,1,0,5,0,
+dense_axis,household_020__norep_unres,household_020,household,norep_unres,unresolved,ambiguous_reference,test,"Right you are. Shoving it over – careful, it’s heavy! Okay, it’s wedged against the wall. And I’ve found the stopcock – turned it off just in case. Let’s keep an eye on it while Gaz works.",188,39,0,0,2,0,
+dense_axis,household_020__norep_res,household_020,household,norep_res,resolved,clean_progress,test,"Right you are. *Shoves the old washer with a grunt* There you go. Plenty of room now. And I’ve found the stopcock – it’s a bit stiff, but it’s working. Let me know if you need anything else.",190,40,0,0,2,0,
+dense_axis,household_023__rep_unres,household_023,household,rep_unres,unresolved,contradiction,test,Sounds good! Let me know when they’re on their way.,51,11,0,0,2,0,
+dense_axis,household_023__rep_res,household_023,household,rep_res,resolved,emphasis_repeat,test,Sounds good! Let me know when they’re on their way.,51,11,0,0,2,0,
+dense_axis,household_023__norep_unres,household_023,household,norep_unres,unresolved,ambiguous_reference,test,"Perfect, thanks so much Nita. Let me know when they’re on their way. Appreciate the help!",89,17,0,0,2,0,
+dense_axis,household_023__norep_res,household_023,household,norep_res,resolved,readback_confirmation,test,"Perfect. Thanks so much, Nita. Really appreciate it. Let me know when you hear anything.",88,15,0,0,1,0,
+dense_axis,shopping_002__rep_unres,shopping_002,shopping,rep_unres,unresolved,ambiguous_reference,test,"Okay, you’ve been updated! The desk chair (order 7802) is now scheduled for delivery on Saturday the 18th. You’ll receive a confirmation email shortly with all the details. Is there anything else I can help you with today?",222,40,1,0,3,0,
+dense_axis,shopping_002__rep_res,shopping_002,shopping,rep_res,resolved,emphasis_repeat,test,"Okay, the desk chair has been rescheduled to Saturday the 18th. You’ll receive a confirmation email within the next hour with the updated delivery details. Is there anything else I can help you with today?",205,36,1,0,4,0,
+dense_axis,shopping_002__norep_unres,shopping_002,shopping,norep_unres,unresolved,ambiguous_reference,test,"Okay, you’ve been updated! Order 7802 (the desk chair) is now scheduled for delivery on Saturday, the 18th. You’ll receive a confirmation email within the next hour with all the details. 
+
+Is there anything else I can help you with today?",238,43,1,0,3,0,
+dense_axis,shopping_002__norep_res,shopping_002,shopping,norep_res,resolved,clean_progress,test,"Okay, the delivery for order 7802 (the desk chair) has been successfully moved to Saturday, the 18th. You’ll receive a confirmation email within the next hour with all the details. Is there anything else I can help you with today?",230,41,1,0,4,0,
+dense_axis,shopping_011__rep_unres,shopping_011,shopping,rep_unres,unresolved,ambiguous_reference,test,"Absolutely. Just let us know the date and time of the collection and replacement, and we’ll make a note of that for the delivery team. They’ll be sure to let anyone in the house know beforehand. 
+
+To confirm, you’re looking at a three-week turnaround for the replacement slate armchair?",286,53,1,0,2,0,
+dense_axis,shopping_011__rep_res,shopping_011,shopping,rep_res,resolved,emphasis_repeat,test,"Absolutely. We’ll make a note of that in the delivery details. Just to confirm, we’ll collect the damaged slate armchair and deliver the new one on the same day. Is there anything else you’d like to add to the notes for the delivery team?",238,47,1,0,3,0,
+dense_axis,shopping_011__norep_unres,shopping_011,shopping,norep_unres,unresolved,contradiction,test,"Okay, let’s get a convenient time for the delivery and collection. Could you tell me what days and times work best for you? Please give me a few options so we can find something that suits everyone.",198,38,1,0,2,0,
+dense_axis,shopping_011__norep_res,shopping_011,shopping,norep_res,resolved,clean_progress,test,"Okay, let’s get a convenient time for the delivery and collection. Could you tell me what days and times work best for you? Please give me a few options so we can find something that suits everyone.",198,38,1,0,2,0,
+dense_axis,shopping_017__rep_unres,shopping_017,shopping,rep_unres,unresolved,contradiction,test,"Okay, thank you for letting me know. I’ve logged the return for order R-4419 with the 14kg weight and the drop-off at the Kirkby Road locker point on Thursday. 
+
+Just to confirm, you’ll be bringing the original packaging with the lamp and shade to the locker point?
+
+Is there anything else I can help you with today?",316,61,2,1,3,0,
+dense_axis,shopping_017__rep_res,shopping_017,shopping,rep_res,resolved,readback_confirmation,test,"Okay, thank you for letting me know. I’ve logged the return for order R-4419 with the cracked lamp shade and noted that the original packaging is still on your porch. 
+
+You can drop it off at the locker point on Kirkby Road on Thursday – that’s perfect. 
+
+You’ll receive an email confirmation once the return is processed and the refund is issued. It usually takes 5-7 business days after the return is received. 
+
+Is there anything else I can help you with today?",464,87,1,0,9,0,
+dense_axis,shopping_017__norep_unres,shopping_017,shopping,norep_unres,unresolved,ambiguous_reference,test,"Okay, fantastic! Knowing the box is still there is really helpful. We’ll make sure that’s factored into the return process. 
+
+Just to confirm, you’d like a full refund, not a replacement. 
+
+You can leave the box on the porch – it’s perfectly fine. We’ll arrange for collection as soon as we receive confirmation from Dunlin Home that they’ve received the damaged lamp.
+
+Again, apologies for the inconvenience. Is there anything else I can help you with today?",459,82,1,0,2,0,
+dense_axis,shopping_017__norep_res,shopping_017,shopping,norep_res,resolved,emphasis_repeat,test,"Okay, fantastic! Thanks for letting me know about the box still being out there – that’s really helpful. 
+
+I’ve just sent you an email with the free locker return label for Kirkby Road. You can print it off and drop the lamp and packaging off there at your convenience. 
+
+Once Dunlin Home receive the returned lamp, they’ll process your refund. You should see that reflected in your account within 7-10 business days. 
+
+Again, apologies for the damaged shade – we’ll make sure this doesn’t happen to other customers.
+
+Is there anything else I can help you with today?",567,102,1,0,3,0,
+dense_axis,shopping_021__rep_unres,shopping_021,shopping,rep_unres,unresolved,unanswered_question,test,"Okay, fantastic! Just to confirm:
+
+*   You’re switching to the Small Box size.
+*   Your next delivery will be the Small Box.
+*   Your billing date will now be the 12th of each month going forward.
+*   You’d like to opt out of receiving a paper invoice.
+
+Is that all correct?",274,49,1,0,4,0,
+dense_axis,shopping_021__rep_res,shopping_021,shopping,rep_res,resolved,readback_confirmation,test,"Okay, perfect! Just to confirm:
+
+We’ve switched your Brindle and Co subscription to the Small Box (£24 per delivery). Your next delivery will be billed on the 12th of the month going forward, and you’ve opted out of paper invoices.
+
+Is that all correct?",253,46,1,0,6,0,
+dense_axis,shopping_021__norep_unres,shopping_021,shopping,norep_unres,unresolved,contradiction,test,"Okay, fantastic! Just to confirm:
+
+*   **Size:** Small Box
+*   **Billing Date:** 12th of the month
+*   **Delivery Day:** Tuesday
+
+I’ve made those changes to your account. You’ll receive an email confirmation shortly with all the details. 
+
+Is there anything else I can help you with today?",289,46,1,0,2,0,
+dense_axis,shopping_021__norep_res,shopping_021,shopping,norep_res,resolved,clean_progress,test,"Okay, fantastic! Just to confirm:
+
+*   **Size:** Small Box
+*   **Billing Date:** 12th of the month
+*   **Delivery Day:** Tuesday
+
+I’ve made those changes to your account. You’ll receive an email confirmation shortly with all the details. 
+
+Is there anything else I can help you with today?",289,46,1,0,2,0,
+dense_axis,shopping_023__rep_unres,shopping_023,shopping,rep_unres,unresolved,contradiction,test,"Excellent! Just to be absolutely clear, you’re confident you’re comfortable fitting it yourself, and you’re sure it’s the correct part for your Meadowline 45 with serial 28410? 
+
+It’s always best to double-check before starting any maintenance. 
+
+If you have *any* questions at all once you’ve received the belt, don’t hesitate to give us a call – our number is 01737 836777. 
+
+Happy mowing!",391,70,1,0,2,0,
+dense_axis,shopping_023__rep_res,shopping_023,shopping,rep_res,resolved,readback_confirmation,test,"Excellent! Just to be absolutely clear, you’re confident you’re comfortable fitting it yourself, and you’re sure it’s the correct part for your Meadowline 45 with serial 38410? 
+
+It’s always best to double-check before starting any maintenance. 
+
+If you have *any* questions at all once you’ve received the belt, don’t hesitate to give us a call – our number is 01737 836777. 
+
+Happy mowing!",391,70,1,0,2,0,
+dense_axis,shopping_023__norep_unres,shopping_023,shopping,norep_unres,unresolved,ambiguous_reference,test,"Absolutely! It’s a wise choice, you’ll be glad you did. A genuine part will always give you the best performance and longevity. Is there anything else I can help you with today, or perhaps you’d like to browse our selection of blades for either mower?",251,48,1,0,2,0,
+dense_axis,shopping_023__norep_res,shopping_023,shopping,norep_res,resolved,emphasis_repeat,test,"Absolutely! It’s a wise choice, you’ll be glad you did. Quality parts are worth the investment in the long run. Is there anything else I can help you with today, or would you like me to check on the estimated delivery date for the belt?",236,47,1,0,2,0,
+dense_axis,transit_002__rep_unres,transit_002,transit,rep_unres,unresolved,contradiction,test,"Okay, just one moment while I finalize the booking and send the confirmation to your phone number – [Your Phone Number]. 
+
+You should receive a text message within the next minute with all the details: driver name, vehicle type (XL), pickup location (Terminal 2 Arrivals Hall), pickup time (7:15 PM Thursday), and the total cost of $46. 
+
+Do you need anything else before we confirm?",383,65,1,0,4,0,
+dense_axis,transit_002__rep_res,transit_002,transit,rep_res,resolved,emphasis_repeat,test,"Okay, just one moment while I finalize the booking and send the confirmation to your phone number – [Your Phone Number]. 
+
+You should receive a text message within the next minute with all the details: driver name, vehicle type (XL), pickup location (Terminal 2 Arrivals Hall), pickup time (7:15 PM Thursday), and the total cost of $46. 
+
+Do you need anything else before we confirm?",383,65,1,0,4,0,
+dense_axis,transit_002__norep_unres,transit_002,transit,norep_unres,unresolved,ambiguous_reference,test,"Okay, a confirmation has been sent to your phone number associated with this booking. It includes:
+
+*   **Vehicle:** XL
+*   **Pickup Location:** Terminal 2 (7:45 PM)
+*   **Drop-off Location:** Terminal 5 (Dan’s arrival)
+*   **Confirmation Number:** [Insert Confirmation Number Here - I can’t generate a real one]
+
+Do you need anything else?",340,51,1,0,2,0,
+dense_axis,transit_002__norep_res,transit_002,transit,norep_res,resolved,clean_progress,test,"Okay, a confirmation has been sent to your phone number associated with this booking. It includes:
+
+*   **Vehicle:** XL
+*   **Pickup Location:** Terminal 5
+*   **Pickup Time:** 7:45 PM
+*   **Notes:** Large luggage (3 cases)
+
+Do you need anything else?",251,37,1,0,2,0,
+dense_axis,transit_004__rep_unres,transit_004,transit,rep_unres,unresolved,unanswered_question,test,"Okay, I’ve activated the 31-day pass on the card you currently have. It’s now active from Monday the 6th and will run until the 5th of next month. 
+
+**Important:** Yes, the 31-day pass *does* cover the Greenwich Riverboat. You can use it to board and alight at any point along its route.
+
+Is there anything else I can help you with today?",338,66,1,0,3,0,
+dense_axis,transit_004__rep_res,transit_004,transit,rep_res,resolved,emphasis_repeat,test,"Okay, perfect! I’ve switched your travel card to a monthly pass starting Monday, the sixth. It’s now linked to your existing card. Is there anything else I can help you with today?",180,34,1,0,4,0,
+dense_axis,transit_004__norep_unres,transit_004,transit,norep_unres,unresolved,contradiction,test,"Okay, let’s get that sorted for you! I’ve activated a 31-day monthly pass for travel in zones one and two, starting Monday, June 6th, from Bexley Park. It’s been added to the card you already have. 
+
+Just to double-check, is there anything else you’d like me to do, like:
+
+*   **Confirm the cost?** (It will be £96)
+*   **Check your travel routes?** (I can help you plan your journeys if you’d like)",399,77,2,1,3,0,
+dense_axis,transit_004__norep_res,transit_004,transit,norep_res,resolved,readback_confirmation,test,"Okay, fantastic! I’ve activated a 31-day monthly pass for you, starting Monday, June 6th, from Bexley Park, using the card you already have. 
+
+Just to double-check, you’ll be travelling within zones one and two, correct? 
+
+Is there anything else I can help you with today, like checking if you’ll be eligible for any discounts or looking at how the pass works with contactless payment?",385,69,2,1,3,0,
+dense_axis,transit_019__rep_unres,transit_019,transit,rep_unres,unresolved,unanswered_question,test,"Okay, great! Let’s get your case sorted.
+
+**Regarding your checked bag:** Because you missed your connecting flight, **your bag *should* be automatically transferred to the Bergen flight (LN 412).** However, it’s absolutely crucial to confirm this with the agent at the transfer desk.
+
+Here’s what you need to do:
+
+1.  **Speak to an Agent:** Explain your situation – that your Manchester to Bergen flight was missed.
+2.  **Confirm Transfer:** Ask the agent *specifically* if your bag has been moved to flight LN 412. They will likely check the system.
+3.  **If Not",564,94,0,0,4,0,
+dense_axis,transit_019__rep_res,transit_019,transit,rep_res,resolved,readback_confirmation,test,"Okay, great! Let’s see… (typing sounds)
+
+Alright, it looks like your checked baggage is already being routed to Bergen. You don’t need to do anything further at the transfer desk. Just head to gate 183, that’s where flight LN 412 to Bergen is departing from. 
+
+Do you have any other questions or need anything else before you head to your gate?",344,64,1,0,4,0,
+dense_axis,transit_019__norep_unres,transit_019,transit,norep_unres,unresolved,contradiction,test,"Okay, great! Let me just confirm – you’re at the SAS transfer desk in Terminal 2. I’ll keep an eye on things and let you know if there are any updates. Is there anything else I can help you with at the moment?",209,44,1,0,4,0,
+dense_axis,transit_019__norep_res,transit_019,transit,norep_res,resolved,clean_progress,test,"Okay, great! Let me just confirm – you’re at the SAS transfer desk in Terminal 2. Just wanted to make sure. 
+
+Is there anything else I can help you with at the moment, or would you like me to keep an eye out for any updates regarding your flight?",246,49,1,0,4,0,
+dense_axis,transit_020__rep_unres,transit_020,transit,rep_unres,unresolved,contradiction,test,"Okay, great! I’ve added three spaces to your booking for the parking and the return shuttle. Just to confirm, that’s for a car with three passengers, departing for the match at 3:30pm on Saturday, and returning via the shuttle at 6:30pm. 
+
+Is that correct?",256,48,1,0,6,0,
+dense_axis,transit_020__rep_res,transit_020,transit,rep_res,resolved,emphasis_repeat,test,"Okay, great! I’ve added three tickets to your booking – one for the parking space and two for the return shuttle. They’re all linked together. You’ll receive an email confirmation shortly with all the details, including the booking reference number. 
+
+Just to confirm, that’s for a Saturday match, kick-off at 1:00 PM, finishing around 3:30 PM, and you’ll be catching the shuttle immediately after the final whistle with the rest of the crowd. 
+
+Is there anything else I can help you with today?",495,90,1,0,4,0,
+dense_axis,transit_020__norep_unres,transit_020,transit,norep_unres,unresolved,ambiguous_reference,test,"Okay, great! Just to confirm, that’s three people travelling together. Just letting you know, the shuttle is free for those travelling with the car.",148,25,0,0,2,0,
+dense_axis,transit_020__norep_res,transit_020,transit,norep_res,resolved,clean_progress,test,"Okay, great! Just to confirm, that’s three people travelling in one car. The six-pound charge is per car, so it’ll still be six pounds for your trip. Enjoy the match!",166,33,0,0,1,0,
+dense_axis,transit_024__rep_unres,transit_024,transit,rep_unres,unresolved,ambiguous_reference,test,"Okay, fantastic. Just to confirm:
+
+*   **Booking:** Car Club Bay
+*   **Date:** Saturday
+*   **Time:** 8:00 AM – 6:00 PM
+*   **Driver:** Ruth Ellery
+*   **Bay:** Corn Exchange Bay
+
+Is that all correct?",200,29,1,0,2,0,
+dense_axis,transit_024__rep_res,transit_024,transit,rep_res,resolved,clean_progress,test,"Okay, fantastic. Just to confirm:
+
+*   **Booking:** Car Club Booking
+*   **Date:** Saturday
+*   **Location:** Lister Street Bay
+*   **Time:** 8:00 AM – 6:00 PM
+*   **Driver:** Ruth Ellery
+
+Is that all correct?",209,29,1,0,3,0,
+dense_axis,transit_024__norep_unres,transit_024,transit,norep_unres,unresolved,contradiction,test,"Okay, confirmed. A car booked for Ruth Ellery, Saturday, out to Bakewell and back, 8:00 AM to 6:00 PM, charged directly to the account. It’s held until you return. Is there anything else I can help you with today?",213,42,1,0,6,0,
+dense_axis,transit_024__norep_res,transit_024,transit,norep_res,resolved,emphasis_repeat,test,"Okay, confirmed. A car booking for Saturday, out to Bakewell and back, 8:00 AM to 6:00 PM, under Ruth Ellery, and charged directly to the account – no separate charges. It’s held until you return over the bridge around 5:00 PM. 
+
+Is there anything else I can help you with today?",279,54,1,0,8,0,
+sae_ablate,appointment_004__rep_unres,appointment_004,appointment,rep_unres,unresolved,unanswered_question,test,You’re very welcome! We’re happy to help. Have a good evening!,62,13,0,0,1,0,
+sae_ablate,appointment_004__rep_res,appointment_004,appointment,rep_res,resolved,emphasis_repeat,test,You’re very welcome! It’s no problem at all. Rosa’s name has been added to the list for Thursday the 9th at 5.20. Do you need any further assistance with anything else today?,174,36,1,0,3,0,
+sae_ablate,appointment_004__norep_unres,appointment_004,appointment,norep_unres,unresolved,contradiction,test,You’re very welcome! It’s no problem at all. We look forward to seeing Rosa and speaking with you then. Have a good afternoon!,126,25,0,0,2,0,
+sae_ablate,appointment_004__norep_res,appointment_004,appointment,norep_res,resolved,clean_progress,test,You’re very welcome! It’s no problem at all. We look forward to seeing Rosa and speaking with you then. Have a good afternoon!,126,25,0,0,2,0,
+sae_ablate,appointment_012__rep_unres,appointment_012,appointment,rep_unres,unresolved,contradiction,test,"Okay, fantastic. I’ve moved your practical test booking to the sixth of next month, first thing, in Marcus’s car. I’ve also noted your request for a quiet road – I’ll pass that on to the examiner. 
+
+You should receive a confirmation email shortly with all the details. 
+
+Fingers crossed for you too! Let me know if you need anything else.",338,63,0,0,4,0,
+sae_ablate,appointment_012__rep_res,appointment_012,appointment,rep_res,resolved,emphasis_repeat,test,"Okay, fantastic. I’ve booked your practical test for the sixth of next month, first thing, in Marcus’s car. I’ve also requested a quiet road for the test. 
+
+You’ll receive an email confirmation shortly with all the details. 
+
+Fingers crossed for you too! Let me know if you need anything else.",293,54,0,0,3,0,
+sae_ablate,appointment_012__norep_unres,appointment_012,appointment,norep_unres,unresolved,ambiguous_reference,test,"Okay, fantastic. Let’s go ahead and move the Calder Street practical test booking to the twenty past eight on [Date - I’ll need to confirm the exact date, please give me a moment to check the system]. 
+
+Just to confirm, that’s the twenty past eight on [Confirmed Date]. 
+
+I’ve made the change. You’ll receive an email confirmation shortly with the updated details. 
+
+Is there anything else I can help you with today?",416,76,1,0,3,0,
+sae_ablate,appointment_012__norep_res,appointment_012,appointment,norep_res,resolved,readback_confirmation,test,"Okay, fantastic. Let’s go ahead and move the Calder Street practical test booking to the twenty past eight on the 17th of July. Just to confirm, that’s the 17th of July, twenty past eight at Calder Street. 
+
+I’ve made the change. You’ll receive an email confirmation shortly with the updated details. 
+
+Is there anything else I can help you with today?",352,65,1,0,3,0,
+sae_ablate,appointment_017__rep_unres,appointment_017,appointment,rep_unres,unresolved,ambiguous_reference,test,"Right, so Saturday the seventh at 9:30am for a full morning’s measure with Priya, and solid oak throughout. I’ve noted that very clearly. Do you want me to send her a quick email confirming the appointment and reiterating the oak requirement, just to be absolutely sure?",270,49,1,0,3,0,
+sae_ablate,appointment_017__rep_res,appointment_017,appointment,rep_res,resolved,emphasis_repeat,test,"Right, Utility it is for the initial measure on Saturday the seventh at half nine. We’ll be there all morning. Priya will be in touch to confirm the address and any prep work you need to do. 
+
+Is there anything else you’d like to discuss before we wrap up today?",262,52,1,0,3,0,
+sae_ablate,appointment_017__norep_unres,appointment_017,appointment,norep_unres,unresolved,contradiction,test,Excellent. I’ve marked it down as a morning appointment. We’ll send you a confirmation email with all the details shortly. Is there anything else I can help you with today?,172,32,1,0,1,0,
+sae_ablate,appointment_017__norep_res,appointment_017,appointment,norep_res,resolved,clean_progress,test,Excellent. I’ve marked it down as a morning appointment for you both. I’ll send you a confirmation email with all the details shortly. Is there anything else I can help you with today?,184,35,1,0,1,0,
+sae_ablate,appointment_022__rep_unres,appointment_022,appointment,rep_unres,unresolved,contradiction,test,"Absolutely. Noted – same make as the rears, no mixing. And thanks for confirming the location, it helps us get everything organised smoothly. I’ll make sure one of the team is ready to wave you in as soon as you arrive on Saturday. 
+
+Do you want me to take down your name and number just in case we need to reach you with an update?",332,65,1,0,4,0,
+sae_ablate,appointment_022__rep_res,appointment_022,appointment,rep_res,resolved,emphasis_repeat,test,"Absolutely. Noted – same make as the rears, no mixing. And thanks for confirming the location, it helps us get everything organised smoothly. We’ll have a chap on the lookout for you as soon as 8am rolls around. Just to double-check, could you tell me what make and model of car you’re driving?",294,55,1,0,4,0,
+sae_ablate,appointment_022__norep_unres,appointment_022,appointment,norep_unres,unresolved,ambiguous_reference,test,"Excellent. Right, I’ve just ordered the correct tyres – 215/55R17 for your car and 205/55R16 for your wife’s. 
+
+So, that’s Saturday at 9:00 am. Just to confirm, that’s for both cars, and you’re ten minutes away? Do you need a booking reference or anything like that?",266,53,2,1,2,0,
+sae_ablate,appointment_022__norep_res,appointment_022,appointment,norep_res,resolved,clean_progress,test,"Excellent! Nine am it is then. Just to confirm, that’s for a pair of 205/55R16 tyres for your wife’s car. We’ll get those ordered in now. 
+
+Could I get your name and contact number, please, so we can confirm the appointment and give you a quick call if anything changes?",270,54,1,0,3,0,
+sae_ablate,appointment_024__rep_unres,appointment_024,appointment,rep_unres,unresolved,unanswered_question,test,"Great! That’s really convenient. The induction session will cover a few key things to get you comfortable and safe at Fairlop Leisure Centre. Here’s a breakdown of what you can expect:
+
+*   **Centre Tour:** We’ll give you a guided tour of the facilities, including the pool areas, gym, studios, changing rooms, and reception.
+*   **Health & Safety:** This is a crucial part – we’ll cover emergency procedures, fire evacuation routes, first aid locations, and how to report any hazards.
+*   **Pool Rules & Regulations:** Specific rules for using the swimming pool, including lane etiquette, diving restrictions, and hygiene guidelines.
+*",636,97,0,0,4,0,
+sae_ablate,appointment_024__rep_res,appointment_024,appointment,rep_res,resolved,emphasis_repeat,test,"Great! That’s really helpful to know. Just to confirm, you’re booked onto the induction session for Tuesday at 7:00 PM at Fairlop Leisure Centre. It’s a five-minute walk from your home. 
+
+Do you have any other questions for me before you head over?",248,48,1,0,5,0,
+sae_ablate,appointment_024__norep_unres,appointment_024,appointment,norep_unres,unresolved,ambiguous_reference,test,"Okay, fantastic! You’re booked onto the Tuesday evening induction at 7:00 PM on the 22nd. That’s confirmed. 
+
+Now, let’s get that direct debit set up. Could you please confirm the following details for me:
+
+*   **Your Full Name:**
+*   **Your Address:** (Please include postcode)
+*   **Your Bank Name:**
+*   **Your Account Number:**
+*   **Your Sort Code:**
+
+Once I have this information, I’ll finalize your membership and send you confirmation details.",451,70,0,0,2,0,
+sae_ablate,appointment_024__norep_res,appointment_024,appointment,norep_res,resolved,readback_confirmation,test,"Okay, fantastic! You’re booked onto the induction session for Tuesday evening at 7:00 PM, on the off-peak plan, starting on Monday the 22nd. And you’re right, it’s a five-minute walk from your front door – that’s great!
+
+Now, to finalize everything, I need a little more information. Could you please provide me with:
+
+*   **Your Full Name:**
+*   **Your Date of Birth:**
+*   **Your Email Address:**
+
+Once I have that, I can send you a confirmation email with all the details and instructions for your induction.",511,89,0,0,5,0,
+sae_ablate,cooking_006__rep_unres,cooking_006,cooking,rep_unres,unresolved,contradiction,test,"Fantastic! That’s great – paella deserves that kind of attention. Since you’re doing it on the hob, you’ll want a really wide, shallow pan – ideally 35-40cm (14-16 inches) in diameter. That’ll give you enough surface area for the rice to cook evenly and develop that lovely socarrat (the crispy bottom layer). 
+
+Do you have a good recipe in mind, or would you like me to suggest one?",383,72,1,0,4,0,
+sae_ablate,cooking_006__rep_res,cooking_006,cooking,rep_res,resolved,emphasis_repeat,test,"Fantastic! That’s great – paella deserves that kind of attention. Since you’re doing it on the hob and have a 700g bag, you’re perfectly covered. 
+
+To help you plan your afternoon, roughly how much stock do you think you’ll need? A good rule of thumb is about 3-4 times the amount of rice. So, around 2100-2800ml (that’s about 2.1-2.8 liters) would be a good starting point. 
+
+Do you have a good idea of what kind of ingredients you’re planning to use – seafood, chicken, chorizo,",480,94,1,0,4,0,
+sae_ablate,cooking_006__norep_unres,cooking_006,cooking,norep_unres,unresolved,ambiguous_reference,test,"Fantastic! That’s a great plan. With a 900g bag of rice, you’ve got plenty. Enjoy the process – making paella is a really rewarding experience. 
+
+Do you want to chat about anything specific you’re planning for the paella – like what kind of seafood you’re using, or any specific flavors you’re aiming for?",305,56,1,0,3,0,
+sae_ablate,cooking_006__norep_res,cooking_006,cooking,norep_res,resolved,clean_progress,test,"Fantastic! That’s a great plan. A whole afternoon gives you plenty of time to really nail a beautiful paella. 
+
+Do you want to chat about anything specific you’re planning – like the type of seafood you’re using, or any particular techniques you’re aiming for? Or would you just like to brainstorm some ideas for sides and a nice wine to go with it?",349,66,2,1,2,0,
+sae_ablate,cooking_009__rep_unres,cooking_009,cooking,rep_unres,unresolved,ambiguous_reference,test,"Right, good. Now, let’s talk about sterilising. You’ve got the right idea with the oven – that’s crucial for a good seal and preventing spoilage. Here’s a breakdown of how to do it properly, step-by-step:
+
+**1. The Prep – Important First Steps:**
+
+*   **Wash Everything:** Thoroughly wash *all* your jars, lids, and rings in hot, soapy water. Rinse very well – you don’t want any soap residue.
+*   **Waxed Discs & Labels:** You’ve already done this, which is excellent. These create a moisture barrier.
+*   **Stone the",518,88,0,0,2,0,
+sae_ablate,cooking_009__rep_res,cooking_009,cooking,rep_res,resolved,readback_confirmation,test,"Right, good. Now, let’s talk about sterilising. You’ve got the right idea with the oven – that’s crucial for a good seal and preventing spoilage. Here’s a breakdown of how to do it properly, step-by-step:
+
+**1. The Oven Method – Your Best Bet**
+
+You’re already on the right track with 30 minutes at 120°C (250°F) – that’s a good starting point. However, let’s refine it a little for optimal sterilisation:
+
+*   **Preheat:** Make sure your oven is fully preheated to 120°",470,88,0,0,2,0,
+sae_ablate,cooking_009__norep_unres,cooking_009,cooking,norep_unres,unresolved,unanswered_question,test,"Great! Okay, let’s talk about testing for setting point without a thermometer. It’s all about observing the jam and using a few key techniques. Here’s a breakdown:
+
+**1. The Cold Plate Test (Most Reliable):**
+
+* **Preparation:** Have a chilled plate (or a metal baking tray) in the freezer for about 15-20 minutes before you start.
+* **Testing:** Spoon a small amount of hot jam (about a teaspoon) onto the cold plate.
+* **The Wait:** Let it sit undisturbed for 30-60 seconds.  This is crucial!
+* **The Lift:** Gently lift the jam with",535,93,0,0,4,0,
+sae_ablate,cooking_009__norep_res,cooking_009,cooking,norep_res,resolved,clean_progress,test,"Excellent! Okay, let’s talk about sterilising those squat jars. Here’s a breakdown of how to do it effectively without a thermometer:
+
+**The Goal:** We’re aiming to kill any bacteria that could spoil the jam.
+
+**The Method (Oven Sterilisation - as you’re doing):**
+
+1. **Wash Thoroughly:** Wash all the jars, lids, and rings in hot, soapy water. Rinse *extremely* well – any soap residue will affect the jam’s colour and flavour.
+
+2. **Preheat the Oven:** Preheat your oven to 120°C (250°F). This is crucial – too",513,89,0,0,2,0,
+sae_ablate,cooking_010__rep_unres,cooking_010,cooking,rep_unres,unresolved,unanswered_question,test,"That’s fantastic! Flour from a local mill is a *huge* upgrade – you’ll really notice the difference in flavor and texture. It’s a great choice. 
+
+Okay, so to answer your question directly: **Yes, the lid absolutely stays on for the entire bake.** That’s key to creating a nice, steamy environment that helps the loaf rise beautifully and develop a nice, even crust. 
+
+It’ll stay on for the first 30 minutes, then you’ll carefully remove it to let the crust brown.
+
+Are you using a Dutch oven or a similar casserole dish?",520,96,1,0,4,0,
+sae_ablate,cooking_010__rep_res,cooking_010,cooking,rep_res,resolved,emphasis_repeat,test,"That’s fantastic! Using flour from a local mill is a great choice – it often makes a noticeable difference in the flavor and texture of the bread. 
+
+Okay, so seam side up, no scoring, and you’re aiming for a longer proofing time if your kitchen is cold. 
+
+To help me give you even more tailored advice, could you tell me:
+
+*   **What kind of flour did you get?** (e.g., unbleached all-purpose, bread flour, whole wheat, etc.)
+*   **What’s the approximate temperature of your kitchen right now?** (Just a rough estimate is fine – under 18°",538,96,2,1,3,0,
+sae_ablate,cooking_010__norep_unres,cooking_010,cooking,norep_unres,unresolved,contradiction,test,"That’s fantastic! Flour from a mill is a *huge* upgrade – you’re doing great. It’ll definitely contribute to a better flavor and texture in your loaf. 
+
+Cold tap water is perfect. Let me know how it goes tomorrow! Would you like me to remind you of the key steps again before you start mixing tonight?",301,57,1,0,3,0,
+sae_ablate,cooking_010__norep_res,cooking_010,cooking,norep_res,resolved,clean_progress,test,"That’s fantastic! Flour from a mill is a *huge* upgrade – you’re doing great. It’ll definitely contribute to a better flavor and texture in your loaf. 
+
+Cold tap water is perfect. Let me know how it goes tomorrow! Would you like me to remind you of the key steps again before you start mixing tonight?",301,57,1,0,3,0,
+sae_ablate,cooking_013__rep_unres,cooking_013,cooking,rep_unres,unresolved,unanswered_question,test,"Okay, good! Let’s see… according to your manual, the timer starts **after** the pressure cooker reaches full pressure. It will begin counting down once it’s locked and pressurized. 
+
+So, you’ll need to set the timer for 35 minutes *after* it’s reached pressure. 
+
+Does that make sense?",285,50,1,0,2,0,
+sae_ablate,cooking_013__rep_res,cooking_013,cooking,rep_res,resolved,readback_confirmation,test,"Good thinking! And yes, definitely give the pot a minute to heat up on the saute setting before adding the oil – that’s important for a good sear. Enjoy your stew!",163,31,0,0,4,0,
+sae_ablate,cooking_013__norep_unres,cooking_013,cooking,norep_unres,unresolved,contradiction,test,"Okay, good! Let’s double-check – you’re browning the beef in two batches on the ‘Sauté’ setting before adding it to the pressure cooker with the rest of the ingredients, correct? And you’re keeping the liquid level at or below the ‘2’ mark on the pot – that’s roughly four litres for your six-litre pot.
+
+Once the beef is browned and the liquid is added, you’ll set it for 35 minutes at High Pressure, then a 15-minute Natural Pressure Release (NPR) before Quick Release. 
+
+Does that all sound right so far?",507,96,2,1,3,0,
+sae_ablate,cooking_013__norep_res,cooking_013,cooking,norep_res,resolved,emphasis_repeat,test,"Excellent! Okay, so you’ve browned the beef in two batches on the saute setting – that’s crucial for flavour. Now, add your onions, carrots, and celery to the pot and saute them for about 5 minutes until they soften slightly. Then, add your stewing liquid (beef stock, red wine, etc.) – remembering to keep it under the 4-litre mark. Finally, season generously with herbs and spices.
+
+Now, set it for **35 minutes at High Pressure, followed immediately by a Quick Release.**
+
+Seriously, don’t delay the quick release – open the valve carefully and let the pressure escape completely before you serve. 
+
+Let me",609,104,0,0,3,0,
+sae_ablate,cooking_022__rep_unres,cooking_022,cooking,rep_unres,unresolved,ambiguous_reference,test,"Excellent! That’s a really smart strategy. Getting those frozen blocks going now will make a huge difference in keeping everything else cool. 
+
+Just to double-check – are you planning on using the sausages and mince to actually cook them while camping, or just to help keep the cooler cold?",290,50,1,0,3,0,
+sae_ablate,cooking_022__rep_res,cooking_022,cooking,rep_res,resolved,readback_confirmation,test,"Excellent! That’s a really smart plan. Using the frozen sausages and mince as ice blocks is a fantastic way to maximize the cool box’s capacity and keep everything colder for longer. 
+
+Have a fantastic camping trip! Let me know if you need any more food ideas or tips as you’re planning.",287,54,0,0,3,0,
+sae_ablate,cooking_022__norep_unres,cooking_022,cooking,norep_unres,unresolved,unanswered_question,test,"That’s fantastic! Being so thorough is a really smart move – it’ll give you a lot of peace of mind. Knowing you’re taking extra care about the peanut allergy is brilliant. 
+
+Is there anything else I can help you with as you finalize the food list, or perhaps some ideas for activities to keep everyone entertained while camping?",328,60,1,0,2,0,
+sae_ablate,cooking_022__norep_res,cooking_022,cooking,norep_res,resolved,emphasis_repeat,test,"Fantastic! That’s really reassuring. Being so careful about allergies is a great idea. Knowing you’re taking that extra step will make the whole trip much smoother and safer for everyone. 
+
+Let’s keep the food planning going – what about breakfast options for Saturday and Sunday? Do you want to lean towards easy, quick things, or are you happy to do a bit more cooking?",371,66,2,1,2,0,
+sae_ablate,household_001__rep_unres,household_001,household,rep_unres,unresolved,unanswered_question,test,"Perfect, thanks so much for that! It makes things really easy. Enjoy your fortnight away!",89,15,0,0,1,0,
+sae_ablate,household_001__rep_res,household_001,household,rep_res,resolved,readback_confirmation,test,"Okay, fantastic! Thanks so much for letting me know about the side gate – that’s really helpful. Just to confirm, the food caddy goes out every week, and the recycling is on alternate weeks. Let me know if anything changes!",223,40,0,0,7,0,
+sae_ablate,household_001__norep_unres,household_001,household,norep_unres,unresolved,contradiction,test,Perfect. Let me just tell Ewan then. You just relax and enjoy your trip!,72,14,0,0,1,0,
+sae_ablate,household_001__norep_res,household_001,household,norep_res,resolved,clean_progress,test,"Perfect. Thanks so much, Colin. You’re a lifesaver!",51,9,0,0,1,0,
+sae_ablate,household_006__rep_unres,household_006,household,rep_unres,unresolved,contradiction,test,"Okay, noted – Allen keys in the kitchen drawer. Thanks for the heads-up!",72,13,0,0,4,0,
+sae_ablate,household_006__rep_res,household_006,household,rep_res,resolved,emphasis_repeat,test,"Okay, noted – Allen keys in the kitchen drawer. Thanks for the heads-up!",72,13,0,0,4,0,
+sae_ablate,household_006__norep_unres,household_006,household,norep_unres,unresolved,unanswered_question,test,"Right, noted. Allen keys in the kitchen drawer. Let’s get this wardrobe sorted!",79,14,0,0,4,0,
+sae_ablate,household_006__norep_res,household_006,household,norep_res,resolved,clean_progress,test,"Right, good to know about the Allen keys. Let’s keep that in mind.",66,14,0,0,3,0,
+sae_ablate,household_018__rep_unres,household_018,household,rep_unres,unresolved,unanswered_question,test,Good thinking. It’s always best to be organised. Let me know if you need anything else.,87,17,0,0,1,0,
+sae_ablate,household_018__rep_res,household_018,household,rep_res,resolved,readback_confirmation,test,Right you are. Let’s hope they’re careful with it. Wouldn’t want any damage to the neighbours’ hedges.,102,20,0,0,1,0,
+sae_ablate,household_018__norep_unres,household_018,household,norep_unres,unresolved,contradiction,test,Excellent. Let’s get it sorted then.,36,7,0,0,1,0,
+sae_ablate,household_018__norep_res,household_018,household,norep_res,resolved,emphasis_repeat,test,Excellent. Let’s get it sorted then.,36,7,0,0,1,0,
+sae_ablate,household_020__rep_unres,household_020,household,rep_unres,unresolved,contradiction,test,"Okay, great. Thanks for the details – under the sink and Gaz is handling the disconnection on Saturday. Just to confirm, I’m here on Friday to let them in, and Sadia’s driving the lorry. Anything else I need to know before they arrive?",235,44,1,0,4,0,
+sae_ablate,household_020__rep_res,household_020,household,rep_res,resolved,readback_confirmation,test,"Okay, great. Thanks for the details – under the sink and Sadia’s driving. Just to confirm, I need to be here on Friday to let them in when the washer arrives between 8 and 12, and they’ll only take the old one if it’s unplumbed and in the hall. Is that all correct?",265,55,1,0,5,0,
+sae_ablate,household_020__norep_unres,household_020,household,norep_unres,unresolved,ambiguous_reference,test,"Right you are. Shoving it over – careful, it’s heavy! Okay, it’s wedged against the wall. And I’ve found the stopcock – turned it off just in case. Let’s keep an eye on it while Gaz works.",188,39,0,0,2,0,
+sae_ablate,household_020__norep_res,household_020,household,norep_res,resolved,clean_progress,test,"Right you are. *Shoves the old washer with a grunt* There you go. Plenty of room now. And I’ve found the stopcock – it’s a bit stiff, but it’s working. Let me know if you need anything else.",190,40,0,0,2,0,
+sae_ablate,household_023__rep_unres,household_023,household,rep_unres,unresolved,contradiction,test,Sounds good! Let me know when they’re on their way.,51,11,0,0,2,0,
+sae_ablate,household_023__rep_res,household_023,household,rep_res,resolved,emphasis_repeat,test,Sounds good! Let me know when they’re on their way.,51,11,0,0,2,0,
+sae_ablate,household_023__norep_unres,household_023,household,norep_unres,unresolved,ambiguous_reference,test,"Perfect, thanks so much Nita. Let me know when they’re on their way. Appreciate the help!",89,17,0,0,2,0,
+sae_ablate,household_023__norep_res,household_023,household,norep_res,resolved,readback_confirmation,test,"Perfect. Thanks so much, Nita. Really appreciate it. Let me know when you hear anything.",88,15,0,0,1,0,
+sae_ablate,shopping_002__rep_unres,shopping_002,shopping,rep_unres,unresolved,ambiguous_reference,test,"Okay, you’ve been updated! The desk chair (order 7802) is now scheduled for delivery on Saturday the 18th. You’ll receive a confirmation email shortly with all the details. Is there anything else I can help you with today?",222,40,1,0,3,0,
+sae_ablate,shopping_002__rep_res,shopping_002,shopping,rep_res,resolved,emphasis_repeat,test,"Okay, the desk chair has been rescheduled to Saturday the 18th. You’ll receive a confirmation email within the next hour with the updated delivery details. Is there anything else I can help you with today?",205,36,1,0,4,0,
+sae_ablate,shopping_002__norep_unres,shopping_002,shopping,norep_unres,unresolved,ambiguous_reference,test,"Okay, you’ve been updated! Order 7802 (the desk chair) is now scheduled for delivery on Saturday, the 18th. You’ll receive a confirmation email within the next hour with all the details. 
+
+Is there anything else I can help you with today?",238,43,1,0,3,0,
+sae_ablate,shopping_002__norep_res,shopping_002,shopping,norep_res,resolved,clean_progress,test,"Okay, you’ve been updated! Order 7802 (Desk Chair) is now scheduled for delivery on Saturday, the 18th. You’ll receive a confirmation email shortly with all the details. Is there anything else I can help you with today?",219,39,1,0,3,0,
+sae_ablate,shopping_011__rep_unres,shopping_011,shopping,rep_unres,unresolved,ambiguous_reference,test,"Absolutely. Just let us know the date and time of the collection and replacement, and we’ll make a note of that for the delivery team. They’ll be sure to let anyone in the house know beforehand. 
+
+To confirm, you’re looking at a three-week turnaround for the replacement slate armchair?",286,53,1,0,2,0,
+sae_ablate,shopping_011__rep_res,shopping_011,shopping,rep_res,resolved,emphasis_repeat,test,"Absolutely. We’ll make a note of that in the delivery details. Just to confirm, we’ll collect the damaged slate armchair and deliver the new one on the same day. Is there anything else you’d like to add to the notes for the delivery team?",238,47,1,0,3,0,
+sae_ablate,shopping_011__norep_unres,shopping_011,shopping,norep_unres,unresolved,contradiction,test,"Okay, great. To arrange the collection and delivery, could you please provide me with a few more details?
+
+*   **Your full name:**
+*   **Your address:**
+*   **A contact phone number:**
+*   **What days and times would work best for you to be available for the collection?** (Please give me a few options)
+
+Once I have this information, I can schedule everything for you.",369,59,2,1,2,0,
+sae_ablate,shopping_011__norep_res,shopping_011,shopping,norep_res,resolved,clean_progress,test,"Okay, great. To arrange the collection and delivery, could you please provide me with a few more details?
+
+*   **Your full name:**
+*   **Your address:**
+*   **A contact phone number:**
+*   **What days and times would work best for you to be available for the collection?** (Please give me a few options)
+
+Once I have this information, I can schedule everything for you.",369,59,2,1,2,0,
+sae_ablate,shopping_017__rep_unres,shopping_017,shopping,rep_unres,unresolved,contradiction,test,"Okay, thank you for letting me know. I’ve logged the return for order R-4419 with the 14kg weight and the drop-off at the Kirkby Road locker point on Thursday. 
+
+Just to confirm, you’ll be bringing the original packaging with the lamp and shade to the locker point?
+
+Is there anything else I can help you with today?",316,61,2,1,3,0,
+sae_ablate,shopping_017__rep_res,shopping_017,shopping,rep_res,resolved,readback_confirmation,test,"Okay, thank you for letting me know. I’ve logged the return for order R-4419 with the cracked lamp shade and noted that the original packaging is still on your porch. 
+
+You can drop it off at the locker point on Kirkby Road on Thursday – that’s perfect. 
+
+You’ll receive an email confirmation once the return is processed and the refund is issued. It usually takes 5-7 business days after the return is received. 
+
+Is there anything else I can help you with today?",464,87,1,0,9,0,
+sae_ablate,shopping_017__norep_unres,shopping_017,shopping,norep_unres,unresolved,ambiguous_reference,test,"Absolutely, you’ve got every right to want a refund – a cracked shade is completely unacceptable. 
+
+Okay, I’ve just emailed you the free locker point return label for Kirkby Road. It should be in your inbox shortly. 
+
+And thank you for letting me know about the box still being on your porch – that’s really helpful information for Dunlin Home. 
+
+Just to confirm, you’ll pack the lamp securely in the original box (or similar) and drop it off at the locker point when it’s convenient for you?",492,90,1,0,2,0,
+sae_ablate,shopping_017__norep_res,shopping_017,shopping,norep_res,resolved,emphasis_repeat,test,"Absolutely, you’re entirely correct – cash back is the priority. Thank you for letting me know about the box still being on your porch. That’s really helpful. 
+
+I’ve just forwarded your message about the box to Dunlin Home, so they’re aware. They’ll need to confirm they’ve received the lamp and the packaging before processing your refund. 
+
+You can expect an update from them within 3-5 business days. I’ll keep an eye on things and let you know if I hear anything further.
+
+Again, apologies for the initial inconvenience with the damaged shade.",547,99,0,0,2,0,
+sae_ablate,shopping_021__rep_unres,shopping_021,shopping,rep_unres,unresolved,unanswered_question,test,"Okay, fantastic! Just to confirm:
+
+*   You’re switching to the Small Box size.
+*   Your next delivery will be the Small Box.
+*   Your billing date will now be the 12th of each month going forward.
+*   You’d like to opt out of receiving a paper invoice.
+
+Is that all correct?",274,49,1,0,4,0,
+sae_ablate,shopping_021__rep_res,shopping_021,shopping,rep_res,resolved,readback_confirmation,test,"Okay, perfect! Just to confirm:
+
+We’ve switched your Brindle and Co subscription to the Small Box (£24 per delivery). Your next delivery will be billed on the 12th of the month going forward, and you’ve opted out of paper invoices.
+
+Is that all correct?",253,46,1,0,6,0,
+sae_ablate,shopping_021__norep_unres,shopping_021,shopping,norep_unres,unresolved,contradiction,test,"Okay, fantastic! Just to confirm:
+
+*   **Size:** Small Box
+*   **Billing Date:** 12th of the month
+*   **Delivery Day:** Tuesday
+
+I’ve made those changes to your account. You’ll receive an email confirmation shortly with all the details. 
+
+Is there anything else I can help you with today?",289,46,1,0,2,0,
+sae_ablate,shopping_021__norep_res,shopping_021,shopping,norep_res,resolved,clean_progress,test,"Okay, fantastic! Just to confirm:
+
+*   **Size:** Small Box
+*   **Billing Date:** 12th of the month
+*   **Delivery Day:** Tuesday
+
+I’ve made those changes to your account. You’ll receive an email confirmation shortly with all the details. 
+
+Is there anything else I can help you with today?",289,46,1,0,2,0,
+sae_ablate,shopping_023__rep_unres,shopping_023,shopping,rep_unres,unresolved,contradiction,test,"Excellent! Just to be absolutely clear, you’re confident you’re comfortable fitting it yourself, and you’re sure it’s the correct part for your Meadowline 45 with serial 28410? 
+
+It’s always best to double-check before starting any maintenance. 
+
+If you have *any* questions at all once you’ve received the belt, don’t hesitate to give us a call – our number is 01737 836777. 
+
+Happy mowing!",391,70,1,0,2,0,
+sae_ablate,shopping_023__rep_res,shopping_023,shopping,rep_res,resolved,readback_confirmation,test,"Excellent! Just to be absolutely clear, you’re confident you’re comfortable replacing the belt yourself, and you’re sure it’s a straightforward job for you? 
+
+It’s always good to double-check, especially with machinery. If you run into any trouble at all, don’t hesitate to give us a call – our helpline is 01737 831 313. 
+
+Enjoy your Meadowline when it’s back up and running!",376,69,1,0,1,0,
+sae_ablate,shopping_023__norep_unres,shopping_023,shopping,norep_unres,unresolved,ambiguous_reference,test,"Absolutely! You’re a sensible man, sticking with the genuine parts – they’ll last longer and give you a better cut. Let me know if you need anything else, or if you have any questions about the fitment once it arrives. Happy mowing!",232,43,0,0,2,0,
+sae_ablate,shopping_023__norep_res,shopping_023,shopping,norep_res,resolved,emphasis_repeat,test,"Absolutely! It’s a wise choice, you’ll be glad you did. Quality parts are worth the investment in the long run. Is there anything else I can help you with today, or would you like me to check on the estimated delivery date for the belt?",236,47,1,0,2,0,
+sae_ablate,transit_002__rep_unres,transit_002,transit,rep_unres,unresolved,contradiction,test,"Okay, I’ve sent the confirmation for the XL vehicle to the phone number associated with your booking. It includes the driver’s name, contact number, pick-up time (7:15 PM), destination (Kingsway Hotel), and the total cost of $46. 
+
+You should receive it within a minute or two. Do you need me to repeat any details or would you like me to save a copy to your email?",365,70,1,0,3,0,
+sae_ablate,transit_002__rep_res,transit_002,transit,rep_res,resolved,emphasis_repeat,test,"Okay, just one moment while I finalize the booking and send the confirmation to your phone number – [Your Phone Number]. 
+
+You should receive a text message within the next minute with all the details: driver name, vehicle type (XL), pickup location (Terminal 2 Arrivals Hall), pickup time (7:15 PM Thursday), and the total cost of $46. 
+
+Do you need anything else before we confirm?",383,65,1,0,4,0,
+sae_ablate,transit_002__norep_unres,transit_002,transit,norep_unres,unresolved,ambiguous_reference,test,"Okay, a confirmation has been sent to your phone number associated with this booking. It includes:
+
+*   **Vehicle:** XL
+*   **Pickup Location:** Terminal 2 (7:45 PM)
+*   **Drop-off Location:** Terminal 5 (Dan’s arrival)
+*   **Confirmation Number:** [Insert Confirmation Number Here - I can’t generate a real one]
+
+Do you need anything else?",340,51,1,0,2,0,
+sae_ablate,transit_002__norep_res,transit_002,transit,norep_res,resolved,clean_progress,test,"Okay, a confirmation has been sent to your phone number associated with this booking. It includes:
+
+*   **Vehicle:** XL
+*   **Pickup Location:** Terminal 5
+*   **Pickup Time:** 7:45 PM
+*   **Notes:** Large luggage (3 cases)
+
+Do you need anything else?",251,37,1,0,2,0,
+sae_ablate,transit_004__rep_unres,transit_004,transit,rep_unres,unresolved,unanswered_question,test,"Okay, I’ve activated the 31-day pass on the card you currently have. It’s now active from Monday the 6th and will run until the 5th of next month. 
+
+**Important:** Yes, the 31-day pass *does* cover the Greenwich Riverboat. You can use it to board and alight at any point along its route.
+
+Is there anything else I can help you with today?",338,66,1,0,3,0,
+sae_ablate,transit_004__rep_res,transit_004,transit,rep_res,resolved,emphasis_repeat,test,"Okay, perfect! I’ve switched your travel card to a monthly pass starting Monday, the sixth. It’s now linked to your existing card. Is there anything else I can help you with today?",180,34,1,0,4,0,
+sae_ablate,transit_004__norep_unres,transit_004,transit,norep_unres,unresolved,contradiction,test,"Okay, let’s get that sorted for you! I’ve activated a 31-day monthly pass for travel in zones one and two, starting Monday, June 6th, from Bexley Park. It’s been added to the card you already have. 
+
+Just to double-check, is there anything else you’d like me to do, like:
+
+*   **Confirm the cost?** (It will be £96)
+*   **Check your travel routes?** (I can help you plan your journeys if you’d like)",399,77,2,1,3,0,
+sae_ablate,transit_004__norep_res,transit_004,transit,norep_res,resolved,readback_confirmation,test,"Okay, fantastic! I’ve activated a 31-day monthly pass for you, starting Monday, June 6th, from Bexley Park, using the card you already have. 
+
+Just to double-check, you’ll be travelling within zones one and two, correct? 
+
+Is there anything else I can help you with today, like checking if you’ll be eligible for any discounts or looking at how the pass works with contactless payment?",385,69,2,1,3,0,
+sae_ablate,transit_019__rep_unres,transit_019,transit,rep_unres,unresolved,unanswered_question,test,"Okay, great! Let’s get your case sorted.
+
+**Regarding your checked bag:** Because you missed your connecting flight, **your bag *should* be automatically transferred to the Bergen flight (LN 412).** However, it’s absolutely crucial to confirm this with the agent at the transfer desk.
+
+Here’s what you need to do:
+
+1.  **Speak to an Agent:** Explain your situation – that your Manchester to Bergen flight was missed.
+2.  **Confirm Transfer:** Ask the agent *specifically* if your bag has been moved to flight LN 412. They will likely check the system.
+3.  **If Not",564,94,0,0,4,0,
+sae_ablate,transit_019__rep_res,transit_019,transit,rep_res,resolved,readback_confirmation,test,"Okay, great! Let’s see… (typing sounds)
+
+Alright, it looks like your checked baggage is already being routed to Bergen. You don’t need to do anything further at the transfer desk. Just head to gate 183, that’s where flight LN 412 to Bergen is departing from. 
+
+Do you have any other questions or need anything else before you head to your gate?",344,64,1,0,4,0,
+sae_ablate,transit_019__norep_unres,transit_019,transit,norep_unres,unresolved,contradiction,test,"Okay, great! Let me just confirm – you’re at the SAS transfer desk in Terminal 2. I’ll keep an eye on things and let you know if there are any updates. Is there anything else I can help you with at the moment?",209,44,1,0,4,0,
+sae_ablate,transit_019__norep_res,transit_019,transit,norep_res,resolved,clean_progress,test,"Okay, great! Let me just confirm – you’re at the SAS transfer desk in Terminal 2. Just wanted to make sure. 
+
+Is there anything else I can help you with at the moment, or would you like me to keep an eye out for any updates regarding your flight?",246,49,1,0,4,0,
+sae_ablate,transit_020__rep_unres,transit_020,transit,rep_unres,unresolved,contradiction,test,"Okay, great! I’ve added three spaces to your booking for the parking and the return shuttle. Just to confirm, that’s for a car with three passengers, departing for the match at 3:30pm on Saturday, and returning via the shuttle at 6:30pm. 
+
+Is that correct?",256,48,1,0,6,0,
+sae_ablate,transit_020__rep_res,transit_020,transit,rep_res,resolved,emphasis_repeat,test,"Okay, great! I’ve added three tickets to your booking – one for the parking space and two for the return shuttle. They’re all linked together. You’ll receive an email confirmation shortly with all the details, including the booking reference number. 
+
+Just to confirm, that’s for a Saturday match, kick-off at 1:00 PM, finishing around 3:30 PM, and you’ll be catching the shuttle immediately after the final whistle with the rest of the crowd. 
+
+Is there anything else I can help you with today?",495,90,1,0,4,0,
+sae_ablate,transit_020__norep_unres,transit_020,transit,norep_unres,unresolved,ambiguous_reference,test,"Okay, great! Just to confirm, that’s three people travelling together. Just letting you know, the shuttle is free for those travelling with the car.",148,25,0,0,2,0,
+sae_ablate,transit_020__norep_res,transit_020,transit,norep_res,resolved,clean_progress,test,"Okay, great! Just to confirm, that’s three people travelling in one car. The six-pound charge is per car, so it’ll still be six pounds for your trip. Enjoy the match!",166,33,0,0,1,0,
+sae_ablate,transit_024__rep_unres,transit_024,transit,rep_unres,unresolved,ambiguous_reference,test,"Okay, fantastic. Just to confirm:
+
+*   **Booking:** Car Club Bay
+*   **Date:** Saturday
+*   **Time:** 8:00 AM – 6:00 PM
+*   **Driver:** Ruth Ellery
+*   **Bay:** Corn Exchange Bay
+
+Is that all correct?",200,29,1,0,2,0,
+sae_ablate,transit_024__rep_res,transit_024,transit,rep_res,resolved,clean_progress,test,"Okay, fantastic. Just to confirm:
+
+*   **Booking:** Car Club Booking
+*   **Date:** Saturday
+*   **Location:** Lister Street Bay
+*   **Time:** 8:00 AM – 6:00 PM
+*   **Driver:** Ruth Ellery
+
+Is that all correct?",209,29,1,0,3,0,
+sae_ablate,transit_024__norep_unres,transit_024,transit,norep_unres,unresolved,contradiction,test,"Okay, confirmed. A car booked for Ruth Ellery, Saturday, out to Bakewell and back, 8:00 AM to 6:00 PM, charged directly to the account. It’s held until you return. Is there anything else I can help you with today?",213,42,1,0,6,0,
+sae_ablate,transit_024__norep_res,transit_024,transit,norep_res,resolved,emphasis_repeat,test,"Okay, confirmed. A car booking for Saturday, out to Bakewell and back, 8:00 AM to 6:00 PM, under Ruth Ellery, and charged directly to the account – no separate charges. It’s held until you return over the bridge around 5:00 PM. 
+
+Is there anything else I can help you with today?",279,54,1,0,8,0,

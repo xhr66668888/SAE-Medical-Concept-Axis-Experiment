@@ -1,0 +1,107 @@
+{
+  "n_scored": 120,
+  "n_missing": 0,
+  "blind_label_counts": {
+    "unresolved": 57,
+    "resolved": 62,
+    "indeterminate": 1
+  },
+  "blind_confidence_counts": {
+    "high": 105,
+    "medium": 13,
+    "low": 2
+  },
+  "raw_agreement_all": 0.975,
+  "cohen_kappa_all": 0.9504132231404958,
+  "n_blind_indeterminate": 1,
+  "raw_agreement_decidable": 0.9831932773109243,
+  "cohen_kappa_decidable": 0.9663746821135913,
+  "subtype_agreement_where_label_agrees": 0.9829059829059829,
+  "agreement_by_condition": {
+    "norep_res": {
+      "agree": 30,
+      "n": 30,
+      "rate": 1.0
+    },
+    "norep_unres": {
+      "agree": 28,
+      "n": 30,
+      "rate": 0.9333333333333333
+    },
+    "rep_res": {
+      "agree": 30,
+      "n": 30,
+      "rate": 1.0
+    },
+    "rep_unres": {
+      "agree": 29,
+      "n": 30,
+      "rate": 0.9666666666666667
+    }
+  },
+  "agreement_by_domain": {
+    "appointment": {
+      "agree": 24,
+      "n": 24,
+      "rate": 1.0
+    },
+    "cooking": {
+      "agree": 24,
+      "n": 24,
+      "rate": 1.0
+    },
+    "household": {
+      "agree": 21,
+      "n": 24,
+      "rate": 0.875
+    },
+    "shopping": {
+      "agree": 24,
+      "n": 24,
+      "rate": 1.0
+    },
+    "transit": {
+      "agree": 24,
+      "n": 24,
+      "rate": 1.0
+    }
+  },
+  "disputes": [
+    {
+      "id": "A1_004",
+      "item_id": "household_001__norep_unres",
+      "condition": "norep_unres",
+      "domain": "household",
+      "intended": "unresolved",
+      "intended_subtype": "contradiction",
+      "blind": "indeterminate",
+      "blind_subtype": "indeterminate",
+      "blind_conf": "low",
+      "blind_evidence": "The lorry comes round about half six on a Tuesday morning / I'll deal with the first one myself on the way out, we're off at nine that morning."
+    },
+    {
+      "id": "A2_020",
+      "item_id": "household_006__rep_unres",
+      "condition": "rep_unres",
+      "domain": "household",
+      "intended": "unresolved",
+      "intended_subtype": "contradiction",
+      "blind": "resolved",
+      "blind_subtype": "emphasis_repeat",
+      "blind_conf": "high",
+      "blind_evidence": "I'd rather it went straight into the spare room than the hall."
+    },
+    {
+      "id": "A3_020",
+      "item_id": "household_004__norep_unres",
+      "condition": "norep_unres",
+      "domain": "household",
+      "intended": "unresolved",
+      "intended_subtype": "ambiguous_reference",
+      "blind": "resolved",
+      "blind_subtype": "clean_progress",
+      "blind_conf": "medium",
+      "blind_evidence": "Easy enough, the pool is on my way."
+    }
+  ]
+}

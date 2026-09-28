@@ -1,0 +1,86 @@
+{
+  "family_id": "cooking_018",
+  "domain": "cooking",
+  "task_goal": "shop for and roast a 3.5kg turkey crown for eleven and get the list and the oven timing straight",
+  "n_turns": 7,
+  "tail_anchor": "I'm doing the big shop on Thursday morning.",
+  "notes": "rep_unres and rep_res differ by one time phrase, 'half past eleven' vs 'ten o'clock', against a stated two hours forty plus half an hour resting and a carving time of half past one; norep_unres and norep_res differ only in whether the assistant's first turn answers the fridge question.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "For a 3.5kg crown, reckon on two hours forty at 180C, then half an hour resting under foil.", "role": "stated cooking and resting time"},
+        {"turn_index": 4, "quote": "It goes in at half past eleven and I'm carving at half past one", "role": "the action leaves two hours for a job that needs three hours ten"},
+        {"turn_index": 5, "quote": "That's the lot, nothing missing.", "role": "assistant moves on without reconciling the two"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We've got eleven for lunch on Sunday and I'm doing a turkey crown, a 3.5kg one from the butcher. What else should be on the list?"},
+        {"speaker": "assistant", "text": "For eleven with a crown that size: two kilos of potatoes for roasting, a kilo of sprouts, six large carrots, two packs of chipolatas and a jar of cranberry sauce. Stock cubes too, unless you're making the gravy from the tray."},
+        {"speaker": "user", "text": "The gravy comes from the tray, so no cubes. How long does the crown need in the oven?"},
+        {"speaker": "assistant", "text": "For a 3.5kg crown, reckon on two hours forty at 180C, then half an hour resting under foil. Read the shopping list back to me and I'll check nothing has dropped off it."},
+        {"speaker": "user", "text": "Two kilos of potatoes for roasting, a kilo of sprouts, six large carrots, two packs of chipolatas and a jar of cranberry sauce. It goes in at half past eleven and I'm carving at half past one, since everyone has to be away by three, and the potatoes go in the moment it comes out."},
+        {"speaker": "assistant", "text": "That's the lot, nothing missing. Ask the butcher to leave the skin on the crown, it stops the breast drying out."},
+        {"speaker": "user", "text": "I'll ask him when I collect it. I'm doing the big shop on Thursday morning."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "Read the shopping list back to me and I'll check nothing has dropped off it.", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "It goes in at ten o'clock and I'm carving at half past one", "role": "the timing fits the stated two hours forty plus half an hour resting"},
+        {"turn_index": 5, "quote": "That's the lot, nothing missing.", "role": "assistant confirms the read-back and closes the last open item"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We've got eleven for lunch on Sunday and I'm doing a turkey crown, a 3.5kg one from the butcher. What else should be on the list?"},
+        {"speaker": "assistant", "text": "For eleven with a crown that size: two kilos of potatoes for roasting, a kilo of sprouts, six large carrots, two packs of chipolatas and a jar of cranberry sauce. Stock cubes too, unless you're making the gravy from the tray."},
+        {"speaker": "user", "text": "The gravy comes from the tray, so no cubes. How long does the crown need in the oven?"},
+        {"speaker": "assistant", "text": "For a 3.5kg crown, reckon on two hours forty at 180C, then half an hour resting under foil. Read the shopping list back to me and I'll check nothing has dropped off it."},
+        {"speaker": "user", "text": "Two kilos of potatoes for roasting, a kilo of sprouts, six large carrots, two packs of chipolatas and a jar of cranberry sauce. It goes in at ten o'clock and I'm carving at half past one, since everyone has to be away by three, and the potatoes go in the moment it comes out."},
+        {"speaker": "assistant", "text": "That's the lot, nothing missing. Ask the butcher to leave the skin on the crown, it stops the breast drying out."},
+        {"speaker": "user", "text": "I'll ask him when I collect it. I'm doing the big shop on Thursday morning."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "How long before it goes in should it come out of the fridge?", "role": "request"},
+        {"turn_index": 1, "quote": "Order it this week if you can, Sunday joints go quickly at this time of year.", "role": "assistant answers something else and leaves the request open"},
+        {"turn_index": 5, "quote": "180C in a conventional oven, 160C in a fan one, for about two hours forty.", "role": "last assistant turn, still no answer"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We've got eleven coming for lunch on Sunday and I'm doing a turkey crown, a 3.5kg one ordered from the butcher on the high street. How long before it goes in should it come out of the fridge?"},
+        {"speaker": "assistant", "text": "Order it this week if you can, Sunday joints go quickly at this time of year. For eleven people you will also want two kilos of potatoes for roasting, a kilo of sprouts, six large carrots and a couple of packs of chipolatas."},
+        {"speaker": "user", "text": "I'll add all of that to the list. Nothing with onion in it, mind, my brother-in-law can't be doing with them at all."},
+        {"speaker": "assistant", "text": "Onion out of the gravy and the stuffing, then. Use celery and leek in the stuffing instead and it will still have plenty of flavour behind it."},
+        {"speaker": "user", "text": "Celery and leek sounds fine, I can get both. What temperature does the oven want to be at?"},
+        {"speaker": "assistant", "text": "180C in a conventional oven, 160C in a fan one, for about two hours forty. Then half an hour resting under foil before you carve it."},
+        {"speaker": "user", "text": "I'll put the foil out ready and clear a space on the side for it to rest. I'm doing the big shop on Thursday morning."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Bring it out of the fridge a good hour before it goes in so it isn't stone cold in the middle.", "role": "answers the opening request"},
+        {"turn_index": 3, "quote": "Onion out of the gravy and the stuffing, then.", "role": "the preference was already accepted"},
+        {"turn_index": 6, "quote": "Not a scrap of onion near that gravy, remember.", "role": "restating an accepted preference for emphasis"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We've got eleven coming for lunch on Sunday and I'm doing a turkey crown, a 3.5kg one ordered from the butcher on the high street. How long before it goes in should it come out of the fridge?"},
+        {"speaker": "assistant", "text": "Bring it out of the fridge a good hour before it goes in so it isn't stone cold in the middle. For eleven people you will also want two kilos of potatoes for roasting, a kilo of sprouts, six large carrots and a couple of packs of chipolatas."},
+        {"speaker": "user", "text": "I'll add all of that to the list. Nothing with onion in it, mind, my brother-in-law can't be doing with them at all."},
+        {"speaker": "assistant", "text": "Onion out of the gravy and the stuffing, then. Use celery and leek in the stuffing instead and it will still have plenty of flavour behind it."},
+        {"speaker": "user", "text": "Celery and leek sounds fine, I can get both. What temperature does the oven want to be at?"},
+        {"speaker": "assistant", "text": "180C in a conventional oven, 160C in a fan one, for about two hours forty. Then half an hour resting under foil before you carve it."},
+        {"speaker": "user", "text": "I'll put the foil out ready. Not a scrap of onion near that gravy, remember. I'm doing the big shop on Thursday morning."}
+      ]
+    }
+  }
+}

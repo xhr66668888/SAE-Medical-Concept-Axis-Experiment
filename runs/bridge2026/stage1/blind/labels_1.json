@@ -1,0 +1,212 @@
+[
+  {
+    "id": "A1_000",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "I would also like to know whether a paused month still earns loyalty credits.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_001",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "Does the fare include the return, or do I pay twice?",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_002",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "After-school club takes them without booking ahead, I checked in September. / I'd rather the girls came out of the gate together, especially with the car park the way it is at going-home time.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_003",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Before I book anything, read the collection address back to me. / Flat 2, 14 Ardwick Terrace, Manchester.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_004",
+    "label": "indeterminate",
+    "subtype": "indeterminate",
+    "evidence": "The lorry comes round about half six on a Tuesday morning / I'll deal with the first one myself on the way out, we're off at nine that morning.",
+    "confidence": "low"
+  },
+  {
+    "id": "A1_005",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "Does the return postage come out of my refund?",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_006",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "There's the spare key in the biscuit tin, and Maureen still has the spare she had cut for the side door. / Then let's use the spare key",
+    "confidence": "medium"
+  },
+  {
+    "id": "A1_007",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Fourteen, in the blue box on the middle shelf. That is two a day for the week, so she will not run short.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_008",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "The lid comes with it. It is in your basket now, and Leeds stock should get it to you by Friday.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_009",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "The boxes can go straight into the spare room. / I'd rather it went straight into the spare room than the hall.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_010",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Any time from eight. It will need to stay with us the full day, and you can collect it after five.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_011",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "the train gets into Sheffield at 11:40 / I am due at the depot on Savile Street by half past ten, so the timing suits me.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_012",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "A week is plenty, so nothing extra to pay. / The 16th at eleven is free with Nadia, and she has the full slot.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_013",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Read back the Friday slot at half past four with Elif so I can log it. / The Friday slot at half past four with Elif.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_014",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Can you confirm the start date and your home station? / Monday the sixth, from Bexley Park.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_015",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "at forty dollars from the ninth to the seventeenth / My return flight lands on the twentieth, late in the evening.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_016",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Yes, give it a good twenty minutes to come up before anything goes in, or the first half hour is wasted.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_017",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "For six you want 900g of mushrooms, so three 300g punnets. / I've already got four 300g punnets in the fridge, so the mushrooms are sorted.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_018",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "Do you know whether they validate parking for patients?",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_019",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "A neighbour can take one of them in, but for the other I have to be there / Put that one back to Saturday the 18th.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_020",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "a tea hamper going to my brother in Cardiff and a candle set going to a colleague in Leeds / Put a handwritten note in that one saying 'With love from all of us'.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_021",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "I can send Ray on Thursday the fifteenth... the stopcock sits inside the upstairs flat / Graham upstairs is away until the twentieth",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_022",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Can you read the three weights back to me so I know we have the same numbers? / 300g flour, 300g sugar, 300g butter.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_023",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "Just so it is on record, both of us will be coming.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_024",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "the last one back leaves the Alderwick harbour at half past five. We plan to be back at the harbour at five.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_025",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "That slot is held for you. / and I do want the 9.15 rather than the afternoon",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_026",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "That comes to around forty-six dollars all in. / Our travel budget caps ground transport at thirty dollars.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_027",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "Eighty grams a head, so 640g for eight / I've got a 500g bag in the cupboard, so the rice is covered.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_028",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "And I do want to stress it, nothing with milk in, not even in the icing. / Block margarine in the sponge, and a vegan buttercream between the layers and over the top.",
+    "confidence": "high"
+  },
+  {
+    "id": "A1_029",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I'll make the carrot one this weekend and leave the parsnip until the end of November. / For a single batch you want three kilos of veg, two onions, a head of garlic and a litre and a half of stock.",
+    "confidence": "medium"
+  }
+]

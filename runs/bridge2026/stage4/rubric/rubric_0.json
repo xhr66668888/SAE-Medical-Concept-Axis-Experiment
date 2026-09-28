@@ -1,0 +1,1109 @@
+[
+  {
+    "id": "F0044",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "The wardrobe lands on Thursday in a twelve to four slot and I am stuck in a workshop until six. Do they carry it upstairs, or is it left in the hall?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "I can sit at the kitchen table all Thursday, so someone will be here for it. Dan next door still has our drill, remember."
+      },
+      {
+        "speaker": "user",
+        "text": "I'll knock for him on Wednesday evening. Theo gets in on the Sunday and we are building it on the Saturday morning, so there is time to spare."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Plenty of time. They carry it up to whichever room you want, it says so at the bottom of the docket."
+      },
+      {
+        "speaker": "user",
+        "text": "Good, that is one less thing. The Allen keys are in the kitchen drawer."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0044_a",
+        "response": "Right, good to know about the Allen keys. Let\u2019s keep that in mind."
+      },
+      {
+        "response_id": "F0044_b",
+        "response": "Okay, good to know about the Allen keys. Let\u2019s keep that in mind."
+      },
+      {
+        "response_id": "F0044_c",
+        "response": "Okay, noted \u2013 Allen keys in the kitchen drawer. Just confirming, you\u2019re still planning to knock on Dan\u2019s door Wednesday evening to arrange a time to pick up the drill, right?"
+      },
+      {
+        "response_id": "F0044_d",
+        "response": "Right, good to know about the Allen keys. Let\u2019s keep that in mind."
+      }
+    ]
+  },
+  {
+    "id": "F0065",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "We took delivery of two pieces from Thorne and Meadow last month, the olive two-seater and the slate armchair. The two-seater has a split seam along the back cushion."
+      },
+      {
+        "speaker": "assistant",
+        "text": "I am sorry to hear it. Damage has to be reported within fourteen days of delivery for a free replacement, otherwise it goes to the paid repair service."
+      },
+      {
+        "speaker": "user",
+        "text": "It came on the 2nd of June and I am reporting it today, the 30th of June, so I am comfortably inside the fourteen days and I would like the free replacement."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Thank you for the details. A new two-seater takes about three weeks out of the Halifax workshop."
+      },
+      {
+        "speaker": "user",
+        "text": "Three weeks suits us. The old one will have to go on the same visit, as there is nowhere in the house to keep it."
+      },
+      {
+        "speaker": "assistant",
+        "text": "The crew will take the old frame away when they bring the new one."
+      },
+      {
+        "speaker": "user",
+        "text": "That works well. Anyone here can let the crew in on the day."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0065_a",
+        "response": "Okay, let\u2019s get a convenient time for the delivery and collection. Could you tell me what days and times work best for you? Please give me a few options so we can find something that suits everyone."
+      },
+      {
+        "response_id": "F0065_b",
+        "response": "Okay, great. To arrange the collection and delivery, could you please provide me with a few more details?\n\n*   **Your full name:**\n*   **Your address:**\n*   **A contact phone number:**\n*   **What days and times would work best for you to be available for the collection?** (Please give me a few options)\n\nOnce I have this information, I can schedule everything for you."
+      },
+      {
+        "response_id": "F0065_c",
+        "response": "Okay, let\u2019s get a few dates that work for you. Would you prefer a morning or afternoon slot for the delivery and collection? And could you give me a couple of dates that work best?"
+      },
+      {
+        "response_id": "F0065_d",
+        "response": "Okay, let\u2019s get a convenient time for the delivery and collection. Could you tell me what days and times work best for you? Please give me a few options so we can find something that suits everyone."
+      }
+    ]
+  },
+  {
+    "id": "F0016",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello. I've joined at Fairlop Leisure Centre and I need to book the induction session before I can use the place."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Congratulations. The inductions run on Tuesday evenings at seven and Saturday mornings at nine, and your membership starts on Monday the twenty-second either way."
+      },
+      {
+        "speaker": "user",
+        "text": "Tuesday evening at seven, please. I'll be coming straight from work."
+      },
+      {
+        "speaker": "assistant",
+        "text": "That's booked. There are two plans on your form, the off-peak and the full, and I can't set the direct debit up until one of them is ticked. Before I close this, say the start date back to me so I know it has gone in right."
+      },
+      {
+        "speaker": "user",
+        "text": "Put me on the off-peak, then, and the twenty-second is right. It's a five-minute walk from my front door."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0016_a",
+        "response": "Okay, fantastic! You\u2019re booked onto the induction session for Tuesday evening at 7:00 PM, on the off-peak plan, starting on Monday the 22nd. And you\u2019re right, it\u2019s a five-minute walk from your front door \u2013 that\u2019s great!\n\nNow, to finalize everything, I need a little more information. Could you please provide me with:\n\n*   **Your Full Name:**\n*   **Your Date of Birth:**\n*   **Your Email Address:**\n\nOnce I have that, I can send you a confirmation email with all the details and instructions for your induction."
+      },
+      {
+        "response_id": "F0016_b",
+        "response": "Okay, fantastic. So, that\u2019s the Tuesday evening induction at 7pm, booked on the off-peak plan, starting on Monday the 22nd. And you\u2019re right, it\u2019s a five-minute walk from your front door \u2013 good to know! \n\nJust to confirm, can I get your full name and date of birth please?"
+      },
+      {
+        "response_id": "F0016_c",
+        "response": "Okay, fantastic! You\u2019re booked onto the induction session for Tuesday evening at 7:00 PM, on the off-peak plan, starting on Monday the 22nd. And you\u2019re right, it\u2019s a five-minute walk from your front door \u2013 that\u2019s great!\n\nNow, to finalize everything, I need a little more information. Could you please provide me with:\n\n*   **Your Full Name:**\n*   **Your Date of Birth:**\n*   **Your Email Address:**\n\nOnce I have that, I can send you a confirmation email with all the details and instructions for your induction."
+      },
+      {
+        "response_id": "F0016_d",
+        "response": "Okay, fantastic! You\u2019re booked onto the induction session for Tuesday evening at 7:00 PM, on the off-peak plan, starting on Monday the 22nd. And you\u2019re right, it\u2019s a five-minute walk from your front door \u2013 that\u2019s great!\n\nNow, to finalize everything, I need a little more information. Could you please provide me with:\n\n*   **Your Full Name:**\n*   **Your Date of Birth:**\n*   **Your Email Address:**\n\nOnce I have that, I can send you a confirmation email with all the details and instructions for your induction."
+      }
+    ]
+  },
+  {
+    "id": "F0063",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello. I've got two Ashgrove orders on the way: the oak desk on order 7731 and the desk chair on order 7802. I need to sort out the delivery days."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Of course. The oak desk is booked for Tuesday the 14th and the desk chair for Thursday the 16th. Does that fit with your week?"
+      },
+      {
+        "speaker": "user",
+        "text": "Not really. A neighbour can take one of them in, but for the other I have to be there, and it has to be a Saturday because I cannot take a weekday off."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Understood. We run Saturday crews every week and there is no fee for changing a slot."
+      },
+      {
+        "speaker": "user",
+        "text": "As I say, it has to be a Saturday because I cannot take a weekday off. Put that one back to Saturday the 18th."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Noted, Saturday the 18th. I will send the amendment through to the depot now."
+      },
+      {
+        "speaker": "user",
+        "text": "Brilliant. Send the confirmation over when it's booked."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0063_a",
+        "response": "Okay, you\u2019ve been updated! The desk chair (order 7802) is now scheduled for delivery on Saturday the 18th. You\u2019ll receive a confirmation email shortly with all the details. Is there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0063_b",
+        "response": "Okay, the desk chair (order 7802) is now confirmed for delivery on Saturday the 18th. You\u2019ll receive a separate email with the full delivery details shortly."
+      },
+      {
+        "response_id": "F0063_c",
+        "response": "Okay, you\u2019ve been updated! The desk chair (order 7802) is now scheduled for delivery on Saturday the 18th. You\u2019ll receive a confirmation email shortly with all the details. Is there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0063_d",
+        "response": "Okay, you\u2019ve been updated! The desk chair (order 7802) is now scheduled for delivery on Saturday the 18th. You\u2019ll receive a confirmation email shortly with all the details. Is there anything else I can help you with today?"
+      }
+    ]
+  },
+  {
+    "id": "F0082",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "We land at Terminal 2 at 7:15 on Thursday evening and need a car to the Kingsway Hotel. Four of us, three large cases, so we need the boot space."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Then I would book the XL vehicle rather than the standard saloon. That comes to around forty-six dollars all in."
+      },
+      {
+        "speaker": "user",
+        "text": "Yes, book the XL vehicle rather than the standard saloon. Our travel budget caps ground transport at sixty dollars."
+      },
+      {
+        "speaker": "assistant",
+        "text": "XL it is. The driver will meet you in the arrivals hall at Terminal 2."
+      },
+      {
+        "speaker": "user",
+        "text": "That suits us. Send the confirmation to my phone."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0082_a",
+        "response": "Okay, just one moment while I finalize the booking and send the confirmation to your phone number \u2013 [Your Phone Number]. \n\nYou should receive a text message within the next minute with all the details: driver name, vehicle type (XL), pickup location (Terminal 2 Arrivals Hall), pickup time (7:15 PM Thursday), and the total cost of $46. \n\nDo you need anything else before we confirm?"
+      },
+      {
+        "response_id": "F0082_b",
+        "response": "Okay, just one moment while I finalize the booking and send the confirmation to your phone number \u2013 [Your Phone Number]. \n\nYou should receive a text message within the next minute with all the details: driver name, vehicle type (XL), pickup location (Terminal 2 Arrivals Hall), pickup time (7:15 PM Thursday), and the total cost of $46. \n\nDo you need anything else before we confirm?"
+      },
+      {
+        "response_id": "F0082_c",
+        "response": "Okay, just one moment while I finalize the booking and send the confirmation to your phone number \u2013 [Your Phone Number]. \n\nYou should receive a text message within the next minute with all the details: driver name, vehicle type (XL), pickup location (Terminal 2 Arrivals Hall), pickup time (7:15 PM Thursday), and the total cost of $46. \n\nDo you need anything else before we confirm?"
+      },
+      {
+        "response_id": "F0082_d",
+        "response": "Okay, I\u2019ve sent the confirmation for the XL vehicle to the phone number associated with your booking. It includes the driver\u2019s name, contact number, and the pickup time \u2013 7:15 PM at Terminal 2. \n\nIs there anything else I can help you with regarding your transportation to the Kingsway Hotel?"
+      }
+    ]
+  },
+  {
+    "id": "F0013",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Morning. I want a pair of front tyres put on at Selby Tyres some time this week, if you have a slot."
+      },
+      {
+        "speaker": "assistant",
+        "text": "We can do that. Thursday afternoon or Saturday first thing, whichever suits you better. What are we fitting them to?"
+      },
+      {
+        "speaker": "user",
+        "text": "Saturday first thing, please. There are two cars sitting on the drive, mine and my wife's, and both of them are down to the wear bars on the front."
+      },
+      {
+        "speaker": "assistant",
+        "text": "A pair of fronts on Saturday, then, for one of them. They won't be the same size, mind: yours takes 215s and hers takes 205s, so I'd need the correct pair here before Friday."
+      },
+      {
+        "speaker": "user",
+        "text": "Order the right pair in for the car on the drive, then, and I'll be there for nine. We're only ten minutes up the road from you."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0013_a",
+        "response": "Excellent. Right, I\u2019ve just ordered the correct tyres \u2013 215/55R17 for your car and 205/55R16 for your wife\u2019s. \n\nSo, that\u2019s Saturday at 9:00 am. Just to confirm, that\u2019s for both cars, and you\u2019re ten minutes away? Do you need a booking reference or anything like that?"
+      },
+      {
+        "response_id": "F0013_b",
+        "response": "Right you are. 205s for your wife\u2019s car. I\u2019ve just ordered them in. We\u2019ll have them ready for you at 9:00 am sharp on Saturday. \n\nJust to confirm, that\u2019s for the car currently sitting on the drive, correct? \n\nIs there anything else you need to let me know before then?"
+      },
+      {
+        "response_id": "F0013_c",
+        "response": "Right you are. 205s for your wife\u2019s car. I\u2019ve just ordered them in. We\u2019ll have them ready for you at 9:00 am sharp on Saturday. \n\nJust to confirm, that\u2019s for the car currently sitting on the drive, correct? \n\nIs there anything else you need to let me know before then?"
+      },
+      {
+        "response_id": "F0013_d",
+        "response": "Right, 205s for the car on the drive, booked in for you at 9:00am on Saturday. Just to confirm, that\u2019s for your wife\u2019s car?"
+      }
+    ]
+  },
+  {
+    "id": "F0084",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Morning. I want to move off pay as you go and onto a monthly pass. Which one should I be on?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "The 31-day pass for zones one and two is ninety-six pounds, which beats the cap of a hundred and thirty-two."
+      },
+      {
+        "speaker": "user",
+        "text": "The pass, then. I start from Bexley Park, which is in zone two, and I travel in five days a week."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Five days a week is where it pays off. Can you confirm the start date and your home station?"
+      },
+      {
+        "speaker": "user",
+        "text": "Monday the sixth, from Bexley Park. Put it on the card I already have."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0084_a",
+        "response": "Okay, fantastic! I\u2019ve activated a 31-day monthly pass for you, starting Monday, June 6th, from Bexley Park, using the card you already have. \n\nJust to double-check, you\u2019ll be travelling within zones one and two, correct? \n\nIs there anything else I can help you with today, like checking if you\u2019ll be eligible for any discounts or looking at how the pass works with contactless payment?"
+      },
+      {
+        "response_id": "F0084_b",
+        "response": "Okay, fantastic! I\u2019ve activated a 31-day monthly pass for you, starting Monday, June 6th, from Bexley Park, using the card you already have. \n\nJust to double-check, you\u2019ll be travelling within zones one and two, correct? \n\nIs there anything else I can help you with today, like checking if you\u2019ll be eligible for any discounts or looking at how the pass works with contactless payment?"
+      },
+      {
+        "response_id": "F0084_c",
+        "response": "Okay, fantastic! I\u2019ve activated a 31-day monthly pass for you, starting Monday, June 6th, from Bexley Park, using the card you already have. \n\nJust to double-check, you\u2019ll be travelling within zones one and two, correct? \n\nIs there anything else I can help you with today, like checking if you\u2019ll be eligible for any discounts or looking at how the pass works with contactless payment?"
+      },
+      {
+        "response_id": "F0084_d",
+        "response": "Okay, I\u2019ve activated a 31-day monthly pass starting Monday, June 6th, from Bexley Park, onto the card you already have. That\u2019ll cost \u00a396. Is there anything else I can help you with today?"
+      }
+    ]
+  },
+  {
+    "id": "F0088",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "My inbound from Manchester landed late and I've missed the Bergen leg. What else can you get me on today?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "The next departure is at 19:05 and it gets into Bergen at 21:40. There are still seats in the back rows."
+      },
+      {
+        "speaker": "user",
+        "text": "Book that one for me. My lift from Bergen airport goes at half ten, and it's the last one out to the island tonight, so I'll be going straight from the gate to meet it. Will my case come off on the same belt?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Done, you're in 26F. Your case is tagged through, so it will come off on the same belt as the rest."
+      },
+      {
+        "speaker": "user",
+        "text": "That's kind of you. I'm at the transfer desk in terminal two."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0088_a",
+        "response": "Okay, good to know you\u2019re at the transfer desk in Terminal 2. Just to confirm, you\u2019re heading to the 19:05 flight to Bergen, correct?"
+      },
+      {
+        "response_id": "F0088_b",
+        "response": "Okay, great! Let me just confirm \u2013 you\u2019re at the SAS transfer desk in Terminal 2. Just wanted to make sure. \n\nIs there anything else I can help you with at the moment, or would you like me to keep an eye out for any updates regarding your flight?"
+      },
+      {
+        "response_id": "F0088_c",
+        "response": "Okay, great! Let me just confirm \u2013 you\u2019re at the SAS transfer desk in Terminal 2. Just wanted to make sure. \n\nIs there anything else I can help you with at the moment, or would you like me to keep an eye out for any updates regarding your flight?"
+      },
+      {
+        "response_id": "F0088_d",
+        "response": "Okay, great! Let me just confirm \u2013 you\u2019re at the SAS transfer desk in Terminal 2. Just wanted to make sure. \n\nIs there anything else I can help you with at the moment, or would you like me to keep an eye out for any updates regarding your flight?"
+      }
+    ]
+  },
+  {
+    "id": "F0002",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Good afternoon. I'd like a slot at the Year 4 parents' evening for Rosa. Could you tell me whether the meetings run to ten minutes or fifteen?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "They run to ten minutes each. Mrs Adeyemi has Wednesday the 8th at 4.40, or Thursday the 9th at 5.20, still free."
+      },
+      {
+        "speaker": "user",
+        "text": "Thursday the 9th, please. Both of us will be coming, my husband and me."
+      },
+      {
+        "speaker": "assistant",
+        "text": "That's fine, there is room for two at the table. Shall I add Rosa's name to the sign-in sheet as well?"
+      },
+      {
+        "speaker": "user",
+        "text": "Please do. Just so it is on record, both of us will be coming. I appreciate you fitting us in."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0002_a",
+        "response": "You\u2019re very welcome! It\u2019s no problem at all. Rosa\u2019s name has been added to the list for Thursday the 9th at 5.20. Do you need any further assistance with anything else today?"
+      },
+      {
+        "response_id": "F0002_b",
+        "response": "You\u2019re very welcome! I\u2019ve added both your names to the list for Rosa\u2019s meeting on Thursday the 9th at 5.20. You\u2019ll receive an email confirmation shortly with all the details. Is there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0002_c",
+        "response": "You\u2019re very welcome! It\u2019s no problem at all. Rosa\u2019s name has been added to the list for Thursday the 9th at 5.20. Do you need any further assistance with anything else today?"
+      },
+      {
+        "response_id": "F0002_d",
+        "response": "You\u2019re very welcome! It\u2019s no problem at all. Rosa\u2019s name has been added to the list for Thursday the 9th at 5.20. You\u2019ll find the sign-in sheet at the reception desk when you arrive. \n\nDo you need any further assistance with anything else today?"
+      }
+    ]
+  },
+  {
+    "id": "F0072",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello. My Brindle and Co dog-food subscription is a bit much these days. What sizes do you do below the large box?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "There is a small box at \u00a324 and a medium at \u00a331. Your twenty per cent loyalty rate holds on anything from \u00a320 up."
+      },
+      {
+        "speaker": "user",
+        "text": "Put me on the small box then, and shift the billing to the 12th. I am working to a set figure each month and that twenty per cent is what keeps me inside it."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Right, I have switched the size and the date on the account. Will the same delivery day still work for you?"
+      },
+      {
+        "speaker": "user",
+        "text": "Yes, Tuesdays are fine. No need to send a paper invoice with it."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0072_a",
+        "response": "Okay, fantastic! Just to confirm:\n\n*   **Size:** Small Box\n*   **Billing Date:** 12th of the month\n*   **Delivery Day:** Tuesday\n\nI\u2019ve made those changes to your account. You\u2019ll receive an email confirmation shortly with all the details. \n\nIs there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0072_b",
+        "response": "Okay, fantastic! So to confirm:\n\n*   **Size:** Small Box\n*   **Billing Date:** 12th of the month\n*   **Delivery Day:** Tuesday\n\nIs there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0072_c",
+        "response": "Okay, fantastic! Just to confirm:\n\n*   **Size:** Small Box\n*   **Billing Date:** 12th of the month\n*   **Delivery Day:** Tuesday\n\nI\u2019ve made those changes to your account. You\u2019ll receive an email confirmation shortly with all the details. \n\nIs there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0072_d",
+        "response": "Okay, fantastic! Just to confirm:\n\n*   **Size:** Small Box\n*   **Billing Date:** 12th of the month\n*   **Delivery Day:** Tuesday\n\nI\u2019ve made those changes to your account. You\u2019ll receive an email confirmation shortly with all the details. \n\nIs there anything else I can help you with today?"
+      }
+    ]
+  },
+  {
+    "id": "F0093",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello, we're driving in for the Saturday match and want to use the park and ride. Which sites are open on a match day, and what does a car cost?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Two of them run a shuttle on match days: Orchard Park off the ring road, and Farthing Lane on the south side. A car is six pounds either way."
+      },
+      {
+        "speaker": "user",
+        "text": "That's useful. We'll leave the car at that site from about midday, take the bus in, and pick it up again in the early evening once the crowd has gone."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Fine. The barrier reads your plate on the way in, so there's nothing to print, and the shuttle runs every ten minutes."
+      },
+      {
+        "speaker": "user",
+        "text": "That's handy. There'll be three of us in the car."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0093_a",
+        "response": "Okay, good to know. Just to confirm, that\u2019s three people travelling in one car \u2013 so the parking fee will still be \u00a36 for both Orchard Park or Farthing Lane. Is there anything else I can help you with regarding the park and ride?"
+      },
+      {
+        "response_id": "F0093_b",
+        "response": "Okay, great! Just to confirm, that\u2019s three people travelling together. Just letting you know, the shuttle is free for those travelling with the car."
+      },
+      {
+        "response_id": "F0093_c",
+        "response": "Okay, great! Just to confirm, that\u2019s three people travelling together. Just letting you know, the shuttle is free for those travelling with the car."
+      },
+      {
+        "response_id": "F0093_d",
+        "response": "Okay, great! Just to confirm, that\u2019s three people travelling together. Just letting you know, the shuttle is free for those travelling with the car."
+      }
+    ]
+  },
+  {
+    "id": "F0087",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I would like to switch from pay as you go to a monthly pass. Does the pass also cover the riverboat at Greenwich?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "The 31-day pass for zones one and two is ninety-six pounds, against a cap of a hundred and thirty-two on pay as you go."
+      },
+      {
+        "speaker": "user",
+        "text": "Set it up, then. Does the pass also cover the riverboat at Greenwich?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "I will start it from Monday the sixth, and it will run to the fifth of next month."
+      },
+      {
+        "speaker": "user",
+        "text": "That suits me nicely. Put it on the card I already have."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0087_a",
+        "response": "Okay, I\u2019ve activated the 31-day pass on the card you currently have. It\u2019s now active from Monday the 6th and will run until the 5th of next month. \n\n**Important:** Yes, the 31-day pass *does* cover the Greenwich Riverboat. You can use it to board and alight at any point along its route.\n\nIs there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0087_b",
+        "response": "Okay, I\u2019ve switched you to the monthly pass on the card you already have, starting Monday the 6th and running until the 5th of next month. The pass covers zones one and two, and unfortunately, it **does not** cover the Greenwich Riverboat. It\u2019s a separate service."
+      },
+      {
+        "response_id": "F0087_c",
+        "response": "Okay, I\u2019ve activated the 31-day pass on the card you currently have. It\u2019s now active from Monday the 6th and will run until the 5th of next month. \n\n**Important:** Yes, the 31-day pass *does* cover the Greenwich Riverboat. You can use it to board and alight at any point along its route.\n\nIs there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0087_d",
+        "response": "Okay, I\u2019ve activated the 31-day pass on the card you currently have. It\u2019s now active from Monday the 6th and will run until the 5th of next month. \n\n**Important:** Yes, the 31-day pass *does* cover the Greenwich Riverboat. You can use it to board and alight at any point along its route.\n\nIs there anything else I can help you with today?"
+      }
+    ]
+  },
+  {
+    "id": "F0026",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "First go at jam this year, four kilos of damsons off the tree. There are twelve squat 340g jars on one tray and eighteen tall 227g ones on another. Can you talk me through sterilising them?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Wash them, then thirty minutes at 120C, one tray at a time, as the oven will only take one. Four kilos fills about eleven of the squat jars or sixteen of the tall ones, so you only need one of the two trays. Can you read the temperature and the time back to me?"
+      },
+      {
+        "speaker": "user",
+        "text": "Thirty minutes at 120C, one tray at a time. I'll put the squat tray in as soon as the fruit is on."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Stone the fruit before it goes in the pan, because fishing stones out of boiling jam is a thankless job."
+      },
+      {
+        "speaker": "user",
+        "text": "Stones out first, then. The waxed discs and labels are already out."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0026_a",
+        "response": "Right, good. And you\u2019ve got a kettle of water boiling for the final rinse, haven\u2019t you? It\u2019s crucial to get that final rinse *really* well \u2013 that\u2019s what takes the last bit of dirt and bacteria off. Let me know when you\u2019re ready to put the first tray in."
+      },
+      {
+        "response_id": "F0026_b",
+        "response": "Right, good. Now, let\u2019s talk about sterilising. You\u2019ve got the right idea with the oven \u2013 that\u2019s crucial for a good seal and preventing spoilage. Here\u2019s a breakdown of how to do it properly, step-by-step:\n\n**1. The Oven Method \u2013 Your Best Bet**\n\nYou\u2019re already on the right track with 30 minutes at 120\u00b0C (250\u00b0F) \u2013 that\u2019s a good starting point. However, let\u2019s refine it a little for optimal sterilisation:\n\n*   **Preheat:** Make sure your oven is fully preheated to 120\u00b0"
+      },
+      {
+        "response_id": "F0026_c",
+        "response": "Right, good. Now, let\u2019s talk about sterilising. You\u2019ve got the right idea with the oven \u2013 that\u2019s crucial for a good seal and preventing spoilage. Here\u2019s a breakdown of how to do it properly, step-by-step:\n\n**1. The Oven Method \u2013 Your Best Bet**\n\nYou\u2019re already on the right track with 30 minutes at 120\u00b0C (250\u00b0F) \u2013 that\u2019s a good starting point. However, let\u2019s refine it a little for optimal sterilisation:\n\n*   **Preheat:** Make sure your oven is fully preheated to 120\u00b0"
+      },
+      {
+        "response_id": "F0026_d",
+        "response": "Right, good. Now, let\u2019s talk about sterilising. You\u2019ve got the right idea with the oven \u2013 that\u2019s crucial for a good seal and preventing spoilage. Here\u2019s a breakdown of how to do it properly, step-by-step:\n\n**1. The Oven Method \u2013 Your Best Bet**\n\nYou\u2019re already on the right track with 30 minutes at 120\u00b0C (250\u00b0F) \u2013 that\u2019s a good starting point. However, let\u2019s refine it a little for optimal sterilisation:\n\n*   **Preheat:** Make sure your oven is fully preheated to 120\u00b0"
+      }
+    ]
+  },
+  {
+    "id": "F0039",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "We're camping from Friday to Sunday and I'm sorting the food out. What can I get away with taking in a cool box?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Milk, butter, hard cheese and cooked meats are all fine if the box stays properly cold. The sausages and the mince go in frozen solid and act as ice blocks until Saturday night."
+      },
+      {
+        "speaker": "user",
+        "text": "We've got two: the big blue hard-sided one and the soft zip-up bag we take to the beach, both up on the shelf in the garage. Which of them holds the cold longer?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "The hard-sided box will hold for a full weekend with three frozen blocks; the zip-up bag is good for about a day, but it fits in the footwell where the hard one won't. Read back what goes in frozen."
+      },
+      {
+        "speaker": "user",
+        "text": "The sausages and the mince go in frozen solid and act as ice blocks. I'll get it down off the shelf tonight and start the blocks off. We're loading the car on Friday night."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0039_a",
+        "response": "Excellent! That\u2019s a really smart strategy. Getting those frozen blocks going now will make a huge difference in keeping everything else cool. \n\nJust to double-check \u2013 are you planning on using the sausages and mince to actually cook them while camping, or just to help keep the cooler cold?"
+      },
+      {
+        "response_id": "F0039_b",
+        "response": "Excellent! That\u2019s a really smart strategy. Getting those frozen blocks going now will make a huge difference in keeping everything else cool. \n\nJust to double-check \u2013 are you planning on using the sausages and mince to actually cook them while camping, or just to help keep the cooler cold?"
+      },
+      {
+        "response_id": "F0039_c",
+        "response": "Okay, fantastic! Knowing you\u2019re getting the frozen blocks prepped tonight is really helpful. Just to confirm \u2013 you\u2019re planning to freeze the sausages and mince solid and use them as ice packs *starting* on Friday night before you load the car?"
+      },
+      {
+        "response_id": "F0039_d",
+        "response": "Fantastic! That\u2019s a really smart plan \u2013 using the frozen meat as ice blocks is a brilliant way to keep everything else cold. \n\nJust to double-check, are you planning to wrap the meat in something like foil or cling film before putting it in the cool box? That will help insulate them a bit more. \n\nHave a fantastic camping trip!"
+      }
+    ]
+  },
+  {
+    "id": "F0077",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello, Tarrant. I have two Forrester mowers here, the Meadowline rotary and the ride-on. One of them wants a new drive belt, and I would rather have the genuine part than a pattern one."
+      },
+      {
+        "speaker": "assistant",
+        "text": "We stock belts for both, and everything we sell for Forrester is genuine. The Meadowline takes part 4620 at \u00a324 and the ride-on takes part 5110 at \u00a341, and I have the pair of them on the shelf."
+      },
+      {
+        "speaker": "user",
+        "text": "Order the belt for that one and put it on the account."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Will do, it goes in this afternoon's post and the charge lands on the account."
+      },
+      {
+        "speaker": "user",
+        "text": "Thank you, genuine parts every time for me. I can fit it myself once it turns up."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0077_a",
+        "response": "Absolutely! It\u2019s a wise choice, you\u2019ll be glad you did. A genuine part will always give you the best performance and longevity. Is there anything else I can help you with today, or perhaps you\u2019d like to browse our selection of blades for either mower?"
+      },
+      {
+        "response_id": "F0077_b",
+        "response": "Absolutely! You\u2019re a sensible man, sticking with the genuine parts \u2013 they\u2019ll last longer and give you a better cut. Let me know if you need anything else, or if you have any questions about the fitment once it arrives. Happy mowing!"
+      },
+      {
+        "response_id": "F0077_c",
+        "response": "Absolutely \u2013 we completely understand. Quality is key. Just to confirm, that\u2019s part 4620 for the rotary Meadowline, correct?"
+      },
+      {
+        "response_id": "F0077_d",
+        "response": "Absolutely! You\u2019re a sensible man, sticking with the genuine parts \u2013 they\u2019ll last longer and give you a better cut. Let me know if you need anything else, or if you have any questions about the fitment once it arrives. Happy mowing!"
+      }
+    ]
+  },
+  {
+    "id": "F0017",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello. I've joined at Fairlop Leisure Centre and I need to book the induction session before I can use the place."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Congratulations. The inductions run on Tuesday evenings at seven and Saturday mornings at nine, and your membership starts on Monday the twenty-second either way."
+      },
+      {
+        "speaker": "user",
+        "text": "Tuesday evening at seven, please. I'll be coming straight from work."
+      },
+      {
+        "speaker": "assistant",
+        "text": "That's booked. There are two plans on your form, the off-peak and the full, and I can't set the direct debit up until one of them is ticked. Before I close this, say the start date back to me so I know it has gone in right."
+      },
+      {
+        "speaker": "user",
+        "text": "Put me on that one, then, and the twenty-second is right. It's a five-minute walk from my front door."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0017_a",
+        "response": "Okay, fantastic! You\u2019re booked onto the Tuesday evening induction at 7:00 PM on the 22nd. That\u2019s confirmed. \n\nNow, let\u2019s get that direct debit set up. Could you please confirm the following details for me:\n\n*   **Your Full Name:**\n*   **Your Address:** (Please include postcode)\n*   **Your Bank Name:**\n*   **Your Account Number:**\n*   **Your Sort Code:**\n\nOnce I have this information, I\u2019ll finalize your membership and send you confirmation details."
+      },
+      {
+        "response_id": "F0017_b",
+        "response": "Okay, fantastic! You\u2019re booked onto the Tuesday evening induction at 7:00 PM on the 22nd. That\u2019s confirmed. \n\nNow, let\u2019s get that direct debit set up. Could you please confirm the following details for me:\n\n*   **Your Full Name:**\n*   **Your Address:** (Please include postcode)\n*   **Your Bank Name:**\n*   **Your Account Number:**\n*   **Your Sort Code:**\n\nOnce I have this information, I\u2019ll finalize your membership and send you confirmation details."
+      },
+      {
+        "response_id": "F0017_c",
+        "response": "Okay, fantastic. I\u2019ve booked you onto the Tuesday evening induction at 7pm, starting on the 22nd. I\u2019ve also ticked the off-peak plan on your form. \n\nNow, to set up that direct debit \u2013 could you please confirm the following details:\n\n*   **Your full name:**\n*   **Your bank name:**\n*   **Your account number:**\n*   **Your sort code:**"
+      },
+      {
+        "response_id": "F0017_d",
+        "response": "Okay, fantastic! You\u2019re booked onto the Tuesday evening induction at 7:00 PM on the 22nd. That\u2019s confirmed. \n\nNow, let\u2019s get that direct debit set up. Could you please confirm the following details for me:\n\n*   **Your Full Name:**\n*   **Your Address:** (Please include postcode)\n*   **Your Bank Name:**\n*   **Your Account Number:**\n*   **Your Sort Code:**\n\nOnce I have this information, I\u2019ll finalize your membership and send you confirmation details."
+      }
+    ]
+  },
+  {
+    "id": "F0089",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "My inbound from Manchester landed late and I've missed the Bergen leg. What else can you get me on today?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "The next departure is at 19:05 and it gets into Bergen at 21:40. There are still seats in the back rows."
+      },
+      {
+        "speaker": "user",
+        "text": "Book that one for me. My lift from Bergen airport goes at nine on the dot, and it's the last one out to the island tonight, so I'll be going straight from the gate to meet it. Will my case come off on the same belt?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Done, you're in 26F. Your case is tagged through, so it will come off on the same belt as the rest."
+      },
+      {
+        "speaker": "user",
+        "text": "That's kind of you. I'm at the transfer desk in terminal two."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0089_a",
+        "response": "Okay, great! Let me just confirm \u2013 you\u2019re at the SAS transfer desk in Terminal 2. I\u2019ll keep an eye on things and let you know if there are any updates. Is there anything else I can help you with at the moment?"
+      },
+      {
+        "response_id": "F0089_b",
+        "response": "Okay, great! Let me just confirm \u2013 you\u2019re at the SAS transfer desk in Terminal 2. I\u2019ll keep an eye on things and let you know if there are any updates. Is there anything else I can help you with at the moment?"
+      },
+      {
+        "response_id": "F0089_c",
+        "response": "Okay, good to know you\u2019re at the transfer desk in Terminal 2. Just to confirm, you\u2019re heading to the 19:05 flight to Bergen, correct?"
+      },
+      {
+        "response_id": "F0089_d",
+        "response": "Okay, great! Let me just confirm \u2013 you\u2019re at the SAS transfer desk in Terminal 2. I\u2019ll keep an eye on things and let you know if there are any updates. Is there anything else I can help you with at the moment?"
+      }
+    ]
+  },
+  {
+    "id": "F0003",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Good afternoon. I'd like a slot at the Year 4 parents' evening for Rosa. Could you tell me whether the meetings run to ten minutes or fifteen?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Let me check the sheet. Mrs Adeyemi has Wednesday the 8th at 4.40, or Thursday the 9th at 5.20, still free."
+      },
+      {
+        "speaker": "user",
+        "text": "Thursday the 9th at 5.20, please. Could you tell me whether the meetings run to ten minutes or fifteen?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Thursday the 9th at 5.20 is yours. Rosa's reading record should come along with you on the night."
+      },
+      {
+        "speaker": "user",
+        "text": "Noted, we will bring it with us. I appreciate you fitting us in."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0003_a",
+        "response": "You\u2019re very welcome! Is there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0003_b",
+        "response": "You\u2019re very welcome! We\u2019re happy to help. Have a good evening!"
+      },
+      {
+        "response_id": "F0003_c",
+        "response": "You\u2019re very welcome! We\u2019re happy to help. Have a good evening!"
+      },
+      {
+        "response_id": "F0003_d",
+        "response": "You\u2019re very welcome! We\u2019re happy to help. Have a good evening!"
+      }
+    ]
+  },
+  {
+    "id": "F0014",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Morning. I want a pair of front tyres put on at Selby Tyres this week. They have to be the same make as the two on the back, no mixing."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Same make as the rears, no mixing, understood. Thursday afternoon or Saturday first thing, and anything we fit is paid for before the car leaves the bay."
+      },
+      {
+        "speaker": "user",
+        "text": "Saturday first thing, please. I'll drive it away the moment you're done and settle up on the card before I move it, because there's plenty in the account to cover it."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Right you are, Saturday first thing. Shall I have one of the lads wave you into the bay when you arrive?"
+      },
+      {
+        "speaker": "user",
+        "text": "Please do. And I'll say it again, they have to be the same make as the two on the back, no mixing. We're only ten minutes up the road from you."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0014_a",
+        "response": "Absolutely. Noted \u2013 same make as the rears, no mixing. And thanks for confirming the location, it helps us get everything organised smoothly. We\u2019ll have a chap on the lookout for you as soon as 8am rolls around. Just to double-check, could you tell me what make and model of car you\u2019re driving?"
+      },
+      {
+        "response_id": "F0014_b",
+        "response": "Absolutely. Noted \u2013 same make as the rears, no mixing. And thanks for confirming the location, it helps us get everything ready for you. We\u2019ll have a chap on the lookout for you as soon as 8:30 hits. See you Saturday!"
+      },
+      {
+        "response_id": "F0014_c",
+        "response": "Absolutely. Noted \u2013 same make as the rears, no mixing. And thanks for confirming the location, it helps us get everything organised smoothly. We\u2019ll have a chap on the lookout for you as soon as 8am rolls around. Just to double-check, could you tell me what make and model of car you\u2019re driving?"
+      },
+      {
+        "response_id": "F0014_d",
+        "response": "Absolutely. Noted \u2013 same make as the rears, no mixing. And I\u2019ve flagged it for the team. We\u2019ll be ready and waiting for you when you arrive on Saturday."
+      }
+    ]
+  },
+  {
+    "id": "F0041",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Colin, we're away for a fortnight from next Tuesday. Could I ask you to put our bins out and bring them back in while we're gone?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Yes, no problem at all. The lorry comes round about half six on a Tuesday morning, so I put mine out the night before."
+      },
+      {
+        "speaker": "user",
+        "text": "Kind of you. I'll put the first week's bin out myself as we leave, we're off at nine that morning."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Right you are. Shall I get Ewan to take the second week?"
+      },
+      {
+        "speaker": "user",
+        "text": "If he's happy to, that would be grand. I'll leave the side gate unlocked either way."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0041_a",
+        "response": "Okay, fantastic. Ewan\u2019s happy to do the second week\u2019s bin. And the side gate unlocked \u2013 perfect. Enjoy your fortnight away!"
+      },
+      {
+        "response_id": "F0041_b",
+        "response": "Perfect. Let me just tell Ewan then. You just relax and enjoy your trip!"
+      },
+      {
+        "response_id": "F0041_c",
+        "response": "Perfect. Let me just tell Ewan then. You just relax and enjoy your trip!"
+      },
+      {
+        "response_id": "F0041_d",
+        "response": "Perfect. Let me just tell Ewan then. You just relax and enjoy your trip!"
+      }
+    ]
+  },
+  {
+    "id": "F0028",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I'm having a go at an overnight no-knead loaf tomorrow, baked in the cast-iron casserole. Plain crust please, no seeds on top. Does the lid stay on for the whole bake?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "It stays on for the first thirty minutes to trap the steam, then comes off for fifteen. The dough needs twelve hours on the counter before it goes anywhere near the oven."
+      },
+      {
+        "speaker": "user",
+        "text": "Understood, plain crust and a covered start. I'll mix it at five tonight and it goes in the oven at six in the morning. Should the water be warm or straight from the tap?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Straight from the tap is fine; warm water only rushes the yeast along and you lose most of the flavour you were waiting up for."
+      },
+      {
+        "speaker": "user",
+        "text": "Cold tap water, then. I picked the flour up at the mill on Saturday."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0028_a",
+        "response": "That\u2019s fantastic! Flour from a mill is a *huge* upgrade \u2013 you\u2019re doing great. It\u2019ll definitely contribute to a better flavor and texture in your loaf. \n\nCold tap water is perfect. Let me know how it goes tomorrow! Would you like me to remind you of the key steps again before you start mixing tonight?"
+      },
+      {
+        "response_id": "F0028_b",
+        "response": "That\u2019s fantastic! Flour from a mill is a *huge* upgrade \u2013 you\u2019re doing great. It\u2019ll definitely contribute to a better flavor and texture in your loaf. \n\nCold tap water is perfect. Let me know how it goes tomorrow! Would you like me to remind you of the key steps again before you start mixing tonight?"
+      },
+      {
+        "response_id": "F0028_c",
+        "response": "That\u2019s excellent \u2013 a good mill flour will make a *huge* difference! Knowing you got it on Saturday helps me keep in mind that it\u2019s likely well-hydrated and ready to go."
+      },
+      {
+        "response_id": "F0028_d",
+        "response": "That\u2019s fantastic! Flour from a mill is a *huge* upgrade \u2013 you\u2019re doing great. It\u2019ll definitely contribute to a better flavor and texture in your loaf. \n\nCold tap water is perfect. Let me know how it goes tomorrow! Would you like me to remind you of the key steps again before you start mixing tonight?"
+      }
+    ]
+  },
+  {
+    "id": "F0066",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "We took delivery of two pieces from Thorne and Meadow last week, the olive two-seater and the slate armchair. One of them has a split seam along the back cushion."
+      },
+      {
+        "speaker": "assistant",
+        "text": "I am sorry about that. We can either send an upholsterer out to you or collect the piece and replace it."
+      },
+      {
+        "speaker": "user",
+        "text": "A replacement, please. I would rather not have someone stitching it in the front room."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Understood, nobody will come out to stitch it. Both the two-seater and the armchair are made in the Halifax workshop, so a replacement runs to about three weeks."
+      },
+      {
+        "speaker": "user",
+        "text": "Three weeks is fine. As I said, I would rather not have someone stitching it in the front room, so collect the armchair and bring the new piece on the same visit."
+      },
+      {
+        "speaker": "assistant",
+        "text": "I will book the collection and the replacement into the same slot."
+      },
+      {
+        "speaker": "user",
+        "text": "That works well. Anyone here can let the crew in on the day."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0066_a",
+        "response": "Absolutely. We\u2019ll make a note of that in the delivery details. Just to confirm, we\u2019ll collect the damaged slate armchair and deliver the new one on the same day. Is there anything else you\u2019d like to add to the notes for the delivery team?"
+      },
+      {
+        "response_id": "F0066_b",
+        "response": "Absolutely. We\u2019ll make a note of that in the delivery details. Just to confirm, we\u2019ll collect the damaged slate armchair and deliver the new one on the same day. Is there anything else you\u2019d like to add to the notes for the delivery team?"
+      },
+      {
+        "response_id": "F0066_c",
+        "response": "Okay, I\u2019ve noted that you\u2019d like to be present for the collection and delivery. I\u2019ll add a note to the delivery team to let them know. Just to confirm, is there a specific date that works best for you?"
+      },
+      {
+        "response_id": "F0066_d",
+        "response": "Absolutely. We\u2019ll make a note of that in the delivery details. Just to confirm, we\u2019ll collect the damaged slate armchair and deliver the new one on the same day. Is there anything else you\u2019d like to add to the notes for the delivery team?"
+      }
+    ]
+  },
+  {
+    "id": "F0061",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello. I've got two Ashgrove orders on the way: the oak desk on order 7731 and the desk chair on order 7802. I need to sort out the delivery days."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Of course. The oak desk is booked for Tuesday the 14th and the desk chair for Thursday the 16th. Does that fit with your week?"
+      },
+      {
+        "speaker": "user",
+        "text": "Not really. A neighbour can take one of them in, but for the other I must be at home, so it needs to move to a weekend. I hope there is no fee for changing a slot."
+      },
+      {
+        "speaker": "assistant",
+        "text": "No fee at all. We can move any delivery by up to a fortnight."
+      },
+      {
+        "speaker": "user",
+        "text": "Then put that one back to Saturday the 18th, assuming your crews work weekends."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Saturday crews run every week, so that is fine. I will send the amendment through to the depot now."
+      },
+      {
+        "speaker": "user",
+        "text": "Brilliant. Send the confirmation over when it's booked."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0061_a",
+        "response": "Okay, you\u2019ve been updated! Order 7802 (the desk chair) is now scheduled for delivery on Saturday, the 18th. You\u2019ll receive a confirmation email within the next hour with all the details. \n\nIs there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0061_b",
+        "response": "Okay, the desk chair (order 7802) has been rescheduled to Saturday the 18th. You\u2019ll receive a confirmation email within the next hour with all the details."
+      },
+      {
+        "response_id": "F0061_c",
+        "response": "Okay, you\u2019ve been updated! Order 7802 (the desk chair) is now scheduled for delivery on Saturday, the 18th. You\u2019ll receive a confirmation email within the next hour with all the details. \n\nIs there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0061_d",
+        "response": "Okay, you\u2019ve been updated! Order 7802 (the desk chair) is now scheduled for delivery on Saturday, the 18th. You\u2019ll receive a confirmation email within the next hour with all the details. \n\nIs there anything else I can help you with today?"
+      }
+    ]
+  },
+  {
+    "id": "F0086",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I would like to switch from pay as you go to a monthly pass. Can it start on Monday the sixth rather than today?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Yes. The 31-day pass for zones one and two is ninety-six pounds, against a cap of a hundred and thirty-two on pay as you go."
+      },
+      {
+        "speaker": "user",
+        "text": "Good. It does need to start on Monday the sixth rather than today."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Understood, the sixth it is. Would you like a paper receipt with it as well?"
+      },
+      {
+        "speaker": "user",
+        "text": "No need for that, thanks. Put it on the card I already have."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0086_a",
+        "response": "Okay, perfect. So, a monthly pass starting on Monday, the sixth, added to the existing card. Just to confirm, that\u2019s for zones one and two, correct?"
+      },
+      {
+        "response_id": "F0086_b",
+        "response": "Okay, perfect! I\u2019ve switched your travel card to a monthly pass starting Monday, the sixth. It\u2019s now linked to your existing card. Is there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0086_c",
+        "response": "Okay, perfect! I\u2019ve switched your travel card to a monthly pass starting Monday, the sixth. It\u2019s now linked to your existing card. Is there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0086_d",
+        "response": "Okay, perfect! I\u2019ve switched your travel card to a monthly pass starting Monday, the sixth. It\u2019s now linked to your existing card. Is there anything else I can help you with today?"
+      }
+    ]
+  },
+  {
+    "id": "F0079",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello, Tarrant. I need a new drive belt for the Forrester Meadowline 45 rotary mower, the one with the grass collector."
+      },
+      {
+        "speaker": "assistant",
+        "text": "We can do that. The belt for the Meadowline is part 4620, and it only fits decks with a serial above 30000. Read me the machine name and the serial off the plate."
+      },
+      {
+        "speaker": "user",
+        "text": "Forrester Meadowline 45 rotary mower, the one with the grass collector, serial 28410. Send the 4620 today and I will fit it on Saturday."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Got it, part 4620. That goes out on today's post and it should be with you tomorrow."
+      },
+      {
+        "speaker": "user",
+        "text": "That is grand, thank you. I can fit it myself once it turns up."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0079_a",
+        "response": "Excellent! Just to be absolutely clear, you\u2019re confident you\u2019re comfortable fitting it yourself, and you\u2019re sure it\u2019s the correct part for your Meadowline 45 with serial 28410? \n\nIt\u2019s always best to double-check before starting any maintenance. \n\nIf you have *any* questions at all once you\u2019ve received the belt, don\u2019t hesitate to give us a call \u2013 our number is 01737 836777. \n\nHappy mowing!"
+      },
+      {
+        "response_id": "F0079_b",
+        "response": "Excellent! Just to confirm, you\u2019re confident in your ability to replace the belt yourself, and you\u2019re planning to do it this Saturday?"
+      },
+      {
+        "response_id": "F0079_c",
+        "response": "Excellent! Just to be absolutely clear, you\u2019re confident you\u2019re comfortable fitting it yourself, and you\u2019re sure it\u2019s the correct part for your Meadowline 45 with serial 28410? \n\nIt\u2019s always best to double-check before starting any maintenance. \n\nIf you have *any* questions at all once you\u2019ve received the belt, don\u2019t hesitate to give us a call \u2013 our number is 01737 836777. \n\nHappy mowing!"
+      },
+      {
+        "response_id": "F0079_d",
+        "response": "Excellent! Just to be absolutely clear, you\u2019re confident you\u2019re comfortable fitting it yourself, and you\u2019re sure it\u2019s the correct part for your Meadowline 45 with serial 28410? \n\nIt\u2019s always best to double-check before starting any maintenance. \n\nIf you have *any* questions at all once you\u2019ve received the belt, don\u2019t hesitate to give us a call \u2013 our number is 01737 836777. \n\nHappy mowing!"
+      }
+    ]
+  }
+]

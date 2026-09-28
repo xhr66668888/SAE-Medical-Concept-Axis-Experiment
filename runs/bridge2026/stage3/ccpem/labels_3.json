@@ -1,0 +1,177 @@
+[
+  {
+    "id": "X_003",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "It was all right. I'm not a big comic book movie person but I like Paul Redwood",
+    "confidence": "high"
+  },
+  {
+    "id": "X_007",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "That's a pretty easy question to answer. I like that The Lord of the Rings trilogy offered an escape from reality.",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_011",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I have not seen that one.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_015",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I was not a fan of The Last Jedi. I definitely hated it.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_019",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I did see Ender's Game, and I also read the book, and I thought the movie did a good job with the subject.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_023",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "It was what? There's a lot of gore in it?",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_027",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "Well, like I said, it non-romance scenes is is worth the time and money.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_031",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "I don't think I have a movie that I don't enjoy.",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_035",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Yeah, I watched Nacho Libre. It's a movie with Jack Black.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_039",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I didn't like the twist in the film, and I thought the characters were very flat.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_043",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Zodiac is probably one of my favorites.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_047",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Sure, that is a Best in Show as a mockumentary style movie and it is from Christopher Guest",
+    "confidence": "high"
+  },
+  {
+    "id": "X_051",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I liked the costuming, I liked the how realistic it was considering it's like science fiction",
+    "confidence": "high"
+  },
+  {
+    "id": "X_055",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "It's billed as a romantic comedy, but it's really more of a, I don't know, shock comedy or gross-out comedy.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_059",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "A great science fiction story with time travel, good characters, and a really good plot that actually made sense.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_063",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I liked it was it was kind of smart. It was It was a little better than the first one.",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_067",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "For Westerns, I think it's how simple and It's always kind of just about a single moral",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_071",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Yep, I like it.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_075",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "I liked them As I said, I liked them for the fact that they're based on true stories.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_079",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I thought it was effective. It was intense, and it made it a more interesting film.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_083",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "It was I don't know. Just like I said, it didn't really resonate with me.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_087",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I found the movie to be just too over the top for my sensibilities. The acting was poor",
+    "confidence": "high"
+  },
+  {
+    "id": "X_091",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "An action movie?",
+    "confidence": "high"
+  },
+  {
+    "id": "X_095",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Yes, I have heard about them.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_099",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "No, I didn't. Even though it was a nice movie, just I really don't like animation or kids movies.",
+    "confidence": "high"
+  }
+]

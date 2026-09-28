@@ -1,0 +1,181 @@
+{
+  "family_id": "appointment_014",
+  "domain": "appointment",
+  "task_goal": "arrange an in-home survey visit from Calloway Removals to price a house move",
+  "n_turns": 5,
+  "tail_anchor": "We are aiming to be out by the end of the month.",
+  "notes": "norep_unres and norep_res differ by one word in turn 2 ('the place' versus 'the flat'), with two properties live and only one surveyed per visit. rep_unres and rep_res both carry the same eight-token restatement of the piano instruction; in rep_unres the caller's question about the survey fee is taken up by nothing, in rep_res turn 3 answers it outright.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "Tell me what the survey costs if we end up booking the move elsewhere",
+          "role": "request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "She works to the hour, so she will be with you between nine and ten.",
+          "role": "assistant turn that takes up the timing instead of the cost"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good morning. We are moving next month and I need someone from Calloway to come out and price the job. Whatever happens, I want the piano crated by your own people."
+        },
+        {
+          "speaker": "assistant",
+          "text": "We can do that. Ms Prine is free Tuesday morning or Thursday afternoon for the survey, which would you rather?"
+        },
+        {
+          "speaker": "user",
+          "text": "Tuesday morning suits. Tell me what the survey costs if we end up booking the move elsewhere."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Tuesday morning is down for Ms Prine. She works to the hour, so she will be with you between nine and ten."
+        },
+        {
+          "speaker": "user",
+          "text": "That suits me, and I want the piano crated by your own people. We are aiming to be out by the end of the month."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "We can do that.",
+          "role": "the piano instruction is accepted"
+        },
+        {
+          "turn_index": 3,
+          "quote": "There is no charge for the survey at all.",
+          "role": "discharges the only request in turn 2"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I want the piano crated by your own people",
+          "role": "restatement for emphasis of an instruction already accepted"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good morning. We are moving next month and I need someone from Calloway to come out and price the job. Whatever happens, I want the piano crated by your own people."
+        },
+        {
+          "speaker": "assistant",
+          "text": "We can do that. Ms Prine is free Tuesday morning or Thursday afternoon for the survey, which would you rather?"
+        },
+        {
+          "speaker": "user",
+          "text": "Tuesday morning suits. I am happy to pay for the survey up front if that is how you work."
+        },
+        {
+          "speaker": "assistant",
+          "text": "There is no charge for the survey at all. Ms Prine is down for Tuesday, with you between nine and ten."
+        },
+        {
+          "speaker": "user",
+          "text": "That suits me, and I want the piano crated by your own people. We are aiming to be out by the end of the month."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "the flat you are leaving at Marsh Lane and the house at Coleridge Drive",
+          "role": "the two live candidates"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Ms Prine can only take one property per visit",
+          "role": "exactly one has to be picked for Tuesday"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Have her come and look round the place while I am off work",
+          "role": "referring expression that picks neither property out"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I will pencil the second one in once you have dates",
+          "role": "assistant books the visit without settling which property it is"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good morning. We are moving next month and I need someone from Calloway to come out and price the job."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Of course. A move like that means two surveys, the flat you are leaving at Marsh Lane and the house at Coleridge Drive, and Ms Prine can only take one property per visit. She is free Tuesday morning or Thursday afternoon."
+        },
+        {
+          "speaker": "user",
+          "text": "Tuesday morning, then. Have her come and look round the place while I am off work."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Tuesday morning is booked in for Ms Prine, and I will pencil the second one in once you have dates. Is nine to ten early enough, or would you rather she came at eight?"
+        },
+        {
+          "speaker": "user",
+          "text": "Nine to ten is fine, I can be there from half eight. We are aiming to be out by the end of the month."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "Have her come and look round the flat while I am off work",
+          "role": "the property for Tuesday is named"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Nine to ten is fine",
+          "role": "answers the only question left on the table"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good morning. We are moving next month and I need someone from Calloway to come out and price the job."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Of course. A move like that means two surveys, the flat you are leaving at Marsh Lane and the house at Coleridge Drive, and Ms Prine can only take one property per visit. She is free Tuesday morning or Thursday afternoon."
+        },
+        {
+          "speaker": "user",
+          "text": "Tuesday morning, then. Have her come and look round the flat while I am off work."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Tuesday morning is booked in for Ms Prine, and I will pencil the second one in once you have dates. Is nine to ten early enough, or would you rather she came at eight?"
+        },
+        {
+          "speaker": "user",
+          "text": "Nine to ten is fine, I can be there from half eight. We are aiming to be out by the end of the month."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "family_id": "household_006",
+  "domain": "household",
+  "task_goal": "get a flat-pack wardrobe delivered and built before a guest arrives",
+  "n_turns": 5,
+  "tail_anchor": "The Allen keys are in the kitchen drawer.",
+  "notes": "rep_unres and rep_res differ by one word (Friday/Sunday) against a build booked for the Saturday morning, with the guest's first night in the room stated explicitly.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "Theo is sleeping in there from Friday night",
+          "role": "the room is needed on the Friday night"
+        },
+        {
+          "turn_index": 2,
+          "quote": "we are building it on the Saturday morning, so the room will be ready for him",
+          "role": "the build happens after the room is needed"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Fair enough.",
+          "role": "assistant proceeds without reconciling the conflict"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "The wardrobe is coming Thursday between twelve and four and I am in a workshop all day. I'd rather it went straight into the spare room than the hall. Could you be in for it?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can work at the kitchen table that day, so yes. The boxes can go straight into the spare room. Dan next door still has our drill."
+        },
+        {
+          "speaker": "user",
+          "text": "Thanks. I'd rather it went straight into the spare room than the hall. Theo is sleeping in there from Friday night and we are building it on the Saturday morning, so the room will be ready for him."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Fair enough. I'll shift the recycling out of there on Wednesday night, then."
+        },
+        {
+          "speaker": "user",
+          "text": "Good thinking. The Allen keys are in the kitchen drawer."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "The boxes can go straight into the spare room",
+          "role": "the stated preference is accepted"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Theo is sleeping in there from Sunday night",
+          "role": "a Saturday build is in time for a Sunday night, so nothing is open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "The wardrobe is coming Thursday between twelve and four and I am in a workshop all day. I'd rather it went straight into the spare room than the hall. Could you be in for it?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can work at the kitchen table that day, so yes. The boxes can go straight into the spare room. Dan next door still has our drill."
+        },
+        {
+          "speaker": "user",
+          "text": "Thanks. I'd rather it went straight into the spare room than the hall. Theo is sleeping in there from Sunday night and we are building it on the Saturday morning, so the room will be ready for him."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Fair enough. I'll shift the recycling out of there on Wednesday night, then."
+        },
+        {
+          "speaker": "user",
+          "text": "Good thinking. The Allen keys are in the kitchen drawer."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Do they carry it upstairs, or is it left in the hall?",
+          "role": "request"
+        },
+        {
+          "turn_index": 1,
+          "quote": "I can sit at the kitchen table all Thursday, so someone will be here for it.",
+          "role": "assistant answers a different part"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Plenty of time. I'll dig the step ladder and the dust sheets out of the garage",
+          "role": "assistant turn that fails to answer"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "The wardrobe lands on Thursday in a twelve to four slot and I am stuck in a workshop until six. Do they carry it upstairs, or is it left in the hall?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can sit at the kitchen table all Thursday, so someone will be here for it. Dan next door still has our drill, remember."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll knock for him on Wednesday evening. Theo gets in on the Sunday and we are building it on the Saturday morning, so there is time to spare."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Plenty of time. I'll dig the step ladder and the dust sheets out of the garage while I am at it."
+        },
+        {
+          "speaker": "user",
+          "text": "Good, that is one less thing. The Allen keys are in the kitchen drawer."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "They carry it up to whichever room you want, it says so at the bottom of the docket.",
+          "role": "answers the only open request"
+        },
+        {
+          "turn_index": 1,
+          "quote": "so someone will be here for it",
+          "role": "cover for the delivery window is settled"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "The wardrobe lands on Thursday in a twelve to four slot and I am stuck in a workshop until six. Do they carry it upstairs, or is it left in the hall?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can sit at the kitchen table all Thursday, so someone will be here for it. Dan next door still has our drill, remember."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll knock for him on Wednesday evening. Theo gets in on the Sunday and we are building it on the Saturday morning, so there is time to spare."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Plenty of time. They carry it up to whichever room you want, it says so at the bottom of the docket."
+        },
+        {
+          "speaker": "user",
+          "text": "Good, that is one less thing. The Allen keys are in the kitchen drawer."
+        }
+      ]
+    }
+  }
+}

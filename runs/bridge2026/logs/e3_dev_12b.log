@@ -1,0 +1,27 @@
+split=dev items=100 families=25 layer=31 span=prompt_all
+Loading weights:   0%|          | 0/1065 [00:00<?, ?it/s]Loading weights:   0%|          | 1/1065 [00:00<02:32,  6.99it/s]Loading weights:   3%|▎         | 30/1065 [00:00<00:07, 141.83it/s]Loading weights:   5%|▌         | 57/1065 [00:00<00:05, 189.84it/s]Loading weights:   8%|▊         | 83/1065 [00:00<00:04, 207.41it/s]Loading weights:  10%|█         | 108/1065 [00:00<00:04, 217.35it/s]Loading weights:  13%|█▎        | 134/1065 [00:00<00:04, 226.22it/s]Loading weights:  15%|█▌        | 160/1065 [00:00<00:03, 229.44it/s]Loading weights:  18%|█▊        | 187/1065 [00:00<00:03, 237.99it/s]Loading weights:  20%|██        | 213/1065 [00:00<00:03, 241.69it/s]Loading weights:  22%|██▏       | 238/1065 [00:01<00:03, 243.52it/s]Loading weights:  25%|██▍       | 264/1065 [00:01<00:03, 231.16it/s]Loading weights:  27%|██▋       | 291/1065 [00:01<00:03, 236.93it/s]Loading weights:  30%|██▉       | 316/1065 [00:01<00:03, 236.39it/s]Loading weights:  32%|███▏      | 342/1065 [00:01<00:03, 239.49it/s]Loading weights:  35%|███▌      | 375/1065 [00:01<00:02, 262.58it/s]Loading weights:  38%|███▊      | 402/1065 [00:01<00:02, 259.12it/s]Loading weights:  40%|████      | 429/1065 [00:01<00:02, 248.97it/s]Loading weights:  43%|████▎     | 455/1065 [00:01<00:02, 244.64it/s]Loading weights:  45%|████▌     | 480/1065 [00:02<00:02, 235.72it/s]Loading weights:  47%|████▋     | 505/1065 [00:02<00:02, 239.62it/s]Loading weights:  50%|████▉     | 531/1065 [00:02<00:02, 230.31it/s]Loading weights:  52%|█████▏    | 557/1065 [00:02<00:02, 225.61it/s]Loading weights:  55%|█████▌    | 588/1065 [00:02<00:02, 233.48it/s]Loading weights:  58%|█████▊    | 614/1065 [00:02<00:01, 234.03it/s]Loading weights:  75%|███████▍  | 797/1065 [00:02<00:00, 664.73it/s]Loading weights: 100%|██████████| 1065/1065 [00:02<00:00, 370.05it/s]
+donor coverage: 100% of renderings
+  clean: paired_acc=0.600 AUROC=0.516 FA=0.920
+  SAE arms on features [1422, 337, 402, 6647] (random-matched: [5297, 11533, 1182, 4369])
+  dense_axis(a=-2)             d_target=-0.431 d_nontarget=-0.408 gap=-0.023 paired=0.560 FA=0.900
+  dense_axis(a=-1)             d_target=+0.641 d_nontarget=+0.618 gap=+0.024 paired=0.600 FA=0.920
+  dense_axis(a=-0.5)           d_target=+0.320 d_nontarget=+0.308 gap=+0.012 paired=0.600 FA=0.920
+  dense_axis(a=+0)             d_target=+0.000 d_nontarget=+0.000 gap=+0.000 paired=0.600 FA=0.920
+  dense_axis(a=+0.5)           d_target=-0.346 d_nontarget=-0.336 gap=-0.011 paired=0.600 FA=0.920
+  dense_axis(a=+1)             d_target=-0.703 d_nontarget=-0.684 gap=-0.019 paired=0.620 FA=0.920
+  dense_axis(a=+2)             d_target=-1.245 d_nontarget=-1.207 gap=-0.037 paired=0.580 FA=0.900
+  dense_axis(a=+2, read_pos only) d_target=-0.002 d_nontarget=-0.001 gap=-0.001 paired=0.600 FA=0.920
+  random_dir(a=-1)             d_target=-0.848 d_nontarget=-0.781 gap=-0.067 paired=0.580 FA=0.920
+  repetition_axis(a=-1)        d_target=+0.145 d_nontarget=+0.111 gap=+0.034 paired=0.580 FA=0.920
+  random_dir(a=+1)             d_target=+0.175 d_nontarget=+0.132 gap=+0.042 paired=0.580 FA=0.920
+  repetition_axis(a=+1)        d_target=-0.017 d_nontarget=+0.001 gap=-0.018 paired=0.620 FA=0.900
+  component_swap(donor)        d_target=-0.220 d_nontarget=-0.260 gap=+0.040 paired=0.600 FA=0.920
+  full_patch(donor)            d_target=+0.000 d_nontarget=-0.000 gap=+0.001 paired=0.600 FA=0.920
+  sae_recon                    d_target=-2.198 d_nontarget=-2.197 gap=-0.002 paired=0.600 FA=0.900
+  sae_ablate                   d_target=-0.034 d_nontarget=-0.032 gap=-0.002 paired=0.600 FA=0.920
+  sae_donor                    d_target=+0.582 d_nontarget=+0.450 gap=+0.133 paired=0.660 FA=0.920
+  sae_random_ablate            d_target=+0.041 d_nontarget=+0.040 gap=+0.000 paired=0.600 FA=0.920
+  sae_random_donor             d_target=-0.432 d_nontarget=-0.419 gap=-0.013 paired=0.580 FA=0.920
+
+-> runs/bridge2026/stage3/e3_causal_dev_12b.csv
+-> runs/bridge2026/stage3/e3_causal_dev_12b_per_item.csv

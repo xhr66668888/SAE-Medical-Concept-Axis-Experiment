@@ -1,0 +1,77 @@
+{
+  "family_id": "appointment_016",
+  "domain": "appointment",
+  "task_goal": "book a piano tuner from Ashcombe Pianos to come to the house and settle the practical detail attached to the visit",
+  "n_turns": 5,
+  "tail_anchor": "The side gate is the easiest way in.",
+  "notes": "norep_unres and norep_res differ only in the rehearsal window in turn 2 (three until five / six until eight), which either does or does not sit on top of the ninety minutes the tuner needs at the same instrument. The two rep cells share the same pitch-raise question in turn 0 and differ in whether turn 1 answers it.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "could you tell me whether a pitch raise costs extra on top of the tuning", "role": "request"},
+        {"turn_index": 2, "quote": "Could you tell me whether a pitch raise costs extra on top of the tuning?", "role": "re-request"},
+        {"turn_index": 3, "quote": "Thursday at three, then. I'll need the house number and the postcode for his round.", "role": "assistant turn that fails to answer"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, I'd like to book a tuning for the upright piano at home, with Ashcombe Pianos. Also, could you tell me whether a pitch raise costs extra on top of the tuning?"},
+        {"speaker": "assistant", "text": "I can book that in. Gerald has Tuesday morning at nine or Thursday afternoon at three next week."},
+        {"speaker": "user", "text": "Thursday afternoon at three suits us. Could you tell me whether a pitch raise costs extra on top of the tuning?"},
+        {"speaker": "assistant", "text": "Thursday at three, then. I'll need the house number and the postcode for his round."},
+        {"speaker": "user", "text": "It's 14, and the postcode is BT3 9QR. The side gate is the easiest way in."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "A pitch raise is included, there's no extra charge for it", "role": "discharges the only open request"},
+        {"turn_index": 3, "quote": "Could you read the day and time back to me", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "Thursday afternoon at three.", "role": "the requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, I'd like to book a tuning for the upright piano at home, with Ashcombe Pianos. Also, could you tell me whether a pitch raise costs extra on top of the tuning?"},
+        {"speaker": "assistant", "text": "A pitch raise is included, there's no extra charge for it. Gerald has Tuesday morning at nine or Thursday afternoon at three."},
+        {"speaker": "user", "text": "Thursday afternoon at three suits us. Good to know a pitch raise is included, there's no extra charge for it."},
+        {"speaker": "assistant", "text": "Thursday at three it is. Could you read the day and time back to me so I can put it on his round?"},
+        {"speaker": "user", "text": "Thursday afternoon at three. The side gate is the easiest way in."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "He needs a full ninety minutes at the instrument, with nobody playing it while he works", "role": "the tuner has the piano to himself from three"},
+        {"turn_index": 2, "quote": "rehearsing on that piano from three until five that day, and they have nowhere else to go", "role": "the same instrument is in use across the same window"},
+        {"turn_index": 3, "quote": "Right you are, I'll put him down for Thursday.", "role": "assistant books it without reconciling the clash"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, I'd like to book a tuning for the upright piano at home, with Ashcombe Pianos. What have you got free next week?"},
+        {"speaker": "assistant", "text": "Gerald has Thursday at three. He needs a full ninety minutes at the instrument, with nobody playing it while he works."},
+        {"speaker": "user", "text": "Thursday at three is fine. My daughter's quartet is rehearsing on that piano from three until five that day, and they have nowhere else to go."},
+        {"speaker": "assistant", "text": "Right you are, I'll put him down for Thursday. Shall I send a reminder the day before?"},
+        {"speaker": "user", "text": "Please do, that would help. The side gate is the easiest way in."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Gerald has Thursday at three.", "role": "answers the only request in the dialogue"},
+        {"turn_index": 2, "quote": "rehearsing on that piano from six until eight that day", "role": "starts well after the ninety minutes are up, so nothing is in conflict"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, I'd like to book a tuning for the upright piano at home, with Ashcombe Pianos. What have you got free next week?"},
+        {"speaker": "assistant", "text": "Gerald has Thursday at three. He needs a full ninety minutes at the instrument, with nobody playing it while he works."},
+        {"speaker": "user", "text": "Thursday at three is fine. My daughter's quartet is rehearsing on that piano from six until eight that day, and they have nowhere else to go."},
+        {"speaker": "assistant", "text": "Right you are, I'll put him down for Thursday. Shall I send a reminder the day before?"},
+        {"speaker": "user", "text": "Please do, that would help. The side gate is the easiest way in."}
+      ]
+    }
+  }
+}

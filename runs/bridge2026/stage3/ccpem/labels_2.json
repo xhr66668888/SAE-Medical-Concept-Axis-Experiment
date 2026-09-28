@@ -1,0 +1,177 @@
+[
+  {
+    "id": "X_002",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I have not watched that movie, either.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_006",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "No, not in specific.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_010",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Mission: Impossible, that seem seems like a good movie.",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_014",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Because it's it has a lot of thriller thing.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_018",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I saw the first one and a little bit of Ragnarok, I think.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_022",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "It was the story of Elizabeth Tudor, who became the queen of England in 1558.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_026",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "They're just not my kind of animation.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_030",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "The Lord of the Rings is one of my favorite trilogies.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_034",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "The characters getting in a lot of silly situation and I just pretty much laugh the entire situation.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_038",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Yeah, that's a good reason. It's a It's a classic movie.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_042",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "some parts of it just didn't really make sense and didn't feel like they would be believable",
+    "confidence": "high"
+  },
+  {
+    "id": "X_046",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Yes and I have seen that movie.",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_050",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "They usually have elements of like gore or horror or like zombie that I'm not crazy about",
+    "confidence": "high"
+  },
+  {
+    "id": "X_054",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I stay away from a good deal of sci-fi.",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_058",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I was interested in learning about like how it came to be, what happened to it",
+    "confidence": "high"
+  },
+  {
+    "id": "X_062",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "It's in the title. It's Dumb and Dumber. It was a dumb movie.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_066",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Oh, wow! The last one I watched? Oh I guess Deadpool",
+    "confidence": "high"
+  },
+  {
+    "id": "X_070",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "No, I haven't.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_074",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "It's one of the funniest movies I've ever seen, and it's really quotable, and has Bill Murray and Rodney Dangerfield and Chevy Chase.",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_078",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I just couldn't get into the story.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_082",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I liked the action in movie. It was very intense and I liked the strange different world.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_086",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "No, I haven't. Is it a good movie?",
+    "confidence": "high"
+  },
+  {
+    "id": "X_090",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I wouldn't say the acting was good, but it did have good actors in it.",
+    "confidence": "medium"
+  },
+  {
+    "id": "X_094",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I like the suspense.",
+    "confidence": "high"
+  },
+  {
+    "id": "X_098",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "The Houses October Built would be a good horror movie that I like.",
+    "confidence": "high"
+  }
+]

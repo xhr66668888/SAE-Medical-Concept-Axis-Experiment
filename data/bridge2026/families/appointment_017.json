@@ -1,0 +1,85 @@
+{
+  "family_id": "appointment_017",
+  "domain": "appointment",
+  "task_goal": "book the design visit from Halden Kitchens for a kitchen and utility refit and settle what the designer does on the day",
+  "n_turns": 7,
+  "tail_anchor": "We'll be in all morning either way.",
+  "notes": "The two rep cells are identical for six turns and differ only in the opening clause of turn 6, where the designer can measure one room and the user either names it or says 'that one' with both rooms live. norep_unres and norep_res differ only in the date the builder lifts the old kitchen out (the twentieth / the tenth of April), which either does or does not fall inside the three weeks the units take to arrive.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 5, "quote": "the kitchen or the utility", "role": "the two live candidates"},
+        {"turn_index": 5, "quote": "She only has time to measure up one room on the first visit", "role": "exactly one of the two has to be named"},
+        {"turn_index": 6, "quote": "Put that one down for the measure", "role": "referring expression that picks neither of the two out"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. We're having Halden Kitchens do the kitchen and the utility at the same time, and I'd like to get the design appointment in the diary."},
+        {"speaker": "assistant", "text": "Of course. Priya does the design visits. She has Wednesday the fourth at ten, or Saturday the seventh at half nine."},
+        {"speaker": "user", "text": "Saturday the seventh, half nine. One thing I'll be firm about: everything goes in solid oak, no laminate doors anywhere."},
+        {"speaker": "assistant", "text": "Saturday the seventh at half nine with Priya, and solid oak throughout, no laminate doors anywhere. She'll bring the door samples."},
+        {"speaker": "user", "text": "Good. And I'll say it once more, everything goes in solid oak, no laminate doors anywhere."},
+        {"speaker": "assistant", "text": "That's on her sheet twice over now. She only has time to measure up one room on the first visit, the kitchen or the utility, so tell me which to put down."},
+        {"speaker": "user", "text": "Put that one down for the measure, then. We'll be in all morning either way."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "solid oak throughout, no laminate doors anywhere", "role": "the preference has already been taken and written down"},
+        {"turn_index": 4, "quote": "And I'll say it once more, everything goes in solid oak, no laminate doors anywhere.", "role": "restatement for emphasis, not a sign of trouble"},
+        {"turn_index": 6, "quote": "Put the utility down for the measure", "role": "names the room, closing the last open choice"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. We're having Halden Kitchens do the kitchen and the utility at the same time, and I'd like to get the design appointment in the diary."},
+        {"speaker": "assistant", "text": "Of course. Priya does the design visits. She has Wednesday the fourth at ten, or Saturday the seventh at half nine."},
+        {"speaker": "user", "text": "Saturday the seventh, half nine. One thing I'll be firm about: everything goes in solid oak, no laminate doors anywhere."},
+        {"speaker": "assistant", "text": "Saturday the seventh at half nine with Priya, and solid oak throughout, no laminate doors anywhere. She'll bring the door samples."},
+        {"speaker": "user", "text": "Good. And I'll say it once more, everything goes in solid oak, no laminate doors anywhere."},
+        {"speaker": "assistant", "text": "That's on her sheet twice over now. She only has time to measure up one room on the first visit, the kitchen or the utility, so tell me which to put down."},
+        {"speaker": "user", "text": "Put the utility down for the measure, then. We'll be in all morning either way."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "nothing is delivered until three weeks after that", "role": "no unit can be on site before the twenty-eighth"},
+        {"turn_index": 2, "quote": "pulls the old kitchen out on the twentieth and the new units go in the very next day", "role": "the units are needed on the twenty-first"},
+        {"turn_index": 3, "quote": "Noted, I've pencilled Priya in.", "role": "assistant carries on without reconciling the two dates"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. We're having Halden Kitchens do the kitchen and the utility at the same time, and I'd like to get the design appointment in the diary."},
+        {"speaker": "assistant", "text": "Priya can come out on Saturday the seventh of March. Whatever she draws goes to the factory that day, and nothing is delivered until three weeks after that."},
+        {"speaker": "user", "text": "The seventh of March suits us. Our builder pulls the old kitchen out on the twentieth and the new units go in the very next day, and that fortnight is the only stretch he has free all spring."},
+        {"speaker": "assistant", "text": "Noted, I've pencilled Priya in. Let me know if you have settled on a worktop."},
+        {"speaker": "user", "text": "Beech, right through both rooms, and a single sink rather than a double."},
+        {"speaker": "assistant", "text": "Beech worktop and a single sink. She'll bring the door samples along with her on the day."},
+        {"speaker": "user", "text": "That's grand, thank you. We'll be in all morning either way."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "pulls the old kitchen out on the tenth of April and the new units go in the very next day", "role": "the fit falls well after the three weeks are up"},
+        {"turn_index": 4, "quote": "Beech, right through both rooms, and a single sink rather than a double.", "role": "closes the last open item"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. We're having Halden Kitchens do the kitchen and the utility at the same time, and I'd like to get the design appointment in the diary."},
+        {"speaker": "assistant", "text": "Priya can come out on Saturday the seventh of March. Whatever she draws goes to the factory that day, and nothing is delivered until three weeks after that."},
+        {"speaker": "user", "text": "The seventh of March suits us. Our builder pulls the old kitchen out on the tenth of April and the new units go in the very next day, and that fortnight is the only stretch he has free all spring."},
+        {"speaker": "assistant", "text": "Noted, I've pencilled Priya in. Let me know if you have settled on a worktop."},
+        {"speaker": "user", "text": "Beech, right through both rooms, and a single sink rather than a double."},
+        {"speaker": "assistant", "text": "Beech worktop and a single sink. She'll bring the door samples along with her on the day."},
+        {"speaker": "user", "text": "That's grand, thank you. We'll be in all morning either way."}
+      ]
+    }
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "family_id": "shopping_023",
+  "domain": "shopping",
+  "task_goal": "order a replacement drive belt for a Forrester mower from Tarrant Garden Machinery",
+  "n_turns": 5,
+  "tail_anchor": "I can fit it myself once it turns up.",
+  "notes": "The rep pair differs by one digit in the serial the user reads back in turn 2, 28410 or 38410 against a part that only fits above 30000. The norep pair differs by three words in turn 2, 'for that one' against 'for the ride-on', with both mowers and both part numbers levelled in turn 1.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "it only fits decks with a serial above 30000",
+          "role": "the fitment rule for part 4620"
+        },
+        {
+          "turn_index": 2,
+          "quote": "serial 28410",
+          "role": "the machine's serial, below that cut-off"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Send the 4620 today and I will fit it on Saturday",
+          "role": "the action that makes the mismatch bite"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Got it, part 4620. That goes out on today's post",
+          "role": "assistant posts the part without raising the serial"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, Tarrant. I need a new drive belt for the Forrester Meadowline 45 rotary mower, the one with the grass collector."
+        },
+        {
+          "speaker": "assistant",
+          "text": "We can do that. The belt for the Meadowline is part 4620, and it only fits decks with a serial above 30000. Read me the machine name and the serial off the plate."
+        },
+        {
+          "speaker": "user",
+          "text": "Forrester Meadowline 45 rotary mower, the one with the grass collector, serial 28410. Send the 4620 today and I will fit it on Saturday."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Got it, part 4620. That goes out on today's post and it should be with you tomorrow."
+        },
+        {
+          "speaker": "user",
+          "text": "That is grand, thank you. I can fit it myself once it turns up."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Read me the machine name and the serial off the plate.",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Forrester Meadowline 45 rotary mower, the one with the grass collector, serial 38410.",
+          "role": "the requested read-back, not a sign of trouble"
+        },
+        {
+          "turn_index": 2,
+          "quote": "serial 38410",
+          "role": "above the cut-off, so the 4620 is the right belt"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Got it, part 4620.",
+          "role": "discharges the only open item, which belt to send"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, Tarrant. I need a new drive belt for the Forrester Meadowline 45 rotary mower, the one with the grass collector."
+        },
+        {
+          "speaker": "assistant",
+          "text": "We can do that. The belt for the Meadowline is part 4620, and it only fits decks with a serial above 30000. Read me the machine name and the serial off the plate."
+        },
+        {
+          "speaker": "user",
+          "text": "Forrester Meadowline 45 rotary mower, the one with the grass collector, serial 38410. Send the 4620 today and I will fit it on Saturday."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Got it, part 4620. That goes out on today's post and it should be with you tomorrow."
+        },
+        {
+          "speaker": "user",
+          "text": "That is grand, thank you. I can fit it myself once it turns up."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "The Meadowline takes part 4620 at £24 and the ride-on takes part 5110 at £41, and I have the pair of them on the shelf.",
+          "role": "two live candidates, levelled and named immediately before the referring expression"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Order the belt for that one",
+          "role": "referring expression that picks out neither mower"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Will do, it goes in this afternoon's post",
+          "role": "assistant posts a belt without establishing which machine it is for"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, Tarrant. I have two Forrester mowers here, the Meadowline rotary and the ride-on. One of them wants a new drive belt, and I would rather have the genuine part than a pattern one."
+        },
+        {
+          "speaker": "assistant",
+          "text": "We stock belts for both, and everything we sell for Forrester is genuine. The Meadowline takes part 4620 at £24 and the ride-on takes part 5110 at £41, and I have the pair of them on the shelf."
+        },
+        {
+          "speaker": "user",
+          "text": "Order the belt for that one and put it on the account."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Will do, it goes in this afternoon's post and the charge lands on the account."
+        },
+        {
+          "speaker": "user",
+          "text": "Thank you, genuine parts every time for me. I can fit it myself once it turns up."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "everything we sell for Forrester is genuine",
+          "role": "accepts the preference the user stated in turn 0"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Order the belt for the ride-on",
+          "role": "names the machine, so the part is fixed"
+        },
+        {
+          "turn_index": 4,
+          "quote": "genuine parts every time for me",
+          "role": "restates a preference already accepted, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, Tarrant. I have two Forrester mowers here, the Meadowline rotary and the ride-on. One of them wants a new drive belt, and I would rather have the genuine part than a pattern one."
+        },
+        {
+          "speaker": "assistant",
+          "text": "We stock belts for both, and everything we sell for Forrester is genuine. The Meadowline takes part 4620 at £24 and the ride-on takes part 5110 at £41, and I have the pair of them on the shelf."
+        },
+        {
+          "speaker": "user",
+          "text": "Order the belt for the ride-on and put it on the account."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Will do, it goes in this afternoon's post and the charge lands on the account."
+        },
+        {
+          "speaker": "user",
+          "text": "Thank you, genuine parts every time for me. I can fit it myself once it turns up."
+        }
+      ]
+    }
+  }
+}

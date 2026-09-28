@@ -1,0 +1,181 @@
+{
+  "family_id": "appointment_011",
+  "domain": "appointment",
+  "task_goal": "book an appointment with a mortgage adviser at the Northgate branch before a fixed rate ends",
+  "n_turns": 5,
+  "tail_anchor": "I'll park in the square behind the branch.",
+  "notes": "norep_unres and norep_res differ only in the second sentence of turn 2, which says either that the second borrower will not be at the table or that he will, against a stated rule that both names must be in the room. rep_unres and rep_res both carry a twelve-token echo of the payslip request and the same requested read-back of the booking reference; in rep_unres the request has still not been met, in rep_res the branch answered it in turn 1.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Tell me whether I need to bring anything beyond the last three payslips",
+          "role": "request"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Your reference for the booking is BR four two nine one.",
+          "role": "assistant turn that gives slots and a reference instead"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Tell me whether I need to bring anything beyond the last three payslips",
+          "role": "re-request, still open at the close"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good afternoon. I would like to see a mortgage adviser at the Northgate branch about a fixed rate coming to an end. Tell me whether I need to bring anything beyond the last three payslips."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Ms Okafor has Wednesday the fifth at eleven, or the Friday at half three. Your reference for the booking is BR four two nine one."
+        },
+        {
+          "speaker": "user",
+          "text": "Wednesday the fifth at eleven, please. Tell me whether I need to bring anything beyond the last three payslips."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Wednesday the fifth at eleven it is. Can you read the reference back so I know it has gone down right?"
+        },
+        {
+          "speaker": "user",
+          "text": "BR four two nine one. I'll park in the square behind the branch."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Bring the last three payslips and nothing else.",
+          "role": "discharges the only request the caller made"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Can you read the reference back so I know it has gone down right?",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "BR four two nine one.",
+          "role": "the requested read-back"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good afternoon. I would like to see a mortgage adviser at the Northgate branch about a fixed rate coming to an end. Tell me whether I need to bring anything beyond the last three payslips."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Ms Okafor has Wednesday the fifth at eleven, or the Friday at half three. Bring the last three payslips and nothing else. Your reference is BR four two nine one."
+        },
+        {
+          "speaker": "user",
+          "text": "Wednesday the fifth at eleven, please. I will not bring anything beyond the last three payslips, then."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Wednesday the fifth at eleven it is. Can you read the reference back so I know it has gone down right?"
+        },
+        {
+          "speaker": "user",
+          "text": "BR four two nine one. I'll park in the square behind the branch."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Both names on the mortgage have to be in the room for a rate change",
+          "role": "the requirement"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Sean is in Dublin until the twentieth, so he will not be at the table with me",
+          "role": "the conflicting fact and its consequence for the booked meeting"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I have put you down for the fifth.",
+          "role": "assistant books it without reconciling the conflict"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good afternoon. I need to see a mortgage adviser at the Northgate branch before our fixed rate runs out."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Ms Okafor has Wednesday the fifth at eleven, or the Friday at half three. Both names on the mortgage have to be in the room for a rate change."
+        },
+        {
+          "speaker": "user",
+          "text": "The Wednesday morning one, then. Sean is in Dublin until the twentieth, so he will not be at the table with me."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I have put you down for the fifth. Bring photo identification and the last three payslips. Shall I text the confirmation to the mobile we hold?"
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, do that, and the passport is already in the drawer. I'll park in the square behind the branch."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "Sean is home from Dublin on the third, so he will be at the table with me",
+          "role": "satisfies the both-names requirement"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Yes, do that, and the passport is already in the drawer.",
+          "role": "closes the last open item"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good afternoon. I need to see a mortgage adviser at the Northgate branch before our fixed rate runs out."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Ms Okafor has Wednesday the fifth at eleven, or the Friday at half three. Both names on the mortgage have to be in the room for a rate change."
+        },
+        {
+          "speaker": "user",
+          "text": "The Wednesday morning one, then. Sean is home from Dublin on the third, so he will be at the table with me."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I have put you down for the fifth. Bring photo identification and the last three payslips. Shall I text the confirmation to the mobile we hold?"
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, do that, and the passport is already in the drawer. I'll park in the square behind the branch."
+        }
+      ]
+    }
+  }
+}

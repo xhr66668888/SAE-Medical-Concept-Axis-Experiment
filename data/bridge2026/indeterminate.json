@@ -1,0 +1,2396 @@
+{
+  "items": [
+    {
+      "item_id": "indet_001",
+      "domain": "appointment",
+      "kind": "partially_answered",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The user asks whether half four on Friday specifically is free; 'there's still room in the afternoon' either covers half four and so answers it, or reports only that some afternoon slot exists, leaving the exact time the user then books unconfirmed, and nothing later settles which.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "can she do half four on Friday instead, or is Friday completely full?",
+          "role": "the specific question asked"
+        },
+        {
+          "turn_index": 1,
+          "quote": "There's still room in the afternoon.",
+          "role": "reading A: half four falls in the afternoon, so the question is answered"
+        },
+        {
+          "turn_index": 4,
+          "quote": "move it to half four on Friday",
+          "role": "reading B: the user commits to a time that was never confirmed free"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I need to move Thursday's piano lesson. It's at half four — can she do half four on Friday instead, or is Friday completely full?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Friday isn't full. There's still room in the afternoon."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. Do I tell her myself, or does the school office pass the message on?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The office passes it on as soon as the change goes in the book."
+        },
+        {
+          "speaker": "user",
+          "text": "Then move it to half four on Friday and let the office tell her."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_002",
+      "domain": "appointment",
+      "kind": "possibly_irrelevant_ambiguity",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "Two bookings are live and the user's 'cancel it' picks out neither, but the user also says they are not going back at all, so the phone call arguably removes both and the choice cannot change what happens; whether a referent still needs fixing depends on which of those you weigh.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "cancel the appointment with the tutoring centre",
+          "role": "the instruction that needs a referent"
+        },
+        {
+          "turn_index": 1,
+          "quote": "one this Tuesday and one the Tuesday after",
+          "role": "reading A: two live candidates and the call has to name one"
+        },
+        {
+          "turn_index": 2,
+          "quote": "We're not going back to that centre at all, so it hardly matters which they take off first",
+          "role": "reading B: the outcome is identical either way"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I need to cancel the appointment with the tutoring centre. Can you ring and let them know?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "You've got two in the book with them — one this Tuesday and one the Tuesday after."
+        },
+        {
+          "speaker": "user",
+          "text": "Cancel it. We're not going back to that centre at all, so it hardly matters which they take off first."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I'll call when they open at nine in the morning."
+        },
+        {
+          "speaker": "user",
+          "text": "Thanks. Tell me what they say once you've spoken to them."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_003",
+      "domain": "appointment",
+      "kind": "soft_contradiction",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The user rules out Wednesdays because the car is promised to their brother and then picks a Wednesday; 'that's before he needs it' either supplies a real exception for an early slot or is a slip showing the user has not noticed the clash, and nobody tests it.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Any day except Wednesday — the car's promised to my brother on Wednesdays",
+          "role": "reading A: an explicit constraint"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Wednesday the fourteenth at nine is better",
+          "role": "reading A: the booking breaks that constraint and no one flags it"
+        },
+        {
+          "turn_index": 2,
+          "quote": "That's before he needs it.",
+          "role": "reading B: the user names an exception that reconciles the two"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you book the follow-up at the garage for the week of the twelfth? Any day except Wednesday — the car's promised to my brother on Wednesdays."
+        },
+        {
+          "speaker": "assistant",
+          "text": "They've offered Tuesday the thirteenth at eleven, or Wednesday the fourteenth at nine."
+        },
+        {
+          "speaker": "user",
+          "text": "Wednesday the fourteenth at nine is better. That's before he needs it."
+        },
+        {
+          "speaker": "assistant",
+          "text": "It's about an hour on the ramp, so you'd be away by ten."
+        },
+        {
+          "speaker": "user",
+          "text": "Away by ten suits me. Do they want it left there, or can I wait for it?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "You can wait — there's a waiting room at the side and the coffee machine works."
+        },
+        {
+          "speaker": "user",
+          "text": "Then put me down for the fourteenth at nine and text me the day before."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_004",
+      "domain": "appointment",
+      "kind": "withdrawn_or_not",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The user opens two requests and then says 'don't bother', which either withdraws both checks the assistant offered or only the first, since the reason given covers the son and not the parking the user still needs for a half five departure.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "can I bring my son with me, and is there parking on site?",
+          "role": "two requests opened at once"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Don't bother — he's coming with me regardless, so it's not really a question.",
+          "role": "reading A: a blanket withdrawal of the offer to check both"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll set off at half five.",
+          "role": "reading B: the stated reason covers only the son, and parking still bears on the departure time"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Two things about Thursday's meeting at the school: can I bring my son with me, and is there parking on site?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I'll check both with the office and come back to you."
+        },
+        {
+          "speaker": "user",
+          "text": "Don't bother — he's coming with me regardless, so it's not really a question."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Right. Thursday at six, then."
+        },
+        {
+          "speaker": "user",
+          "text": "Thursday at six. I'll set off at half five."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_005",
+      "domain": "appointment",
+      "kind": "missing_prior_context",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "Everything turns on 'the other thing' agreed in an exchange that is not shown: if the user asked to have it recorded then 'it's noted on the booking' is a full answer, and if they were asking for an outcome it is no answer at all.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "the same slot we talked about on Friday",
+          "role": "the exchange this one continues is not shown"
+        },
+        {
+          "turn_index": 2,
+          "quote": "did you get the other thing sorted with them?",
+          "role": "reading A: a request whose content cannot be checked against the reply"
+        },
+        {
+          "turn_index": 3,
+          "quote": "It's noted on the booking now.",
+          "role": "reading B: a direct answer the user accepts without pressing"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "So is that the same slot we talked about on Friday, or a different one?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "It's the later of the two — ten past four rather than half two."
+        },
+        {
+          "speaker": "user",
+          "text": "And did you get the other thing sorted with them?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I did. It's noted on the booking now."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. Then I'll see them at ten past four."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_006",
+      "domain": "shopping",
+      "kind": "partially_answered",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The user asks whether a third-floor delivery with no lift costs extra; 'standard delivery is included' either answers it or dodges it, because whether this carry counts as standard is exactly the point, and the assistant notes the stairs without pricing them.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Does the price include delivery to a third-floor flat, or is that extra?",
+          "role": "the specific question"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Standard delivery is included in the price shown.",
+          "role": "reading A: delivery is covered, so the question is answered"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Noted — I've put that on the order",
+          "role": "reading B: the no-lift carry is acknowledged but never priced"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm ordering the grey armchair from your site. Does the price include delivery to a third-floor flat, or is that extra?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Standard delivery is included in the price shown."
+        },
+        {
+          "speaker": "user",
+          "text": "There's no lift in the building, by the way."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted — I've put that on the order so the crew know what they're coming to."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. Then put it through on the card you've got on file."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_007",
+      "domain": "shopping",
+      "kind": "possibly_irrelevant_ambiguity",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "'That one' could be the black or the colour cartridge and an order line has to name one, but the user says they cost the same and both are needed this month, so whichever is picked the month ends the same way.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "The one that's run out.",
+          "role": "the referent the order depends on"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Both showed low on the last report — the black and the colour.",
+          "role": "reading A: two live candidates and one line to fill"
+        },
+        {
+          "turn_index": 2,
+          "quote": "They're the same price, and I'll need both before the end of the month anyway.",
+          "role": "reading B: cost and timing are identical, so the choice changes nothing"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you reorder the ink for the office printer? The one that's run out."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Both showed low on the last report — the black and the colour."
+        },
+        {
+          "speaker": "user",
+          "text": "Order that one again. They're the same price, and I'll need both before the end of the month anyway."
+        },
+        {
+          "speaker": "assistant",
+          "text": "It would go on Thursday's order with the paper."
+        },
+        {
+          "speaker": "user",
+          "text": "Thursday's fine. Is the paper the eighty gram or the hundred?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Eighty, the same as the standing order."
+        },
+        {
+          "speaker": "user",
+          "text": "Eighty is right. Let me know when the lot has been dispatched."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_008",
+      "domain": "shopping",
+      "kind": "soft_contradiction",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "A twenty-five pound ceiling and a thirty-two pound kettle sit together; 'that's about right' either knowingly relaxes the figure or shows the user thinks the two numbers agree, and the assistant states the price without ever putting it against the limit.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "nothing over twenty-five pounds",
+          "role": "reading A: an explicit ceiling"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Twenty-five is what I paid for the old one, so that's about right.",
+          "role": "reading B: the figure is re-described as a reference point, not a limit"
+        },
+        {
+          "turn_index": 3,
+          "quote": "That's the thirty-two-pound one",
+          "role": "the price is named plainly but never set against the ceiling"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I want a replacement kettle, and nothing over twenty-five pounds."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The one you liked last time is thirty-two now. There's a similar one at twenty-two."
+        },
+        {
+          "speaker": "user",
+          "text": "Go with the one I liked. Twenty-five is what I paid for the old one, so that's about right."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That's the thirty-two-pound one, then, arriving Thursday."
+        },
+        {
+          "speaker": "user",
+          "text": "Thursday's fine. Put it on the household card."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_009",
+      "domain": "shopping",
+      "kind": "withdrawn_or_not",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "'Never mind the rest' either drops both open questions or only the postal route the assistant had just described, and whether the shop actually has a large — the thing the Saturday trip depends on — is never answered on either reading.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "whether they'll swap it for a large, and how long a swap takes",
+          "role": "the two things asked"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I'll take it in on Saturday, so never mind the rest.",
+          "role": "reading A: the user drops what is left of the enquiry"
+        },
+        {
+          "turn_index": 1,
+          "quote": "exchanges are handled either in store or by post",
+          "role": "reading B: 'the rest' most naturally means the postal option just described"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "The jacket I ordered came in the wrong size. Can you find out whether they'll swap it for a large, and how long a swap takes?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Their returns page says exchanges are handled either in store or by post."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll take it in on Saturday, so never mind the rest."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The Broad Street branch is open till six on Saturday."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll go in the morning. Print the order confirmation off for me before then."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_010",
+      "domain": "shopping",
+      "kind": "missing_prior_context",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "'What about the other thing' asks for an outcome and gets only 'I passed that on', which is a complete answer if the earlier phone request was to relay something and no answer at all if it was to find something out, and the earlier call is not shown.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Did you ever hear back about the one that arrived damaged?",
+          "role": "the exchange picks up a matter begun before the shown turns"
+        },
+        {
+          "turn_index": 2,
+          "quote": "what about the other thing I mentioned on the phone?",
+          "role": "reading A: an outcome is asked for and none is given"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I passed that on to them when I rang.",
+          "role": "reading B: a complete answer if relaying it was the whole request"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Did you ever hear back about the one that arrived damaged?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "They've agreed to replace it. It comes with the rest of the order on Friday."
+        },
+        {
+          "speaker": "user",
+          "text": "And what about the other thing I mentioned on the phone?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I passed that on to them when I rang."
+        },
+        {
+          "speaker": "user",
+          "text": "Alright. I'll be in on Friday morning."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_011",
+      "domain": "transit",
+      "kind": "partially_answered",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The user asks whether the coach calls at the airport; the reply names only where the service terminates, which either settles the either/or outright or says nothing about stops on the way, and the point is never revisited before the booking.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "stop at the airport, or only at the bus station?",
+          "role": "the either/or the user needs settled"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Sunday services all terminate at the bus station in the centre.",
+          "role": "reading A: naming the terminus answers the either/or"
+        },
+        {
+          "turn_index": 6,
+          "quote": "Book me one seat on the 7:40 on Sunday.",
+          "role": "reading B: the user books without learning whether it calls at the airport en route"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Does the 7:40 Sunday coach to Bristol stop at the airport, or only at the bus station?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Sunday services all terminate at the bus station in the centre."
+        },
+        {
+          "speaker": "user",
+          "text": "Right. And can I take a large suitcase without booking hold space?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Yes, one large case per passenger goes in the hold at no extra charge, and there's no need to book it."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. What time does it get in?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Ten past ten, give or take, depending on the bridge."
+        },
+        {
+          "speaker": "user",
+          "text": "Ten past ten works. Book me one seat on the 7:40 on Sunday."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_012",
+      "domain": "transit",
+      "kind": "possibly_irrelevant_ambiguity",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "Two stops are live and the user names neither, but they also say the walk is the same from either, so whether a referent still has to be fixed depends on whether a rule the traveller can apply on the bus counts as settling it.",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Elmwood Road and Elmwood Park",
+          "role": "reading A: two live candidates and the user has to get off at one of them"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Whichever one the 42 reaches first",
+          "role": "reading A: a rule that is never applied to name a stop"
+        },
+        {
+          "turn_index": 2,
+          "quote": "It's the same walk from either",
+          "role": "reading B: the next action is identical whichever is meant"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I need to be at the Elmwood office by nine. Which stop should I use?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "There are two of them, Elmwood Road and Elmwood Park. The 42 calls at both."
+        },
+        {
+          "speaker": "user",
+          "text": "Whichever one the 42 reaches first. It's the same walk from either, and I'd sooner be off the bus early."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The 42 runs every twelve minutes from half seven."
+        },
+        {
+          "speaker": "user",
+          "text": "Then I'll take the one that gets me in for quarter to nine."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_013",
+      "domain": "transit",
+      "kind": "soft_contradiction",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The pick-up is booked from home while the user will be at their sister's that night; 'only ten minutes further out' reads either as asking for the address to be changed or as saying it is no bother to go home first, and the assistant confirms the time without touching the address.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Pick-up from home, please.",
+          "role": "reading A: the address as instructed, left standing"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I'm staying at my sister's the night before, but she's only ten minutes further out.",
+          "role": "reading B: a quiet amendment, or a remark that the difference does not matter"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Three o'clock pick-up, then.",
+          "role": "the confirmation covers the time only"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm booking the airport transfer for the six o'clock flight on the twentieth. Pick-up from home, please."
+        },
+        {
+          "speaker": "assistant",
+          "text": "For a six o'clock departure they'd want you there by four, so pick-up at three."
+        },
+        {
+          "speaker": "user",
+          "text": "Three is fine. I'm staying at my sister's the night before, but she's only ten minutes further out."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Three o'clock pick-up, then. I'll put the flight number on the booking."
+        },
+        {
+          "speaker": "user",
+          "text": "Put the flight number on it, yes. And how many bags does the fare cover?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Two in the boot as standard, and more if you tell them in advance."
+        },
+        {
+          "speaker": "user",
+          "text": "Two is all we've got between us. Send me the driver's details the night before."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_014",
+      "domain": "transit",
+      "kind": "withdrawn_or_not",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "Buying a ticket at the machine clearly moots the pass question but not whether the 6:50 runs at all, so 'don't worry about it' is either a blanket withdrawal of both checks or a withdrawal of one while the user's plan still rests on the other.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "whether the 6:50 actually runs on a bank holiday, and whether my pass is valid before nine?",
+          "role": "two checks requested"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Don't worry about it, I'll just buy a ticket at the machine.",
+          "role": "reading A: a blanket withdrawal"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll be on the platform for half six.",
+          "role": "reading B: the plan still depends on the 6:50 running"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you check two things on the Monday service — whether the 6:50 actually runs on a bank holiday, and whether my pass is valid before nine?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can look both up on the operator's page."
+        },
+        {
+          "speaker": "user",
+          "text": "Don't worry about it, I'll just buy a ticket at the machine."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The machine on that platform takes card now."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. I'll be on the platform for half six."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_015",
+      "domain": "transit",
+      "kind": "missing_prior_context",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "'The notice doesn't say' is either a full and honest answer, leaving nothing pending, or a failure to supply what the user asked for, and which it is depends on an earlier closure that is not shown but which the forty minutes is taken from.",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "So the same as the last time they did this.",
+          "role": "reading A: a request for confirmation that is met with a non-answer"
+        },
+        {
+          "turn_index": 3,
+          "quote": "The notice doesn't say. It only gives the dates.",
+          "role": "reading B: an honest and complete reply, since no such information exists"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll allow the extra forty minutes",
+          "role": "the figure is carried over from an occasion not shown"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Did they say anything more about the replacement bus, or was it just the one line?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Just the one line on the notice — engineering work between the two stations on Sunday."
+        },
+        {
+          "speaker": "user",
+          "text": "So the same as the last time they did this."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The notice doesn't say. It only gives the dates."
+        },
+        {
+          "speaker": "user",
+          "text": "Then I'll allow the extra forty minutes and leave at seven."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_016",
+      "domain": "cooking",
+      "kind": "partially_answered",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The user asks about taking the foil off to brown the top and is told the cheese will be melted, which either answers the question in the negative or speaks to a different property altogether, and the foil never comes up again.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Do I take the foil off at the end to brown the top?",
+          "role": "the specific question"
+        },
+        {
+          "turn_index": 1,
+          "quote": "the cheese will be melted by then",
+          "role": "reading A: taken as saying the foil can stay on, because melted is enough"
+        },
+        {
+          "turn_index": 6,
+          "quote": "thirty-five minutes in the glass dish, then ten minutes standing",
+          "role": "reading B: the plan the user settles on says nothing about the foil, and melted is not browned"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "The lasagne recipe says bake it covered for forty minutes. Do I take the foil off at the end to brown the top?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Forty minutes at 180 will cook it right through, and the cheese will be melted by then."
+        },
+        {
+          "speaker": "user",
+          "text": "I'm using the glass dish rather than the metal one. Does that change the timing?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Glass holds heat longer, so give it five minutes less and let it stand before you cut it."
+        },
+        {
+          "speaker": "user",
+          "text": "How long should it stand for?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Ten minutes on the side, otherwise it slides off the slice."
+        },
+        {
+          "speaker": "user",
+          "text": "Right, thirty-five minutes in the glass dish, then ten minutes standing."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_017",
+      "domain": "cooking",
+      "kind": "possibly_irrelevant_ambiguity",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "'The older one' picks out one of two jars by a fact the dialogue never states, so the referent is not fixed in the text, yet the assistant has said either works and the two-hour reduction erases the one difference named between them.",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "I'll use the older one.",
+          "role": "reading A: a mention with two candidates that the text never pins down"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Either works.",
+          "role": "reading B: both are acceptable, so the choice cannot go wrong"
+        },
+        {
+          "turn_index": 2,
+          "quote": "cooking down for two hours anyway",
+          "role": "reading B: the long reduction closes the difference the assistant named"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I've got two jars open in the fridge, the passata and the chopped tomatoes. Which should go in the ragu?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Either works. Passata gives you a smoother sauce, chopped leaves a bit of texture."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll use the older one. It's going in with the wine and cooking down for two hours anyway."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Two hours is plenty. Keep the lid off for the last half hour."
+        },
+        {
+          "speaker": "user",
+          "text": "Lid off at the end, then. I'll start it after lunch."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_018",
+      "domain": "cooking",
+      "kind": "soft_contradiction",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "Two oven temperatures are live, 180 from the fan conversion and 220 from the packet; 'pastry does want a hot oven' is either an endorsement of the packet that reconciles them or a remark about preheating that leaves both standing, and the last turn commits to neither.",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "180 for the same time.",
+          "role": "reading A: the first temperature on the table"
+        },
+        {
+          "turn_index": 2,
+          "quote": "The packet on the pastry says 220 fan, though.",
+          "role": "reading A: a second figure that is never chosen between"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Pastry does want a hot oven.",
+          "role": "reading B: plausibly an endorsement of the higher figure, which would settle it"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "The recipe says bake at 200 for twenty-five minutes. Mine's a fan oven, so do I need to change anything?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "For a fan oven, drop it twenty degrees. 180 for the same time."
+        },
+        {
+          "speaker": "user",
+          "text": "180 for twenty-five, then. The packet on the pastry says 220 fan, though."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Pastry does want a hot oven. Don't put it in before the oven has come up to temperature."
+        },
+        {
+          "speaker": "user",
+          "text": "It takes a good while to come up. Should I heat the tray in there as well?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Yes, a hot tray underneath helps the base along."
+        },
+        {
+          "speaker": "user",
+          "text": "Hot tray underneath, and in it goes once the light's off. I'll set the timer for twenty-five."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_019",
+      "domain": "cooking",
+      "kind": "withdrawn_or_not",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "'The packet probably says' either withdraws the question, which then would not count as open, or merely defers it, since the user never looks at the packet and ends by committing to one of the two routes the question was meant to choose between.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Do I need to soak the dried beans overnight, or can I start them in the morning?",
+          "role": "the question raised"
+        },
+        {
+          "turn_index": 2,
+          "quote": "It's fine, the packet probably says. I'll have a proper look at it later.",
+          "role": "reading A: the user takes the question back and will settle it themselves"
+        },
+        {
+          "turn_index": 6,
+          "quote": "I'll put the pot on once they've had their hour.",
+          "role": "reading B: the user commits to the quick soak without the original either/or ever being settled"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Do I need to soak the dried beans overnight, or can I start them in the morning?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Overnight is the usual advice, though there's a quick-soak method as well."
+        },
+        {
+          "speaker": "user",
+          "text": "It's fine, the packet probably says. I'll have a proper look at it later."
+        },
+        {
+          "speaker": "assistant",
+          "text": "If you do the quick soak, allow an extra hour before the rest goes in."
+        },
+        {
+          "speaker": "user",
+          "text": "What does the quick soak involve?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Cover them with cold water, boil for two minutes, then take the pan off the heat and leave it an hour."
+        },
+        {
+          "speaker": "user",
+          "text": "Noted. I'll put the pot on once they've had their hour."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_020",
+      "domain": "cooking",
+      "kind": "missing_prior_context",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The user says every Sunday timing is twenty degrees out and the assistant narrows it to two trays; whether that agrees with the user or quietly conflicts with them depends on how many dishes the Sunday plan held, which is not shown.",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "the timings we worked out on Sunday are all twenty degrees out",
+          "role": "reading A: the user says all of them, and the plan referred to is not shown"
+        },
+        {
+          "turn_index": 3,
+          "quote": "For the two big trays, yes.",
+          "role": "reading B: a precise correction meaning only those are affected, which the user accepts"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll write the new numbers on the sheet",
+          "role": "the sheet and the rest of the plan are not visible here"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "So did you find out whether the oven in the flat is gas or electric?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Electric, and it's a fan one."
+        },
+        {
+          "speaker": "user",
+          "text": "Then the timings we worked out on Sunday are all twenty degrees out."
+        },
+        {
+          "speaker": "assistant",
+          "text": "For the two big trays, yes."
+        },
+        {
+          "speaker": "user",
+          "text": "Fine. I'll write the new numbers on the sheet before Saturday."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_021",
+      "domain": "household",
+      "kind": "partially_answered",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The user asks for a decision and is given a range; with the needle just under one the range arguably decides it, but 'just under' may sit inside tolerance and the assistant never says which side of the line this reading falls on.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Is that low enough that I should top it up, or leave it?",
+          "role": "the recommendation asked for"
+        },
+        {
+          "turn_index": 1,
+          "quote": "The normal range is between one and one and a half when the system's cold.",
+          "role": "reading A: the criterion plus the reading settles the question"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Then that's the reading to go by, yes.",
+          "role": "reading B: which reading counts is confirmed, but not what to do about it"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "The boiler pressure gauge is sitting just under one. Is that low enough that I should top it up, or leave it?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The normal range is between one and one and a half when the system's cold."
+        },
+        {
+          "speaker": "user",
+          "text": "It's been off since last night, so it's cold now."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Then that's the reading to go by, yes."
+        },
+        {
+          "speaker": "user",
+          "text": "Right. I'll get the filling loop key out and have a look under it."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_022",
+      "domain": "household",
+      "kind": "possibly_irrelevant_ambiguity",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "Which leak 'that one' picks out is left open between two candidates, but the user folds both into a single longer visit by the same plumber, so the booking that follows is the same whichever was meant.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "It's the one under the sink.",
+          "role": "the mention that has to be pinned down"
+        },
+        {
+          "turn_index": 1,
+          "quote": "the tap in the kitchen and the pipe in the utility",
+          "role": "reading A: two live candidates and a booking note that has to say something"
+        },
+        {
+          "turn_index": 2,
+          "quote": "he can see to both while he's here",
+          "role": "reading B: one visit covers both, so the choice changes nothing"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you book someone to look at the leak? It's the one under the sink."
+        },
+        {
+          "speaker": "assistant",
+          "text": "You've got two of them down here, the tap in the kitchen and the pipe in the utility."
+        },
+        {
+          "speaker": "user",
+          "text": "That one. They're both under a sink, and it's the same plumber either way, so he can see to both while he's here."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Then I'll ask for a two-hour slot rather than the one."
+        },
+        {
+          "speaker": "user",
+          "text": "Two hours is sensible. Does he charge by the hour, or is it a call-out?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Call-out for the first hour, then by the half hour after that."
+        },
+        {
+          "speaker": "user",
+          "text": "That's fair enough. Tuesday or Wednesday morning suits me."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_023",
+      "domain": "household",
+      "kind": "soft_contradiction",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The standing first-Monday arrangement and the sixth being a Tuesday do not fit together; 'he said he'd be round on the sixth' either overrides the rule as an ordinary one-off or shows the user has the days muddled, and the assistant acts on the date without settling it.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "The window cleaner comes the first Monday of the month",
+          "role": "reading A: the standing arrangement"
+        },
+        {
+          "turn_index": 1,
+          "quote": "The sixth is a Tuesday this month.",
+          "role": "reading A: the mismatch is raised and never absorbed"
+        },
+        {
+          "turn_index": 2,
+          "quote": "He said he'd be round on the sixth",
+          "role": "reading B: a specific arrangement that plainly overrides the general rule"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "The window cleaner comes the first Monday of the month. Can you leave the side gate unbolted for him on the sixth?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The sixth is a Tuesday this month."
+        },
+        {
+          "speaker": "user",
+          "text": "He said he'd be round on the sixth, and he's never missed a first Monday yet."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I'll take the bolt off on the sixth and put the key back on the hook."
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, bolt off and the key back on the hook."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_024",
+      "domain": "household",
+      "kind": "withdrawn_or_not",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "Handing the question to the brother-in-law looks like dropping it, but the user supplies the tear length the assistant's answer turned on and then goes up the ladder on the Saturday, a day before he arrives, so the patch-or-replace question may still be live.",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "my brother-in-law does roofing, I'll ask him when he's over on Sunday",
+          "role": "reading A: the question is handed on and dropped"
+        },
+        {
+          "turn_index": 2,
+          "quote": "It goes about a foot in from the corner.",
+          "role": "reading B: the user supplies the fact the assistant's answer depended on"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll get the ladder out on Saturday",
+          "role": "reading B: the user acts a day before the answer would arrive"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "The shed roof felt has torn at the corner. Is that a patch job, or does the whole sheet have to come off?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Depends how far the tear runs. If it's only at the edge, a patch and some adhesive will hold."
+        },
+        {
+          "speaker": "user",
+          "text": "It goes about a foot in from the corner. Actually, my brother-in-law does roofing, I'll ask him when he's over on Sunday."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Worth getting to it before the weather turns, either way."
+        },
+        {
+          "speaker": "user",
+          "text": "It is. I'll get the ladder out on Saturday and have a proper look."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_025",
+      "domain": "household",
+      "kind": "missing_prior_context",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The plumber's order clashes with a priority the user set in an exchange that is not shown; 'leave it as it is for now' is either the user accepting a mismatch that still stands or deciding the order does not matter because they will be in all day.",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "That's the one I said could wait.",
+          "role": "reading A: a clash with a priority stated in a turn that is not shown"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Leave it as it is for now.",
+          "role": "reading B: the fix is offered and the user turns it down, closing the matter"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll be in all day anyway.",
+          "role": "reading B: the reason the order may not matter"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Did the plumber say which of the two he'd do first?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "He said he'd start upstairs."
+        },
+        {
+          "speaker": "user",
+          "text": "That's the one I said could wait."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Do you want me to ring him back before Thursday?"
+        },
+        {
+          "speaker": "user",
+          "text": "Leave it as it is for now. I'll be in all day anyway."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_026",
+      "domain": "appointment",
+      "kind": "partially_answered",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "'You won't have to wait around at the garage' either conveys that no courtesy car is coming, so a lift is needed, or speaks only to waiting and leaves the either/or untouched, and the user's remark about being without the car is an inference rather than an answer.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Do they do a courtesy car, or should I arrange a lift?",
+          "role": "the either/or asked"
+        },
+        {
+          "turn_index": 3,
+          "quote": "If you drop the keys at eight you won't have to wait around at the garage.",
+          "role": "reading A: implies the user leaves under their own steam, so there is no courtesy car"
+        },
+        {
+          "turn_index": 2,
+          "quote": "That's a long stretch to be without it.",
+          "role": "reading B: the user's own inference, never confirmed by anyone"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "The car's booked in for its service on the fourteenth. Do they do a courtesy car, or should I arrange a lift?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "They've got you down for a full-day slot, in at eight and ready by five."
+        },
+        {
+          "speaker": "user",
+          "text": "That's a long stretch to be without it."
+        },
+        {
+          "speaker": "assistant",
+          "text": "It is. If you drop the keys at eight you won't have to wait around at the garage."
+        },
+        {
+          "speaker": "user",
+          "text": "What do they want me to bring, just the keys and the book?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The keys, the service book, and the locking wheel nut if it isn't already in the boot."
+        },
+        {
+          "speaker": "user",
+          "text": "Keys, book and wheel nut. I'll drop it at eight on the fourteenth."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_027",
+      "domain": "appointment",
+      "kind": "possibly_irrelevant_ambiguity",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "Two candidate weeks are live and the user does not take it up to choose; being free for both and taking the earliest offer arguably makes the choice immaterial, but the morning preference added afterwards is the sort of thing that could be available in one week and not the other.",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "the week starting the twenty-ninth, or the one starting the fifth",
+          "role": "reading A: two live candidates and a booking that needs a date"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I'm around for both, so it makes no odds to me.",
+          "role": "reading B: the user is free either way, so the outcome is the same"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Anything before noon is better.",
+          "role": "reading A: a constraint that could bite in one week but not the other"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you put the appointment in for the first week of next month?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Do you mean the week starting the twenty-ninth, or the one starting the fifth? The month starts on a Thursday."
+        },
+        {
+          "speaker": "user",
+          "text": "Whichever they'd call the first week. I'm around for both, so it makes no odds to me."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I'll take the earliest they offer in either, then."
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, earliest they've got. Anything before noon is better."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I'll put mornings on the note."
+        },
+        {
+          "speaker": "user",
+          "text": "Mornings on the note, and ring me once it's in."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_028",
+      "domain": "appointment",
+      "kind": "soft_contradiction",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The user asks to move off Saturday because of a six-day week and then picks a Saturday; 'I'm never doing anything at nine on a Saturday' is either a coherent exception or a sign the user has lost the thread of their own reason, and the assistant remarks only on the time.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Saturdays are hard now I'm working six days.",
+          "role": "reading A: the stated reason for moving off Saturday"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Saturday at nine.",
+          "role": "reading A: the booking lands on the day that was ruled out"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I'm never doing anything at nine on a Saturday.",
+          "role": "reading B: an exception that squares the two"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you move my haircut off Saturday to a weekday? Saturdays are hard now I'm working six days."
+        },
+        {
+          "speaker": "assistant",
+          "text": "They've got Thursday at five, or Saturday at nine in the morning."
+        },
+        {
+          "speaker": "user",
+          "text": "Saturday at nine. I'm never doing anything at nine on a Saturday."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Saturday the eleventh at nine, then. That's a change from your usual two o'clock."
+        },
+        {
+          "speaker": "user",
+          "text": "That's right. Change it over and I'll pay when I'm in."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_029",
+      "domain": "appointment",
+      "kind": "missing_prior_context",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "A clash is raised against something said in an exchange that is not shown, so whether it really blocks the Wednesday cannot be checked, and keeping both afternoons clear is either a plan that disposes of it or a holding move over a clash still standing.",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "Wednesday's the one that clashes with the thing I told you about.",
+          "role": "reading A: the thing it clashes with is not shown"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I could ask him for the Thursday of that week instead.",
+          "role": "reading B: a route round the clash is already in hand"
+        },
+        {
+          "turn_index": 6,
+          "quote": "I'll keep both afternoons clear until we hear.",
+          "role": "reading B: a deliberate plan that holds both options open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Did the driving instructor get back to you about the two dates?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "He can do the Wednesday. The other week he's away."
+        },
+        {
+          "speaker": "user",
+          "text": "Wednesday's the one that clashes with the thing I told you about."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I could ask him for the Thursday of that week instead."
+        },
+        {
+          "speaker": "user",
+          "text": "Would he charge for moving it again?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "He didn't charge last time, and he offered the change himself."
+        },
+        {
+          "speaker": "user",
+          "text": "See what he says, then. I'll keep both afternoons clear until we hear."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_030",
+      "domain": "shopping",
+      "kind": "partially_answered",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The user asks whether the return can go by post and is told only about the sixty-day window; 'keep it in there' either endorses posting the box back or is just advice not to lose the receipt, and the channel is never named.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Can I do that by post, or does it have to be in person?",
+          "role": "the either/or asked"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Good, keep it in there.",
+          "role": "reading A: keeping the receipt in the box reads as endorsing a posted return"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Returns are accepted within sixty days with the receipt.",
+          "role": "reading B: the reply covers the window and says nothing about how to send them"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I want to return the boots I bought in the shop last month. Can I do that by post, or does it have to be in person?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Returns are accepted within sixty days with the receipt."
+        },
+        {
+          "speaker": "user",
+          "text": "I've got the receipt, it's in the box with them."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Good, keep it in there. Sixty days from the purchase date gives you until the eleventh."
+        },
+        {
+          "speaker": "user",
+          "text": "Right. I'll get them packed up before the eleventh."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_031",
+      "domain": "shopping",
+      "kind": "possibly_irrelevant_ambiguity",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "Two addresses are live and 'whichever is current' names neither while the user says she is between them; post reaching her either way makes the choice look immaterial, except that a signed-for packet has to be taken in at the address it is sent to.",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "the flat on Dover Street and the house in Leeds",
+          "role": "reading A: two live addresses and a key that has to go to one of them"
+        },
+        {
+          "turn_index": 2,
+          "quote": "post gets to her either way",
+          "role": "reading B: the user says the outcome is the same from either"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I'll send it signed-for so it isn't left on a doorstep.",
+          "role": "reading A: a signed-for packet needs her at that address"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you post the spare key to my daughter? Her address is on the file."
+        },
+        {
+          "speaker": "assistant",
+          "text": "There are two on the file, the flat on Dover Street and the house in Leeds."
+        },
+        {
+          "speaker": "user",
+          "text": "Use whichever one is current. She's between the two at the minute, but post gets to her either way."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I'll send it signed-for so it isn't left on a doorstep."
+        },
+        {
+          "speaker": "user",
+          "text": "Signed-for is right. What does that cost to send?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Around five pounds for a small packet."
+        },
+        {
+          "speaker": "user",
+          "text": "Five is nothing. Get it away this week if you can."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_032",
+      "domain": "shopping",
+      "kind": "soft_contradiction",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The record and the user disagree about what was bought last time and the assistant repeats 'the same order' without choosing between them; 'either is fine' either makes the disagreement immaterial or leaves a wrong record standing behind the order placed on it.",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Last time was two kilos of the Colombian",
+          "role": "reading A: the record says one thing"
+        },
+        {
+          "turn_index": 2,
+          "quote": "It was the Brazilian I ordered, not the Colombian",
+          "role": "reading A: the user says another and nobody settles it"
+        },
+        {
+          "turn_index": 2,
+          "quote": "but either is fine",
+          "role": "reading B: the user makes the disagreement immaterial to the order"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you reorder the coffee before Thursday? The same as last time."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Last time was two kilos of the Colombian, delivered on the second."
+        },
+        {
+          "speaker": "user",
+          "text": "That's them. It was the Brazilian I ordered, not the Colombian, but either is fine."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I'll put the same order through, arriving Wednesday."
+        },
+        {
+          "speaker": "user",
+          "text": "Wednesday's fine. Use the account rather than the card."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_033",
+      "domain": "shopping",
+      "kind": "withdrawn_or_not",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "'Only if it's no trouble' either drops the request or merely de-prioritises it; the assistant answers when the cover can be added rather than whether it is worth taking, and 'we'll see' leaves it unclear whether the user still expects a verdict inside the fourteen days.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "can you find out whether the extended cover is worth taking?",
+          "role": "the request as opened"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Only if it's no trouble. Don't hold the order up for it.",
+          "role": "reading A: the request is made conditional and effectively let go"
+        },
+        {
+          "turn_index": 4,
+          "quote": "put the order in today and we'll see",
+          "role": "reading B: the user keeps it alive with a fourteen-day clock now running"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Before the washer goes through, can you find out whether the extended cover is worth taking?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I'd have to ring them. Their page lists the price but not what it actually covers."
+        },
+        {
+          "speaker": "user",
+          "text": "Only if it's no trouble. Don't hold the order up for it."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The order can go in today and the cover can still be added within fourteen days."
+        },
+        {
+          "speaker": "user",
+          "text": "Then put the order in today and we'll see."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_034",
+      "domain": "shopping",
+      "kind": "missing_prior_context",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The user asks which discount rate applies and gets a pointer rather than a figure; whether that closes the question turns on whether the twenty per cent agreed earlier was ever put on the account, which happened, if it did, outside the shown turns.",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "is it the twenty per cent we agreed, or the standard one?",
+          "role": "reading A: a rate is asked for and none is given"
+        },
+        {
+          "turn_index": 3,
+          "quote": "It's whatever the account is set to.",
+          "role": "reading B: a complete pointer to a figure already fixed when the rate was agreed"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Then go ahead and order the six lengths.",
+          "role": "the user commits at a price nobody has stated here"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Is the price you gave me with the trade discount, or without?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "That's the list price. The discount comes off at checkout."
+        },
+        {
+          "speaker": "user",
+          "text": "And is it the twenty per cent we agreed, or the standard one?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "It's whatever the account is set to."
+        },
+        {
+          "speaker": "user",
+          "text": "Then go ahead and order the six lengths."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_035",
+      "domain": "transit",
+      "kind": "partially_answered",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The user asks when a renewal starts and is told when it is processed; processing and validity may be the same thing here, or a ticket renewed early may still run from the thirty-first, and that distinction is the whole question.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "does the new one start straight away, or on the thirty-first?",
+          "role": "the either/or asked"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Online renewals are processed the same day you pay.",
+          "role": "reading A: same-day processing means it starts straight away"
+        },
+        {
+          "turn_index": 6,
+          "quote": "I'll do it online tonight.",
+          "role": "reading B: the user renews early without knowing whether that eats into the ticket already paid for"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "My season ticket runs out on the thirtieth. If I renew online, does the new one start straight away, or on the thirty-first?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Online renewals are processed the same day you pay."
+        },
+        {
+          "speaker": "user",
+          "text": "And does it stay on the same card, or do I get a new one posted out?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "It loads onto the card you already have. Nothing gets posted."
+        },
+        {
+          "speaker": "user",
+          "text": "Can I still renew it at the window if the site plays up?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Yes, the window does renewals until half six on weekdays."
+        },
+        {
+          "speaker": "user",
+          "text": "Good to know. I'll do it online tonight."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_036",
+      "domain": "transit",
+      "kind": "possibly_irrelevant_ambiguity",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "'The early one' fits both trains and a booking has to name one, but the user gives arrival before nine as the only thing that matters and the fares match, so the choice may be immaterial even though one changes at Reading and the other does not.",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "the 6:05 that changes at Reading, and the 6:20 direct",
+          "role": "reading A: two live candidates that differ in a way that could matter"
+        },
+        {
+          "turn_index": 2,
+          "quote": "They both get in before nine, which is all that matters.",
+          "role": "reading B: the user's only criterion is met by both"
+        },
+        {
+          "turn_index": 3,
+          "quote": "They're the same fare on an off-peak return.",
+          "role": "reading B: price does not separate them either"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Book me on the early train on the twelfth."
+        },
+        {
+          "speaker": "assistant",
+          "text": "There are two early ones, the 6:05 that changes at Reading, and the 6:20 direct."
+        },
+        {
+          "speaker": "user",
+          "text": "The early one. They both get in before nine, which is all that matters."
+        },
+        {
+          "speaker": "assistant",
+          "text": "They're the same fare on an off-peak return."
+        },
+        {
+          "speaker": "user",
+          "text": "Then book it and send the reference to my phone."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_037",
+      "domain": "transit",
+      "kind": "soft_contradiction",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The user says they come back from Victoria, where the last train is 9:45, and in the same breath says they will be on the 11:20; the walk between the two stations would square that, but the user never says they will make it.",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "From Victoria the last one is 9:45.",
+          "role": "reading A: the last train from the named station is nearly two hours earlier"
+        },
+        {
+          "turn_index": 2,
+          "quote": "It's Victoria I come back from, but I'll be on the 11:20.",
+          "role": "reading A: two stated facts that do not sit together"
+        },
+        {
+          "turn_index": 3,
+          "quote": "It's a quarter of an hour on foot between the two stations.",
+          "role": "reading B: a walk that would reconcile them, never confirmed"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Is the last train back from Manchester still the 11:20?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "It is from Piccadilly. From Victoria the last one is 9:45."
+        },
+        {
+          "speaker": "user",
+          "text": "It's Victoria I come back from, but I'll be on the 11:20. I'll get something to eat after the match."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The match is due to finish about nine. It's a quarter of an hour on foot between the two stations."
+        },
+        {
+          "speaker": "user",
+          "text": "Is the 11:20 an hourly service, or the only late one?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The only late one. After that it's the first train in the morning."
+        },
+        {
+          "speaker": "user",
+          "text": "That's plenty of time. Book me an open return for Sunday."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_038",
+      "domain": "transit",
+      "kind": "withdrawn_or_not",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The charge is answered but not whether a space has to be reserved at all; floating the idea of driving either parks that question or leaves it live, since the user books the seat anyway and could still turn up with the bike.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Do I need to reserve a space for it, and is there a charge?",
+          "role": "two things asked, only one answered"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I might just drive if the weather's poor anyway.",
+          "role": "reading A: the bike question is parked because the trip may not involve one"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Book the seat for me either way.",
+          "role": "reading B: the train booking goes ahead with the bike question still standing"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I've got a bike on the Saturday train to Exeter. Do I need to reserve a space for it, and is there a charge?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Bike reservations are free with that operator."
+        },
+        {
+          "speaker": "user",
+          "text": "No charge then. I might just drive if the weather's poor anyway."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The forecast for Saturday is dry so far."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll decide on Friday night. Book the seat for me either way."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_039",
+      "domain": "transit",
+      "kind": "missing_prior_context",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "'The reservation moved across' either confirms the table seat or only that some reservation followed the ticket, and the second traveller the user counts in at the end was dealt with, if at all, in turns that are not shown.",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "is that still on there?",
+          "role": "reading A: the table seat specifically is never confirmed"
+        },
+        {
+          "turn_index": 4,
+          "quote": "that's both of us sorted for Friday",
+          "role": "reading A: a second traveller appears whose booking is never discussed here"
+        },
+        {
+          "turn_index": 3,
+          "quote": "The reservation moved across with the ticket.",
+          "role": "reading B: a direct answer the user treats as covering it"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Did you manage to change the return leg?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Yes, it's on the 18:05 now. The outbound is untouched."
+        },
+        {
+          "speaker": "user",
+          "text": "And the seat with the table, is that still on there?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The reservation moved across with the ticket."
+        },
+        {
+          "speaker": "user",
+          "text": "Good. Then that's both of us sorted for Friday."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_040",
+      "domain": "cooking",
+      "kind": "partially_answered",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The user asks about a specific fourteen-hour cold rise and is told that mixing the night before is common; 'the night before' either covers their plan exactly or is a loose category that never touches the number they asked about.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Is fourteen hours in the fridge too long for it, or is that fine?",
+          "role": "the specific question, with a number in it"
+        },
+        {
+          "turn_index": 1,
+          "quote": "a lot of people mix the dough the night before",
+          "role": "reading A: this endorses the overnight plan the user described"
+        },
+        {
+          "turn_index": 6,
+          "quote": "It goes in the fridge at six and comes out at seven.",
+          "role": "reading B: the user commits to the full fourteen hours, never addressed as such"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm mixing the bread dough at six tonight and I can't bake until eight tomorrow morning. Is fourteen hours in the fridge too long for it, or is that fine?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "A cold rise gives you a better crumb, and a lot of people mix the dough the night before."
+        },
+        {
+          "speaker": "user",
+          "text": "How long does it need out of the fridge before it goes in the oven?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "About an hour on the counter, while the oven comes up to temperature."
+        },
+        {
+          "speaker": "user",
+          "text": "Do I knock it back when it comes out, or leave it as it is?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Leave it. Shape it straight into the tin and let it come round in there."
+        },
+        {
+          "speaker": "user",
+          "text": "Straight into the tin, then. It goes in the fridge at six and comes out at seven."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_041",
+      "domain": "cooking",
+      "kind": "possibly_irrelevant_ambiguity",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "Two tubs of stock are live and the user never says which goes in, but the assistant says both work and the only difference named is handled by tasting before seasoning, so the next step may not turn on the choice at all.",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "one chicken, one from the ham on Sunday",
+          "role": "reading A: two live candidates and only one goes in the pan"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Both will work with the leeks.",
+          "role": "reading B: the choice does not affect the dish"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Taste it before you put any salt in.",
+          "role": "reading B: the one difference named is handled the same way either way"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm doing the risotto tonight. Do I use the stock in the fridge door, or the cubes?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Either. The fresh one is a bit saltier, so hold back on the seasoning if you use it."
+        },
+        {
+          "speaker": "user",
+          "text": "There are two tubs in the door, actually: one chicken, one from the ham on Sunday."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Both will work with the leeks. Taste it before you put any salt in."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll taste it first. I'll get it on about seven."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_042",
+      "domain": "cooking",
+      "kind": "soft_contradiction",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "A one-week keeping time and a plan running to nearly a fortnight do not fit, but an exception was offered for oil on the top and 'it'll be fine' comes straight after the plan, so the gap may already have been squared.",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "A week in the fridge in a sealed jar",
+          "role": "reading A: the keeping time as stated"
+        },
+        {
+          "turn_index": 2,
+          "quote": "use the rest for the dinner on the Saturday after",
+          "role": "reading A: nearly a fortnight, well past the week quoted"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Use a clean spoon every time and it'll be fine.",
+          "role": "reading B: the plan is heard and pronounced fine"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm making the curry paste tonight. How long does it keep?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "A week in the fridge in a sealed jar, and longer if you cover the top with oil."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll do a double batch on Sunday and use the rest for the dinner on the Saturday after."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Use a clean spoon every time and it'll be fine."
+        },
+        {
+          "speaker": "user",
+          "text": "Clean spoon, sealed jar. I'll get the coriander seed tomorrow."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_043",
+      "domain": "cooking",
+      "kind": "withdrawn_or_not",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The user offers their own guess in answer to the assistant's narrowing question, which either settles the matter themselves or simply hands back a fact and waits; 'either way' then sidesteps the verdict without anyone noticing.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Does the starter need feeding before I use it, or can it go straight in from the fridge?",
+          "role": "the question raised"
+        },
+        {
+          "turn_index": 2,
+          "quote": "It'll be fine, I should think",
+          "role": "reading A: the user answers their own question"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Give it a good stir before you measure it out, either way.",
+          "role": "reading B: the assistant's advice holds on both branches and never gives the verdict"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Does the starter need feeding before I use it, or can it go straight in from the fridge?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "How long has it been in there?"
+        },
+        {
+          "speaker": "user",
+          "text": "Since the weekend. It'll be fine, I should think, it was doubling nicely before it went in."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Give it a good stir before you measure it out, either way."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll stir it well. I'll get the flour down off the shelf now."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_044",
+      "domain": "cooking",
+      "kind": "missing_prior_context",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The answer is given as a conditional and the user then reports that the condition failed; whether the exchange still answers the question by implication, or leaves it open, depends on how much stock the big pan left on a Sunday nobody here describes.",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "And there's enough stock left from Sunday?",
+          "role": "the question asked"
+        },
+        {
+          "turn_index": 3,
+          "quote": "There should be, if you used the small pan.",
+          "role": "reading B: a conditional the next turn resolves, so an answer is effectively given"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I used the big one.",
+          "role": "reading A: the condition the answer rested on fails and no fresh answer follows"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Right, is the sauce the one with the cream in it, or the other one?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The other one. Cream was for the version you made at Easter."
+        },
+        {
+          "speaker": "user",
+          "text": "And there's enough stock left from Sunday?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "There should be, if you used the small pan."
+        },
+        {
+          "speaker": "user",
+          "text": "I used the big one."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Then check the tub before you start."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll have a look when I'm in. I'll start it at six either way."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_045",
+      "domain": "household",
+      "kind": "partially_answered",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "'Nothing stays on Tuesday' reads as covering every bin, but the garden waste turns out to be on a separate fortnightly cycle and the reply about that one gives the interval without ever naming the day.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Does that take in the garden waste bin as well, or just the general one?",
+          "role": "the either/or asked"
+        },
+        {
+          "turn_index": 1,
+          "quote": "The whole round is shifting a day, so nothing stays on Tuesday.",
+          "role": "reading A: an explicit universal that would cover the garden waste"
+        },
+        {
+          "turn_index": 3,
+          "quote": "That one alternates, so it comes every other week.",
+          "role": "reading B: the fortnightly bin is treated apart and its day is never given"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "The council letter says the bin collection moves to Wednesdays from next month. Does that take in the garden waste bin as well, or just the general one?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The whole round is shifting a day, so nothing stays on Tuesday."
+        },
+        {
+          "speaker": "user",
+          "text": "The garden waste is fortnightly, though."
+        },
+        {
+          "speaker": "assistant",
+          "text": "It is. That one alternates, so it comes every other week."
+        },
+        {
+          "speaker": "user",
+          "text": "Then I'll put a note on the calendar for Wednesdays."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_046",
+      "domain": "household",
+      "kind": "possibly_irrelevant_ambiguity",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "Two meters are live and the user names neither; only one is billed, which makes the choice look immaterial, but a single figure still goes on the form and nothing said here identifies the live one.",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "the one with the black dial and the newer digital one",
+          "role": "reading A: two live candidates and one figure to submit"
+        },
+        {
+          "turn_index": 2,
+          "quote": "They only bill us on the one that's in use, so the other won't come into it.",
+          "role": "reading B: only one can matter, so the choice makes no difference"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I'll put it in on the online form tonight.",
+          "role": "reading A: a single number goes on the form and its source is never said"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "The meter reading needs sending in. Can you do it?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "There are two in the cupboard, the one with the black dial and the newer digital one."
+        },
+        {
+          "speaker": "user",
+          "text": "Send the reading off. They only bill us on the one that's in use, so the other won't come into it."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I'll put it in on the online form tonight."
+        },
+        {
+          "speaker": "user",
+          "text": "Tonight is fine. Take a photo of it as well for our own records."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_047",
+      "domain": "household",
+      "kind": "soft_contradiction",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "The user says they never light the fire before November and then that it was going last night; that is either an ordinary exception on a cold evening, which the Friday booking absorbs, or a sign the stated practice is unreliable, and nobody puts the two together.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "We never light the fire before November",
+          "role": "reading A: a stated practice"
+        },
+        {
+          "turn_index": 2,
+          "quote": "we had it going last night",
+          "role": "reading A: the same practice contradicted two turns later, unremarked"
+        },
+        {
+          "turn_index": 2,
+          "quote": "The grate has to be cold for a full day before he comes",
+          "role": "reading B: the twenty-fourth is days off, so an odd early fire changes nothing"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you book the chimney sweep for the week of the twentieth of October? We never light the fire before November, so any day that week suits."
+        },
+        {
+          "speaker": "assistant",
+          "text": "He's got Monday the twentieth or Friday the twenty-fourth."
+        },
+        {
+          "speaker": "user",
+          "text": "Friday the twenty-fourth. The grate has to be cold for a full day before he comes, and we had it going last night."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Friday the twenty-fourth, then. He'll want the hearth cleared as well."
+        },
+        {
+          "speaker": "user",
+          "text": "Does he bring sheets for the carpet, or do we put something down?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "He brings his own sheets and a vacuum."
+        },
+        {
+          "speaker": "user",
+          "text": "That's a relief. I'll clear the hearth the night before."
+        }
+      ]
+    },
+    {
+      "item_id": "indet_048",
+      "domain": "household",
+      "kind": "withdrawn_or_not",
+      "subtype": "indeterminate",
+      "confidence": "low",
+      "why_undecidable": "Both requests were going on one form, so 'leave it' plausibly cancels both, but the reason the user gives covers only the missed bin and the caddy liners are never mentioned again by either of them.",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "the green bin they missed, and the caddy liners we're supposed to get free?",
+          "role": "two things requested on one contact"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Actually, leave it",
+          "role": "reading A: the reason given covers only the bin, so the liners stay outstanding"
+        },
+        {
+          "turn_index": 1,
+          "quote": "I can do both on the same form.",
+          "role": "reading B: one form carried both, and cancelling it cancels both"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you get on to the council about two things: the green bin they missed, and the caddy liners we're supposed to get free?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can do both on the same form. It asks for the collection date."
+        },
+        {
+          "speaker": "user",
+          "text": "It was Tuesday. Actually, leave it, they came back for it on Thursday in the end."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Then there's nothing to report."
+        },
+        {
+          "speaker": "user",
+          "text": "No. I'll put the bin out on Monday night from now on."
+        }
+      ]
+    }
+  ]
+}

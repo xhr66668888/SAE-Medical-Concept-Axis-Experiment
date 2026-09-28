@@ -1,0 +1,79 @@
+{
+  "family_id": "cooking_012",
+  "domain": "cooking",
+  "task_goal": "portion and freeze the leftovers of a Sunday gammon along with the pan of cooking liquor",
+  "n_turns": 5,
+  "tail_anchor": "The dishwasher is on its second load already.",
+  "notes": "Both rep cells carry the same emphasis repetition about portions for one, so the repetition is benign in both; rep_unres and rep_res differ only in 'the freezer' against 'the chest freezer', with two freezers live and different snags attached to each. The norep pair differs only in the opening clause of turn 3, which either answers the question about the fat or does not.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "The kitchen freezer is down to its last drawer, so anything in there has to lie flat, and the chest freezer in the garage has room but is due to be defrosted on Thursday.", "role": "two candidate freezers are live, each with a different snag"},
+        {"turn_index": 2, "quote": "I'll get it into the freezer tonight once it is cold", "role": "the referring expression picks out neither"},
+        {"turn_index": 3, "quote": "Spread the slices on a tray for twenty minutes so they go in cold", "role": "assistant answers the cooling question without settling which freezer"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Sunday lunch is over and there is half a gammon and a big pan of the liquor left. I want it all in portions for one, not great big bags. How long will the gammon keep once it is frozen?"},
+        {"speaker": "assistant", "text": "Portions for one, understood. Sliced and wrapped tight it is good for three months, and the liquor freezes just as well for stock. The kitchen freezer is down to its last drawer, so anything in there has to lie flat, and the chest freezer in the garage has room but is due to be defrosted on Thursday."},
+        {"speaker": "user", "text": "Three months is plenty. And I do mean portions for one, not great big bags. I'll get it into the freezer tonight once it is cold. Does it need to cool right down first?"},
+        {"speaker": "assistant", "text": "It does. Spread the slices on a tray for twenty minutes so they go in cold, or everything around them softens."},
+        {"speaker": "user", "text": "Twenty minutes on a tray, then. The dishwasher is on its second load already."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "I want it all in portions for one, not great big bags.", "role": "preference stated"},
+        {"turn_index": 1, "quote": "Portions for one, understood.", "role": "preference already accepted"},
+        {"turn_index": 2, "quote": "And I do mean portions for one, not great big bags.", "role": "restated for emphasis, nothing new is opened"},
+        {"turn_index": 2, "quote": "I'll get it into the chest freezer tonight once it is cold", "role": "picks one of the two freezers"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Sunday lunch is over and there is half a gammon and a big pan of the liquor left. I want it all in portions for one, not great big bags. How long will the gammon keep once it is frozen?"},
+        {"speaker": "assistant", "text": "Portions for one, understood. Sliced and wrapped tight it is good for three months, and the liquor freezes just as well for stock. The kitchen freezer is down to its last drawer, so anything in there has to lie flat, and the chest freezer in the garage has room but is due to be defrosted on Thursday."},
+        {"speaker": "user", "text": "Three months is plenty. And I do mean portions for one, not great big bags. I'll get it into the chest freezer tonight once it is cold. Does it need to cool right down first?"},
+        {"speaker": "assistant", "text": "It does. Spread the slices on a tray for twenty minutes so they go in cold, or everything around them softens."},
+        {"speaker": "user", "text": "Twenty minutes on a tray, then. The dishwasher is on its second load already."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "Will the liquor go cloudy if I freeze it with the fat left on?", "role": "request"},
+        {"turn_index": 3, "quote": "Spread the gammon slices on a tray for twenty minutes so they go in cold", "role": "assistant answers about the slices instead"},
+        {"turn_index": 3, "quote": "or everything around them softens", "role": "last assistant turn, still nothing about the fat on the liquor"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Sunday lunch is over and there is half a gammon and a big pan of the liquor left. I want it all in portions for one, not great big bags. How long will the gammon keep once it is frozen?"},
+        {"speaker": "assistant", "text": "Portions for one, understood. Sliced and wrapped tight it is good for three months, and the liquor freezes just as well for stock. The kitchen freezer is down to its last drawer, so anything in there has to lie flat, and the chest freezer in the garage has room but is due to be defrosted on Thursday."},
+        {"speaker": "user", "text": "The garage one it is, then; the kitchen drawer would never take this lot. Will the liquor go cloudy if I freeze it with the fat left on?"},
+        {"speaker": "assistant", "text": "Spread the gammon slices on a tray for twenty minutes so they go in cold, or everything around them softens."},
+        {"speaker": "user", "text": "Twenty minutes on a tray, then. The dishwasher is on its second load already."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Sliced and wrapped tight it is good for three months", "role": "answers the opening request"},
+        {"turn_index": 2, "quote": "The garage one it is, then", "role": "picks one of the two freezers"},
+        {"turn_index": 3, "quote": "Lift the fat off once it sets and the liquor stays clear", "role": "answers the last open request"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Sunday lunch is over and there is half a gammon and a big pan of the liquor left. I want it all in portions for one, not great big bags. How long will the gammon keep once it is frozen?"},
+        {"speaker": "assistant", "text": "Portions for one, understood. Sliced and wrapped tight it is good for three months, and the liquor freezes just as well for stock. The kitchen freezer is down to its last drawer, so anything in there has to lie flat, and the chest freezer in the garage has room but is due to be defrosted on Thursday."},
+        {"speaker": "user", "text": "The garage one it is, then; the kitchen drawer would never take this lot. Will the liquor go cloudy if I freeze it with the fat left on?"},
+        {"speaker": "assistant", "text": "Lift the fat off once it sets and the liquor stays clear. Spread the gammon slices on a tray for twenty minutes so they go in cold."},
+        {"speaker": "user", "text": "Twenty minutes on a tray, then. The dishwasher is on its second load already."}
+      ]
+    }
+  }
+}

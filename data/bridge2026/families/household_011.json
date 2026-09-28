@@ -1,0 +1,77 @@
+{
+  "family_id": "household_011",
+  "domain": "household",
+  "task_goal": "settle where two weekend visitors sleep and who fetches them from the station",
+  "n_turns": 5,
+  "tail_anchor": "I'll be at the barrier with the car keys.",
+  "notes": "rep_unres and rep_res differ by two words in turn 4 (it / the box room). Turn 3 re-activates both rooms in one balanced clause and there is only one spare duvet, so the bare pronoun has no winner and the next action cannot be taken. norep_unres and norep_res differ only in the first sentence of turn 3, which either gives the duvet's location or answers the camp bed question.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "there is only the one spare duvet to find", "role": "only one room can have it"},
+        {"turn_index": 3, "quote": "the box room only has the little radiator and the front room has that draught under the sash", "role": "both candidate rooms re-activated together, neither preferred"},
+        {"turn_index": 4, "quote": "Then put the spare duvet in it and keep the cat out", "role": "referring expression that picks out neither room"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Dougie, my cousin Fiona and her lad are staying Friday to Sunday, in on the half five train. Could we give them the box room and put the camp bed in the front room?"},
+        {"speaker": "assistant", "text": "That is fine by me, the box room and the front room it is. I'll shift the drying rack out of the way tonight."},
+        {"speaker": "user", "text": "Could we give them the box room and put the camp bed in the front room, and bring the ironing board down too? Fiona is bringing her own pillows, so there is only the one spare duvet to find."},
+        {"speaker": "assistant", "text": "It is on top of the wardrobe, and the board can go in the hall cupboard. Neither room is properly warm; the box room only has the little radiator and the front room has that draught under the sash. Remind me what time their train gets in."},
+        {"speaker": "user", "text": "Half five. Then put the spare duvet in it and keep the cat out. I'll be at the barrier with the car keys."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 4, "quote": "Then put the spare duvet in the box room and keep the cat out", "role": "names the room, so the next action is determined"},
+        {"turn_index": 3, "quote": "Remind me what time their train gets in.", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "Half five.", "role": "requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Dougie, my cousin Fiona and her lad are staying Friday to Sunday, in on the half five train. Could we give them the box room and put the camp bed in the front room?"},
+        {"speaker": "assistant", "text": "That is fine by me, the box room and the front room it is. I'll shift the drying rack out of the way tonight."},
+        {"speaker": "user", "text": "Could we give them the box room and put the camp bed in the front room, and bring the ironing board down too? Fiona is bringing her own pillows, so there is only the one spare duvet to find."},
+        {"speaker": "assistant", "text": "It is on top of the wardrobe, and the board can go in the hall cupboard. Neither room is properly warm; the box room only has the little radiator and the front room has that draught under the sash. Remind me what time their train gets in."},
+        {"speaker": "user", "text": "Half five. Then put the spare duvet in the box room and keep the cat out. I'll be at the barrier with the car keys."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Is the camp bed still under our bed, or did that go up to the loft with the suitcases?", "role": "request"},
+        {"turn_index": 1, "quote": "They are very welcome, it has been two years.", "role": "assistant answers a different part"},
+        {"turn_index": 3, "quote": "The duvet is on top of the wardrobe behind the suit carrier.", "role": "last assistant turn, still no answer"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Dougie, my cousin Fiona and her lad land on Friday and go home on the Sunday. Is the camp bed still under our bed, or did that go up to the loft with the suitcases?"},
+        {"speaker": "assistant", "text": "They are very welcome, it has been two years. I'll put Fiona in the box room and the lad can have the front room with the telly."},
+        {"speaker": "user", "text": "She will like that, it is the quiet side of the house. The lad will be on the camp bed, and there is only the one spare duvet because she brings her own pillows."},
+        {"speaker": "assistant", "text": "The duvet is on top of the wardrobe behind the suit carrier. I'll shift the drying rack tonight and put the ironing board in the hall cupboard."},
+        {"speaker": "user", "text": "Perfect, that is the pair of them sorted. I'll be at the barrier with the car keys."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "The camp bed is still under ours, I had it out at Easter.", "role": "answers the only open request"},
+        {"turn_index": 1, "quote": "I'll put Fiona in the box room and the lad can have the front room with the telly.", "role": "both sleeping places are determined"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Dougie, my cousin Fiona and her lad land on Friday and go home on the Sunday. Is the camp bed still under our bed, or did that go up to the loft with the suitcases?"},
+        {"speaker": "assistant", "text": "They are very welcome, it has been two years. I'll put Fiona in the box room and the lad can have the front room with the telly."},
+        {"speaker": "user", "text": "She will like that, it is the quiet side of the house. The lad will be on the camp bed, and there is only the one spare duvet because she brings her own pillows."},
+        {"speaker": "assistant", "text": "The camp bed is still under ours, I had it out at Easter. I'll shift the drying rack tonight and put the ironing board in the hall cupboard."},
+        {"speaker": "user", "text": "Perfect, that is the pair of them sorted. I'll be at the barrier with the car keys."}
+      ]
+    }
+  }
+}

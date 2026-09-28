@@ -1,0 +1,218 @@
+{
+  "family_id": "household_002",
+  "domain": "household",
+  "task_goal": "arrange cover at the flat for the fibre engineer's installation visit",
+  "n_turns": 7,
+  "tail_anchor": "Right, I'd better get back to the depot.",
+  "notes": "norep_unres and norep_res differ only in assistant turn 3: one clause either changes the subject or answers the router question. rep_unres and rep_res differ only in whether turn 1 puts one spare key or two into play, so the identical-looking echo in turn 4 is either under-determined or a restated, already-accepted preference.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "There's the spare key in the biscuit tin, and Maureen still has the spare key for the side door",
+          "role": "two live candidate referents"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Then let's use the spare key",
+          "role": "referring expression that picks out neither"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Sensible. I'll stick a note on the cupboard door so he doesn't go poking about.",
+          "role": "assistant turn that does not disambiguate"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Dev, the fibre engineer is coming Thursday between eight and twelve and I'm at the depot all day. Can you make sure he can get in?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I'm out till eleven, but he'll get in. There's the spare key in the biscuit tin, and Maureen still has the spare key for the side door."
+        },
+        {
+          "speaker": "user",
+          "text": "Then let's use the spare key. He only needs the cupboard under the stairs, nothing in the loft."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Fine. Aisha is off nights on Thursday, so she'll be asleep upstairs, and I'd rather nobody woke her."
+        },
+        {
+          "speaker": "user",
+          "text": "Nobody will. Then let's use the spare key, and I'll message him where to find it."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Sensible. I'll stick a note on the cupboard door so he doesn't go poking about."
+        },
+        {
+          "speaker": "user",
+          "text": "Good idea. Right, I'd better get back to the depot."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "I'll leave the spare key from the biscuit tin under the boot scraper for him",
+          "role": "single determinate plan, accepted by the user in the next turn"
+        },
+        {
+          "turn_index": 2,
+          "quote": "The one from the biscuit tin, yes.",
+          "role": "user accepts the plan"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Leave the spare key from the biscuit tin under the boot scraper",
+          "role": "restatement for emphasis of a plan already agreed"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Dev, the fibre engineer is coming Thursday between eight and twelve and I'm at the depot all day. Can you make sure he can get in?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I'm out till eleven, but he'll get in. I'll leave the spare key from the biscuit tin under the boot scraper for him."
+        },
+        {
+          "speaker": "user",
+          "text": "The one from the biscuit tin, yes. He only needs the cupboard under the stairs, nothing in the loft."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Fine. Aisha is off nights on Thursday, so she'll be asleep upstairs, and I'd rather nobody woke her."
+        },
+        {
+          "speaker": "user",
+          "text": "Nobody will. Leave the spare key from the biscuit tin under the boot scraper, and I'll message him where to find it."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Sensible. I'll stick a note on the cupboard door so he doesn't go poking about."
+        },
+        {
+          "speaker": "user",
+          "text": "Good idea. Right, I'd better get back to the depot."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Do they want the old router handed back on the day?",
+          "role": "request"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Lectures till eleven for me, I'm afraid.",
+          "role": "assistant answers a different part"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I'll chalk a mark on the cupboard door for him.",
+          "role": "assistant turn that fails to answer"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Dev, the fibre engineer is coming Thursday between eight and twelve and I'm at the depot all day. Do they want the old router handed back on the day?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Lectures till eleven for me, I'm afraid. Maureen is about in the morning though, she's here for the extractor fan."
+        },
+        {
+          "speaker": "user",
+          "text": "That helps. He'll want the cupboard under the stairs and nothing else, so he will not be long."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I'll chalk a mark on the cupboard door for him. Aisha is off nights, so she'll be asleep upstairs."
+        },
+        {
+          "speaker": "user",
+          "text": "Then Maureen can let him in and keep him downstairs."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I'll leave Maureen a note by the kettle. Say the day back to me and I'll put it in my phone."
+        },
+        {
+          "speaker": "user",
+          "text": "Thursday. Right, I'd better get back to the depot."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "You just recycle the old router, they don't take it back.",
+          "role": "answers the only open request"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Say the day back to me and I'll put it in my phone",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 6,
+          "quote": "Thursday.",
+          "role": "requested read-back, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Dev, the fibre engineer is coming Thursday between eight and twelve and I'm at the depot all day. Do they want the old router handed back on the day?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Lectures till eleven for me, I'm afraid. Maureen is about in the morning though, she's here for the extractor fan."
+        },
+        {
+          "speaker": "user",
+          "text": "That helps. He'll want the cupboard under the stairs and nothing else, so he will not be long."
+        },
+        {
+          "speaker": "assistant",
+          "text": "You just recycle the old router, they don't take it back. Aisha is off nights, so she'll be asleep upstairs."
+        },
+        {
+          "speaker": "user",
+          "text": "Then Maureen can let him in and keep him downstairs."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I'll leave Maureen a note by the kettle. Say the day back to me and I'll put it in my phone."
+        },
+        {
+          "speaker": "user",
+          "text": "Thursday. Right, I'd better get back to the depot."
+        }
+      ]
+    }
+  }
+}

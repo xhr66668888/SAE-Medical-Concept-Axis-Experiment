@@ -1,0 +1,81 @@
+{
+  "family_id": "shopping_021",
+  "domain": "shopping",
+  "task_goal": "move a Brindle and Co dog-food subscription down to the small box and shift the billing date",
+  "n_turns": 5,
+  "tail_anchor": "No need to send a paper invoice with it.",
+  "notes": "The rep pair differs only in whether turn 1 contains the clause saying the loyalty rate stays. The norep pair differs by one figure in turn 1, the loyalty rate holding from £30 up or from £20 up against a small box priced at £24.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Does dropping the size lose me the twenty per cent I have been getting?", "role": "request"},
+        {"turn_index": 1, "quote": "We can change the size whenever you like. The small box is £24 against £39 for the large.", "role": "assistant gives the prices and says nothing about the rate"},
+        {"turn_index": 2, "quote": "Does dropping the size lose me the twenty per cent I have been getting?", "role": "re-request"},
+        {"turn_index": 3, "quote": "Noted, the small box from the next run, and I will move the billing date over.", "role": "assistant makes the change and still does not say what happens to the rate"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I want to change my Brindle and Co dog-food subscription down to the small box. Does dropping the size lose me the twenty per cent I have been getting?"},
+        {"speaker": "assistant", "text": "We can change the size whenever you like. The small box is £24 against £39 for the large."},
+        {"speaker": "user", "text": "Then put me on the small box, and the billing on the 12th of the month from now on. Does dropping the size lose me the twenty per cent I have been getting?"},
+        {"speaker": "assistant", "text": "Noted, the small box from the next run, and I will move the billing date over."},
+        {"speaker": "user", "text": "The small box, and the billing on the 12th of the month. No need to send a paper invoice with it."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "the twenty per cent stays on the account", "role": "discharges the only request"},
+        {"turn_index": 3, "quote": "Could you read the new size and the billing day back to me", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "The small box, and the billing on the 12th of the month.", "role": "the requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. I want to change my Brindle and Co dog-food subscription down to the small box. Does dropping the size lose me the twenty per cent I have been getting?"},
+        {"speaker": "assistant", "text": "We can change the size whenever you like, and the twenty per cent stays on the account. The small box is £24 against £39 for the large."},
+        {"speaker": "user", "text": "Then put me on the small box, and the billing on the 12th of the month from now on."},
+        {"speaker": "assistant", "text": "Noted. Could you read the new size and the billing day back to me before I key it in?"},
+        {"speaker": "user", "text": "The small box, and the billing on the 12th of the month. No need to send a paper invoice with it."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Your twenty per cent loyalty rate holds on anything from £30 up.", "role": "the threshold the rate depends on"},
+        {"turn_index": 1, "quote": "There is a small box at £24", "role": "the price of the box the user goes on to pick, below that threshold"},
+        {"turn_index": 2, "quote": "Put me on the small box then", "role": "the action that takes the account under the threshold"},
+        {"turn_index": 2, "quote": "that twenty per cent is what keeps me inside it", "role": "why losing the rate blocks what the user is trying to do"},
+        {"turn_index": 3, "quote": "I have switched the size and the date on the account", "role": "assistant makes the change without raising the clash"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. My Brindle and Co dog-food subscription is a bit much these days. What sizes do you do below the large box?"},
+        {"speaker": "assistant", "text": "There is a small box at £24 and a medium at £31. Your twenty per cent loyalty rate holds on anything from £30 up."},
+        {"speaker": "user", "text": "Put me on the small box then, and shift the billing to the 12th. I am working to a set figure each month and that twenty per cent is what keeps me inside it."},
+        {"speaker": "assistant", "text": "Right, I have switched the size and the date on the account. Will the same delivery day still work for you?"},
+        {"speaker": "user", "text": "Yes, Tuesdays are fine. No need to send a paper invoice with it."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "There is a small box at £24 and a medium at £31.", "role": "answers the user's only request"},
+        {"turn_index": 1, "quote": "Your twenty per cent loyalty rate holds on anything from £20 up.", "role": "the £24 small box clears the threshold, so the rate the user relies on survives"},
+        {"turn_index": 4, "quote": "Yes, Tuesdays are fine.", "role": "settles the last open item, the delivery day"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello. My Brindle and Co dog-food subscription is a bit much these days. What sizes do you do below the large box?"},
+        {"speaker": "assistant", "text": "There is a small box at £24 and a medium at £31. Your twenty per cent loyalty rate holds on anything from £20 up."},
+        {"speaker": "user", "text": "Put me on the small box then, and shift the billing to the 12th. I am working to a set figure each month and that twenty per cent is what keeps me inside it."},
+        {"speaker": "assistant", "text": "Right, I have switched the size and the date on the account. Will the same delivery day still work for you?"},
+        {"speaker": "user", "text": "Yes, Tuesdays are fine. No need to send a paper invoice with it."}
+      ]
+    }
+  }
+}

@@ -1,0 +1,2802 @@
+{
+  "F0000_a": {
+    "item_id": "appointment_004__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0000_b": {
+    "item_id": "appointment_004__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0000_c": {
+    "item_id": "appointment_004__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0000_d": {
+    "item_id": "appointment_004__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0001_a": {
+    "item_id": "appointment_004__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0001_b": {
+    "item_id": "appointment_004__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0001_c": {
+    "item_id": "appointment_004__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0001_d": {
+    "item_id": "appointment_004__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0002_a": {
+    "item_id": "appointment_004__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0002_b": {
+    "item_id": "appointment_004__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0002_c": {
+    "item_id": "appointment_004__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0002_d": {
+    "item_id": "appointment_004__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0003_a": {
+    "item_id": "appointment_004__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0003_b": {
+    "item_id": "appointment_004__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0003_c": {
+    "item_id": "appointment_004__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0003_d": {
+    "item_id": "appointment_004__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0004_a": {
+    "item_id": "appointment_012__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0004_b": {
+    "item_id": "appointment_012__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0004_c": {
+    "item_id": "appointment_012__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0004_d": {
+    "item_id": "appointment_012__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0005_a": {
+    "item_id": "appointment_012__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0005_b": {
+    "item_id": "appointment_012__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0005_c": {
+    "item_id": "appointment_012__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0005_d": {
+    "item_id": "appointment_012__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0006_a": {
+    "item_id": "appointment_012__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0006_b": {
+    "item_id": "appointment_012__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0006_c": {
+    "item_id": "appointment_012__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0006_d": {
+    "item_id": "appointment_012__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0007_a": {
+    "item_id": "appointment_012__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0007_b": {
+    "item_id": "appointment_012__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0007_c": {
+    "item_id": "appointment_012__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0007_d": {
+    "item_id": "appointment_012__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0008_a": {
+    "item_id": "appointment_017__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0008_b": {
+    "item_id": "appointment_017__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0008_c": {
+    "item_id": "appointment_017__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0008_d": {
+    "item_id": "appointment_017__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0009_a": {
+    "item_id": "appointment_017__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0009_b": {
+    "item_id": "appointment_017__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0009_c": {
+    "item_id": "appointment_017__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0009_d": {
+    "item_id": "appointment_017__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0010_a": {
+    "item_id": "appointment_017__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0010_b": {
+    "item_id": "appointment_017__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0010_c": {
+    "item_id": "appointment_017__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0010_d": {
+    "item_id": "appointment_017__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0011_a": {
+    "item_id": "appointment_017__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0011_b": {
+    "item_id": "appointment_017__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0011_c": {
+    "item_id": "appointment_017__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0011_d": {
+    "item_id": "appointment_017__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0012_a": {
+    "item_id": "appointment_022__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0012_b": {
+    "item_id": "appointment_022__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0012_c": {
+    "item_id": "appointment_022__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0012_d": {
+    "item_id": "appointment_022__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0013_a": {
+    "item_id": "appointment_022__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0013_b": {
+    "item_id": "appointment_022__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0013_c": {
+    "item_id": "appointment_022__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0013_d": {
+    "item_id": "appointment_022__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0014_a": {
+    "item_id": "appointment_022__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0014_b": {
+    "item_id": "appointment_022__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0014_c": {
+    "item_id": "appointment_022__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0014_d": {
+    "item_id": "appointment_022__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0015_a": {
+    "item_id": "appointment_022__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0015_b": {
+    "item_id": "appointment_022__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0015_c": {
+    "item_id": "appointment_022__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0015_d": {
+    "item_id": "appointment_022__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0016_a": {
+    "item_id": "appointment_024__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0016_b": {
+    "item_id": "appointment_024__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0016_c": {
+    "item_id": "appointment_024__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0016_d": {
+    "item_id": "appointment_024__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "appointment"
+  },
+  "F0017_a": {
+    "item_id": "appointment_024__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0017_b": {
+    "item_id": "appointment_024__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0017_c": {
+    "item_id": "appointment_024__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0017_d": {
+    "item_id": "appointment_024__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "appointment"
+  },
+  "F0018_a": {
+    "item_id": "appointment_024__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0018_b": {
+    "item_id": "appointment_024__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0018_c": {
+    "item_id": "appointment_024__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0018_d": {
+    "item_id": "appointment_024__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "appointment"
+  },
+  "F0019_a": {
+    "item_id": "appointment_024__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0019_b": {
+    "item_id": "appointment_024__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0019_c": {
+    "item_id": "appointment_024__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0019_d": {
+    "item_id": "appointment_024__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "appointment"
+  },
+  "F0020_a": {
+    "item_id": "cooking_006__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0020_b": {
+    "item_id": "cooking_006__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0020_c": {
+    "item_id": "cooking_006__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0020_d": {
+    "item_id": "cooking_006__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0021_a": {
+    "item_id": "cooking_006__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0021_b": {
+    "item_id": "cooking_006__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0021_c": {
+    "item_id": "cooking_006__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0021_d": {
+    "item_id": "cooking_006__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0022_a": {
+    "item_id": "cooking_006__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0022_b": {
+    "item_id": "cooking_006__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0022_c": {
+    "item_id": "cooking_006__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0022_d": {
+    "item_id": "cooking_006__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0023_a": {
+    "item_id": "cooking_006__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0023_b": {
+    "item_id": "cooking_006__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0023_c": {
+    "item_id": "cooking_006__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0023_d": {
+    "item_id": "cooking_006__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0024_a": {
+    "item_id": "cooking_009__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0024_b": {
+    "item_id": "cooking_009__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0024_c": {
+    "item_id": "cooking_009__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0024_d": {
+    "item_id": "cooking_009__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0025_a": {
+    "item_id": "cooking_009__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0025_b": {
+    "item_id": "cooking_009__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0025_c": {
+    "item_id": "cooking_009__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0025_d": {
+    "item_id": "cooking_009__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0026_a": {
+    "item_id": "cooking_009__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0026_b": {
+    "item_id": "cooking_009__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0026_c": {
+    "item_id": "cooking_009__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0026_d": {
+    "item_id": "cooking_009__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0027_a": {
+    "item_id": "cooking_009__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0027_b": {
+    "item_id": "cooking_009__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0027_c": {
+    "item_id": "cooking_009__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0027_d": {
+    "item_id": "cooking_009__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0028_a": {
+    "item_id": "cooking_010__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0028_b": {
+    "item_id": "cooking_010__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0028_c": {
+    "item_id": "cooking_010__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0028_d": {
+    "item_id": "cooking_010__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0029_a": {
+    "item_id": "cooking_010__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0029_b": {
+    "item_id": "cooking_010__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0029_c": {
+    "item_id": "cooking_010__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0029_d": {
+    "item_id": "cooking_010__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0030_a": {
+    "item_id": "cooking_010__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0030_b": {
+    "item_id": "cooking_010__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0030_c": {
+    "item_id": "cooking_010__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0030_d": {
+    "item_id": "cooking_010__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0031_a": {
+    "item_id": "cooking_010__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0031_b": {
+    "item_id": "cooking_010__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0031_c": {
+    "item_id": "cooking_010__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0031_d": {
+    "item_id": "cooking_010__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0032_a": {
+    "item_id": "cooking_013__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0032_b": {
+    "item_id": "cooking_013__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0032_c": {
+    "item_id": "cooking_013__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0032_d": {
+    "item_id": "cooking_013__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0033_a": {
+    "item_id": "cooking_013__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0033_b": {
+    "item_id": "cooking_013__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0033_c": {
+    "item_id": "cooking_013__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0033_d": {
+    "item_id": "cooking_013__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0034_a": {
+    "item_id": "cooking_013__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0034_b": {
+    "item_id": "cooking_013__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0034_c": {
+    "item_id": "cooking_013__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0034_d": {
+    "item_id": "cooking_013__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0035_a": {
+    "item_id": "cooking_013__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0035_b": {
+    "item_id": "cooking_013__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0035_c": {
+    "item_id": "cooking_013__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0035_d": {
+    "item_id": "cooking_013__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0036_a": {
+    "item_id": "cooking_022__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0036_b": {
+    "item_id": "cooking_022__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0036_c": {
+    "item_id": "cooking_022__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0036_d": {
+    "item_id": "cooking_022__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "cooking"
+  },
+  "F0037_a": {
+    "item_id": "cooking_022__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0037_b": {
+    "item_id": "cooking_022__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0037_c": {
+    "item_id": "cooking_022__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0037_d": {
+    "item_id": "cooking_022__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "cooking"
+  },
+  "F0038_a": {
+    "item_id": "cooking_022__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0038_b": {
+    "item_id": "cooking_022__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0038_c": {
+    "item_id": "cooking_022__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0038_d": {
+    "item_id": "cooking_022__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "cooking"
+  },
+  "F0039_a": {
+    "item_id": "cooking_022__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0039_b": {
+    "item_id": "cooking_022__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0039_c": {
+    "item_id": "cooking_022__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0039_d": {
+    "item_id": "cooking_022__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "cooking"
+  },
+  "F0040_a": {
+    "item_id": "household_001__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0040_b": {
+    "item_id": "household_001__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0040_c": {
+    "item_id": "household_001__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0040_d": {
+    "item_id": "household_001__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0041_a": {
+    "item_id": "household_001__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0041_b": {
+    "item_id": "household_001__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0041_c": {
+    "item_id": "household_001__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0041_d": {
+    "item_id": "household_001__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0042_a": {
+    "item_id": "household_001__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0042_b": {
+    "item_id": "household_001__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0042_c": {
+    "item_id": "household_001__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0042_d": {
+    "item_id": "household_001__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0043_a": {
+    "item_id": "household_001__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0043_b": {
+    "item_id": "household_001__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0043_c": {
+    "item_id": "household_001__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0043_d": {
+    "item_id": "household_001__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0044_a": {
+    "item_id": "household_006__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0044_b": {
+    "item_id": "household_006__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0044_c": {
+    "item_id": "household_006__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0044_d": {
+    "item_id": "household_006__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0045_a": {
+    "item_id": "household_006__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0045_b": {
+    "item_id": "household_006__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0045_c": {
+    "item_id": "household_006__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0045_d": {
+    "item_id": "household_006__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0046_a": {
+    "item_id": "household_006__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0046_b": {
+    "item_id": "household_006__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0046_c": {
+    "item_id": "household_006__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0046_d": {
+    "item_id": "household_006__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0047_a": {
+    "item_id": "household_006__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0047_b": {
+    "item_id": "household_006__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0047_c": {
+    "item_id": "household_006__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0047_d": {
+    "item_id": "household_006__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0048_a": {
+    "item_id": "household_018__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0048_b": {
+    "item_id": "household_018__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0048_c": {
+    "item_id": "household_018__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0048_d": {
+    "item_id": "household_018__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0049_a": {
+    "item_id": "household_018__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0049_b": {
+    "item_id": "household_018__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0049_c": {
+    "item_id": "household_018__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0049_d": {
+    "item_id": "household_018__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0050_a": {
+    "item_id": "household_018__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0050_b": {
+    "item_id": "household_018__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0050_c": {
+    "item_id": "household_018__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0050_d": {
+    "item_id": "household_018__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0051_a": {
+    "item_id": "household_018__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0051_b": {
+    "item_id": "household_018__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0051_c": {
+    "item_id": "household_018__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0051_d": {
+    "item_id": "household_018__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0052_a": {
+    "item_id": "household_020__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0052_b": {
+    "item_id": "household_020__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0052_c": {
+    "item_id": "household_020__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0052_d": {
+    "item_id": "household_020__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0053_a": {
+    "item_id": "household_020__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0053_b": {
+    "item_id": "household_020__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0053_c": {
+    "item_id": "household_020__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0053_d": {
+    "item_id": "household_020__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0054_a": {
+    "item_id": "household_020__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0054_b": {
+    "item_id": "household_020__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0054_c": {
+    "item_id": "household_020__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0054_d": {
+    "item_id": "household_020__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0055_a": {
+    "item_id": "household_020__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0055_b": {
+    "item_id": "household_020__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0055_c": {
+    "item_id": "household_020__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0055_d": {
+    "item_id": "household_020__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0056_a": {
+    "item_id": "household_023__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0056_b": {
+    "item_id": "household_023__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0056_c": {
+    "item_id": "household_023__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0056_d": {
+    "item_id": "household_023__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "household"
+  },
+  "F0057_a": {
+    "item_id": "household_023__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0057_b": {
+    "item_id": "household_023__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0057_c": {
+    "item_id": "household_023__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0057_d": {
+    "item_id": "household_023__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "household"
+  },
+  "F0058_a": {
+    "item_id": "household_023__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0058_b": {
+    "item_id": "household_023__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0058_c": {
+    "item_id": "household_023__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0058_d": {
+    "item_id": "household_023__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "household"
+  },
+  "F0059_a": {
+    "item_id": "household_023__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0059_b": {
+    "item_id": "household_023__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0059_c": {
+    "item_id": "household_023__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0059_d": {
+    "item_id": "household_023__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "household"
+  },
+  "F0060_a": {
+    "item_id": "shopping_002__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0060_b": {
+    "item_id": "shopping_002__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0060_c": {
+    "item_id": "shopping_002__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0060_d": {
+    "item_id": "shopping_002__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0061_a": {
+    "item_id": "shopping_002__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0061_b": {
+    "item_id": "shopping_002__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0061_c": {
+    "item_id": "shopping_002__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0061_d": {
+    "item_id": "shopping_002__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0062_a": {
+    "item_id": "shopping_002__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0062_b": {
+    "item_id": "shopping_002__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0062_c": {
+    "item_id": "shopping_002__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0062_d": {
+    "item_id": "shopping_002__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0063_a": {
+    "item_id": "shopping_002__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0063_b": {
+    "item_id": "shopping_002__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0063_c": {
+    "item_id": "shopping_002__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0063_d": {
+    "item_id": "shopping_002__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0064_a": {
+    "item_id": "shopping_011__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0064_b": {
+    "item_id": "shopping_011__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0064_c": {
+    "item_id": "shopping_011__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0064_d": {
+    "item_id": "shopping_011__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0065_a": {
+    "item_id": "shopping_011__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0065_b": {
+    "item_id": "shopping_011__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0065_c": {
+    "item_id": "shopping_011__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0065_d": {
+    "item_id": "shopping_011__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0066_a": {
+    "item_id": "shopping_011__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0066_b": {
+    "item_id": "shopping_011__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0066_c": {
+    "item_id": "shopping_011__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0066_d": {
+    "item_id": "shopping_011__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0067_a": {
+    "item_id": "shopping_011__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0067_b": {
+    "item_id": "shopping_011__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0067_c": {
+    "item_id": "shopping_011__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0067_d": {
+    "item_id": "shopping_011__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0068_a": {
+    "item_id": "shopping_017__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0068_b": {
+    "item_id": "shopping_017__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0068_c": {
+    "item_id": "shopping_017__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0068_d": {
+    "item_id": "shopping_017__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0069_a": {
+    "item_id": "shopping_017__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0069_b": {
+    "item_id": "shopping_017__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0069_c": {
+    "item_id": "shopping_017__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0069_d": {
+    "item_id": "shopping_017__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0070_a": {
+    "item_id": "shopping_017__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0070_b": {
+    "item_id": "shopping_017__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0070_c": {
+    "item_id": "shopping_017__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0070_d": {
+    "item_id": "shopping_017__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0071_a": {
+    "item_id": "shopping_017__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0071_b": {
+    "item_id": "shopping_017__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0071_c": {
+    "item_id": "shopping_017__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0071_d": {
+    "item_id": "shopping_017__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0072_a": {
+    "item_id": "shopping_021__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0072_b": {
+    "item_id": "shopping_021__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0072_c": {
+    "item_id": "shopping_021__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0072_d": {
+    "item_id": "shopping_021__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0073_a": {
+    "item_id": "shopping_021__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0073_b": {
+    "item_id": "shopping_021__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0073_c": {
+    "item_id": "shopping_021__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0073_d": {
+    "item_id": "shopping_021__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0074_a": {
+    "item_id": "shopping_021__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0074_b": {
+    "item_id": "shopping_021__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0074_c": {
+    "item_id": "shopping_021__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0074_d": {
+    "item_id": "shopping_021__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0075_a": {
+    "item_id": "shopping_021__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0075_b": {
+    "item_id": "shopping_021__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0075_c": {
+    "item_id": "shopping_021__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0075_d": {
+    "item_id": "shopping_021__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0076_a": {
+    "item_id": "shopping_023__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0076_b": {
+    "item_id": "shopping_023__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0076_c": {
+    "item_id": "shopping_023__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0076_d": {
+    "item_id": "shopping_023__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "shopping"
+  },
+  "F0077_a": {
+    "item_id": "shopping_023__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0077_b": {
+    "item_id": "shopping_023__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0077_c": {
+    "item_id": "shopping_023__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0077_d": {
+    "item_id": "shopping_023__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "shopping"
+  },
+  "F0078_a": {
+    "item_id": "shopping_023__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0078_b": {
+    "item_id": "shopping_023__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0078_c": {
+    "item_id": "shopping_023__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0078_d": {
+    "item_id": "shopping_023__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "shopping"
+  },
+  "F0079_a": {
+    "item_id": "shopping_023__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0079_b": {
+    "item_id": "shopping_023__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0079_c": {
+    "item_id": "shopping_023__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0079_d": {
+    "item_id": "shopping_023__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "shopping"
+  },
+  "F0080_a": {
+    "item_id": "transit_002__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0080_b": {
+    "item_id": "transit_002__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0080_c": {
+    "item_id": "transit_002__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0080_d": {
+    "item_id": "transit_002__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0081_a": {
+    "item_id": "transit_002__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0081_b": {
+    "item_id": "transit_002__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0081_c": {
+    "item_id": "transit_002__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0081_d": {
+    "item_id": "transit_002__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0082_a": {
+    "item_id": "transit_002__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0082_b": {
+    "item_id": "transit_002__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0082_c": {
+    "item_id": "transit_002__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0082_d": {
+    "item_id": "transit_002__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0083_a": {
+    "item_id": "transit_002__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0083_b": {
+    "item_id": "transit_002__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0083_c": {
+    "item_id": "transit_002__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0083_d": {
+    "item_id": "transit_002__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0084_a": {
+    "item_id": "transit_004__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0084_b": {
+    "item_id": "transit_004__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0084_c": {
+    "item_id": "transit_004__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0084_d": {
+    "item_id": "transit_004__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0085_a": {
+    "item_id": "transit_004__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0085_b": {
+    "item_id": "transit_004__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0085_c": {
+    "item_id": "transit_004__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0085_d": {
+    "item_id": "transit_004__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0086_a": {
+    "item_id": "transit_004__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0086_b": {
+    "item_id": "transit_004__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0086_c": {
+    "item_id": "transit_004__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0086_d": {
+    "item_id": "transit_004__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0087_a": {
+    "item_id": "transit_004__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0087_b": {
+    "item_id": "transit_004__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0087_c": {
+    "item_id": "transit_004__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0087_d": {
+    "item_id": "transit_004__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0088_a": {
+    "item_id": "transit_019__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0088_b": {
+    "item_id": "transit_019__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0088_c": {
+    "item_id": "transit_019__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0088_d": {
+    "item_id": "transit_019__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0089_a": {
+    "item_id": "transit_019__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0089_b": {
+    "item_id": "transit_019__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0089_c": {
+    "item_id": "transit_019__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0089_d": {
+    "item_id": "transit_019__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0090_a": {
+    "item_id": "transit_019__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0090_b": {
+    "item_id": "transit_019__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0090_c": {
+    "item_id": "transit_019__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0090_d": {
+    "item_id": "transit_019__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0091_a": {
+    "item_id": "transit_019__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0091_b": {
+    "item_id": "transit_019__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0091_c": {
+    "item_id": "transit_019__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0091_d": {
+    "item_id": "transit_019__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0092_a": {
+    "item_id": "transit_020__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0092_b": {
+    "item_id": "transit_020__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0092_c": {
+    "item_id": "transit_020__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0092_d": {
+    "item_id": "transit_020__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0093_a": {
+    "item_id": "transit_020__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0093_b": {
+    "item_id": "transit_020__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0093_c": {
+    "item_id": "transit_020__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0093_d": {
+    "item_id": "transit_020__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0094_a": {
+    "item_id": "transit_020__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0094_b": {
+    "item_id": "transit_020__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0094_c": {
+    "item_id": "transit_020__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0094_d": {
+    "item_id": "transit_020__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0095_a": {
+    "item_id": "transit_020__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0095_b": {
+    "item_id": "transit_020__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0095_c": {
+    "item_id": "transit_020__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0095_d": {
+    "item_id": "transit_020__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0096_a": {
+    "item_id": "transit_024__norep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0096_b": {
+    "item_id": "transit_024__norep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0096_c": {
+    "item_id": "transit_024__norep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0096_d": {
+    "item_id": "transit_024__norep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "norep_res",
+    "domain": "transit"
+  },
+  "F0097_a": {
+    "item_id": "transit_024__norep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0097_b": {
+    "item_id": "transit_024__norep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0097_c": {
+    "item_id": "transit_024__norep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0097_d": {
+    "item_id": "transit_024__norep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "norep_unres",
+    "domain": "transit"
+  },
+  "F0098_a": {
+    "item_id": "transit_024__rep_res",
+    "arm": "original",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0098_b": {
+    "item_id": "transit_024__rep_res",
+    "arm": "dense_axis",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0098_c": {
+    "item_id": "transit_024__rep_res",
+    "arm": "prompt_only",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0098_d": {
+    "item_id": "transit_024__rep_res",
+    "arm": "sae_ablate",
+    "label": "resolved",
+    "condition": "rep_res",
+    "domain": "transit"
+  },
+  "F0099_a": {
+    "item_id": "transit_024__rep_unres",
+    "arm": "original",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0099_b": {
+    "item_id": "transit_024__rep_unres",
+    "arm": "dense_axis",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0099_c": {
+    "item_id": "transit_024__rep_unres",
+    "arm": "sae_ablate",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  },
+  "F0099_d": {
+    "item_id": "transit_024__rep_unres",
+    "arm": "prompt_only",
+    "label": "unresolved",
+    "condition": "rep_unres",
+    "domain": "transit"
+  }
+}

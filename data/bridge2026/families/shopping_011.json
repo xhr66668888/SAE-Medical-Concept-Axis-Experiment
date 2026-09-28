@@ -1,0 +1,86 @@
+{
+  "family_id": "shopping_011",
+  "domain": "shopping",
+  "task_goal": "get a faulty piece of Thorne and Meadow upholstery swapped and the old one taken away",
+  "n_turns": 7,
+  "tail_anchor": "Anyone here can let the crew in on the day.",
+  "notes": "In the rep pair the dialogue never says which of the two pieces split, and the assistant names both again in turn 3, so rep_unres turns on 'that one' where rep_res says 'the armchair' and nothing else changes. The norep pair differs only in the reporting date, the 30th or the 12th of June, against the fourteen-day rule stated in turn 1.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "the olive two-seater and the slate armchair. One of them has a split seam along the back cushion", "role": "two live candidates and no indication which is faulty"},
+        {"turn_index": 3, "quote": "Both the two-seater and the armchair are made in the Halifax workshop", "role": "both candidates re-activated immediately before the referring expression"},
+        {"turn_index": 4, "quote": "so collect that one and bring the new piece on the same visit", "role": "referring expression that picks out neither piece"},
+        {"turn_index": 5, "quote": "I will book the collection and the replacement into the same slot.", "role": "assistant books a crew without establishing which piece goes"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We took delivery of two pieces from Thorne and Meadow last week, the olive two-seater and the slate armchair. One of them has a split seam along the back cushion."},
+        {"speaker": "assistant", "text": "I am sorry about that. We can either send an upholsterer out to you or collect the piece and replace it."},
+        {"speaker": "user", "text": "A replacement, please. I would rather not have someone stitching it in the front room."},
+        {"speaker": "assistant", "text": "Understood, nobody will come out to stitch it. Both the two-seater and the armchair are made in the Halifax workshop, so a replacement runs to about three weeks."},
+        {"speaker": "user", "text": "Three weeks is fine. As I said, I would rather not have someone stitching it in the front room, so collect that one and bring the new piece on the same visit."},
+        {"speaker": "assistant", "text": "I will book the collection and the replacement into the same slot."},
+        {"speaker": "user", "text": "That works well. Anyone here can let the crew in on the day."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "Understood, nobody will come out to stitch it.", "role": "the preference is granted before it is restated"},
+        {"turn_index": 4, "quote": "As I said, I would rather not have someone stitching it in the front room", "role": "restated for emphasis, nothing left open"},
+        {"turn_index": 4, "quote": "so collect the armchair and bring the new piece on the same visit", "role": "referent fixed for the next action"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We took delivery of two pieces from Thorne and Meadow last week, the olive two-seater and the slate armchair. One of them has a split seam along the back cushion."},
+        {"speaker": "assistant", "text": "I am sorry about that. We can either send an upholsterer out to you or collect the piece and replace it."},
+        {"speaker": "user", "text": "A replacement, please. I would rather not have someone stitching it in the front room."},
+        {"speaker": "assistant", "text": "Understood, nobody will come out to stitch it. Both the two-seater and the armchair are made in the Halifax workshop, so a replacement runs to about three weeks."},
+        {"speaker": "user", "text": "Three weeks is fine. As I said, I would rather not have someone stitching it in the front room, so collect the armchair and bring the new piece on the same visit."},
+        {"speaker": "assistant", "text": "I will book the collection and the replacement into the same slot."},
+        {"speaker": "user", "text": "That works well. Anyone here can let the crew in on the day."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Damage has to be reported within fourteen days of delivery for a free replacement", "role": "first side of the conflict"},
+        {"turn_index": 2, "quote": "It came on the 2nd of June and I am reporting it today, the 30th of June, so I am comfortably inside the fourteen days and I would like the free replacement.", "role": "second side of the conflict, with the claim it is meant to support"},
+        {"turn_index": 3, "quote": "A new two-seater takes about three weeks out of the Halifax workshop.", "role": "assistant proceeds without reconciling the dates"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We took delivery of two pieces from Thorne and Meadow last month, the olive two-seater and the slate armchair. The two-seater has a split seam along the back cushion."},
+        {"speaker": "assistant", "text": "I am sorry to hear it. Damage has to be reported within fourteen days of delivery for a free replacement, otherwise it goes to the paid repair service."},
+        {"speaker": "user", "text": "It came on the 2nd of June and I am reporting it today, the 30th of June, so I am comfortably inside the fourteen days and I would like the free replacement."},
+        {"speaker": "assistant", "text": "Thank you for the details. A new two-seater takes about three weeks out of the Halifax workshop."},
+        {"speaker": "user", "text": "Three weeks suits us. The old one will have to go on the same visit, as there is nowhere in the house to keep it."},
+        {"speaker": "assistant", "text": "The crew will take the old frame away when they bring the new one."},
+        {"speaker": "user", "text": "That works well. Anyone here can let the crew in on the day."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "I am reporting it today, the 12th of June, so I am comfortably inside the fourteen days", "role": "consistent with the fourteen-day rule in turn 1"},
+        {"turn_index": 5, "quote": "The crew will take the old frame away when they bring the new one.", "role": "discharges the last open item"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We took delivery of two pieces from Thorne and Meadow last month, the olive two-seater and the slate armchair. The two-seater has a split seam along the back cushion."},
+        {"speaker": "assistant", "text": "I am sorry to hear it. Damage has to be reported within fourteen days of delivery for a free replacement, otherwise it goes to the paid repair service."},
+        {"speaker": "user", "text": "It came on the 2nd of June and I am reporting it today, the 12th of June, so I am comfortably inside the fourteen days and I would like the free replacement."},
+        {"speaker": "assistant", "text": "Thank you for the details. A new two-seater takes about three weeks out of the Halifax workshop."},
+        {"speaker": "user", "text": "Three weeks suits us. The old one will have to go on the same visit, as there is nowhere in the house to keep it."},
+        {"speaker": "assistant", "text": "The crew will take the old frame away when they bring the new one."},
+        {"speaker": "user", "text": "That works well. Anyone here can let the crew in on the day."}
+      ]
+    }
+  }
+}

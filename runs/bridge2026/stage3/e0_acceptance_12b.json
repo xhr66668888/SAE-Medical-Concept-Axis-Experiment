@@ -1,0 +1,189 @@
+{
+  "model": "google/gemma-3-12b-it",
+  "dtype": "float32",
+  "n_layers": 48,
+  "d_model": 3840,
+  "checks": {
+    "E0.1_hook_equals_hidden_states": {
+      "per_layer": {
+        "0": {
+          "max_abs_diff": 0.0,
+          "hook_norm": 1328.62158203125,
+          "hs_norm": 1328.62158203125
+        },
+        "1": {
+          "max_abs_diff": 0.0,
+          "hook_norm": 1243.91796875,
+          "hs_norm": 1243.91796875
+        },
+        "24": {
+          "max_abs_diff": 0.0,
+          "hook_norm": 61430.54296875,
+          "hs_norm": 61430.54296875
+        },
+        "46": {
+          "max_abs_diff": 0.0,
+          "hook_norm": 117859.7421875,
+          "hs_norm": 117859.7421875
+        }
+      },
+      "pass": true
+    },
+    "E0.2_final_layer_diverges": {
+      "max_abs_diff": 49065.77734375,
+      "hook_norm": 43468.81640625,
+      "hs_norm": 435.7906188964844,
+      "norm_ratio_hs_over_hook": 0.010025361970376213,
+      "pass": true,
+      "note": "hidden_states[n_layers] has the final RMSNorm applied; the canonical site does not."
+    },
+    "E0.7_determinism": {
+      "max_abs_diff": 0.0,
+      "pass": true
+    },
+    "E0.3_zero_dose_noop": {
+      "layer": 22,
+      "max_abs_diff": 0.0,
+      "pass": true
+    },
+    "E0.4_self_patch_noop": {
+      "layer": 22,
+      "max_abs_diff": 0.0,
+      "pass": true
+    },
+    "E0.8_dose_linearity": {
+      "layer": 22,
+      "alpha": 1.0,
+      "sd_proj": 57.17401885986328,
+      "delta_norm_want": 57.17401885986328,
+      "delta_norm_got_mean": 57.17401885986328,
+      "max_abs_err": 1.1444091796875e-05,
+      "pert_over_resid": 0.001031722640618682,
+      "rel_err": 2.0016245184591816e-07,
+      "tol_rel": 0.001,
+      "pass": true,
+      "note": "achieved perturbation norm vs requested; the tolerance tracks the model dtype because the addition happens in the model's own precision"
+    },
+    "E0.5_sae_reconstruction": {
+      "per_layer": {
+        "12": {
+          "fvu": 0.397027850151062,
+          "l0_mean": 40.30833435058594,
+          "cos_mean": 0.9966096878051758,
+          "rel_err": 0.08596671372652054,
+          "n": 480,
+          "l0_cfg": 52,
+          "l0_ratio": 0.7751602759728065,
+          "sae_id": "google/gemma-scope-2-12b-it/resid_post/layer_12_width_16k_l0_medium",
+          "fvu_valid": true
+        },
+        "24": {
+          "fvu": 0.6589298248291016,
+          "l0_mean": 66.59584045410156,
+          "cos_mean": 0.9983194470405579,
+          "rel_err": 0.059925585985183716,
+          "n": 480,
+          "l0_cfg": 60,
+          "l0_ratio": 1.1099306742350261,
+          "sae_id": "google/gemma-scope-2-12b-it/resid_post/layer_24_width_16k_l0_medium",
+          "fvu_valid": true
+        },
+        "31": {
+          "fvu": 0.5633159279823303,
+          "l0_mean": 60.89375305175781,
+          "cos_mean": 0.9920293092727661,
+          "rel_err": 0.12813526391983032,
+          "n": 480,
+          "l0_cfg": 60,
+          "l0_ratio": 1.0148958841959634,
+          "sae_id": "google/gemma-scope-2-12b-it/resid_post/layer_31_width_16k_l0_medium",
+          "fvu_valid": true
+        },
+        "41": {
+          "fvu": 0.47658973932266235,
+          "l0_mean": 57.00625228881836,
+          "cos_mean": 0.9827665090560913,
+          "rel_err": 0.18668003380298615,
+          "n": 480,
+          "l0_cfg": 60,
+          "l0_ratio": 0.9501042048136393,
+          "sae_id": "google/gemma-scope-2-12b-it/resid_post/layer_41_width_16k_l0_medium",
+          "fvu_valid": true
+        }
+      },
+      "pass": false
+    },
+    "E0.6_sae_identity_path_noop": {
+      "per_layer": {
+        "12": {
+          "max_abs_diff": 0.0,
+          "pass": true
+        },
+        "24": {
+          "max_abs_diff": 0.0,
+          "pass": true
+        },
+        "31": {
+          "max_abs_diff": 0.0,
+          "pass": true
+        },
+        "41": {
+          "max_abs_diff": 0.0,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    "E0.9_left_padding_invariance": {
+      "per_layer": {
+        "0": {
+          "max_rel_norm_diff": 1.4671860526505043e-06
+        },
+        "1": {
+          "max_rel_norm_diff": 1.4519646356347948e-06
+        },
+        "24": {
+          "max_rel_norm_diff": 8.294179565382365e-07
+        },
+        "46": {
+          "max_rel_norm_diff": 3.520911832310958e-06
+        },
+        "47": {
+          "max_rel_norm_diff": 1.5591065675835125e-05
+        }
+      },
+      "tol_rel": 0.0001,
+      "pass": true,
+      "note": "padded-batch vs unpadded-single capture; guards RoPE/attention-mask handling"
+    },
+    "E0.10_pure_equals_readout_at_read_pos": {
+      "per_layer": {
+        "0": {
+          "max_rel_norm_diff": 1.8702054376262822e-06,
+          "resid_norm": 1420.1568603515625
+        },
+        "1": {
+          "max_rel_norm_diff": 1.9153249013470486e-06,
+          "resid_norm": 1312.096435546875
+        },
+        "24": {
+          "max_rel_norm_diff": 1.0892129012063378e-06,
+          "resid_norm": 60622.5390625
+        },
+        "46": {
+          "max_rel_norm_diff": 3.987194304500008e-06,
+          "resid_norm": 118428.25
+        },
+        "47": {
+          "max_rel_norm_diff": 1.9976187104475684e-05,
+          "resid_norm": 46357.25
+        }
+      },
+      "tol_rel": 0.0001,
+      "pass": true,
+      "note": "causal attention + shared token prefix means a direction fitted on the PURE rendering applies unchanged inside the READOUT rendering"
+    }
+  },
+  "n_items": 480,
+  "all_pass": false
+}

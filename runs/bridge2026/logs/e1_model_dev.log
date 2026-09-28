@@ -1,0 +1,10 @@
+google/gemma-3-4b-it | split=dev n=100 families=25
+Loading weights:   0%|          | 0/883 [00:00<?, ?it/s]Loading weights:   2%|▏         | 14/883 [00:00<00:06, 139.26it/s]Loading weights:   7%|▋         | 62/883 [00:00<00:02, 330.34it/s]Loading weights:  13%|█▎        | 114/883 [00:00<00:01, 414.78it/s]Loading weights:  18%|█▊        | 161/883 [00:00<00:01, 429.44it/s]Loading weights:  24%|██▍       | 213/883 [00:00<00:01, 459.97it/s]Loading weights:  30%|██▉       | 264/883 [00:00<00:01, 474.64it/s]Loading weights:  36%|███▌      | 317/883 [00:00<00:01, 485.92it/s]Loading weights:  42%|████▏     | 368/883 [00:00<00:01, 490.97it/s]Loading weights:  48%|████▊     | 420/883 [00:00<00:00, 493.81it/s]Loading weights:  71%|███████   | 623/883 [00:01<00:00, 958.38it/s]Loading weights: 100%|██████████| 883/883 [00:01<00:00, 791.22it/s]
+  zero_shot/full                       paired=0.520[0.400,0.640] p=0.9080 AUROC=0.503 raw_acc=0.490 FA=0.700
+  zero_shot/last_only                  paired=0.260[0.160,0.360] p=0.1620 AUROC=0.512 raw_acc=0.530 FA=0.640
+  zero_shot/shuffled                   paired=0.420[0.280,0.560] p=0.3050 AUROC=0.500 raw_acc=0.480 FA=0.820
+  zero_shot/swapped                    paired=0.400[0.260,0.540] p=0.2020 AUROC=0.457 raw_acc=0.480 FA=0.740
+  prompt_context_instruction/full      paired=0.540[0.420,0.660] p=0.7090 AUROC=0.497 raw_acc=0.500 FA=0.980
+  few_shot_k4/full                     paired=0.580[0.420,0.740] p=0.3090 AUROC=0.538 raw_acc=0.560 FA=0.460
+-> runs/bridge2026/stage2/e1_model_readout_dev.csv
+-> runs/bridge2026/stage2/e1_model_readout_dev_per_item.csv

@@ -1,0 +1,190 @@
+{
+  "family_id": "transit_011",
+  "domain": "transit",
+  "task_goal": "check a platform alteration at Dalton Central and the onward connection at Wrenfield",
+  "n_turns": 5,
+  "tail_anchor": "I'll make my way over there now.",
+  "notes": "rep_unres and rep_res differ by one token, the onward train being the 17:50 or the 18:50 against a 17:58 arrival at Wrenfield; the eight-word platform echo is in both. norep_unres and norep_res differ only in whether turn 1 carries the clause naming the Wrenfield platform; the requested read-back sits in both.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "source": "claude-opus-5-authored",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "The 17:22 calls at Wrenfield at 17:58.",
+          "role": "the train reaches Wrenfield at 17:58"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I change at Wrenfield onto the 17:50 to Pellow, and my ticket is only valid on that one",
+          "role": "the onward train they must catch has gone by then"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Platform two, yes. The stairs at the far end will get you across quickest.",
+          "role": "assistant moves on without reconciling the clash"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Afternoon. I'm booked on the 17:22 to Kirkby and the board has it going from platform two instead of platform six."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Yes, six is being resurfaced all week, so the Kirkby trains are all off two. The 17:22 calls at Wrenfield at 17:58."
+        },
+        {
+          "speaker": "user",
+          "text": "So it is going from platform two instead of platform six. I change at Wrenfield onto the 17:50 to Pellow, and my ticket is only valid on that one."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Platform two, yes. The stairs at the far end will get you across quickest."
+        },
+        {
+          "speaker": "user",
+          "text": "That is useful to know. I'll make my way over there now."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "source": "claude-opus-5-authored",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "so the Kirkby trains are all off two",
+          "role": "the platform change was already confirmed here"
+        },
+        {
+          "turn_index": 2,
+          "quote": "So it is going from platform two instead of platform six.",
+          "role": "restated for emphasis, not a sign of trouble"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I change at Wrenfield onto the 18:50 to Pellow",
+          "role": "consistent with the 17:58 arrival"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Afternoon. I'm booked on the 17:22 to Kirkby and the board has it going from platform two instead of platform six."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Yes, six is being resurfaced all week, so the Kirkby trains are all off two. The 17:22 calls at Wrenfield at 17:58."
+        },
+        {
+          "speaker": "user",
+          "text": "So it is going from platform two instead of platform six. I change at Wrenfield onto the 18:50 to Pellow, and my ticket is only valid on that one."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Platform two, yes. The stairs at the far end will get you across quickest."
+        },
+        {
+          "speaker": "user",
+          "text": "That is useful to know. I'll make my way over there now."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "source": "claude-opus-5-authored",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "I also need to know which platform the Pellow train goes from at Wrenfield.",
+          "role": "request"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Six is being resurfaced, so the Kirkby services are on platform two today.",
+          "role": "assistant answers about this station instead"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Say the platform back to me so I know you have it.",
+          "role": "last assistant turn, still nothing about Wrenfield"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Afternoon. My 17:22 to Kirkby has moved off platform six. I also need to know which platform the Pellow train goes from at Wrenfield."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Six is being resurfaced, so the Kirkby services are on platform two today."
+        },
+        {
+          "speaker": "user",
+          "text": "Platform two here, then. I have twelve minutes at Wrenfield before the onward train, which is tight but workable."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That is enough time if you use the near stairs. Say the platform back to me so I know you have it."
+        },
+        {
+          "speaker": "user",
+          "text": "Two, and I am on the 17:22. I'll make my way over there now."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "source": "claude-opus-5-authored",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "the Pellow train goes from platform one at Wrenfield",
+          "role": "discharges the only open request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Say the platform back to me so I know you have it.",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Two, and I am on the 17:22.",
+          "role": "requested read-back, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Afternoon. My 17:22 to Kirkby has moved off platform six. I also need to know which platform the Pellow train goes from at Wrenfield."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Six is being resurfaced, so the Kirkby services are on platform two today, and the Pellow train goes from platform one at Wrenfield."
+        },
+        {
+          "speaker": "user",
+          "text": "Platform two here, then. I have twelve minutes at Wrenfield before the onward train, which is tight but workable."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That is enough time if you use the near stairs. Say the platform back to me so I know you have it."
+        },
+        {
+          "speaker": "user",
+          "text": "Two, and I am on the 17:22. I'll make my way over there now."
+        }
+      ]
+    }
+  }
+}

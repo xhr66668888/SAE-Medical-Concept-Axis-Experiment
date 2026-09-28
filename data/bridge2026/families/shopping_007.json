@@ -1,0 +1,181 @@
+{
+  "family_id": "shopping_007",
+  "domain": "shopping",
+  "task_goal": "collect a click-and-collect order of school shoes from the Fenwick Row shop",
+  "n_turns": 5,
+  "tail_anchor": "I'll come in with the reference on my phone.",
+  "notes": "The norep pair is a one-date counterfactual: the parcel was texted out on the 3rd and is held seven days, and the user announces collection on the 15th (outside) or the 9th (inside) while claiming to be well inside the seven days either way. The rep pair differs only in whether turn 1 answers the card question, so the turn-2 echo looks identical in both.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Do I have to bring the card I paid with to pick it up?",
+          "role": "request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Do I have to bring the card I paid with to pick it up?",
+          "role": "re-request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "The collection desk runs from nine until half five every day",
+          "role": "assistant turn that answers something else instead"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Afternoon. I have a click-and-collect order sitting at your Fenwick Row shop, two pairs of school shoes. Do I have to bring the card I paid with to pick it up?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Let me look. Order CF-2290 is boxed and on the collection racks at the back."
+        },
+        {
+          "speaker": "user",
+          "text": "Good, that is quicker than I expected, the text only came through last night. Do I have to bring the card I paid with to pick it up?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The collection desk runs from nine until half five every day, and it is past the fitting stools on your left."
+        },
+        {
+          "speaker": "user",
+          "text": "That is worth knowing. I'll come in with the reference on my phone."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "The card is not needed, only the reference",
+          "role": "discharges the opening request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Read the order number back to me so I can flag it for the desk.",
+          "role": "assistant requests the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "CF-2290.",
+          "role": "requested read-back, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Afternoon. I have a click-and-collect order sitting at your Fenwick Row shop, two pairs of school shoes. Do I have to bring the card I paid with to pick it up?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Let me look. The card is not needed, only the reference, and order CF-2290 is boxed on the racks at the back."
+        },
+        {
+          "speaker": "user",
+          "text": "Good, the card is not needed, only the reference. The text only came through last night. Is the desk open until five?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "It runs until half five every day. Read the order number back to me so I can flag it for the desk."
+        },
+        {
+          "speaker": "user",
+          "text": "CF-2290. I'll come in with the reference on my phone."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "We keep click-and-collect parcels on the rack for seven days from the text, then they go back to stock. Yours was texted out on the 3rd.",
+          "role": "first side of the conflict"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I will be coming in to fetch them on the 15th, which is well inside the seven days",
+          "role": "second side of the conflict, with the collection day stated"
+        },
+        {
+          "turn_index": 3,
+          "quote": "They will be filed under your surname",
+          "role": "assistant proceeds without reconciling the dates"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Afternoon. I have a click-and-collect order sitting at your Fenwick Row shop, two pairs of school shoes. What happens if I cannot get in straight away?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "We keep click-and-collect parcels on the rack for seven days from the text, then they go back to stock. Yours was texted out on the 3rd."
+        },
+        {
+          "speaker": "user",
+          "text": "We are away in Spain until the 14th, so I will be coming in to fetch them on the 15th, which is well inside the seven days. Will they still be under my name?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "They will be filed under your surname, and the staff can find them from the reference alone."
+        },
+        {
+          "speaker": "user",
+          "text": "That is worth knowing. I'll come in with the reference on my phone."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "I will be coming in to fetch them on the 9th, which is well inside the seven days",
+          "role": "consistent with the seven-day hold from the 3rd"
+        },
+        {
+          "turn_index": 3,
+          "quote": "They will be filed under your surname, and the staff can find them from the reference alone.",
+          "role": "answers the only open request"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Afternoon. I have a click-and-collect order sitting at your Fenwick Row shop, two pairs of school shoes. What happens if I cannot get in straight away?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "We keep click-and-collect parcels on the rack for seven days from the text, then they go back to stock. Yours was texted out on the 3rd."
+        },
+        {
+          "speaker": "user",
+          "text": "We are away in Spain until the 8th, so I will be coming in to fetch them on the 9th, which is well inside the seven days. Will they still be under my name?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "They will be filed under your surname, and the staff can find them from the reference alone."
+        },
+        {
+          "speaker": "user",
+          "text": "That is worth knowing. I'll come in with the reference on my phone."
+        }
+      ]
+    }
+  }
+}

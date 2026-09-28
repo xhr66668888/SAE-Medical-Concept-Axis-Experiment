@@ -1,0 +1,683 @@
+[
+  {
+    "id": "X_002",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Let me think. Well, I don't know. Emily Rose, maybe. Emily Rose."
+      },
+      {
+        "speaker": "assistant",
+        "text": "What are the 2 things that you dislike about this movie?"
+      },
+      {
+        "speaker": "user",
+        "text": "It was fake. You could tell that it was poorly made, and I didn't get scared at all."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Do you like the movie Aliens?"
+      },
+      {
+        "speaker": "user",
+        "text": "I have not watched that movie."
+      },
+      {
+        "speaker": "assistant",
+        "text": "What about Hunger Games?"
+      },
+      {
+        "speaker": "user",
+        "text": "I have not watched that movie, either."
+      }
+    ]
+  },
+  {
+    "id": "X_006",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I don't like romantic comedies."
+      },
+      {
+        "speaker": "assistant",
+        "text": "What do you find uninteresting about Romantic comedies?"
+      },
+      {
+        "speaker": "user",
+        "text": "They are very formulaic, have the same sorts of characters and boring plots."
+      },
+      {
+        "speaker": "assistant",
+        "text": "So nothing creative and bland writing, is there a specific title that you extremely dislike?"
+      },
+      {
+        "speaker": "user",
+        "text": "No, not in specific."
+      }
+    ]
+  },
+  {
+    "id": "X_010",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Haven't watched it."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Do you like the movie A Star Is Born?"
+      },
+      {
+        "speaker": "user",
+        "text": "I haven't watched it so I don't know about it like you know."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Have you heard of this movie?"
+      },
+      {
+        "speaker": "user",
+        "text": "I have not heard of this movie."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Do you like the movie Mission: Impossible - Rogue Nation?"
+      },
+      {
+        "speaker": "user",
+        "text": "Mission: Impossible, that seem seems like a good movie."
+      }
+    ]
+  },
+  {
+    "id": "X_014",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Because it's so funny. I can't stop laughing whenever I watch that movie. Even when I'm annoying, I just love whenever I watch it. It's so funny, and it has a cool story line."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Interesting, is there a movie you did not like?"
+      },
+      {
+        "speaker": "user",
+        "text": "Yes. the Wrong Turn"
+      },
+      {
+        "speaker": "assistant",
+        "text": "oh, Why not?"
+      },
+      {
+        "speaker": "user",
+        "text": "Because it's it has a lot of thriller thing. I don't like watching blood out of people. I don't like watching people being killed. I don't like watch to watch people die and that kind of stuff. I'm scared of seeing people being slaughtered alive. Yeah."
+      }
+    ]
+  },
+  {
+    "id": "X_018",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Yes, I saw the first one. Didn't see the second one yet."
+      },
+      {
+        "speaker": "assistant",
+        "text": "And what did you think of it?"
+      },
+      {
+        "speaker": "user",
+        "text": "I thought it was a pretty funny. Actually I mean, it was a little bit different. I didn't I didn't even read the comic books which were more serious than what that movie was, but it was still outrageous and then at the same time there is a lot of action and there is an actual story to it that he goes through. So"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Alright. Have you seen any of the Thor movies?"
+      },
+      {
+        "speaker": "user",
+        "text": "I saw the first one and a little bit of Ragnarok, I think."
+      }
+    ]
+  },
+  {
+    "id": "X_022",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I like seeing the costumes and scenery from a different time period."
+      },
+      {
+        "speaker": "assistant",
+        "text": "I see. Can you tell me a specific historical drama you liked that i should watch?"
+      },
+      {
+        "speaker": "user",
+        "text": "I liked watching Elizabeth."
+      },
+      {
+        "speaker": "assistant",
+        "text": "what did you like about it?"
+      },
+      {
+        "speaker": "user",
+        "text": "I liked that it told the story of Elizabeth I."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Can you tell me a little bit about it?"
+      },
+      {
+        "speaker": "user",
+        "text": "It was the story of Elizabeth Tudor, who became the queen of England in 1558."
+      }
+    ]
+  },
+  {
+    "id": "X_026",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "It was interesting, and like I said, it was one of the first animes I ever watched. It kind of drew me in from that alone."
+      },
+      {
+        "speaker": "assistant",
+        "text": "got it, can you name a film you disliked?"
+      },
+      {
+        "speaker": "user",
+        "text": "Anything with Dragon Ball. I'm not really a fan of any of that."
+      },
+      {
+        "speaker": "assistant",
+        "text": "ok, why don't you like those types of movies?"
+      },
+      {
+        "speaker": "user",
+        "text": "They're just not my kind of animation. I've never really been a fan of any of those series and it's just not something I really like to watch."
+      }
+    ]
+  },
+  {
+    "id": "X_030",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I didn't think that they were particularly well made."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Ah ok How about Justice League?"
+      },
+      {
+        "speaker": "user",
+        "text": "I don't know anything about that film but I would give it a try."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Oh ok. Let's see... How about The Lord of the Rings: The Return of the King"
+      },
+      {
+        "speaker": "user",
+        "text": "The Lord of the Rings is one of my favorite trilogies."
+      }
+    ]
+  },
+  {
+    "id": "X_034",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "You know there's a lot of stress in life and I just like to kickback, put on a funny movie and just laugh a lot."
+      },
+      {
+        "speaker": "assistant",
+        "text": "cool, what is your favorite movie"
+      },
+      {
+        "speaker": "user",
+        "text": "I really love road trip."
+      },
+      {
+        "speaker": "assistant",
+        "text": "alright, Why is that your favorite movie"
+      },
+      {
+        "speaker": "user",
+        "text": "The characters getting in a lot of silly situation and I just pretty much laugh the entire situation."
+      }
+    ]
+  },
+  {
+    "id": "X_038",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I just like the stories. I like the action that comes from them. I like the I guess I like the criminal elements."
+      },
+      {
+        "speaker": "assistant",
+        "text": "What is one of your favorite movies?"
+      },
+      {
+        "speaker": "user",
+        "text": "Godfather"
+      },
+      {
+        "speaker": "assistant",
+        "text": "why the godfather? because it's a classic?"
+      },
+      {
+        "speaker": "user",
+        "text": "Yeah, that's a good reason. It's a It's a classic movie. It's I mean, there's still many great things about it. It has great acting, there's great writing, good great directing."
+      }
+    ]
+  },
+  {
+    "id": "X_042",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "A movie that I've and didn't like. Give me a minute. I think You know, one I saw recently that I wasn't too fond of was Hold the Dark."
+      },
+      {
+        "speaker": "assistant",
+        "text": "And what did you not like about it?"
+      },
+      {
+        "speaker": "user",
+        "text": "It was a little bit too weird. It It also It also had some problems with Had some problems with the plot."
+      },
+      {
+        "speaker": "assistant",
+        "text": "What kind of problems?"
+      },
+      {
+        "speaker": "user",
+        "text": "Well, some parts of it just didn't really make sense and didn't feel like they would be believable. So, it was a little bit too over the top."
+      }
+    ]
+  },
+  {
+    "id": "X_046",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Avengers: Infinity War"
+      },
+      {
+        "speaker": "assistant",
+        "text": "alright, Why did you like that movie?"
+      },
+      {
+        "speaker": "user",
+        "text": "Cuz it had all my favorite characters in it and all action in it cool moments."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Interesting, is there a movie you did not like?"
+      },
+      {
+        "speaker": "user",
+        "text": "None of them I can think of right now. I can't think of anything right now."
+      },
+      {
+        "speaker": "assistant",
+        "text": "no worries how about Harry Potter and the Chamber of Secrets"
+      },
+      {
+        "speaker": "user",
+        "text": "Yes and I have seen that movie."
+      }
+    ]
+  },
+  {
+    "id": "X_050",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "It is The cast is fantastic. The writing is great. It's in endearing. It's innovative. The direction is really so perfect, and to make a child the star and be able to carry off the movie is really something special, and it's just a lot of fun. It's very funny. It's just a lot of fun. But also heartwarming, and a great Christmas tale."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Are there any type of movies that you don't enjoy?"
+      },
+      {
+        "speaker": "user",
+        "text": "I am not crazy about Sci-Fi movies."
+      },
+      {
+        "speaker": "assistant",
+        "text": "What about these movies is unappealing?"
+      },
+      {
+        "speaker": "user",
+        "text": "They usually have elements of like gore or horror or like zombie that I'm not crazy about in terms of they scare me usually and I just like to avoid that kind of thing. And then also a lot of them over shoot what they are doing, so they don't sort of break it down into something that turns into a good movie, they make it complicated to even bother enjoying."
+      }
+    ]
+  },
+  {
+    "id": "X_054",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "[inaudible]."
+      },
+      {
+        "speaker": "assistant",
+        "text": "What did you like about it?"
+      },
+      {
+        "speaker": "user",
+        "text": "So I really love the cast. I know most of the cast from other projects, especially the lead guy and girl, and they were great in it. And I sort of like the message of the the lead girl in this, as well, and what they were trying to accomplish. They did it very well. And it was just enjoyable, a very cute romance, and sort of handled in a nice mature way despite it being a teen movie. It was really good."
+      },
+      {
+        "speaker": "assistant",
+        "text": "What genre do you stay away from?"
+      },
+      {
+        "speaker": "user",
+        "text": "Horror films So the really scary thrillers, I can do regular thrillers, just not scary thrillers. I stay away from a good deal of sci-fi."
+      }
+    ]
+  },
+  {
+    "id": "X_058",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I like learning about new things, and I like being able to visually get that Like I like having movies, videos, whatever of the subject that I'm interested in learning about playing, because it allows me to either just sit back and relax and take in the information or do something else while I\"m learning, such as working or whatever."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Okay that's good to know. What about a particular movie name you liked"
+      },
+      {
+        "speaker": "user",
+        "text": "The Pirate Bay AFK, that was a good movie."
+      },
+      {
+        "speaker": "assistant",
+        "text": "What did you like about that movie?"
+      },
+      {
+        "speaker": "user",
+        "text": "I'm big into I'm big into computer culture, and I've certainly done my fair share of pirating back in the day. So, I was pretty well acquainted with The Pirate Bay. But like even though I knew what it was, and how to use it, etc, I was interested in learning about like how it came to be, what happened to it"
+      }
+    ]
+  },
+  {
+    "id": "X_062",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I don't know. Mission: Impossible, you know what you're going to get with it because you've got Tom Cruise in it, and he does know how to make a good action film. But it was really standard Hollywood fare. So it was okay. I kind of liked it."
+      },
+      {
+        "speaker": "assistant",
+        "text": "ok. how about Dumb and dumber? how'd you feel about that?"
+      },
+      {
+        "speaker": "user",
+        "text": "Oh, that's a stupid film. I disliked it. Definitely not the kind of movie I I enjoy."
+      },
+      {
+        "speaker": "assistant",
+        "text": "How come you did not like it?"
+      },
+      {
+        "speaker": "user",
+        "text": "It's It's in the title. It's Dumb and Dumber. It was a dumb movie. They just That's the kind of movie I walk out on."
+      }
+    ]
+  },
+  {
+    "id": "X_066",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I like comedies a lot."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Comedies like Dumb and Dumber?"
+      },
+      {
+        "speaker": "user",
+        "text": "It was okay, but I don't particularly like comedies about people doing dumb stuff."
+      },
+      {
+        "speaker": "assistant",
+        "text": "What was the last comedy you watched that you enjoyed?"
+      },
+      {
+        "speaker": "user",
+        "text": "Oh, wow! The last one I watched? Oh I guess Deadpool\u00a0was pretty good."
+      }
+    ]
+  },
+  {
+    "id": "X_070",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I just didn't really find it all that funny. It felt a bit overrated to me. People made a much bigger deal about it than than I thought it was worth. I also don't really get into the whole comic book thing, anyways."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Have you seen Mile 22?"
+      },
+      {
+        "speaker": "user",
+        "text": "No, I have not."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Have you seen Fight Club?"
+      },
+      {
+        "speaker": "user",
+        "text": "No, I haven't."
+      }
+    ]
+  },
+  {
+    "id": "X_074",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I like comedies a lot."
+      },
+      {
+        "speaker": "assistant",
+        "text": "What do you enjoy about them?"
+      },
+      {
+        "speaker": "user",
+        "text": "They're just funny, and they make you Like if you're in a bad mood, they help you feel better. They're just really like enjoyable movies to watch."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Really good reasons to enjoy them What movie from that genre do you enjoy? What did you like about it?"
+      },
+      {
+        "speaker": "user",
+        "text": "I mean, it's just It's one of the funniest movies I've ever seen, and it's really quotable, and has Bill Murray and Rodney Dangerfield and Chevy Chase. It's just a really good movie. It's really funny."
+      }
+    ]
+  },
+  {
+    "id": "X_078",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Not really. Just you know, just sort of topics. Maybe I'm not a big fan of Michael Moore movies I think he's a little too preachy. Not any one in specific, but just his general style of filmmaking."
+      },
+      {
+        "speaker": "assistant",
+        "text": "I can see why you wouldn't be interested in those, have you seen the shape of water"
+      },
+      {
+        "speaker": "user",
+        "text": "I started watching that, but I just couldn't get into it enough to finish it. I tried. I think only got maybe 30 minutes into it. It's generally the type of movie that I would like, but"
+      },
+      {
+        "speaker": "assistant",
+        "text": "What did you not enjoy about it?"
+      },
+      {
+        "speaker": "user",
+        "text": "I just I just couldn't get into the story. it I don't know and at the time I had a bunch of other movies to watch so I just didn't watch it and then kind of I went to something else. I can't remember what I did watch, but it was just moving so slow, I just couldn't couldn't get into it good enough, and then I just never went back and finished it. I think I might have seen 30 minutes of it. I might not even have been that long. It might have been more like 15. It was just kind of just a little too slow for me."
+      }
+    ]
+  },
+  {
+    "id": "X_082",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I have not seen The Incredibles."
+      },
+      {
+        "speaker": "assistant",
+        "text": "what about the movie Split?"
+      },
+      {
+        "speaker": "user",
+        "text": "I have not seen the movie Split."
+      },
+      {
+        "speaker": "assistant",
+        "text": "what about Avatar?"
+      },
+      {
+        "speaker": "user",
+        "text": "I have seen Avatar."
+      },
+      {
+        "speaker": "assistant",
+        "text": "what did you like or dislike about this movie?"
+      },
+      {
+        "speaker": "user",
+        "text": "I liked the action in movie. It was very intense and I liked the strange different world."
+      }
+    ]
+  },
+  {
+    "id": "X_086",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Cuz it's funny and good actors in it, you know?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Interesting, is there a movie you do not like?"
+      },
+      {
+        "speaker": "user",
+        "text": "Halloween Yeah, I don't like Haunted Hill, it was stupid."
+      },
+      {
+        "speaker": "assistant",
+        "text": "oh, Why not?"
+      },
+      {
+        "speaker": "user",
+        "text": "Because I didn't like it. It's just not a good movie. I mean, I can't explain it. Just didn't click with me."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Ok, then have you seen the movie The Martian"
+      },
+      {
+        "speaker": "user",
+        "text": "No, I haven't. Is it a good movie?"
+      }
+    ]
+  },
+  {
+    "id": "X_090",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "In general or a horror film? Cuz I don't have horror films that I watch enough to dislike. I just don't watch them."
+      },
+      {
+        "speaker": "assistant",
+        "text": "in general"
+      },
+      {
+        "speaker": "user",
+        "text": "and into this day. It was one of the most baffling movies I've ever watched from what it was supposed to be and what it ended up being. It was terrible."
+      },
+      {
+        "speaker": "assistant",
+        "text": "so the acting was good but the story was bad?"
+      },
+      {
+        "speaker": "user",
+        "text": "I wouldn't say the acting was good, but it did have good actors in it. There was nothing really good about the movie. But the actors are known quantities who are in it, so I wouldn't blame it on the acting. It wasn't there were The actors sort of who are in it are They're award-winning actors, so it was really not the acting."
+      }
+    ]
+  },
+  {
+    "id": "X_094",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I can't think of one. Maybe Juno? It's been that long"
+      },
+      {
+        "speaker": "assistant",
+        "text": "ok. what 2 things did you dislike about Juno"
+      },
+      {
+        "speaker": "user",
+        "text": "I guess it's the storyline and I thought it was more dumb than than funny."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Do you like the movie Jurassic World ?"
+      },
+      {
+        "speaker": "user",
+        "text": "Yes."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Can you give me a couple of reasons why you like this movie?"
+      },
+      {
+        "speaker": "user",
+        "text": "I like the suspense."
+      }
+    ]
+  },
+  {
+    "id": "X_098",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I prefer horror movies myself and also some action movies."
+      },
+      {
+        "speaker": "assistant",
+        "text": "why do u like horror and action"
+      },
+      {
+        "speaker": "user",
+        "text": "I like to be scared and I like be I like to think a lot and I like a good story and a lot of those type of movies that are in horror. Also have good acting because the costumes and such are kind of difficult to buy so I have to rely more on acting. then effects"
+      },
+      {
+        "speaker": "assistant",
+        "text": "could u name a specific movie that fits one of those categories that you did like, and why you liked that kind of movie"
+      },
+      {
+        "speaker": "user",
+        "text": "Let me think. The Houses October Built would be a good horror movie that I like."
+      }
+    ]
+  }
+]

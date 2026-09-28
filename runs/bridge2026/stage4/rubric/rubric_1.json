@@ -1,0 +1,1125 @@
+[
+  {
+    "id": "F0081",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I need a car booked for Thursday evening. I get into Terminal 2 at 7:15 and my colleague Dan lands at Terminal 5 at about the same time."
+      },
+      {
+        "speaker": "assistant",
+        "text": "One vehicle can take you both, provided you meet at one terminal or the other. With three large cases I would suggest the XL, at around forty-six dollars."
+      },
+      {
+        "speaker": "user",
+        "text": "The XL sounds right to me. Have the driver wait at the terminal from a quarter to eight."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Booked from 7:45, and I have added a note about the cases."
+      },
+      {
+        "speaker": "user",
+        "text": "Good. Send the confirmation to my phone."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0081_a",
+        "response": "Okay, the confirmation for the XL vehicle, departing at 7:45 from either Terminal 2 or Terminal 5 (pending your preference \u2013 let me know if you\u2019d like me to prioritize one), has been sent to your phone. Is there anything else I can assist you with today?"
+      },
+      {
+        "response_id": "F0081_b",
+        "response": "Okay, a confirmation has been sent to your phone number associated with this booking. It includes:\n\n*   **Vehicle:** XL\n*   **Pickup Location:** Terminal 2 (7:45 PM)\n*   **Drop-off Location:** Terminal 5 (Dan\u2019s arrival)\n*   **Confirmation Number:** [Insert Confirmation Number Here - I can\u2019t generate a real one]\n\nDo you need anything else?"
+      },
+      {
+        "response_id": "F0081_c",
+        "response": "Okay, a confirmation has been sent to your phone number associated with this booking. It includes:\n\n*   **Vehicle:** XL\n*   **Pickup Location:** Terminal 2 (7:45 PM)\n*   **Drop-off Location:** Terminal 5 (Dan\u2019s arrival)\n*   **Confirmation Number:** [Insert Confirmation Number Here - I can\u2019t generate a real one]\n\nDo you need anything else?"
+      },
+      {
+        "response_id": "F0081_d",
+        "response": "Okay, a confirmation has been sent to your phone number associated with this booking. It includes:\n\n*   **Vehicle:** XL\n*   **Pickup Location:** Terminal 2 (7:45 PM)\n*   **Drop-off Location:** Terminal 5 (Dan\u2019s arrival)\n*   **Confirmation Number:** [Insert Confirmation Number Here - I can\u2019t generate a real one]\n\nDo you need anything else?"
+      }
+    ]
+  },
+  {
+    "id": "F0025",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "First go at jam this year, four kilos of damsons off the tree. There are twelve squat 340g jars on one tray and eighteen tall 227g ones on another. Can you talk me through sterilising them?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Wash them, then half an hour at 120C, one tray at a time, as the oven will only take one. Four kilos fills about eleven of the squat jars or sixteen of the tall ones, so you only need one of the two trays."
+      },
+      {
+        "speaker": "user",
+        "text": "The squat ones, then. How will I know it has hit setting point without a sugar thermometer?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Have the jars warm in the oven when you pot up, or cold glass will crack under hot jam. A jam funnel saves a lot of mess at that stage."
+      },
+      {
+        "speaker": "user",
+        "text": "Warm jars, noted. The waxed discs and labels are already out."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0025_a",
+        "response": "Okay, great! Let\u2019s talk about testing for setting point without a thermometer. It\u2019s definitely achievable, it just takes a little observation and a gentle test. Here\u2019s how to do it with your squat jars:\n\n**1. The Cold Plate Test (Most Reliable):**\n\n*   **Prepare:** Take a small plate and put it in the freezer for about 15-20 minutes before you start. You want it *really* cold.\n*   **Scoop a Dollop:** Using a spoon, take a small spoonful of hot jam (straight from the pot) and place it on the cold plate.\n*   **Wait:** Leave it undisturbed"
+      },
+      {
+        "response_id": "F0025_b",
+        "response": "Great! Okay, let\u2019s talk about testing for setting point without a thermometer. It\u2019s all about observing the jam and using a few key techniques. Here\u2019s a breakdown:\n\n**1. The Cold Plate Test (Most Reliable):**\n\n* **Preparation:** Have a chilled plate (or a metal baking tray) in the freezer for about 15-20 minutes before you start.\n* **Testing:** Spoon a small amount of hot jam (about a teaspoon) onto the cold plate.\n* **The Wait:** Let it sit undisturbed for 30-60 seconds.  This is crucial!\n* **The Lift:** Gently lift the jam with"
+      },
+      {
+        "response_id": "F0025_c",
+        "response": "Right, good. Okay, so you\u2019ve got your warm jars, waxed discs and labels ready. Now, let\u2019s talk about testing for setting point without a thermometer. It\u2019s about finding the \u2018jiggly\u2019 stage. \n\nHere\u2019s how to do it with the squat jars:\n\n1.  **Remove the Warm Lid:** Take one of the jars and carefully remove the warm lid.\n2.  **Shake Gently:** Hold the jar firmly and give it a gentle shake \u2013 just a little! You\u2019re looking for the jam to \u2018jiggle\u2019 when you move the jar.\n3.  **Lift a Small Amount:** Now, using a"
+      },
+      {
+        "response_id": "F0025_d",
+        "response": "Great! Okay, let\u2019s talk about testing for setting point without a thermometer. It\u2019s all about observing the jam and using a few key techniques. Here\u2019s a breakdown:\n\n**1. The Cold Plate Test (Most Reliable):**\n\n* **Preparation:** Have a chilled plate (or a metal baking tray) in the freezer for about 15-20 minutes before you start.\n* **Testing:** Spoon a small amount of hot jam (about a teaspoon) onto the cold plate.\n* **The Wait:** Let it sit undisturbed for 30-60 seconds.  This is crucial!\n* **The Lift:** Gently lift the jam with"
+      }
+    ]
+  },
+  {
+    "id": "F0062",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello. I've got two Ashgrove orders on the way: the oak desk on order 7731 and the desk chair on order 7802. I need to sort out the delivery days."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Of course. The oak desk is booked for Tuesday the 14th and the desk chair for Thursday the 16th. Does that fit with your week?"
+      },
+      {
+        "speaker": "user",
+        "text": "Not really. A neighbour can take one of them in, but for the other I have to be there, and it has to be a Saturday because I cannot take a weekday off."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Understood. We run Saturday crews every week and there is no fee for changing a slot."
+      },
+      {
+        "speaker": "user",
+        "text": "As I say, it has to be a Saturday because I cannot take a weekday off. Put the chair back to Saturday the 18th."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Noted, Saturday the 18th. I will send the amendment through to the depot now."
+      },
+      {
+        "speaker": "user",
+        "text": "Brilliant. Send the confirmation over when it's booked."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0062_a",
+        "response": "Okay, the desk chair has been rescheduled to Saturday the 18th. You\u2019ll receive a confirmation email within the next hour with the updated delivery details. Is there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0062_b",
+        "response": "Okay, the desk chair has been rescheduled to Saturday the 18th. You\u2019ll receive a confirmation email within the next hour with the updated delivery details. Is there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0062_c",
+        "response": "Okay, the desk chair has been rescheduled to Saturday the 18th. You\u2019ll receive a confirmation email within the next hour with the updated delivery details. Is there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0062_d",
+        "response": "Okay, the desk chair has been rescheduled to Saturday the 18th. You\u2019ll receive a confirmation email within the hour with the updated delivery details."
+      }
+    ]
+  },
+  {
+    "id": "F0004",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello, I need to shift a practical test booking. It is under Priya Raval, and the theory pass is good right through until next summer."
+      },
+      {
+        "speaker": "assistant",
+        "text": "You have two live bookings on the system, the ninth at Pinkney Road and the twenty-third at Calder Street, and both of them start at twenty past eight."
+      },
+      {
+        "speaker": "user",
+        "text": "I would like to push the Calder Street one back a fortnight, if the diary at your end will take it."
+      },
+      {
+        "speaker": "assistant",
+        "text": "A fortnight on from either of those is open, and the twenty past eight start would stay exactly as it is. Can you read the start time back to me before I press the button?"
+      },
+      {
+        "speaker": "user",
+        "text": "Twenty past eight, then, and no earlier. Fingers crossed for a quiet road."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0004_a",
+        "response": "Okay, fantastic. Let\u2019s go ahead and move the Calder Street practical test booking to the twenty past eight on the 17th of July. Just to confirm, that\u2019s the 17th of July, twenty past eight at Calder Street. \n\nI\u2019ve made the change. You\u2019ll receive an email confirmation shortly with the updated details. \n\nIs there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0004_b",
+        "response": "Okay, fantastic. Let\u2019s go ahead and move the Calder Street practical test booking to the twenty past eight on the 17th of July. Just to confirm, that\u2019s the 17th of July, twenty past eight at Calder Street. \n\nI\u2019ve made the change. You\u2019ll receive an email confirmation shortly with the updated details. \n\nIs there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0004_c",
+        "response": "Okay, fantastic. Let\u2019s go ahead and move the Calder Street practical test booking to the twenty past eight on the 17th of July. Just to confirm, that\u2019s the 17th of July, twenty past eight at Calder Street. \n\nI\u2019ve made the change. You\u2019ll receive an email confirmation shortly with the updated details. \n\nIs there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0004_d",
+        "response": "Okay, so that\u2019s the twenty past eight slot at Calder Street, pushed back a fortnight. Let me just confirm \u2013 that\u2019s now the 20th of November at 8:20. Is that correct?"
+      }
+    ]
+  },
+  {
+    "id": "F0010",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Morning. We're having Halden Kitchens do the kitchen and the utility at the same time, and I'd like to get the design appointment in the diary."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Of course. Priya does the design visits. She has Wednesday the fourth at ten, or Saturday the seventh at half nine."
+      },
+      {
+        "speaker": "user",
+        "text": "Saturday the seventh, half nine. One thing I'll be firm about: everything goes in solid oak, no laminate doors anywhere."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Saturday the seventh at half nine with Priya, and solid oak throughout, no laminate doors anywhere. She'll bring the door samples."
+      },
+      {
+        "speaker": "user",
+        "text": "Good. And I'll say it once more, everything goes in solid oak, no laminate doors anywhere."
+      },
+      {
+        "speaker": "assistant",
+        "text": "That's on her sheet twice over now. She only has time to measure up one room on the first visit, the kitchen or the utility, so tell me which to put down."
+      },
+      {
+        "speaker": "user",
+        "text": "Put the utility down for the measure, then. We'll be in all morning either way."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0010_a",
+        "response": "Right, Utility it is for the initial measure on Saturday the seventh at half nine. We\u2019ll be there all morning. Priya will be in touch to confirm the address and any prep work you need to do. \n\nIs there anything else you\u2019d like to discuss before we wrap up today?"
+      },
+      {
+        "response_id": "F0010_b",
+        "response": "Okay, fantastic. So that\u2019s the utility room for the initial measure on Saturday the seventh at half nine. Priya will be in touch to confirm the address and any further details. Is there anything else you\u2019d like to discuss before we finalize that?"
+      },
+      {
+        "response_id": "F0010_c",
+        "response": "Right, Utility it is for the initial measure on Saturday the seventh at half nine. We\u2019ll be there all morning. Priya will be in touch to confirm the address and any prep work you need to do. \n\nIs there anything else you\u2019d like to discuss before we wrap up today?"
+      },
+      {
+        "response_id": "F0010_d",
+        "response": "Okay, utility it is for the initial measure on Saturday the seventh at half nine. I\u2019ve added a note to Priya\u2019s sheet about the solid oak requirement \u2013 absolutely no laminate. Is there anything else you\u2019d like to confirm or discuss before the appointment?"
+      }
+    ]
+  },
+  {
+    "id": "F0064",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "We took delivery of two pieces from Thorne and Meadow last month, the olive two-seater and the slate armchair. The two-seater has a split seam along the back cushion."
+      },
+      {
+        "speaker": "assistant",
+        "text": "I am sorry to hear it. Damage has to be reported within fourteen days of delivery for a free replacement, otherwise it goes to the paid repair service."
+      },
+      {
+        "speaker": "user",
+        "text": "It came on the 2nd of June and I am reporting it today, the 12th of June, so I am comfortably inside the fourteen days and I would like the free replacement."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Thank you for the details. A new two-seater takes about three weeks out of the Halifax workshop."
+      },
+      {
+        "speaker": "user",
+        "text": "Three weeks suits us. The old one will have to go on the same visit, as there is nowhere in the house to keep it."
+      },
+      {
+        "speaker": "assistant",
+        "text": "The crew will take the old frame away when they bring the new one."
+      },
+      {
+        "speaker": "user",
+        "text": "That works well. Anyone here can let the crew in on the day."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0064_a",
+        "response": "Okay, let\u2019s get a convenient time for the delivery and collection. Could you tell me what days and times work best for you? Please give me a few options so we can find something that suits everyone."
+      },
+      {
+        "response_id": "F0064_b",
+        "response": "Okay, let\u2019s get a convenient time for the delivery and collection. Could you tell me what days and times work best for you? Please give me a few options so we can find something that suits everyone."
+      },
+      {
+        "response_id": "F0064_c",
+        "response": "Okay, great. To arrange the collection and delivery, could you please provide me with a few more details?\n\n*   **Your full name:**\n*   **Your address:**\n*   **A contact phone number:**\n*   **What days and times would work best for you to be available for the collection?** (Please give me a few options)\n\nOnce I have this information, I can schedule everything for you."
+      },
+      {
+        "response_id": "F0064_d",
+        "response": "Okay, let\u2019s get a few dates that work for you. Would you prefer a morning or afternoon slot for the delivery and collection? And could you give me a couple of dates that work best?"
+      }
+    ]
+  },
+  {
+    "id": "F0073",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello. My Brindle and Co dog-food subscription is a bit much these days. What sizes do you do below the large box?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "There is a small box at \u00a324 and a medium at \u00a331. Your twenty per cent loyalty rate holds on anything from \u00a330 up."
+      },
+      {
+        "speaker": "user",
+        "text": "Put me on the small box then, and shift the billing to the 12th. I am working to a set figure each month and that twenty per cent is what keeps me inside it."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Right, I have switched the size and the date on the account. Will the same delivery day still work for you?"
+      },
+      {
+        "speaker": "user",
+        "text": "Yes, Tuesdays are fine. No need to send a paper invoice with it."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0073_a",
+        "response": "Okay, fantastic! Just to confirm:\n\n*   **Size:** Small Box\n*   **Billing Date:** 12th of the month\n*   **Delivery Day:** Tuesday\n\nI\u2019ve made those changes to your account. You\u2019ll receive an email confirmation shortly with all the details. \n\nIs there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0073_b",
+        "response": "Okay, fantastic! Just to confirm:\n\n*   **Size:** Small Box\n*   **Billing Date:** 12th of the month\n*   **Delivery Day:** Tuesday\n\nI\u2019ve made those changes to your account. You\u2019ll receive an email confirmation shortly with all the details. \n\nIs there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0073_c",
+        "response": "Okay, fantastic! So to confirm:\n\n*   **Size:** Small Box\n*   **Billing Date:** 12th of the month\n*   **Delivery Day:** Tuesday\n\nIs there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0073_d",
+        "response": "Okay, fantastic! Just to confirm:\n\n*   **Size:** Small Box\n*   **Billing Date:** 12th of the month\n*   **Delivery Day:** Tuesday\n\nI\u2019ve made those changes to your account. You\u2019ll receive an email confirmation shortly with all the details. \n\nIs there anything else I can help you with today?"
+      }
+    ]
+  },
+  {
+    "id": "F0090",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "My inbound from Manchester landed late and I've missed the Bergen leg. Does my checked case get moved across automatically, or do I have to claim it here?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Your case moves across automatically, it's tagged through. There's a seat on the 19:05 to Bergen, flight LN 412, gate closes at 18:35. Read that back before I take the seat."
+      },
+      {
+        "speaker": "user",
+        "text": "The 19:05 to Bergen, flight LN 412, gate closes at 18:35. Can you put me down for it?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "You're on it. I've put you in 14C, an aisle seat, and there's nobody in the middle beside you."
+      },
+      {
+        "speaker": "user",
+        "text": "That's kind of you. I'm at the transfer desk in terminal two."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0090_a",
+        "response": "Okay, great. Let\u2019s see\u2026 You\u2019re at the transfer desk in Terminal 2, right. Just to confirm, you\u2019re here to rebook on flight LN 412 to Bergen, departing at 19:05?"
+      },
+      {
+        "response_id": "F0090_b",
+        "response": "Okay, great! Let\u2019s see\u2026 (typing sounds)\n\nAlright, it looks like your checked baggage is already being routed to Bergen. You don\u2019t need to do anything further at the transfer desk. Just head to gate 183, that\u2019s where flight LN 412 to Bergen is departing from. \n\nDo you have any other questions or need anything else before you head to your gate?"
+      },
+      {
+        "response_id": "F0090_c",
+        "response": "Okay, great! Let\u2019s see\u2026 (typing sounds)\n\nAlright, it looks like your checked baggage is already being routed to Bergen. You don\u2019t need to do anything further at the transfer desk. Just head to gate 183, that\u2019s where flight LN 412 to Bergen is departing from. \n\nDo you have any other questions or need anything else before you head to your gate?"
+      },
+      {
+        "response_id": "F0090_d",
+        "response": "Okay, great! Let\u2019s see\u2026 (typing sounds)\n\nAlright, it looks like your checked baggage is already being routed to Bergen. You don\u2019t need to do anything further at the transfer desk. Just head to gate 183, that\u2019s where flight LN 412 to Bergen is departing from. \n\nDo you have any other questions or need anything else before you head to your gate?"
+      }
+    ]
+  },
+  {
+    "id": "F0050",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Ken, Harbottle's can take the low branch off the sycamore on the tenth. Do they take the wood away with them, or is it left stacked on the drive?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "The tenth is fine by me. They take the lot away with them, it says so on the quote Dilys had last year."
+      },
+      {
+        "speaker": "user",
+        "text": "Good, the drive is narrow enough as it is. Dilys will have to shift that van of hers off the turning circle."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Half each on the bill, then. Give me the date again and I will book the morning off."
+      },
+      {
+        "speaker": "user",
+        "text": "Harbottle's can take the low branch off the sycamore on the tenth. I'll pop a note through the other doors tonight."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0050_a",
+        "response": "Right you are. Let\u2019s hope they\u2019re careful with it. Wouldn\u2019t want any damage to the neighbours\u2019 hedges."
+      },
+      {
+        "response_id": "F0050_b",
+        "response": "Right you are. Let\u2019s hope they\u2019re careful with it. Wouldn\u2019t want any damage to the neighbours\u2019 hedges."
+      },
+      {
+        "response_id": "F0050_c",
+        "response": "Right, the tenth it is. And you\u2019ve sorted the note \u2013 good. Just to confirm, that\u2019s the 10th of next week, correct?"
+      },
+      {
+        "response_id": "F0050_d",
+        "response": "Right you are. Let\u2019s hope they\u2019re careful with it. Wouldn\u2019t want any damage to the neighbours\u2019 hedges."
+      }
+    ]
+  },
+  {
+    "id": "F0059",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Nita, Cudworth's are dropping a skip on Thursday and taking it away Monday. If we go halves, you can put the garage stuff in. I would rather it went on the road than on the drive."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Halves suits us, our garage has not been touched in years. The road is fine by me, though they will not lift it if anything is sitting above the top edge."
+      },
+      {
+        "speaker": "user",
+        "text": "I would rather it went on the road than on the drive, because the drive is the only place Sal can leave his van. We will stack the old doors on top of the rubble, a good foot above the rim, so nothing is wasted."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Right you are. Sal can bring the van round on the Saturday and give you a hand with the heavy things."
+      },
+      {
+        "speaker": "user",
+        "text": "That would be a help, thank him for me. I'll text you when they drop it off."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0059_a",
+        "response": "Sounds good! Let me know when they\u2019re on their way."
+      },
+      {
+        "response_id": "F0059_b",
+        "response": "Sounds good! Let me know when they\u2019re on their way."
+      },
+      {
+        "response_id": "F0059_c",
+        "response": "Sounds good. Let me know when they\u2019re dropping it off \u2013 I\u2019ll keep an eye out."
+      },
+      {
+        "response_id": "F0059_d",
+        "response": "Sounds good! Let me know when they\u2019re on their way."
+      }
+    ]
+  },
+  {
+    "id": "F0040",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Colin, we're away for a fortnight from next Tuesday. Could I ask you to put our bins out and bring them back in while we're gone?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Yes, no problem at all. The lorry comes round about half six on a Tuesday morning, so I put mine out the night before."
+      },
+      {
+        "speaker": "user",
+        "text": "Kind of you. I'll put the first week's bin out myself as we leave, we're off at five that morning."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Right you are. Shall I get Ewan to take the second week?"
+      },
+      {
+        "speaker": "user",
+        "text": "If he's happy to, that would be grand. I'll leave the side gate unlocked either way."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0040_a",
+        "response": "Perfect. Thanks so much, Colin. You\u2019re a lifesaver!"
+      },
+      {
+        "response_id": "F0040_b",
+        "response": "Perfect. Thanks so much, Colin. You\u2019re a lifesaver!"
+      },
+      {
+        "response_id": "F0040_c",
+        "response": "Okay, fantastic. Ewan\u2019s happy to do the second week\u2019s bin. And the side gate unlocked \u2013 perfect. Enjoy your fortnight away!"
+      },
+      {
+        "response_id": "F0040_d",
+        "response": "Perfect. Let me just tell Ewan then. You just relax and enjoy your trip!"
+      }
+    ]
+  },
+  {
+    "id": "F0083",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "We land at Terminal 2 at 7:15 on Thursday evening and need a car to the Kingsway Hotel. Four of us, three large cases, so we need the boot space."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Then I would book the XL vehicle rather than the standard saloon. That comes to around forty-six dollars all in."
+      },
+      {
+        "speaker": "user",
+        "text": "Yes, book the XL vehicle rather than the standard saloon. Our travel budget caps ground transport at thirty dollars."
+      },
+      {
+        "speaker": "assistant",
+        "text": "XL it is. The driver will meet you in the arrivals hall at Terminal 2."
+      },
+      {
+        "speaker": "user",
+        "text": "That suits us. Send the confirmation to my phone."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0083_a",
+        "response": "Okay, just one moment while I finalize the booking and send the confirmation to your phone number \u2013 [Your Phone Number]. \n\nYou should receive a text message within the next minute with all the details: driver name, vehicle type (XL), pickup location (Terminal 2 Arrivals Hall), pickup time (7:15 PM Thursday), and the total cost of $46. \n\nDo you need anything else before we confirm?"
+      },
+      {
+        "response_id": "F0083_b",
+        "response": "Okay, just one moment while I finalize the booking and send the confirmation to your phone number \u2013 [Your Phone Number]. \n\nYou should receive a text message within the next minute with all the details: driver name, vehicle type (XL), pickup location (Terminal 2 Arrivals Hall), pickup time (7:15 PM Thursday), and the total cost of $46. \n\nDo you need anything else before we confirm?"
+      },
+      {
+        "response_id": "F0083_c",
+        "response": "Okay, I\u2019ve sent the confirmation for the XL vehicle to the phone number associated with your booking. It includes the driver\u2019s name, contact number, and the pickup time \u2013 7:15 PM at Terminal 2. \n\nIs there anything else I can help you with regarding your transportation to the Kingsway Hotel?"
+      },
+      {
+        "response_id": "F0083_d",
+        "response": "Okay, I\u2019ve sent the confirmation for the XL vehicle to the phone number associated with your booking. It includes the driver\u2019s name, contact number, pick-up time (7:15 PM), destination (Kingsway Hotel), and the total cost of $46. \n\nYou should receive it within a minute or two. Do you need me to repeat any details or would you like me to save a copy to your email?"
+      }
+    ]
+  },
+  {
+    "id": "F0047",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "The wardrobe is coming Thursday between twelve and four and I am in a workshop all day. I'd rather it went straight into the spare room than the hall. Could you be in for it?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "I can work at the kitchen table that day, so yes. The boxes can go straight into the spare room. Dan next door still has our drill."
+      },
+      {
+        "speaker": "user",
+        "text": "Thanks. I'd rather it went straight into the spare room than the hall. Theo is sleeping in there from Friday night and we are building it on the Saturday morning, so the room will be ready for him."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Fair enough. I'll shift the recycling out of there on Wednesday night, then."
+      },
+      {
+        "speaker": "user",
+        "text": "Good thinking. The Allen keys are in the kitchen drawer."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0047_a",
+        "response": "Okay, noted \u2013 Allen keys in the kitchen drawer. Is there anything else you\u2019d like me to be aware of before Thursday?"
+      },
+      {
+        "response_id": "F0047_b",
+        "response": "Okay, noted \u2013 Allen keys in the kitchen drawer. Thanks for the heads-up!"
+      },
+      {
+        "response_id": "F0047_c",
+        "response": "Noted! Kitchen drawer, Allen keys. Thanks for the heads-up."
+      },
+      {
+        "response_id": "F0047_d",
+        "response": "Okay, noted \u2013 Allen keys in the kitchen drawer. Thanks for the heads-up!"
+      }
+    ]
+  },
+  {
+    "id": "F0051",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Ken, Harbottle's can take the low branch off the sycamore on the tenth. Do they take the wood away with them, or is it left stacked on the drive?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "The tenth is fine by me. Dilys will have to shift that van of hers, she leaves it right across the turning circle."
+      },
+      {
+        "speaker": "user",
+        "text": "I will knock for her tomorrow. Do they take the wood away with them, or is it left stacked on the drive?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Half each on the bill suits me, by the way. Send the invoice over when it lands and I will do a transfer."
+      },
+      {
+        "speaker": "user",
+        "text": "That is decent of you, thanks. I'll pop a note through the other doors tonight."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0051_a",
+        "response": "Good thinking. Just want to double-check \u2013 you\u2019re still keen on the low branch of the sycamore, yes? And you\u2019re asking about whether they take the wood away or leave it?"
+      },
+      {
+        "response_id": "F0051_b",
+        "response": "Good thinking. It\u2019s always best to be organised. Let me know if you need anything else."
+      },
+      {
+        "response_id": "F0051_c",
+        "response": "Good thinking. It\u2019s always best to be organised. Let me know if you need anything else."
+      },
+      {
+        "response_id": "F0051_d",
+        "response": "Good thinking. It\u2019s always best to be organised. Let me know if you need anything else."
+      }
+    ]
+  },
+  {
+    "id": "F0036",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "We're camping from Friday to Sunday with another family and I'm working out the food. How long will a cool box actually keep milk drinkable for?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Two days at most with frozen blocks in, so take UHT for the Sunday. Hard cheese, cured sausage, tomatoes, bread and eggs all travel well, and freeze the mince solid so it thaws in time for the Saturday chilli."
+      },
+      {
+        "speaker": "user",
+        "text": "The chilli is Saturday, yes, that's the plan. Nothing with peanuts anywhere in the bags though, one of the girls coming can't have them. Is that going to rule much out?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "No peanuts, understood. Watch the satay sauce and the cereal bars then, and check the labels on anything you pick up at the services on the way down."
+      },
+      {
+        "speaker": "user",
+        "text": "I'll read every packet before anything goes in the bag, and bin the ones I'm not sure about. And not a peanut in the whole load, please. We're loading the car on Friday night."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0036_a",
+        "response": "Fantastic! That\u2019s really reassuring. Being so careful about allergies is a great idea. Knowing you\u2019re taking that extra step will make the whole trip much smoother and safer for everyone. \n\nLet\u2019s keep the food planning going \u2013 what about breakfast options for Saturday and Sunday? Do you want to lean towards easy, quick things, or are you happy to do a bit more cooking?"
+      },
+      {
+        "response_id": "F0036_b",
+        "response": "Right, good to hear! Loading the car on Friday night \u2013 that\u2019s a smart move to get organised. Just a quick thought \u2013 are you planning on bringing any drinks that need to be kept *really* cold, like fizzy drinks or beer? Because keeping those frozen blocks in the cool box might make it a bit cramped."
+      },
+      {
+        "response_id": "F0036_c",
+        "response": "Fantastic! That\u2019s really reassuring. Being so careful about allergies is a great idea. Knowing you\u2019re taking that extra step will make the whole trip much smoother and safer for everyone. \n\nLet\u2019s keep the food planning going \u2013 what about breakfast options for Saturday and Sunday? Do you want to lean towards easy, quick things, or are you happy to do a bit more cooking?"
+      },
+      {
+        "response_id": "F0036_d",
+        "response": "Fantastic! That\u2019s really reassuring. Being so careful about allergies is a great idea. Knowing you\u2019re taking that extra step will make the whole trip much smoother and safer for everyone. \n\nLet\u2019s keep the food planning going \u2013 what about breakfast options for Saturday and Sunday? Do you want to lean towards easy, quick things, or are you happy to do a bit more cooking?"
+      }
+    ]
+  },
+  {
+    "id": "F0020",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Saturday I'm doing a paella for eight and I want it on the hob, not in the oven. How much rice should I buy?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Eighty grams a head, so 640g for eight, and about three times that in liquid. A wide pan matters more than the heat source."
+      },
+      {
+        "speaker": "user",
+        "text": "That is fine, I have a 900g bag. There is a tub of chicken stock and a tub of fish stock in the freezer, and I will take the fish one out tonight to thaw."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Leave it in the fridge to come round rather than on the counter, and warm it through before it meets the rice."
+      },
+      {
+        "speaker": "user",
+        "text": "Overnight in the fridge, then. I've got the whole afternoon free for this."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0020_a",
+        "response": "Great! Knowing you have the afternoon gives you plenty of time to prep \u2013 chopping vegetables, getting everything measured out. Do you want me to suggest a rough timeline for the cooking process itself, or just focus on prep?"
+      },
+      {
+        "response_id": "F0020_b",
+        "response": "Fantastic! That\u2019s a great plan. A whole afternoon gives you plenty of time to really nail a beautiful paella. \n\nDo you want to chat about anything specific you\u2019re planning \u2013 like the type of seafood you\u2019re using, or any particular techniques you\u2019re aiming for? Or would you just like to brainstorm some ideas for sides and a nice wine to go with it?"
+      },
+      {
+        "response_id": "F0020_c",
+        "response": "Fantastic! That\u2019s a great plan. A whole afternoon gives you plenty of time to really nail a beautiful paella. \n\nDo you want to chat about anything specific you\u2019re planning \u2013 like the type of seafood you\u2019re using, or any particular techniques you\u2019re aiming for? Or would you just like to brainstorm some ideas for sides and a nice wine to go with it?"
+      },
+      {
+        "response_id": "F0020_d",
+        "response": "Fantastic! That\u2019s a great plan. A whole afternoon gives you plenty of time to really nail a beautiful paella. \n\nDo you want to chat about anything specific you\u2019re planning \u2013 like the type of seafood you\u2019re using, or any particular techniques you\u2019re aiming for? Or would you just like to brainstorm some ideas for sides and a nice wine to go with it?"
+      }
+    ]
+  },
+  {
+    "id": "F0011",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Morning. We're having Halden Kitchens do the kitchen and the utility at the same time, and I'd like to get the design appointment in the diary."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Of course. Priya does the design visits. She has Wednesday the fourth at ten, or Saturday the seventh at half nine."
+      },
+      {
+        "speaker": "user",
+        "text": "Saturday the seventh, half nine. One thing I'll be firm about: everything goes in solid oak, no laminate doors anywhere."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Saturday the seventh at half nine with Priya, and solid oak throughout, no laminate doors anywhere. She'll bring the door samples."
+      },
+      {
+        "speaker": "user",
+        "text": "Good. And I'll say it once more, everything goes in solid oak, no laminate doors anywhere."
+      },
+      {
+        "speaker": "assistant",
+        "text": "That's on her sheet twice over now. She only has time to measure up one room on the first visit, the kitchen or the utility, so tell me which to put down."
+      },
+      {
+        "speaker": "user",
+        "text": "Put that one down for the measure, then. We'll be in all morning either way."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0011_a",
+        "response": "Right, so Saturday the seventh at 9:30am for a full morning\u2019s measure with Priya, and solid oak throughout. I\u2019ve noted that very clearly. Do you want me to send her a quick email confirming the appointment and reiterating the oak requirement, just to be absolutely sure?"
+      },
+      {
+        "response_id": "F0011_b",
+        "response": "Right, so Saturday the seventh at 9:30am for a full morning\u2019s measure with Priya, and solid oak throughout. I\u2019ve noted that very clearly. Do you want me to send her a quick email confirming the appointment and reiterating the oak requirement, just to be absolutely sure?"
+      },
+      {
+        "response_id": "F0011_c",
+        "response": "Okay, noted. So, Saturday the seventh, half nine, focusing on the kitchen for the initial measurement, and solid oak throughout. Just to confirm, is there anything else you\u2019d like to discuss or add to the brief for Priya before the appointment?"
+      },
+      {
+        "response_id": "F0011_d",
+        "response": "Okay, fantastic. So, Saturday the seventh at 9:30am for a full morning\u2019s measure with Priya, and solid oak throughout \u2013 absolutely confirmed. I\u2019ve added a note to her file. \n\nDo you want me to send her a quick email confirming the appointment and reiterating the oak requirement, just to be absolutely sure?"
+      }
+    ]
+  },
+  {
+    "id": "F0048",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Ken, Harbottle's have quoted four hundred to take the low branch off the sycamore and grind out the old stump by your shed. I have told them to cart all the brash away with them."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Good, I would not want it stacked on the drive either. I will go halves on the branch, that is fair, but the stump is on your side of the line and I am not paying towards that."
+      },
+      {
+        "speaker": "user",
+        "text": "Right you are. The branch is two hundred and fifty of it, so I will put you down for a hundred and twenty-five, half of the branch."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Fine. Shall I be in on the tenth to let them through the side gate?"
+      },
+      {
+        "speaker": "user",
+        "text": "Please, that would help, and not one twig of it stops on the drive. I'll pop a note through the other doors tonight."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0048_a",
+        "response": "Perfect. Let me know if you need anything else sorted."
+      },
+      {
+        "response_id": "F0048_b",
+        "response": "Excellent. Let\u2019s get it sorted then."
+      },
+      {
+        "response_id": "F0048_c",
+        "response": "Excellent. Let\u2019s get this sorted then."
+      },
+      {
+        "response_id": "F0048_d",
+        "response": "Excellent. Let\u2019s get it sorted then."
+      }
+    ]
+  },
+  {
+    "id": "F0009",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Morning. We're having Halden Kitchens do the kitchen and the utility at the same time, and I'd like to get the design appointment in the diary."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Priya can come out on Saturday the seventh of March. Whatever she draws goes to the factory that day, and nothing is delivered until three weeks after that."
+      },
+      {
+        "speaker": "user",
+        "text": "The seventh of March suits us. Our builder pulls the old kitchen out on the twentieth and the new units go in the very next day, and that fortnight is the only stretch he has free all spring."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Noted, I've pencilled Priya in. Let me know if you have settled on a worktop."
+      },
+      {
+        "speaker": "user",
+        "text": "Beech, right through both rooms, and a single sink rather than a double."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Beech worktop and a single sink. She'll bring the door samples along with her on the day."
+      },
+      {
+        "speaker": "user",
+        "text": "That's grand, thank you. We'll be in all morning either way."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0009_a",
+        "response": "Excellent. I\u2019ve marked it down as a morning appointment. We\u2019ll send you a confirmation email with all the details shortly. Is there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0009_b",
+        "response": "Excellent. I\u2019ve marked it down as a morning appointment. We\u2019ll send you a confirmation email with all the details shortly. Is there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0009_c",
+        "response": "Excellent. I\u2019ve marked the appointment for Saturday, March 7th, 10:00 AM, and confirmed the beech worktop and single sink. Is there anything else you\u2019d like to discuss or arrange before then?"
+      },
+      {
+        "response_id": "F0009_d",
+        "response": "Excellent. I\u2019ve marked it down as a morning appointment. We\u2019ll send you a confirmation email with all the details shortly. Is there anything else I can help you with today?"
+      }
+    ]
+  },
+  {
+    "id": "F0067",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "We took delivery of two pieces from Thorne and Meadow last week, the olive two-seater and the slate armchair. One of them has a split seam along the back cushion."
+      },
+      {
+        "speaker": "assistant",
+        "text": "I am sorry about that. We can either send an upholsterer out to you or collect the piece and replace it."
+      },
+      {
+        "speaker": "user",
+        "text": "A replacement, please. I would rather not have someone stitching it in the front room."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Understood, nobody will come out to stitch it. Both the two-seater and the armchair are made in the Halifax workshop, so a replacement runs to about three weeks."
+      },
+      {
+        "speaker": "user",
+        "text": "Three weeks is fine. As I said, I would rather not have someone stitching it in the front room, so collect that one and bring the new piece on the same visit."
+      },
+      {
+        "speaker": "assistant",
+        "text": "I will book the collection and the replacement into the same slot."
+      },
+      {
+        "speaker": "user",
+        "text": "That works well. Anyone here can let the crew in on the day."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0067_a",
+        "response": "Absolutely. Just let us know the date and time of the collection and replacement, and we\u2019ll make a note of that for the delivery team. They\u2019ll be sure to let anyone in the house know beforehand. \n\nTo confirm, you\u2019re looking at a three-week turnaround for the replacement slate armchair?"
+      },
+      {
+        "response_id": "F0067_b",
+        "response": "Absolutely. Just let us know the date and time of the collection and replacement, and we\u2019ll make a note of that for the delivery team. They\u2019ll be sure to let anyone in the house know beforehand. \n\nTo confirm, you\u2019re looking at a three-week turnaround for the replacement slate armchair?"
+      },
+      {
+        "response_id": "F0067_c",
+        "response": "Okay, I\u2019ve noted that you\u2019d like to be present for the collection and delivery. Just to confirm, is there a specific date that works best for you?"
+      },
+      {
+        "response_id": "F0067_d",
+        "response": "Absolutely. Just let us know the date and time of the collection and replacement, and we\u2019ll make a note of that for the delivery team. They\u2019ll be sure to let anyone in the house know beforehand. \n\nTo confirm, you\u2019re looking at a three-week turnaround for the replacement slate armchair?"
+      }
+    ]
+  },
+  {
+    "id": "F0015",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Morning. I want a pair of front tyres put on at Selby Tyres this week. They have to be the same make as the two on the back, no mixing."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Same make as the rears, no mixing, understood. Thursday afternoon or Saturday first thing, and anything we fit is paid for before the car leaves the bay."
+      },
+      {
+        "speaker": "user",
+        "text": "Saturday first thing, please. I'll drive it away the moment you're done and settle up the Monday after, when my wages land, because there's nothing in the account before then."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Right you are, Saturday first thing. Shall I have one of the lads wave you into the bay when you arrive?"
+      },
+      {
+        "speaker": "user",
+        "text": "Please do. And I'll say it again, they have to be the same make as the two on the back, no mixing. We're only ten minutes up the road from you."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0015_a",
+        "response": "Absolutely. Noted \u2013 same make as the rears, no mixing. And thanks for confirming the location, it helps us get everything organised smoothly. I\u2019ll make sure one of the team is ready to wave you in as soon as you arrive on Saturday. \n\nDo you want me to take down your name and number just in case we need to reach you with an update?"
+      },
+      {
+        "response_id": "F0015_b",
+        "response": "Absolutely. Noted \u2013 same make as the rears, no mixing. And thanks for confirming the location, it helps us get everything organised smoothly. I\u2019ll make sure one of the team is ready to wave you in as soon as you arrive on Saturday. \n\nDo you want me to take down your name and number just in case we need to reach you with an update?"
+      },
+      {
+        "response_id": "F0015_c",
+        "response": "Absolutely. Noted \u2013 same make as the rears, no mixing. And thanks for confirming the location, it helps us get everything organised smoothly. I\u2019ll make sure one of the team is ready to wave you in as soon as you arrive on Saturday. \n\nDo you want me to take down your name and number just in case we need to reach you with an update?"
+      },
+      {
+        "response_id": "F0015_d",
+        "response": "Absolutely. Noted \u2013 same make as the rears, no mixing. And I\u2019ve flagged it for the team to look out for you when you arrive on Saturday. Just to confirm, you\u2019re saying you\u2019ll be arriving around [roughly what time - please provide a time]?"
+      }
+    ]
+  },
+  {
+    "id": "F0000",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Good afternoon. I'd like a slot at the Year 4 parents' evening for Rosa. What hours is Mrs Adeyemi seeing parents?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "She is seeing parents from four until six on Thursday the 9th, and there are gaps left at 4.40 and at 5.20."
+      },
+      {
+        "speaker": "user",
+        "text": "We will take 5.20. Neither of us can get away from work before half past four, so that is comfortable."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Noted, 5.20 on the Thursday with Mrs Adeyemi. Will you be bringing Rosa along on the night?"
+      },
+      {
+        "speaker": "user",
+        "text": "Yes, she will come along too. I appreciate you fitting us in."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0000_a",
+        "response": "You\u2019re very welcome! I\u2019ve booked you in for Rosa\u2019s Year 4 parents\u2019 evening with Mrs. Adeyemi at 5.20 on Thursday the 9th. You\u2019ll receive a confirmation email shortly. Is there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0000_b",
+        "response": "You\u2019re very welcome! It\u2019s no problem at all. We look forward to seeing Rosa and speaking with you then. Have a good afternoon!"
+      },
+      {
+        "response_id": "F0000_c",
+        "response": "You\u2019re very welcome! It\u2019s no problem at all. We look forward to seeing Rosa and speaking with you then. Have a good afternoon!"
+      },
+      {
+        "response_id": "F0000_d",
+        "response": "You\u2019re very welcome! It\u2019s no problem at all. We look forward to seeing Rosa and speaking with you then. Have a good afternoon!"
+      }
+    ]
+  },
+  {
+    "id": "F0007",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello, I need to shift a practical test booking. It is under Priya Raval, at Pinkney Road on the ninth, and it has to stay a first-thing slot."
+      },
+      {
+        "speaker": "assistant",
+        "text": "I have it in front of me. The sixth of next month is free first thing, though I should say we cannot run a practical unless the theory pass is still live on the day."
+      },
+      {
+        "speaker": "user",
+        "text": "Put me down for the sixth, then. My theory pass runs out on the last day of this month, and I still want the practical to go ahead on the sixth."
+      },
+      {
+        "speaker": "assistant",
+        "text": "The ninth is out of the diary and the sixth is in, first thing as you asked. Would you rather sit it in Marcus's car or in your own?"
+      },
+      {
+        "speaker": "user",
+        "text": "In Marcus's car, please, and remember it has to stay a first-thing slot. Fingers crossed for a quiet road."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0007_a",
+        "response": "Okay, fantastic. I\u2019ve moved your practical test booking to the sixth of next month, first thing, in Marcus\u2019s car. I\u2019ve also noted your request for a quiet road \u2013 I\u2019ll pass that on to the examiner. \n\nYou should receive a confirmation email shortly with all the details. \n\nFingers crossed for you too! Let me know if you need anything else."
+      },
+      {
+        "response_id": "F0007_b",
+        "response": "Okay, fantastic. I\u2019ve moved your practical test booking to the sixth of next month, first thing, in Marcus\u2019s car. I\u2019ve also noted your request for a quiet road \u2013 I\u2019ll pass that on to the examiner. \n\nYou should receive a confirmation email shortly with all the details. \n\nFingers crossed for you too! Let me know if you need anything else."
+      },
+      {
+        "response_id": "F0007_c",
+        "response": "Right, Marcus\u2019s car it is, and a first-thing slot on the sixth. I\u2019ve confirmed that. I\u2019ve also flagged it to ensure it\u2019s scheduled for an early slot \u2013 aiming for 8:30am if possible. I\u2019ll do my best to get it on a quieter road, though I can\u2019t guarantee it. Is there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0007_d",
+        "response": "Okay, fantastic. I\u2019ve moved your practical test booking to the sixth of next month, first thing, in Marcus\u2019s car. I\u2019ve also noted your request for a quiet road \u2013 I\u2019ll pass that on to the examiner. \n\nYou should receive a confirmation email shortly with all the details. \n\nFingers crossed for you too! Let me know if you need anything else."
+      }
+    ]
+  },
+  {
+    "id": "F0018",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello. I've joined at Fairlop Leisure Centre and I need to book the induction session. I want an evening one, nothing at the weekend at all, and I'd like to know what the session actually covers."
+      },
+      {
+        "speaker": "assistant",
+        "text": "It's a walk round the machines with an instructor, half an hour or so. Evenings only, no weekends, that's noted. The inductions run on Tuesdays at seven, there's one free this week."
+      },
+      {
+        "speaker": "user",
+        "text": "Tuesday at seven, please. And I'll say it plainly, I want an evening one, nothing at the weekend at all."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Tuesday at seven is yours, and the weekend is ruled out on your record. Bring a towel and a pair of indoor trainers with you."
+      },
+      {
+        "speaker": "user",
+        "text": "I'll have both of those with me. It's a five-minute walk from my front door."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0018_a",
+        "response": "Great! That\u2019s really helpful to know. Just to confirm, you\u2019re booked onto the induction session for Tuesday at 7:00 PM at Fairlop Leisure Centre. It\u2019s a five-minute walk from your home. \n\nDo you have any other questions for me before you head over?"
+      },
+      {
+        "response_id": "F0018_b",
+        "response": "Great! That\u2019s really helpful to know. Just to confirm, you\u2019re booked onto the induction session for Tuesday at 7:00 PM at Fairlop Leisure Centre. It\u2019s a five-minute walk from your home. \n\nDo you have any other questions for me before you head over?"
+      },
+      {
+        "response_id": "F0018_c",
+        "response": "Okay, great! Just to confirm, that\u2019s the Tuesday evening induction at 7pm at Fairlop Leisure Centre. It\u2019s a five-minute walk from your front door. Do you want me to send you a confirmation email with the details, or is that alright?"
+      },
+      {
+        "response_id": "F0018_d",
+        "response": "Great! That\u2019s really helpful to know. Just to confirm, you\u2019re booked onto the induction session for Tuesday at 7:00 PM at Fairlop Leisure Centre. It\u2019s a five-minute walk from your home. \n\nDo you have any other questions for me before you head over?"
+      }
+    ]
+  },
+  {
+    "id": "F0096",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello, I want a car club booking for Saturday, out to Bakewell and back, from eight in the morning until six in the evening. Put it on the account card rather than charging it separately."
+      },
+      {
+        "speaker": "assistant",
+        "text": "That's all on the account card, nothing separate. There's a car free all day, but it must be back in its own bay by six on the dot, because another member takes it at quarter past. Shall I hold it?"
+      },
+      {
+        "speaker": "user",
+        "text": "Please do. We should be back over the bridge by about five, so I'll drop it into the bay when we do and walk home."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Right you are. The fuel card lives in the glovebox and the mileage logs itself."
+      },
+      {
+        "speaker": "user",
+        "text": "Straight onto the account, nothing charged separately. I'm booking it under Ruth Ellery."
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "F0096_a",
+        "response": "Okay, confirmed. A car booking for Saturday, out to Bakewell and back, 8:00 AM to 6:00 PM, under Ruth Ellery, and charged directly to the account \u2013 no separate charges. It\u2019s held until you return over the bridge around 5:00 PM. \n\nIs there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0096_b",
+        "response": "Okay, confirmed. A car club booking for Saturday, out to Bakewell and back, from 8:00 am to 6:00 pm, under Ruth Ellery, and charged directly to the account \u2013 no separate charges. It\u2019s held for you until you return over the bridge around 5:00 pm. Is there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0096_c",
+        "response": "Okay, confirmed. A car booking for Saturday, out to Bakewell and back, 8:00 AM to 6:00 PM, under Ruth Ellery, and charged directly to the account \u2013 no separate charges. It\u2019s held until you return over the bridge around 5:00 PM. \n\nIs there anything else I can help you with today?"
+      },
+      {
+        "response_id": "F0096_d",
+        "response": "Okay, confirmed. A car booking for Saturday, out to Bakewell and back, 8:00 AM to 6:00 PM, under Ruth Ellery, and charged directly to the account \u2013 no separate charges. It\u2019s held until you return over the bridge around 5:00 PM. \n\nIs there anything else I can help you with today?"
+      }
+    ]
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "family_id": "household_008",
+  "domain": "household",
+  "task_goal": "arrange to collect two parcels a neighbour took in while the flat was empty",
+  "n_turns": 7,
+  "tail_anchor": "Thanks again for putting up with them all weekend.",
+  "notes": "rep_unres and rep_res differ by two words in turn 6 (it / the flat box). Turn 4 makes 'whichever is in your way first' the selector and turn 5 cancels it while naming Kofi's round one as the most recent singular mention, so the bare pronoun has two live parcels. norep_unres and norep_res differ only in the first clause of turn 1, which either thanks the user or answers the signing question.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "There is a long flat box with your name on it and a heavy round one for Kofi.", "role": "two live candidate referents"},
+        {"turn_index": 4, "quote": "I'll take whichever is in your way first, and the other can follow at the weekend", "role": "only one parcel goes tomorrow, chosen by which is in the way"},
+        {"turn_index": 5, "quote": "Honestly, neither of them is in my way. Kofi's round one only bothers me when I am hoovering.", "role": "cancels the selector and re-activates the second candidate"},
+        {"turn_index": 6, "quote": "just leave it behind the recycling bin", "role": "referring expression that picks out neither parcel"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Sandra, thank you for taking our two deliveries in on Friday. I can come round tomorrow evening after six. Would that suit you?"},
+        {"speaker": "assistant", "text": "After six is fine by me. There is a long flat box with your name on it and a heavy round one for Kofi."},
+        {"speaker": "user", "text": "That will be my curtain pole and his bike wheel. I can come round tomorrow evening after six, unless you have choir."},
+        {"speaker": "assistant", "text": "Choir is on Wednesdays, so you are safe. The round one takes up half my hallway. Has he not got a shed of his own?"},
+        {"speaker": "user", "text": "He has, but it is full of my mother's dining chairs. I'll take whichever is in your way first, and the other can follow at the weekend."},
+        {"speaker": "assistant", "text": "Honestly, neither of them is in my way. Kofi's round one only bothers me when I am hoovering. I might nip out to my daughter's about seven."},
+        {"speaker": "user", "text": "If you do go out, just leave it behind the recycling bin and I will take it up. Thanks again for putting up with them all weekend."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "After six is fine by me.", "role": "the proposed time is accepted"},
+        {"turn_index": 2, "quote": "I can come round tomorrow evening after six", "role": "restatement for emphasis of a time already agreed"},
+        {"turn_index": 6, "quote": "just leave the flat box behind the recycling bin", "role": "names the parcel, so the next action is determined"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Sandra, thank you for taking our two deliveries in on Friday. I can come round tomorrow evening after six. Would that suit you?"},
+        {"speaker": "assistant", "text": "After six is fine by me. There is a long flat box with your name on it and a heavy round one for Kofi."},
+        {"speaker": "user", "text": "That will be my curtain pole and his bike wheel. I can come round tomorrow evening after six, unless you have choir."},
+        {"speaker": "assistant", "text": "Choir is on Wednesdays, so you are safe. The round one takes up half my hallway. Has he not got a shed of his own?"},
+        {"speaker": "user", "text": "He has, but it is full of my mother's dining chairs. I'll take whichever is in your way first, and the other can follow at the weekend."},
+        {"speaker": "assistant", "text": "Honestly, neither of them is in my way. Kofi's round one only bothers me when I am hoovering. I might nip out to my daughter's about seven."},
+        {"speaker": "user", "text": "If you do go out, just leave the flat box behind the recycling bin and I will take it up. Thanks again for putting up with them all weekend."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Did the driver leave anything to sign, or is it all done on the app now?", "role": "request"},
+        {"turn_index": 1, "quote": "You are welcome, they were no bother.", "role": "assistant answers the thanks instead of the question"},
+        {"turn_index": 5, "quote": "Honestly, neither of them is in my way.", "role": "last assistant turn, still no answer"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Sandra, thank you for taking our two deliveries in on Friday. Did the driver leave anything to sign, or is it all done on the app now?"},
+        {"speaker": "assistant", "text": "You are welcome, they were no bother. There is a long flat box with your name on it and a heavy round one for Kofi."},
+        {"speaker": "user", "text": "That will be my curtain pole and his bike wheel. I could call round tomorrow evening after six, if you are in."},
+        {"speaker": "assistant", "text": "After six is grand. The round one takes up half my hallway. Has he not got a shed of his own?"},
+        {"speaker": "user", "text": "He has, but it is full of my mother's dining chairs. I'll take whichever is in your way first, and the other can follow at the weekend."},
+        {"speaker": "assistant", "text": "Honestly, neither of them is in my way. Kofi's round one only bothers me when I am hoovering. I might nip out to my daughter's about seven."},
+        {"speaker": "user", "text": "If you do go out, just leave the flat box behind the recycling bin and I will take it up. Thanks again for putting up with them all weekend."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "It is all done on the app now, nothing to sign.", "role": "answers the only open request"},
+        {"turn_index": 6, "quote": "just leave the flat box behind the recycling bin", "role": "names the parcel, so the next action is determined"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Sandra, thank you for taking our two deliveries in on Friday. Did the driver leave anything to sign, or is it all done on the app now?"},
+        {"speaker": "assistant", "text": "It is all done on the app now, nothing to sign. There is a long flat box with your name on it and a heavy round one for Kofi."},
+        {"speaker": "user", "text": "That will be my curtain pole and his bike wheel. I could call round tomorrow evening after six, if you are in."},
+        {"speaker": "assistant", "text": "After six is grand. The round one takes up half my hallway. Has he not got a shed of his own?"},
+        {"speaker": "user", "text": "He has, but it is full of my mother's dining chairs. I'll take whichever is in your way first, and the other can follow at the weekend."},
+        {"speaker": "assistant", "text": "Honestly, neither of them is in my way. Kofi's round one only bothers me when I am hoovering. I might nip out to my daughter's about seven."},
+        {"speaker": "user", "text": "If you do go out, just leave the flat box behind the recycling bin and I will take it up. Thanks again for putting up with them all weekend."}
+      ]
+    }
+  }
+}

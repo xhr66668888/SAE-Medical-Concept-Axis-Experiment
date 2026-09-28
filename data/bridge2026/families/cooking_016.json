@@ -1,0 +1,77 @@
+{
+  "family_id": "cooking_016",
+  "domain": "cooking",
+  "task_goal": "make a first batch of sauerkraut and settle the salt, the vessel and the time on the worktop",
+  "n_turns": 5,
+  "tail_anchor": "The cabbages are sitting in the porch already.",
+  "notes": "rep_unres and rep_res differ only by 'it' vs 'the Kilner' with two vessels live; norep_unres and norep_res differ only in whether the assistant's first turn gives the days on the worktop.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "I've got the big 2 litre Kilner down from the loft and the little stoneware crock my dad gave us.", "role": "two live candidate vessels"},
+        {"turn_index": 3, "quote": "The Kilner takes the lot with room for the brine to rise; the crock holds about two-thirds of it but ferments more evenly. Either works.", "role": "both candidates re-activated and neither picked"},
+        {"turn_index": 4, "quote": "I'll give it a good scald tonight and fill it first thing.", "role": "the vessel needed for the next action is under-determined"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I'm having a go at sauerkraut for the first time. I've got two heads of white cabbage, about 1.8kg once they're trimmed. How much salt does that need?"},
+        {"speaker": "assistant", "text": "Two per cent of the trimmed weight, so 36 grams for 1.8kg. Shred it fine, salt it, then squeeze it hard for a good ten minutes until the brine runs."},
+        {"speaker": "user", "text": "Right. I've got the big 2 litre Kilner down from the loft and the little stoneware crock my dad gave us. Which of those suits it better?"},
+        {"speaker": "assistant", "text": "The Kilner takes the lot with room for the brine to rise; the crock holds about two-thirds of it but ferments more evenly. Either works. Read the salt figure back to me so I know it's right."},
+        {"speaker": "user", "text": "Two per cent of the trimmed weight, so 36 grams for 1.8kg. I'll give it a good scald tonight and fill it first thing. The cabbages are sitting in the porch already."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "Read the salt figure back to me so I know it's right.", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "Two per cent of the trimmed weight, so 36 grams for 1.8kg.", "role": "requested read-back, not a sign of trouble"},
+        {"turn_index": 4, "quote": "I'll give the Kilner a good scald tonight and fill it first thing.", "role": "the vessel for the next action is named"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I'm having a go at sauerkraut for the first time. I've got two heads of white cabbage, about 1.8kg once they're trimmed. How much salt does that need?"},
+        {"speaker": "assistant", "text": "Two per cent of the trimmed weight, so 36 grams for 1.8kg. Shred it fine, salt it, then squeeze it hard for a good ten minutes until the brine runs."},
+        {"speaker": "user", "text": "Right. I've got the big 2 litre Kilner down from the loft and the little stoneware crock my dad gave us. Which of those suits it better?"},
+        {"speaker": "assistant", "text": "The Kilner takes the lot with room for the brine to rise; the crock holds about two-thirds of it but ferments more evenly. Either works. Read the salt figure back to me so I know it's right."},
+        {"speaker": "user", "text": "Two per cent of the trimmed weight, so 36 grams for 1.8kg. I'll give the Kilner a good scald tonight and fill it first thing. The cabbages are sitting in the porch already."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "How long does it sit out on the worktop before it goes in the fridge?", "role": "request"},
+        {"turn_index": 1, "quote": "Start with the salt: two per cent of the trimmed weight, which is 36 grams here.", "role": "assistant answers a different part and leaves the request open"},
+        {"turn_index": 3, "quote": "Loose, or burp it daily, because the gas has to escape somewhere.", "role": "second assistant turn also leaves it open"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I'm having a go at sauerkraut for the first time. I've got two heads of white cabbage, about 1.8kg once they're trimmed. How long does it sit out on the worktop before it goes in the fridge?"},
+        {"speaker": "assistant", "text": "Start with the salt: two per cent of the trimmed weight, which is 36 grams here. Shred it fine, salt it, then squeeze it hard for a good ten minutes until the brine runs."},
+        {"speaker": "user", "text": "Got it, I'll weigh the salt out on the little scales rather than guessing. Should the jar be sealed tight or left loose while it works?"},
+        {"speaker": "assistant", "text": "Loose, or burp it daily, because the gas has to escape somewhere. And keep everything submerged with a weight or a folded outer leaf on top."},
+        {"speaker": "user", "text": "I'll use a small jam jar full of water as the weight, that should hold it down. The cabbages are sitting in the porch already."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Five to ten days out on the worktop, then the fridge.", "role": "answers the opening request"},
+        {"turn_index": 3, "quote": "Loose, or burp it daily, because the gas has to escape somewhere.", "role": "discharges the last open request"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I'm having a go at sauerkraut for the first time. I've got two heads of white cabbage, about 1.8kg once they're trimmed. How long does it sit out on the worktop before it goes in the fridge?"},
+        {"speaker": "assistant", "text": "Five to ten days out on the worktop, then the fridge. Salt is two per cent of the trimmed weight, which is 36 grams here. Shred it fine, salt it, then squeeze it hard until the brine runs."},
+        {"speaker": "user", "text": "Got it, I'll weigh the salt out on the little scales rather than guessing. Should the jar be sealed tight or left loose while it works?"},
+        {"speaker": "assistant", "text": "Loose, or burp it daily, because the gas has to escape somewhere. And keep everything submerged with a weight or a folded outer leaf on top."},
+        {"speaker": "user", "text": "I'll use a small jam jar full of water as the weight, that should hold it down. The cabbages are sitting in the porch already."}
+      ]
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "family_id": "cooking_019",
+  "domain": "cooking",
+  "task_goal": "work out which pans survive a new induction hob and what has to be replaced before it is fitted",
+  "n_turns": 5,
+  "tail_anchor": "The old hob goes out on Tuesday.",
+  "notes": "rep_unres and rep_res differ only by 'it' vs 'the Christmas non-stick' with two equally flawed pans live; norep_unres and norep_res differ by one word, ten vs fourteen centimetres, against a stated twelve-centimetre minimum.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "the old black steel one from my mother, which rocks a bit on a flat surface, and the non-stick one we bought at Christmas",
+          "role": "two live candidate pans"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Neither is a clean yes. The black steel one would grip, but induction wants a flat base and yours rocks. The Christmas non-stick is aluminium with a thin steel disc, so it will heat, but those disc bases hot-spot badly.",
+          "role": "both candidates re-activated and neither ruled out"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll take it down the tip then and buy a replacement.",
+          "role": "the pan needed for the next action is under-determined"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "We're having an induction hob fitted next week and I'm trying to work out which of our pans will still be usable. There's a cast-iron casserole, a stainless set and two frying pans. And I'm not spending more than fifty pounds replacing anything, we've just paid for the hob itself."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood, fifty pounds is the ceiling. Hold a fridge magnet against the base of each one: if it grips firmly it will work. Cast iron and most stainless are fine; aluminium and copper are not."
+        },
+        {
+          "speaker": "user",
+          "text": "The magnet grips on the casserole and the stainless set. It's the two frying pans I'm unsure about: the old black steel one from my mother, which rocks a bit on a flat surface, and the non-stick one we bought at Christmas. Is either of those any use?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Neither is a clean yes. The black steel one would grip, but induction wants a flat base and yours rocks. The Christmas non-stick is aluminium with a thin steel disc, so it will heat, but those disc bases hot-spot badly."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll take it down the tip then and buy a replacement. I'm not spending more than fifty pounds replacing anything, we've just paid for the hob itself. The old hob goes out on Tuesday."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Understood, fifty pounds is the ceiling.",
+          "role": "the preference was already accepted"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Neither is a clean yes.",
+          "role": "discharges the last open request"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll take the Christmas non-stick down the tip then and buy a replacement.",
+          "role": "the pan for the next action is named"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'm not spending more than fifty pounds replacing anything",
+          "role": "restating an accepted preference for emphasis"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "We're having an induction hob fitted next week and I'm trying to work out which of our pans will still be usable. There's a cast-iron casserole, a stainless set and two frying pans. And I'm not spending more than fifty pounds replacing anything, we've just paid for the hob itself."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood, fifty pounds is the ceiling. Hold a fridge magnet against the base of each one: if it grips firmly it will work. Cast iron and most stainless are fine; aluminium and copper are not."
+        },
+        {
+          "speaker": "user",
+          "text": "The magnet grips on the casserole and the stainless set. It's the two frying pans I'm unsure about: the old black steel one from my mother, which rocks a bit on a flat surface, and the non-stick one we bought at Christmas. Is either of those any use?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Neither is a clean yes. The black steel one would grip, but induction wants a flat base and yours rocks. The Christmas non-stick is aluminium with a thin steel disc, so it will heat, but those disc bases hot-spot badly."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll take the Christmas non-stick down the tip then and buy a replacement. I'm not spending more than fifty pounds replacing anything, we've just paid for the hob itself. The old hob goes out on Tuesday."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "the zones won't detect a pan whose base is under about twelve centimetres across",
+          "role": "stated minimum the hob can detect"
+        },
+        {
+          "turn_index": 2,
+          "quote": "The milk pan measures ten centimetres across the base and it's the only thing I warm milk in, so that goes on the small zone every morning.",
+          "role": "the action puts an undersized pan on the hob daily"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Good, the casserole will be the best thing you own on induction.",
+          "role": "assistant moves on without reconciling the two"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "We're having an induction hob fitted here next week and I need to know which of our pans will still be usable. There's a cast-iron casserole, a stainless set, two frying pans and a little milk pan in the cupboard."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Hold a fridge magnet against the base of each: if it grips firmly the pan will work. Cast iron and most stainless are fine; aluminium and copper are not. One other thing, the zones won't detect a pan whose base is under about twelve centimetres across."
+        },
+        {
+          "speaker": "user",
+          "text": "The magnet grips on everything bar one of the frying pans, which I'll replace anyway. The milk pan measures ten centimetres across the base and it's the only thing I warm milk in, so that goes on the small zone every morning. Anything else before Tuesday?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Good, the casserole will be the best thing you own on induction. Get a replacement frying pan with a properly flat base rather than a ridged one, and you will find it far more responsive than gas ever was."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll look for a flat-based one at the weekend and drop the old one off at the tip on the way. The old hob goes out on Tuesday."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "the zones won't detect a pan whose base is under about twelve centimetres across",
+          "role": "stated minimum the hob can detect"
+        },
+        {
+          "turn_index": 2,
+          "quote": "The milk pan measures fourteen centimetres across the base",
+          "role": "the daily pan clears the stated minimum"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Get a replacement frying pan with a properly flat base rather than a ridged one",
+          "role": "discharges the last open request"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "We're having an induction hob fitted here next week and I need to know which of our pans will still be usable. There's a cast-iron casserole, a stainless set, two frying pans and a little milk pan in the cupboard."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Hold a fridge magnet against the base of each: if it grips firmly the pan will work. Cast iron and most stainless are fine; aluminium and copper are not. One other thing, the zones won't detect a pan whose base is under about twelve centimetres across."
+        },
+        {
+          "speaker": "user",
+          "text": "The magnet grips on everything bar one of the frying pans, which I'll replace anyway. The milk pan measures fourteen centimetres across the base and it's the only thing I warm milk in, so that goes on the small zone every morning. Anything else before Tuesday?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Good, the casserole will be the best thing you own on induction. Get a replacement frying pan with a properly flat base rather than a ridged one, and you will find it far more responsive than gas ever was."
+        },
+        {
+          "speaker": "user",
+          "text": "I'll look for a flat-based one at the weekend and drop the old one off at the tip on the way. The old hob goes out on Tuesday."
+        }
+      ]
+    }
+  }
+}

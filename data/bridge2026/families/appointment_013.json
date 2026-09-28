@@ -1,0 +1,218 @@
+{
+  "family_id": "appointment_013",
+  "domain": "appointment",
+  "task_goal": "book a family portrait session with Naomi at Hadleigh Studio and choose the print package",
+  "n_turns": 7,
+  "tail_anchor": "I'll settle the balance nearer the time.",
+  "notes": "rep_unres and rep_res differ by one word in the final user turn ('that one' versus 'the album'), where two print packages have just been listed as a choice of one from two. Both rep cells carry the same ten-token restatement of the outdoors preference. norep_unres and norep_res differ only in the arrival time in turn 4, which either puts two of the seven on the pier after the light has gone or well before it.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 5,
+          "quote": "the thirty-print album and the ten-card folio",
+          "role": "the two live candidates"
+        },
+        {
+          "turn_index": 5,
+          "quote": "you can settle on one of the two now or on the day",
+          "role": "exactly one of the two has to be picked"
+        },
+        {
+          "turn_index": 6,
+          "quote": "Put us down for that one now",
+          "role": "referring expression that picks neither of the two out"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I would like to book a family portrait session at Hadleigh Studio, sometime in the next month or so."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Naomi has Saturday the eleventh or Saturday the twenty-fifth free. Where were you thinking, the walled garden behind the studio or the old pier?"
+        },
+        {
+          "speaker": "user",
+          "text": "Saturday the twenty-fifth, and the old pier. I want it all shot outdoors, no studio lights at all."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Outdoors at the pier on the twenty-fifth, then, and no studio lights on the sheet. There is a print order to place on top of the session fee."
+        },
+        {
+          "speaker": "user",
+          "text": "Fine. And I will say it again, I want it all shot outdoors, no studio lights at all."
+        },
+        {
+          "speaker": "assistant",
+          "text": "She will get the message. There are two print packages, the thirty-print album and the ten-card folio, and you can settle on one of the two now or on the day."
+        },
+        {
+          "speaker": "user",
+          "text": "Put us down for that one now, so it is out of the way. I'll settle the balance nearer the time."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "no studio lights on the sheet",
+          "role": "the studio has already accepted the preference"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I will say it again, I want it all shot outdoors, no studio lights at all",
+          "role": "restatement for emphasis, not a sign of trouble"
+        },
+        {
+          "turn_index": 6,
+          "quote": "Put us down for the album now",
+          "role": "the package is named, so the last choice is closed"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I would like to book a family portrait session at Hadleigh Studio, sometime in the next month or so."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Naomi has Saturday the eleventh or Saturday the twenty-fifth free. Where were you thinking, the walled garden behind the studio or the old pier?"
+        },
+        {
+          "speaker": "user",
+          "text": "Saturday the twenty-fifth, and the old pier. I want it all shot outdoors, no studio lights at all."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Outdoors at the pier on the twenty-fifth, then, and no studio lights on the sheet. There is a print order to place on top of the session fee."
+        },
+        {
+          "speaker": "user",
+          "text": "Fine. And I will say it again, I want it all shot outdoors, no studio lights at all."
+        },
+        {
+          "speaker": "assistant",
+          "text": "She will get the message. There are two print packages, the thirty-print album and the ten-card folio, and you can settle on one of the two now or on the day."
+        },
+        {
+          "speaker": "user",
+          "text": "Put us down for the album now, so it is out of the way. I'll settle the balance nearer the time."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "anything shot down there has to be finished by then",
+          "role": "the pier shoot must end by four"
+        },
+        {
+          "turn_index": 2,
+          "quote": "the group shot needs every one of the seven in it",
+          "role": "why the late pair blocks the job"
+        },
+        {
+          "turn_index": 4,
+          "quote": "will not reach the pier until half four",
+          "role": "the conflicting fact"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Right you are.",
+          "role": "assistant moves on to prints without reconciling it"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I would like to book a family portrait session at Hadleigh Studio, sometime in the next month or so."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Naomi has Saturday the twenty-fifth free at the old pier. The light goes by four at this time of year, so anything shot down there has to be finished by then."
+        },
+        {
+          "speaker": "user",
+          "text": "That Saturday at the pier suits us. There will be seven of us, and the group shot needs every one of the seven in it."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Seven is no trouble at all. Naomi likes forty-five minutes for a group that size, so I will start you at three."
+        },
+        {
+          "speaker": "user",
+          "text": "My brother and his wife are driving down from Leeds and will not reach the pier until half four."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Right you are. There are two print packages on offer afterwards. Would you like the thirty-print album or the ten-card folio?"
+        },
+        {
+          "speaker": "user",
+          "text": "The album, please, and put my name on the order. I'll settle the balance nearer the time."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 4,
+          "quote": "will be at the pier by half two",
+          "role": "the whole party is there before the four o'clock cut-off"
+        },
+        {
+          "turn_index": 6,
+          "quote": "The album, please, and put my name on the order.",
+          "role": "closes the last open item"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I would like to book a family portrait session at Hadleigh Studio, sometime in the next month or so."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Naomi has Saturday the twenty-fifth free at the old pier. The light goes by four at this time of year, so anything shot down there has to be finished by then."
+        },
+        {
+          "speaker": "user",
+          "text": "That Saturday at the pier suits us. There will be seven of us, and the group shot needs every one of the seven in it."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Seven is no trouble at all. Naomi likes forty-five minutes for a group that size, so I will start you at three."
+        },
+        {
+          "speaker": "user",
+          "text": "My brother and his wife are driving down from Leeds and will be at the pier by half two."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Right you are. There are two print packages on offer afterwards. Would you like the thirty-print album or the ten-card folio?"
+        },
+        {
+          "speaker": "user",
+          "text": "The album, please, and put my name on the order. I'll settle the balance nearer the time."
+        }
+      ]
+    }
+  }
+}

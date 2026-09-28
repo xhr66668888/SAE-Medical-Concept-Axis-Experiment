@@ -1,0 +1,832 @@
+[
+  {
+    "id": "A0_000",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I would like to switch from pay as you go to a monthly pass. Does the pass also cover the riverboat at Greenwich?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "The 31-day pass for zones one and two is ninety-six pounds, against a cap of a hundred and thirty-two on pay as you go."
+      },
+      {
+        "speaker": "user",
+        "text": "Set it up, then. Does the pass also cover the riverboat at Greenwich?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "I will start it from Monday the sixth, and it will run to the fifth of next month."
+      },
+      {
+        "speaker": "user",
+        "text": "That suits me nicely. Put it on the card I already have."
+      }
+    ]
+  },
+  {
+    "id": "A0_001",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I'm cooking a mushroom stroganoff for six on Friday and one of the six doesn't eat dairy. How high should the heat be when the cream goes in?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Keep it at a bare simmer once the cream goes in, and use an oat cream so it stays dairy-free. For six you want 900g of mushrooms, so three 300g punnets."
+      },
+      {
+        "speaker": "user",
+        "text": "That all makes sense. I've already got two 300g punnets in the fridge, so the mushrooms are sorted. Is rice or tagliatelle better under it?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Tagliatelle, and salt the water properly; it is the only seasoning the pasta will get."
+      },
+      {
+        "speaker": "user",
+        "text": "Tagliatelle it is, then. Everything else is already in the cupboard."
+      }
+    ]
+  },
+  {
+    "id": "A0_002",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I'm getting the train to Ashfield on Saturday and then on to the Greenbank centre. I'll have a large case with me."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Two buses will get you there. The 184 runs from Ashfield station to the Greenbank centre every twenty minutes, and the 187 does the same trip hourly but stops nearer the entrance."
+      },
+      {
+        "speaker": "user",
+        "text": "Before I commit, is there a lift down to the bus stands?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Yes, a lift runs from the concourse straight down to the stands, and both buses are low-floor."
+      },
+      {
+        "speaker": "user",
+        "text": "That settles it, then. I'll be travelling first thing on Saturday morning."
+      },
+      {
+        "speaker": "assistant",
+        "text": "The first services go at six on Saturdays. Could you just confirm the bus number and the starting point for me?"
+      },
+      {
+        "speaker": "user",
+        "text": "The 184 runs from Ashfield station to the Greenbank centre. I'll text you when I set off."
+      }
+    ]
+  },
+  {
+    "id": "A0_003",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello. I've got two Ashgrove orders on the way: the oak desk on order 7731 and the desk chair on order 7802. I need to sort out the delivery days."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Of course. The oak desk is booked for Tuesday the 14th and the desk chair for Thursday the 16th. Does that fit with your week?"
+      },
+      {
+        "speaker": "user",
+        "text": "Not really. A neighbour can take one of them in, but for the other I have to be there, and it has to be a Saturday because I cannot take a weekday off."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Understood. We run Saturday crews every week and there is no fee for changing a slot."
+      },
+      {
+        "speaker": "user",
+        "text": "As I say, it has to be a Saturday because I cannot take a weekday off. Put the chair back to Saturday the 18th."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Noted, Saturday the 18th. I will send the amendment through to the depot now."
+      },
+      {
+        "speaker": "user",
+        "text": "Brilliant. Send the confirmation over when it's booked."
+      }
+    ]
+  },
+  {
+    "id": "A0_004",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "The wardrobe lands on Thursday in a twelve to four slot and I am stuck in a workshop until six. Do they carry it upstairs, or is it left in the hall?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "I can sit at the kitchen table all Thursday, so someone will be here for it. Dan next door still has our drill, remember."
+      },
+      {
+        "speaker": "user",
+        "text": "I'll knock for him on Wednesday evening. Theo gets in on the Sunday and we are building it on the Saturday morning, so there is time to spare."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Plenty of time. They carry it up to whichever room you want, it says so at the bottom of the docket."
+      },
+      {
+        "speaker": "user",
+        "text": "Good, that is one less thing. The Allen keys are in the kitchen drawer."
+      }
+    ]
+  },
+  {
+    "id": "A0_005",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I want to send two gifts through Halloway's: a tea hamper going to my brother in Cardiff and a candle set going to a colleague in Leeds."
+      },
+      {
+        "speaker": "assistant",
+        "text": "We can do both. Gift notes are free, and ribbon wrap is \u00a34 a parcel."
+      },
+      {
+        "speaker": "user",
+        "text": "Ribbon wrap on both, then. I want no prices shown on anything inside either parcel."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Gift packing never shows a price, so that is covered. I have added the ribbon wrap to both parcels."
+      },
+      {
+        "speaker": "user",
+        "text": "I want no prices shown on anything inside either parcel. Charge the lot to the card ending 3106."
+      }
+    ]
+  },
+  {
+    "id": "A0_006",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I'm scaling up the lemon drizzle traybake for twelve tomorrow and it's written for eight. Can I use golden caster sugar instead of white for the drizzle?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "For twelve, go up by half: 300g flour, 300g sugar, 300g butter and six eggs, baked in a 30cm by 20cm tin."
+      },
+      {
+        "speaker": "user",
+        "text": "Right, half again. Can I use golden caster sugar instead of white for the drizzle?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "The tin is the thing to watch, because the batter will sit about 3cm deep, so give it fifty minutes at 170C fan."
+      },
+      {
+        "speaker": "user",
+        "text": "Fifty minutes at 170 fan, noted. I'll set everything out on the counter tonight."
+      }
+    ]
+  },
+  {
+    "id": "A0_007",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello. The battery on my Pemberton cordless vacuum has stopped holding charge and I would like to claim on the warranty."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Sorry to hear that. Batteries are covered free of charge for the first twelve months, and after that there is a parts fee."
+      },
+      {
+        "speaker": "user",
+        "text": "It ran fine until a fortnight ago and now it dies after about four minutes. Does a claim need the original receipt?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "The order on your account is enough, so no receipt is needed. The address we hold is Flat 2, 14 Ardwick Terrace, Manchester."
+      },
+      {
+        "speaker": "user",
+        "text": "That address is right. The machine is only two years old, so it is comfortably inside the twelve months."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Understood. Before I book anything, read the collection address back to me."
+      },
+      {
+        "speaker": "user",
+        "text": "Flat 2, 14 Ardwick Terrace, Manchester. Book the courier for any morning next week."
+      }
+    ]
+  },
+  {
+    "id": "A0_008",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hi. I have two Cobblestone subscriptions running on the same account: the fortnightly house blend and the monthly decaf."
+      },
+      {
+        "speaker": "assistant",
+        "text": "I can see both of them. The house blend renews on the 4th and the decaf renews on the 20th."
+      },
+      {
+        "speaker": "user",
+        "text": "Put the monthly decaf on hold from next month, please, since it is arriving faster than I can drink it. I would also like to know whether a paused month still earns loyalty credits."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Paused months still earn credits. The hold starts at the end of July and the decaf resumes on the 20th of September."
+      },
+      {
+        "speaker": "user",
+        "text": "That works. Leave everything else on the account exactly as it is."
+      }
+    ]
+  },
+  {
+    "id": "A0_009",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello, I'd like to get the service and MOT booked in before the end of the month."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Happy to help. We have two cars listed for you, a Skoda Octavia and a Vauxhall Corsa, and both MOTs run out in the next fortnight."
+      },
+      {
+        "speaker": "user",
+        "text": "Let's book it in for the 22nd if you have a ramp free that morning."
+      },
+      {
+        "speaker": "assistant",
+        "text": "The 22nd is fine, we open at eight. Would you want a courtesy car for the day?"
+      },
+      {
+        "speaker": "user",
+        "text": "Yes please, a courtesy car for the day would save me a lot of bother."
+      },
+      {
+        "speaker": "assistant",
+        "text": "That's noted down. We'll have one on the forecourt ready for eight."
+      },
+      {
+        "speaker": "user",
+        "text": "Grand, that's all sorted then. I'll drop the keys in the night before."
+      }
+    ]
+  },
+  {
+    "id": "A0_010",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hi, I need to send back the rain jacket from order 4482. What do I need to do at my end?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Happy to help. We take items back unworn with the tags still attached, so is that the case here?"
+      },
+      {
+        "speaker": "user",
+        "text": "Yes, the tags are still on it. I wore it once on a wet walk and it leaked, so it's going back. How long does the refund take?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Refunds land on the original card within five working days of the parcel reaching us."
+      },
+      {
+        "speaker": "user",
+        "text": "That's fine by me. I'll drop the parcel off tomorrow morning."
+      }
+    ]
+  },
+  {
+    "id": "A0_011",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I've got two joints in the fridge for tomorrow, a 1.6kg lamb shoulder and a 2kg pork loin. How long does each want in the oven?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "The lamb wants ninety minutes at 160C fan, then fifteen minutes under foil; the pork wants an hour and three quarters at 180C. Can you read the lamb timing back to me?"
+      },
+      {
+        "speaker": "user",
+        "text": "Ninety minutes at 160C fan, then fifteen minutes under foil. I'll put the lamb in at five and take it out at six thirty."
+      },
+      {
+        "speaker": "assistant",
+        "text": "That is it exactly. Bring the lamb out of the fridge an hour before it goes in, or the middle stays cold."
+      },
+      {
+        "speaker": "user",
+        "text": "Out of the fridge at four, then. I'll jot the timings on the board by the hob."
+      }
+    ]
+  },
+  {
+    "id": "A0_012",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Morning. I need to shift a booking at Fold and Fringe. Is Nadia working any midweek days this month?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "She is in on Tuesdays and Thursdays. Your cut and colour is down for Saturday the 4th, and the 14th at four or the 16th at half nine are open."
+      },
+      {
+        "speaker": "user",
+        "text": "The 16th, please. Bear in mind that I have to be out of the chair by one."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Half nine will have you out long before one. Shall I keep the same colour formula as last time?"
+      },
+      {
+        "speaker": "user",
+        "text": "Please do, and remember I have to be out of the chair by one. Text me when it's in the diary."
+      }
+    ]
+  },
+  {
+    "id": "A0_013",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Good morning. I need to book the one-week renewal appointment at the Lancaster Road office."
+      },
+      {
+        "speaker": "assistant",
+        "text": "I can do that. The earliest is Monday the 13th at 9.15, and there is a later one on Wednesday the 15th at 2.30."
+      },
+      {
+        "speaker": "user",
+        "text": "Monday the 13th at 9.15 suits me a good deal better than the Wednesday."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Booked. Bring your current passport, the completed form and one signed photo, and read the date and time back to me."
+      },
+      {
+        "speaker": "user",
+        "text": "Monday the 13th at 9.15. My current passport went in the post to you last Tuesday."
+      },
+      {
+        "speaker": "assistant",
+        "text": "That matches the slot I am holding, so I have it saved on the system now."
+      },
+      {
+        "speaker": "user",
+        "text": "Understood, I will aim to be early. I'll bring the whole folder with me on the day."
+      }
+    ]
+  },
+  {
+    "id": "A0_014",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I'm baking a two-layer chocolate sponge for my nephew's birthday on Sunday and it has to be completely dairy-free. I've got a 20cm round tin and a 23cm round tin. How much batter does each one hold?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Dairy-free is no trouble; use a hard block margarine, not a soft spread. The 20cm holds about 700ml and the 23cm about a litre, and don't fill either tin past two thirds of the way up. Can you say that back to me?"
+      },
+      {
+        "speaker": "user",
+        "text": "Don't fill either tin past two thirds of the way up. I'll do a double batch so I get two layers."
+      },
+      {
+        "speaker": "assistant",
+        "text": "A double batch gives you two even layers. Line the base with parchment and grease the sides with a little of the margarine."
+      },
+      {
+        "speaker": "user",
+        "text": "Will do. I'll get the tin lined and greased tonight so Sunday is only mixing and baking."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Then Sunday is only the fun part. Bring the eggs out of the fridge the night before as well, because cold eggs curdle the mix."
+      },
+      {
+        "speaker": "user",
+        "text": "Eggs out on Saturday night, then. The candles and the cake board are already sorted."
+      }
+    ]
+  },
+  {
+    "id": "A0_015",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I fly out of Eastfield early on the ninth and want a parking space, ideally somewhere close to the shuttle stop."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Long Stay Green has a space in row B, right beside the shuttle stop, at forty dollars from the ninth to the seventeenth."
+      },
+      {
+        "speaker": "user",
+        "text": "That suits me. My return flight lands on the seventeenth, late in the evening."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Noted. Can you give me the registration and the make of the car?"
+      },
+      {
+        "speaker": "user",
+        "text": "It is KR19 TVO, a grey estate, and please keep me as near the shuttle as you can. I will be dropping off at six in the morning."
+      }
+    ]
+  },
+  {
+    "id": "A0_016",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Our kitchen mixer tap has been dripping since Sunday and it is getting worse. Any chance of a plumber this week?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Ray has a gap on Thursday morning. The mains stopcock for your building sits in the upstairs flat, so he will need access there as well. Let me know who is around on the day."
+      },
+      {
+        "speaker": "user",
+        "text": "Graham is upstairs all Thursday, and my brother Tom will be in ours from eight."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Good, that covers both flats. Ray usually rings ahead twenty minutes before he arrives. Which number should he use?"
+      },
+      {
+        "speaker": "user",
+        "text": "Ring Tom rather than me, he will be up and about. There's a bucket under it in the meantime."
+      }
+    ]
+  },
+  {
+    "id": "A0_017",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "We are taking the ferry over to Alderwick on Saturday and want bikes for the afternoon."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Coast Bikes on the island can hold two for you. The boat leaves Pier Three at nine twenty and the last one back leaves the Alderwick harbour at half past five."
+      },
+      {
+        "speaker": "user",
+        "text": "Put the bikes down for eleven until four."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Eleven until four is booked. Anything else you need on the island?"
+      },
+      {
+        "speaker": "user",
+        "text": "No, that is everything. The boat leaves Pier Three at nine twenty and the last one back leaves the Alderwick harbour at half past five. We plan to be back at the harbour at seven."
+      },
+      {
+        "speaker": "assistant",
+        "text": "I will email the tickets tonight with the voucher."
+      },
+      {
+        "speaker": "user",
+        "text": "Perfect. We will be at the pier for nine, then."
+      }
+    ]
+  },
+  {
+    "id": "A0_018",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Priya, hi, can we swap Thursdays for the rest of the month? I'm on lates, and I'd rather the girls came out of the gate together. Do you know whether after-school club takes them without booking ahead?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Thursdays work for me, and the girls can come out of the gate together. Freya swims at four, so I'm outside the school anyway."
+      },
+      {
+        "speaker": "user",
+        "text": "That's a weight off. Freya can drop her kit bag at ours afterwards if it saves you carting it about. Do you know whether after-school club takes them without booking ahead?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "That would save me a trip, thank you. I'll stand at the gate until they are both through."
+      },
+      {
+        "speaker": "user",
+        "text": "Very kind of you. It's going on the fridge calendar tonight."
+      }
+    ]
+  },
+  {
+    "id": "A0_019",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Good afternoon. I'd like a slot at the Year 4 parents' evening for Rosa. What hours is Mrs Adeyemi seeing parents?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "She is seeing parents from four until six on Thursday the 9th, and there are gaps left at 4.40 and at 5.20."
+      },
+      {
+        "speaker": "user",
+        "text": "We will take 5.20. Neither of us can get away from work before half past six, so that is comfortable."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Noted, 5.20 on the Thursday with Mrs Adeyemi. Will you be bringing Rosa along on the night?"
+      },
+      {
+        "speaker": "user",
+        "text": "Yes, she will come along too. I appreciate you fitting us in."
+      }
+    ]
+  },
+  {
+    "id": "A0_020",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Afternoon. The glass carafe on my Bellweather filter machine cracked last night, and the sticker underneath says model 400."
+      },
+      {
+        "speaker": "assistant",
+        "text": "I can sort that out. A replacement carafe for the 400 is \u00a318.50 and we have them in stock."
+      },
+      {
+        "speaker": "user",
+        "text": "Order one, then. I would also like to know whether the plastic lid comes with it or has to be bought on its own."
+      },
+      {
+        "speaker": "assistant",
+        "text": "It is in your basket now, and stock in the Leeds depot means it should reach you by Friday."
+      },
+      {
+        "speaker": "user",
+        "text": "Good. Let's get it ordered today if we can."
+      }
+    ]
+  },
+  {
+    "id": "A0_021",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Colin, we're away for a fortnight from next Tuesday. Would you be able to see to our bins while we're gone, and does the food caddy go out every week or only on the recycling week?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Of course, happy to. Ewan can cover the second week; he's back from Leeds by then."
+      },
+      {
+        "speaker": "user",
+        "text": "That's a relief, thank you both. Does the food caddy go out every week or only on the recycling week?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "No bother at all. I'll wheel them back up the drive once the lorry has been."
+      },
+      {
+        "speaker": "user",
+        "text": "Very kind of you. I'll leave the side gate unlocked either way."
+      }
+    ]
+  },
+  {
+    "id": "A0_022",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I want to book the 09:12 to Sheffield on Tuesday. What does the advance single come to?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "It is twenty-four fifty outward, and the train gets into Sheffield at 11:40. Do you want the return leg as well?"
+      },
+      {
+        "speaker": "user",
+        "text": "No, one way is plenty. I am due at the depot on Savile Street by half past twelve, so the timing suits me."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Noted. And which card will you be using for it?"
+      },
+      {
+        "speaker": "user",
+        "text": "It is the Visa ending 3041. Let's get it booked."
+      }
+    ]
+  },
+  {
+    "id": "A0_023",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hi, I'd like to book a cleaning at the Riverside dental clinic. Could you tell me what slots are open this week?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Sure. I have Thursday at 2pm or Friday at 10am available."
+      },
+      {
+        "speaker": "user",
+        "text": "Let's take the Thursday one. My afternoons are completely booked this week, so that works well. Will I get a reminder?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Yes, a text reminder goes out the day before. I'll put you down for that one."
+      },
+      {
+        "speaker": "user",
+        "text": "Perfect, thanks. Can we go ahead and lock that in?"
+      }
+    ]
+  },
+  {
+    "id": "A0_024",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Bev, we're off to Portugal on Saturday for a week. Would Erin still be up for feeding Pickle and Nutmeg?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "She would, she has been asking all summer. College finishes at four, so it would be a teatime visit."
+      },
+      {
+        "speaker": "user",
+        "text": "Teatime is perfect, they are not fussy. A pouch each in the evening, and dry biscuits left down all day. My sister Jan is popping in on the Wednesday to water the tomatoes."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Two in one week, they will be spoiled rotten. Erin is free on a Wednesday afternoon as well. Does the back door key still stick?"
+      },
+      {
+        "speaker": "user",
+        "text": "A bit, you have to lift it. Then she can do the Wednesday feed as well, which saves a journey."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Sensible. Read the evening amount back to me and I'll put it on our calendar."
+      },
+      {
+        "speaker": "user",
+        "text": "A pouch each in the evening. Then she can do the Wednesday feed as well, and I'll square it with her. Everything else is written on the pad by the kettle."
+      }
+    ]
+  },
+  {
+    "id": "A0_025",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Dev, the fibre engineer is coming Thursday between eight and twelve and I'm at the depot all day. Can you make sure he can get in?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "I'm out till eleven, but he'll get in. I'll leave the spare key from the biscuit tin under the boot scraper for him."
+      },
+      {
+        "speaker": "user",
+        "text": "The one from the biscuit tin, yes. He only needs the cupboard under the stairs, nothing in the loft."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Fine. Aisha is off nights on Thursday, so she'll be asleep upstairs, and I'd rather nobody woke her."
+      },
+      {
+        "speaker": "user",
+        "text": "Nobody will. Leave the spare key from the biscuit tin under the boot scraper, and I'll message him where to find it."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Sensible. I'll stick a note on the cupboard door so he doesn't go poking about."
+      },
+      {
+        "speaker": "user",
+        "text": "Good idea. Right, I'd better get back to the depot."
+      }
+    ]
+  },
+  {
+    "id": "A0_026",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "I need a car booked for Thursday evening. I get into Terminal 2 at 7:15 and my colleague Dan lands at Terminal 5 at about the same time."
+      },
+      {
+        "speaker": "assistant",
+        "text": "One vehicle can take you both, provided you meet at one terminal or the other. With three large cases I would suggest the XL, at around forty-six dollars."
+      },
+      {
+        "speaker": "user",
+        "text": "The XL sounds right to me. Have the driver wait at Terminal 5 from a quarter to eight."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Booked from 7:45, and I have added a note about the cases."
+      },
+      {
+        "speaker": "user",
+        "text": "Good. Send the confirmation to my phone."
+      }
+    ]
+  },
+  {
+    "id": "A0_027",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Hello. I left a navy suit jacket and a wool coat with you last week, and I need to come in for a fitting."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Of course, both are on the rail. Elif has Friday at half four, or Saturday at eleven if the weekend is easier."
+      },
+      {
+        "speaker": "user",
+        "text": "Friday is better for me. Could she take the sleeves up a touch while I am there?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "She can do that on the day. Read back the Friday slot at half past four with Elif so I can log it."
+      },
+      {
+        "speaker": "user",
+        "text": "The Friday slot at half past four with Elif. I'll come straight from the office."
+      }
+    ]
+  },
+  {
+    "id": "A0_028",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Sunday I'm batch cooking two soups for the freezer, a carrot and coriander and a spiced parsnip. They both need to be thick enough to stand a spoon in. How many tubs will six litres fill?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Nice and thick, understood. At 400ml a tub, six litres fills fifteen of them."
+      },
+      {
+        "speaker": "user",
+        "text": "Fifteen will do us nicely. Are glass jars safe to freeze soup in, or am I better off with plastic?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Cool them right down before they go anywhere near the freezer, and they will stack much better once they are solid."
+      },
+      {
+        "speaker": "user",
+        "text": "I'll make the carrot one this weekend and leave the parsnip until the end of November."
+      },
+      {
+        "speaker": "assistant",
+        "text": "For a single batch you want three kilos of veg, two onions, a head of garlic and a litre and a half of stock."
+      },
+      {
+        "speaker": "user",
+        "text": "I'll add the garlic to the list tonight. The veg shop is my first stop on Saturday."
+      }
+    ]
+  },
+  {
+    "id": "A0_029",
+    "dialogue": [
+      {
+        "speaker": "user",
+        "text": "Saturday I'm doing a paella for eight and I want it on the hob, not in the oven. How much rice should I buy?"
+      },
+      {
+        "speaker": "assistant",
+        "text": "Eighty grams a head, so 640g for eight, and about three times that in liquid. A wide pan matters more than the heat source."
+      },
+      {
+        "speaker": "user",
+        "text": "That is fine, I have a 900g bag. There is a tub of chicken stock and a tub of fish stock in the freezer, and I will take the fish one out tonight to thaw."
+      },
+      {
+        "speaker": "assistant",
+        "text": "Leave it in the fridge to come round rather than on the counter, and warm it through before it meets the rice."
+      },
+      {
+        "speaker": "user",
+        "text": "Overnight in the fridge, then. I've got the whole afternoon free for this."
+      }
+    ]
+  }
+]

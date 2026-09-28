@@ -1,0 +1,140 @@
+{
+  "model": "google/gemma-3-4b-it",
+  "dtype": "float32",
+  "n_layers": 34,
+  "d_model": 2560,
+  "checks": {
+    "E0.1_hook_equals_hidden_states": {
+      "per_layer": {
+        "0": {
+          "max_abs_diff": 0.0,
+          "hook_norm": 826.481689453125,
+          "hs_norm": 826.481689453125
+        },
+        "1": {
+          "max_abs_diff": 0.0,
+          "hook_norm": 743.0491333007812,
+          "hs_norm": 743.0491333007812
+        },
+        "17": {
+          "max_abs_diff": 0.0,
+          "hook_norm": 35325.55859375,
+          "hs_norm": 35325.55859375
+        },
+        "32": {
+          "max_abs_diff": 0.0,
+          "hook_norm": 54542.890625,
+          "hs_norm": 54542.890625
+        }
+      },
+      "pass": true
+    },
+    "E0.2_final_layer_diverges": {
+      "max_abs_diff": 26839.6875,
+      "hook_norm": 24728.455078125,
+      "hs_norm": 316.818603515625,
+      "norm_ratio_hs_over_hook": 0.012811904444280686,
+      "pass": true,
+      "note": "hidden_states[n_layers] has the final RMSNorm applied; the canonical site does not."
+    },
+    "E0.7_determinism": {
+      "max_abs_diff": 0.0,
+      "pass": true
+    },
+    "E0.3_zero_dose_noop": {
+      "layer": 22,
+      "max_abs_diff": 0.0,
+      "pass": true
+    },
+    "E0.4_self_patch_noop": {
+      "layer": 22,
+      "max_abs_diff": 0.0,
+      "pass": true
+    },
+    "E0.8_dose_linearity": {
+      "layer": 22,
+      "alpha": 1.0,
+      "sd_proj": 46.67373275756836,
+      "delta_norm_want": 46.67373275756836,
+      "delta_norm_got_mean": 46.673744201660156,
+      "max_abs_err": 1.1444091796875e-05,
+      "pert_over_resid": 0.0012733025941997766,
+      "rel_err": 2.4519341224147726e-07,
+      "tol_rel": 0.001,
+      "pass": true,
+      "note": "achieved perturbation norm vs requested; the tolerance tracks the model dtype because the addition happens in the model's own precision"
+    },
+    "E0.5_sae_reconstruction": {
+      "per_layer": {
+        "9": {
+          "fvu": 1.046228289604187,
+          "l0_mean": 50.0,
+          "cos_mean": 0.9990763664245605,
+          "rel_err": 0.04299338161945343,
+          "n": 4,
+          "l0_cfg": 53,
+          "l0_ratio": 0.9433962264150944,
+          "sae_id": "google/gemma-scope-2-4b-it/resid_post/layer_9_width_16k_l0_medium",
+          "fvu_valid": false
+        },
+        "17": {
+          "fvu": 3.799386739730835,
+          "l0_mean": 62.25,
+          "cos_mean": 0.9987494349479675,
+          "rel_err": 0.0535820908844471,
+          "n": 4,
+          "l0_cfg": 60,
+          "l0_ratio": 1.0375,
+          "sae_id": "google/gemma-scope-2-4b-it/resid_post/layer_17_width_16k_l0_medium",
+          "fvu_valid": false
+        },
+        "22": {
+          "fvu": 2.445493221282959,
+          "l0_mean": 51.5,
+          "cos_mean": 0.9956151247024536,
+          "rel_err": 0.0936078280210495,
+          "n": 4,
+          "l0_cfg": 60,
+          "l0_ratio": 0.8583333333333333,
+          "sae_id": "google/gemma-scope-2-4b-it/resid_post/layer_22_width_16k_l0_medium",
+          "fvu_valid": false
+        },
+        "29": {
+          "fvu": 3.6327404975891113,
+          "l0_mean": 54.0,
+          "cos_mean": 0.992138683795929,
+          "rel_err": 0.12547725439071655,
+          "n": 4,
+          "l0_cfg": 60,
+          "l0_ratio": 0.9,
+          "sae_id": "google/gemma-scope-2-4b-it/resid_post/layer_29_width_16k_l0_medium",
+          "fvu_valid": false
+        }
+      },
+      "pass": true
+    },
+    "E0.6_sae_identity_path_noop": {
+      "per_layer": {
+        "9": {
+          "max_abs_diff": 0.0,
+          "pass": true
+        },
+        "17": {
+          "max_abs_diff": 0.0,
+          "pass": true
+        },
+        "22": {
+          "max_abs_diff": 0.0,
+          "pass": true
+        },
+        "29": {
+          "max_abs_diff": 0.0,
+          "pass": true
+        }
+      },
+      "pass": true
+    }
+  },
+  "n_items": 4,
+  "all_pass": true
+}

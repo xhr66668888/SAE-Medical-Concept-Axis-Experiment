@@ -1,0 +1,186 @@
+{
+  "family_id": "appointment_002",
+  "domain": "appointment",
+  "task_goal": "move an existing cut-and-colour booking at the Fold and Fringe salon to a new date",
+  "n_turns": 5,
+  "tail_anchor": "Text me when it's in the diary.",
+  "notes": "norep_unres and norep_res are identical except for the referring expression in turn 2 ('the colour one', which fits both bookings the salon has just listed, versus 'the cut and colour', which picks one out). rep_unres and rep_res both carry a long verbatim user echo; in rep_unres the echo is a re-asked question that is never answered, in rep_res it is a preference the salon has already accepted, restated for emphasis.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "Does the late-change fee still apply if I give a week's notice?",
+          "role": "request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Nadia will want about two hours for the pair of services.",
+          "role": "assistant turn that answers a different point instead"
+        },
+        {
+          "turn_index": 4,
+          "quote": "does the late-change fee still apply if I give a week's notice?",
+          "role": "re-request, still open at the close"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Morning. I need to shift a booking at Fold and Fringe, ideally to something midweek with Nadia if she has room."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Let me look you up. Your cut and colour is down for Saturday the 4th, and she has the 14th at four or the 16th at eleven."
+        },
+        {
+          "speaker": "user",
+          "text": "The 16th at eleven, then. Does the late-change fee still apply if I give a week's notice?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The 16th at eleven is yours. Nadia will want about two hours for the pair of services."
+        },
+        {
+          "speaker": "user",
+          "text": "So, does the late-change fee still apply if I give a week's notice? Text me when it's in the diary."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "She is in on Tuesdays and Thursdays",
+          "role": "answers the only thing the user asked"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Half nine will have you out long before one",
+          "role": "the stated preference is accepted before it is restated"
+        },
+        {
+          "turn_index": 4,
+          "quote": "remember I have to be out of the chair by one",
+          "role": "restatement for emphasis, not a new problem"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Morning. I need to shift a booking at Fold and Fringe. Is Nadia working any midweek days this month?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "She is in on Tuesdays and Thursdays. Your cut and colour is down for Saturday the 4th, and the 14th at four or the 16th at half nine are open."
+        },
+        {
+          "speaker": "user",
+          "text": "The 16th, please. Bear in mind that I have to be out of the chair by one."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Half nine will have you out long before one. Shall I keep the same colour formula as last time?"
+        },
+        {
+          "speaker": "user",
+          "text": "Please do, and remember I have to be out of the chair by one. Text me when it's in the diary."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "a cut and colour on Saturday the 4th, and a colour top-up on the 25th",
+          "role": "two live candidate bookings"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Move the colour one over to Thursday the 16th at eleven",
+          "role": "referring expression fits either booking"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Shall I put her down for it?",
+          "role": "assistant proceeds without establishing which booking"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Morning. I need to shift a booking at Fold and Fringe. Would a week's notice be enough to dodge the late-change fee?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "A week is plenty, so nothing extra to pay. There are two in your name this month: a cut and colour on Saturday the 4th, and a colour top-up on the 25th."
+        },
+        {
+          "speaker": "user",
+          "text": "Right. Move the colour one over to Thursday the 16th at eleven, if there is room."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The 16th at eleven is free with Nadia, and she has the full slot. Shall I put her down for it?"
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, go on then, that would be a weight off. Text me when it's in the diary."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "A week is plenty, so nothing extra to pay",
+          "role": "answers the only thing the user asked"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Move the cut and colour over to Thursday the 16th at eleven",
+          "role": "picks out one of the two bookings"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Yes, go on then",
+          "role": "discharges the last open item"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Morning. I need to shift a booking at Fold and Fringe. Would a week's notice be enough to dodge the late-change fee?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "A week is plenty, so nothing extra to pay. There are two in your name this month: a cut and colour on Saturday the 4th, and a colour top-up on the 25th."
+        },
+        {
+          "speaker": "user",
+          "text": "Right. Move the cut and colour over to Thursday the 16th at eleven, if there is room."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The 16th at eleven is free with Nadia, and she has the full slot. Shall I put her down for it?"
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, go on then, that would be a weight off. Text me when it's in the diary."
+        }
+      ]
+    }
+  }
+}

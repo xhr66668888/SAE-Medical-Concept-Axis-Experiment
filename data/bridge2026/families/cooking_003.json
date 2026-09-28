@@ -1,0 +1,186 @@
+{
+  "family_id": "cooking_003",
+  "domain": "cooking",
+  "task_goal": "get oven timings for two joints and prepare the first one",
+  "n_turns": 5,
+  "tail_anchor": "I'll jot the timings on the board by the hob.",
+  "notes": "Both rep cells contain the same requested read-back, so the repetition is benign in both; rep_unres and rep_res differ only in 'out at six' against 'out at six thirty' measured against the ninety minutes just quoted. The norep pair differs only in 'the joint' against 'the lamb', with both joints live and at different temperatures.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "The lamb wants ninety minutes at 160C fan",
+          "role": "stated cooking time"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I'll put the lamb in at five and take it out at six",
+          "role": "one hour in the oven, half an hour short of the stated time"
+        },
+        {
+          "turn_index": 3,
+          "quote": "That is it exactly.",
+          "role": "assistant confirms and moves on without reconciling the two"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I've got two joints in the fridge for tomorrow, a 1.6kg lamb shoulder and a 2kg pork loin. How long does each want in the oven?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The lamb wants ninety minutes at 160C fan, then fifteen minutes under foil; the pork wants an hour and three quarters at 180C. Can you read the lamb timing back to me?"
+        },
+        {
+          "speaker": "user",
+          "text": "Ninety minutes at 160C fan, then fifteen minutes under foil. I'll put the lamb in at five and take it out at six."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That is it exactly. Bring the lamb out of the fridge an hour before it goes in, or the middle stays cold."
+        },
+        {
+          "speaker": "user",
+          "text": "Out of the fridge at four, then. I'll jot the timings on the board by the hob."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Can you read the lamb timing back to me?",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Ninety minutes at 160C fan, then fifteen minutes under foil.",
+          "role": "the requested read-back"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I'll put the lamb in at five and take it out at six thirty",
+          "role": "ninety minutes, which matches the stated time"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I've got two joints in the fridge for tomorrow, a 1.6kg lamb shoulder and a 2kg pork loin. How long does each want in the oven?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The lamb wants ninety minutes at 160C fan, then fifteen minutes under foil; the pork wants an hour and three quarters at 180C. Can you read the lamb timing back to me?"
+        },
+        {
+          "speaker": "user",
+          "text": "Ninety minutes at 160C fan, then fifteen minutes under foil. I'll put the lamb in at five and take it out at six thirty."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That is it exactly. Bring the lamb out of the fridge an hour before it goes in, or the middle stays cold."
+        },
+        {
+          "speaker": "user",
+          "text": "Out of the fridge at four, then. I'll jot the timings on the board by the hob."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "a 1.6kg lamb shoulder and a 2kg pork loin",
+          "role": "two candidate joints are live"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I'll do the joint first",
+          "role": "the referring expression picks out neither, and they need different temperatures"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Yes, give it a good twenty minutes to come up before anything goes in",
+          "role": "assistant answers the preheat question without settling which joint"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I've got two joints in the fridge for tomorrow, a 1.6kg lamb shoulder and a 2kg pork loin. How long does each want in the oven?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The lamb wants ninety minutes at 160C fan, then fifteen minutes under foil; the pork wants an hour and three quarters at 180C."
+        },
+        {
+          "speaker": "user",
+          "text": "Right. I'll do the joint first and get the potatoes going while it rests. Does the oven need preheating?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Yes, give it a good twenty minutes to come up before anything goes in, or the first half hour is wasted."
+        },
+        {
+          "speaker": "user",
+          "text": "Twenty minutes of preheating, fine. I'll jot the timings on the board by the hob."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "The lamb wants ninety minutes at 160C fan",
+          "role": "answers the opening request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I'll do the lamb first",
+          "role": "picks one of the two joints"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Yes, give it a good twenty minutes to come up before anything goes in",
+          "role": "answers the last open request"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I've got two joints in the fridge for tomorrow, a 1.6kg lamb shoulder and a 2kg pork loin. How long does each want in the oven?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The lamb wants ninety minutes at 160C fan, then fifteen minutes under foil; the pork wants an hour and three quarters at 180C."
+        },
+        {
+          "speaker": "user",
+          "text": "Right. I'll do the lamb first and get the potatoes going while it rests. Does the oven need preheating?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Yes, give it a good twenty minutes to come up before anything goes in, or the first half hour is wasted."
+        },
+        {
+          "speaker": "user",
+          "text": "Twenty minutes of preheating, fine. I'll jot the timings on the board by the hob."
+        }
+      ]
+    }
+  }
+}

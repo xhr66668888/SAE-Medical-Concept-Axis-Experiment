@@ -1,0 +1,29 @@
+split=dev items=100 families=25 layer=29 span=read_to_end
+Loading weights:   0%|          | 0/883 [00:00<?, ?it/s]Loading weights:   2%|▏         | 17/883 [00:00<00:05, 166.82it/s]Loading weights:   8%|▊         | 69/883 [00:00<00:02, 365.98it/s]Loading weights:  14%|█▍        | 122/883 [00:00<00:01, 429.14it/s]Loading weights:  20%|█▉        | 174/883 [00:00<00:01, 460.05it/s]Loading weights:  25%|██▌       | 225/883 [00:00<00:01, 476.91it/s]Loading weights:  31%|███▏      | 277/883 [00:00<00:01, 484.06it/s]Loading weights:  37%|███▋      | 328/883 [00:00<00:01, 489.02it/s]Loading weights:  43%|████▎     | 378/883 [00:00<00:01, 492.07it/s]Loading weights:  48%|████▊     | 428/883 [00:00<00:00, 491.61it/s]Loading weights:  75%|███████▌  | 663/883 [00:01<00:00, 1048.12it/s]Loading weights: 100%|██████████| 883/883 [00:01<00:00, 802.30it/s] 
+donor coverage: 100% of renderings
+  clean: paired_acc=0.520 AUROC=0.503 FA=0.700
+  SAE arms on features [966, 860, 241, 794, 324, 441, 1030, 9393, 8159, 249, 495, 3664, 11749, 1685, 641, 206] (random-matched: [2847, 4758, 16292, 719, 8365, 375, 1203, 1168, 875, 1089, 5613, 12099, 1874, 2205, 1135, 3086])
+  dense_axis(a=-2)             d_target=+0.069 d_nontarget=+0.076 gap=-0.007 paired=0.520 FA=0.700
+  dense_axis(a=-1)             d_target=+0.021 d_nontarget=+0.025 gap=-0.004 paired=0.520 FA=0.700
+  dense_axis(a=-0.5)           d_target=+0.007 d_nontarget=+0.009 gap=-0.002 paired=0.520 FA=0.700
+  dense_axis(a=+0)             d_target=+0.000 d_nontarget=+0.000 gap=+0.000 paired=0.520 FA=0.700
+  dense_axis(a=+0.5)           d_target=-0.001 d_nontarget=-0.003 gap=+0.002 paired=0.520 FA=0.700
+  dense_axis(a=+1)             d_target=+0.004 d_nontarget=-0.001 gap=+0.005 paired=0.520 FA=0.700
+  dense_axis(a=+2)             d_target=+0.025 d_nontarget=+0.014 gap=+0.011 paired=0.520 FA=0.700
+  dense_axis(a=+2, read_pos only) d_target=+0.000 d_nontarget=+0.000 gap=+0.000 paired=0.520 FA=0.700
+  random_dir(a=-1)             d_target=+0.102 d_nontarget=+0.103 gap=-0.000 paired=0.500 FA=0.700
+  repetition_axis(a=-1)        d_target=-0.056 d_nontarget=-0.056 gap=-0.000 paired=0.520 FA=0.700
+  clarification_axis(a=-1)     d_target=+0.115 d_nontarget=+0.122 gap=-0.007 paired=0.500 FA=0.700
+  random_dir(a=+1)             d_target=-0.050 d_nontarget=-0.051 gap=+0.001 paired=0.500 FA=0.700
+  repetition_axis(a=+1)        d_target=+0.050 d_nontarget=+0.048 gap=+0.002 paired=0.520 FA=0.700
+  clarification_axis(a=+1)     d_target=-0.093 d_nontarget=-0.096 gap=+0.004 paired=0.520 FA=0.700
+  component_swap(donor)        d_target=+0.026 d_nontarget=+0.022 gap=+0.004 paired=0.540 FA=0.700
+  full_patch(donor)            d_target=-0.000 d_nontarget=+0.000 gap=-0.000 paired=0.520 FA=0.700
+  sae_recon                    d_target=-0.636 d_nontarget=-0.648 gap=+0.013 paired=0.500 FA=0.680
+  sae_ablate                   d_target=-0.084 d_nontarget=-0.086 gap=+0.003 paired=0.520 FA=0.700
+  sae_donor                    d_target=+0.220 d_nontarget=+0.252 gap=-0.032 paired=0.520 FA=0.700
+  sae_random_ablate            d_target=-0.022 d_nontarget=-0.024 gap=+0.002 paired=0.520 FA=0.700
+  sae_random_donor             d_target=+0.160 d_nontarget=+0.145 gap=+0.015 paired=0.540 FA=0.700
+
+-> runs/bridge2026/stage3/e3_causal_dev.csv
+-> runs/bridge2026/stage3/e3_causal_dev_per_item.csv

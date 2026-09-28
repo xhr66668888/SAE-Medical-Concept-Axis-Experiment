@@ -1,0 +1,88 @@
+{
+  "family_id": "transit_018",
+  "domain": "transit",
+  "task_goal": "get driving directions for the last few miles down to Trellan Cove with a boat on a trailer",
+  "n_turns": 7,
+  "tail_anchor": "We're driving down from Bodmin on Saturday.",
+  "notes": "rep_unres and rep_res differ only in 'that car park' versus 'the harbour car park'. norep_unres and norep_res differ only in the arrival time on Cliff Road (about nine, inside the closure / about one, after it).",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "There's the upper field car park up at the top of the hill and the harbour car park right by the slipway.", "role": "two live candidate car parks"},
+        {"turn_index": 4, "quote": "We'll leave the car and trailer in that car park for the day", "role": "referring expression picks out neither"},
+        {"turn_index": 5, "quote": "Fair enough. Nobody charges out of season, so you won't need change for the machine at the entrance.", "role": "assistant does not disambiguate"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, we're bringing a boat on a trailer down to Trellan Cove and I'm not sure of the last few miles. Can you talk me through the turnings?"},
+        {"speaker": "assistant", "text": "From the main road, go left at the chapel, then take the second turning past the cattle grid. That drops you straight down to the seafront."},
+        {"speaker": "user", "text": "So, left at the chapel, then the second turning past the cattle grid. Is the lane wide enough for a car and trailer?"},
+        {"speaker": "assistant", "text": "It's fine for a trailer, the passing places are all on that stretch. There's the upper field car park up at the top of the hill and the harbour car park right by the slipway."},
+        {"speaker": "user", "text": "Good. We'll leave the car and trailer in that car park for the day and walk down to the water."},
+        {"speaker": "assistant", "text": "Fair enough. Nobody charges out of season, so you won't need change for the machine at the entrance."},
+        {"speaker": "user", "text": "That's a relief. We're driving down from Bodmin on Saturday."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "go left at the chapel, then take the second turning past the cattle grid", "role": "answers the first request"},
+        {"turn_index": 3, "quote": "It's fine for a trailer, the passing places are all on that stretch.", "role": "answers the second request"},
+        {"turn_index": 4, "quote": "We'll leave the car and trailer in the harbour car park for the day", "role": "the car park is determined and the task proceeds"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, we're bringing a boat on a trailer down to Trellan Cove and I'm not sure of the last few miles. Can you talk me through the turnings?"},
+        {"speaker": "assistant", "text": "From the main road, go left at the chapel, then take the second turning past the cattle grid. That drops you straight down to the seafront."},
+        {"speaker": "user", "text": "So, left at the chapel, then the second turning past the cattle grid. Is the lane wide enough for a car and trailer?"},
+        {"speaker": "assistant", "text": "It's fine for a trailer, the passing places are all on that stretch. There's the upper field car park up at the top of the hill and the harbour car park right by the slipway."},
+        {"speaker": "user", "text": "Good. We'll leave the car and trailer in the harbour car park for the day and walk down to the water."},
+        {"speaker": "assistant", "text": "Fair enough. Nobody charges out of season, so you won't need change for the machine at the entrance."},
+        {"speaker": "user", "text": "That's a relief. We're driving down from Bodmin on Saturday."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Cliff Road is shut to traffic until eleven every morning", "role": "the lane is closed all morning"},
+        {"turn_index": 2, "quote": "We'll be coming along Cliff Road at about nine, and with the trailer that lane is the only way down to the water.", "role": "conflicts with the closure"},
+        {"turn_index": 3, "quote": "The route is tarmac from the chapel to the slipway, no unmade track at all, so the trailer will be fine.", "role": "assistant proceeds without reconciling the conflict"},
+        {"turn_index": 5, "quote": "The harbour car park takes trailers and it's hard standing right up to the slipway.", "role": "later assistant turn that still leaves the clash open"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, we're bringing a boat on a trailer down to Trellan Cove and I'm not sure of the last few miles. Can you talk me through the turnings?"},
+        {"speaker": "assistant", "text": "From the main road, go left at the chapel, then take the second turning past the cattle grid. Note that Cliff Road is shut to traffic until eleven every morning while they patch it."},
+        {"speaker": "user", "text": "Right, I've written that down. We must keep to metalled road, the trailer grounds on anything rough. We'll be coming along Cliff Road at about nine, and with the trailer that lane is the only way down to the water."},
+        {"speaker": "assistant", "text": "The route is tarmac from the chapel to the slipway, no unmade track at all, so the trailer will be fine. Shall I check the parking for you?"},
+        {"speaker": "user", "text": "Please do. And I'll say it again, no rough ground: the boat sits low on the trailer."},
+        {"speaker": "assistant", "text": "The harbour car park takes trailers and it's hard standing right up to the slipway."},
+        {"speaker": "user", "text": "That's a relief. We're driving down from Bodmin on Saturday."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "We must keep to metalled road, the trailer grounds on anything rough.", "role": "the requirement is stated"},
+        {"turn_index": 3, "quote": "The route is tarmac from the chapel to the slipway, no unmade track at all", "role": "the requirement is accepted here"},
+        {"turn_index": 4, "quote": "And I'll say it again, no rough ground", "role": "restated for emphasis after it was already accepted"},
+        {"turn_index": 5, "quote": "The harbour car park takes trailers and it's hard standing right up to the slipway.", "role": "discharges the last open item"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hello, we're bringing a boat on a trailer down to Trellan Cove and I'm not sure of the last few miles. Can you talk me through the turnings?"},
+        {"speaker": "assistant", "text": "From the main road, go left at the chapel, then take the second turning past the cattle grid. Note that Cliff Road is shut to traffic until eleven every morning while they patch it."},
+        {"speaker": "user", "text": "Right, I've written that down. We must keep to metalled road, the trailer grounds on anything rough. We'll be coming along Cliff Road at about one, and with the trailer that lane is the only way down to the water."},
+        {"speaker": "assistant", "text": "The route is tarmac from the chapel to the slipway, no unmade track at all, so the trailer will be fine. Shall I check the parking for you?"},
+        {"speaker": "user", "text": "Please do. And I'll say it again, no rough ground: the boat sits low on the trailer."},
+        {"speaker": "assistant", "text": "The harbour car park takes trailers and it's hard standing right up to the slipway."},
+        {"speaker": "user", "text": "That's a relief. We're driving down from Bodmin on Saturday."}
+      ]
+    }
+  }
+}

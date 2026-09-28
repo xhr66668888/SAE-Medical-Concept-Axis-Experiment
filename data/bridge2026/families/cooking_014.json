@@ -1,0 +1,78 @@
+{
+  "family_id": "cooking_014",
+  "domain": "cooking",
+  "task_goal": "cook a first air fryer supper of oven chips and breaded haddock and settle the setting and the basket load",
+  "n_turns": 5,
+  "tail_anchor": "The air fryer is out of the box and plugged in.",
+  "notes": "norep_unres and norep_res differ only in 'the whole bag in at once ... only get one go' vs 'half the bag in at a time ... time for two goes': the same stated basket limit is either broken or respected.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Does it need preheating before the food goes in?", "role": "request"},
+        {"turn_index": 2, "quote": "Does it need preheating before the food goes in?", "role": "re-request"},
+        {"turn_index": 3, "quote": "Two batches is sensible. Keep the first lot warm in a low oven while the second runs", "role": "assistant turn that answers something else and leaves the request open"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We've just got an air fryer and I want to do a 750g bag of oven chips and two breaded haddock fillets in it tonight. The packet says 220C for twenty-five minutes in a conventional oven, so I'm not sure what to dial in. Does it need preheating before the food goes in?"},
+        {"speaker": "assistant", "text": "Take about 20 degrees off and a fifth off the time, so 200C for twenty minutes. The basket holds roughly 400g of chips in a single layer, and nothing should sit on top of them."},
+        {"speaker": "user", "text": "That's half the bag then, so I'll do two batches. Does it need preheating before the food goes in?"},
+        {"speaker": "assistant", "text": "Two batches is sensible. Keep the first lot warm in a low oven while the second runs, and give the basket a shake halfway through each one."},
+        {"speaker": "user", "text": "I'll put the plates in to warm as well. The air fryer is out of the box and plugged in."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Give it three minutes to preheat, then 200C for twenty minutes.", "role": "answers the only open request"},
+        {"turn_index": 3, "quote": "Read the temperature and the time back to me so I know we're set.", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "Three minutes to preheat, then 200C for twenty minutes.", "role": "requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We've just got an air fryer and I want to do a 750g bag of oven chips and two breaded haddock fillets in it tonight. The packet says 220C for twenty-five minutes in a conventional oven, so I'm not sure what to dial in. Does it need preheating before the food goes in?"},
+        {"speaker": "assistant", "text": "Give it three minutes to preheat, then 200C for twenty minutes. The basket holds roughly 400g of chips in a single layer, and nothing should sit on top of them."},
+        {"speaker": "user", "text": "That's half the bag then, so I'll do two batches. Will the fillets fit in alongside the second lot?"},
+        {"speaker": "assistant", "text": "They will, laid flat with a gap between them. Read the temperature and the time back to me so I know we're set."},
+        {"speaker": "user", "text": "Three minutes to preheat, then 200C for twenty minutes. The air fryer is out of the box and plugged in."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "The basket holds roughly 400g of chips in a single layer, and nothing should sit on top of them.", "role": "stated capacity limit"},
+        {"turn_index": 2, "quote": "I'll tip the whole bag in at once and lay both fillets over the chips", "role": "the action conflicts with that limit"},
+        {"turn_index": 3, "quote": "Only that breadcrumbs colour faster than potato", "role": "assistant carries on without reconciling the two"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We've just got an air fryer and I want to do a 750g bag of oven chips and two breaded haddock fillets in it tonight. The packet says 220C for twenty-five minutes in a conventional oven, so I'm not sure what to dial in. How much can go in the basket at a time?"},
+        {"speaker": "assistant", "text": "Take about 20 degrees off and a fifth off the time, so 200C for twenty minutes. The basket holds roughly 400g of chips in a single layer, and nothing should sit on top of them."},
+        {"speaker": "user", "text": "Right. I'll tip the whole bag in at once and lay both fillets over the chips, since everyone sits down at seven and I only get one go. Anything else worth knowing?"},
+        {"speaker": "assistant", "text": "Only that breadcrumbs colour faster than potato, so look in at the fifteen-minute mark. A shake at halfway evens the chips out."},
+        {"speaker": "user", "text": "I'll look in early then. The air fryer is out of the box and plugged in."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "The basket holds roughly 400g of chips in a single layer", "role": "answers the open request about capacity"},
+        {"turn_index": 2, "quote": "I'll tip half the bag in at a time and keep both fillets for a second batch", "role": "the plan stays inside the stated limit"},
+        {"turn_index": 3, "quote": "Only that breadcrumbs colour faster than potato", "role": "discharges the last open request"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We've just got an air fryer and I want to do a 750g bag of oven chips and two breaded haddock fillets in it tonight. The packet says 220C for twenty-five minutes in a conventional oven, so I'm not sure what to dial in. How much can go in the basket at a time?"},
+        {"speaker": "assistant", "text": "Take about 20 degrees off and a fifth off the time, so 200C for twenty minutes. The basket holds roughly 400g of chips in a single layer, and nothing should sit on top of them."},
+        {"speaker": "user", "text": "Right. I'll tip half the bag in at a time and keep both fillets for a second batch, since everyone sits down at seven and I have time for two goes. Anything else worth knowing?"},
+        {"speaker": "assistant", "text": "Only that breadcrumbs colour faster than potato, so look in at the fifteen-minute mark. A shake at halfway evens the chips out."},
+        {"speaker": "user", "text": "I'll look in early then. The air fryer is out of the box and plugged in."}
+      ]
+    }
+  }
+}

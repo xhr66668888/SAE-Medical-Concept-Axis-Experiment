@@ -1,0 +1,191 @@
+{
+  "family_id": "appointment_004",
+  "domain": "appointment",
+  "task_goal": "claim a parents' evening slot with a child's class teacher and settle who will attend",
+  "n_turns": 5,
+  "tail_anchor": "I appreciate you fitting us in.",
+  "notes": "norep_unres and norep_res differ by one word in turn 2 ('half past six' versus 'half past four'), which either does or does not clash with the four-until-six window and the 5.20 slot just taken. rep_unres re-asks the meeting-length question verbatim and it is never answered; rep_res repeats an attendance statement the school has already accepted.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Could you tell me whether the meetings run to ten minutes or fifteen?",
+          "role": "request"
+        },
+        {
+          "turn_index": 1,
+          "quote": "Let me check the sheet.",
+          "role": "assistant turn that answers a different point instead"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Could you tell me whether the meetings run to ten minutes or fifteen?",
+          "role": "re-request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Rosa's reading record should come along with you on the night.",
+          "role": "assistant turn that answers a different point instead"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good afternoon. I'd like a slot at the Year 4 parents' evening for Rosa. Could you tell me whether the meetings run to ten minutes or fifteen?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Let me check the sheet. Mrs Adeyemi has Wednesday the 8th at 4.40, or Thursday the 9th at 5.20, still free."
+        },
+        {
+          "speaker": "user",
+          "text": "Thursday the 9th at 5.20, please. Could you tell me whether the meetings run to ten minutes or fifteen?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Thursday the 9th at 5.20 is yours. Rosa's reading record should come along with you on the night."
+        },
+        {
+          "speaker": "user",
+          "text": "Noted, we will bring it with us. I appreciate you fitting us in."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "They run to ten minutes each.",
+          "role": "answers the only thing the user asked"
+        },
+        {
+          "turn_index": 3,
+          "quote": "That's fine, there is room for two at the table.",
+          "role": "the attendance statement is accepted before it is repeated"
+        },
+        {
+          "turn_index": 4,
+          "quote": "both of us will be coming",
+          "role": "repetition for emphasis, not a new problem"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good afternoon. I'd like a slot at the Year 4 parents' evening for Rosa. Could you tell me whether the meetings run to ten minutes or fifteen?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "They run to ten minutes each. Mrs Adeyemi has Wednesday the 8th at 4.40, or Thursday the 9th at 5.20, still free."
+        },
+        {
+          "speaker": "user",
+          "text": "Thursday the 9th, please. Both of us will be coming, my husband and me."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That's fine, there is room for two at the table. Shall I add Rosa's name to the sign-in sheet as well?"
+        },
+        {
+          "speaker": "user",
+          "text": "Please do. Just so it is on record, both of us will be coming. I appreciate you fitting us in."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "She is seeing parents from four until six on Thursday the 9th",
+          "role": "the window the chosen slot sits in"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Neither of us can get away from work before half past six",
+          "role": "conflicts with the 5.20 slot just taken"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Noted, 5.20 on the Thursday with Mrs Adeyemi.",
+          "role": "assistant proceeds without reconciling the two"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good afternoon. I'd like a slot at the Year 4 parents' evening for Rosa. What hours is Mrs Adeyemi seeing parents?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "She is seeing parents from four until six on Thursday the 9th, and there are gaps left at 4.40 and at 5.20."
+        },
+        {
+          "speaker": "user",
+          "text": "We will take 5.20. Neither of us can get away from work before half past six, so that is comfortable."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted, 5.20 on the Thursday with Mrs Adeyemi. Will you be bringing Rosa along on the night?"
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, she will come along too. I appreciate you fitting us in."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "She is seeing parents from four until six on Thursday the 9th",
+          "role": "answers the only thing the user asked"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Neither of us can get away from work before half past four",
+          "role": "consistent with the 5.20 slot just taken"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Yes, she will come along too",
+          "role": "discharges the last open item"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Good afternoon. I'd like a slot at the Year 4 parents' evening for Rosa. What hours is Mrs Adeyemi seeing parents?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "She is seeing parents from four until six on Thursday the 9th, and there are gaps left at 4.40 and at 5.20."
+        },
+        {
+          "speaker": "user",
+          "text": "We will take 5.20. Neither of us can get away from work before half past four, so that is comfortable."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted, 5.20 on the Thursday with Mrs Adeyemi. Will you be bringing Rosa along on the night?"
+        },
+        {
+          "speaker": "user",
+          "text": "Yes, she will come along too. I appreciate you fitting us in."
+        }
+      ]
+    }
+  }
+}

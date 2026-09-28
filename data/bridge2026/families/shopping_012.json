@@ -1,0 +1,191 @@
+{
+  "family_id": "shopping_012",
+  "domain": "shopping",
+  "task_goal": "exchange a school blazer from Ferngate Schoolwear for the next size up",
+  "n_turns": 5,
+  "tail_anchor": "I'll sort the packaging out this evening.",
+  "notes": "The norep pair differs by one word, 'that one' against 'Ivo's', with the boys' and the girls' cut both re-named in the assistant turn directly before, so neither child is the topical winner. The rep pair differs only in whether turn 1 answers the charge question; the thirteen-word echo sits in turn 2 in both.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Do I pay anything if I have to exchange again later in the term?",
+          "role": "request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Do I pay anything if I have to exchange again later in the term?",
+          "role": "re-request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "The 32 is reserved under your account, and the old blazer can go back with the courier who brings it.",
+          "role": "assistant turn that answers something else instead"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Morning. I bought two blazers from Ferngate last week, a size 30 for Ivo and a size 34 for Martha. Ivo's is tight across the back, so he needs the next size up. Do I pay anything if I have to exchange again later in the term?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can raise an exchange for you. We hold the size 32 in the boys' cut at the moment."
+        },
+        {
+          "speaker": "user",
+          "text": "Send the 32 then. Do I pay anything if I have to exchange again later in the term?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The 32 is reserved under your account, and the old blazer can go back with the courier who brings it."
+        },
+        {
+          "speaker": "user",
+          "text": "That will do nicely. I'll sort the packaging out this evening."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Exchanges are free for the whole of the first term, so you pay nothing.",
+          "role": "discharges the opening request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Read the size and the name back so I label the parcel correctly.",
+          "role": "assistant requests the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Size 32, Ivo Brandt.",
+          "role": "requested read-back, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Morning. I bought two blazers from Ferngate last week, a size 30 for Ivo and a size 34 for Martha. Ivo's is tight across the back, so he needs the next size up. Do I pay anything if I have to exchange again later in the term?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Exchanges are free for the whole of the first term, so you pay nothing. We hold the size 32 in the boys' cut."
+        },
+        {
+          "speaker": "user",
+          "text": "Good, exchanges are free for the whole of the first term. Send the 32. Will the courier take the old one away?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "He will, yes. Read the size and the name back so I label the parcel correctly."
+        },
+        {
+          "speaker": "user",
+          "text": "Size 32, Ivo Brandt. I'll sort the packaging out this evening."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "a size 30 for Ivo and a size 34 for Martha. Neither of them is sitting right across the back.",
+          "role": "two live candidates"
+        },
+        {
+          "turn_index": 1,
+          "quote": "The boys' cut goes up to a 32 and the girls' cut to a 36",
+          "role": "both candidates re-activated immediately before the referring expression"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Just the one for now, money being what it is. Send the next size up for that one",
+          "role": "only one garment is to be swapped and the referring expression picks out neither"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I have raised the exchange so it goes out tonight.",
+          "role": "assistant acts without establishing which blazer is going"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Morning. I bought two blazers from Ferngate last week, a size 30 for Ivo and a size 34 for Martha. Neither of them is sitting right across the back. Is there a bigger size in each cut?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "There is. The boys' cut goes up to a 32 and the girls' cut to a 36, so there is a size in hand either way."
+        },
+        {
+          "speaker": "user",
+          "text": "Just the one for now, money being what it is. Send the next size up for that one, and will the courier bring it when he collects?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "He will, and I have raised the exchange so it goes out tonight."
+        },
+        {
+          "speaker": "user",
+          "text": "That will do nicely. I'll sort the packaging out this evening."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "There is. The boys' cut goes up to a 32 and the girls' cut to a 36",
+          "role": "answers the sizing request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Send the next size up for Ivo's",
+          "role": "referent fixed for the next action"
+        },
+        {
+          "turn_index": 3,
+          "quote": "He will, and I have raised the exchange so it goes out tonight.",
+          "role": "discharges the last open item"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Morning. I bought two blazers from Ferngate last week, a size 30 for Ivo and a size 34 for Martha. Neither of them is sitting right across the back. Is there a bigger size in each cut?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "There is. The boys' cut goes up to a 32 and the girls' cut to a 36, so there is a size in hand either way."
+        },
+        {
+          "speaker": "user",
+          "text": "Just the one for now, money being what it is. Send the next size up for Ivo's, and will the courier bring it when he collects?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "He will, and I have raised the exchange so it goes out tonight."
+        },
+        {
+          "speaker": "user",
+          "text": "That will do nicely. I'll sort the packaging out this evening."
+        }
+      ]
+    }
+  }
+}

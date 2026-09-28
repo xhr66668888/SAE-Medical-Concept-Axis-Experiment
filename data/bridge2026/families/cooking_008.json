@@ -1,0 +1,88 @@
+{
+  "family_id": "cooking_008",
+  "domain": "cooking",
+  "task_goal": "run a Saturday garden barbecue for fourteen with two vegetarians, and get the coals and the marinade timed",
+  "n_turns": 7,
+  "tail_anchor": "The gazebo is going up first thing either way.",
+  "notes": "Both rep cells carry the same emphasis repetition about the skewers, so repetition is decorrelated from state: rep_unres and rep_res differ by one word, mixing the marinade at five against at three, measured against the two hours the assistant has just stipulated. The norep pair differs only in 'the sack' against 'the briquettes', with two sacks live and different lighting needs.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "two hours in the yoghurt and spices at the very least", "role": "stated minimum marinating time"},
+        {"turn_index": 4, "quote": "I'll mix the marinade when I get in at five and they go on the grill at six", "role": "one hour, an hour short of the stated minimum"},
+        {"turn_index": 5, "quote": "Separate tongs, then. Light the coals a good half hour before anyone expects feeding.", "role": "assistant carries on without raising the shortfall"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Right, barbecue for fourteen in the garden on Saturday. Two of them are vegetarian, so the veggie skewers cook on their own side of the grill. How many burgers should I be making?"},
+        {"speaker": "assistant", "text": "Two a head plus a few spares, so thirty for fourteen. Own side of the grill for the skewers, noted, and I would give them separate tongs as well."},
+        {"speaker": "user", "text": "Thirty burgers, right. The lamb koftas want a marinade, don't they?"},
+        {"speaker": "assistant", "text": "They do, two hours in the yoghurt and spices at the very least, or the flavour never gets past the surface."},
+        {"speaker": "user", "text": "I'll mix the marinade when I get in at five and they go on the grill at six. And remember, the veggie skewers cook on their own side of the grill."},
+        {"speaker": "assistant", "text": "Separate tongs, then. Light the coals a good half hour before anyone expects feeding."},
+        {"speaker": "user", "text": "Half an hour of lead time, noted. The gazebo is going up first thing either way."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "the veggie skewers cook on their own side of the grill", "role": "preference stated"},
+        {"turn_index": 1, "quote": "Own side of the grill for the skewers, noted", "role": "preference already accepted"},
+        {"turn_index": 4, "quote": "And remember, the veggie skewers cook on their own side of the grill.", "role": "restated for emphasis, nothing new is opened"},
+        {"turn_index": 4, "quote": "I'll mix the marinade when I get in at three and they go on the grill at six", "role": "three hours, which clears the stated minimum"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Right, barbecue for fourteen in the garden on Saturday. Two of them are vegetarian, so the veggie skewers cook on their own side of the grill. How many burgers should I be making?"},
+        {"speaker": "assistant", "text": "Two a head plus a few spares, so thirty for fourteen. Own side of the grill for the skewers, noted, and I would give them separate tongs as well."},
+        {"speaker": "user", "text": "Thirty burgers, right. The lamb koftas want a marinade, don't they?"},
+        {"speaker": "assistant", "text": "They do, two hours in the yoghurt and spices at the very least, or the flavour never gets past the surface."},
+        {"speaker": "user", "text": "I'll mix the marinade when I get in at three and they go on the grill at six. And remember, the veggie skewers cook on their own side of the grill."},
+        {"speaker": "assistant", "text": "Separate tongs, then. Light the coals a good half hour before anyone expects feeding."},
+        {"speaker": "user", "text": "Half an hour of lead time, noted. The gazebo is going up first thing either way."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "a sack of lumpwood and a sack of briquettes in the shed", "role": "two candidate sacks are live"},
+        {"turn_index": 3, "quote": "Lumpwood catches straight off the paper; briquettes want a firelighter underneath", "role": "both are re-activated, and they need different handling"},
+        {"turn_index": 4, "quote": "I'll tip the sack into the chimney at half four", "role": "the referring expression picks out neither"},
+        {"turn_index": 5, "quote": "Give it a full twenty minutes to ash over before you spread the coals", "role": "assistant moves on without settling which sack"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Right, barbecue for fourteen in the garden on Saturday. Two of them are vegetarian, so the veggie skewers cook on their own side of the grill. How many burgers should I be making?"},
+        {"speaker": "assistant", "text": "Two a head plus a few spares, so thirty for fourteen, and I would keep a separate set of tongs for the skewers."},
+        {"speaker": "user", "text": "Thirty it is. I've got a sack of lumpwood and a sack of briquettes in the shed, which suits a long afternoon better?"},
+        {"speaker": "assistant", "text": "Lumpwood catches straight off the paper; briquettes want a firelighter underneath but then plod on for hours. Either will see you through the afternoon."},
+        {"speaker": "user", "text": "Handy to know. I'll tip the sack into the chimney at half four and set it going while I do the salads."},
+        {"speaker": "assistant", "text": "Give it a full twenty minutes to ash over before you spread the coals, or everything tastes of lighter fuel."},
+        {"speaker": "user", "text": "Twenty minutes before I spread them, then. The gazebo is going up first thing either way."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "Either will see you through the afternoon.", "role": "answers the question about which fuel suits a long afternoon"},
+        {"turn_index": 4, "quote": "I'll tip the briquettes into the chimney at half four", "role": "picks one of the two sacks"},
+        {"turn_index": 5, "quote": "Give it a full twenty minutes to ash over before you spread the coals", "role": "answers the last open item"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Right, barbecue for fourteen in the garden on Saturday. Two of them are vegetarian, so the veggie skewers cook on their own side of the grill. How many burgers should I be making?"},
+        {"speaker": "assistant", "text": "Two a head plus a few spares, so thirty for fourteen, and I would keep a separate set of tongs for the skewers."},
+        {"speaker": "user", "text": "Thirty it is. I've got a sack of lumpwood and a sack of briquettes in the shed, which suits a long afternoon better?"},
+        {"speaker": "assistant", "text": "Lumpwood catches straight off the paper; briquettes want a firelighter underneath but then plod on for hours. Either will see you through the afternoon."},
+        {"speaker": "user", "text": "Handy to know. I'll tip the briquettes into the chimney at half four and set it going while I do the salads."},
+        {"speaker": "assistant", "text": "Give it a full twenty minutes to ash over before you spread the coals, or everything tastes of lighter fuel."},
+        {"speaker": "user", "text": "Twenty minutes before I spread them, then. The gazebo is going up first thing either way."}
+      ]
+    }
+  }
+}

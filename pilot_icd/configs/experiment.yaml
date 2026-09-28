@@ -8,7 +8,7 @@ runtime:
   dtype: float32
   threads: 16
 data:
-  icd_csv: data/icd_diagnosis_ccs.csv
+  icd_csv: icd_diagnosis_ccs.csv
   ccs_appendix: AppendixASingleDX.txt
   prompts_csv: outputs/concept_prompts.csv
   source: icd9_ccs_appendix_a

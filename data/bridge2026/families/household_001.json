@@ -1,0 +1,181 @@
+{
+  "family_id": "household_001",
+  "domain": "household",
+  "task_goal": "get a neighbour to see to the wheelie bins during a fortnight away",
+  "n_turns": 5,
+  "tail_anchor": "I'll leave the side gate unlocked either way.",
+  "notes": "norep_unres and norep_res differ by one numeral (nine/five) against a stated half-six collection, with the bin-out action stated explicitly so the conflict is decidable.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "does the food caddy go out every week or only on the recycling week",
+          "role": "request"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Does the food caddy go out every week or only on the recycling week?",
+          "role": "re-request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "No bother at all. I'll wheel them back up the drive once the lorry has been.",
+          "role": "assistant turn that fails to answer"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Colin, we're away for a fortnight from next Tuesday. Would you be able to see to our bins while we're gone, and does the food caddy go out every week or only on the recycling week?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Of course, happy to. Ewan can cover the second week; he's back from Leeds by then."
+        },
+        {
+          "speaker": "user",
+          "text": "That's a relief, thank you both. Does the food caddy go out every week or only on the recycling week?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "No bother at all. I'll wheel them back up the drive once the lorry has been."
+        },
+        {
+          "speaker": "user",
+          "text": "Very kind of you. I'll leave the side gate unlocked either way."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "The food caddy goes out every week",
+          "role": "answers the only open request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Give me the weekly one again for our calendar",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "The food caddy.",
+          "role": "requested read-back, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Colin, we're away for a fortnight from next Tuesday. Would you be able to see to our bins while we're gone, and does the food caddy go out every week or only on the recycling week?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Of course, happy to. The food caddy goes out every week; the recycling is alternate weeks only."
+        },
+        {
+          "speaker": "user",
+          "text": "Good to know the food caddy goes out every week. Will Ewan be back from Leeds by the second week?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "He will, so he can cover that one. Give me the weekly one again for our calendar."
+        },
+        {
+          "speaker": "user",
+          "text": "The food caddy. I'll leave the side gate unlocked either way."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "The lorry comes round about half six on a Tuesday morning",
+          "role": "stated collection time"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I'll put the first week's bin out myself as we leave, we're off at nine that morning",
+          "role": "putting the bin out at nine cannot meet a half-six collection"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Right you are.",
+          "role": "assistant proceeds without reconciling the conflict"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Colin, we're away for a fortnight from next Tuesday. Could I ask you to put our bins out and bring them back in while we're gone?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Yes, no problem at all. The lorry comes round about half six on a Tuesday morning, so I put mine out the night before."
+        },
+        {
+          "speaker": "user",
+          "text": "Kind of you. I'll put the first week's bin out myself as we leave, we're off at nine that morning."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Right you are. Shall I get Ewan to take the second week?"
+        },
+        {
+          "speaker": "user",
+          "text": "If he's happy to, that would be grand. I'll leave the side gate unlocked either way."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "The lorry comes round about half six on a Tuesday morning",
+          "role": "stated collection time"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I'll put the first week's bin out myself as we leave, we're off at five that morning",
+          "role": "five is before the half-six collection, so the plan is consistent"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Colin, we're away for a fortnight from next Tuesday. Could I ask you to put our bins out and bring them back in while we're gone?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Yes, no problem at all. The lorry comes round about half six on a Tuesday morning, so I put mine out the night before."
+        },
+        {
+          "speaker": "user",
+          "text": "Kind of you. I'll put the first week's bin out myself as we leave, we're off at five that morning."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Right you are. Shall I get Ewan to take the second week?"
+        },
+        {
+          "speaker": "user",
+          "text": "If he's happy to, that would be grand. I'll leave the side gate unlocked either way."
+        }
+      ]
+    }
+  }
+}

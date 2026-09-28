@@ -1,0 +1,80 @@
+{
+  "family_id": "transit_022",
+  "domain": "transit",
+  "task_goal": "work out the late bus home from Weavers Hall out to Ashcombe after a Friday night event",
+  "n_turns": 5,
+  "tail_anchor": "We'll be out by about eleven.",
+  "notes": "rep_unres and rep_res differ only in whether turn 1 answers the contactless question, so the same repetition is either a re-ask or a plain restatement of an accepted preference. norep_unres and norep_res differ only in 'that one' versus 'the N14'.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Do the late buses take contactless, or is it cash only on board?", "role": "request"},
+        {"turn_index": 2, "quote": "Do the late buses take contactless, or is it cash only on board?", "role": "re-request"},
+        {"turn_index": 3, "quote": "It runs every twenty minutes at that time, so you shouldn't wait long. The run out to Ashcombe takes about half an hour.", "role": "assistant turn that fails to answer"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We're at Weavers Hall on Friday night and need to get back out to Ashcombe afterwards. I'd rather not change buses anywhere on the way back. Do the late buses take contactless, or is it cash only on board?"},
+        {"speaker": "assistant", "text": "You've got a direct service that way until about half past midnight, no changes at all. The stop is on the far side of the square."},
+        {"speaker": "user", "text": "That's good to hear. Do the late buses take contactless, or is it cash only on board?"},
+        {"speaker": "assistant", "text": "It runs every twenty minutes at that time, so you shouldn't wait long. The run out to Ashcombe takes about half an hour."},
+        {"speaker": "user", "text": "That's about what I expected. We'll be out by about eleven."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "They all take contactless, there's a reader by the driver.", "role": "answers the first request"},
+        {"turn_index": 1, "quote": "a direct service that way until about half past midnight, no changes at all", "role": "the preference is accepted here"},
+        {"turn_index": 2, "quote": "I'd rather not change buses anywhere on the way back.", "role": "restated for emphasis after it was already accepted"},
+        {"turn_index": 3, "quote": "It runs every twenty minutes at that time, so you shouldn't wait long.", "role": "discharges the last open item"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We're at Weavers Hall on Friday night and need to get back out to Ashcombe afterwards. I'd rather not change buses anywhere on the way back. Do the late buses take contactless, or is it cash only on board?"},
+        {"speaker": "assistant", "text": "They all take contactless, there's a reader by the driver. You've got a direct service that way until about half past midnight, no changes at all."},
+        {"speaker": "user", "text": "Good. I'd rather not change buses anywhere on the way back. How often does it run at that time?"},
+        {"speaker": "assistant", "text": "It runs every twenty minutes at that time, so you shouldn't wait long. The run out to Ashcombe takes about half an hour."},
+        {"speaker": "user", "text": "That's about what I expected. We'll be out by about eleven."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "the N9 by way of Barrow Vale, and the N14 straight up the bypass past the retail park", "role": "two live candidate services"},
+        {"turn_index": 2, "quote": "We'll get that one from the square, then, and walk the last bit from the stop.", "role": "referring expression picks out neither"},
+        {"turn_index": 3, "quote": "They both run every twenty minutes or so until about half past midnight, and after that it's taxis.", "role": "assistant does not disambiguate"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We're at Weavers Hall on Friday night and need to get back out to Ashcombe afterwards. What's running late on that side of town?"},
+        {"speaker": "assistant", "text": "Two night services go out that way from the square: the N9 by way of Barrow Vale, and the N14 straight up the bypass past the retail park."},
+        {"speaker": "user", "text": "Handy. We'll get that one from the square, then, and walk the last bit from the stop. Is it the same shelter as the daytime buses use?"},
+        {"speaker": "assistant", "text": "It is, the same one on the far side. They both run every twenty minutes or so until about half past midnight, and after that it's taxis."},
+        {"speaker": "user", "text": "That's about what I expected. We'll be out by about eleven."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Two night services go out that way from the square", "role": "answers the only request"},
+        {"turn_index": 2, "quote": "We'll get the N14 from the square, then, and walk the last bit from the stop.", "role": "the service is determined"},
+        {"turn_index": 3, "quote": "Read that code back to me so you have it for the app.", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "WV 12, right.", "role": "requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "We're at Weavers Hall on Friday night and need to get back out to Ashcombe afterwards. What's running late on that side of town?"},
+        {"speaker": "assistant", "text": "Two night services go out that way from the square: the N9 by way of Barrow Vale, and the N14 straight up the bypass past the retail park."},
+        {"speaker": "user", "text": "Handy. We'll get the N14 from the square, then, and walk the last bit from the stop. Is it the same shelter as the daytime buses use?"},
+        {"speaker": "assistant", "text": "It is, the same one on the far side, and the stop code is WV 12. Read that code back to me so you have it for the app."},
+        {"speaker": "user", "text": "WV 12, right. We'll be out by about eleven."}
+      ]
+    }
+  }
+}

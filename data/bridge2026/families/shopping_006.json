@@ -1,0 +1,171 @@
+{
+  "family_id": "shopping_006",
+  "domain": "shopping",
+  "task_goal": "put one of two Cobblestone coffee subscriptions on hold",
+  "n_turns": 5,
+  "tail_anchor": "Leave everything else on the account exactly as it is.",
+  "notes": "Two subscriptions are live from turn 0. rep_unres and rep_res differ by two words in turn 2 ('that one' vs 'the decaf'); the twelve-word echo in the final user turn is identical in both, so the repetition carries no information about the label.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "the fortnightly house blend and the monthly decaf",
+          "role": "two live candidates"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Put that one on hold until September.",
+          "role": "referring expression that picks out neither subscription"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I will set the hold to begin at the end of July",
+          "role": "assistant accepts the hold without establishing which subscription"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hi. I have two Cobblestone subscriptions running on the same account: the fortnightly house blend and the monthly decaf."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can see both of them. The house blend renews on the 4th and the decaf renews on the 20th."
+        },
+        {
+          "speaker": "user",
+          "text": "I do not want any more bags stacking up in the cupboard, I have three unopened already. Put that one on hold until September."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. I will set the hold to begin at the end of July so nothing goes out next month."
+        },
+        {
+          "speaker": "user",
+          "text": "I do not want any more bags stacking up in the cupboard. Leave everything else on the account exactly as it is."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "Put the decaf on hold until September.",
+          "role": "referent fixed"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I will set the hold to begin at the end of July",
+          "role": "the request is accepted before it is restated"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I do not want any more bags stacking up in the cupboard.",
+          "role": "restated for emphasis, nothing left open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hi. I have two Cobblestone subscriptions running on the same account: the fortnightly house blend and the monthly decaf."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can see both of them. The house blend renews on the 4th and the decaf renews on the 20th."
+        },
+        {
+          "speaker": "user",
+          "text": "I do not want any more bags stacking up in the cupboard, I have three unopened already. Put the decaf on hold until September."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Understood. I will set the hold to begin at the end of July so nothing goes out next month."
+        },
+        {
+          "speaker": "user",
+          "text": "I do not want any more bags stacking up in the cupboard. Leave everything else on the account exactly as it is."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "I would also like to know whether a paused month still earns loyalty credits",
+          "role": "request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Noted. The hold starts at the end of July and the decaf resumes on the 20th of September",
+          "role": "assistant turn that answers something else instead"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hi. I have two Cobblestone subscriptions running on the same account: the fortnightly house blend and the monthly decaf."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can see both of them. The house blend renews on the 4th and the decaf renews on the 20th."
+        },
+        {
+          "speaker": "user",
+          "text": "Put the monthly decaf on hold from next month, please, since it is arriving faster than I can drink it. I would also like to know whether a paused month still earns loyalty credits."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted. The hold starts at the end of July and the decaf resumes on the 20th of September, same as usual."
+        },
+        {
+          "speaker": "user",
+          "text": "That works. Leave everything else on the account exactly as it is."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "Paused months still earn credits.",
+          "role": "discharges the only open request"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hi. I have two Cobblestone subscriptions running on the same account: the fortnightly house blend and the monthly decaf."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I can see both of them. The house blend renews on the 4th and the decaf renews on the 20th."
+        },
+        {
+          "speaker": "user",
+          "text": "Put the monthly decaf on hold from next month, please, since it is arriving faster than I can drink it. I would also like to know whether a paused month still earns loyalty credits."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Paused months still earn credits. The hold starts at the end of July and the decaf resumes on the 20th of September."
+        },
+        {
+          "speaker": "user",
+          "text": "That works. Leave everything else on the account exactly as it is."
+        }
+      ]
+    }
+  }
+}

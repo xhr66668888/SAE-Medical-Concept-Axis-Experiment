@@ -1,0 +1,212 @@
+[
+  {
+    "id": "A0_000",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "Does the pass also cover the riverboat at Greenwich? (asked twice; no assistant turn ever addresses the riverboat)",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_001",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "For six you want 900g of mushrooms, so three 300g punnets. vs I've already got two 300g punnets in the fridge, so the mushrooms are sorted.",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_002",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Could you just confirm the bus number and the starting point for me? -> The 184 runs from Ashfield station to the Greenbank centre.",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_003",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "As I say, it has to be a Saturday because I cannot take a weekday off. (already accepted: We run Saturday crews every week and there is no fee for changing a slot.)",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_004",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "They carry it up to whichever room you want, it says so at the bottom of the docket. (answers the opening question in a later turn)",
+    "confidence": "medium"
+  },
+  {
+    "id": "A0_005",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "Gift packing never shows a price, so that is covered. vs the final restatement I want no prices shown on anything inside either parcel.",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_006",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "Can I use golden caster sugar instead of white for the drizzle? (asked twice; both assistant replies cover quantities, tin and timing only)",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_007",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "Batteries are covered free of charge for the first twelve months vs The machine is only two years old, so it is comfortably inside the twelve months.",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_008",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Paused months still earn credits. The hold starts at the end of July and the decaf resumes on the 20th of September.",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_009",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "We have two cars listed for you, a Skoda Octavia and a Vauxhall Corsa vs Let's book it in for the 22nd if you have a ramp free that morning. (which car is never fixed)",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_010",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "We take items back unworn with the tags still attached, so is that the case here? vs Yes, the tags are still on it. I wore it once on a wet walk and it leaked",
+    "confidence": "medium"
+  },
+  {
+    "id": "A0_011",
+    "label": "resolved",
+    "subtype": "readback_confirmation",
+    "evidence": "Can you read the lamb timing back to me? -> Ninety minutes at 160C fan, then fifteen minutes under foil.",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_012",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "Half nine will have you out long before one. vs the restatement remember I have to be out of the chair by one.",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_013",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "Bring your current passport, the completed form and one signed photo vs My current passport went in the post to you last Tuesday.",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_014",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "I've got a 20cm round tin and a 23cm round tin vs I'll get the tin lined and greased tonight (which tin is never fixed)",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_015",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "Long Stay Green has a space in row B, right beside the shuttle stop vs the restatement please keep me as near the shuttle as you can.",
+    "confidence": "medium"
+  },
+  {
+    "id": "A0_016",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Which number should he use? -> Ring Tom rather than me, he will be up and about.",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_017",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "the last one back leaves the Alderwick harbour at half past five vs We plan to be back at the harbour at seven.",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_018",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "Do you know whether after-school club takes them without booking ahead? (asked twice; never addressed)",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_019",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "We will take 5.20. Neither of us can get away from work before half past six, so that is comfortable.",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_020",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "I would also like to know whether the plastic lid comes with it or has to be bought on its own.",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_021",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "Does the food caddy go out every week or only on the recycling week? (asked twice; never answered)",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_022",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "the train gets into Sheffield at 11:40 ... I am due at the depot on Savile Street by half past twelve, so the timing suits me.",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_023",
+    "label": "unresolved",
+    "subtype": "contradiction",
+    "evidence": "I have Thursday at 2pm or Friday at 10am available. vs Let's take the Thursday one. My afternoons are completely booked this week, so that works well.",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_024",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "My sister Jan is popping in on the Wednesday ... Erin is free on a Wednesday afternoon as well. vs Then she can do the Wednesday feed as well, and I'll square it with her.",
+    "confidence": "medium"
+  },
+  {
+    "id": "A0_025",
+    "label": "resolved",
+    "subtype": "emphasis_repeat",
+    "evidence": "I'll leave the spare key from the biscuit tin under the boot scraper for him. vs the restatement Leave the spare key from the biscuit tin under the boot scraper",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_026",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "Have the driver wait at Terminal 5 from a quarter to eight. -> Booked from 7:45, and I have added a note about the cases.",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_027",
+    "label": "unresolved",
+    "subtype": "ambiguous_reference",
+    "evidence": "I left a navy suit jacket and a wool coat with you last week vs Could she take the sleeves up a touch while I am there? (whose sleeves is never fixed)",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_028",
+    "label": "unresolved",
+    "subtype": "unanswered_question",
+    "evidence": "Are glass jars safe to freeze soup in, or am I better off with plastic? (never answered; the reply covers cooling and stacking only)",
+    "confidence": "high"
+  },
+  {
+    "id": "A0_029",
+    "label": "resolved",
+    "subtype": "clean_progress",
+    "evidence": "I will take the fish one out tonight to thaw. -> Leave it in the fridge to come round rather than on the counter",
+    "confidence": "high"
+  }
+]

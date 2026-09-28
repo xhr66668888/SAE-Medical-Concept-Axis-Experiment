@@ -1,0 +1,181 @@
+{
+  "family_id": "shopping_004",
+  "domain": "shopping",
+  "task_goal": "send two gift parcels from Halloway's with the right wrap and card",
+  "n_turns": 5,
+  "tail_anchor": "Charge the lot to the card ending 3106.",
+  "notes": "Two parcels are live from turn 0 onwards; norep_unres and norep_res differ only in 'that one' versus 'the Cardiff one'. In the rep pair the same eleven-word phrase is echoed into the last user turn, but in one case it is a request nobody has answered and in the other a preference the assistant already granted.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "I need to know whether they will both arrive before the weekend",
+          "role": "request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I have added the ribbon wrap to both parcels and flagged them for the packing team this afternoon.",
+          "role": "assistant turn that fails to answer"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I need to know whether they will both arrive before the weekend",
+          "role": "re-request, still open at the end"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I want to send two gifts through Halloway's: a tea hamper going to my brother in Cardiff and a candle set going to a colleague in Leeds."
+        },
+        {
+          "speaker": "assistant",
+          "text": "We can do both. Gift notes are free, and ribbon wrap is £4 a parcel."
+        },
+        {
+          "speaker": "user",
+          "text": "Ribbon wrap on both, then. I need to know whether they will both arrive before the weekend."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I have added the ribbon wrap to both parcels and flagged them for the packing team this afternoon."
+        },
+        {
+          "speaker": "user",
+          "text": "I need to know whether they will both arrive before the weekend. Charge the lot to the card ending 3106."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "I want no prices shown on anything inside either parcel",
+          "role": "preference stated"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Gift packing never shows a price, so that is covered.",
+          "role": "preference accepted before it is repeated"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I want no prices shown on anything inside either parcel",
+          "role": "restated for emphasis, nothing left open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I want to send two gifts through Halloway's: a tea hamper going to my brother in Cardiff and a candle set going to a colleague in Leeds."
+        },
+        {
+          "speaker": "assistant",
+          "text": "We can do both. Gift notes are free, and ribbon wrap is £4 a parcel."
+        },
+        {
+          "speaker": "user",
+          "text": "Ribbon wrap on both, then. I want no prices shown on anything inside either parcel."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Gift packing never shows a price, so that is covered. I have added the ribbon wrap to both parcels."
+        },
+        {
+          "speaker": "user",
+          "text": "I want no prices shown on anything inside either parcel. Charge the lot to the card ending 3106."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "a tea hamper going to my brother in Cardiff and a candle set going to a colleague in Leeds",
+          "role": "two live candidates"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Put a handwritten note in that one",
+          "role": "referring expression that picks out neither parcel"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I will pass that wording straight to the packing team",
+          "role": "assistant accepts the instruction without fixing which parcel"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I want to send two gifts through Halloway's: a tea hamper going to my brother in Cardiff and a candle set going to a colleague in Leeds."
+        },
+        {
+          "speaker": "assistant",
+          "text": "We can do both. Gift notes are free, and ribbon wrap is £4 a parcel."
+        },
+        {
+          "speaker": "user",
+          "text": "Ribbon wrap on both, then. Put a handwritten note in that one saying 'With love from all of us'."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted. I will pass that wording straight to the packing team and add the ribbon wrap to both parcels."
+        },
+        {
+          "speaker": "user",
+          "text": "Lovely, that all sounds right. Charge the lot to the card ending 3106."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "Put a handwritten note in the Cardiff one",
+          "role": "referent fixed for the next action"
+        },
+        {
+          "turn_index": 3,
+          "quote": "I will pass that wording straight to the packing team and add the ribbon wrap to both parcels.",
+          "role": "everything the user asked for is accounted for"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I want to send two gifts through Halloway's: a tea hamper going to my brother in Cardiff and a candle set going to a colleague in Leeds."
+        },
+        {
+          "speaker": "assistant",
+          "text": "We can do both. Gift notes are free, and ribbon wrap is £4 a parcel."
+        },
+        {
+          "speaker": "user",
+          "text": "Ribbon wrap on both, then. Put a handwritten note in the Cardiff one saying 'With love from all of us'."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Noted. I will pass that wording straight to the packing team and add the ribbon wrap to both parcels."
+        },
+        {
+          "speaker": "user",
+          "text": "Lovely, that all sounds right. Charge the lot to the card ending 3106."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "family_id": "transit_015",
+  "domain": "transit",
+  "task_goal": "open a toll account for the Stanmore crossing and nominate which of the firm's two vehicles pays",
+  "n_turns": 5,
+  "tail_anchor": "I'll be crossing first thing on Monday.",
+  "notes": "rep_unres and rep_res differ only in 'that vehicle' versus 'the pickup'. norep_unres and norep_res differ only in whether turn 1 answers the each-way charging question.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "the Transit van, VX19 KPL, and the flatbed pickup, BD21 HNM", "role": "two live candidate vehicles"},
+        {"turn_index": 2, "quote": "Charge the crossings to that vehicle from Monday.", "role": "referring expression picks out neither"},
+        {"turn_index": 3, "quote": "It does, there's a camera on the approach. Tolls are billed monthly and the statement goes out on the first.", "role": "assistant does not disambiguate"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hi, I'd like to set up a toll account for the Stanmore crossing. We run two vehicles, the Transit van and the flatbed pickup."},
+        {"speaker": "assistant", "text": "I can do that. I have both on the account already: the Transit van, VX19 KPL, and the flatbed pickup, BD21 HNM."},
+        {"speaker": "user", "text": "That's them, the Transit van and the flatbed pickup. Charge the crossings to that vehicle from Monday. Does the barrier read the plate automatically?"},
+        {"speaker": "assistant", "text": "It does, there's a camera on the approach. Tolls are billed monthly and the statement goes out on the first."},
+        {"speaker": "user", "text": "That suits us. I'll be crossing first thing on Monday."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "Charge the crossings to the pickup from Monday.", "role": "the paying vehicle is determined"},
+        {"turn_index": 3, "quote": "Read the pickup's plate back to me so I can lock it in.", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "BD21 HNM.", "role": "requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hi, I'd like to set up a toll account for the Stanmore crossing. We run two vehicles, the Transit van and the flatbed pickup."},
+        {"speaker": "assistant", "text": "I can do that. I have both on the account already: the Transit van, VX19 KPL, and the flatbed pickup, BD21 HNM."},
+        {"speaker": "user", "text": "That's them, the Transit van and the flatbed pickup. Charge the crossings to the pickup from Monday. Does the barrier read the plate automatically?"},
+        {"speaker": "assistant", "text": "It does, there's a camera on the approach. Read the pickup's plate back to me so I can lock it in."},
+        {"speaker": "user", "text": "BD21 HNM. I'll be crossing first thing on Monday."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Is the charge taken each way, or only northbound?", "role": "request"},
+        {"turn_index": 1, "quote": "I can open an account today. I'll need the registration of each vehicle you want on it.", "role": "assistant turn that fails to answer"},
+        {"turn_index": 3, "quote": "Both are on the account now, with the pickup set as the paying vehicle. Billing is monthly, on the first.", "role": "later assistant turn that still does not answer"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hi, I'd like to set up a toll account for the Stanmore crossing. Is the charge taken each way, or only northbound?"},
+        {"speaker": "assistant", "text": "I can open an account today. I'll need the registration of each vehicle you want on it."},
+        {"speaker": "user", "text": "There are two: the Transit van is VX19 KPL, and the flatbed pickup is BD21 HNM. Put the crossings on the pickup from Monday."},
+        {"speaker": "assistant", "text": "Both are on the account now, with the pickup set as the paying vehicle. Billing is monthly, on the first."},
+        {"speaker": "user", "text": "That suits us, and thanks for getting it opened so quickly. I'll be crossing first thing on Monday."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "It's taken in both directions, once per crossing.", "role": "answers the only request"},
+        {"turn_index": 3, "quote": "Billing is monthly, on the first.", "role": "the billing preference is accepted here"},
+        {"turn_index": 4, "quote": "One statement a month, nothing per journey.", "role": "restated for emphasis after it was already accepted"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Hi, I'd like to set up a toll account for the Stanmore crossing. Is the charge taken each way, or only northbound?"},
+        {"speaker": "assistant", "text": "It's taken in both directions, once per crossing. I'll need the registration of each vehicle you want on it."},
+        {"speaker": "user", "text": "There are two: the Transit van is VX19 KPL, and the flatbed pickup is BD21 HNM. Put the crossings on the pickup from Monday, billed monthly."},
+        {"speaker": "assistant", "text": "Both are on the account now, with the pickup set as the paying vehicle. Billing is monthly, on the first."},
+        {"speaker": "user", "text": "One statement a month, nothing per journey. I'll be crossing first thing on Monday."}
+      ]
+    }
+  }
+}

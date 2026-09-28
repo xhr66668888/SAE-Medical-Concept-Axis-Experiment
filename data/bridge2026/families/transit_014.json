@@ -1,0 +1,88 @@
+{
+  "family_id": "transit_014",
+  "domain": "transit",
+  "task_goal": "hire two dock-scheme bikes for a Saturday ride out to Whinfell reservoir and settle the day fee",
+  "n_turns": 7,
+  "tail_anchor": "We'll be setting off at nine on Saturday morning.",
+  "notes": "rep_unres and rep_res differ only in the length of each leg and whether the bikes are docked in between (ninety minutes, no docking / twenty minutes, docked at both ends), which is what makes the flat-fee-only requirement impossible or fine. norep_unres and norep_res differ only in 'that dock' versus 'the Mill Lane dock'.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "over that it's two pounds per half hour", "role": "the charge that applies to any hire past thirty minutes"},
+        {"turn_index": 2, "quote": "I'd rather pay the flat three pound day fee and nothing on top of that", "role": "the requirement that conflicts"},
+        {"turn_index": 2, "quote": "about ninety minutes each way, and we won't dock the bikes anywhere in between", "role": "the action that puts every hire past thirty minutes"},
+        {"turn_index": 5, "quote": "I'll put both bikes on your account for Saturday.", "role": "assistant proceeds without reconciling the conflict"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. Two of us want to take Wharf Cycles bikes out to Whinfell reservoir on Saturday. I'd rather pay the flat three pound day fee and nothing on top of that."},
+        {"speaker": "assistant", "text": "It's three pounds each for the day. Any single hire under thirty minutes has nothing on top; over that it's two pounds per half hour."},
+        {"speaker": "user", "text": "I'd rather pay the flat three pound day fee and nothing on top of that. We'll ride straight out to the reservoir and back, about ninety minutes each way, and we won't dock the bikes anywhere in between."},
+        {"speaker": "assistant", "text": "Noted. Mill Lane dock has twelve stands and Riverside Park dock has eighteen, so there's room at the far end."},
+        {"speaker": "user", "text": "Useful to know. Is there a repair number on the frames in case a tyre goes?"},
+        {"speaker": "assistant", "text": "Yes, it's printed under the saddle clamp on every bike. I'll put both bikes on your account for Saturday."},
+        {"speaker": "user", "text": "Great, thanks. We'll be setting off at nine on Saturday morning."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Any single hire under thirty minutes has nothing on top", "role": "the requirement is accepted here"},
+        {"turn_index": 2, "quote": "I'd rather pay the flat three pound day fee and nothing on top of that", "role": "restated for emphasis after it was already accepted"},
+        {"turn_index": 2, "quote": "about twenty minutes each way, and we'll dock the bikes at both ends", "role": "keeps every hire inside the included half hour"},
+        {"turn_index": 5, "quote": "Yes, it's printed under the saddle clamp on every bike.", "role": "answers the last open request"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. Two of us want to take Wharf Cycles bikes out to Whinfell reservoir on Saturday. I'd rather pay the flat three pound day fee and nothing on top of that."},
+        {"speaker": "assistant", "text": "It's three pounds each for the day. Any single hire under thirty minutes has nothing on top; over that it's two pounds per half hour."},
+        {"speaker": "user", "text": "I'd rather pay the flat three pound day fee and nothing on top of that. We'll ride straight out to the reservoir and back, about twenty minutes each way, and we'll dock the bikes at both ends."},
+        {"speaker": "assistant", "text": "Noted. Mill Lane dock has twelve stands and Riverside Park dock has eighteen, so there's room at the far end."},
+        {"speaker": "user", "text": "Useful to know. Is there a repair number on the frames in case a tyre goes?"},
+        {"speaker": "assistant", "text": "Yes, it's printed under the saddle clamp on every bike. I'll put both bikes on your account for Saturday."},
+        {"speaker": "user", "text": "Great, thanks. We'll be setting off at nine on Saturday morning."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "Mill Lane dock has twelve stands and Riverside Park dock has eighteen", "role": "two live candidate docks"},
+        {"turn_index": 4, "quote": "We'll drop the bikes back at that dock at about five", "role": "referring expression picks out neither"},
+        {"turn_index": 5, "quote": "Five is fine. The app closes the hire as soon as the bikes are back in the stands.", "role": "assistant does not disambiguate"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. Two of us want to take Wharf Cycles bikes out to Whinfell reservoir on Saturday. How does the charging work for a day out like that?"},
+        {"speaker": "assistant", "text": "It's three pounds each for the day. Any single hire under thirty minutes has nothing on top; over that it's two pounds per half hour."},
+        {"speaker": "user", "text": "That's clear enough, thanks. We'll ride out to the reservoir and back, and we mean to dock at both ends, so each leg should stay inside the free half hour."},
+        {"speaker": "assistant", "text": "That works. Mill Lane dock has twelve stands and Riverside Park dock has eighteen, and both sit right on the water."},
+        {"speaker": "user", "text": "Good to know. We'll drop the bikes back at that dock at about five, then walk into town for something to eat."},
+        {"speaker": "assistant", "text": "Five is fine. The app closes the hire as soon as the bikes are back in the stands."},
+        {"speaker": "user", "text": "Great, thanks. We'll be setting off at nine on Saturday morning."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "It's three pounds each for the day.", "role": "answers the only request"},
+        {"turn_index": 4, "quote": "We'll drop the bikes back at the Mill Lane dock at about five", "role": "the return dock is determined"},
+        {"turn_index": 5, "quote": "The app closes the hire as soon as the bikes are back in the stands.", "role": "discharges the last open item"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "Morning. Two of us want to take Wharf Cycles bikes out to Whinfell reservoir on Saturday. How does the charging work for a day out like that?"},
+        {"speaker": "assistant", "text": "It's three pounds each for the day. Any single hire under thirty minutes has nothing on top; over that it's two pounds per half hour."},
+        {"speaker": "user", "text": "That's clear enough, thanks. We'll ride out to the reservoir and back, and we mean to dock at both ends, so each leg should stay inside the free half hour."},
+        {"speaker": "assistant", "text": "That works. Mill Lane dock has twelve stands and Riverside Park dock has eighteen, and both sit right on the water."},
+        {"speaker": "user", "text": "Good to know. We'll drop the bikes back at the Mill Lane dock at about five, then walk into town for something to eat."},
+        {"speaker": "assistant", "text": "Five is fine. The app closes the hire as soon as the bikes are back in the stands."},
+        {"speaker": "user", "text": "Great, thanks. We'll be setting off at nine on Saturday morning."}
+      ]
+    }
+  }
+}

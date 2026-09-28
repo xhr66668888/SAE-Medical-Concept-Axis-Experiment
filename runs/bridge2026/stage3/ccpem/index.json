@@ -1,0 +1,602 @@
+{
+  "X_000": {
+    "item_id": "ccpem_082",
+    "conversation_id": "CCPE-75218",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_001": {
+    "item_id": "ccpem_038",
+    "conversation_id": "CCPE-86a5d",
+    "rep_any": 5,
+    "n_turns": 7
+  },
+  "X_002": {
+    "item_id": "ccpem_099",
+    "conversation_id": "CCPE-7b5bd",
+    "rep_any": 6,
+    "n_turns": 7
+  },
+  "X_003": {
+    "item_id": "ccpem_021",
+    "conversation_id": "CCPE-5cb8c",
+    "rep_any": 4,
+    "n_turns": 7
+  },
+  "X_004": {
+    "item_id": "ccpem_023",
+    "conversation_id": "CCPE-38f54",
+    "rep_any": 6,
+    "n_turns": 5
+  },
+  "X_005": {
+    "item_id": "ccpem_087",
+    "conversation_id": "CCPE-314b0",
+    "rep_any": 4,
+    "n_turns": 5
+  },
+  "X_006": {
+    "item_id": "ccpem_002",
+    "conversation_id": "CCPE-eba0a",
+    "rep_any": 1,
+    "n_turns": 5
+  },
+  "X_007": {
+    "item_id": "ccpem_058",
+    "conversation_id": "CCPE-5c845",
+    "rep_any": 6,
+    "n_turns": 5
+  },
+  "X_008": {
+    "item_id": "ccpem_063",
+    "conversation_id": "CCPE-af008",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_009": {
+    "item_id": "ccpem_048",
+    "conversation_id": "CCPE-545dc",
+    "rep_any": 6,
+    "n_turns": 5
+  },
+  "X_010": {
+    "item_id": "ccpem_032",
+    "conversation_id": "CCPE-b357d",
+    "rep_any": 4,
+    "n_turns": 7
+  },
+  "X_011": {
+    "item_id": "ccpem_007",
+    "conversation_id": "CCPE-ed88b",
+    "rep_any": 5,
+    "n_turns": 7
+  },
+  "X_012": {
+    "item_id": "ccpem_096",
+    "conversation_id": "CCPE-e7339",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_013": {
+    "item_id": "ccpem_051",
+    "conversation_id": "CCPE-cde9e",
+    "rep_any": 3,
+    "n_turns": 7
+  },
+  "X_014": {
+    "item_id": "ccpem_090",
+    "conversation_id": "CCPE-77118",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_015": {
+    "item_id": "ccpem_033",
+    "conversation_id": "CCPE-9d3aa",
+    "rep_any": 4,
+    "n_turns": 5
+  },
+  "X_016": {
+    "item_id": "ccpem_046",
+    "conversation_id": "CCPE-eaab3",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_017": {
+    "item_id": "ccpem_040",
+    "conversation_id": "CCPE-1e609",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_018": {
+    "item_id": "ccpem_089",
+    "conversation_id": "CCPE-4c5fc",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_019": {
+    "item_id": "ccpem_037",
+    "conversation_id": "CCPE-d1234",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_020": {
+    "item_id": "ccpem_022",
+    "conversation_id": "CCPE-43bec",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_021": {
+    "item_id": "ccpem_045",
+    "conversation_id": "CCPE-b7a3c",
+    "rep_any": 2,
+    "n_turns": 5
+  },
+  "X_022": {
+    "item_id": "ccpem_008",
+    "conversation_id": "CCPE-9d2bc",
+    "rep_any": 4,
+    "n_turns": 7
+  },
+  "X_023": {
+    "item_id": "ccpem_027",
+    "conversation_id": "CCPE-74a9b",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_024": {
+    "item_id": "ccpem_083",
+    "conversation_id": "CCPE-7f9e7",
+    "rep_any": 4,
+    "n_turns": 5
+  },
+  "X_025": {
+    "item_id": "ccpem_050",
+    "conversation_id": "CCPE-03d99",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_026": {
+    "item_id": "ccpem_001",
+    "conversation_id": "CCPE-26654",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_027": {
+    "item_id": "ccpem_069",
+    "conversation_id": "CCPE-39d8a",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_028": {
+    "item_id": "ccpem_071",
+    "conversation_id": "CCPE-dd15c",
+    "rep_any": 4,
+    "n_turns": 5
+  },
+  "X_029": {
+    "item_id": "ccpem_059",
+    "conversation_id": "CCPE-97c46",
+    "rep_any": 5,
+    "n_turns": 7
+  },
+  "X_030": {
+    "item_id": "ccpem_003",
+    "conversation_id": "CCPE-44f54",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_031": {
+    "item_id": "ccpem_041",
+    "conversation_id": "CCPE-9128a",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_032": {
+    "item_id": "ccpem_054",
+    "conversation_id": "CCPE-05d1d",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_033": {
+    "item_id": "ccpem_012",
+    "conversation_id": "CCPE-56f34",
+    "rep_any": 2,
+    "n_turns": 5
+  },
+  "X_034": {
+    "item_id": "ccpem_019",
+    "conversation_id": "CCPE-8b29e",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_035": {
+    "item_id": "ccpem_020",
+    "conversation_id": "CCPE-c92f5",
+    "rep_any": 2,
+    "n_turns": 5
+  },
+  "X_036": {
+    "item_id": "ccpem_067",
+    "conversation_id": "CCPE-65c89",
+    "rep_any": 6,
+    "n_turns": 5
+  },
+  "X_037": {
+    "item_id": "ccpem_025",
+    "conversation_id": "CCPE-6faee",
+    "rep_any": 7,
+    "n_turns": 5
+  },
+  "X_038": {
+    "item_id": "ccpem_061",
+    "conversation_id": "CCPE-67c89",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_039": {
+    "item_id": "ccpem_066",
+    "conversation_id": "CCPE-98061",
+    "rep_any": 2,
+    "n_turns": 7
+  },
+  "X_040": {
+    "item_id": "ccpem_030",
+    "conversation_id": "CCPE-ddb2f",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_041": {
+    "item_id": "ccpem_011",
+    "conversation_id": "CCPE-e5d24",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_042": {
+    "item_id": "ccpem_056",
+    "conversation_id": "CCPE-d2cc0",
+    "rep_any": 6,
+    "n_turns": 5
+  },
+  "X_043": {
+    "item_id": "ccpem_091",
+    "conversation_id": "CCPE-0aabf",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_044": {
+    "item_id": "ccpem_024",
+    "conversation_id": "CCPE-8f035",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_045": {
+    "item_id": "ccpem_075",
+    "conversation_id": "CCPE-75c5f",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_046": {
+    "item_id": "ccpem_060",
+    "conversation_id": "CCPE-28377",
+    "rep_any": 2,
+    "n_turns": 7
+  },
+  "X_047": {
+    "item_id": "ccpem_072",
+    "conversation_id": "CCPE-3e8c9",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_048": {
+    "item_id": "ccpem_092",
+    "conversation_id": "CCPE-83d0b",
+    "rep_any": 6,
+    "n_turns": 5
+  },
+  "X_049": {
+    "item_id": "ccpem_052",
+    "conversation_id": "CCPE-b87e8",
+    "rep_any": 3,
+    "n_turns": 7
+  },
+  "X_050": {
+    "item_id": "ccpem_078",
+    "conversation_id": "CCPE-4d114",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_051": {
+    "item_id": "ccpem_010",
+    "conversation_id": "CCPE-2f2bd",
+    "rep_any": 4,
+    "n_turns": 7
+  },
+  "X_052": {
+    "item_id": "ccpem_028",
+    "conversation_id": "CCPE-b3fc4",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_053": {
+    "item_id": "ccpem_035",
+    "conversation_id": "CCPE-489fa",
+    "rep_any": 5,
+    "n_turns": 7
+  },
+  "X_054": {
+    "item_id": "ccpem_006",
+    "conversation_id": "CCPE-4c26a",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_055": {
+    "item_id": "ccpem_031",
+    "conversation_id": "CCPE-35c79",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_056": {
+    "item_id": "ccpem_065",
+    "conversation_id": "CCPE-859c3",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_057": {
+    "item_id": "ccpem_086",
+    "conversation_id": "CCPE-8cfed",
+    "rep_any": 2,
+    "n_turns": 5
+  },
+  "X_058": {
+    "item_id": "ccpem_055",
+    "conversation_id": "CCPE-a117f",
+    "rep_any": 4,
+    "n_turns": 5
+  },
+  "X_059": {
+    "item_id": "ccpem_017",
+    "conversation_id": "CCPE-fea93",
+    "rep_any": 2,
+    "n_turns": 5
+  },
+  "X_060": {
+    "item_id": "ccpem_080",
+    "conversation_id": "CCPE-11d3f",
+    "rep_any": 4,
+    "n_turns": 5
+  },
+  "X_061": {
+    "item_id": "ccpem_062",
+    "conversation_id": "CCPE-91263",
+    "rep_any": 7,
+    "n_turns": 7
+  },
+  "X_062": {
+    "item_id": "ccpem_077",
+    "conversation_id": "CCPE-9121c",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_063": {
+    "item_id": "ccpem_081",
+    "conversation_id": "CCPE-1067f",
+    "rep_any": 6,
+    "n_turns": 5
+  },
+  "X_064": {
+    "item_id": "ccpem_018",
+    "conversation_id": "CCPE-387c5",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_065": {
+    "item_id": "ccpem_044",
+    "conversation_id": "CCPE-1ee80",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_066": {
+    "item_id": "ccpem_004",
+    "conversation_id": "CCPE-391df",
+    "rep_any": 2,
+    "n_turns": 5
+  },
+  "X_067": {
+    "item_id": "ccpem_053",
+    "conversation_id": "CCPE-84679",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_068": {
+    "item_id": "ccpem_016",
+    "conversation_id": "CCPE-d4747",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_069": {
+    "item_id": "ccpem_064",
+    "conversation_id": "CCPE-ebc61",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_070": {
+    "item_id": "ccpem_039",
+    "conversation_id": "CCPE-6d9c5",
+    "rep_any": 2,
+    "n_turns": 5
+  },
+  "X_071": {
+    "item_id": "ccpem_026",
+    "conversation_id": "CCPE-c9599",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_072": {
+    "item_id": "ccpem_088",
+    "conversation_id": "CCPE-b63d5",
+    "rep_any": 2,
+    "n_turns": 5
+  },
+  "X_073": {
+    "item_id": "ccpem_094",
+    "conversation_id": "CCPE-ab6e2",
+    "rep_any": 2,
+    "n_turns": 5
+  },
+  "X_074": {
+    "item_id": "ccpem_074",
+    "conversation_id": "CCPE-b41b5",
+    "rep_any": 2,
+    "n_turns": 5
+  },
+  "X_075": {
+    "item_id": "ccpem_084",
+    "conversation_id": "CCPE-605f5",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_076": {
+    "item_id": "ccpem_093",
+    "conversation_id": "CCPE-e8dbb",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_077": {
+    "item_id": "ccpem_095",
+    "conversation_id": "CCPE-88e0d",
+    "rep_any": 7,
+    "n_turns": 5
+  },
+  "X_078": {
+    "item_id": "ccpem_000",
+    "conversation_id": "CCPE-0ef1f",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_079": {
+    "item_id": "ccpem_013",
+    "conversation_id": "CCPE-e30d4",
+    "rep_any": 4,
+    "n_turns": 5
+  },
+  "X_080": {
+    "item_id": "ccpem_042",
+    "conversation_id": "CCPE-5dc94",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_081": {
+    "item_id": "ccpem_009",
+    "conversation_id": "CCPE-d64b2",
+    "rep_any": 6,
+    "n_turns": 5
+  },
+  "X_082": {
+    "item_id": "ccpem_014",
+    "conversation_id": "CCPE-9ad60",
+    "rep_any": 5,
+    "n_turns": 7
+  },
+  "X_083": {
+    "item_id": "ccpem_015",
+    "conversation_id": "CCPE-d632e",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_084": {
+    "item_id": "ccpem_036",
+    "conversation_id": "CCPE-a00c5",
+    "rep_any": 2,
+    "n_turns": 5
+  },
+  "X_085": {
+    "item_id": "ccpem_076",
+    "conversation_id": "CCPE-278f2",
+    "rep_any": 11,
+    "n_turns": 5
+  },
+  "X_086": {
+    "item_id": "ccpem_049",
+    "conversation_id": "CCPE-12694",
+    "rep_any": 3,
+    "n_turns": 7
+  },
+  "X_087": {
+    "item_id": "ccpem_070",
+    "conversation_id": "CCPE-cb904",
+    "rep_any": 4,
+    "n_turns": 5
+  },
+  "X_088": {
+    "item_id": "ccpem_079",
+    "conversation_id": "CCPE-dbd31",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_089": {
+    "item_id": "ccpem_085",
+    "conversation_id": "CCPE-50e96",
+    "rep_any": 5,
+    "n_turns": 7
+  },
+  "X_090": {
+    "item_id": "ccpem_097",
+    "conversation_id": "CCPE-c860a",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_091": {
+    "item_id": "ccpem_005",
+    "conversation_id": "CCPE-42d8e",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_092": {
+    "item_id": "ccpem_068",
+    "conversation_id": "CCPE-6a50c",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_093": {
+    "item_id": "ccpem_043",
+    "conversation_id": "CCPE-a1491",
+    "rep_any": 5,
+    "n_turns": 5
+  },
+  "X_094": {
+    "item_id": "ccpem_034",
+    "conversation_id": "CCPE-2b2f6",
+    "rep_any": 2,
+    "n_turns": 7
+  },
+  "X_095": {
+    "item_id": "ccpem_073",
+    "conversation_id": "CCPE-1c54f",
+    "rep_any": 3,
+    "n_turns": 5
+  },
+  "X_096": {
+    "item_id": "ccpem_047",
+    "conversation_id": "CCPE-bae1d",
+    "rep_any": 3,
+    "n_turns": 7
+  },
+  "X_097": {
+    "item_id": "ccpem_098",
+    "conversation_id": "CCPE-39c55",
+    "rep_any": 6,
+    "n_turns": 5
+  },
+  "X_098": {
+    "item_id": "ccpem_057",
+    "conversation_id": "CCPE-e9524",
+    "rep_any": 2,
+    "n_turns": 5
+  },
+  "X_099": {
+    "item_id": "ccpem_029",
+    "conversation_id": "CCPE-6723c",
+    "rep_any": 5,
+    "n_turns": 7
+  }
+}

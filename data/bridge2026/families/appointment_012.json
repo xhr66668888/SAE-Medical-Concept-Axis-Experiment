@@ -1,0 +1,186 @@
+{
+  "family_id": "appointment_012",
+  "domain": "appointment",
+  "task_goal": "move a booked practical driving test to a later date and keep the early slot",
+  "n_turns": 5,
+  "tail_anchor": "Fingers crossed for a quiet road.",
+  "notes": "rep_unres and rep_res differ only in the middle clause of turn 2, which puts the theory pass either inside or outside the life of the new test date, against a rule the centre states in turn 1. Both rep cells carry the same eight-token restatement of the first-thing preference. norep_unres and norep_res differ by two words in turn 2 ('that one' versus 'the Calder Street one'), with two bookings live and both starting at the same time so that the later read-back settles nothing about which is which.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "we cannot run a practical unless the theory pass is still live on the day",
+          "role": "the rule"
+        },
+        {
+          "turn_index": 2,
+          "quote": "My theory pass runs out on the last day of this month, and I still want the practical to go ahead on the sixth",
+          "role": "the conflicting fact and the action it blocks"
+        },
+        {
+          "turn_index": 3,
+          "quote": "The ninth is out of the diary and the sixth is in",
+          "role": "assistant moves the booking without reconciling the conflict"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I need to shift a practical test booking. It is under Priya Raval, at Pinkney Road on the ninth, and it has to stay a first-thing slot."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I have it in front of me. The sixth of next month is free first thing, though I should say we cannot run a practical unless the theory pass is still live on the day."
+        },
+        {
+          "speaker": "user",
+          "text": "Put me down for the sixth, then. My theory pass runs out on the last day of this month, and I still want the practical to go ahead on the sixth."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The ninth is out of the diary and the sixth is in, first thing as you asked. Would you rather sit it in Marcus's car or in your own?"
+        },
+        {
+          "speaker": "user",
+          "text": "In Marcus's car, please, and remember it has to stay a first-thing slot. Fingers crossed for a quiet road."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "My theory pass runs out at the end of next summer, so there is room to spare on the sixth",
+          "role": "consistent with the rule in turn 1"
+        },
+        {
+          "turn_index": 3,
+          "quote": "first thing as you asked",
+          "role": "the centre has already accepted the preference"
+        },
+        {
+          "turn_index": 4,
+          "quote": "remember it has to stay a first-thing slot",
+          "role": "restatement for emphasis of a preference already granted"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I need to shift a practical test booking. It is under Priya Raval, at Pinkney Road on the ninth, and it has to stay a first-thing slot."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I have it in front of me. The sixth of next month is free first thing, though I should say we cannot run a practical unless the theory pass is still live on the day."
+        },
+        {
+          "speaker": "user",
+          "text": "Put me down for the sixth, then. My theory pass runs out at the end of next summer, so there is room to spare on the sixth."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The ninth is out of the diary and the sixth is in, first thing as you asked. Would you rather sit it in Marcus's car or in your own?"
+        },
+        {
+          "speaker": "user",
+          "text": "In Marcus's car, please, and remember it has to stay a first-thing slot. Fingers crossed for a quiet road."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "the ninth at Pinkney Road and the twenty-third at Calder Street",
+          "role": "the two live candidates"
+        },
+        {
+          "turn_index": 2,
+          "quote": "I would like to push that one back a fortnight",
+          "role": "referring expression that fits either booking"
+        },
+        {
+          "turn_index": 3,
+          "quote": "A fortnight on from either of those is open",
+          "role": "assistant keeps both live and moves neither in particular"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I need to shift a practical test booking. It is under Priya Raval, and the theory pass is good right through until next summer."
+        },
+        {
+          "speaker": "assistant",
+          "text": "You have two live bookings on the system, the ninth at Pinkney Road and the twenty-third at Calder Street, and both of them start at twenty past eight."
+        },
+        {
+          "speaker": "user",
+          "text": "I would like to push that one back a fortnight, if the diary at your end will take it."
+        },
+        {
+          "speaker": "assistant",
+          "text": "A fortnight on from either of those is open, and the twenty past eight start would stay exactly as it is. Can you read the start time back to me before I press the button?"
+        },
+        {
+          "speaker": "user",
+          "text": "Twenty past eight, then, and no earlier. Fingers crossed for a quiet road."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "I would like to push the Calder Street one back a fortnight",
+          "role": "the booking to be moved is named"
+        },
+        {
+          "turn_index": 3,
+          "quote": "Can you read the start time back to me before I press the button?",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Twenty past eight, then",
+          "role": "the requested confirmation"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I need to shift a practical test booking. It is under Priya Raval, and the theory pass is good right through until next summer."
+        },
+        {
+          "speaker": "assistant",
+          "text": "You have two live bookings on the system, the ninth at Pinkney Road and the twenty-third at Calder Street, and both of them start at twenty past eight."
+        },
+        {
+          "speaker": "user",
+          "text": "I would like to push the Calder Street one back a fortnight, if the diary at your end will take it."
+        },
+        {
+          "speaker": "assistant",
+          "text": "A fortnight on from either of those is open, and the twenty past eight start would stay exactly as it is. Can you read the start time back to me before I press the button?"
+        },
+        {
+          "speaker": "user",
+          "text": "Twenty past eight, then, and no earlier. Fingers crossed for a quiet road."
+        }
+      ]
+    }
+  }
+}

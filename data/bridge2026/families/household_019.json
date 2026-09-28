@@ -1,0 +1,218 @@
+{
+  "family_id": "household_019",
+  "domain": "household",
+  "task_goal": "put a term of children's clubs and lifts onto one shared family calendar",
+  "n_turns": 7,
+  "tail_anchor": "I'll share the whole thing with Trish as well.",
+  "notes": "rep_unres and rep_res differ by one phrase (it / the swimming) in the final turn; both clubs are re-activated in the turn before and the swimming is the most recent singular mention, so the bare pronoun has no winner.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 5,
+          "quote": "Football has them standing about in the cold for half an hour beforehand",
+          "role": "first live candidate, re-activated immediately before"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Roza's swimming eats the whole evening",
+          "role": "second live candidate, and the most recent singular mention"
+        },
+        {
+          "turn_index": 6,
+          "quote": "Put a reminder on it for the night before",
+          "role": "referring expression that picks out neither club"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Jo, I want this term's clubs on one shared calendar. Ivo has football training on a Tuesday and Roza has swimming on a Thursday."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Sensible. I can do the Tuesday run, but the Thursday clashes with my late start at the depot. Could Trish take that one?"
+        },
+        {
+          "speaker": "user",
+          "text": "She has already offered, so yes. Football finishes at half four and swimming starts at five."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Put the lifts on as well, then, not just the clubs. Give me those two times again for the depot rota."
+        },
+        {
+          "speaker": "user",
+          "text": "Football finishes at half four and swimming starts at five."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Thanks, that is on the rota now. Football has them standing about in the cold for half an hour beforehand, and Roza's swimming eats the whole evening."
+        },
+        {
+          "speaker": "user",
+          "text": "Put a reminder on it for the night before, there is never time to sort the bag in the morning. I'll share the whole thing with Trish as well."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "Give me those two times again for the depot rota.",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Football finishes at half four and swimming starts at five.",
+          "role": "requested read-back, not a sign of trouble"
+        },
+        {
+          "turn_index": 6,
+          "quote": "Put a reminder on the swimming for the night before",
+          "role": "the club is named, so nothing is left open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Jo, I want this term's clubs on one shared calendar. Ivo has football training on a Tuesday and Roza has swimming on a Thursday."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Sensible. I can do the Tuesday run, but the Thursday clashes with my late start at the depot. Could Trish take that one?"
+        },
+        {
+          "speaker": "user",
+          "text": "She has already offered, so yes. Football finishes at half four and swimming starts at five."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Put the lifts on as well, then, not just the clubs. Give me those two times again for the depot rota."
+        },
+        {
+          "speaker": "user",
+          "text": "Football finishes at half four and swimming starts at five."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Thanks, that is on the rota now. Football has them standing about in the cold for half an hour beforehand, and Roza's swimming eats the whole evening."
+        },
+        {
+          "speaker": "user",
+          "text": "Put a reminder on the swimming for the night before, there is never time to sort the bag in the morning. I'll share the whole thing with Trish as well."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Do we still have to pay for the whole term of football if Ivo stops after half term?",
+          "role": "request"
+        },
+        {
+          "turn_index": 1,
+          "quote": "One calendar is a good idea.",
+          "role": "assistant answers a different part"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Trish can put her own bits straight on there once you invite her.",
+          "role": "assistant turn that fails to answer"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Jo, I want everything on one calendar this term, so Trish is not ringing me every Tuesday. Do we still have to pay for the whole term of football if Ivo stops after half term?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "One calendar is a good idea. I can cover the Tuesday, but the Thursday clashes with my late start at the depot."
+        },
+        {
+          "speaker": "user",
+          "text": "Trish has offered to take the Thursday, so that side of it is covered. Roza is in the five o'clock swimming group now, not the four."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I will change that on my phone tonight. Is the football still up on the top field, or have they moved on to the astro?"
+        },
+        {
+          "speaker": "user",
+          "text": "The astro, from this week, and the parking down there is dreadful."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I will walk him round from the shop, then. Trish can put her own bits straight on there once you invite her."
+        },
+        {
+          "speaker": "user",
+          "text": "Good, and then nobody has to ring round to check. I'll share the whole thing with Trish as well."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "emphasis_repeat",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "One calendar is a good idea.",
+          "role": "the stated preference is accepted"
+        },
+        {
+          "turn_index": 5,
+          "quote": "And no, they hand the rest of the term back if he stops at half term, it says so on the form.",
+          "role": "answers the only open request"
+        },
+        {
+          "turn_index": 6,
+          "quote": "and then nobody has to ring round to check",
+          "role": "restatement for emphasis of an accepted preference"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Jo, I want everything on one calendar this term, so Trish is not ringing me every Tuesday. Do we still have to pay for the whole term of football if Ivo stops after half term?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "One calendar is a good idea. I can cover the Tuesday, but the Thursday clashes with my late start at the depot."
+        },
+        {
+          "speaker": "user",
+          "text": "Trish has offered to take the Thursday, so that side of it is covered. Roza is in the five o'clock swimming group now, not the four."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I will change that on my phone tonight. Is the football still up on the top field, or have they moved on to the astro?"
+        },
+        {
+          "speaker": "user",
+          "text": "The astro, from this week, and the parking down there is dreadful."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I will walk him round from the shop, then. And no, they hand the rest of the term back if he stops at half term, it says so on the form."
+        },
+        {
+          "speaker": "user",
+          "text": "Good, and then nobody has to ring round to check. I'll share the whole thing with Trish as well."
+        }
+      ]
+    }
+  }
+}

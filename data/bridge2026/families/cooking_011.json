@@ -1,0 +1,223 @@
+{
+  "family_id": "cooking_011",
+  "domain": "cooking",
+  "task_goal": "cater a buffet for forty at the rowing club fundraiser and sort the holding and warming arrangements",
+  "n_turns": 7,
+  "tail_anchor": "The hall is ours from two o'clock.",
+  "notes": "Both rep cells contain the same requested read-back of the two quantities, so the repetition is benign in both; rep_unres and rep_res differ by one word, slow cookers holding three kilos each against six, measured against the ten kilos just quoted. The norep pair differs only in 'the oven' against 'the servery oven', with two ovens live and only one of them needing to be signed out.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "ten kilos of chilli for forty",
+          "role": "stated quantity for forty"
+        },
+        {
+          "turn_index": 2,
+          "quote": "The two slow cookers hold three kilos each, and all of the chilli has to sit in them from six until we serve",
+          "role": "six kilos of capacity for the ten kilos just quoted"
+        },
+        {
+          "turn_index": 3,
+          "quote": "The hall is licensed until eleven, so there is no rush on the serving.",
+          "role": "assistant moves on without raising the shortfall"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm doing the food for the rowing club fundraiser on the 14th, forty people, buffet style. It is a chilli with rice and garlic bread. How much chilli should I be making?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Allow 250g a head, so ten kilos of chilli for forty, plus four kilos of dry rice. Could you read those two figures back to me?"
+        },
+        {
+          "speaker": "user",
+          "text": "Ten kilos of chilli for forty, plus four kilos of dry rice. The two slow cookers hold three kilos each, and all of the chilli has to sit in them from six until we serve."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Good. The hall is licensed until eleven, so there is no rush on the serving."
+        },
+        {
+          "speaker": "user",
+          "text": "We are planning to put the food out at eight, once the raffle has been drawn."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Then have the rice cooked by half seven and hold it covered; it will sit happily for that half hour."
+        },
+        {
+          "speaker": "user",
+          "text": "Rice done by half seven, then. The hall is ours from two o'clock."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Could you read those two figures back to me?",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Ten kilos of chilli for forty, plus four kilos of dry rice.",
+          "role": "the requested read-back, not a sign of trouble"
+        },
+        {
+          "turn_index": 2,
+          "quote": "The two slow cookers hold six kilos each",
+          "role": "twelve kilos of capacity, which covers the ten just quoted"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm doing the food for the rowing club fundraiser on the 14th, forty people, buffet style. It is a chilli with rice and garlic bread. How much chilli should I be making?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Allow 250g a head, so ten kilos of chilli for forty, plus four kilos of dry rice. Could you read those two figures back to me?"
+        },
+        {
+          "speaker": "user",
+          "text": "Ten kilos of chilli for forty, plus four kilos of dry rice. The two slow cookers hold six kilos each, and all of the chilli has to sit in them from six until we serve."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Good. The hall is licensed until eleven, so there is no rush on the serving."
+        },
+        {
+          "speaker": "user",
+          "text": "We are planning to put the food out at eight, once the raffle has been drawn."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Then have the rice cooked by half seven and hold it covered; it will sit happily for that half hour."
+        },
+        {
+          "speaker": "user",
+          "text": "Rice done by half seven, then. The hall is ours from two o'clock."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "The kitchen oven holds six trays and the servery one holds twelve",
+          "role": "two candidate ovens are live, the servery one most recently"
+        },
+        {
+          "turn_index": 3,
+          "quote": "the servery oven has to be signed out with the duty steward, and the kitchen one does not",
+          "role": "the choice changes what has to be done"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll have the oven on and the trays in by half six",
+          "role": "the referring expression picks out neither"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Then have the rice cooked by half seven and hold it covered",
+          "role": "assistant moves on without settling which oven"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm doing the food for the rowing club fundraiser on the 14th, forty people, buffet style. It is a chilli with rice and garlic bread. How much chilli should I be making?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Allow 250g a head, so ten kilos for the forty, and I would put four kilos of dry rice alongside it."
+        },
+        {
+          "speaker": "user",
+          "text": "That is more than I had in mind. Six trays of bread will want warming through as well, where is best for those?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The kitchen oven holds six trays and the servery one holds twelve; the servery oven has to be signed out with the duty steward, and the kitchen one does not."
+        },
+        {
+          "speaker": "user",
+          "text": "Understood. I'll have the oven on and the trays in by half six, ready for when the raffle is drawn."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Then have the rice cooked by half seven and hold it covered; it will sit happily for that half hour."
+        },
+        {
+          "speaker": "user",
+          "text": "Rice done by half seven, then. The hall is ours from two o'clock."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "Allow 250g a head, so ten kilos for the forty",
+          "role": "answers the opening request"
+        },
+        {
+          "turn_index": 3,
+          "quote": "The kitchen oven holds six trays and the servery one holds twelve",
+          "role": "answers the question about warming the bread"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I'll have the servery oven on and the trays in by half six",
+          "role": "picks one of the two ovens"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "I'm doing the food for the rowing club fundraiser on the 14th, forty people, buffet style. It is a chilli with rice and garlic bread. How much chilli should I be making?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Allow 250g a head, so ten kilos for the forty, and I would put four kilos of dry rice alongside it."
+        },
+        {
+          "speaker": "user",
+          "text": "That is more than I had in mind. Six trays of bread will want warming through as well, where is best for those?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "The kitchen oven holds six trays and the servery one holds twelve; the servery oven has to be signed out with the duty steward, and the kitchen one does not."
+        },
+        {
+          "speaker": "user",
+          "text": "Understood. I'll have the servery oven on and the trays in by half six, ready for when the raffle is drawn."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Then have the rice cooked by half seven and hold it covered; it will sit happily for that half hour."
+        },
+        {
+          "speaker": "user",
+          "text": "Rice done by half seven, then. The hall is ours from two o'clock."
+        }
+      ]
+    }
+  }
+}

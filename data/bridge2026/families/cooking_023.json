@@ -1,0 +1,86 @@
+{
+  "family_id": "cooking_023",
+  "domain": "cooking",
+  "task_goal": "cook a dinner for eight on Saturday where one guest does not eat gluten, and get the sauce and the pudding done ahead",
+  "n_turns": 7,
+  "tail_anchor": "The table is already laid for eight.",
+  "notes": "rep_unres and rep_res differ only in whether the assistant's third turn answers the make-ahead question; norep_unres and norep_res differ only by 'it' vs 'the torte' with two puddings live.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 0, "quote": "Can the sauce be made the day before and warmed through?", "role": "request"},
+        {"turn_index": 3, "quote": "Put a small gluten-free loaf at that end and ordinary bread at the other, on separate boards, so nothing gets muddled.", "role": "assistant answers a different part and leaves the request open"},
+        {"turn_index": 5, "quote": "A posset is a good choice, nothing in it to worry about as long as you leave the shortbread off.", "role": "last assistant turn, still no answer"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I've got eight coming for dinner on Saturday and one of them doesn't eat gluten. The main is chicken thighs braised in cider with a cream sauce. Can the sauce be made the day before and warmed through?"},
+        {"speaker": "assistant", "text": "The only gluten in that dish is the flour you would use to thicken it. Swap it for two teaspoons of cornflour slaked in cold water and stirred in at the end, and it behaves exactly the same."},
+        {"speaker": "user", "text": "Cornflour I have, so that's one thing sorted. What do I do about the bread?"},
+        {"speaker": "assistant", "text": "Put a small gluten-free loaf at that end and ordinary bread at the other, on separate boards, so nothing gets muddled. Read the thickening back to me so I know it's right."},
+        {"speaker": "user", "text": "Two teaspoons of cornflour slaked in cold water and stirred in at the end. I'll do a lemon posset for pudding."},
+        {"speaker": "assistant", "text": "A posset is a good choice, nothing in it to worry about as long as you leave the shortbread off. Six hours in the fridge is plenty and overnight is better."},
+        {"speaker": "user", "text": "I'll get it made straight after work on Friday. The table is already laid for eight."}
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 3, "quote": "Yes, make it the day before and warm it gently, it only improves for sitting.", "role": "answers the opening request"},
+        {"turn_index": 3, "quote": "Read the thickening back to me so I know it's right.", "role": "assistant asks for the repetition"},
+        {"turn_index": 4, "quote": "Two teaspoons of cornflour slaked in cold water and stirred in at the end.", "role": "requested read-back, not a sign of trouble"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I've got eight coming for dinner on Saturday and one of them doesn't eat gluten. The main is chicken thighs braised in cider with a cream sauce. Can the sauce be made the day before and warmed through?"},
+        {"speaker": "assistant", "text": "The only gluten in that dish is the flour you would use to thicken it. Swap it for two teaspoons of cornflour slaked in cold water and stirred in at the end, and it behaves exactly the same."},
+        {"speaker": "user", "text": "Cornflour I have, so that's one thing sorted. What do I do about the bread?"},
+        {"speaker": "assistant", "text": "Yes, make it the day before and warm it gently, it only improves for sitting. Bread goes on separate boards, gluten-free at that end. Read the thickening back to me so I know it's right."},
+        {"speaker": "user", "text": "Two teaspoons of cornflour slaked in cold water and stirred in at the end. I'll do a lemon posset for pudding."},
+        {"speaker": "assistant", "text": "A posset is a good choice, nothing in it to worry about as long as you leave the shortbread off. Six hours in the fridge is plenty and overnight is better."},
+        {"speaker": "user", "text": "I'll get it made straight after work on Friday. The table is already laid for eight."}
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 2, "quote": "For pudding I'm torn between a lemon posset and a chocolate torte, and I want one of them out of the way in advance.", "role": "two live candidate puddings"},
+        {"turn_index": 5, "quote": "the posset sets very firm and the torte tastes of nothing straight from the fridge", "role": "both candidates re-activated and neither picked"},
+        {"turn_index": 6, "quote": "I'll make it on Friday afternoon and leave it in the fridge overnight.", "role": "the pudding needed for the next action is under-determined"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I've got eight coming for dinner on Saturday and one of them doesn't eat gluten. The main is chicken thighs braised in cider with a cream sauce. Is there anything in that she has to avoid?"},
+        {"speaker": "assistant", "text": "Only the flour you would use to thicken it. Swap that for two teaspoons of cornflour slaked in cold water, stirred in at the end, and the sauce behaves just the same."},
+        {"speaker": "user", "text": "That's easy enough. For pudding I'm torn between a lemon posset and a chocolate torte, and I want one of them out of the way in advance."},
+        {"speaker": "assistant", "text": "Neither has any gluten in it, provided you leave the shortbread off the posset. The posset wants six hours in the fridge; the torte is actually better made the day before."},
+        {"speaker": "user", "text": "Either of those would suit us nicely. What do I do about the bread?"},
+        {"speaker": "assistant", "text": "A small gluten-free loaf at that end and ordinary bread at the other, on separate boards. And take whichever pudding you make out twenty minutes before serving: the posset sets very firm and the torte tastes of nothing straight from the fridge."},
+        {"speaker": "user", "text": "I'll make it on Friday afternoon and leave it in the fridge overnight. The table is already laid for eight."}
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {"turn_index": 1, "quote": "Only the flour you would use to thicken it.", "role": "answers the opening request"},
+        {"turn_index": 5, "quote": "A small gluten-free loaf at that end and ordinary bread at the other, on separate boards.", "role": "discharges the last open request"},
+        {"turn_index": 6, "quote": "I'll make the torte on Friday afternoon and leave it in the fridge overnight.", "role": "the pudding for the next action is named"}
+      ],
+      "turns": [
+        {"speaker": "user", "text": "I've got eight coming for dinner on Saturday and one of them doesn't eat gluten. The main is chicken thighs braised in cider with a cream sauce. Is there anything in that she has to avoid?"},
+        {"speaker": "assistant", "text": "Only the flour you would use to thicken it. Swap that for two teaspoons of cornflour slaked in cold water, stirred in at the end, and the sauce behaves just the same."},
+        {"speaker": "user", "text": "That's easy enough. For pudding I'm torn between a lemon posset and a chocolate torte, and I want one of them out of the way in advance."},
+        {"speaker": "assistant", "text": "Neither has any gluten in it, provided you leave the shortbread off the posset. The posset wants six hours in the fridge; the torte is actually better made the day before."},
+        {"speaker": "user", "text": "Either of those would suit us nicely. What do I do about the bread?"},
+        {"speaker": "assistant", "text": "A small gluten-free loaf at that end and ordinary bread at the other, on separate boards. And take whichever pudding you make out twenty minutes before serving: the posset sets very firm and the torte tastes of nothing straight from the fridge."},
+        {"speaker": "user", "text": "I'll make the torte on Friday afternoon and leave it in the fridge overnight. The table is already laid for eight."}
+      ]
+    }
+  }
+}

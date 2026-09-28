@@ -1,0 +1,604 @@
+{
+  "items": [
+    {
+      "item_id": "clar_amb_000",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you book it for me?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_001",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Make it shorter, would you."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_002",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Translate this into French for me."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_003",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Which one should I buy?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_004",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Send it over when you get a chance."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_005",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "How much will it cost?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_006",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you fix the bug in my code?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_007",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Is that one any good?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_008",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Set a reminder for the meeting."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_009",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Rewrite the second paragraph."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_010",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "What lens should I use for it?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_011",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you transpose it up a bit?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_012",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Cancel the subscription for me."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_013",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Add him to the list."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_014",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "What's a fair price for one of those?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_015",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Could you proofread it tonight?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_016",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Move the deadline back."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_017",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Should I take the offer?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_018",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Print two copies of the file."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_019",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "How long does it take to learn?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_020",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Swap the colours around."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_021",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Put the numbers into a chart."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_022",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Is it worth repairing?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_023",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Give me a shorter version of the title."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_024",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "What size do I need?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_025",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you summarise the attachment?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_026",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Book the room for Tuesday."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_027",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Which route is quicker?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_028",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Turn it into a table."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_amb_029",
+      "kind": "ambiguous",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Remind me about that thing later."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_000",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you book a table for four at Marchetti's on Friday at seven under the name Halloran?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_001",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Make this sentence shorter: 'We are writing to inform you that your application has been received.'"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_002",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Translate 'good morning, it is a pleasure to meet you' into French."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_003",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Between a 50mm f/1.8 and an 85mm f/1.8 for indoor portraits in a small room, which should I buy?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_004",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Send the Q3 budget spreadsheet to priya.raman@example.com when you have finished it."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_005",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "How much does a standard UK passport renewal for an adult cost by post?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_006",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you fix this Python line so it does not divide by zero: 'rate = total / count'?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_007",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Is the Yamaha P-45 a good digital piano for a complete beginner?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_008",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Set a reminder for the finance review at 9.30 on Monday the fourth."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_009",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Rewrite this to be less formal: 'Please find enclosed the requested documentation.'"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_010",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "What lens should I use to photograph a football match from the stands in daylight?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_011",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you transpose 'Autumn Leaves' from G minor up to B minor?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_012",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Cancel my monthly Strava subscription at the end of the current billing period."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_013",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Add Tomas Weber, tomas.weber@example.com, to the project mailing list."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_014",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "What is a fair second-hand price for a 2019 Trek FX 2 hybrid bike in good condition?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_015",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Could you proofread this line for grammar: 'Their going to the conference on tuesday.'?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_016",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Move the report deadline from the twelfth of March to the nineteenth of March."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_017",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Should I take a job offer that pays ten percent more but adds an hour to my daily commute?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_018",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Print two copies of quarterly_report.pdf on A4, double sided."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_019",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "How long does it typically take to reach a B1 level in Spanish studying five hours a week?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_020",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Swap the blue and orange series in the bar chart so blue comes first."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_021",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Put these into a chart: Jan 120, Feb 135, Mar 128, Apr 150."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_022",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Is it worth repairing a five-year-old washing machine if the quote is 180 pounds?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_023",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Give me a shorter title than 'An Investigation Into the Effects of Sleep on Memory Recall'."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_024",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "What size allen key fits an M6 socket head cap screw?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_025",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Can you summarise this in one line: 'The committee met on Tuesday and approved the revised budget.'"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_026",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Book meeting room B for Tuesday the ninth from two until four."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_027",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Which is quicker from Leeds to Manchester on a weekday morning, the train or driving?"
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_028",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Turn this into a table: apples 3, pears 5, plums 2."
+        }
+      ]
+    },
+    {
+      "item_id": "clar_clear_029",
+      "kind": "clear",
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Remind me to renew the car insurance on the first of October."
+        }
+      ]
+    }
+  ]
+}

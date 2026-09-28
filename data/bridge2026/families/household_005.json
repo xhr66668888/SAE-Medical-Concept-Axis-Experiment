@@ -1,0 +1,213 @@
+{
+  "family_id": "household_005",
+  "domain": "household",
+  "task_goal": "hand the cat feeding and door key over to a neighbour for a week away",
+  "n_turns": 7,
+  "tail_anchor": "Everything else is written on the pad by the kettle.",
+  "notes": "rep_unres and rep_res differ by two tokens (her/Erin in turns 4 and 6) with two women with a claim on the one door key; the requested read-back sits in both. norep_unres and norep_res differ by one numeral (Ten/Fourteen) against two pouches a day for a week.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "Would Erin still be up for feeding Pickle and Nutmeg?",
+          "role": "first live candidate"
+        },
+        {
+          "turn_index": 2,
+          "quote": "My sister Jan is popping in on the Wednesday to water the house plants",
+          "role": "second live candidate, who also has to get in"
+        },
+        {
+          "turn_index": 6,
+          "quote": "I'll leave the key with her before we go, and she can hand it on afterwards",
+          "role": "referring expression that picks out neither"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Bev, we're off to Portugal on Saturday for a week. Would Erin still be up for feeding Pickle and Nutmeg?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "She would, she has been asking all summer. College finishes at four, so it would be a teatime visit."
+        },
+        {
+          "speaker": "user",
+          "text": "Teatime is perfect, they are not fussy. A pouch each in the evening, and dry biscuits left down all day. My sister Jan is popping in on the Wednesday to water the house plants."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Two in one week, they will be spoiled rotten. I'll tell Erin to knock for me if anything looks odd. Does the back door key still stick?"
+        },
+        {
+          "speaker": "user",
+          "text": "A bit, you have to lift it. I'll leave the key with her before we go, then there is no fuss on the day."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Sensible. Read the evening amount back to me and I'll put it on our calendar."
+        },
+        {
+          "speaker": "user",
+          "text": "A pouch each in the evening. I'll leave the key with her before we go, and she can hand it on afterwards. Everything else is written on the pad by the kettle."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 4,
+          "quote": "I'll leave the key with Erin before we go",
+          "role": "determines the referent for the next action"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Read the evening amount back to me",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 6,
+          "quote": "A pouch each in the evening.",
+          "role": "requested read-back, not a sign of trouble"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Bev, we're off to Portugal on Saturday for a week. Would Erin still be up for feeding Pickle and Nutmeg?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "She would, she has been asking all summer. College finishes at four, so it would be a teatime visit."
+        },
+        {
+          "speaker": "user",
+          "text": "Teatime is perfect, they are not fussy. A pouch each in the evening, and dry biscuits left down all day. My sister Jan is popping in on the Wednesday to water the house plants."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Two in one week, they will be spoiled rotten. I'll tell Erin to knock for me if anything looks odd. Does the back door key still stick?"
+        },
+        {
+          "speaker": "user",
+          "text": "A bit, you have to lift it. I'll leave the key with Erin before we go, then there is no fuss on the day."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Sensible. Read the evening amount back to me and I'll put it on our calendar."
+        },
+        {
+          "speaker": "user",
+          "text": "A pouch each in the evening. I'll leave the key with Erin before we go, and she can hand it on afterwards. Everything else is written on the pad by the kettle."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 2,
+          "quote": "One pouch per cat in the evening",
+          "role": "two pouches a day for two cats"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Ten, in the blue box on the middle shelf. That is two a day for the week",
+          "role": "ten pouches cannot cover two a day for seven days"
+        },
+        {
+          "turn_index": 5,
+          "quote": "I'll copy that onto our calendar so it does not get lost.",
+          "role": "assistant proceeds without reconciling the conflict"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Bev, we're away in Portugal from Saturday for the week. Any chance Erin could look after Pickle and Nutmeg?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I am sure she would love to, she has been asking since the summer. College finishes at four, so it would be a teatime visit."
+        },
+        {
+          "speaker": "user",
+          "text": "Teatime suits them fine. One pouch per cat in the evening, with dry biscuits topped up when the bowl looks low. They will hear the tin and come running."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Straightforward enough, she can manage that after college. How many pouches will she find in the cupboard?"
+        },
+        {
+          "speaker": "user",
+          "text": "Ten, in the blue box on the middle shelf. That is two a day for the week, so she will not run short."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I'll copy that onto our calendar so it does not get lost. Erin can send you a photo each evening if you like."
+        },
+        {
+          "speaker": "user",
+          "text": "She does not need to, but it would be lovely. Everything else is written on the pad by the kettle."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 4,
+          "quote": "Fourteen, in the blue box on the middle shelf. That is two a day for the week",
+          "role": "consistent with two pouches a day for seven days"
+        },
+        {
+          "turn_index": 4,
+          "quote": "Fourteen, in the blue box on the middle shelf.",
+          "role": "answers the last open request"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Bev, we're away in Portugal from Saturday for the week. Any chance Erin could look after Pickle and Nutmeg?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "I am sure she would love to, she has been asking since the summer. College finishes at four, so it would be a teatime visit."
+        },
+        {
+          "speaker": "user",
+          "text": "Teatime suits them fine. One pouch per cat in the evening, with dry biscuits topped up when the bowl looks low. They will hear the tin and come running."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Straightforward enough, she can manage that after college. How many pouches will she find in the cupboard?"
+        },
+        {
+          "speaker": "user",
+          "text": "Fourteen, in the blue box on the middle shelf. That is two a day for the week, so she will not run short."
+        },
+        {
+          "speaker": "assistant",
+          "text": "I'll copy that onto our calendar so it does not get lost. Erin can send you a photo each evening if you like."
+        },
+        {
+          "speaker": "user",
+          "text": "She does not need to, but it would be lovely. Everything else is written on the pad by the kettle."
+        }
+      ]
+    }
+  }
+}

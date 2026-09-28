@@ -1,0 +1,223 @@
+{
+  "family_id": "appointment_003",
+  "domain": "appointment",
+  "task_goal": "book the annual service and MOT for the family car at a garage and sort out the drop-off",
+  "n_turns": 7,
+  "tail_anchor": "I'll drop the keys in the night before.",
+  "notes": "norep_unres and norep_res differ by one word in turn 4 ('back by two' versus 'back by six') against the garage's stated 'collect it after five'. rep_unres carries a six-token echo of the assistant's courtesy-car offer while the car being booked is never fixed; rep_res carries a seven-token echo that the assistant explicitly asked for.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 1,
+          "quote": "We have two cars listed for you, a Skoda Octavia and a Vauxhall Corsa, and both MOTs run out in the next fortnight",
+          "role": "two live candidate vehicles"
+        },
+        {
+          "turn_index": 2,
+          "quote": "Let's book it in for the 22nd if you have a ramp free that morning",
+          "role": "the referring expression picks neither car"
+        },
+        {
+          "turn_index": 3,
+          "quote": "The 22nd is fine, we open at eight",
+          "role": "assistant books the slot without establishing which car"
+        },
+        {
+          "turn_index": 5,
+          "quote": "That's noted down. We'll have one on the forecourt ready for eight.",
+          "role": "second assistant turn that still leaves the car unfixed"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I'd like to get the service and MOT booked in before the end of the month."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Happy to help. We have two cars listed for you, a Skoda Octavia and a Vauxhall Corsa, and both MOTs run out in the next fortnight."
+        },
+        {
+          "speaker": "user",
+          "text": "Let's book it in for the 22nd if you have a ramp free that morning."
+        },
+        {
+          "speaker": "assistant",
+          "text": "The 22nd is fine, we open at eight. Would you want a courtesy car for the day?"
+        },
+        {
+          "speaker": "user",
+          "text": "Yes please, a courtesy car for the day would save me a lot of bother."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That's noted down. We'll have one on the forecourt ready for eight."
+        },
+        {
+          "speaker": "user",
+          "text": "Grand, that's all sorted then. I'll drop the keys in the night before."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "Can you read that back so I know the line is clear?",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "The eight o'clock slot on the 22nd, yes.",
+          "role": "the requested read-back, not a sign of trouble"
+        },
+        {
+          "turn_index": 5,
+          "quote": "That matches what I have.",
+          "role": "discharges the last open item"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I'd like to get the service and MOT booked in before the end of the month."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Happy to help. I have the Skoda Octavia on your account, and its MOT runs out on the 30th, so the 22nd would suit."
+        },
+        {
+          "speaker": "user",
+          "text": "The 22nd it is. Put me down for the earliest slot you have."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That's the eight o'clock slot on the 22nd. Can you read that back so I know the line is clear?"
+        },
+        {
+          "speaker": "user",
+          "text": "The eight o'clock slot on the 22nd, yes."
+        },
+        {
+          "speaker": "assistant",
+          "text": "That matches what I have. The service and MOT together take about three hours."
+        },
+        {
+          "speaker": "user",
+          "text": "No trouble at all, I'm not in a rush. I'll drop the keys in the night before."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "contradiction",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "It will need to stay with us the full day, and you can collect it after five",
+          "role": "the car is not available before five"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I need the car back by two to fetch my son from football",
+          "role": "conflicts with the stated collection time"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Right you are. I'll pencil the Octavia in for the 22nd of this month.",
+          "role": "assistant proceeds without reconciling the two"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I'd like to get the service and MOT booked in before the end of the month."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Happy to help. I have the Skoda Octavia on your account, and its MOT runs out on the 30th, so the 22nd would suit."
+        },
+        {
+          "speaker": "user",
+          "text": "Book me in for the 22nd, then. What time would you want it dropped off?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Any time from eight. It will need to stay with us the full day, and you can collect it after five."
+        },
+        {
+          "speaker": "user",
+          "text": "That's ideal, I need the car back by two to fetch my son from football."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Right you are. I'll pencil the Octavia in for the 22nd of this month."
+        },
+        {
+          "speaker": "user",
+          "text": "Sound, thanks for that. I'll drop the keys in the night before."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "Any time from eight.",
+          "role": "answers the only thing the user asked"
+        },
+        {
+          "turn_index": 3,
+          "quote": "you can collect it after five",
+          "role": "the stated collection time"
+        },
+        {
+          "turn_index": 4,
+          "quote": "I need the car back by six to fetch my son from football",
+          "role": "consistent with the stated collection time"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Hello, I'd like to get the service and MOT booked in before the end of the month."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Happy to help. I have the Skoda Octavia on your account, and its MOT runs out on the 30th, so the 22nd would suit."
+        },
+        {
+          "speaker": "user",
+          "text": "Book me in for the 22nd, then. What time would you want it dropped off?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "Any time from eight. It will need to stay with us the full day, and you can collect it after five."
+        },
+        {
+          "speaker": "user",
+          "text": "That's ideal, I need the car back by six to fetch my son from football."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Right you are. I'll pencil the Octavia in for the 22nd of this month."
+        },
+        {
+          "speaker": "user",
+          "text": "Sound, thanks for that. I'll drop the keys in the night before."
+        }
+      ]
+    }
+  }
+}

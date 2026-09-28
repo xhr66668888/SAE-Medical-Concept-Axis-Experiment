@@ -1,0 +1,213 @@
+{
+  "family_id": "household_016",
+  "domain": "household",
+  "task_goal": "renew the contents cover on a shared flat and settle which bicycle gets named on it",
+  "n_turns": 7,
+  "tail_anchor": "The renewal letter is on the hall table.",
+  "notes": "rep_unres and rep_res differ by one phrase (it / the tourer) in the final turn. Two bicycles are live and Jules's road bike is the most recent singular mention, so the bare pronoun has no winner.",
+  "conditions": {
+    "rep_unres": {
+      "label": "unresolved",
+      "subtype": "ambiguous_reference",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "Then it will have to be named.",
+          "role": "first live candidate, Stef's tourer, is the topic"
+        },
+        {
+          "turn_index": 5,
+          "quote": "Jules has that road bike of his in the yard as well, and it is worth a good bit more than mine",
+          "role": "second live candidate, and the most recent singular mention"
+        },
+        {
+          "turn_index": 6,
+          "quote": "get it named on the policy before the fourteenth",
+          "role": "referring expression that picks out neither bicycle"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Stef, the contents renewal is in from Halliwell's and it has gone up forty pounds. Owen reckons we hold the old price if we put the excess up to two hundred."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Two hundred suits me. Did you tell him about my tourer in the hall? It was never on the old policy."
+        },
+        {
+          "speaker": "user",
+          "text": "I mentioned it, yes. Anything worth over five hundred pounds has to go on by name, he said."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Then it will have to be named. Say the excess bit again for me, I want to get it right when I tell Jules."
+        },
+        {
+          "speaker": "user",
+          "text": "We hold the old price if we put the excess up to two hundred. The renewal date is the fourteenth of October."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Right, I will pass that on tonight. Jules has that road bike of his in the yard as well, and it is worth a good bit more than mine."
+        },
+        {
+          "speaker": "user",
+          "text": "I had better ring Owen and get it named on the policy before the fourteenth, then. The renewal letter is on the hall table."
+        }
+      ]
+    },
+    "rep_res": {
+      "label": "resolved",
+      "subtype": "readback_confirmation",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 3,
+          "quote": "Say the excess bit again for me, I want to get it right when I tell Jules.",
+          "role": "assistant asks for the repetition"
+        },
+        {
+          "turn_index": 4,
+          "quote": "We hold the old price if we put the excess up to two hundred.",
+          "role": "requested read-back, not a sign of trouble"
+        },
+        {
+          "turn_index": 6,
+          "quote": "get the tourer named on the policy before the fourteenth",
+          "role": "the bicycle is named, so nothing is left open"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Stef, the contents renewal is in from Halliwell's and it has gone up forty pounds. Owen reckons we hold the old price if we put the excess up to two hundred."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Two hundred suits me. Did you tell him about my tourer in the hall? It was never on the old policy."
+        },
+        {
+          "speaker": "user",
+          "text": "I mentioned it, yes. Anything worth over five hundred pounds has to go on by name, he said."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Then it will have to be named. Say the excess bit again for me, I want to get it right when I tell Jules."
+        },
+        {
+          "speaker": "user",
+          "text": "We hold the old price if we put the excess up to two hundred. The renewal date is the fourteenth of October."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Right, I will pass that on tonight. Jules has that road bike of his in the yard as well, and it is worth a good bit more than mine."
+        },
+        {
+          "speaker": "user",
+          "text": "I had better ring Owen and get the tourer named on the policy before the fourteenth, then. The renewal letter is on the hall table."
+        }
+      ]
+    },
+    "norep_unres": {
+      "label": "unresolved",
+      "subtype": "unanswered_question",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "are we still covered if the flat stands empty for more than a month while we are both away in August?",
+          "role": "request"
+        },
+        {
+          "turn_index": 1,
+          "quote": "It has gone up for everybody, Jules says theirs did too.",
+          "role": "assistant answers a different part"
+        },
+        {
+          "turn_index": 5,
+          "quote": "I will put my half of the money under the same magnet.",
+          "role": "assistant turn that fails to answer"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Stef, the contents renewal is in and the premium has jumped again. One thing I need to know first: are we still covered if the flat stands empty for more than a month while we are both away in August?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "It has gone up for everybody, Jules says theirs did too. I can pay my half by standing order if that makes the sums easier."
+        },
+        {
+          "speaker": "user",
+          "text": "A standing order suits me fine. Owen wants to know whether we are putting anything worth over five hundred pounds on by name this year."
+        },
+        {
+          "speaker": "assistant",
+          "text": "My tourer, then, and nothing else of mine. Shall I write the frame number down for you?"
+        },
+        {
+          "speaker": "user",
+          "text": "Please do, and the make of it while you are there."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Will do, it will be on the fridge tonight. I will put my half of the money under the same magnet."
+        },
+        {
+          "speaker": "user",
+          "text": "That is everything he asked us for, I think. The renewal letter is on the hall table."
+        }
+      ]
+    },
+    "norep_res": {
+      "label": "resolved",
+      "subtype": "clean_progress",
+      "confidence": "high",
+      "evidence_spans": [
+        {
+          "turn_index": 0,
+          "quote": "are we still covered if the flat stands empty for more than a month while we are both away in August?",
+          "role": "request"
+        },
+        {
+          "turn_index": 5,
+          "quote": "And we are covered with the place empty, Owen put sixty days in the new policy.",
+          "role": "answers the only open request"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "user",
+          "text": "Stef, the contents renewal is in and the premium has jumped again. One thing I need to know first: are we still covered if the flat stands empty for more than a month while we are both away in August?"
+        },
+        {
+          "speaker": "assistant",
+          "text": "It has gone up for everybody, Jules says theirs did too. I can pay my half by standing order if that makes the sums easier."
+        },
+        {
+          "speaker": "user",
+          "text": "A standing order suits me fine. Owen wants to know whether we are putting anything worth over five hundred pounds on by name this year."
+        },
+        {
+          "speaker": "assistant",
+          "text": "My tourer, then, and nothing else of mine. Shall I write the frame number down for you?"
+        },
+        {
+          "speaker": "user",
+          "text": "Please do, and the make of it while you are there."
+        },
+        {
+          "speaker": "assistant",
+          "text": "Will do, it will be on the fridge tonight. And we are covered with the place empty, Owen put sixty days in the new policy."
+        },
+        {
+          "speaker": "user",
+          "text": "That is everything he asked us for, I think. The renewal letter is on the hall table."
+        }
+      ]
+    }
+  }
+}
